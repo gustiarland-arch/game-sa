@@ -19,6 +19,7 @@
 - `AudioManager.tap` (null di game) untuk rekaman/QA otomatis. Harness rekaman desktop di
   `tools/capture_v54/`.
 - Save schema 8, dua route, canon ending, quest, collision, dan 29 map tidak diubah.
+
 ## 5.4.0 — Interior scale rebalance (24 November 2026)
 
 - Empat interior handcrafted v4 (kamar Arland, kamar Sofia, dapur, ruang arsip) dilukis

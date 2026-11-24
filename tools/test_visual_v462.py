@@ -10,9 +10,11 @@ assert len(profiles)>=24 and {"galeri_komunitas","rain_garden","starfall_village
 source=(ROOT/'core/src/main/java/com/arlandsofia/olu/logic/WorldAtmosphereV462.java').read_text()
 for id in profiles:
     assert '"'+id+'"' in source, id
-for name,phases in [('walk',16),('idle',8)]:
+# v6: the v4.6.2 eight-direction sheets were superseded by *_8dir_v53 (the atlas Assets
+# loads first) and removed in the v6 asset audit; verify the shipped atlas instead.
+for name,phases in [('walk',24),('idle',12)]:
     for who in ('arland','sofia'):
-        p=assets/f'characters/{who}/{name}_8dir_v462.png'
+        p=assets/f'characters/{who}/{name}_8dir_v53.png'
         with Image.open(p) as im:
             assert im.size==(48*phases,72*8),(p,im.size)
             assert im.mode=='RGBA'
