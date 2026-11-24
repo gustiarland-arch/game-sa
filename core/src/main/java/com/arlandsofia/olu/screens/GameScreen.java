@@ -64,116 +64,117 @@ import java.util.Map;
  * dialog, puzzle, Memory Book, pause, autosave. Implementasi Presenter untuk ActionRunner.
  */
 public final class GameScreen extends BaseScreen implements ActionRunner.Presenter {
-    private static final float WALK_SPEED = 112f, SPRINT_SPEED = 176f;
+    final WorldRenderer worldRenderer = new WorldRenderer(this);
+    static final float WALK_SPEED = 112f, SPRINT_SPEED = 176f;
 
-    private final Progress p;
-    private final boolean replay, newGame;
-    private final QuestEngine engine;
-    private final ActionRunner runner;
+    final Progress p;
+    final boolean replay, newGame;
+    final QuestEngine engine;
+    final ActionRunner runner;
 
-    private final OrthographicCamera worldCam = new OrthographicCamera();
-    private final ExtendViewport worldView = new ExtendViewport(760, 428, worldCam);
-    private final CameraRig cameraRig = new CameraRig();
+    final OrthographicCamera worldCam = new OrthographicCamera();
+    final ExtendViewport worldView = new ExtendViewport(760, 428, worldCam);
+    final CameraRig cameraRig = new CameraRig();
     /** Reused collision adapter: avoids allocating callbacks every frame. */
-    private final WorldNavigationV52.Collision footCollision = new WorldNavigationV52.Collision() {
+    final WorldNavigationV52.Collision footCollision = new WorldNavigationV52.Collision() {
         @Override public boolean blocked(float sx,float sy) { return area == null || area.blocked(sx,sy); }
     };
-    private float frameDt = 1f / 60f;
+    float frameDt = 1f / 60f;
 
-    private MapDb.Area area;
+    MapDb.Area area;
     /** Cached terrace textures are editor-replaceable PNGs loaded with other native assets. */
-    private float lastTerrainHeight;
-    private boolean previousStair;
-    private Texture mapTex;
-    private final Actor player, partner;
-    private int partnerMode; // 0 tidak ada, 1 NPC diam, 2 companion
-    private final ArrayDeque<float[]> trail = new ArrayDeque<>();
+    float lastTerrainHeight;
+    boolean previousStair;
+    Texture mapTex;
+    final Actor player, partner;
+    int partnerMode; // 0 tidak ada, 1 NPC diam, 2 companion
+    final ArrayDeque<float[]> trail = new ArrayDeque<>();
 
-    private final TouchControls controls;
-    private final MinigameOverlay minigame;
-    private final CutscenePlayer cine;
-    private boolean cineShowPartner;
+    final TouchControls controls;
+    final MinigameOverlay minigame;
+    final CutscenePlayer cine;
+    boolean cineShowPartner;
     // companion hidup
-    private float compIdle, compNext = 3f, pendingComment = -1f;
-    private String bubbleText; private float bubbleTime;
-    private final Map<String, Actor> cineActors = new LinkedHashMap<>();
-    private final Map<String, Actor> townActors = new LinkedHashMap<>();
+    float compIdle, compNext = 3f, pendingComment = -1f;
+    String bubbleText; private float bubbleTime;
+    final Map<String, Actor> cineActors = new LinkedHashMap<>();
+    final Map<String, Actor> townActors = new LinkedHashMap<>();
     /** otak NPC: {homeX, homeY, radius, targetX, targetY, timer, scheduleKey} */
-    private final Map<String, float[]> npcBrain = new LinkedHashMap<>();
-    private final Map<String, String> npcPlaceKey = new LinkedHashMap<>();
-    private final List<Animal> animals = new ArrayList<>();
-    private Animal targetAnimal; private boolean targetBed;
-    private float clockAcc;
-    private float soundscapeClock, footstepClock;
-    private QuestDb.TownNpc targetNpc;
-    private QuestDb.Interactable targetSide;
-    private QuestDb.Talk targetTalk;
-    private float creditsTime = -1; private Runnable creditsDone;
-    private final float[] rainX = new float[140], rainY = new float[140];
-    private final DialogBox dialog;
-    private final DialogueHistoryOverlay dialogueHistory;
-    private float autosaveAcc;
-    private final PuzzleOverlay puzzle;
-    private final MemoryBookOverlay book;
-    private final ShopOverlay shop;
-    private final RomanceOverlay romance;
-    private boolean targetRomance;
-    private final SettingsPanel settingsPanel;
-    private boolean settingsOpen, pauseOpen;
-    private final List<UiButton> pauseButtons = new ArrayList<>();
-    private final UiButton hudBook, hudPause;
-    private final Texture shadow, marker, sparkle, glow, coinIcon;
-    private final WorldFx worldFx;
+    final Map<String, float[]> npcBrain = new LinkedHashMap<>();
+    final Map<String, String> npcPlaceKey = new LinkedHashMap<>();
+    final List<Animal> animals = new ArrayList<>();
+    Animal targetAnimal; private boolean targetBed;
+    float clockAcc;
+    float soundscapeClock, footstepClock;
+    QuestDb.TownNpc targetNpc;
+    QuestDb.Interactable targetSide;
+    QuestDb.Talk targetTalk;
+    float creditsTime = -1; private Runnable creditsDone;
+    final float[] rainX = new float[140], rainY = new float[140];
+    final DialogBox dialog;
+    final DialogueHistoryOverlay dialogueHistory;
+    float autosaveAcc;
+    final PuzzleOverlay puzzle;
+    final MemoryBookOverlay book;
+    final ShopOverlay shop;
+    final RomanceOverlay romance;
+    boolean targetRomance;
+    final SettingsPanel settingsPanel;
+    boolean settingsOpen, pauseOpen;
+    final List<UiButton> pauseButtons = new ArrayList<>();
+    final UiButton hudBook, hudPause;
+    final Texture shadow, marker, sparkle, glow, coinIcon;
+    final WorldFx worldFx;
     /** Prerendered split regions for foliage; cache never modified after creation. */
-    private final Map<Texture, TextureRegion[]> animatedTreeRegions = new java.util.IdentityHashMap<>();
+    final Map<Texture, TextureRegion[]> animatedTreeRegions = new java.util.IdentityHashMap<>();
 
     // target interaksi
-    private QuestDb.Interactable targetQuest;
-    private MapDb.Examine targetExamine;
+    QuestDb.Interactable targetQuest;
+    MapDb.Examine targetExamine;
 
-    private String toastText; private float toastTime;
-    private String bannerText; private float bannerTime;
-    private float objectiveFlash;
-    private float doorCooldown;
-    private QuestCompass.Hint cachedQuestRoute;
-    private float questRouteRefresh;
+    String toastText; private float toastTime;
+    String bannerText; private float bannerTime;
+    float objectiveFlash;
+    float doorCooldown;
+    QuestCompass.Hint cachedQuestRoute;
+    float questRouteRefresh;
 
-    private int fadePhase; private float fadeAlpha; private Runnable fadeMid, fadeEnd;
-    private String cardTitle, cardSub; private float cardTime = -1; private Runnable cardDone;
+    int fadePhase; private float fadeAlpha; private Runnable fadeMid, fadeEnd;
+    String cardTitle, cardSub; private float cardTime = -1; private Runnable cardDone;
 
-    private final Color tint = new Color();
+    final Color tint = new Color();
     private static final class DrawItem { float y; Object value; }
-    private final List<DrawItem> drawList = new ArrayList<>();
+    final List<DrawItem> drawList = new ArrayList<>();
     /** Reused list of quest markers: no new ArrayList in every rendered frame. */
-    private final List<QuestDb.Interactable> drawMarkers = new ArrayList<>();
-    private final List<DrawItem> drawPool = new ArrayList<>();
+    final List<QuestDb.Interactable> drawMarkers = new ArrayList<>();
+    final List<DrawItem> drawPool = new ArrayList<>();
     /** Cache ukuran gambar prop per area; culling tidak memanggil Texture lookup tiap frame. */
-    private final Map<MapDb.Prop, float[]> propMetrics = new java.util.IdentityHashMap<>();
-    private int drawCursor;
-    private float visibleL, visibleR, visibleB, visibleT;
+    final Map<MapDb.Prop, float[]> propMetrics = new java.util.IdentityHashMap<>();
+    int drawCursor;
+    float visibleL, visibleR, visibleB, visibleT;
     // v5.4 weather: storm scheduler, rain puddles and ground wetness (cosmetic, never saved).
-    private final WeatherFxV54.Storm storm;
-    private java.util.List<float[]> puddles = new java.util.ArrayList<>();
-    private float wetness;
-    private final Comparator<DrawItem> bySortY = new Comparator<DrawItem>() {
+    final WeatherFxV54.Storm storm;
+    java.util.List<float[]> puddles = new java.util.ArrayList<>();
+    float wetness;
+    final Comparator<DrawItem> bySortY = new Comparator<DrawItem>() {
         public int compare(DrawItem a, DrawItem b) { return Float.compare(a.y, b.y); }
     };
 
     /** Reuse urutan draw tanpa alokasi array kecil untuk setiap prop tiap frame. */
-    private void addDraw(float y, Object value) {
+    void addDraw(float y, Object value) {
         if (drawCursor >= drawPool.size()) drawPool.add(new DrawItem());
         DrawItem item = drawPool.get(drawCursor++);
         item.y = y; item.value = value;
         drawList.add(item);
     }
 
-    private boolean visibleActor(float x, float y) {
+    boolean visibleActor(float x, float y) {
         float drawY = area.h - y;
         return x >= visibleL - 75 && x <= visibleR + 75 && drawY >= visibleB - 75 && drawY <= visibleT + 75;
     }
 
     /** Bounds-aware prop culling BEFORE depth sort: avoids sorting hundreds of offscreen trees. */
-    private boolean propVisible(MapDb.Prop pr) {
+    boolean propVisible(MapDb.Prop pr) {
         float[] size = propMetrics.get(pr);
         if (size == null) {
             Texture normal = game.assets.tex(pr.def.image);
@@ -283,7 +284,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (p.companion) { partnerMode = 2; placeBeside(); }
     }
 
-    private static Map<String, Object> act(String... kv) {
+    static Map<String, Object> act(String... kv) {
         Map<String, Object> m = new LinkedHashMap<>();
         for (int i = 0; i + 1 < kv.length; i += 2) m.put(kv[i], kv[i + 1]);
         return m;
@@ -306,7 +307,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     // ================================================================== area & posisi
-    private void enterArea(String id, float x, float y, int dir, boolean announce) {
+    void enterArea(String id, float x, float y, int dir, boolean announce) {
         MapDb.Area a = game.maps.area(id);
         if (a == null) a = game.maps.area(Routes.room(p.route));
         if (area != null && !area.image.equals(a.image)) game.assets.unloadMap(area.image);
@@ -341,7 +342,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** komentar pasangan sekali per area (disimpan sebagai flag CMT_<area>). */
-    private void queueComment() {
+    void queueComment() {
         Map<String, List<String>> m = game.quests.comments.get(area.id);
         if (m == null || p.hasFlag("CMT_" + area.id)) return;
         List<String> l = m.get(p.route);
@@ -349,7 +350,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         pendingComment = 1.4f;
     }
 
-    private void showComment() {
+    void showComment() {
         List<String> l = game.quests.comments.get(area.id).get(p.route);
         bubbleText = l.get(MathUtils.random(0, l.size() - 1)); bubbleTime = 3.6f;
         p.flags.add("CMT_" + area.id);
@@ -357,7 +358,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** perilaku kecil companion saat diam: menoleh, melihat sekeliling, bereaksi pada hujan, memperhatikan target interaksi. */
-    private void companionLife(float dt) {
+    void companionLife(float dt) {
         if (partnerMode != 2 || cine.active() || partner.walking || p.holdingHands) { compIdle = 0; return; }
         Object tgt = targetQuest != null ? targetQuest : targetNpc != null ? targetNpc : targetSide;
         if (tgt != null) {
@@ -385,7 +386,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         } else { partner.faceTo(player); partner.showEmote(MathUtils.random(0, 1) == 0 ? "note" : "heart", 1.4f); }
     }
 
-    private void placeBeside() {
+    void placeBeside() {
         float[][] offs = {{-30, 6}, {30, 6}, {0, 24}, {0, -24}, {-44, 0}, {44, 0}};
         for (float[] o : offs) {
             float nx = player.x + o[0], ny = player.y + o[1];
@@ -397,7 +398,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** NPC sesuai jadwal & jam. Aktor yang masih di area ini dipertahankan dan berjalan ke titik barunya. */
-    private void refreshTown() {
+    void refreshTown() {
         java.util.Set<String> keep = new java.util.HashSet<>();
         for (QuestDb.TownNpc n : engine.townNpcsNow(area.id)) {
             Object[] pl = engine.npcPlace(n);
@@ -419,7 +420,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** NPC berjalan pelan di sekitar titik jadwalnya, berhenti saat diajak bicara atau ada cutscene. */
-    private void updateNpcs(float dt) {
+    void updateNpcs(float dt) {
         if (cine.active()) return;
         for (Map.Entry<String, Actor> e : townActors.entrySet()) {
             Actor ac = e.getValue(); float[] b = npcBrain.get(e.getKey());
@@ -473,11 +474,11 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** Aktivitas idle dari kebijakan dunia v4.6, memakai animasi atlas asli. */
-    private String npcIdleActivity(String id) {
+    String npcIdleActivity(String id) {
         return MotionPersonalityV53.idlePose(id, WorldClock.hour(p.minute), weather(), isIndoor(), p.day);
     }
 
-    private void spawnAnimals() {
+    void spawnAnimals() {
         animals.clear();
         boolean day = !WorldClock.isNight(p.minute), rain = WorldClock.HUJAN.equals(engine.weatherNow());
         for (Map<String, Object> spec : area.animals) {
@@ -498,7 +499,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         }
     }
 
-    private void refreshNpcs() {
+    void refreshNpcs() {
         refreshTown();
         if (partnerMode == 2) return;
         partnerMode = 0;
@@ -510,7 +511,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     // ================================================================== loop
-    private boolean free() {
+    boolean free() {
         return !dialogueHistory.active() && !dialog.active() && !puzzle.active() && !minigame.active() && creditsTime < 0 && !book.active() && !shop.active() && !romance.active() && !pauseOpen && !settingsOpen && confirm == null
                 && fadePhase == 0 && cardTime < 0 && !runner.busy() && !cine.active();
     }
@@ -597,9 +598,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     // ================================================================== hari & tidur
-    private String clockStep;
+    String clockStep;
     /** step cerita bersuasana senja/malam memajukan jam dunia (hanya maju), agar HUD, NPC, dan langit selaras. */
-    private void syncClockToStep() {
+    void syncClockToStep() {
         QuestDb.Step st = engine.step();
         if (st == null || st.id.equals(clockStep)) return;
         clockStep = st.id;
@@ -608,7 +609,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         int target = c.b > c.r ? 20 * 60 : 17 * 60 + 30;
         if (p.minute < target) { p.minute = target; refreshTown(); spawnAnimals(); }
     }
-    private void newDay(String msg) {
+    void newDay(String msg) {
         p.day++; p.minute = 7 * 60; clockAcc = 0;
         npcPlaceKey.clear(); townActors.clear(); npcBrain.clear();
         refreshTown(); spawnAnimals();
@@ -618,7 +619,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         saveNow();
     }
 
-    private void askSleep() {
+    void askSleep() {
         boolean early = p.minute < 17 * 60;
         confirm = new ConfirmBox("Tidur?", early ? "Masih " + WorldClock.hhmm(p.minute) + ". Tidur sampai besok pagi?" : "Istirahat sampai besok pagi. Progress tersimpan otomatis.",
                 "Tidur", new Runnable() { public void run() { confirm = null; fade(new Runnable() { public void run() {
@@ -626,7 +627,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
                 "Nanti", new Runnable() { public void run() { confirm = null; } });
     }
 
-    private void passOut() {
+    void passOut() {
         final String room = Routes.room(p.route);
         fade(new Runnable() { public void run() {
             MapDb.Area roomArea = game.maps.area(room);
@@ -636,7 +637,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         } }, null);
     }
 
-    private void move(float dt) {
+    void move(float dt) {
         float kx = 0, ky = 0;
         if (Gdx.input.isKeyPressed(Input.Keys.A) || Gdx.input.isKeyPressed(Input.Keys.LEFT)) kx -= 1;
         if (Gdx.input.isKeyPressed(Input.Keys.D) || Gdx.input.isKeyPressed(Input.Keys.RIGHT)) kx += 1;
@@ -672,7 +673,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         checkDoors(ox, oy);
     }
 
-    private void checkDoors(float ox, float oy) {
+    void checkDoors(float ox, float oy) {
         if (doorCooldown > 0) return;
         for (final MapDb.Door d : area.doors) {
             if (!d.touches(player.x, player.y)) continue;
@@ -697,7 +698,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         }
     }
 
-    private void followCompanion(float dt) {
+    void followCompanion(float dt) {
         if (cine.active()) return; // cutscene menguasai pose dan posisi kedua aktor
         if (partnerMode == 2 && p.holdingHands) {
             float sign = (player.dir == Assets.DIR_LEFT) ? -1f : 1f;
@@ -748,7 +749,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         partner.sprinting = player.sprinting;
     }
 
-    private void findTarget() {
+    void findTarget() {
         targetQuest = null; targetExamine = null; targetNpc = null; targetSide = null; targetTalk = null; targetRomance = false; targetAnimal = null; targetBed = false;
         float best = Float.MAX_VALUE;
         for (QuestDb.Interactable it : engine.interactables(area.id)) {
@@ -785,14 +786,14 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** Bed position from map data (v5.4 rescaled rooms); legacy constants as fallback. */
-    private float[] bedSpot(MapDb.Area a) {
+    float[] bedSpot(MapDb.Area a) {
         if (a != null && !Float.isNaN(a.bedX)) return new float[]{a.bedX, a.bedY};
         return new float[]{p.route.equals("arland") ? 830f : 130f, 380f};
     }
 
-    private float dist(float x, float y) { float dx = x - player.x, dy = y - player.y; return (float) Math.sqrt(dx * dx + dy * dy); }
+    float dist(float x, float y) { float dx = x - player.x, dy = y - player.y; return (float) Math.sqrt(dx * dx + dy * dy); }
 
-    private void interact() {
+    void interact() {
         if (targetQuest != null) {
             player.face(targetQuest.x - player.x, targetQuest.y - player.y);
             runner.run(engine.actionsFor(targetQuest));
@@ -845,7 +846,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         }
     }
 
-    private DialogBox.Listener dialogListener() {
+    DialogBox.Listener dialogListener() {
         return new DialogBox.Listener() {
             public void onLine(StoryDb.Line line) {
                 p.dialogueHistory.add(game.story.speaker(line.speaker).name, line.emotion, line.text, p.area, p.day);
@@ -864,12 +865,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     // ================================================================== fade & kartu chapter
-    private void fade(Runnable mid, Runnable end) {
+    void fade(Runnable mid, Runnable end) {
         fadePhase = 1; fadeAlpha = 0f; fadeMid = mid; fadeEnd = end;
         controls.reset();
     }
 
-    private void updateFade(float dt) {
+    void updateFade(float dt) {
         if (fadePhase == 1) {
             fadeAlpha += dt * 4f;
             if (fadeAlpha >= 1f) { fadeAlpha = 1f; fadePhase = 2; Runnable m = fadeMid; fadeMid = null; if (m != null) m.run(); }
@@ -879,12 +880,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         }
     }
 
-    private void showCard(String title, String sub, Runnable done) {
+    void showCard(String title, String sub, Runnable done) {
         cardTitle = title; cardSub = sub; cardTime = 0f; cardDone = done;
         controls.reset();
     }
 
-    private void finishCard() {
+    void finishCard() {
         cardTime = -1f;
         Runnable d = cardDone; cardDone = null;
         if (d != null) d.run();
@@ -904,7 +905,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** Sebagian baris adegan (untuk cutscene yang menyisipkan gestur di antara baris). Pilihan hanya muncul bila bagian ini mencapai akhir adegan. */
-    private void playScenePart(String sceneId, int from, int n, Runnable done) {
+    void playScenePart(String sceneId, int from, int n, Runnable done) {
         StoryDb.Scene sc = game.story.scene(sceneId);
         if (sc == null) { done.run(); return; }
         int a = Math.max(0, Math.min(from, sc.lines.size())), b = n <= 0 ? sc.lines.size() : Math.min(sc.lines.size(), a + n);
@@ -959,7 +960,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         game.audio.music("cinema_our_tomorrow");
     }
 
-    private void finishCredits() {
+    void finishCredits() {
         creditsTime = -1f;
         Runnable d = creditsDone; creditsDone = null;
         if (d != null) d.run();
@@ -1025,7 +1026,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     @Override public void onIdle() { saveNow(); }
 
     /** Simpan hanya saat tidak ada rangkaian aksi berjalan -> save selalu konsisten (tidak ada state setengah jadi). */
-    private boolean saveNow() {
+    boolean saveNow() {
         if (replay || (runner.busy() && !shop.active())) return false;
         p.x = player.x; p.y = player.y; p.dir = Actor.dirName(player.dir);
         if (!game.store.saveSlot(p)) { toast("Gagal menyimpan! Periksa ruang penyimpanan."); return false; }
@@ -1045,12 +1046,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     // ================================================================== overlay
-    private void openDialogueHistory() {
+    void openDialogueHistory() {
         controls.reset();
         dialogueHistory.open(p.dialogueHistory);
     }
 
-    private void openBook() {
+    void openBook() {
         controls.reset();
         book.open(p, game.global, replay, new MemoryBookOverlay.ReplayHandler() {
             public void replay(final String chapter) {
@@ -1067,7 +1068,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** Panduan selalu tersedia dari menu Pause, termasuk ketika pemain baru mulai. */
-    private void showHowToPlay() {
+    void showHowToPlay() {
         confirm = new ConfirmBox("Cara bermain",
                 "GERAK: gunakan joystick di layar atau tombol WASD.\n"
                         + "LARI: tahan tombol LARI / Shift. AKSI: tombol AKSI / E.\n"
@@ -1078,9 +1079,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
                 "Mengerti", new Runnable() { public void run() { confirm = null; } }, null, null);
     }
 
-    private void openPause() { controls.reset(); pauseOpen = true; }
+    void openPause() { controls.reset(); pauseOpen = true; }
 
-    private void askMainMenu() {
+    void askMainMenu() {
         confirm = new ConfirmBox("Kembali ke menu?", replay ? "Replay akan diakhiri. Progres utama tidak berubah." : "Progress akan disimpan otomatis.",
                 "Menu utama", new Runnable() { public void run() {
                     confirm = null;
@@ -1161,12 +1162,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         worldFx.drawWorldBackdropV462(game.batch,area.id,area.indoor,
                 "rain".equals(weather()),p.minute,worldCam.position.x,worldCam.position.y,
                 ww,wh,time,game.settings.visualQuality);
-        for (MapDb.Prop pr : area.props) if ("floor".equals(pr.def.layer) && propVisible(pr)) drawProp(pr);
+        for (MapDb.Prop pr : area.props) if ("floor".equals(pr.def.layer) && propVisible(pr)) worldRenderer.drawProp(pr);
         // v5.0: original 2.5D decks and real stairs overlay map art without
         // mutating the baked backgrounds or old story/door coordinates.
-        for(MapDb.Terrace terrace:area.terraces)drawTerraceBase(terrace);
+        for(MapDb.Terrace terrace:area.terraces)worldRenderer.drawTerraceBase(terrace);
         // v3.7: riak dan kilau air berada pada lapisan lantai; sebelum karakter/prop.
-        drawWater();
+        worldRenderer.drawWater();
         worldFx.drawPuddlesV54(game.batch, puddles, area.h, wetness, "rain".equals(weather()) && !isIndoor(),
                 time, game.settings.visualQuality, storm.flashAlpha(game.settings.visualQuality),
                 visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
@@ -1199,8 +1200,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         Collections.sort(drawList, bySortY);
         for (DrawItem o : drawList) {
             Object r = o.value;
-            if (r instanceof MapDb.Terrace) drawTerraceFront((MapDb.Terrace)r);
-            else if (r instanceof MapDb.Prop) drawProp((MapDb.Prop) r);
+            if (r instanceof MapDb.Terrace) worldRenderer.drawTerraceFront((MapDb.Terrace)r);
+            else if (r instanceof MapDb.Prop) worldRenderer.drawProp((MapDb.Prop) r);
             else if (r instanceof QuestDb.Sprite) {
                 QuestDb.Sprite s = (QuestDb.Sprite) r;
                 Texture t = game.assets.tex(s.image);
@@ -1235,10 +1236,10 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             }
             game.batch.setColor(1, 1, 1, 1);
         }
-        drawEmote(player);
-        if (partnerMode != 0 || cineShowPartner) drawEmote(partner);
-        for (Actor ac : townActors.values()) drawEmote(ac);
-        for (Actor ac : cineActors.values()) drawEmote(ac);
+        worldRenderer.drawEmote(player);
+        if (partnerMode != 0 || cineShowPartner) worldRenderer.drawEmote(partner);
+        for (Actor ac : townActors.values()) worldRenderer.drawEmote(ac);
+        for (Actor ac : cineActors.values()) worldRenderer.drawEmote(ac);
         if (partnerMode == 2 && partner.emote == null && engine.partnerTalk(area.id) != null && game.settings.showHints) {
             Texture ht = game.assets.tex("ui/emote_heart.png");
             float bob = MathUtils.sin(time * 3f) * 2f;
@@ -1246,8 +1247,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             game.batch.draw(ht, partner.x - 8, area.h - partner.y + partner.drawHeight() + 2 + bob, 16, 16);
             game.batch.setColor(1, 1, 1, 1);
         }
-        drawTerraceAtmosphere();
-        drawAmbient();
+        worldRenderer.drawTerraceAtmosphere();
+        worldRenderer.drawAmbient();
         {
             float vw = worldView.getWorldWidth() * worldCam.zoom, vh = worldView.getWorldHeight() * worldCam.zoom;
             float left = worldCam.position.x - vw / 2, bottom = worldCam.position.y - vh / 2;
@@ -1263,275 +1264,56 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         game.batch.end();
     }
 
-    private String weather() {
+    String weather() {
         String w = engine.weatherNow();
         return WorldClock.HUJAN.equals(w) ? "rain" : w;
     }
 
-    /** Kilau bergerak di permukaan air (kolam, danau, air mancur). */
-    private void drawWater() {
-        for (float[] f : area.waterFlow)
-            worldFx.drawFlowV54(game.batch, game.assets.pixel, f[0], area.h - f[1] - f[3], f[2], f[3], f[4], f[5],
-                    time, game.settings.visualQuality, "rain".equals(weather()),
-                    visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
-        for (float[] r : area.riverPaths)
-            worldFx.drawRiverV54(game.batch, game.assets.pixel, r, area.h, time, game.settings.visualQuality,
-                    "rain".equals(weather()), visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
-        if (area.water.isEmpty()) return;
-        for (float[] w : area.water) {
-            int visual = game.settings.visualQuality;
-            int n = (int) Math.min(visual == 2 ? 58 : 40, w[2] * w[3] / (visual == 2 ? 660f : 900f) + (visual == 0 ? 3 : 6));
-            if (visual == 0) n = Math.max(3, n / 3);
-            for (int i = 0; i < n; i++) {
-                float ph = time * 0.6f + i * 1.37f;
-                float u = ((i * 0.618f) % 1f) * 2f - 1f, v = ((i * 0.377f + 0.21f) % 1f) * 2f - 1f;
-                if (u * u + v * v > 0.85f) continue;
-                float al = Math.max(0f, MathUtils.sin(ph * 2f)) * 0.7f;
-                float wx = w[0] + u * w[2] + MathUtils.sin(ph) * 6f, wy = w[1] + v * w[3];
-                game.batch.setColor(0.9f, 0.97f, 1f, al);
-                game.batch.draw(game.assets.pixel, wx, area.h - wy, 6 + (i % 3) * 2, 1.5f);
-            }
-            worldFx.drawRipples(game.batch, w[0], area.h - w[1], w[2], w[3], time, visual, "rain".equals(weather()));
-            worldFx.drawWaterGlintsV462(game.batch,w[0],area.h-w[1],w[2],w[3],time,visual,"rain".equals(weather()));
-        }
-        game.batch.setColor(1, 1, 1, 1);
-    }
 
-    /** Partikel ambient (kelopak, kunang-kunang, bintang) dan hujan, relatif terhadap kamera. */
-    private void drawAmbient() {
-        float ww = worldView.getWorldWidth() * worldCam.zoom, wh = worldView.getWorldHeight() * worldCam.zoom;
-        float left = worldCam.position.x - ww / 2, bottom = worldCam.position.y - wh / 2;
-        String amb = area.ambient;
-        float[] L = lightNow();
-        boolean rain = "rain".equals(weather()) && !isIndoor();
-        boolean night = !isIndoor() && L[3] > 0.18f;
-        int visual = game.settings.visualQuality;
-        if (visual > 0 && !isIndoor() && !realm()) {
-            float halo = night ? (visual == 2 ? 220f : 140f) : (visual == 2 ? 250f : 165f);
-            float hx = left + ww * (night ? 0.82f : 0.18f);
-            float hy = bottom + wh * 0.80f;
-            if (night) game.batch.setColor(0.72f, 0.78f, 1f, rain ? 0.12f : 0.18f);
-            else game.batch.setColor(1f, 0.78f, 0.54f, rain ? 0.14f : 0.22f);
-            game.batch.draw(glow, hx - halo / 2f, hy - halo / 2f, halo, halo);
-            game.batch.setColor(1f, 1f, 1f, 1f);
-        }
-        if (amb != null && !rain) {
-            for (int i = 0; i < (visual == 2 ? 28 : visual == 1 ? 18 : 8); i++) {
-                float fx = ((i * 0.6180339f + time * (0.012f + (i % 5) * 0.004f)) % 1f) * ww;
-                float fy = ((i * 0.3819f + ("petals".equals(amb) ? -time * 0.03f : MathUtils.sin(time * 0.3f + i) * 0.02f)) % 1f + 1f) % 1f * wh;
-                if ("petals".equals(amb)) { game.batch.setColor(1f, 0.78f, 0.86f, 0.85f); game.batch.draw(game.assets.pixel, left + fx, bottom + fy, 3, 2); }
-                else if ("fireflies".equals(amb)) { float al = 0.3f + 0.7f * Math.max(0, MathUtils.sin(time * 2 + i)); game.batch.setColor(1f, 0.95f, 0.55f, al); game.batch.draw(sparkle, left + fx, bottom + fy, 7, 7); }
-                else { float al = 0.3f + 0.6f * Math.max(0, MathUtils.sin(time * 1.5f + i * 2)); game.batch.setColor(1f, 0.96f, 0.85f, al); game.batch.draw(sparkle, left + fx, bottom + fy, 6, 6); }
-            }
-        }
-        if (rain) {
-            int rainCount = visual == 2 ? rainX.length : visual == 1 ? 90 : 48;
-            for (int i = 0; i < rainCount; i++) {
-                float fx = ((rainX[i] + time * 0.05f) % 1f) * (ww + 60) - 30;
-                float fy = ((rainY[i] - time * (1.1f + (i % 4) * 0.15f)) % 1f + 1f) % 1f * (wh + 40);
-                game.batch.setColor(0.75f, 0.85f, 1f, 0.55f);
-                game.batch.draw(game.assets.pixel, left + fx, bottom + fy, 1, 9);
-            }
-        }
-        QuestDb.Step st = engine.step();
-        night = L[3] >= 0.2f && !rain;
-        if (!isIndoor() && !rain && !night && !realm()) { // kupu-kupu kecil di area luar siang hari
-            for (int i = 0; i < (visual == 2 ? 7 : visual == 1 ? 4 : 2); i++) {
-                float bx = ((i * 0.618f + MathUtils.sin(time * 0.11f + i) * 0.18f) % 1f + 1f) % 1f * ww;
-                float by = ((i * 0.37f + MathUtils.cos(time * 0.09f + i * 2) * 0.15f) % 1f + 1f) % 1f * wh;
-                float flap = Math.abs(MathUtils.sin(time * 14f + i)) * 2.2f + 0.6f;
-                if (i % 2 == 0) game.batch.setColor(1f, 0.85f, 0.4f, 0.95f); else game.batch.setColor(0.95f, 0.75f, 0.95f, 0.95f);
-                game.batch.draw(game.assets.pixel, left + bx - flap - 0.5f, bottom + by, flap, 2f);
-                game.batch.draw(game.assets.pixel, left + bx + 0.5f, bottom + by, flap, 2f);
-            }
-        }
-        float tintA = 0f; Color tc = null;
-        if (rain || ("rain".equals(weather()) && isIndoor())) { tc = tint.set(0.25f, 0.3f, 0.42f, 1f); tintA = isIndoor() ? 0.12f : 0.28f; }
-        else if (L[3] > 0.001f) { tc = tint.set(L[0], L[1], L[2], 1f); tintA = isIndoor() ? L[3] * 0.45f : L[3]; }
-        if (!isIndoor() && !realm() && WorldClock.BERAWAN.equals(weather())) { game.batch.setColor(0.55f, 0.58f, 0.66f, 0.13f); game.batch.draw(game.assets.pixel, left - 10, bottom - 10, ww + 20, wh + 20); }
-        if (!isIndoor() && !realm() && WorldClock.BERANGIN.equals(weather())) { // daun & kelopak terbawa angin
-            for (int i = 0; i < (visual == 2 ? 35 : visual == 1 ? 22 : 10); i++) {
-                float fx = ((i * 0.618f + time * (0.09f + (i % 4) * 0.02f)) % 1f) * (ww + 40) - 20;
-                float fy = ((i * 0.37f + MathUtils.sin(time * 1.3f + i) * 0.03f) % 1f + 1f) % 1f * wh;
-                if (i % 3 == 0) game.batch.setColor(1f, 0.78f, 0.86f, 0.9f); else game.batch.setColor(0.55f, 0.75f, 0.4f, 0.9f);
-                game.batch.draw(game.assets.pixel, left + fx, bottom + fy, 3, 2);
-            }
-        }
-        if (tc != null && tintA > 0) {
-            game.batch.setColor(tc.r, tc.g, tc.b, tintA);
-            game.batch.draw(game.assets.pixel, left - 10, bottom - 10, ww + 20, wh + 20);
-        }
-        if ("dark".equals(area.ambient)) { // gua: lingkar cahaya di sekitar pemain + pendar kristal
-            Texture dk = game.assets.tex("ui/darkness.png");
-            float R = 230f, px = player.x, py = area.h - player.y + 26;
-            game.batch.setColor(1, 1, 1, 1);
-            game.batch.draw(dk, px - R, py - R, R * 2, R * 2);
-            game.batch.setColor(0.03f, 0.02f, 0.07f, 0.9f);
-            game.batch.draw(game.assets.pixel, left - 10, bottom - 10, px - R - left + 10, wh + 20);
-            game.batch.draw(game.assets.pixel, px + R, bottom - 10, left + ww - px - R + 10, wh + 20);
-            game.batch.draw(game.assets.pixel, px - R, bottom - 10, R * 2, py - R - bottom + 10);
-            game.batch.draw(game.assets.pixel, px - R, py + R, R * 2, bottom + wh - py - R + 10);
-            for (MapDb.Prop pr : area.props) {
-                if (!pr.def.image.contains("crystal")) continue;
-                Texture t = game.assets.tex(pr.def.image);
-                float s = 70 + MathUtils.sin(time * 1.6f + pr.x) * 6f;
-                game.batch.setColor(0.7f, 0.85f, 1f, 0.5f);
-                game.batch.draw(sparkle, pr.x - s / 2, area.h - pr.y + t.getHeight() / 2f - s / 2, s, s);
-            }
-            game.batch.setColor(1, 1, 1, 1);
-        }
-        if (night || rain || realm()) { // lampu jalan & lentera berpendar saat malam/hujan
-            for (MapDb.Prop pr : area.props) {
-                String img = (pr.alt != null && pr.altFlag != null && p.hasFlag(pr.altFlag) ? pr.alt : pr.def).image;
-                if (!(img.contains("lamp") || img.contains("lantern_post") || img.contains("lantern_on"))) continue;
-                Texture t = game.assets.tex(img);
-                float gx = pr.x, gy = area.h - pr.y + t.getHeight() - 6;
-                if (gx < left - 60 || gx > left + ww + 60 || gy < bottom - 60 || gy > bottom + wh + 60) continue;
-                float s = 46 + MathUtils.sin(time * 2f + pr.x) * 3f;
-                game.batch.setColor(1f, 0.85f, 0.55f, 0.45f);
-                game.batch.draw(sparkle, gx - s / 2, gy - s / 2, s, s);
-            }
-        }
-        game.batch.setColor(1, 1, 1, 1);
-    }
 
-    private boolean isIndoor() { return area.indoor; }
-    private static String animalName(String t) {
+
+
+    boolean isIndoor() { return area.indoor; }
+    static String animalName(String t) {
         if (t.startsWith("cat")) return "kucing"; if (t.equals("dog")) return "anjing"; if (t.equals("duck")) return "bebek";
         if (t.equals("chicken")) return "ayam"; if (t.equals("rabbit")) return "kelinci"; return t;
     }
     /** cahaya efektif: tint step cerita bila ada, selain itu dari jam dunia. {r,g,b,a} */
-    private float[] lightNow() {
+    float[] lightNow() {
         QuestDb.Step st = engine.step();
         if (st != null && st.tint != null) { Color c = Color.valueOf(st.tint); return new float[]{c.r, c.g, c.b, st.tintAlpha}; }
         if (realm()) return new float[]{1, 1, 1, 0};
         return WorldClock.light(p.minute);
     }
-    private boolean realm() { return "memory".equals(area.music) || "star".equals(area.music) || "tender".equals(area.music); }
+    boolean realm() { return "memory".equals(area.music) || "star".equals(area.music) || "tender".equals(area.music); }
 
     /** Musik kota/cerita dengan 25 komposisi baru; perintah musik khusus quest selalu didahulukan. */
-    private String musicFor() {
+    String musicFor() {
         QuestDb.Step st = engine.step();
         String override = st != null && st.music != null && (st.musicAreas.isEmpty() || st.musicAreas.contains(area.id)) ? st.music : null;
         return SoundscapePlan.musicFor(area.id, area.music, weather(), isIndoor(), p.minute, p.day,
                 game.settings.variedMusic, override);
     }
 
-    private void syncSoundscape() {
+    void syncSoundscape() {
         if (area == null) return;
         game.audio.music(musicFor());
         game.audio.ambience(SoundscapePlan.ambienceFor(area.id, weather(), isIndoor(), p.minute));
     }
 
-    /** Platform PNG covers a pixel-art deck, retaining wall, and traversable stairs. */
-    private void drawTerraceBase(MapDb.Terrace t){
-        float x=t.x-20f, y=area.h-(t.y-40f+t.h+t.stairLength+64f);
-        float w=t.w+40f, h=t.h+t.stairLength+64f;
-        if(x>visibleR||x+w<visibleL||y>visibleT||y+h<visibleB)return;
-        game.batch.setColor(1f,1f,1f,1f);
-        game.batch.draw(game.assets.tex(t.image),x,y,w,h);
-    }
 
-    /** Foreground lip participates in world Y-sort for convincing edge overlap. */
-    private void drawTerraceFront(MapDb.Terrace t){
-        float x=t.x-20f, y=area.h-(t.y-40f+t.h+t.stairLength+64f);
-        float w=t.w+40f,h=t.h+t.stairLength+64f;
-        if(x>visibleR||x+w<visibleL||y>visibleT||y+h<visibleB)return;
-        game.batch.setColor(1f,1f,1f,1f);
-        game.batch.draw(game.assets.tex(t.front),x,y,w,h);
-    }
 
-    /** Lightweight VFX on terraces; respects visualQuality and time/weather. */
-    private void drawTerraceAtmosphere(){
-        if(game.settings.visualQuality==0||area.terraces.isEmpty())return;
-        for(MapDb.Terrace t:area.terraces){
-            float cx=t.x+t.w*.5f, cy=area.h-t.y-t.h*.45f+t.rise;
-            if(!visibleActor(cx,t.y+t.h*.5f))continue;
-            boolean magic="memory".equals(t.style)||"star".equals(t.style)||"crystal".equals(t.style)
-                    ||"night".equals(t.style)||"future".equals(t.style);
-            boolean night=WorldClock.isNight(p.minute);
-            if(!magic && !night)continue;
-            int count=game.settings.visualQuality>1?11:5;
-            for(int i=0;i<count;i++){
-                float sx=cx+MathUtils.sin(i*12.71f+time*.36f)*(t.w*.46f);
-                float sy=cy+MathUtils.cos(i*7.37f+time*.48f)*(t.h*.40f)+MathUtils.sin(time*.92f+i)*7f;
-                float alpha=.13f+.20f*(.5f+.5f*MathUtils.sin(time*1.4f+i*2.9f));
-                game.batch.setColor(magic ? .84f : 1f,magic ? .78f : .86f,1f,alpha);
-                game.batch.draw(sparkle,sx-2f,sy-2f,4.5f,4.5f);
-            }
-        }
-        game.batch.setColor(1f,1f,1f,1f);
-    }
 
-    private void drawProp(MapDb.Prop pr) {
-        MapDb.PropDef def = pr.alt != null && pr.altFlag != null && p.hasFlag(pr.altFlag) ? pr.alt : pr.def;
-        Texture t = game.assets.tex(def.image);
-        float propX = pr.x - t.getWidth() / 2f, propY = area.h - pr.y;
-        if (propX > visibleR || propX + t.getWidth() < visibleL || propY > visibleT || propY + t.getHeight() < visibleB) return;
-        // v3.7: local ground-contact shadow follows identical Y-sort as the prop;
-        // stays underneath its sprite, and never modifies collision or quest geometry.
-        if (game.settings.visualQuality > 0 && !"floor".equals(def.layer)
-                && def.cw >= 8f && def.ch > 0f) {
-            float ww = WorldLightingV37.width(def.cw);
-            float sx = WorldLightingV37.shadowOffsetX(p.minute, isIndoor(), "rain".equals(weather()), game.settings.visualQuality);
-            float opacity = WorldLightingV37.contactOpacity(p.minute, isIndoor(), "rain".equals(weather()), game.settings.visualQuality);
-            game.batch.setColor(1f, 1f, 1f, opacity);
-            game.batch.draw(shadow, Math.round(pr.x + sx - ww * 0.5f),
-                    Math.round(area.h - pr.y - 7f), ww, 14f);
-            game.batch.setColor(1f, 1f, 1f, 1f);
-        }
-        String img = def.image;
-        boolean lamp = img.contains("lamp") || img.contains("lantern");
-        boolean crystal = img.contains("crystal");
-        boolean warmWindow = img.contains("window") || img.contains("campfire") || img.contains("fire");
-        boolean glowAllowed = game.settings.visualQuality > 0 &&
-                (crystal || (lamp && (isIndoor() || realm() || WorldClock.isNight(p.minute) || "rain".equals(weather())))
-                    || (warmWindow && (isIndoor() || WorldClock.isNight(p.minute))));
-        if (glowAllowed) {
-            float cx = pr.x;
-            float cy = area.h - pr.y + t.getHeight() * (lamp ? 0.78f : 0.55f);
-            float s = (lamp ? 92f : crystal ? 84f : 70f) * (game.settings.visualQuality == 2 ? 1.15f : 0.85f);
-            float strength = game.settings.visualQuality == 2 ? 1f : 0.6f;
-            if (lamp) game.batch.setColor(1f, 0.84f, 0.56f, 0.34f * strength);
-            else if (crystal) game.batch.setColor(0.72f, 0.88f, 1f, 0.30f * strength);
-            else game.batch.setColor(1f, 0.90f, 0.72f, 0.20f * strength);
-            game.batch.draw(glow, cx - s / 2f, cy - s / 2f, s, s);
-            game.batch.setColor(1, 1, 1, 1);
-        }
-        // High-quality animation: move only the upper third of a tree (the roots/trunk
-        // remain fixed and collision unchanged). TextureRegions are cached once per texture.
-        if (game.settings.visualQuality == 2 && (img.contains("/tree_") || img.contains("/wishing_tree"))
-                && t.getHeight() >= 60 && !"floor".equals(def.layer)) {
-            TextureRegion[] split = animatedTreeRegions.get(t);
-            if (split == null) {
-                int th = Math.max(12, t.getHeight() / 3);
-                split = new TextureRegion[]{new TextureRegion(t, 0, th, t.getWidth(), t.getHeight()-th),
-                        new TextureRegion(t, 0, 0, t.getWidth(), th)};
-                animatedTreeRegions.put(t, split);
-            }
-            float sway = MathUtils.sin(time * 1.05f + pr.x * 0.013f + pr.y * 0.009f) * 2.0f;
-            float x = Math.round(pr.x - t.getWidth() / 2f), y = Math.round(area.h - pr.y);
-            int bottomH = split[0].getRegionHeight();
-            game.batch.draw(split[0], x, y, t.getWidth(), bottomH);
-            game.batch.draw(split[1], x + sway, y + bottomH, t.getWidth(), split[1].getRegionHeight());
-        } else {
-            game.batch.draw(t, Math.round(pr.x - t.getWidth() / 2f), Math.round(area.h - pr.y), t.getWidth(), t.getHeight());
-        }
-        if (WorldFx.animatedWater(img)) // v5.4: fountains and waterfalls actually move
-            worldFx.drawPropWaterV54(game.batch, game.assets.pixel, img, Math.round(pr.x - t.getWidth() / 2f),
-                    Math.round(area.h - pr.y) + t.getHeight(), time, game.settings.visualQuality);
-    }
 
-    private void drawEmote(Actor a) {
-        if (a.emote == null) return;
-        Texture t = game.assets.tex("ui/emote_" + a.emote + ".png");
-        float pop = Math.min(1f, (1.8f - a.emoteTime) * 6f);
-        game.batch.draw(t, a.x - 11, area.h - a.y + a.terrainLift + a.drawHeight() + 2, 22 * pop, 22 * pop);
-    }
+
+
+
+
+
 
     /** Konversi koordinat peta -> UI (kedua viewport menutupi seluruh layar). */
-    private final Vector2 tmpV = new Vector2();
-    private Vector2 mapToUi(float mx, float my) {
+    final Vector2 tmpV = new Vector2();
+    Vector2 mapToUi(float mx, float my) {
         float ww = worldView.getWorldWidth() * worldCam.zoom, wh = worldView.getWorldHeight() * worldCam.zoom;
         float left = worldCam.position.x - ww / 2, bottom = worldCam.position.y - wh / 2;
         return tmpV.set((mx - left) * uiW() / ww, ((area.h - my) - bottom) * uiH() / wh);
@@ -1676,7 +1458,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     }
 
     /** Saat cutscene: HUD disembunyikan, hanya letterbox, dialog, toast, dan fade. */
-    private void drawCineUi(float W, float H, float inL, float inR, float inB) {
+    void drawCineUi(float W, float H, float inL, float inR, float inB) {
         cine.drawUi(ui, W, H);
         if (toastTime > 0) {
             float al = Math.min(1f, toastTime * 3f);
@@ -1691,7 +1473,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (fadeAlpha > 0) ui.rect(0, 0, W, H, Ui.BG, fadeAlpha);
     }
 
-    private void drawCredits(float W, float H) {
+    void drawCredits(float W, float H) {
         ui.rect(0, 0, W, H, Ui.BG, Math.min(1f, creditsTime));
         float y0 = -60 + creditsTime * 70f;
         List<String> lines = game.quests.credits;
@@ -1703,7 +1485,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         ui.text(game.assets.body, "Ketuk untuk mempercepat", 0, 50, Ui.LAVENDER, 0.7f, Align.center, W);
     }
 
-    private void drawPause() {
+    void drawPause() {
         float W = uiW(), H = uiH();
         ui.rect(0, 0, W, H, Ui.BG, 0.6f);
         float pw = Math.min(520, W - insetL() - insetR() - 28);
