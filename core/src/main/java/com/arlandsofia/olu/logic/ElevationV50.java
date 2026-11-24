@@ -31,11 +31,14 @@ public final class ElevationV50 {
         for(MapDb.Terrace t:terraces){
             boolean fromTop=t.top(fromX,fromY), toTop=t.top(toX,toY);
             if(fromTop!=toTop) {
-                // A true level boundary crossing occurs at the south edge on the stair centerline.
+                // A level boundary crossing is legal only through the stair mouth.
                 if(!t.stairs(fromX,fromY) && !t.stairs(toX,toY))return false;
-                float centerX=t.stairX()+t.stairWidth*.5f;
-                if(Math.abs(toX-centerX)>t.stairWidth*.5f-6f)return false;
-                if(Math.abs(toY-(t.y+t.h))>12f && Math.abs(fromY-(t.y+t.h))>12f)return false;
+                // v5.4: accept the whole stair band that stairs() treats as walkable.
+                // v5.0 only accepted the centre (width-12px), so feet near either railing
+                // were "on the stairs" but could neither reach the top nor step down.
+                if(toX<t.stairX() || toX>t.stairX()+t.stairWidth)return false;
+                // Guard against frame-spike teleports across the whole flight.
+                if(Math.abs(toY-fromY)>t.stairLength)return false;
             }
             boolean fromSt=t.stairs(fromX,fromY),toSt=t.stairs(toX,toY);
             if(fromSt!=toSt) {
