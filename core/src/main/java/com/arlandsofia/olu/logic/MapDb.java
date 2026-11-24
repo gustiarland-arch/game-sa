@@ -130,6 +130,8 @@ public final class MapDb {
         public final List<float[]> water = new ArrayList<>();
         public final boolean indoor;
         public final float w, h, spawnX, spawnY;
+        /** Bed spot for sleeping in the route's own room; NaN where the map has none. */
+        public final float bedX, bedY;
         public final List<float[]> walls = new ArrayList<>();
         public final List<float[]> ellipses = new ArrayList<>();
         public final List<Prop> props = new ArrayList<>();
@@ -148,6 +150,8 @@ public final class MapDb {
             w = Json.num(m, "w", 960); h = Json.num(m, "h", 640);
             float[] sp = Json.floats(m.get("spawn"));
             spawnX = sp.length > 1 ? sp[0] : w / 2; spawnY = sp.length > 1 ? sp[1] : h / 2;
+            float[] bed = Json.floats(m.get("bed"));
+            bedX = bed.length > 1 ? bed[0] : Float.NaN; bedY = bed.length > 1 ? bed[1] : Float.NaN;
             for (Object o : Json.list(m, "walls")) walls.add(Json.floats(o));
             for (Object o : Json.list(m, "ellipses")) ellipses.add(Json.floats(o));
             for (Map<String, Object> p : Json.objList(m, "props")) {

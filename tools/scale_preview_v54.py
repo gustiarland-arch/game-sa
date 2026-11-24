@@ -33,6 +33,11 @@ def render(aid, out, crop=900):
             base.alpha_composite(t, (round(it['x'] - t.width / 2), round(it['y'] - t.height)))
         else:
             c = char(it[0]); base.alpha_composite(c, (round(it[1] - c.width / 2), round(it[2] - c.height)))
+    if os.environ.get('OLU_PREVIEW_FULL'):
+        img = base
+        d = ImageDraw.Draw(img); d.rectangle([0, 0, 420, 16], fill=(0, 0, 0, 180))
+        d.text((4, 3), f'{aid} {W}x{H} - static preview, not runtime', fill=(255, 255, 255, 255))
+        img.convert('RGB').save(out); return
     half = crop // 2
     x0 = int(max(0, min(W - crop, sx - half))); y0 = int(max(0, min(H - crop * 0.6, sy - crop * 0.3)))
     img = base.crop((x0, y0, min(W, x0 + crop), min(H, y0 + int(crop * 0.6))))

@@ -2,7 +2,7 @@
 
 Reference body (rendered, Arland/Sofia avg): **64.5 px** tall. Arland 67.0x43.0, Sofia 62.0x38.0 (opaque bounds x Actor.SCALE 1.0).
 
-Props in props.json: 372; categorised: 102; used in maps and outside band: **8**; collider wider than art: 0.
+Props in props.json: 372; categorised: 102; used in maps and outside band: **7**; collider wider than art: 0.
 
 ## Out-of-band furniture used in maps
 
@@ -12,7 +12,6 @@ Props in props.json: 372; categorised: 102; used in maps and outside band: **8**
 | maps_v4_perpustakaan_bookshelf | bookshelf|shelf|wardrobe|cabinet | 324x204 | 3.16 | 0.9-1.9 | perpustakaan |
 | v51_approach_lantern_field | lamp|lantern | 67x168 | 2.6 | 0.25-2.2 | lantern_field |
 | maps_v4_toko_bunga_flower_table | table|meja | 329x149 | 2.31 | 0.35-1.0 | toko_bunga |
-| maps_v4_ruang_arsip_investigation_desk | desk | 214x135 | 2.09 | 0.45-1.1 | ruang_arsip |
 | cafe_umbrella_table | table|meja | 77x83 | 1.29 | 0.35-1.0 | plaza |
 | log_bench | bench | 60x15 | 0.23 | 0.3-0.9 | hutan_bisik |
 | log_bench_b | bench | 60x15 | 0.23 | 0.3-0.9 | hutan_bisik |

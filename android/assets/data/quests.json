@@ -48,9 +48,9 @@
         {
           "id": "v474_fold",
           "area": "arland_room",
-          "x": 620,
-          "y": 512,
-          "r": 95,
+          "x": 310,
+          "y": 256,
+          "r": 48,
           "label": "Lipat bunga kertas",
           "actions": [
             {
@@ -73,17 +73,17 @@
           "route": "arland",
           "sprite": {
             "image": "items/v474_folded_flower.png",
-            "x": 620,
-            "y": 497,
+            "x": 310,
+            "y": 248,
             "bob": true
           }
         },
         {
           "id": "v474_draft",
           "area": "sofia_room",
-          "x": 695,
-          "y": 512,
-          "r": 95,
+          "x": 348,
+          "y": 256,
+          "r": 48,
           "label": "Tulis kartu pos",
           "actions": [
             {
@@ -106,8 +106,8 @@
           "route": "sofia",
           "sprite": {
             "image": "items/v474_postcard.png",
-            "x": 695,
-            "y": 497,
+            "x": 348,
+            "y": 248,
             "bob": true
           }
         }
@@ -125,9 +125,9 @@
         {
           "id": "v474_ribbon",
           "area": "arland_room",
-          "x": 550,
-          "y": 530,
-          "r": 95,
+          "x": 275,
+          "y": 265,
+          "r": 48,
           "label": "Pilih pita bunga",
           "actions": [
             {
@@ -146,17 +146,17 @@
           "route": "arland",
           "sprite": {
             "image": "items/v474_ribbon.png",
-            "x": 550,
-            "y": 515,
+            "x": 275,
+            "y": 258,
             "bob": true
           }
         },
         {
           "id": "v474_stamp",
           "area": "sofia_room",
-          "x": 630,
-          "y": 544,
-          "r": 95,
+          "x": 315,
+          "y": 272,
+          "r": 48,
           "label": "Pilih cap kartu pos",
           "actions": [
             {
@@ -175,8 +175,8 @@
           "route": "sofia",
           "sprite": {
             "image": "items/v474_postcard.png",
-            "x": 630,
-            "y": 529,
+            "x": 315,
+            "y": 264,
             "bob": true
           }
         }
@@ -194,9 +194,9 @@
         {
           "id": "phone",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 64,
+          "x": 360,
+          "y": 199,
+          "r": 40,
           "label": "Lihat ponsel",
           "actions": [
             {
@@ -221,9 +221,9 @@
         {
           "id": "phone",
           "area": "sofia_room",
-          "x": 701,
-          "y": 386,
-          "r": 64,
+          "x": 350,
+          "y": 193,
+          "r": 40,
           "label": "Lihat ponsel",
           "actions": [
             {
@@ -262,16 +262,16 @@
             },
             {
               "who": "player",
-              "x": 1065,
-              "y": 501,
+              "x": 532,
+              "y": 250,
               "dir": "down",
               "c": "place",
               "route": "arland"
             },
             {
               "who": "player",
-              "x": 55,
-              "y": 501,
+              "x": 28,
+              "y": 250,
               "dir": "down",
               "c": "place",
               "route": "sofia"
@@ -282,16 +282,16 @@
               "c": "pose"
             },
             {
-              "x": 1038,
-              "y": 462,
+              "x": 519,
+              "y": 231,
               "zoom": 1.4,
               "t": 0,
               "c": "cam",
               "route": "arland"
             },
             {
-              "x": 162,
-              "y": 462,
+              "x": 81,
+              "y": 231,
               "zoom": 1.4,
               "t": 0,
               "c": "cam",
@@ -367,8 +367,8 @@
               "c": "pose"
             },
             {
-              "x": 875,
-              "y": 532,
+              "x": 438,
+              "y": 266,
               "zoom": 1.0,
               "t": 1.8,
               "async": true,
@@ -376,8 +376,8 @@
               "route": "arland"
             },
             {
-              "x": 350,
-              "y": 532,
+              "x": 175,
+              "y": 266,
               "zoom": 1.0,
               "t": 1.8,
               "async": true,
@@ -388,12 +388,12 @@
               "who": "player",
               "path": [
                 [
-                  1014,
-                  554
+                  507,
+                  277
                 ],
                 [
-                  800,
-                  588
+                  400,
+                  294
                 ]
               ],
               "c": "move",
@@ -403,12 +403,12 @@
               "who": "player",
               "path": [
                 [
-                  119,
-                  663
+                  60,
+                  332
                 ],
                 [
-                  400,
-                  588
+                  200,
+                  294
                 ]
               ],
               "c": "move",
@@ -472,9 +472,9 @@
         {
           "id": "gift",
           "area": "arland_room",
-          "x": 514,
-          "y": 376,
-          "r": 64,
+          "x": 257,
+          "y": 188,
+          "r": 40,
           "label": "Bunga kertas",
           "actions": [
             {
@@ -528,17 +528,17 @@
           "route": "arland",
           "sprite": {
             "image": "props/pickup_paper_flower.png",
-            "x": 514,
-            "y": 376,
+            "x": 257,
+            "y": 188,
             "bob": false
           }
         },
         {
           "id": "gift",
           "area": "sofia_room",
-          "x": 713,
-          "y": 384,
-          "r": 64,
+          "x": 356,
+          "y": 192,
+          "r": 40,
           "label": "Kartu pos",
           "actions": [
             {
@@ -592,8 +592,8 @@
           "route": "sofia",
           "sprite": {
             "image": "props/pickup_postcard.png",
-            "x": 713,
-            "y": 384,
+            "x": 356,
+            "y": 192,
             "bob": false
           }
         }
@@ -1875,8 +1875,8 @@
             {
               "do": "warp",
               "area": "$ROOM",
-              "x": 480,
-              "y": 440,
+              "x": 243,
+              "y": 217,
               "dir": "down"
             },
             {
@@ -1903,9 +1903,9 @@
         {
           "id": "note",
           "area": "arland_room",
-          "x": 206,
-          "y": 489,
-          "r": 64,
+          "x": 103,
+          "y": 244,
+          "r": 40,
           "label": "Rak buku",
           "actions": [
             {
@@ -1947,17 +1947,17 @@
           "route": "arland",
           "sprite": {
             "image": "props/pickup_note.png",
-            "x": 206,
-            "y": 489,
+            "x": 103,
+            "y": 244,
             "bob": false
           }
         },
         {
           "id": "note",
           "area": "sofia_room",
-          "x": 339,
-          "y": 500,
-          "r": 64,
+          "x": 170,
+          "y": 250,
+          "r": 40,
           "label": "Rak buku",
           "actions": [
             {
@@ -1999,8 +1999,8 @@
           "route": "sofia",
           "sprite": {
             "image": "props/pickup_bookmark.png",
-            "x": 339,
-            "y": 500,
+            "x": 170,
+            "y": 250,
             "bob": false
           }
         }
@@ -2758,8 +2758,8 @@
                 "c": "bars"
               },
               {
-                "x": 600,
-                "y": 608,
+                "x": 300,
+                "y": 304,
                 "zoom": 1.1,
                 "t": 0,
                 "c": "cam"
@@ -2777,21 +2777,21 @@
               },
               {
                 "kind": "glow",
-                "x": 160,
-                "y": 300,
+                "x": 80,
+                "y": 150,
                 "t": 3,
                 "c": "fx"
               },
               {
                 "kind": "glow",
-                "x": 640,
-                "y": 300,
+                "x": 320,
+                "y": 150,
                 "t": 3,
                 "c": "fx"
               },
               {
-                "x": 600,
-                "y": 704,
+                "x": 300,
+                "y": 352,
                 "zoom": 1.35,
                 "t": 1.8,
                 "c": "cam"
@@ -2833,9 +2833,9 @@
         {
           "id": "pedestal",
           "area": "ruang_arsip",
-          "x": 619,
-          "y": 566,
-          "r": 60,
+          "x": 310,
+          "y": 283,
+          "r": 40,
           "label": "Catatan di tiang batu",
           "actions": [
             {
@@ -2849,8 +2849,8 @@
                 {
                   "who": "partner",
                   "to": [
-                    651,
-                    762
+                    326,
+                    381
                   ],
                   "dir": "up",
                   "async": true,
@@ -2859,23 +2859,23 @@
                 {
                   "who": "player",
                   "to": [
-                    567,
-                    762
+                    286,
+                    379
                   ],
                   "dir": "up",
                   "c": "move"
                 },
                 {
-                  "x": 600,
-                  "y": 672,
+                  "x": 300,
+                  "y": 336,
                   "zoom": 1.5,
                   "t": 1.4,
                   "c": "cam"
                 },
                 {
                   "kind": "glow",
-                  "x": 400,
-                  "y": 430,
+                  "x": 200,
+                  "y": 215,
                   "t": 12,
                   "c": "fx"
                 },
@@ -2995,9 +2995,9 @@
         {
           "id": "q_a_map",
           "area": "ruang_arsip",
-          "x": 420,
-          "y": 377,
-          "r": 66,
+          "x": 210,
+          "y": 188,
+          "r": 40,
           "label": "Denah Pak Wira",
           "actions": [
             {
@@ -3033,9 +3033,9 @@
         {
           "id": "q_s_margin",
           "area": "ruang_arsip",
-          "x": 741,
-          "y": 380,
-          "r": 66,
+          "x": 370,
+          "y": 190,
+          "r": 40,
           "label": "Catatan pinggir",
           "actions": [
             {
@@ -3784,8 +3784,8 @@
             {
               "do": "warp",
               "area": "$ROOM",
-              "x": 480,
-              "y": 440,
+              "x": 243,
+              "y": 217,
               "dir": "down"
             },
             {
@@ -3818,9 +3818,9 @@
         {
           "id": "phone2",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 64,
+          "x": 360,
+          "y": 199,
+          "r": 40,
           "label": "Lihat ponsel",
           "actions": [
             {
@@ -3853,9 +3853,9 @@
         {
           "id": "phone2",
           "area": "sofia_room",
-          "x": 701,
-          "y": 386,
-          "r": 64,
+          "x": 350,
+          "y": 193,
+          "r": 40,
           "label": "Ambil ponsel",
           "actions": [
             {
@@ -4347,9 +4347,9 @@
         {
           "id": "wardrobe",
           "area": "sofia_room",
-          "x": 883,
-          "y": 695,
-          "r": 64,
+          "x": 442,
+          "y": 348,
+          "r": 40,
           "label": "Lemari pakaian",
           "actions": [
             {
@@ -5145,8 +5145,8 @@
             {
               "do": "warp",
               "area": "$ROOM",
-              "x": 480,
-              "y": 440,
+              "x": 243,
+              "y": 217,
               "dir": "down"
             },
             {
@@ -5189,9 +5189,9 @@
         {
           "id": "v469_frame",
           "area": "arland_room",
-          "x": 711,
-          "y": 388,
-          "r": 78,
+          "x": 356,
+          "y": 194,
+          "r": 40,
           "label": "Rapikan bingkai foto",
           "actions": [
             {
@@ -5235,9 +5235,9 @@
         {
           "id": "v469_scrap",
           "area": "sofia_room",
-          "x": 505,
-          "y": 686,
-          "r": 78,
+          "x": 252,
+          "y": 343,
+          "r": 40,
           "label": "Susun halaman kenangan",
           "actions": [
             {
@@ -5338,9 +5338,9 @@
         {
           "id": "v469_half_a",
           "area": "dapur",
-          "x": 385,
-          "y": 380,
-          "r": 78,
+          "x": 192,
+          "y": 190,
+          "r": 40,
           "label": "Baca potongan surat",
           "actions": [
             {
@@ -5369,9 +5369,9 @@
         {
           "id": "v469_half_s",
           "area": "dapur",
-          "x": 385,
-          "y": 380,
-          "r": 78,
+          "x": 192,
+          "y": 190,
+          "r": 40,
           "label": "Baca catatan yang belum selesai",
           "actions": [
             {
@@ -5411,9 +5411,9 @@
         {
           "id": "idea",
           "area": "arland_room",
-          "x": 711,
-          "y": 388,
-          "r": 64,
+          "x": 356,
+          "y": 194,
+          "r": 40,
           "label": "Meja kerja",
           "actions": [
             {
@@ -5630,9 +5630,9 @@
         {
           "id": "fridge",
           "area": "dapur",
-          "x": 820,
-          "y": 390,
-          "r": 64,
+          "x": 410,
+          "y": 195,
+          "r": 40,
           "label": "Ambil stroberi",
           "actions": [
             {
@@ -5756,9 +5756,9 @@
         {
           "id": "v469_kitchen_arrive_a",
           "area": "dapur",
-          "x": 385,
-          "y": 380,
-          "r": 76,
+          "x": 192,
+          "y": 190,
+          "r": 40,
           "label": "Temui pasangan dan mulai memasak",
           "actions": [
             {
@@ -5789,9 +5789,9 @@
         {
           "id": "corner",
           "area": "sofia_room",
-          "x": 505,
-          "y": 686,
-          "r": 64,
+          "x": 252,
+          "y": 343,
+          "r": 40,
           "label": "Kotak kenangan",
           "actions": [
             {
@@ -5994,9 +5994,9 @@
         {
           "id": "arrange",
           "area": "sofia_room",
-          "x": 505,
-          "y": 686,
-          "r": 64,
+          "x": 252,
+          "y": 343,
+          "r": 40,
           "label": "Tata sudut kenangan",
           "actions": [
             {
@@ -6077,9 +6077,9 @@
         {
           "id": "v469_kitchen_arrive_s",
           "area": "dapur",
-          "x": 385,
-          "y": 380,
-          "r": 76,
+          "x": 192,
+          "y": 190,
+          "r": 40,
           "label": "Temui pasangan dan mulai memasak",
           "actions": [
             {
@@ -6110,9 +6110,9 @@
         {
           "id": "stove",
           "area": "dapur",
-          "x": 385,
-          "y": 380,
-          "r": 64,
+          "x": 192,
+          "y": 190,
+          "r": 40,
           "label": "Masak bersama",
           "actions": [
             {
@@ -6196,9 +6196,9 @@
         {
           "id": "v26_c03_recipe",
           "area": "dapur",
-          "x": 385,
-          "y": 380,
-          "r": 66,
+          "x": 192,
+          "y": 190,
+          "r": 40,
           "label": "Catatan di balik resep",
           "actions": [
             {
@@ -6238,9 +6238,9 @@
         {
           "id": "v26_c03_packing",
           "area": "dapur",
-          "x": 385,
-          "y": 390,
-          "r": 66,
+          "x": 192,
+          "y": 195,
+          "r": 40,
           "label": "Bungkus bekal berdua",
           "actions": [
             {
@@ -6355,9 +6355,9 @@
         {
           "id": "phone4",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 64,
+          "x": 360,
+          "y": 199,
+          "r": 40,
           "label": "Ponsel",
           "actions": [
             {
@@ -6759,9 +6759,9 @@
         {
           "id": "phone4",
           "area": "sofia_room",
-          "x": 701,
-          "y": 386,
-          "r": 64,
+          "x": 350,
+          "y": 193,
+          "r": 40,
           "label": "Ponsel",
           "actions": [
             {
@@ -8011,8 +8011,8 @@
           {
             "do": "warp",
             "area": "$ROOM",
-            "x": 480,
-            "y": 440,
+            "x": 243,
+            "y": 217,
             "dir": "down"
           },
           {
@@ -8052,9 +8052,9 @@
         {
           "id": "phone5",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 64,
+          "x": 360,
+          "y": 199,
+          "r": 40,
           "label": "Ponsel",
           "actions": [
             {
@@ -8377,9 +8377,9 @@
         {
           "id": "book5",
           "area": "sofia_room",
-          "x": 505,
-          "y": 691,
-          "r": 64,
+          "x": 252,
+          "y": 346,
+          "r": 40,
           "label": "Memory Book",
           "actions": [
             {
@@ -11329,8 +11329,8 @@
             {
               "do": "warp",
               "area": "sofia_room",
-              "x": 609,
-              "y": 740,
+              "x": 304,
+              "y": 370,
               "dir": "down"
             },
             {
@@ -11392,9 +11392,9 @@
         {
           "id": "v468_solo_note",
           "area": "sofia_room",
-          "x": 735,
-          "y": 433,
-          "r": 90,
+          "x": 368,
+          "y": 216,
+          "r": 45,
           "label": "Menulis pesan dengan tenang",
           "actions": [
             {
@@ -11779,8 +11779,8 @@
           {
             "do": "warp",
             "area": "$ROOM",
-            "x": 480,
-            "y": 440,
+            "x": 243,
+            "y": 217,
             "dir": "down"
           },
           {
@@ -11820,9 +11820,9 @@
         {
           "id": "projector_v464",
           "area": "arland_room",
-          "x": 730,
-          "y": 420,
-          "r": 100,
+          "x": 365,
+          "y": 210,
+          "r": 50,
           "label": "Perbaiki proyektor atau kirim kabar",
           "actions": [
             {
@@ -11872,8 +11872,8 @@
           ],
           "sprite": {
             "image": "items/v464_projector.png",
-            "x": 730,
-            "y": 410,
+            "x": 365,
+            "y": 205,
             "bob": false
           }
         }
@@ -12719,8 +12719,8 @@
             {
               "do": "warp",
               "area": "$ROOM",
-              "x": 480,
-              "y": 440,
+              "x": 243,
+              "y": 217,
               "dir": "down"
             },
             {
@@ -12846,9 +12846,9 @@
         {
           "id": "v470_a_message",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 85,
+          "x": 360,
+          "y": 199,
+          "r": 42,
           "label": "Kirim perkiraan waktu kedatangan",
           "actions": [
             {
@@ -12911,8 +12911,8 @@
           "route": "arland",
           "sprite": {
             "image": "items/v470_c04_letter.png",
-            "x": 721,
-            "y": 390,
+            "x": 360,
+            "y": 195,
             "bob": false
           }
         }
@@ -12930,9 +12930,9 @@
         {
           "id": "v470_a_fuse",
           "area": "arland_room",
-          "x": 695,
-          "y": 430,
-          "r": 93,
+          "x": 348,
+          "y": 215,
+          "r": 46,
           "label": "Periksa sambungan proyektor",
           "actions": [
             {
@@ -12955,9 +12955,9 @@
         {
           "id": "v470_a_screen",
           "area": "arland_room",
-          "x": 760,
-          "y": 450,
-          "r": 90,
+          "x": 380,
+          "y": 225,
+          "r": 45,
           "label": "Tes kembali gambar di proyektor",
           "actions": [
             {
@@ -12978,8 +12978,8 @@
           "hideIfFlag": "V470_A_TEST_DONE",
           "sprite": {
             "image": "items/v470_c04_projector.png",
-            "x": 760,
-            "y": 442,
+            "x": 380,
+            "y": 221,
             "bob": false
           },
           "when": {
@@ -13054,9 +13054,9 @@
         {
           "id": "v470_a_call",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 85,
+          "x": 360,
+          "y": 199,
+          "r": 42,
           "label": "Telepon untuk minta bantuan",
           "actions": [
             {
@@ -13412,9 +13412,9 @@
         {
           "id": "v470_a_agenda",
           "area": "arland_room",
-          "x": 721,
-          "y": 398,
-          "r": 85,
+          "x": 360,
+          "y": 199,
+          "r": 42,
           "label": "Tulis jadwal dan pengingat yang nyata",
           "actions": [
             {
@@ -13439,8 +13439,8 @@
           "hideIfFlag": "V470_A_AGENDA",
           "sprite": {
             "image": "items/v470_c04_letter.png",
-            "x": 721,
-            "y": 390,
+            "x": 360,
+            "y": 195,
             "bob": false
           }
         },
@@ -13491,9 +13491,9 @@
         {
           "id": "v470_s_boundaries",
           "area": "sofia_room",
-          "x": 701,
-          "y": 386,
-          "r": 90,
+          "x": 350,
+          "y": 193,
+          "r": 45,
           "label": "Tuliskan apa yang Sofia butuhkan",
           "actions": [
             {
@@ -13518,8 +13518,8 @@
           "hideIfFlag": "V470_S_BOUNDARY",
           "sprite": {
             "image": "items/v470_c04_letter.png",
-            "x": 701,
-            "y": 378,
+            "x": 350,
+            "y": 189,
             "bob": false
           }
         },
@@ -19805,9 +19805,9 @@
     {
       "id": "page16",
       "area": "dapur",
-      "x": 1000,
-      "y": 784,
-      "r": 48,
+      "x": 500,
+      "y": 392,
+      "r": 40,
       "label": "Halaman lama",
       "actions": [
         {
@@ -19841,8 +19841,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 1000,
-        "y": 781,
+        "x": 500,
+        "y": 390,
         "bob": true
       },
       "when": {
@@ -19952,9 +19952,9 @@
     {
       "id": "page19",
       "area": "$ROOM",
-      "x": 600,
-      "y": 744,
-      "r": 48,
+      "x": 300,
+      "y": 372,
+      "r": 40,
       "label": "Halaman lama",
       "actions": [
         {
@@ -19988,8 +19988,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 600,
-        "y": 739,
+        "x": 300,
+        "y": 370,
         "bob": true
       },
       "when": {
@@ -20001,9 +20001,9 @@
     {
       "id": "page20",
       "area": "$ROOM",
-      "x": 600,
-      "y": 744,
-      "r": 48,
+      "x": 300,
+      "y": 372,
+      "r": 40,
       "label": "Halaman lama",
       "actions": [
         {
@@ -20037,8 +20037,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 600,
-        "y": 739,
+        "x": 300,
+        "y": 370,
         "bob": true
       },
       "when": {
@@ -22824,9 +22824,9 @@
     {
       "id": "cook1",
       "area": "dapur",
-      "x": 382,
-      "y": 391,
-      "r": 60,
+      "x": 191,
+      "y": 196,
+      "r": 40,
       "label": "Masak: Kue jahe",
       "actions": [
         {
@@ -22859,9 +22859,9 @@
     {
       "id": "cook2",
       "area": "dapur",
-      "x": 382,
-      "y": 391,
-      "r": 60,
+      "x": 191,
+      "y": 196,
+      "r": 40,
       "label": "Masak: Puding kelapa",
       "actions": [
         {
@@ -22897,9 +22897,9 @@
     {
       "id": "cook3",
       "area": "dapur",
-      "x": 382,
-      "y": 391,
-      "r": 60,
+      "x": 191,
+      "y": 196,
+      "r": 40,
       "label": "Masak: Roti kayu manis",
       "actions": [
         {
@@ -23319,9 +23319,9 @@
     {
       "id": "paint4",
       "area": "dapur",
-      "x": 175,
-      "y": 840,
-      "r": 50,
+      "x": 88,
+      "y": 420,
+      "r": 40,
       "label": "Kaleng cat",
       "actions": [
         {
@@ -23344,8 +23344,8 @@
       ],
       "sprite": {
         "image": "props/paint_blue.png",
-        "x": 175,
-        "y": 834,
+        "x": 88,
+        "y": 417,
         "bob": true
       },
       "when": {
@@ -24136,9 +24136,9 @@
     {
       "id": "V49_DISC_ARLAND_ROOM",
       "area": "arland_room",
-      "x": 400,
-      "y": 250,
-      "r": 76,
+      "x": 200,
+      "y": 125,
+      "r": 40,
       "label": "✧ Kertas di Balik Meja",
       "when": {
         "minChapter": "C02",
@@ -24271,9 +24271,9 @@
     {
       "id": "V49_DISC_SOFIA_ROOM",
       "area": "sofia_room",
-      "x": 834,
-      "y": 241,
-      "r": 76,
+      "x": 417,
+      "y": 120,
+      "r": 40,
       "label": "✧ Sudut yang Belum Selesai",
       "when": {
         "minChapter": "C02",
@@ -24946,9 +24946,9 @@
     {
       "id": "V49_DISC_DAPUR",
       "area": "dapur",
-      "x": 808,
-      "y": 388,
-      "r": 76,
+      "x": 404,
+      "y": 194,
+      "r": 40,
       "label": "✧ Tiga Aroma",
       "when": {
         "minChapter": "C03",
@@ -26056,9 +26056,9 @@
     {
       "id": "V49_DISC_RUANG_ARSIP",
       "area": "ruang_arsip",
-      "x": 450,
-      "y": 385,
-      "r": 76,
+      "x": 225,
+      "y": 192,
+      "r": 40,
       "label": "✧ Cap pada Surat",
       "when": {
         "minChapter": "C05",
@@ -27418,9 +27418,9 @@
     {
       "id": "V49_WE_ROOM_NOTE",
       "area": "arland_room",
-      "x": 400,
-      "y": 250,
-      "r": 74,
+      "x": 200,
+      "y": 125,
+      "r": 40,
       "label": "✦ Pesan di Ujung Meja",
       "when": {
         "worldEventReady": "v49_room_note"
@@ -27462,9 +27462,9 @@
     {
       "id": "V49_WE_WINDOW_STORY",
       "area": "sofia_room",
-      "x": 834,
-      "y": 241,
-      "r": 74,
+      "x": 417,
+      "y": 120,
+      "r": 40,
       "label": "✦ Cerita di Jendela",
       "when": {
         "worldEventReady": "v49_window_story"
@@ -27550,9 +27550,9 @@
     {
       "id": "V49_WE_KITCHEN_STEAM",
       "area": "dapur",
-      "x": 808,
-      "y": 388,
-      "r": 74,
+      "x": 404,
+      "y": 194,
+      "r": 40,
       "label": "✦ Uap di Dapur",
       "when": {
         "worldEventReady": "v49_kitchen_steam"
@@ -27814,9 +27814,9 @@
     {
       "id": "V49_WE_ARCHIVE_DUST",
       "area": "ruang_arsip",
-      "x": 450,
-      "y": 385,
-      "r": 74,
+      "x": 225,
+      "y": 192,
+      "r": 40,
       "label": "✦ Debu yang Berpendar",
       "when": {
         "worldEventReady": "v49_archive_dust"
@@ -37666,9 +37666,9 @@
       "id": "v49_room_note",
       "title": "Pesan di Ujung Meja",
       "area": "arland_room",
-      "x": 400,
-      "y": 250,
-      "r": 74,
+      "x": 200,
+      "y": 125,
+      "r": 40,
       "hours": [
         "07:00",
         "09:00"
@@ -37688,9 +37688,9 @@
       "id": "v49_window_story",
       "title": "Cerita di Jendela",
       "area": "sofia_room",
-      "x": 834,
-      "y": 241,
-      "r": 74,
+      "x": 417,
+      "y": 120,
+      "r": 40,
       "hours": [
         "16:00",
         "20:00"
@@ -37732,9 +37732,9 @@
       "id": "v49_kitchen_steam",
       "title": "Uap di Dapur",
       "area": "dapur",
-      "x": 808,
-      "y": 388,
-      "r": 74,
+      "x": 404,
+      "y": 194,
+      "r": 40,
       "hours": [
         "08:00",
         "12:00"
@@ -37864,9 +37864,9 @@
       "id": "v49_archive_dust",
       "title": "Debu yang Berpendar",
       "area": "ruang_arsip",
-      "x": 450,
-      "y": 385,
-      "r": 74,
+      "x": 225,
+      "y": 192,
+      "r": 40,
       "hours": [
         "09:00",
         "17:00"

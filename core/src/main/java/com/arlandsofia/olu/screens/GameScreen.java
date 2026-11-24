@@ -612,7 +612,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     private void passOut() {
         final String room = Routes.room(p.route);
         fade(new Runnable() { public void run() {
-            enterArea(room, p.route.equals("arland") ? 830 : 130, 430, Assets.DIR_DOWN, false);
+            MapDb.Area roomArea = game.maps.area(room);
+            float[] bed = bedSpot(roomArea);
+            enterArea(room, bed[0], bed[1] + 50f, Assets.DIR_DOWN, false);
             newDay("Kamu ketiduran sampai pagi...");
         } }, null);
     }
@@ -750,8 +752,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (targetSide != null || targetNpc != null) return;
         for (Animal an : animals) if (an.pettable && dist(an.x, an.y) < 40) { targetAnimal = an; return; }
         if (area.id.equals(Routes.room(p.route))) {
-            float bx = p.route.equals("arland") ? 830 : 130;
-            if (dist(bx, 380) < 60) { targetBed = true; return; }
+            float[] bed = bedSpot(area);
+            if (dist(bed[0], bed[1]) < 60) { targetBed = true; return; }
         }
         if (partnerMode == 2 && dist(partner.x, partner.y) <= 58) {
             targetTalk = engine.partnerTalk(area.id);
@@ -763,6 +765,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             float d = dist(e.x, e.y);
             if (d <= e.r && d < best) { best = d; targetExamine = e; }
         }
+    }
+
+    /** Bed position from map data (v5.4 rescaled rooms); legacy constants as fallback. */
+    private float[] bedSpot(MapDb.Area a) {
+        if (a != null && !Float.isNaN(a.bedX)) return new float[]{a.bedX, a.bedY};
+        return new float[]{p.route.equals("arland") ? 830f : 130f, 380f};
     }
 
     private float dist(float x, float y) { float dx = x - player.x, dy = y - player.y; return (float) Math.sqrt(dx * dx + dy * dy); }
