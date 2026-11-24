@@ -33,6 +33,15 @@ public class VisualFxSmoke {
         fx.drawWorldForegroundV462(batch,"taman_kota",false,frame%2==0,true,19*60,
             320f,400f,640f,360f,frame/60f,quality);
         fx.drawWaterGlintsV462(batch,230f,105f,40f,25f,frame/60f,quality,frame%3==0);
+        com.badlogic.gdx.graphics.Texture px = new com.badlogic.gdx.graphics.Texture();
+        fx.drawFlowV54(batch, px, 0f, 0f, 1920f, 346f, 1f, 14f, frame/60f, quality, frame%2==0, 300f, 0f, 640f, 360f);
+        fx.drawRiverV54(batch, px, new float[]{58f, 46f, 1896f, 112f, 1885f, 240f, 1880f, 360f}, 1920f, frame/60f, quality, true, 1600f, 1500f, 640f, 360f);
+        fx.drawPropWaterV54(batch, px, "props/v43_v41_fountain_fountain.png", 845f, 650f, frame/60f, quality);
+        fx.drawPropWaterV54(batch, px, "props/v41_waterfall_hb_waterfall.png", 1862f, 1920f, frame/60f, quality);
+        java.util.List<float[]> pd = new java.util.ArrayList<>(); pd.add(new float[]{320f, 300f, quality});
+        fx.drawPuddlesV54(batch, pd, 1280f, 1f, frame%2==0, frame/60f, quality, frame%5==0 ? .2f : 0f, 0f, 0f, 640f, 1280f);
+        fx.drawLightningV54(batch, px, 0f, 0f, 640f, 360f, .2f);
+        fx.splashAt(100f, 100f, quality);
         fx.drawSceneAtmosphere(batch, new com.badlogic.gdx.graphics.Texture(), new com.badlogic.gdx.graphics.Texture(),
             new com.badlogic.gdx.graphics.Texture(), "plaza", false, 1408f, 320f, 400f, 640f, 360f,
             frame/60f, quality, frame%2==0);

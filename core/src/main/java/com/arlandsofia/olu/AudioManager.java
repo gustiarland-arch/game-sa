@@ -28,8 +28,12 @@ public final class AudioManager {
 
     public AudioManager(Assets assets, Settings settings) { this.assets = assets; this.settings = settings; }
 
-    public void music(String id) { change(bgm, id, SoundscapePlan.musicPath(id)); }
-    public void ambience(String id) { change(ambience, id, SoundscapePlan.ambientPath(id)); }
+    /** Optional observer for automated capture/QA (null in the shipped game). */
+    public interface Tap { void heard(String bus, String id, float volume); }
+    public static volatile Tap tap;
+
+    public void music(String id) { if (tap != null) tap.heard("music", id, settings.music); change(bgm, id, SoundscapePlan.musicPath(id)); }
+    public void ambience(String id) { if (tap != null) tap.heard("ambience", id, settings.ambience * 0.55f); change(ambience, id, SoundscapePlan.ambientPath(id)); }
 
     private void change(Bus bus, String id, String path) {
         if (id == null || path == null) {
@@ -84,6 +88,7 @@ public final class AudioManager {
     public void sfx(String id, float multiplier) {
         if (!SoundscapePlan.contains(SoundscapePlan.SFX, id) || multiplier <= 0f || settings.sfx <= 0.005f) return;
         Sound s = assets.sfxSound(id);
+        if (tap != null) tap.heard("sfx", id, Math.min(1f, settings.sfx * multiplier));
         if (s != null) s.play(Math.min(1f, settings.sfx * multiplier));
     }
 

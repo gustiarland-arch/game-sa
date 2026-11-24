@@ -3,6 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 bash tools/test_v54_stairs.sh
+bash tools/test_v54_weather.sh
 python3 tools/scale_audit_v54.py
 bash tools/test_v53_release.sh
 python3 tools/test_v52_world_access.py

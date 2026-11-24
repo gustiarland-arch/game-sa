@@ -128,6 +128,10 @@ public final class MapDb {
     public static final class Area {
         public final String id, name, image, music, ambient;
         public final List<float[]> water = new ArrayList<>();
+        /** v5.4 flowing water bands {x, y, w, h, dirX, speed} (y-down, cosmetic only). */
+        public final List<float[]> waterFlow = new ArrayList<>();
+        /** v5.4 rivers following a centre line: {width, speed, x0, y0, x1, y1, ...} (y-down, cosmetic). */
+        public final List<float[]> riverPaths = new ArrayList<>();
         public final boolean indoor;
         public final float w, h, spawnX, spawnY;
         /** Bed spot for sleeping in the route's own room; NaN where the map has none. */
@@ -147,6 +151,18 @@ public final class MapDb {
             indoor = Json.bool(m, "indoor", false);
             for (Map<String, Object> w : Json.objList(m, "water"))
                 water.add(new float[]{Json.num(w, "cx", 0), Json.num(w, "cy", 0), Json.num(w, "rx", 10), Json.num(w, "ry", 10)});
+            for (Map<String, Object> f : Json.objList(m, "waterFlow")) {
+                if (f.containsKey("path")) {
+                    List<Object> pts = Json.list(f, "path");
+                    float[] r = new float[2 + pts.size() * 2];
+                    r[0] = Math.max(4f, Json.num(f, "width", 40)); r[1] = Math.max(0f, Math.min(120f, Json.num(f, "speed", 30)));
+                    for (int i = 0; i < pts.size(); i++) { float[] xy = Json.floats(pts.get(i)); r[2 + i * 2] = xy[0]; r[3 + i * 2] = xy[1]; }
+                    if (pts.size() >= 2) riverPaths.add(r);
+                    continue;
+                }
+                waterFlow.add(new float[]{Json.num(f, "x", 0), Json.num(f, "y", 0), Json.num(f, "w", 0), Json.num(f, "h", 0),
+                        Json.num(f, "dx", 1) < 0 ? -1f : 1f, Math.max(0f, Math.min(80f, Json.num(f, "speed", 20)))});
+            }
             w = Json.num(m, "w", 960); h = Json.num(m, "h", 640);
             float[] sp = Json.floats(m.get("spawn"));
             spawnX = sp.length > 1 ? sp[0] : w / 2; spawnY = sp.length > 1 ? sp[1] : h / 2;
