@@ -18,6 +18,12 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      # tools/test_logic.sh runs `python3 -I`, which ignores pip's --user site-packages
+      # on the stock runner Python; a setup-python interpreter installs Pillow globally.
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
       - name: Android SDK (API 36)
         uses: android-actions/setup-android@v3
         with:
