@@ -2158,11 +2158,11 @@
    "id": "maps_v4_arland_room_computer",
    "image": "props/maps_v4_arland_room_computer.png",
    "px": [
-    237,
-    173
+    118,
+    86
    ],
-   "hRatio": 2.68,
-   "wRatio": 3.67,
+   "hRatio": 1.33,
+   "wRatio": 1.83,
    "collider": [
     0,
     0
@@ -2175,11 +2175,11 @@
    "id": "maps_v4_dapur_island",
    "image": "props/maps_v4_dapur_island.png",
    "px": [
-    352,
-    152
+    176,
+    76
    ],
-   "hRatio": 2.36,
-   "wRatio": 5.46,
+   "hRatio": 1.18,
+   "wRatio": 2.73,
    "collider": [
     0,
     0
@@ -2261,11 +2261,11 @@
    "id": "maps_v4_ruang_arsip_investigation_desk",
    "image": "props/maps_v4_ruang_arsip_investigation_desk.png",
    "px": [
-    214,
-    135
+    107,
+    68
    ],
-   "hRatio": 2.09,
-   "wRatio": 3.32,
+   "hRatio": 1.05,
+   "wRatio": 1.66,
    "collider": [
     0,
     0
@@ -2278,17 +2278,17 @@
     0.45,
     1.1
    ],
-   "flag": "too_big"
+   "flag": "ok"
   },
   {
    "id": "maps_v4_sofia_room_vanity",
    "image": "props/maps_v4_sofia_room_vanity.png",
    "px": [
-    198,
-    150
+    99,
+    75
    ],
-   "hRatio": 2.33,
-   "wRatio": 3.07,
+   "hRatio": 1.16,
+   "wRatio": 1.53,
    "collider": [
     0,
     0

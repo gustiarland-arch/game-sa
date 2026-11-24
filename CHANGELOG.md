@@ -1,3 +1,19 @@
+## 5.4.0 — Interior scale rebalance (24 November 2026)
+
+- Empat interior handcrafted v4 (kamar Arland, kamar Sofia, dapur, ruang arsip) dilukis
+  ±2x lebih besar dari skala karakter: kursi bar setinggi orang, lemari 3x tinggi badan.
+  Seluruh ruang dunia keempat area diperkecil 0.5x secara seragam (`tools/room_scale_v54.py`):
+  gambar map, sprite furnitur khusus ruangan, tembok, pintu, prop, titik examine, interaksi quest,
+  posisi NPC, warp, kamera/gerak cutscene, dan pintu yang menuju ruangan tersebut.
+- Karakter, hitbox kaki, dan semua map lain tidak berubah. Radius interaksi diskalakan dengan
+  batas bawah 40 px. Delapan titik berdiri yang bergeser ke dalam furnitur karena hitbox kaki
+  tidak ikut mengecil digeser beberapa piksel ke titik legal terdekat.
+- Posisi kasur kini dibaca dari data map (`bed`), bukan konstanta di `GameScreen`.
+- Save lama: `mapLayoutVersion` 5 + `MapLayoutV54` memindahkan posisi pemain di keempat ruangan;
+  save schema 8, item, quest, dan pilihan tidak berubah.
+- Gambar asli disimpan di `art_source/v54_room_scale/`. Pratinjau statis sebelum/sesudah:
+  `docs/v54/room_scale_before_after/`.
+
 ## 5.4.0 — World Reborn, Fase 1–2 (24 November 2026)
 
 - **Tangga & elevasi (P0):** `ElevationV50.canStep` kini menerima seluruh lebar tangga yang
