@@ -10,22 +10,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Android SDK
+      - name: Android SDK (API 36)
         uses: android-actions/setup-android@v3
-
-      - name: Install Android 16 SDK
-        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+        with:
+          # Default package list includes the removed 'tools' package and fails.
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
 
       - name: Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v5
 
       - name: Uji logika cerita, quest, save (kedua route)
         run: |
@@ -39,37 +39,32 @@ jobs:
       - name: Validasi aset visual, aksi berdua dan UI input
         run: |
           python3 -m pip install Pillow numpy
+          # Archived v2.4-v4.4 gates are kept in tools/ but not run: they assert historic
+          # counts (22 maps, 40 music tracks, 14 events, old prop counts) that later releases
+          # intentionally changed, and they already failed on v5.3 main. The v5.x gates
+          # (test_v54_release.sh -> v5.3/v5.2/v5.1/v5.0) cover current content.
           bash tools/test_logic.sh
           bash tools/test_romance_ui.sh
           python3 tools/test_couple_v22.py
           python3 tools/test_visual_v21.py android/assets
           # v2.3 pixel snapshot test archived after v4 custom world art
-          python3 tools/test_audio_v24.py android/assets/audio
-          bash tools/test_soundscape_plan.sh
           bash tools/test_audio_manager.sh
           bash tools/test_settings_ui_v24.sh
           bash tools/test_controls_v28.sh
-          python3 tools/test_android_v28.py
           bash tools/test_visual_fx.sh
-          python3 tools/test_cinema_v25.py
           python3 tools/test_story_v26.py
-          python3 tools/test_world_events_v27.py
           bash tools/test_v30.sh
           bash tools/test_dialogue_ui_v30.sh
           bash tools/test_v30_ui_compile.sh
           python3 tools/test_native_16k_v30.py
           # v3.x pixel-hash goldens are archived, not valid for deliberately new v4 artwork.
-          python3 tools/test_maps_v4.py
-          python3 tools/test_maps_v41_remaining.py
-          python3 tools/test_v42_world.py
-          python3 tools/test_v43_world.py
           bash tools/test_tablet_v43.sh
           bash tools/test_tablet_v44.sh
-          python3 tools/test_world_v44.py
           python3 tools/test_maps_v4_navigation.py
           bash tools/test_maps_v4_save.sh
           python3 tools/release_audit_v4.py
           bash tools/test_character_logic_v37.sh
+          bash tools/test_v54_release.sh
 
       - name: Build APK debug
         run: ./gradlew :android:assembleDebug --stacktrace
@@ -87,5 +82,5 @@ jobs:
       - name: Unggah APK
         uses: actions/upload-artifact@v4
         with:
-          name: ArlandSofia-v4.4-debug-apk
+          name: ArlandSofia-v5.4-debug-apk
           path: android/build/outputs/apk/debug/*.apk

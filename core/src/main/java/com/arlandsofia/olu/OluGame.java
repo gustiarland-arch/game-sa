@@ -21,7 +21,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * 100% offline: semua data dibaca dari assets lokal, save di penyimpanan privat aplikasi.
  */
 public class OluGame extends Game {
-    public static final String VERSION = "4.7.4";
+    public static final String VERSION = "5.4.0";
 
     public Assets assets;
     public AudioManager audio;

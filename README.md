@@ -1,4 +1,14 @@
-# Arland & Sofia: Our Little Universe v5.3.0 — Character Motion & NPC Identity
+# Arland & Sofia: Our Little Universe v5.4.0 — World Reborn (Fase 1–2)
+
+## Update v5.4
+- Tangga di 21 lokasi elevasi bisa dinaiki/dituruni di seluruh lebarnya (bug tersangkut di
+  dekat pegangan diperbaiki), tangga buntu di arcade dan dermaga diperbaiki.
+- Karakter digambar 1:1 piksel (sebelumnya 0.85): proporsi lebih baik dan pixel-art lebih tajam.
+- Uji: `bash tools/test_v54_release.sh`. Laporan: `docs/v54/`.
+
+---
+
+## Versi sebelumnya: v5.3.0 — Character Motion & NPC Identity
 
 **Native Android / LibGDX, full source** based on v5.2.0. Semua route Arland dan Sofia,
 satu canon ending, quest, map, cutscene, audio, navigasi, dan save schema 8 dipertahankan.

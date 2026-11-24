@@ -4,6 +4,7 @@ spawn and all 51 door destinations. 16-pixel conservative collision-grid
 approximation; not a substitute for runtime playtesting or Android build.
 Uses Python standard library only (no Numpy/Pillow required).
 """
+import re
 from pathlib import Path
 import json, math, collections
 ROOT=Path(__file__).resolve().parents[1]
@@ -115,7 +116,7 @@ for origin,a in maps.items():
         target=maps.get(d['to'])
         if target is None:continue
         check(not is_blocked(target,d['tx'],d['ty']),f"BLOCKED DOOR LANDING {origin}:{d['id']} -> {d['to']}")
-check("appVersionName = '5.2.0'" in (ROOT/'build.gradle').read_text(),'release version')
+check(re.search(r"appVersionName = '5\.([2-9]|[1-9][0-9])\.\d+'",(ROOT/'build.gradle').read_text()) is not None,'release version')
 check('SCHEMA = 8' in (ROOT/'core/src/main/java/com/arlandsofia/olu/logic/Progress.java').read_text(),'save schema unchanged')
 check(len(quests['steps'])==157,'canon steps unchanged')
 print(f'V5.2 WORLD ACCESS PASS: {checks} assertions, 29 maps, complete quest/side routes and door destinations')

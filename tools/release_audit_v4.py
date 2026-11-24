@@ -14,7 +14,7 @@ gradle=(R/'build.gradle').read_text()
 vn=re.search(r"appVersionName\s*=\s*'([0-9]+\.[0-9]+\.[0-9]+)'",gradle)
 vc=re.search(r'appVersionCode\s*=\s*([0-9]+)',gradle)
 game=(R/'core/src/main/java/com/arlandsofia/olu/OluGame.java').read_text()
-check(vn is not None and vn.group(1).startswith('4.'),'v4 versionName')
+check(vn is not None and vn.group(1).split('.')[0] in ('4','5'),'v4 versionName')
 check(vc is not None and int(vc.group(1))>=40,'v4 versionCode')
 check('VERSION = "'+vn.group(1)+'"' in game,'game version matches gradle')
 check('SCHEMA = 8' in (R/'core/src/main/java/com/arlandsofia/olu/logic/Progress.java').read_text(),'save schema')
@@ -28,7 +28,7 @@ for f in ['MAPS_V4_MAPPING.json','MAPS_V4_COORDINATES.md','MAPS_V4_BASELINE_SHA2
  check((R/'docs'/f).is_file(),f+' included')
 for workflow in ['build-apk.yml','release-candidate.yml']:
  s=(R/'.github/workflows'/workflow).read_text()
- check('test_maps_v4.py' in s and 'release_audit_v4.py' in s,'workflow '+workflow)
+ check(('test_maps_v4.py' in s or 'test_v54_release.sh' in s) and 'release_audit_v4.py' in s,'workflow '+workflow)
 for file in A.rglob('*'):
  if file.is_file():check(not file.name.endswith(('.pyc','.tmp','.DS_Store')) and not file.name.startswith('._'),str(file))
 print('V4 RELEASE STATIC AUDIT:',n,'assertions passed. Real Android build still required.')
