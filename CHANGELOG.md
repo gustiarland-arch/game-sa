@@ -17,6 +17,13 @@
 - CI: perbaikan langkah Android SDK yang gagal (`setup-android` memasang paket `tools` yang
   sudah dihapus), action dinaikkan ke v5, uji v5.4 dijalankan di CI, nama artefak APK v5.4.
 - Tiga uji lama yang mengunci string versi 5.x tertentu dibuat menerima versi 5.x berikutnya.
+- **Pixel-perfect (Fase 4):** kamera eksplorasi memilih zoom terdekat dengan jumlah piksel layar
+  utuh per texel dan mengunci posisi ke grid piksel layar (`PixelPerfectV54`). Texel tidak lagi
+  tampil 2/3 px bergantian dan tidak "berkilau" saat kamera bergerak. Cutscene tidak berubah.
+  Setelan `pixelPerfect` (default aktif) disimpan di settings tanpa mengubah schema.
+- **Tangga (Fase 5):** pemain, pasangan, dan NPC berjalan 82% lebih lambat di anak tangga
+  (`ElevationV50.speedFactor`), sehingga naik-turun terasa berbobot dan suara langkah tangga
+  tidak terlalu rapat.
 - Save schema 8, dua route, canon ending, quest, dan 29 map tidak diubah.
 
 ## 5.3.0 — Character Motion & NPC Identity

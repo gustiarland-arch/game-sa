@@ -14,6 +14,7 @@ import com.arlandsofia.olu.logic.CameraRig;
 import com.arlandsofia.olu.logic.CameraFramingV52;
 import com.arlandsofia.olu.logic.WorldNavigationV52;
 import com.arlandsofia.olu.logic.ElevationV50;
+import com.arlandsofia.olu.logic.PixelPerfectV54;
 import com.arlandsofia.olu.logic.AdaptiveLayoutV43;
 import com.arlandsofia.olu.logic.Achievements;
 import com.arlandsofia.olu.game.CutscenePlayer;
@@ -417,7 +418,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             float dx = b[3] - ac.x, dy = b[4] - ac.y, d = (float) Math.sqrt(dx * dx + dy * dy);
             if (d > 2f) {
                 float speed = LivingWorldV46.walkingSpeed(WorldClock.hour(p.minute), weather(), isIndoor())
-                        * ac.motion.walkSpeed;
+                        * ac.motion.walkSpeed * ElevationV50.speedFactor(area.terraces, ac.x, ac.y);
                 float sp = Math.min(d, speed * Math.max(0f, Math.min(.05f, dt)));
                 float nx = ac.x + dx / d * sp, ny = ac.y + dy / d * sp;
                 boolean nearPlayer = Math.abs(nx - player.x) < 22 && Math.abs(ny - player.y) < 16;
@@ -629,7 +630,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (len < 0.01f) { player.walking = false; return; }
         float mag = Math.min(1f, len);
         dx /= len; dy /= len; // diagonal dinormalisasi
-        float speed = (sprint ? SPRINT_SPEED : WALK_SPEED) * Math.max(0.45f, mag) * dt;
+        float speed = (sprint ? SPRINT_SPEED : WALK_SPEED) * Math.max(0.45f, mag) * dt
+                * ElevationV50.speedFactor(area.terraces, player.x, player.y);
         float ox = player.x, oy = player.y;
         float nx = player.x + dx * speed;
         // Swept foot collision prevents slipping through thin walls at low FPS.
@@ -715,7 +717,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         float ex = t[0] - partner.x, ey = t[1] - partner.y;
         float d = (float) Math.sqrt(ex * ex + ey * ey);
         if (d < 3f) { trail.pollFirst(); return; }
-        float speed = (player.sprinting ? SPRINT_SPEED : WALK_SPEED) * 1.05f * dt;
+        float speed = (player.sprinting ? SPRINT_SPEED : WALK_SPEED) * 1.05f * dt
+                * ElevationV50.speedFactor(area.terraces, partner.x, partner.y);
         float k = Math.min(d, speed);
         float destX=partner.x+ex/d*k, destY=partner.y+ey/d*k;
         if(!area.blocked(destX,destY)&&ElevationV50.canStep(area.terraces,partner.x,partner.y,destX,destY)) {
@@ -1091,6 +1094,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         float zoom = cine.camActive() ? Math.max(0.5f, cine.zoom()) : 1f;
         // Wider world view only during free exploration; scripted cinematics retain their zoom.
         float framing = cine.camActive() ? 1f : CameraFramingV52.gameplayScale(game.settings.cameraDistance, area.indoor);
+        // v5.4: exploration snaps to a whole number of screen pixels per texel.
+        int pixelGrid = 0;
+        if (!cine.camActive() && game.settings.pixelPerfect && worldView.getScreenHeight() > 0) {
+            pixelGrid = PixelPerfectV54.pixelsPerUnit(framing, worldView.getWorldHeight(), worldView.getScreenHeight());
+            framing = PixelPerfectV54.zoom(framing, worldView.getWorldHeight(), worldView.getScreenHeight());
+        }
         worldCam.zoom = framing / zoom;
         float ww = worldView.getWorldWidth() * framing / zoom;
         float wh = worldView.getWorldHeight() * framing / zoom;
@@ -1109,7 +1118,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         cameraRig.follow(cx, cy, frameDt, !inCutsceneCamera && game.settings.smoothCamera);
         float smoothX = area.w <= ww ? area.w / 2 : MathUtils.clamp(cameraRig.x(), ww / 2, area.w - ww / 2);
         float smoothY = area.h <= wh ? area.h / 2 : MathUtils.clamp(cameraRig.y(), wh / 2, area.h - wh / 2);
-        worldCam.position.set(zoom == 1f ? Math.round(smoothX) : smoothX, zoom == 1f ? Math.round(smoothY) : smoothY, 0);
+        if (pixelGrid > 0) worldCam.position.set(PixelPerfectV54.snap(smoothX, pixelGrid), PixelPerfectV54.snap(smoothY, pixelGrid), 0);
+        else worldCam.position.set(zoom == 1f ? Math.round(smoothX) : smoothX, zoom == 1f ? Math.round(smoothY) : smoothY, 0);
         visibleL = worldCam.position.x - ww / 2 - 110;
         visibleR = worldCam.position.x + ww / 2 + 110;
         visibleB = worldCam.position.y - wh / 2 - 110;

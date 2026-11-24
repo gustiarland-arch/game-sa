@@ -9,6 +9,14 @@ import java.util.List;
 public final class ElevationV50 {
     private ElevationV50() {}
 
+    /** v5.4: walking pace on a flight of stairs relative to flat ground (player, partner, NPC). */
+    public static final float STAIR_SPEED_FACTOR = 0.82f;
+
+    /** Speed multiplier for a foot position: slower while on any stair flight. */
+    public static float speedFactor(List<MapDb.Terrace> terraces,float x,float y){
+        return onStairs(terraces,x,y)?STAIR_SPEED_FACTOR:1f;
+    }
+
     /** Visual lift 0..rise. Foot position and save coordinates remain y-down. */
     public static float heightAt(List<MapDb.Terrace> terraces,float x,float y) {
         if(terraces==null) return 0f;

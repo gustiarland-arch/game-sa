@@ -17,6 +17,8 @@ public final class Settings {
     public boolean showHints = true;
     /** 0 = Hemat, 1 = Seimbang, 2 = Sinematik. Tidak memengaruhi quest/save permainan. */
     public int visualQuality = 1;
+    /** v5.4: integer pixel scale for exploration camera (crisp pixel art, no shimmer). */
+    public boolean pixelPerfect = true;
     public boolean smoothCamera = true;
     /** 0 dekat, 1 seimbang, 2 lebar; pengaturan terpisah dari zoom cutscene. */
     public int cameraDistance = 1;
@@ -49,6 +51,7 @@ public final class Settings {
         m.put("variedMusic", variedMusic); m.put("footsteps", footsteps);
         m.put("controlScale", controlScale); m.put("controlOpacity", controlOpacity); m.put("showHints", showHints);
         m.put("visualQuality", visualQuality); m.put("smoothCamera", smoothCamera); m.put("cameraDistance", cameraDistance);
+        m.put("pixelPerfect", pixelPerfect);
         m.put("leftHanded", leftHanded); m.put("floatingJoystick", floatingJoystick);
         m.put("joystickSensitivity", joystickSensitivity);
         return m;
@@ -68,6 +71,7 @@ public final class Settings {
         s.visualQuality = clampI((int) Json.num(m, "visualQuality", 1), 0, 2);
         s.smoothCamera = Json.bool(m, "smoothCamera", true);
         s.cameraDistance = clampI((int) Json.num(m, "cameraDistance", 1), 0, 2);
+        s.pixelPerfect = Json.bool(m, "pixelPerfect", true);
         s.leftHanded = Json.bool(m, "leftHanded", false);
         s.floatingJoystick = Json.bool(m, "floatingJoystick", true);
         s.joystickSensitivity = clamp(Json.num(m, "joystickSensitivity", 1f), 0.7f, 1.5f);

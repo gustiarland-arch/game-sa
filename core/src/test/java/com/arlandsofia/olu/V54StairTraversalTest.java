@@ -30,7 +30,7 @@ public final class V54StairTraversalTest {
         float len = (float) Math.sqrt(dx * dx + dy * dy);
         if (len < 0.01f) return new float[]{x, y};
         dx /= len; dy /= len;
-        float speed = WALK * dt;
+        float speed = WALK * dt * ElevationV50.speedFactor(a.terraces, x, y);
         float nx = x + dx * speed;
         if (WorldNavigationV52.clearSegment(c, x, y, nx, y) && ElevationV50.canStep(a.terraces, x, y, nx, y)) x = nx;
         float ny = y + dy * speed;
@@ -121,6 +121,28 @@ public final class V54StairTraversalTest {
             }
         }
         yes(terraces == 21, "expected 21 elevation platforms, found " + terraces);
+        // Stair pace: slower on stairs, unchanged on flat ground.
+        yes(ElevationV50.STAIR_SPEED_FACTOR > .6f && ElevationV50.STAIR_SPEED_FACTOR < 1f, "stair pace factor sane");
+        // Pixel-perfect camera: whole pixels per world unit, nearest to requested framing.
+        float[][] screens = {{2400, 1080}, {1920, 1080}, {1600, 720}, {2560, 1600}, {1280, 800}, {854, 480}, {3200, 1440}};
+        for (float[] sc : screens) for (float framing : new float[]{1.02f, 1.2f, 1.254f, 1.4f, 1.463f}) {
+            float worldH = 428f;
+            int k = com.arlandsofia.olu.logic.PixelPerfectV54.pixelsPerUnit(framing, worldH, sc[1]);
+            float z = com.arlandsofia.olu.logic.PixelPerfectV54.zoom(framing, worldH, sc[1]);
+            float ppu = sc[1] / (worldH * z);
+            yes(k >= 1 && Math.abs(ppu - k) < 1e-3f, "integer pixels per unit " + sc[1] + " framing " + framing + " -> " + ppu);
+            float raw = sc[1] / (worldH * framing);
+            yes(Math.abs(k - raw) <= .5001f || k == 1, "nearest integer scale " + raw + " -> " + k);
+            float snapped = com.arlandsofia.olu.logic.PixelPerfectV54.snap(1234.567f, k);
+            yes(Math.abs(snapped * k - Math.round(snapped * k)) < 1e-3f, "camera on screen-pixel grid");
+        }
+        yes(com.arlandsofia.olu.logic.PixelPerfectV54.zoom(0f, 428f, 1080f) == 1f, "degenerate framing safe");
+        com.arlandsofia.olu.logic.Settings fresh = new com.arlandsofia.olu.logic.Settings();
+        yes(fresh.pixelPerfect, "pixel-perfect default on");
+        java.util.Map<String, Object> legacy = new java.util.HashMap<>();
+        yes(com.arlandsofia.olu.logic.Settings.fromMap(legacy).pixelPerfect, "older settings migrate to pixel-perfect on");
+        fresh.pixelPerfect = false;
+        yes(!com.arlandsofia.olu.logic.Settings.fromMap(fresh.toMap()).pixelPerfect, "pixel-perfect off persists");
         if (!failures.isEmpty()) {
             for (String f : failures.subList(0, failures.size())) System.out.println("FAIL " + f);
             System.out.println(failures.size() + " of " + checks + " stair checks failed");
