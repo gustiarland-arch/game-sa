@@ -1380,8 +1380,8 @@
             {
               "do": "warp",
               "area": "memory_garden",
-              "x": 800,
-              "y": 1040,
+              "x": 1000,
+              "y": 1300,
               "dir": "up"
             },
             {
@@ -1404,14 +1404,14 @@
                 },
                 {
                   "who": "partner",
-                  "x": 840,
-                  "y": 1044,
+                  "x": 1050,
+                  "y": 1305,
                   "dir": "up",
                   "c": "place"
                 },
                 {
-                  "x": 800,
-                  "y": 760,
+                  "x": 1000,
+                  "y": 950,
                   "zoom": 0.8,
                   "t": 0,
                   "c": "cam"
@@ -1430,22 +1430,22 @@
                 },
                 {
                   "kind": "petals",
-                  "x": 800,
-                  "y": 1015,
+                  "x": 1000,
+                  "y": 1269,
                   "t": 6.5,
                   "c": "fx"
                 },
                 {
                   "kind": "sparkles",
-                  "x": 800,
-                  "y": 995,
+                  "x": 1000,
+                  "y": 1244,
                   "t": 5.5,
                   "n": 22,
                   "c": "fx"
                 },
                 {
-                  "x": 820,
-                  "y": 1000,
+                  "x": 1025,
+                  "y": 1250,
                   "zoom": 1.3,
                   "t": 2.2,
                   "c": "cam"
@@ -1537,8 +1537,8 @@
         {
           "id": "shard_1",
           "area": "memory_garden",
-          "x": 270,
-          "y": 770,
+          "x": 338,
+          "y": 962,
           "r": 64,
           "label": "Keping cahaya",
           "actions": [
@@ -1574,8 +1574,8 @@
           ],
           "sprite": {
             "image": "props/light_shard.png",
-            "x": 270,
-            "y": 756,
+            "x": 338,
+            "y": 945,
             "bob": true
           },
           "hideIfFlag": "SHARD_1"
@@ -1583,8 +1583,8 @@
         {
           "id": "shard_2",
           "area": "memory_garden",
-          "x": 1330,
-          "y": 770,
+          "x": 1662,
+          "y": 962,
           "r": 64,
           "label": "Keping cahaya",
           "actions": [
@@ -1620,8 +1620,8 @@
           ],
           "sprite": {
             "image": "props/light_shard.png",
-            "x": 1330,
-            "y": 756,
+            "x": 1662,
+            "y": 945,
             "bob": true
           },
           "hideIfFlag": "SHARD_2"
@@ -1629,8 +1629,8 @@
         {
           "id": "shard_3",
           "area": "memory_garden",
-          "x": 800,
-          "y": 1090,
+          "x": 1000,
+          "y": 1362,
           "r": 64,
           "label": "Keping cahaya",
           "actions": [
@@ -1666,8 +1666,8 @@
           ],
           "sprite": {
             "image": "props/light_shard.png",
-            "x": 800,
-            "y": 1076,
+            "x": 1000,
+            "y": 1345,
             "bob": true
           },
           "hideIfFlag": "SHARD_3"
@@ -1792,8 +1792,8 @@
         {
           "id": "portal",
           "area": "memory_garden",
-          "x": 800,
-          "y": 400,
+          "x": 1000,
+          "y": 500,
           "r": 80,
           "label": "Gerbang pulang",
           "actions": [
@@ -8100,8 +8100,8 @@
             {
               "do": "warp",
               "area": "star_path",
-              "x": 120,
-              "y": 520,
+              "x": 150,
+              "y": 650,
               "dir": "right"
             },
             {
@@ -8131,8 +8131,8 @@
         {
           "id": "stone1",
           "area": "star_path",
-          "x": 380,
-          "y": 330,
+          "x": 475,
+          "y": 412,
           "r": 64,
           "label": "Batu bintang",
           "actions": [
@@ -8166,8 +8166,8 @@
         {
           "id": "stone2",
           "area": "star_path",
-          "x": 700,
-          "y": 750,
+          "x": 875,
+          "y": 938,
           "r": 64,
           "label": "Batu bintang",
           "actions": [
@@ -8201,8 +8201,8 @@
         {
           "id": "stone3",
           "area": "star_path",
-          "x": 1020,
-          "y": 360,
+          "x": 1275,
+          "y": 450,
           "r": 64,
           "label": "Batu bintang",
           "actions": [
@@ -8236,8 +8236,8 @@
         {
           "id": "stone4",
           "area": "star_path",
-          "x": 1340,
-          "y": 770,
+          "x": 1675,
+          "y": 962,
           "r": 64,
           "label": "Batu bintang",
           "actions": [
@@ -8271,8 +8271,8 @@
         {
           "id": "stone5",
           "area": "star_path",
-          "x": 1660,
-          "y": 400,
+          "x": 2075,
+          "y": 500,
           "r": 64,
           "label": "Batu bintang",
           "actions": [
@@ -8333,8 +8333,8 @@
         {
           "id": "compass",
           "area": "star_path",
-          "x": 1020,
-          "y": 470,
+          "x": 1275,
+          "y": 588,
           "r": 64,
           "label": "Kompas bercahaya",
           "actions": [
@@ -8358,8 +8358,8 @@
           "route": "arland",
           "sprite": {
             "image": "props/compass.png",
-            "x": 1020,
-            "y": 450,
+            "x": 1275,
+            "y": 562,
             "bob": true
           }
         }
@@ -8425,8 +8425,8 @@
             {
               "do": "warp",
               "area": "lantern_field",
-              "x": 160,
-              "y": 1140,
+              "x": 200,
+              "y": 1425,
               "dir": "right"
             },
             {
@@ -8456,8 +8456,8 @@
         {
           "id": "spark1",
           "area": "lantern_field",
-          "x": 420,
-          "y": 1020,
+          "x": 525,
+          "y": 1275,
           "r": 64,
           "label": "Percik cahaya",
           "actions": [
@@ -8482,8 +8482,8 @@
           "route": "sofia",
           "sprite": {
             "image": "props/spark.png",
-            "x": 420,
-            "y": 1004,
+            "x": 525,
+            "y": 1255,
             "bob": true
           },
           "hideIfFlag": "C05_SPARK_1"
@@ -8491,8 +8491,8 @@
         {
           "id": "spark2",
           "area": "lantern_field",
-          "x": 900,
-          "y": 860,
+          "x": 1125,
+          "y": 1075,
           "r": 64,
           "label": "Percik cahaya",
           "actions": [
@@ -8517,8 +8517,8 @@
           "route": "sofia",
           "sprite": {
             "image": "props/spark.png",
-            "x": 900,
-            "y": 844,
+            "x": 1125,
+            "y": 1055,
             "bob": true
           },
           "hideIfFlag": "C05_SPARK_2"
@@ -8526,8 +8526,8 @@
         {
           "id": "spark3",
           "area": "lantern_field",
-          "x": 1300,
-          "y": 900,
+          "x": 1625,
+          "y": 1125,
           "r": 64,
           "label": "Percik cahaya",
           "actions": [
@@ -8552,8 +8552,8 @@
           "route": "sofia",
           "sprite": {
             "image": "props/spark.png",
-            "x": 1300,
-            "y": 884,
+            "x": 1625,
+            "y": 1105,
             "bob": true
           },
           "hideIfFlag": "C05_SPARK_3"
@@ -8561,8 +8561,8 @@
         {
           "id": "spark4",
           "area": "lantern_field",
-          "x": 1180,
-          "y": 300,
+          "x": 1475,
+          "y": 375,
           "r": 64,
           "label": "Percik cahaya",
           "actions": [
@@ -8587,8 +8587,8 @@
           "route": "sofia",
           "sprite": {
             "image": "props/spark.png",
-            "x": 1180,
-            "y": 284,
+            "x": 1475,
+            "y": 355,
             "bob": true
           },
           "hideIfFlag": "C05_SPARK_4"
@@ -8623,8 +8623,8 @@
         {
           "id": "shrine5",
           "area": "lantern_field",
-          "x": 960,
-          "y": 800,
+          "x": 1200,
+          "y": 1000,
           "r": 80,
           "label": "Altar lentera",
           "actions": [
@@ -8683,8 +8683,8 @@
         {
           "id": "meet5",
           "area": "starfall_village",
-          "x": 880,
-          "y": 640,
+          "x": 1100,
+          "y": 800,
           "r": 64,
           "label": "Sapa",
           "actions": [
@@ -8772,8 +8772,8 @@
         {
           "who": "$PARTNER",
           "area": "starfall_village",
-          "x": 880,
-          "y": 640,
+          "x": 1100,
+          "y": 800,
           "dir": "left"
         }
       ]
@@ -8790,8 +8790,8 @@
         {
           "id": "starmap",
           "area": "starfall_village",
-          "x": 960,
-          "y": 726,
+          "x": 1200,
+          "y": 908,
           "r": 72,
           "label": "Peta bintang",
           "actions": [
@@ -8845,8 +8845,8 @@
         {
           "id": "v26_a_clue_1",
           "area": "starfall_village",
-          "x": 960,
-          "y": 1030,
+          "x": 1200,
+          "y": 1288,
           "r": 70,
           "label": "Periksa panah di bangku",
           "actions": [
@@ -8874,8 +8874,8 @@
         {
           "id": "v26_a_clue_2",
           "area": "starfall_village",
-          "x": 960,
-          "y": 470,
+          "x": 1200,
+          "y": 588,
           "r": 70,
           "label": "Periksa pantulan rumah tengah",
           "actions": [
@@ -8903,8 +8903,8 @@
         {
           "id": "v26_a_clue_3",
           "area": "starfall_village",
-          "x": 960,
-          "y": 760,
+          "x": 1200,
+          "y": 950,
           "r": 70,
           "label": "Ukur arah di tengah desa",
           "actions": [
@@ -8961,8 +8961,8 @@
         {
           "id": "v26_a_key",
           "area": "starfall_village",
-          "x": 960,
-          "y": 1030,
+          "x": 1200,
+          "y": 1288,
           "r": 72,
           "label": "Kunci jarak Arland",
           "actions": [
@@ -8999,8 +8999,8 @@
         {
           "id": "v26_s_note_1",
           "area": "starfall_village",
-          "x": 960,
-          "y": 470,
+          "x": 1200,
+          "y": 588,
           "r": 70,
           "label": "Baca tulisan di rumah tengah",
           "actions": [
@@ -9028,8 +9028,8 @@
         {
           "id": "v26_s_note_2",
           "area": "starfall_village",
-          "x": 960,
-          "y": 1030,
+          "x": 1200,
+          "y": 1288,
           "r": 70,
           "label": "Baca ukiran di bangku",
           "actions": [
@@ -9057,8 +9057,8 @@
         {
           "id": "v26_s_note_3",
           "area": "starfall_village",
-          "x": 960,
-          "y": 760,
+          "x": 1200,
+          "y": 950,
           "r": 70,
           "label": "Temukan potongan di tengah desa",
           "actions": [
@@ -9115,8 +9115,8 @@
         {
           "id": "v26_s_compose",
           "area": "starfall_village",
-          "x": 960,
-          "y": 1030,
+          "x": 1200,
+          "y": 1288,
           "r": 72,
           "label": "Empat halaman Sofia",
           "actions": [
@@ -9153,8 +9153,8 @@
         {
           "id": "v26_night_talk",
           "area": "starfall_village",
-          "x": 960,
-          "y": 1030,
+          "x": 1200,
+          "y": 1288,
           "r": 75,
           "label": "Duduk di bangku bintang",
           "actions": [
@@ -9171,8 +9171,8 @@
                   "c": "bars"
                 },
                 {
-                  "x": 960,
-                  "y": 1005,
+                  "x": 1200,
+                  "y": 1256,
                   "zoom": 1.35,
                   "t": 1.6,
                   "c": "cam"
@@ -9236,8 +9236,8 @@
         {
           "id": "v26_stargaze",
           "area": "starfall_village",
-          "x": 960,
-          "y": 760,
+          "x": 1200,
+          "y": 950,
           "r": 72,
           "label": "Lihat langit bersama",
           "actions": [
@@ -9269,8 +9269,8 @@
         {
           "id": "q_echo",
           "area": "starfall_village",
-          "x": 960,
-          "y": 1030,
+          "x": 1200,
+          "y": 1288,
           "r": 72,
           "label": "Pesan di bangku",
           "actions": [
@@ -9315,8 +9315,8 @@
                 {
                   "do": "warp",
                   "area": "eternal_garden",
-                  "x": 960,
-                  "y": 1340,
+                  "x": 1200,
+                  "y": 1675,
                   "dir": "up"
                 },
                 {
@@ -9355,8 +9355,8 @@
         {
           "id": "petal1",
           "area": "eternal_garden",
-          "x": 420,
-          "y": 870,
+          "x": 525,
+          "y": 1088,
           "r": 64,
           "label": "Kelopak Esok",
           "actions": [
@@ -9380,8 +9380,8 @@
           ],
           "sprite": {
             "image": "props/petal.png",
-            "x": 420,
-            "y": 856,
+            "x": 525,
+            "y": 1070,
             "bob": true
           },
           "hideIfFlag": "C06_PETAL_1"
@@ -9389,8 +9389,8 @@
         {
           "id": "petal2",
           "area": "eternal_garden",
-          "x": 1500,
-          "y": 1040,
+          "x": 1875,
+          "y": 1300,
           "r": 64,
           "label": "Kelopak Esok",
           "actions": [
@@ -9414,8 +9414,8 @@
           ],
           "sprite": {
             "image": "props/petal.png",
-            "x": 1500,
-            "y": 1026,
+            "x": 1875,
+            "y": 1282,
             "bob": true
           },
           "hideIfFlag": "C06_PETAL_2"
@@ -9423,8 +9423,8 @@
         {
           "id": "petal3",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 1210,
+          "x": 1200,
+          "y": 1512,
           "r": 64,
           "label": "Kelopak Esok",
           "actions": [
@@ -9448,8 +9448,8 @@
           ],
           "sprite": {
             "image": "props/petal.png",
-            "x": 960,
-            "y": 1196,
+            "x": 1200,
+            "y": 1495,
             "bob": true
           },
           "hideIfFlag": "C06_PETAL_3"
@@ -9498,8 +9498,8 @@
         {
           "id": "q_a_1",
           "area": "eternal_garden",
-          "x": 420,
-          "y": 870,
+          "x": 525,
+          "y": 1088,
           "r": 68,
           "label": "Pantulan pertama",
           "actions": [
@@ -9527,8 +9527,8 @@
         {
           "id": "q_a_2",
           "area": "eternal_garden",
-          "x": 1500,
-          "y": 1040,
+          "x": 1875,
+          "y": 1300,
           "r": 68,
           "label": "Jejak kedua",
           "actions": [
@@ -9556,8 +9556,8 @@
         {
           "id": "q_a_3",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 660,
+          "x": 1200,
+          "y": 825,
           "r": 68,
           "label": "Titik ketiga",
           "actions": [
@@ -9612,8 +9612,8 @@
         {
           "id": "q_s_1",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 660,
+          "x": 1200,
+          "y": 825,
           "r": 68,
           "label": "Kata pertama",
           "actions": [
@@ -9641,8 +9641,8 @@
         {
           "id": "q_s_2",
           "area": "eternal_garden",
-          "x": 1500,
-          "y": 1040,
+          "x": 1875,
+          "y": 1300,
           "r": 68,
           "label": "Kenangan kedua",
           "actions": [
@@ -9670,8 +9670,8 @@
         {
           "id": "q_s_3",
           "area": "eternal_garden",
-          "x": 420,
-          "y": 870,
+          "x": 525,
+          "y": 1088,
           "r": 68,
           "label": "Suara ketiga",
           "actions": [
@@ -9726,8 +9726,8 @@
         {
           "id": "q_a_cipher",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 500,
+          "x": 1200,
+          "y": 625,
           "r": 78,
           "label": "Kunci tiga simbol",
           "actions": [
@@ -9764,8 +9764,8 @@
         {
           "id": "q_s_pages",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 660,
+          "x": 1200,
+          "y": 825,
           "r": 78,
           "label": "Empat halaman",
           "actions": [
@@ -9802,8 +9802,8 @@
         {
           "id": "q_reveal",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 500,
+          "x": 1200,
+          "y": 625,
           "r": 80,
           "label": "Halaman yang memudar",
           "actions": [
@@ -9820,16 +9820,16 @@
                   "c": "bars"
                 },
                 {
-                  "x": 960,
-                  "y": 460,
+                  "x": 1200,
+                  "y": 575,
                   "zoom": 1.45,
                   "t": 1.6,
                   "c": "cam"
                 },
                 {
                   "kind": "restore",
-                  "x": 960,
-                  "y": 470,
+                  "x": 1200,
+                  "y": 588,
                   "t": 5.0,
                   "c": "fx"
                 },
@@ -9908,8 +9908,8 @@
         {
           "id": "letter_a",
           "area": "eternal_garden",
-          "x": 840,
-          "y": 660,
+          "x": 1050,
+          "y": 825,
           "r": 64,
           "label": "Tulis surat",
           "actions": [
@@ -9935,8 +9935,8 @@
         {
           "id": "letter_s",
           "area": "eternal_garden",
-          "x": 1080,
-          "y": 660,
+          "x": 1350,
+          "y": 825,
           "r": 64,
           "label": "Tulis surat",
           "actions": [
@@ -9973,8 +9973,8 @@
         {
           "id": "tree",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 500,
+          "x": 1200,
+          "y": 625,
           "r": 80,
           "label": "Pohon Harapan",
           "actions": [
@@ -10006,8 +10006,8 @@
         {
           "id": "pages",
           "area": "eternal_garden",
-          "x": 960,
-          "y": 520,
+          "x": 1200,
+          "y": 650,
           "r": 80,
           "label": "Halaman kenangan",
           "actions": [
@@ -10033,8 +10033,8 @@
                 },
                 {
                   "c": "cam",
-                  "x": 960,
-                  "y": 490,
+                  "x": 1200,
+                  "y": 612,
                   "zoom": 1.3,
                   "t": 2.0
                 },
@@ -12751,8 +12751,8 @@
         {
           "id": "v465_star_listen",
           "area": "starfall_village",
-          "x": 880,
-          "y": 640,
+          "x": 1100,
+          "y": 800,
           "r": 96,
           "label": "Dengarkan pasangan sampai selesai",
           "actions": [
@@ -12793,8 +12793,8 @@
         {
           "id": "v465_star_together",
           "area": "starfall_village",
-          "x": 960,
-          "y": 726,
+          "x": 1200,
+          "y": 908,
           "r": 100,
           "label": "Bangun bangku kenangan bersama",
           "actions": [
@@ -13576,8 +13576,8 @@
         {
           "id": "v471_clock_gate",
           "area": "starfall_village",
-          "x": 1430,
-          "y": 890,
+          "x": 1788,
+          "y": 1112,
           "r": 95,
           "label": "Masuki Clockwork Station",
           "actions": [
@@ -13646,8 +13646,8 @@
           ],
           "sprite": {
             "image": "items/v471_c05_clock.png",
-            "x": 1430,
-            "y": 874,
+            "x": 1788,
+            "y": 1092,
             "bob": true
           }
         }
@@ -15224,8 +15224,8 @@
             {
               "do": "warp",
               "area": "starfall_village",
-              "x": 60,
-              "y": 640,
+              "x": 75,
+              "y": 800,
               "dir": "right"
             },
             {
@@ -15254,8 +15254,8 @@
         {
           "id": "v472_hall_gate",
           "area": "eternal_garden",
-          "x": 1190,
-          "y": 700,
+          "x": 1488,
+          "y": 875,
           "r": 100,
           "label": "Masuki Balai Hari Esok",
           "actions": [
@@ -15314,8 +15314,8 @@
           ],
           "sprite": {
             "image": "items/v472_c06_hall.png",
-            "x": 1190,
-            "y": 685,
+            "x": 1488,
+            "y": 856,
             "bob": true
           }
         }
@@ -16100,8 +16100,8 @@
             {
               "do": "warp",
               "area": "eternal_garden",
-              "x": 960,
-              "y": 710,
+              "x": 1200,
+              "y": 888,
               "dir": "up"
             },
             {
@@ -23962,8 +23962,8 @@
     {
       "id": "WE27_DESA_BINTANG",
       "area": "starfall_village",
-      "x": 960,
-      "y": 1030,
+      "x": 1200,
+      "y": 1288,
       "r": 69,
       "label": "Lampu Jendela Starfall",
       "actions": [
@@ -25294,8 +25294,8 @@
     {
       "id": "V49_DISC_MEMORY_GARDEN",
       "area": "memory_garden",
-      "x": 330,
-      "y": 484,
+      "x": 412,
+      "y": 605,
       "r": 76,
       "label": "✧ Biji Cahaya",
       "when": {
@@ -25420,8 +25420,8 @@
     {
       "id": "V49_DISC_LANTERN_FIELD",
       "area": "lantern_field",
-      "x": 140,
-      "y": 1150,
+      "x": 175,
+      "y": 1438,
       "r": 76,
       "label": "✧ Lentera Keempat",
       "when": {
@@ -25546,8 +25546,8 @@
     {
       "id": "V49_DISC_STAR_PATH",
       "area": "star_path",
-      "x": 120,
-      "y": 520,
+      "x": 150,
+      "y": 650,
       "r": 76,
       "label": "✧ Kompas yang Berhenti",
       "when": {
@@ -25672,8 +25672,8 @@
     {
       "id": "V49_DISC_STARFALL_VILLAGE",
       "area": "starfall_village",
-      "x": 960,
-      "y": 1030,
+      "x": 1200,
+      "y": 1288,
       "r": 76,
       "label": "✧ Jendela Bernyanyi",
       "when": {
@@ -25768,8 +25768,8 @@
     {
       "id": "V49_DISC_ETERNAL_GARDEN",
       "area": "eternal_garden",
-      "x": 960,
-      "y": 1340,
+      "x": 1200,
+      "y": 1675,
       "r": 76,
       "label": "✧ Halaman yang Bernapas",
       "when": {
@@ -27594,8 +27594,8 @@
     {
       "id": "V49_WE_GARDEN_BREEZE",
       "area": "memory_garden",
-      "x": 330,
-      "y": 484,
+      "x": 412,
+      "y": 605,
       "r": 74,
       "label": "✦ Embun di Memory Garden",
       "when": {
@@ -27638,8 +27638,8 @@
     {
       "id": "V49_WE_LANTERN_GLOW49",
       "area": "lantern_field",
-      "x": 140,
-      "y": 1150,
+      "x": 175,
+      "y": 1438,
       "r": 74,
       "label": "✦ Nyala Setelah Senja",
       "when": {
@@ -27682,8 +27682,8 @@
     {
       "id": "V49_WE_STAR_PATH_PAUSE",
       "area": "star_path",
-      "x": 120,
-      "y": 520,
+      "x": 150,
+      "y": 650,
       "r": 74,
       "label": "✦ Berhenti di Jalur Bintang",
       "when": {
@@ -27726,8 +27726,8 @@
     {
       "id": "V49_WE_ETERNAL_BLOOM",
       "area": "eternal_garden",
-      "x": 960,
-      "y": 1340,
+      "x": 1200,
+      "y": 1675,
       "r": 74,
       "label": "✦ Bunga Hari Esok",
       "when": {
@@ -28755,8 +28755,8 @@
     {
       "id": "V50_VIEW_STAR_PATH",
       "area": "star_path",
-      "x": 1239,
-      "y": 432,
+      "x": 1549,
+      "y": 540,
       "r": 49,
       "label": "✦ Panorama: Pijakan Menuju Bintang",
       "hideIfFlag": "V50_VIEW_STAR_PATH_DONE",
@@ -28973,8 +28973,8 @@
     {
       "id": "V50_VIEW_MEMORY_GARDEN",
       "area": "memory_garden",
-      "x": 1089,
-      "y": 597,
+      "x": 1361,
+      "y": 746,
       "r": 49,
       "label": "✦ Panorama: Teras Ingatan",
       "hideIfFlag": "V50_VIEW_MEMORY_GARDEN_DONE",
@@ -29082,8 +29082,8 @@
     {
       "id": "V50_VIEW_LANTERN_FIELD",
       "area": "lantern_field",
-      "x": 929,
-      "y": 382,
+      "x": 1161,
+      "y": 478,
       "r": 49,
       "label": "✦ Panorama: Teras Lentera",
       "hideIfFlag": "V50_VIEW_LANTERN_FIELD_DONE",
@@ -29191,8 +29191,8 @@
     {
       "id": "V50_VIEW_STARFALL_VILLAGE",
       "area": "starfall_village",
-      "x": 1069,
-      "y": 512,
+      "x": 1336,
+      "y": 640,
       "r": 49,
       "label": "✦ Panorama: Atap Cahaya Starfall",
       "hideIfFlag": "V50_VIEW_STARFALL_VILLAGE_DONE",
@@ -29300,8 +29300,8 @@
     {
       "id": "V50_VIEW_ETERNAL_GARDEN",
       "area": "eternal_garden",
-      "x": 999,
-      "y": 587,
+      "x": 1249,
+      "y": 734,
       "r": 49,
       "label": "✦ Panorama: Pelataran Hari Esok",
       "hideIfFlag": "V50_VIEW_ETERNAL_GARDEN_DONE",
@@ -32171,8 +32171,8 @@
       "name": "Lumi",
       "sprite": "lumi",
       "area": "lantern_field",
-      "x": 1000,
-      "y": 600,
+      "x": 1250,
+      "y": 750,
       "dir": "down",
       "when": {
         "steps": [
@@ -32222,8 +32222,8 @@
       "name": "Lumi",
       "sprite": "lumi",
       "area": "starfall_village",
-      "x": 1040,
-      "y": 640,
+      "x": 1300,
+      "y": 800,
       "dir": "down",
       "when": {
         "steps": [
@@ -32253,8 +32253,8 @@
       "name": "Lumi",
       "sprite": "lumi",
       "area": "eternal_garden",
-      "x": 1080,
-      "y": 560,
+      "x": 1350,
+      "y": 700,
       "dir": "down",
       "when": {
         "chapters": [
@@ -37577,8 +37577,8 @@
       "id": "desa_bintang",
       "title": "Lampu Jendela Starfall",
       "area": "starfall_village",
-      "x": 960,
-      "y": 1030,
+      "x": 1200,
+      "y": 1288,
       "hours": [
         "18:00",
         "24:00"
@@ -37754,8 +37754,8 @@
       "id": "v49_garden_breeze",
       "title": "Embun di Memory Garden",
       "area": "memory_garden",
-      "x": 330,
-      "y": 484,
+      "x": 412,
+      "y": 605,
       "r": 74,
       "hours": [
         "06:30",
@@ -37776,8 +37776,8 @@
       "id": "v49_lantern_glow49",
       "title": "Nyala Setelah Senja",
       "area": "lantern_field",
-      "x": 140,
-      "y": 1150,
+      "x": 175,
+      "y": 1438,
       "r": 74,
       "hours": [
         "18:00",
@@ -37798,8 +37798,8 @@
       "id": "v49_star_path_pause",
       "title": "Berhenti di Jalur Bintang",
       "area": "star_path",
-      "x": 120,
-      "y": 520,
+      "x": 150,
+      "y": 650,
       "r": 74,
       "hours": [
         "17:00",
@@ -37820,8 +37820,8 @@
       "id": "v49_eternal_bloom",
       "title": "Bunga Hari Esok",
       "area": "eternal_garden",
-      "x": 960,
-      "y": 1340,
+      "x": 1200,
+      "y": 1675,
       "r": 74,
       "hours": [
         "06:30",

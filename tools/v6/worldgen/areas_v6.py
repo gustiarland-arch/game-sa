@@ -81,6 +81,20 @@ def dm_props(ctx, c):
     return out
 
 
+def rune_circle(cx, cy, r, col='#efe4ff', ry=0.62):
+    def hook(c, ctx):
+        dx = (c.xx - cx).astype(np.float32); dy = (c.yy - cy) / ry
+        d = np.sqrt(dx * dx + dy * dy); th = np.arctan2(dy, dx)
+        lines = (np.abs(d - r) < 1.6) | (np.abs(d - r * 0.82) < 1.0) | (np.abs(d - r * 0.45) < 1.2)
+        ticks = (d > r * 0.84) & (d < r * 0.98) & (np.abs(((th / (2 * np.pi) * 24) % 1) - 0.5) > 0.46)
+        star = (d < r * 0.80) & (d > r * 0.47) & (np.abs(np.abs(np.cos(th * 3)) ** 8 * (r * 0.33) - (d - r * 0.47)) < 1.4)
+        m = lines | ticks | star
+        c.img[m] = np.clip(c.img[m] * 0.45 + rgb(col) * 0.6, 0, 255)
+        glow = (~m) & (dist_from(m, 4) < 3)
+        c.img[glow] = np.clip(c.img[glow] * 0.85 + rgb(col) * 0.2, 0, 255)
+    return hook
+
+
 FOREST = ['tree_dark', 'tree_pine', 'tree_oak', 'tree_green', 'v41_tree_dark_willow', 'tree_autumn']
 
 CONFIG = {
@@ -101,4 +115,19 @@ CONFIG = {
                           density=(0.85, 0.02), paint=[star_flowers], path_thr=55, path_blur=7,
                           flowers=('#e8f4ff', '#bcd8ff', '#fff3b0'),
                           districts=['observatory hilltop', 'star meadow', 'fenced ridge path']),
+    'memory_garden': dict(realm=True, paint=[rune_circle(1000, 905, 330)], trees=['v44_tree_dream', 'v44_tree_lantern', 'tree_dream', 'v44_v41_tree_dream_memory_tree'],
+                          tree_weights=[50, 20, 20, 3], density=(0.9, 0.018), flowers=('#f6e8ff', '#d8b8ff', '#ffd6f0'), lilies=0,
+                          keep_veg=('v44_crystal',), districts=['crossroads of light paths', 'memory arches', 'crystal glade']),
+    'lantern_field': dict(realm=True, paint=[rune_circle(1130, 792, 190, '#ffe7b0')], trees=['tree_lantern', 'tree_dream', 'v41_tree_lantern_cherry'], tree_weights=[50, 30, 6],
+                          density=(0.9, 0.02), flowers=('#ffe9a8', '#ffd27a', '#fff6d8'), star='#ffe9b0', lilies=0,
+                          districts=['lantern meadow', 'glowing causeway', 'release plaza']),
+    'starfall_village': dict(realm=True, paint=[rune_circle(1200, 868, 290)], trees=['tree_dream', 'tree_lantern', 'v41_tree_dream_memory_tree'], tree_weights=[50, 40, 3],
+                             density=(0.9, 0.02), flowers=('#e8f4ff', '#d8c8ff', '#fff3b0'), lilies=0,
+                             districts=['star cottages', 'village square', 'lantern lane']),
+    'star_path': dict(realm=True, trees=['crystal', 'star_stone', 'v41_crystal_crystal_cluster'], tree_weights=[40, 30, 10],
+                      density=(0.5, 0.01), keep_veg=(), flowers=('#e8f4ff', '#bcd8ff', '#ffffff'), lilies=0,
+                      districts=['zigzag starlight road', 'constellation field', 'viewpoints']),
+    'eternal_garden': dict(trees=['tree_cherry', 'tree_green', 'v43_v41_tree_cherry_cherry', 'tree_oak'], tree_weights=[40, 25, 15, 6],
+                           walls_are_water=False, shore=14, lum_paths=True, path_lum=200, path_sat=60,
+                           districts=['wishing tree terrace', 'cherry avenue with arches', 'reflecting pond', 'gazebo lawn']),
 }

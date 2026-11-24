@@ -888,9 +888,11 @@
     "bukit_bintang",
     "eternal_garden",
     "hutan_bisik",
+    "lantern_field",
     "memory_garden",
     "plaza",
     "riverside",
+    "star_path",
     "starfall_village",
     "taman_kota"
    ]
@@ -911,9 +913,14 @@
    "maps": [
     "bukit_bintang",
     "dermaga",
+    "eternal_garden",
     "hutan_bisik",
+    "lantern_field",
+    "memory_garden",
     "plaza",
     "riverside",
+    "star_path",
+    "starfall_village",
     "taman_kota"
    ]
   },
@@ -930,9 +937,7 @@
     34,
     10
    ],
-   "maps": [
-    "memory_garden"
-   ]
+   "maps": []
   },
   {
    "id": "bush_plain",
@@ -947,9 +952,7 @@
     34,
     10
    ],
-   "maps": [
-    "lantern_field"
-   ]
+   "maps": []
   },
   {
    "id": "cafe_table",
@@ -2407,9 +2410,11 @@
     "dermaga",
     "eternal_garden",
     "hutan_bisik",
+    "lantern_field",
     "memory_garden",
     "plaza",
     "riverside",
+    "star_path",
     "starfall_village",
     "taman_kota"
    ]
@@ -2974,12 +2979,14 @@
    "maps": [
     "bukit_bintang",
     "dermaga",
+    "eternal_garden",
     "hutan_bisik",
     "lantern_field",
     "memory_garden",
     "plaza",
     "riverside",
     "star_path",
+    "starfall_village",
     "taman_kota"
    ]
   },
@@ -4141,6 +4148,7 @@
    ],
    "maps": [
     "lantern_field",
+    "memory_garden",
     "starfall_village"
    ]
   },
@@ -4207,6 +4215,7 @@
    "maps": [
     "bukit_bintang",
     "dermaga",
+    "eternal_garden",
     "hutan_bisik",
     "plaza",
     "riverside",
@@ -5136,6 +5145,7 @@
    ],
    "maps": [
     "dermaga",
+    "eternal_garden",
     "riverside",
     "taman_kota"
    ]

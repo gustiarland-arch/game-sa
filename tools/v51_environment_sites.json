@@ -77,8 +77,8 @@
     "reason": "Panggung hadiah di depan deretan mesin"
   },
   "memory_garden": {
-    "x": 1005,
-    "y": 555,
+    "x": 1256,
+    "y": 694,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -88,8 +88,8 @@
     "reason": "Teras Memory Garden — ujung tangga menyentuh cabang jalur timur"
   },
   "lantern_field": {
-    "x": 845,
-    "y": 340,
+    "x": 1056,
+    "y": 425,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -99,8 +99,8 @@
     "reason": "Dek lentera menuju lingkaran cahaya"
   },
   "star_path": {
-    "x": 1155,
-    "y": 390,
+    "x": 1444,
+    "y": 488,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -110,8 +110,8 @@
     "reason": "Observatorium Star Path — pangkal tangga tepat pada jalur zig-zag bercahaya"
   },
   "starfall_village": {
-    "x": 985,
-    "y": 470,
+    "x": 1231,
+    "y": 588,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -121,8 +121,8 @@
     "reason": "Teras terhubung jalan utama desa"
   },
   "eternal_garden": {
-    "x": 915,
-    "y": 545,
+    "x": 1144,
+    "y": 681,
     "w": 168,
     "h": 92,
     "stair": 78,

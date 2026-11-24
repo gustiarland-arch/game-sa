@@ -18,7 +18,7 @@ from PIL import Image, ImageFilter
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from paint import Canvas, rgb, hash2, bake_details, wear, moss   # noqa: E402
-from ground import dist_from, noise, classify, PATH as C_PATH, WATER as C_WATER, STONE as C_STONE, SAND as C_SAND  # noqa: E402
+from ground import dist_from, noise, classify, PATH as C_PATH, WATER as C_WATER, STONE as C_STONE, SAND as C_SAND, DPATH as C_DPATH, DREAM as C_DREAM  # noqa: E402
 import common                                                     # noqa: E402
 
 A = common.A
@@ -47,9 +47,19 @@ class Ctx:
         self.seed = int(hashlib.sha256((area + '_v6').encode()).hexdigest()[:8], 16)
         self.cfg = CONFIG.get(area, {})
 
+    def path_color(self):
+        t, med = classify(self.img)
+        lum = med.mean(axis=2)
+        sel = med[lum > np.percentile(lum, 50) + 60] if (self.cfg.get('realm') or self.cfg.get('lum_paths')) else med[(t == C_PATH) | (t == C_STONE) | (t == C_DPATH) | (t == C_SAND)]
+        return np.median(sel, axis=0) if len(sel) else np.array([220, 210, 235], float)
+
     def grass_palette(self):
         t, med = classify(self.img)
-        sel = med[(t == 0) | (t == 5)]
+        if self.cfg.get('realm'):
+            lum = med.mean(axis=2)
+            sel = med[lum < np.percentile(lum, 60)]
+        else:
+            sel = med[(t == 0) | (t == 5)]
         base = np.median(sel, axis=0) if len(sel) else np.array([104, 172, 106], float)
         cols = []
         for f in (0.80, 0.87, 0.94, 1.0, 1.07, 1.15):
@@ -79,9 +89,29 @@ class Ctx:
         return mk
 
     def terrain(self):
+        if self.cfg.get('realm') or self.cfg.get('lum_paths'):
+            # dream ground is blue/purple, so colour classes do not apply: walkways are the
+            # bright, low-saturation band; water only where the config says so
+            a = self.img.astype(np.float32)
+            cell = 4
+            h, w = self.OH // cell, self.OW // cell
+            m = np.median(a[:h * cell, :w * cell].reshape(h, cell, w, cell, 3).transpose(0, 2, 1, 3, 4).reshape(h, w, 16, 3), axis=2)
+            lum = m.mean(axis=2); sat = m.max(axis=2) - m.min(axis=2)
+            thr = self.cfg.get('path_lum', np.percentile(lum, 50) + 60)
+            p = (lum > thr) & (sat < self.cfg.get('path_sat', 90))
+            from ground import majority
+            p = majority(p.astype(np.int8), 2).astype(bool)
+            up = lambda q: np.repeat(np.repeat(q, cell, 0), cell, 1)
+            P = np.zeros((self.OH, self.OW), bool); P[:h * cell, :w * cell] = up(p)
+            Wt = np.zeros_like(P)
+            if not self.cfg.get('realm'):
+                t, _ = classify(self.img)
+                Wt = np.repeat(np.repeat(t == C_WATER, 4, 0), 4, 1)[:self.OH, :self.OW]
+                P &= ~Wt
+            return P, Wt
         t, med = classify(self.img)
         cell = lambda k: np.repeat(np.repeat(t == k, 4, 0), 4, 1)[:self.OH, :self.OW]
-        return cell(C_PATH) | cell(C_STONE) | cell(C_SAND), cell(C_WATER)
+        return cell(C_PATH) | cell(C_STONE) | cell(C_SAND) | cell(C_DPATH), cell(C_WATER)
 
 
 # ----------------------------------------------------------------------------- painting
@@ -89,7 +119,17 @@ def paint(ctx, placed=None, Pdef=None):
     cfg = ctx.cfg
     W, H = ctx.W, ctx.H
     c = Canvas(W, H, ctx.seed)
+    realm = cfg.get('realm', False)
     c.put(np.ones((H, W), bool), c.grass(cfg.get('grass') or ctx.grass_palette()), G)
+    if realm:
+        stars = np.random.default_rng(ctx.seed + 17)
+        n = W * H // 260
+        ys, xs = stars.integers(1, H - 1, n), stars.integers(1, W - 1, n)
+        glow = np.clip(np.array(rgb(cfg.get('star', '#f4f0ff'))), 0, 255)
+        for y, x in zip(ys, xs):
+            c.img[y, x] = glow * (0.7 + 0.3 * stars.random())
+            if stars.random() < 0.08:
+                c.img[y - 1, x] = c.img[y + 1, x] = c.img[y, x - 1] = c.img[y, x + 1] = glow * 0.6
     old_path, old_water = ctx.terrain()
     wmask = ctx.wall_mask()
     coll = ctx.up(wmask)
@@ -97,7 +137,15 @@ def paint(ctx, placed=None, Pdef=None):
     for hook in cfg.get('water_fill', []):          # e.g. close a gap under a bridge
         water |= hook(c)
     path = c.wobble(ctx.up(old_path, cfg.get('path_blur', 5), cfg.get('path_thr', 95)) & ~water & ~coll, 2, 6, 1)
-    c.put(path, c.dirt(cfg.get('path_pal', ('#b39a74', '#bea67f', '#c8b18b', '#d3bd98'))), DIRT)
+    if realm or cfg.get('lum_paths'):
+        pc = ctx.path_color()
+        pal = ['#%02x%02x%02x' % tuple(np.clip(pc * f + a, 0, 255).astype(int)) for f, a in ((0.86, 0), (0.93, 0), (1.0, 4), (1.04, 10), (1.08, 16))]
+        c.put(path, c.bricks(pal, 20, 10, '#%02x%02x%02x' % tuple(np.clip(pc * 0.72, 0, 255).astype(int)), salt=21), PV)
+        if realm:
+            halo = (~path) & (dist_from(path, 10) < 9)
+            c.img[halo] = np.clip(c.img[halo] * 0.8 + pc * 0.28, 0, 255)
+    else:
+        c.put(path, c.dirt(cfg.get('path_pal', ('#b39a74', '#bea67f', '#c8b18b', '#d3bd98'))), DIRT)
     if water.any():
         sw = cfg.get('shore', 12)
         shore = c.wobble(dist_from(water, sw + 4) < sw, 2, 5, 3) & ~water
