@@ -152,7 +152,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     private int drawCursor;
     private float visibleL, visibleR, visibleB, visibleT;
     // v5.4 weather: storm scheduler, rain puddles and ground wetness (cosmetic, never saved).
-    private final WeatherFxV54.Storm storm = new WeatherFxV54.Storm(System.nanoTime());
+    private final WeatherFxV54.Storm storm;
     private java.util.List<float[]> puddles = new java.util.ArrayList<>();
     private float wetness;
     private final Comparator<DrawItem> bySortY = new Comparator<DrawItem>() {
@@ -191,6 +191,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     public GameScreen(final OluGame game, Progress progress, boolean replay, boolean newGame) {
         super(game);
         this.p = progress; this.replay = replay; this.newGame = newGame;
+        // Storm timing is varied per in-game day but reproducible (same day, same storm).
+        this.storm = new WeatherFxV54.Storm(p.day * 7919L + 17L);
         this.engine = new QuestEngine(game.story, game.quests, game.maps, p, replay); // melempar bila step tidak dikenal
         this.engine.setGlobalProgress(game.global);
         MapDb.flags = new MapDb.FlagCheck() { public boolean has(String f) { return p.hasFlag(f); } };
