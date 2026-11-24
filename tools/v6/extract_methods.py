@@ -180,6 +180,18 @@ for t in NESTED:
     s = s.replace('private static final class ' + t, 'static final class ' + t)
 GS.write_text(s, encoding='utf-8')
 imports = ''.join(l + '\n' for l in s.split('\n') if l.startswith('import '))
+# other collaborators that called a moved method through g. now go through the new field
+for other in SRC.glob('*.java'):
+    if other.name in ('GameScreen.java', cls + '.java'):
+        continue
+    t = other.read_text(encoding='utf-8')
+    if 'private final GameScreen g;' not in t:
+        continue
+    t2 = t
+    for name in names:
+        t2 = re.sub(r'\bg\.' + re.escape(name) + r'\s*\(', 'g.' + field + '.' + name + '(', t2)
+    if t2 != t:
+        other.write_text(t2, encoding='utf-8')
 target = SRC / (cls + '.java')
 if target.exists():
     cur = target.read_text(encoding='utf-8')

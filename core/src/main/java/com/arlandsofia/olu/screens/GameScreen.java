@@ -64,6 +64,8 @@ import java.util.Map;
  * dialog, puzzle, Memory Book, pause, autosave. Implementasi Presenter untuk ActionRunner.
  */
 public final class GameScreen extends BaseScreen implements ActionRunner.Presenter {
+    final DayCycle days = new DayCycle(this);
+    final PlayerController playerCtl = new PlayerController(this);
     final TownDirector town = new TownDirector(this);
     final CompanionController companion = new CompanionController(this);
     final HudRenderer hud = new HudRenderer(this);
@@ -397,7 +399,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             syncSoundscape();
         }
 
-        syncClockToStep();
+        days.syncClockToStep();
         boolean free = free();
         if (free && !replay) {
             autosaveAcc += dt;
@@ -411,9 +413,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
                 clockAcc -= 1f; p.minute++;
                 if (p.minute % 10 == 0) { town.refreshTown(); if (!cine.active()) syncSoundscape(); }
                 if (p.minute == 19 * 60 + 30) town.spawnAnimals(); // hewan siang pulang, kucing malam keluar
-                if (p.minute >= WorldClock.DAY_END) { passOut(); break; }
+                if (p.minute >= WorldClock.DAY_END) { days.passOut(); break; }
             }
-            move(dt);
+            playerCtl.move(dt);
             if (player.walking && game.settings.footsteps && footstepClock <= 0f) {
                 boolean stairsNow=ElevationV50.onStairs(area.terraces,player.x,player.y);
                 boolean puddleStep = wetness > 0.35f && WeatherFxV54.inPuddle(puddles, player.x, player.y);
@@ -426,8 +428,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             if(onStairsNow && !previousStair)game.audio.sfx("v50_stair_enter",.38f);
             previousStair=onStairsNow;
             lastTerrainHeight=ElevationV50.heightAt(area.terraces,player.x,player.y);
-            findTarget();
-            if (controls.consumeAction()) interact();
+            playerCtl.findTarget();
+            if (controls.consumeAction()) playerCtl.interact();
         } else {
             player.walking = false;
             controls.consumeAction();
@@ -454,142 +456,20 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
 
     // ================================================================== hari & tidur
     String clockStep;
-    /** step cerita bersuasana senja/malam memajukan jam dunia (hanya maju), agar HUD, NPC, dan langit selaras. */
-    void syncClockToStep() {
-        QuestDb.Step st = engine.step();
-        if (st == null || st.id.equals(clockStep)) return;
-        clockStep = st.id;
-        if (st.tint == null || replay) return;
-        Color c = Color.valueOf(st.tint);
-        int target = c.b > c.r ? 20 * 60 : 17 * 60 + 30;
-        if (p.minute < target) { p.minute = target; town.refreshTown(); town.spawnAnimals(); }
-    }
-    void newDay(String msg) {
-        p.day++; p.minute = 7 * 60; clockAcc = 0;
-        npcPlaceKey.clear(); townActors.clear(); npcBrain.clear();
-        town.refreshTown(); town.spawnAnimals();
-        syncSoundscape();
-        String w = WorldClock.weather(p.day);
-        toast(msg + " " + WorldClock.dayName(p.day) + ", hari ke-" + p.day + " • " + Character.toUpperCase(w.charAt(0)) + w.substring(1));
-        saveNow();
-    }
-
-    void askSleep() {
-        boolean early = p.minute < 17 * 60;
-        confirm = new ConfirmBox("Tidur?", early ? "Masih " + WorldClock.hhmm(p.minute) + ". Tidur sampai besok pagi?" : "Istirahat sampai besok pagi. Progress tersimpan otomatis.",
-                "Tidur", new Runnable() { public void run() { confirm = null; fade(new Runnable() { public void run() {
-                    player.dir = Assets.DIR_DOWN; newDay("Selamat pagi!"); } }, null); } },
-                "Nanti", new Runnable() { public void run() { confirm = null; } });
-    }
-
-    void passOut() {
-        final String room = Routes.room(p.route);
-        fade(new Runnable() { public void run() {
-            MapDb.Area roomArea = game.maps.area(room);
-            float[] bed = bedSpot(roomArea);
-            enterArea(room, bed[0], bed[1] + 50f, Assets.DIR_DOWN, false);
-            newDay("Kamu ketiduran sampai pagi...");
-        } }, null);
-    }
-
-    void move(float dt) {
-        float kx = 0, ky = 0;
-        if (Gdx.input.isKeyPressed(Input.Keys.A) || Gdx.input.isKeyPressed(Input.Keys.LEFT)) kx -= 1;
-        if (Gdx.input.isKeyPressed(Input.Keys.D) || Gdx.input.isKeyPressed(Input.Keys.RIGHT)) kx += 1;
-        if (Gdx.input.isKeyPressed(Input.Keys.W) || Gdx.input.isKeyPressed(Input.Keys.UP)) ky -= 1;
-        if (Gdx.input.isKeyPressed(Input.Keys.S) || Gdx.input.isKeyPressed(Input.Keys.DOWN)) ky += 1;
-        float dx = kx, dy = ky;
-        if (dx == 0 && dy == 0) { dx = controls.vx; dy = -controls.vy; }
-        float len = (float) Math.sqrt(dx * dx + dy * dy);
-        boolean sprint = !p.holdingHands && (controls.sprintHeld || Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT) || Gdx.input.isKeyPressed(Input.Keys.SHIFT_RIGHT));
-        if (len < 0.01f) { player.walking = false; return; }
-        float mag = Math.min(1f, len);
-        dx /= len; dy /= len; // diagonal dinormalisasi
-        float speed = (sprint ? SPRINT_SPEED : WALK_SPEED) * Math.max(0.45f, mag) * dt
-                * ElevationV50.speedFactor(area.terraces, player.x, player.y);
-        float ox = player.x, oy = player.y;
-        float nx = player.x + dx * speed;
-        // Swept foot collision prevents slipping through thin walls at low FPS.
-        if (WorldNavigationV52.clearSegment(footCollision,player.x,player.y,nx,player.y)
-                && ElevationV50.canStep(area.terraces,player.x,player.y,nx,player.y)) player.x = nx;
-        float ny = player.y + dy * speed;
-        if (WorldNavigationV52.clearSegment(footCollision,player.x,player.y,player.x,ny)
-                && ElevationV50.canStep(area.terraces,player.x,player.y,player.x,ny)) player.y = ny;
-        player.face(dx, dy);
-        player.sprinting = sprint;
-        float moved = Math.abs(player.x - ox) + Math.abs(player.y - oy);
-        player.walking = moved > 0.01f;
-        if (partnerMode == 2 && player.walking && !p.holdingHands) {
-            float[] last = trail.peekLast();
-            if (last == null || Math.abs(last[0] - player.x) + Math.abs(last[1] - player.y) > 6) trail.addLast(new float[]{player.x, player.y});
-            while (trail.size() > 80) trail.pollFirst();
-        }
-        p.x = player.x; p.y = player.y; p.dir = Actor.dirName(player.dir);
-        checkDoors(ox, oy);
-    }
-
-    void checkDoors(float ox, float oy) {
-        if (doorCooldown > 0) return;
-        for (final MapDb.Door d : area.doors) {
-            if (!d.touches(player.x, player.y)) continue;
-            String lock = engine.doorLock(d);
-            if (lock != null) {
-                toast(lock);
-                game.audio.sfx("soft_wrong");
-                player.x = ox; player.y = oy;
-                if (d.touches(player.x, player.y)) { // masih di zona: dorong menjauh dari pusat pintu
-                    float vx = player.x - d.cx(), vy = player.y - d.cy();
-                    float l = Math.max(1f, (float) Math.sqrt(vx * vx + vy * vy));
-                    float tx = player.x + vx / l * 14, ty = player.y + vy / l * 14;
-                    if (!area.blocked(tx, ty) && ElevationV50.canStep(area.terraces,player.x,player.y,tx,ty)) { player.x = tx; player.y = ty; }
-                }
-                doorCooldown = 1.2f;
-                return;
-            }
-            controls.reset();
-            fade(new Runnable() { public void run() { enterArea(d.to, d.tx, d.ty, Actor.dirOf(d.dir), true); } },
-                    new Runnable() { public void run() { runner.run(engine.onEnterArea(area.id)); } });
-            return;
-        }
-    }
 
 
 
-    void findTarget() {
-        targetQuest = null; targetExamine = null; targetNpc = null; targetSide = null; targetTalk = null; targetRomance = false; targetAnimal = null; targetBed = false;
-        float best = Float.MAX_VALUE;
-        for (QuestDb.Interactable it : engine.interactables(area.id)) {
-            float d = dist(it.x, it.y);
-            if (d <= it.r && d < best) { best = d; targetQuest = it; }
-        }
-        if (targetQuest != null) return;
-        best = Float.MAX_VALUE;
-        for (QuestDb.Interactable it : engine.sideInteractables(area.id)) {
-            float d = dist(it.x, it.y);
-            if (d <= it.r && d < best) { best = d; targetSide = it; }
-        }
-        for (QuestDb.TownNpc n : engine.townNpcsNow(area.id)) {
-            Actor ac = townActors.get(n.id); if (ac == null) continue;
-            float d = dist(ac.x, ac.y);
-            if (d <= 64 && d < best && engine.npcDialog(n) != null) { best = d; targetNpc = n; targetSide = null; }
-        }
-        if (targetSide != null || targetNpc != null) return;
-        for (Animal an : animals) if (an.pettable && dist(an.x, an.y) < 40) { targetAnimal = an; return; }
-        if (area.id.equals(Routes.room(p.route))) {
-            float[] bed = bedSpot(area);
-            if (dist(bed[0], bed[1]) < 60) { targetBed = true; return; }
-        }
-        if (partnerMode == 2 && dist(partner.x, partner.y) <= 58) {
-            targetTalk = engine.partnerTalk(area.id);
-            targetRomance = engine.romanceReady();
-            if (targetTalk != null || targetRomance) return;
-        }
-        best = Float.MAX_VALUE;
-        for (MapDb.Examine e : engine.examine(area)) {
-            float d = dist(e.x, e.y);
-            if (d <= e.r && d < best) { best = d; targetExamine = e; }
-        }
-    }
+
+
+
+
+
+
+
+
+
+
+
 
     /** Bed position from map data (v5.4 rescaled rooms); legacy constants as fallback. */
     float[] bedSpot(MapDb.Area a) {
@@ -599,58 +479,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
 
     float dist(float x, float y) { float dx = x - player.x, dy = y - player.y; return (float) Math.sqrt(dx * dx + dy * dy); }
 
-    void interact() {
-        if (targetQuest != null) {
-            player.face(targetQuest.x - player.x, targetQuest.y - player.y);
-            runner.run(engine.actionsFor(targetQuest));
-        } else if (targetSide != null) {
-            player.face(targetSide.x - player.x, targetSide.y - player.y);
-            runner.run(engine.actionsFor(targetSide));
-        } else if (targetTalk != null) {
-            player.face(partner.x - player.x, partner.y - player.y);
-            partner.face(player.x - partner.x, player.y - partner.y);
-            runner.run(engine.talkActions(targetTalk));
-        } else if (targetRomance) {
-            player.face(partner.x - player.x, partner.y - player.y);
-            partner.face(player.x - partner.x, player.y - partner.y);
-            controls.reset();
-            romance.open(area.id, new RomanceOverlay.Listener() {
-                public void completed(List<Map<String, Object>> acts, String message) {
-                    saveNow();
-                    toast(message);
-                    if (message.startsWith("Hadiah")) game.audio.sfx("gift", .7f);
-                    else if (message.startsWith("Kencan")) game.audio.sfx("heart", .7f);
-                    else if (message.startsWith("Aksi berdua")) game.audio.sfx("hug", .6f);
-                    runner.run(acts);
-                }
-            });
-        } else if (targetAnimal != null) {
-            player.face(targetAnimal.x - player.x, targetAnimal.y - player.y);
-            targetAnimal.pet();
-            String animalSfx = targetAnimal.type.startsWith("cat") ? "cat_meow"
-                    : targetAnimal.type.startsWith("dog") ? "dog_bark"
-                    : targetAnimal.type.startsWith("duck") ? "duck_quack" : "bird_chirp";
-            game.audio.sfx(animalSfx, .52f);
-            p.flags.add("PET_" + targetAnimal.type.replaceAll("_.*", "").toUpperCase(java.util.Locale.ROOT));
-            if (p.petted.add(targetAnimal.type.replaceAll("_.*", ""))) toast("Teman berbulu baru! (" + p.petted.size() + " jenis)");
-            if (partnerMode == 2) partner.showEmote("heart", 1.4f);
-        } else if (targetBed) {
-            askSleep();
-        } else if (targetNpc != null) {
-            Actor ac = townActors.get(targetNpc.id);
-            if (ac != null) player.face(ac.x - player.x, ac.y - player.y);
-            if (ac != null) ac.face(player.x - ac.x, player.y - ac.y);
-            Map<String, Object> d = engine.npcDialog(targetNpc);
-            if (d != null) runner.run(engine.resolve(com.arlandsofia.olu.logic.Json.objList(d, "actions")));
-        } else if (targetExamine != null) {
-            player.face(targetExamine.x - player.x, targetExamine.y - player.y);
-            game.audio.sfx("page_turn", .42f);
-            dialog.start(targetExamine.lines(p.route), null, p.route, dialogListener(), null);
-            controls.reset();
-        } else {
-            toast("Dekati penanda ✦ untuk berinteraksi");
-        }
-    }
+
 
     DialogBox.Listener dialogListener() {
         return new DialogBox.Listener() {
@@ -1094,7 +923,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (back || k == Input.Keys.P) { openPause(); return true; }
         if (k == Input.Keys.M) { openBook(); return true; }
         if (k == Input.Keys.H) { openDialogueHistory(); return true; }
-        if ((k == Input.Keys.E || k == Input.Keys.SPACE || k == Input.Keys.ENTER) && free()) { interact(); return true; }
+        if ((k == Input.Keys.E || k == Input.Keys.SPACE || k == Input.Keys.ENTER) && free()) { playerCtl.interact(); return true; }
         return false;
     }
 
