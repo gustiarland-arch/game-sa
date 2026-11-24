@@ -123,6 +123,8 @@ def validate(a, P, points):
     if not seen.any():
         bad.append(('spawn blocked', 'spawn', *a['spawn']))
     for label, x, y, r in points:
+        if label in ('fx', 'cam', 'shot'):
+            continue            # camera/effect anchors may sit over water
         if blocked(x, y):
             rr = r or 40
             near = seen[max(0, int((y - rr) // st)):int((y + rr) // st) + 1, max(0, int((x - rr) // st)):int((x + rr) // st) + 1]

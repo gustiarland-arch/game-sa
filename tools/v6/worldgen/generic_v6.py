@@ -47,6 +47,16 @@ class Ctx:
         self.seed = int(hashlib.sha256((area + '_v6').encode()).hexdigest()[:8], 16)
         self.cfg = CONFIG.get(area, {})
 
+    def grass_palette(self):
+        t, med = classify(self.img)
+        sel = med[(t == 0) | (t == 5)]
+        base = np.median(sel, axis=0) if len(sel) else np.array([104, 172, 106], float)
+        cols = []
+        for f in (0.80, 0.87, 0.94, 1.0, 1.07, 1.15):
+            c = np.clip(base * f + (8 if f > 1 else 0), 0, 255).astype(int)
+            cols.append('#%02x%02x%02x' % tuple(c))
+        return tuple(cols)
+
     def sc(self, x, y):
         return int(round(x * S)), int(round(y * S))
 
@@ -55,13 +65,14 @@ class Ctx:
         return np.array(im.filter(ImageFilter.GaussianBlur(blur))) > thr
 
     def is_border(self, r):
+        """Thin map-edge wall (kept as an edge wall, not painted)."""
         x, y, w, h = r
-        return x <= 0 or y <= 0 or x + w >= self.OW or y + h >= self.OH
+        return (w <= 24 and (x <= 0 or x + w >= self.OW)) or (h <= 24 and (y <= 0 or y + h >= self.OH))
 
     def wall_mask(self):
         mk = np.zeros((self.OH, self.OW), bool)
         for r in self.old['walls']:
-            if self.is_border(r) and (r[2] <= 24 or r[3] <= 24):
+            if self.is_border(r):
                 continue
             x, y, w, h = r
             mk[y:y + h, x:x + w] = True
@@ -78,14 +89,14 @@ def paint(ctx, placed=None, Pdef=None):
     cfg = ctx.cfg
     W, H = ctx.W, ctx.H
     c = Canvas(W, H, ctx.seed)
-    c.put(np.ones((H, W), bool), c.grass(cfg.get('grass', ('#5a9c5e', '#62a464', '#6aac69', '#72b36e', '#7cba74', '#87c27b'))), G)
+    c.put(np.ones((H, W), bool), c.grass(cfg.get('grass') or ctx.grass_palette()), G)
     old_path, old_water = ctx.terrain()
     wmask = ctx.wall_mask()
     coll = ctx.up(wmask)
-    water = ctx.up(old_water | (wmask & cfg.get('walls_are_water', True)))
+    water = ctx.up(old_water | (wmask if cfg.get('walls_are_water', False) else np.zeros_like(wmask)))
     for hook in cfg.get('water_fill', []):          # e.g. close a gap under a bridge
         water |= hook(c)
-    path = c.wobble(ctx.up(old_path, 5, 95) & ~water, 2, 6, 1)
+    path = c.wobble(ctx.up(old_path, cfg.get('path_blur', 5), cfg.get('path_thr', 95)) & ~water & ~coll, 2, 6, 1)
     c.put(path, c.dirt(cfg.get('path_pal', ('#b39a74', '#bea67f', '#c8b18b', '#d3bd98'))), DIRT)
     if water.any():
         sw = cfg.get('shore', 12)
@@ -95,6 +106,26 @@ def paint(ctx, placed=None, Pdef=None):
         dl = dist_from(~water, 4)
         c.img[water & (dl == 1)] = c.img[water & (dl == 1)] * 0.35 + rgb('#d9eef5') * 0.65
         c.img[water & (dl == 2)] = c.img[water & (dl == 2)] * 0.7 + rgb('#d9eef5') * 0.3
+    cliff_all = coll & ~water & ~ctx.up(old_water, 9, 60)
+    e = 34                                                         # carry blocked areas out to the map edge
+    cliff_all[H - e:, :] |= cliff_all[H - e - 1, :][None, :]
+    cliff_all[:e, :] |= cliff_all[e, :][None, :]
+    cliff_all[:, W - e:] |= cliff_all[:, W - e - 1][:, None]
+    cliff_all[:, :e] |= cliff_all[:, e][:, None]
+    deep = cliff_all & (dist_from(~cliff_all, 34) >= 34)          # interior of big blocked areas stays ground
+    cliff = cliff_all & ~deep
+    c.deep = deep
+    if cliff.any():
+        top = cliff & ~np.roll(cliff, 8, 0)                       # upper lip (grass edge seen from above)
+        face = c.bricks(cfg.get('cliff_pal', ('#7f7a73', '#8b857d', '#979087', '#a39b91')), 14, 8, '#5b5650', salt=31)
+        c.put(cliff, face, ST)
+        c.img[cliff] *= 0.92
+        lip = c.bricks(('#a8a196', '#b4ada1', '#bfb8ab'), 20, 6, '#7c766d', salt=32)
+        c.img[top] = lip[top]
+        foot = (~cliff) & np.roll(cliff, -1, 0) & ~water
+        for i, f in enumerate((0.62, 0.74, 0.86)):
+            m = np.roll(foot, i, 0) & ~cliff
+            c.img[m] *= f
     c.water_mask = water
     c.coll = coll
     for hook in cfg.get('paint', []):
@@ -157,11 +188,18 @@ def points(ctx):
 def plant(ctx, c, out):
     W, H = ctx.W, ctx.H
     rng = np.random.default_rng(ctx.seed + 3)
-    blocked = c.coll | (c.mat != G)
+    blocked = (c.coll & ~getattr(c, 'deep', np.zeros_like(c.coll))) | (c.mat != G)
     pts = points(ctx)
     kinds = ctx.cfg.get('trees', ['tree_green', 'tree_cherry', 'tree_pine', 'tree_autumn', 'v43_v41_tree_cherry_cherry', 'tree_oak', 'v43_v41_tree_green_willow'])
     wts = np.array(ctx.cfg.get('tree_weights', [30, 22, 14, 12, 6, 6, 4][:len(kinds)]), float); wts /= wts.sum()
     border, inner = ctx.cfg.get('density', (0.9, 0.022))
+    keep_out = []
+    for t in ctx.old.get('elevationPlatforms', []):             # terrace + stair corridor stay clear
+        x0, y0 = ctx.sc(t['x'], t['y'])
+        keep_out.append((x0 - 60, y0 - 40, t['w'] + 120, t['h'] + t['stairLength'] + 120))
+    for d in ctx.old.get('doors', []):
+        x0, y0, w0, h0 = scale_rect(ctx, d['rect'])
+        keep_out.append((x0 - 70, y0 - 70, w0 + 140, h0 + 140))
     placed = []
     for _ in range(int(9000 * W * H / (2400 * 1760))):
         x, y = rng.integers(40, W - 40), rng.integers(90, H - 6)
@@ -170,9 +208,11 @@ def plant(ctx, c, out):
             continue
         if blocked[max(0, y - 60):y + 10, max(0, x - 40):x + 40].any():
             continue
-        if any((x - px) ** 2 + ((y - py) * 1.4) ** 2 < (70 if min(x, W - x, y, H - y) < 150 else 150) ** 2 for px, py in placed):
+        if any((x - px) ** 2 + ((y - py) * 1.4) ** 2 < (70 if min(x, W - x, y, H - y) < 150 else ctx.cfg.get('inner_gap', 150)) ** 2 for px, py in placed):
             continue
         if any((x - qx) ** 2 + (y - qy) ** 2 < 85 ** 2 for qx, qy in pts):
+            continue
+        if any(kx <= x <= kx + kw and ky <= y <= ky + kh + 60 for kx, ky, kw, kh in keep_out):
             continue
         if any(abs(x - q['x']) < 70 and -30 < y - q['y'] < 120 for q in out):
             continue
@@ -212,7 +252,7 @@ def scale_rect(ctx, r):
 
 def entry(ctx, old, c, props):
     a = dict(old)
-    walls = [scale_rect(ctx, r) for r in old['walls'] if ctx.is_border(r) and (r[2] <= 24 or r[3] <= 24)]
+    walls = [scale_rect(ctx, r) for r in old['walls'] if ctx.is_border(r)]
     coll = c.coll.copy()
     for hook in ctx.cfg.get('walk_on_water', []):
         coll &= ~hook(c)
@@ -304,7 +344,27 @@ if __name__ == '__main__':
     load_configs()
     area = sys.argv[1]
     mod = module_for(area)
-    if '--repaint' in sys.argv:
+    if '--refresh' in sys.argv:
+        # re-place props of an already migrated map, validate, then repaint
+        import subprocess
+        sys.modules['v6_' + area] = mod
+        M = json.loads((A / 'data/maps.json').read_text(encoding='utf-8'))
+        Q = json.loads((A / 'data/quests.json').read_text(encoding='utf-8'))
+        Pd = json.loads((A / 'data/props.json').read_text(encoding='utf-8'))['props']
+        a = M['areas'][area]
+        a['props'] = mod.props()
+        pts = [(m[0], m[3], m[4], m[5]) for m in common.migrate_quests(Q, area, lambda x, y: (x, y))]
+        pts += [(d['id'], d['tx'], d['ty'], None) for b in M['areas'].values() for d in b.get('doors', []) if d.get('to') == area]
+        bad = common.validate(a, Pd, pts)
+        for b in bad:
+            print('INVALID', *b)
+        if bad:
+            raise SystemExit('not refreshed')
+        (A / 'data/maps.json').write_text(json.dumps(M, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        c = paint(mod.ctx, a['props'], Pd)
+        Image.fromarray(c.result(), 'RGB').save(A / a['image'], optimize=True)
+        print(area, 'refreshed')
+    elif '--repaint' in sys.argv:
         M = json.loads((A / 'data/maps.json').read_text(encoding='utf-8'))
         Pd = json.loads((A / 'data/props.json').read_text(encoding='utf-8'))['props']
         c = paint(mod.ctx, M['areas'][area]['props'], Pd)
