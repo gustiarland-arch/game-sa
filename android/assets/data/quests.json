@@ -4964,8 +4964,8 @@
         {
           "id": "pier",
           "area": "riverside",
-          "x": 1220,
-          "y": 840,
+          "x": 1525,
+          "y": 1050,
           "r": 60,
           "label": "Lihat senja",
           "actions": [
@@ -8088,8 +8088,8 @@
         {
           "id": "portal_pier",
           "area": "riverside",
-          "x": 1220,
-          "y": 840,
+          "x": 1525,
+          "y": 1050,
           "r": 60,
           "label": "Sentuh pantulan bintang",
           "actions": [
@@ -11106,8 +11106,8 @@
         {
           "id": "v473_post_lake",
           "area": "riverside",
-          "x": 900,
-          "y": 720,
+          "x": 1125,
+          "y": 900,
           "r": 105,
           "label": "Kenangan kecil setelah petualangan",
           "actions": [
@@ -16355,8 +16355,8 @@
         {
           "id": "v473_lake_photo",
           "area": "riverside",
-          "x": 820,
-          "y": 600,
+          "x": 1025,
+          "y": 750,
           "r": 105,
           "label": "Foto kencan lama",
           "actions": [
@@ -16376,16 +16376,16 @@
           "hideIfFlag": "V473_LAKE_PHOTO",
           "sprite": {
             "image": "items/v473_photo.png",
-            "x": 820,
-            "y": 580,
+            "x": 1025,
+            "y": 725,
             "bob": true
           }
         },
         {
           "id": "v473_lake_letter",
           "area": "riverside",
-          "x": 1030,
-          "y": 600,
+          "x": 1288,
+          "y": 750,
           "r": 105,
           "label": "Surat dari Eternal Garden",
           "actions": [
@@ -16419,16 +16419,16 @@
           "hideIfFlag": "V473_LAKE_LETTER",
           "sprite": {
             "image": "items/v473_letter.png",
-            "x": 1030,
-            "y": 580,
+            "x": 1288,
+            "y": 725,
             "bob": true
           }
         },
         {
           "id": "v473_lake_ready",
           "area": "riverside",
-          "x": 952,
-          "y": 648,
+          "x": 1190,
+          "y": 810,
           "r": 105,
           "label": "Duduk bersama setelah mengingat semuanya",
           "actions": [
@@ -16445,8 +16445,8 @@
           },
           "sprite": {
             "image": "items/v473_sunset.png",
-            "x": 952,
-            "y": 638,
+            "x": 1190,
+            "y": 798,
             "bob": true
           }
         }
@@ -16464,8 +16464,8 @@
         {
           "id": "v473_final_bench",
           "area": "riverside",
-          "x": 952,
-          "y": 648,
+          "x": 1190,
+          "y": 810,
           "r": 105,
           "label": "Halaman terakhir yang masih kosong",
           "actions": [
@@ -17183,8 +17183,8 @@
           ],
           "sprite": {
             "image": "items/v473_sunset.png",
-            "x": 952,
-            "y": 638,
+            "x": 1190,
+            "y": 798,
             "bob": true
           }
         }
@@ -17412,8 +17412,8 @@
     {
       "id": "mochi2",
       "area": "riverside",
-      "x": 300,
-      "y": 660,
+      "x": 375,
+      "y": 825,
       "r": 64,
       "label": "Kucing oranye",
       "actions": [
@@ -17428,8 +17428,8 @@
       ],
       "sprite": {
         "image": "props/mochi.png",
-        "x": 300,
-        "y": 660,
+        "x": 375,
+        "y": 825,
         "bob": false
       },
       "when": {
@@ -17562,8 +17562,8 @@
     {
       "id": "stone3",
       "area": "riverside",
-      "x": 1700,
-      "y": 640,
+      "x": 2125,
+      "y": 800,
       "r": 50,
       "label": "Batu berkilau",
       "actions": [
@@ -17587,8 +17587,8 @@
       ],
       "sprite": {
         "image": "props/shiny_stone.png",
-        "x": 1700,
-        "y": 638,
+        "x": 2125,
+        "y": 798,
         "bob": true
       },
       "when": {
@@ -17754,8 +17754,8 @@
     {
       "id": "photo3",
       "area": "riverside",
-      "x": 1220,
-      "y": 840,
+      "x": 1525,
+      "y": 1050,
       "r": 56,
       "label": "Potret dermaga",
       "actions": [
@@ -18080,8 +18080,8 @@
     {
       "id": "route_a_2",
       "area": "riverside",
-      "x": 1220,
-      "y": 840,
+      "x": 1525,
+      "y": 1050,
       "r": 60,
       "label": "Penanda arah dermaga",
       "actions": [
@@ -18334,8 +18334,8 @@
     {
       "id": "rain_a_2",
       "area": "riverside",
-      "x": 1220,
-      "y": 840,
+      "x": 1525,
+      "y": 1050,
       "r": 66,
       "label": "Sketsa dermaga",
       "actions": [
@@ -18583,8 +18583,8 @@
     {
       "id": "v26_sqa_3",
       "area": "riverside",
-      "x": 860,
-      "y": 640,
+      "x": 1075,
+      "y": 800,
       "r": 66,
       "label": "Gambar simbol danau",
       "actions": [
@@ -18982,8 +18982,8 @@
     {
       "id": "v26_sqf_2",
       "area": "riverside",
-      "x": 1220,
-      "y": 840,
+      "x": 1525,
+      "y": 1050,
       "r": 66,
       "label": "Periksa lentera dermaga",
       "actions": [
@@ -19609,8 +19609,8 @@
     {
       "id": "page12",
       "area": "riverside",
-      "x": 300,
-      "y": 300,
+      "x": 375,
+      "y": 375,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19645,8 +19645,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 300,
-        "y": 298,
+        "x": 375,
+        "y": 372,
         "bob": true
       },
       "when": {
@@ -19658,8 +19658,8 @@
     {
       "id": "page13",
       "area": "riverside",
-      "x": 1600,
-      "y": 420,
+      "x": 2000,
+      "y": 525,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19694,8 +19694,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 1600,
-        "y": 418,
+        "x": 2000,
+        "y": 522,
         "bob": true
       },
       "when": {
@@ -19707,8 +19707,8 @@
     {
       "id": "page14",
       "area": "riverside",
-      "x": 900,
-      "y": 520,
+      "x": 1125,
+      "y": 650,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19743,8 +19743,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 900,
-        "y": 518,
+        "x": 1125,
+        "y": 648,
         "bob": true
       },
       "when": {
@@ -20050,8 +20050,8 @@
     {
       "id": "fish_riverside",
       "area": "riverside",
-      "x": 1220,
-      "y": 840,
+      "x": 1525,
+      "y": 1050,
       "r": 58,
       "label": "Memancing",
       "actions": [
@@ -22342,8 +22342,8 @@
     {
       "id": "star25",
       "area": "riverside",
-      "x": 1860,
-      "y": 200,
+      "x": 2325,
+      "y": 250,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22371,8 +22371,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 1860,
-        "y": 196,
+        "x": 2325,
+        "y": 245,
         "bob": true
       },
       "when": {
@@ -22384,8 +22384,8 @@
     {
       "id": "star26",
       "area": "riverside",
-      "x": 120,
-      "y": 560,
+      "x": 150,
+      "y": 700,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22413,8 +22413,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 120,
-        "y": 556,
+        "x": 150,
+        "y": 695,
         "bob": true
       },
       "when": {
@@ -23045,8 +23045,8 @@
     {
       "id": "lostbook3",
       "area": "riverside",
-      "x": 1560,
-      "y": 660,
+      "x": 1950,
+      "y": 825,
       "r": 50,
       "label": "Buku tertinggal",
       "actions": [
@@ -23070,8 +23070,8 @@
       ],
       "sprite": {
         "image": "props/lost_book.png",
-        "x": 1560,
-        "y": 656,
+        "x": 1950,
+        "y": 820,
         "bob": true
       },
       "when": {
@@ -23279,8 +23279,8 @@
     {
       "id": "paint3",
       "area": "riverside",
-      "x": 1400,
-      "y": 700,
+      "x": 1750,
+      "y": 875,
       "r": 50,
       "label": "Kaleng cat",
       "actions": [
@@ -23304,8 +23304,8 @@
       ],
       "sprite": {
         "image": "props/paint_purple.png",
-        "x": 1400,
-        "y": 696,
+        "x": 1750,
+        "y": 870,
         "bob": true
       },
       "when": {
@@ -23513,8 +23513,8 @@
     {
       "id": "job_kurir_riverside",
       "area": "riverside",
-      "x": 1520,
-      "y": 640,
+      "x": 1900,
+      "y": 800,
       "r": 82,
       "label": "Antar surat ke Tepi Danau",
       "actions": [
@@ -23661,8 +23661,8 @@
     {
       "id": "WE27_SENJA_DANAU",
       "area": "riverside",
-      "x": 1520,
-      "y": 624,
+      "x": 1900,
+      "y": 780,
       "r": 69,
       "label": "Cahaya di Permukaan Danau",
       "actions": [
@@ -24754,8 +24754,8 @@
     {
       "id": "V49_DISC_RIVERSIDE",
       "area": "riverside",
-      "x": 592,
-      "y": 682,
+      "x": 740,
+      "y": 852,
       "r": 76,
       "label": "✧ Riak Kedua",
       "when": {
@@ -28428,8 +28428,8 @@
     {
       "id": "V50_VIEW_RIVERSIDE",
       "area": "riverside",
-      "x": 1144,
-      "y": 532,
+      "x": 1430,
+      "y": 665,
       "r": 49,
       "label": "✦ Panorama: Dek Riak Senja",
       "hideIfFlag": "V50_VIEW_RIVERSIDE_DONE",
@@ -30857,8 +30857,8 @@
         {
           "at": "06:00",
           "area": "riverside",
-          "x": 699,
-          "y": 675,
+          "x": 874,
+          "y": 844,
           "dir": "right",
           "wander": 120
         },
@@ -32303,8 +32303,8 @@
       "name": "Pak Udin",
       "sprite": "udin",
       "area": "riverside",
-      "x": 1120,
-      "y": 640,
+      "x": 1400,
+      "y": 800,
       "dir": "right",
       "when": {},
       "dialogs": [
@@ -32586,8 +32586,8 @@
         {
           "at": "10:30",
           "area": "riverside",
-          "x": 1125,
-          "y": 639,
+          "x": 1406,
+          "y": 799,
           "dir": "right",
           "wander": 30
         },
@@ -32602,8 +32602,8 @@
         {
           "at": "16:00",
           "area": "riverside",
-          "x": 1125,
-          "y": 639,
+          "x": 1406,
+          "y": 799,
           "dir": "right",
           "wander": 30
         },
@@ -33008,8 +33008,8 @@
         {
           "at": "12:00",
           "area": "riverside",
-          "x": 969,
-          "y": 675,
+          "x": 1211,
+          "y": 844,
           "dir": "down",
           "wander": 60
         },
@@ -34098,8 +34098,8 @@
       "name": "Mas Eko",
       "sprite": "eko",
       "area": "riverside",
-      "x": 501,
-      "y": 687,
+      "x": 626,
+      "y": 859,
       "dir": "right",
       "when": {
         "minChapter": "C01"
@@ -34109,8 +34109,8 @@
         {
           "at": "06:00",
           "area": "riverside",
-          "x": 699,
-          "y": 675,
+          "x": 874,
+          "y": 844,
           "dir": "right",
           "wander": 260
         },
@@ -34374,8 +34374,8 @@
         {
           "at": "12:00",
           "area": "riverside",
-          "x": 1521,
-          "y": 687,
+          "x": 1901,
+          "y": 859,
           "dir": "down",
           "wander": 10
         },
@@ -34548,8 +34548,8 @@
         {
           "at": "25:00",
           "area": "riverside",
-          "x": 957,
-          "y": 675,
+          "x": 1196,
+          "y": 844,
           "dir": "down",
           "wander": 300
         }
@@ -34941,8 +34941,8 @@
       "name": "Oma Ina",
       "sprite": "ina",
       "area": "riverside",
-      "x": 700,
-      "y": 690,
+      "x": 875,
+      "y": 862,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -34952,8 +34952,8 @@
         {
           "at": "06:00",
           "area": "riverside",
-          "x": 699,
-          "y": 675,
+          "x": 874,
+          "y": 844,
           "dir": "right",
           "wander": 200
         },
@@ -37418,8 +37418,8 @@
       "id": "senja_danau",
       "title": "Cahaya di Permukaan Danau",
       "area": "riverside",
-      "x": 1520,
-      "y": 624,
+      "x": 1900,
+      "y": 780,
       "hours": [
         "16:00",
         "19:00"

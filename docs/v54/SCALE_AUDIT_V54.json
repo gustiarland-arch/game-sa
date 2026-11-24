@@ -911,6 +911,7 @@
    "maps": [
     "hutan_bisik",
     "plaza",
+    "riverside",
     "taman_kota"
    ]
   },
@@ -2405,6 +2406,7 @@
     "hutan_bisik",
     "memory_garden",
     "plaza",
+    "riverside",
     "starfall_village",
     "taman_kota"
    ]
@@ -4204,6 +4206,7 @@
     "bukit_bintang",
     "hutan_bisik",
     "plaza",
+    "riverside",
     "taman_kota"
    ]
   },
@@ -4684,8 +4687,7 @@
    ],
    "maps": [
     "bukit_bintang",
-    "plaza",
-    "riverside"
+    "plaza"
    ]
   },
   {
@@ -5133,6 +5135,7 @@
     8
    ],
    "maps": [
+    "riverside",
     "taman_kota"
    ]
   },
@@ -5271,7 +5274,8 @@
     22
    ],
    "maps": [
-    "dermaga"
+    "dermaga",
+    "riverside"
    ]
   },
   {
@@ -5322,7 +5326,8 @@
     0
    ],
    "maps": [
-    "bukit_bintang"
+    "bukit_bintang",
+    "riverside"
    ]
   },
   {
@@ -5545,7 +5550,8 @@
     0
    ],
    "maps": [
-    "dermaga"
+    "dermaga",
+    "riverside"
    ]
   },
   {

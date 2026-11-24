@@ -183,17 +183,26 @@ class Canvas:
         return np.clip(img, 0, 255)
 
     def water(self, mask, pal=('#24577f', '#2b6990', '#357ca2', '#4290b4', '#5aa6c6')):
+        """Depth ramp near shores, horizontally stretched swell bands, dithered steps, wave marks."""
         p = np.stack([rgb(c) for c in pal])
-        d = dist_from(~mask, 24) / 24.0
-        v = 0.72 * (1 - d) + 0.28 * noise(self.h, self.w, 60, self.seed + 70)
-        idx = np.clip((v * (len(p) - 1)).round().astype(int), 0, len(p) - 1)
-        img = p[idx]
+        d = dist_from(~mask, 28) / 28.0
+        swell = noise(self.h * 3, self.w, 90, self.seed + 70)[::3][:self.h]   # elongated along x
+        v = 0.82 * (1 - d) + 0.18 * swell
+        f = v * (len(p) - 1)
+        idx = np.clip(np.floor(f).astype(int), 0, len(p) - 1)
+        frac = f - idx
+        chk = ((self.xx + self.yy) % 2 == 0)
+        idx = np.where((frac > 0.5) & chk, np.clip(idx + 1, 0, len(p) - 1), idx)
+        img = p[idx].copy()
         rng = np.random.default_rng(self.seed + 71)
-        hl = rgb('#a9d8ec')
+        hl, lo = rgb('#a9d8ec'), p[0] * 0.92
         ys, xs = np.nonzero(mask)
-        for i in rng.integers(0, len(ys), max(1, len(ys) // 600)):
+        for i in rng.integers(0, len(ys), max(1, len(ys) // 420)):
             y, x = ys[i], xs[i]
-            img[y, x:x + rng.integers(3, 8)] = hl
+            n = rng.integers(4, 10)
+            img[y, x:x + n] = hl                                    # crest
+            if y + 1 < self.h:
+                img[y + 1, x + 1:x + n + 1] = np.minimum(img[y + 1, x + 1:x + n + 1], lo + 0)  # trough under it
         return img
 
     # ---------------------------------------------------------------- finishing
