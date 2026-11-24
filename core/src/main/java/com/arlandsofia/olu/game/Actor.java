@@ -11,7 +11,10 @@ import com.badlogic.gdx.math.MathUtils;
 /** Karakter di dunia (pemain / companion / NPC). Posisi = titik kaki dalam koordinat peta (y ke bawah).
  *  Mendukung pose dari lembar pose (duduk, melambai, memberi, gandengan, ...) dan gestur prosedural (tertawa, kaget, mengangguk, napas idle). */
 public final class Actor {
-    public static final float SCALE = 0.85f;
+    /** v5.4: native 1:1 sprite pixels. v5.3 drew the 48x72 frames at 0.85, which made
+     * Arland/Sofia read ~15% too small next to map furniture and resampled every
+     * sprite on a non-integer grid (uneven pixel columns / shimmer while walking). */
+    public static final float SCALE = 1.0f;
 
     public final String character;
     public final MotionPersonalityV53.Style motion;
@@ -84,14 +87,15 @@ public final class Actor {
         switch (d) { case Assets.DIR_LEFT: return "left"; case Assets.DIR_RIGHT: return "right"; case Assets.DIR_UP: return "up"; default: return "down"; }
     }
 
-    public float drawHeight() { return Assets.FRAME_H * SCALE * motion.visualScale; }
+    public float drawHeight() { return Math.round(Assets.FRAME_H * SCALE * motion.visualScale); }
 
     /** mapH = tinggi peta untuk konversi y ke koordinat LibGDX (y ke atas). */
     public void draw(SpriteBatch batch, Assets a, float mapH, Texture shadow) {
         if (!visible || alpha <= 0f) return;
         float gy = mapH - y + terrainLift;
-        float w = Assets.FRAME_W * SCALE * motion.visualScale;
-        float h = Assets.FRAME_H * SCALE * motion.visualScale;
+        // Whole-pixel sprite size keeps nearest-neighbour sampling crisp.
+        float w = Math.round(Assets.FRAME_W * SCALE * motion.visualScale);
+        float h = Math.round(Assets.FRAME_H * SCALE * motion.visualScale);
         float lift = 0f, dx = 0f, extraW = 0f, extraH = 0f;
         TextureRegion r = null;
         int pi = pose == null ? -1 : Assets.poseIndex(pose);
@@ -150,7 +154,7 @@ public final class Actor {
         if (pose==null) dx += MathUtils.sin(life*5f+motion.phase)*turnImpulse*1.5f;
         // Subtle idle listening/head reaction, no extra overdraw or sprite duplication.
         if (!walking && pose==null && emoteTime>0f) lift += MathUtils.sin(life*4f)*0.45f;
-        float dw = w + extraW, dh = h + extraH;
+        float dw = w + Math.round(extraW), dh = h + Math.round(extraH);
         float px = Math.round(x - dw / 2 + dx), py = Math.round(gy - 1 + lift);
         // v3.7: gambar sprite tepat satu kali. Versi lama menggambar kepala dua kali
         // pada idle dan menghasilkan ghosting semi-transparan di tepi rambut/wajah.

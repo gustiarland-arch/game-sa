@@ -1,0 +1,6789 @@
+{
+ "referenceBodyPx": 64.5,
+ "arland": [
+  67.0,
+  43.0
+ ],
+ "sofia": [
+  62.0,
+  38.0
+ ],
+ "npcHeightVsLeads": {
+  "arland": 1.039,
+  "bayu": 1.039,
+  "bimo": 0.884,
+  "darmo": 0.961,
+  "darto": 1.039,
+  "dito": 0.899,
+  "eko": 1.039,
+  "harun": 1.008,
+  "ina": 0.853,
+  "juna": 1.039,
+  "laras": 0.961,
+  "lumi": 0.729,
+  "melati": 0.961,
+  "nara": 0.961,
+  "pos": 1.039,
+  "raka": 1.039,
+  "rara": 0.868,
+  "rini": 0.961,
+  "sari": 0.884,
+  "sofia": 0.961,
+  "tigor": 1.039,
+  "tika": 0.868,
+  "udin": 1.023,
+  "ujang": 1.039,
+  "wulan": 0.961
+ },
+ "props": [
+  {
+   "id": "arcade_blue",
+   "image": "props/arcade_blue.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_blue_4",
+   "image": "props/arcade_blue_4.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_blue_b2",
+   "image": "props/arcade_blue_b2.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_green",
+   "image": "props/arcade_green.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_green_b0",
+   "image": "props/arcade_green_b0.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_green_b3",
+   "image": "props/arcade_green_b3.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_pink",
+   "image": "props/arcade_pink.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_pink_3",
+   "image": "props/arcade_pink_3.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arcade_pink_b1",
+   "image": "props/arcade_pink_b1.png",
+   "px": [
+    35,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 0.54,
+   "collider": [
+    34,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "arch_flowers",
+   "image": "props/arch_flowers.png",
+   "px": [
+    120,
+    128
+   ],
+   "hRatio": 1.98,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "arch_flowers_e",
+   "image": "props/arch_flowers_e.png",
+   "px": [
+    120,
+    128
+   ],
+   "hRatio": 1.98,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "arch_flowers_e2",
+   "image": "props/arch_flowers_e2.png",
+   "px": [
+    120,
+    128
+   ],
+   "hRatio": 1.98,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "archive_pedestal",
+   "image": "props/archive_pedestal.png",
+   "px": [
+    48,
+    72
+   ],
+   "hRatio": 1.12,
+   "wRatio": 0.74,
+   "collider": [
+    40,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "barrel",
+   "image": "props/barrel.png",
+   "px": [
+    22,
+    31
+   ],
+   "hRatio": 0.48,
+   "wRatio": 0.34,
+   "collider": [
+    20,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "bed_blue",
+   "image": "props/bed_blue.png",
+   "px": [
+    80,
+    112
+   ],
+   "hRatio": 1.74,
+   "wRatio": 1.24,
+   "collider": [
+    76,
+    96
+   ],
+   "maps": [],
+   "category": "bed",
+   "band": [
+    0.7,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bed_pink",
+   "image": "props/bed_pink.png",
+   "px": [
+    80,
+    112
+   ],
+   "hRatio": 1.74,
+   "wRatio": 1.24,
+   "collider": [
+    76,
+    96
+   ],
+   "maps": [],
+   "category": "bed",
+   "band": [
+    0.7,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bench",
+   "image": "props/bench.png",
+   "px": [
+    72,
+    38
+   ],
+   "hRatio": 0.59,
+   "wRatio": 1.12,
+   "collider": [
+    66,
+    12
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bench_b",
+   "image": "props/bench_b.png",
+   "px": [
+    72,
+    38
+   ],
+   "hRatio": 0.59,
+   "wRatio": 1.12,
+   "collider": [
+    66,
+    12
+   ],
+   "maps": [
+    "dermaga"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bicycle",
+   "image": "props/bicycle.png",
+   "px": [
+    44,
+    24
+   ],
+   "hRatio": 0.37,
+   "wRatio": 0.68,
+   "collider": [
+    30,
+    6
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "bld_arcade",
+   "image": "props/bld_arcade.png",
+   "px": [
+    320,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.96,
+   "collider": [
+    300,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_arland_house",
+   "image": "props/bld_arland_house.png",
+   "px": [
+    270,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.19,
+   "collider": [
+    250,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_bakery",
+   "image": "props/bld_bakery.png",
+   "px": [
+    260,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.03,
+   "collider": [
+    240,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_cafe",
+   "image": "props/bld_cafe.png",
+   "px": [
+    300,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.65,
+   "collider": [
+    280,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_florist",
+   "image": "props/bld_florist.png",
+   "px": [
+    290,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.5,
+   "collider": [
+    270,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_house_a",
+   "image": "props/bld_house_a.png",
+   "px": [
+    250,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 3.88,
+   "collider": [
+    230,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_house_b",
+   "image": "props/bld_house_b.png",
+   "px": [
+    270,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.19,
+   "collider": [
+    250,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_house_c",
+   "image": "props/bld_house_c.png",
+   "px": [
+    260,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.03,
+   "collider": [
+    240,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_house_d",
+   "image": "props/bld_house_d.png",
+   "px": [
+    260,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.03,
+   "collider": [
+    240,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_library",
+   "image": "props/bld_library.png",
+   "px": [
+    420,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 6.51,
+   "collider": [
+    400,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_sofia_house",
+   "image": "props/bld_sofia_house.png",
+   "px": [
+    280,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.34,
+   "collider": [
+    260,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_star_house0",
+   "image": "props/bld_star_house0.png",
+   "px": [
+    240,
+    188
+   ],
+   "hRatio": 2.91,
+   "wRatio": 3.72,
+   "collider": [
+    220,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_star_house1",
+   "image": "props/bld_star_house1.png",
+   "px": [
+    240,
+    188
+   ],
+   "hRatio": 2.91,
+   "wRatio": 3.72,
+   "collider": [
+    220,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "bld_star_house2",
+   "image": "props/bld_star_house2.png",
+   "px": [
+    240,
+    188
+   ],
+   "hRatio": 2.91,
+   "wRatio": 3.72,
+   "collider": [
+    220,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_a5",
+   "image": "props/book_pile_a5.png",
+   "px": [
+    25,
+    26
+   ],
+   "hRatio": 0.4,
+   "wRatio": 0.39,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_a6",
+   "image": "props/book_pile_a6.png",
+   "px": [
+    25,
+    26
+   ],
+   "hRatio": 0.4,
+   "wRatio": 0.39,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_a7",
+   "image": "props/book_pile_a7.png",
+   "px": [
+    24,
+    21
+   ],
+   "hRatio": 0.33,
+   "wRatio": 0.37,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_jk",
+   "image": "props/book_pile_jk.png",
+   "px": [
+    24,
+    16
+   ],
+   "hRatio": 0.25,
+   "wRatio": 0.37,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_p1",
+   "image": "props/book_pile_p1.png",
+   "px": [
+    25,
+    16
+   ],
+   "hRatio": 0.25,
+   "wRatio": 0.39,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_p2",
+   "image": "props/book_pile_p2.png",
+   "px": [
+    23,
+    16
+   ],
+   "hRatio": 0.25,
+   "wRatio": 0.36,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_p3",
+   "image": "props/book_pile_p3.png",
+   "px": [
+    25,
+    16
+   ],
+   "hRatio": 0.25,
+   "wRatio": 0.39,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_p4",
+   "image": "props/book_pile_p4.png",
+   "px": [
+    24,
+    16
+   ],
+   "hRatio": 0.25,
+   "wRatio": 0.37,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": []
+  },
+  {
+   "id": "book_pile_sr",
+   "image": "props/book_pile_sr.png",
+   "px": [
+    25,
+    21
+   ],
+   "hRatio": 0.33,
+   "wRatio": 0.39,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "bookshelf",
+   "image": "props/bookshelf.png",
+   "px": [
+    62,
+    96
+   ],
+   "hRatio": 1.49,
+   "wRatio": 0.96,
+   "collider": [
+    58,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bookshelf_c",
+   "image": "props/bookshelf_c.png",
+   "px": [
+    62,
+    96
+   ],
+   "hRatio": 1.49,
+   "wRatio": 0.96,
+   "collider": [
+    58,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bookshelf_s",
+   "image": "props/bookshelf_s.png",
+   "px": [
+    62,
+    96
+   ],
+   "hRatio": 1.49,
+   "wRatio": 0.96,
+   "collider": [
+    58,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "bridge_broken_hb",
+   "image": "props/bridge_broken_hb.png",
+   "px": [
+    130,
+    60
+   ],
+   "hRatio": 0.93,
+   "wRatio": 2.02,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "bridge_dpier",
+   "image": "props/bridge_dpier.png",
+   "px": [
+    72,
+    420
+   ],
+   "hRatio": 6.51,
+   "wRatio": 1.12,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "bridge_dplat",
+   "image": "props/bridge_dplat.png",
+   "px": [
+    340,
+    110
+   ],
+   "hRatio": 1.71,
+   "wRatio": 5.27,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "bridge_fixed_hb",
+   "image": "props/bridge_fixed_hb.png",
+   "px": [
+    130,
+    60
+   ],
+   "hRatio": 0.93,
+   "wRatio": 2.02,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "bridge_park",
+   "image": "props/bridge_park.png",
+   "px": [
+    150,
+    64
+   ],
+   "hRatio": 0.99,
+   "wRatio": 2.33,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "bridge_pier",
+   "image": "props/bridge_pier.png",
+   "px": [
+    80,
+    184
+   ],
+   "hRatio": 2.85,
+   "wRatio": 1.24,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "bus_shelter",
+   "image": "props/bus_shelter.png",
+   "px": [
+    128,
+    93
+   ],
+   "hRatio": 1.44,
+   "wRatio": 1.98,
+   "collider": [
+    120,
+    16
+   ],
+   "maps": []
+  },
+  {
+   "id": "bush",
+   "image": "props/bush.png",
+   "px": [
+    45,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 0.7,
+   "collider": [
+    34,
+    10
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "eternal_garden",
+    "hutan_bisik",
+    "memory_garden",
+    "plaza",
+    "riverside",
+    "starfall_village",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "bush_berry",
+   "image": "props/bush_berry.png",
+   "px": [
+    45,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 0.7,
+   "collider": [
+    34,
+    10
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "bush_d",
+   "image": "props/bush_d.png",
+   "px": [
+    45,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 0.7,
+   "collider": [
+    34,
+    10
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "bush_plain",
+   "image": "props/bush_plain.png",
+   "px": [
+    45,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 0.7,
+   "collider": [
+    34,
+    10
+   ],
+   "maps": [
+    "hutan_bisik",
+    "lantern_field",
+    "plaza",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "cafe_table",
+   "image": "props/cafe_table.png",
+   "px": [
+    64,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.99,
+   "collider": [
+    56,
+    14
+   ],
+   "maps": [],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "cafe_table_c2",
+   "image": "props/cafe_table_c2.png",
+   "px": [
+    64,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.99,
+   "collider": [
+    56,
+    14
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "cafe_umbrella_table",
+   "image": "props/cafe_umbrella_table.png",
+   "px": [
+    77,
+    83
+   ],
+   "hRatio": 1.29,
+   "wRatio": 1.19,
+   "collider": [
+    40,
+    12
+   ],
+   "maps": [
+    "plaza"
+   ],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "campfire",
+   "image": "props/campfire.png",
+   "px": [
+    36,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 0.56,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "candle",
+   "image": "props/candle.png",
+   "px": [
+    14,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 0.22,
+   "collider": [
+    8,
+    4
+   ],
+   "maps": []
+  },
+  {
+   "id": "carving_flower",
+   "image": "props/carving_flower.png",
+   "px": [
+    31,
+    42
+   ],
+   "hRatio": 0.65,
+   "wRatio": 0.48,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "carving_moon",
+   "image": "props/carving_moon.png",
+   "px": [
+    31,
+    42
+   ],
+   "hRatio": 0.65,
+   "wRatio": 0.48,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "carving_star",
+   "image": "props/carving_star.png",
+   "px": [
+    31,
+    42
+   ],
+   "hRatio": 0.65,
+   "wRatio": 0.48,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "cave_entrance",
+   "image": "props/cave_entrance.png",
+   "px": [
+    110,
+    90
+   ],
+   "hRatio": 1.4,
+   "wRatio": 1.71,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "chest",
+   "image": "props/chest.png",
+   "px": [
+    30,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.47,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "chest_bb",
+   "image": "props/chest_bb.png",
+   "px": [
+    30,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.47,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": []
+  },
+  {
+   "id": "chest_gk",
+   "image": "props/chest_gk.png",
+   "px": [
+    30,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.47,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "chest_hs",
+   "image": "props/chest_hs.png",
+   "px": [
+    30,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.47,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "chest_open",
+   "image": "props/chest_open.png",
+   "px": [
+    30,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 0.47,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": []
+  },
+  {
+   "id": "claw_machine",
+   "image": "props/claw_machine.png",
+   "px": [
+    48,
+    92
+   ],
+   "hRatio": 1.43,
+   "wRatio": 0.74,
+   "collider": [
+    44,
+    16
+   ],
+   "maps": []
+  },
+  {
+   "id": "counter",
+   "image": "props/counter.png",
+   "px": [
+    204,
+    71
+   ],
+   "hRatio": 1.1,
+   "wRatio": 3.16,
+   "collider": [
+    200,
+    40
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "crate",
+   "image": "props/crate.png",
+   "px": [
+    28,
+    27
+   ],
+   "hRatio": 0.42,
+   "wRatio": 0.43,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "crate_k",
+   "image": "props/crate_k.png",
+   "px": [
+    28,
+    27
+   ],
+   "hRatio": 0.42,
+   "wRatio": 0.43,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": []
+  },
+  {
+   "id": "crystal",
+   "image": "props/crystal.png",
+   "px": [
+    26,
+    44
+   ],
+   "hRatio": 0.68,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal",
+    "lantern_field",
+    "star_path",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "crystal_big",
+   "image": "props/crystal_big.png",
+   "px": [
+    50,
+    76
+   ],
+   "hRatio": 1.18,
+   "wRatio": 0.78,
+   "collider": [
+    34,
+    12
+   ],
+   "maps": []
+  },
+  {
+   "id": "desk",
+   "image": "props/desk.png",
+   "px": [
+    92,
+    63
+   ],
+   "hRatio": 0.98,
+   "wRatio": 1.43,
+   "collider": [
+    88,
+    26
+   ],
+   "maps": [],
+   "category": "desk",
+   "band": [
+    0.45,
+    1.1
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "desk_s",
+   "image": "props/desk_s.png",
+   "px": [
+    92,
+    61
+   ],
+   "hRatio": 0.95,
+   "wRatio": 1.43,
+   "collider": [
+    88,
+    26
+   ],
+   "maps": [],
+   "category": "desk",
+   "band": [
+    0.45,
+    1.1
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "display_case",
+   "image": "props/display_case.png",
+   "px": [
+    74,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 1.15,
+   "collider": [
+    70,
+    22
+   ],
+   "maps": []
+  },
+  {
+   "id": "door",
+   "image": "props/door.png",
+   "px": [
+    56,
+    90
+   ],
+   "hRatio": 1.4,
+   "wRatio": 0.87,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "door",
+   "band": [
+    1.05,
+    1.6
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "door_k",
+   "image": "props/door_k.png",
+   "px": [
+    56,
+    90
+   ],
+   "hRatio": 1.4,
+   "wRatio": 0.87,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "door",
+   "band": [
+    1.05,
+    1.6
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "fence_bb",
+   "image": "props/fence_bb.png",
+   "px": [
+    20,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.31,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "fishing_hut",
+   "image": "props/fishing_hut.png",
+   "px": [
+    123,
+    103
+   ],
+   "hRatio": 1.6,
+   "wRatio": 1.91,
+   "collider": [
+    120,
+    22
+   ],
+   "maps": []
+  },
+  {
+   "id": "floor_lamp",
+   "image": "props/floor_lamp.png",
+   "px": [
+    23,
+    82
+   ],
+   "hRatio": 1.27,
+   "wRatio": 0.36,
+   "collider": [
+    10,
+    6
+   ],
+   "maps": [],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "flower_buckets",
+   "image": "props/flower_buckets.png",
+   "px": [
+    71,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.1,
+   "collider": [
+    70,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "flower_buckets_b",
+   "image": "props/flower_buckets_b.png",
+   "px": [
+    71,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.1,
+   "collider": [
+    70,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "flower_buckets_c",
+   "image": "props/flower_buckets_c.png",
+   "px": [
+    71,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.1,
+   "collider": [
+    70,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "flower_shelf",
+   "image": "props/flower_shelf.png",
+   "px": [
+    114,
+    96
+   ],
+   "hRatio": 1.49,
+   "wRatio": 1.77,
+   "collider": [
+    110,
+    22
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "flower_shelf_b",
+   "image": "props/flower_shelf_b.png",
+   "px": [
+    114,
+    96
+   ],
+   "hRatio": 1.49,
+   "wRatio": 1.77,
+   "collider": [
+    110,
+    22
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "flowerbed",
+   "image": "props/flowerbed.png",
+   "px": [
+    66,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 1.02,
+   "collider": [
+    60,
+    14
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "plaza",
+    "riverside",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "flowerbed_f",
+   "image": "props/flowerbed_f.png",
+   "px": [
+    66,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 1.02,
+   "collider": [
+    60,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "flowerbed_in",
+   "image": "props/flowerbed_in.png",
+   "px": [
+    66,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 1.02,
+   "collider": [
+    60,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "fountain",
+   "image": "props/fountain.png",
+   "px": [
+    227,
+    167
+   ],
+   "hRatio": 2.59,
+   "wRatio": 3.52,
+   "collider": [
+    190,
+    70
+   ],
+   "maps": []
+  },
+  {
+   "id": "frame_photo",
+   "image": "props/frame_photo.png",
+   "px": [
+    40,
+    32
+   ],
+   "hRatio": 0.5,
+   "wRatio": 0.62,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "frame_photo_a2",
+   "image": "props/frame_photo_a2.png",
+   "px": [
+    40,
+    32
+   ],
+   "hRatio": 0.5,
+   "wRatio": 0.62,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "frame_photo_lib",
+   "image": "props/frame_photo_lib.png",
+   "px": [
+    40,
+    32
+   ],
+   "hRatio": 0.5,
+   "wRatio": 0.62,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "fridge",
+   "image": "props/fridge.png",
+   "px": [
+    44,
+    100
+   ],
+   "hRatio": 1.55,
+   "wRatio": 0.68,
+   "collider": [
+    40,
+    20
+   ],
+   "maps": []
+  },
+  {
+   "id": "garden_plot_g140",
+   "image": "props/garden_plot_g140.png",
+   "px": [
+    76,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.18,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": []
+  },
+  {
+   "id": "garden_plot_g1540",
+   "image": "props/garden_plot_g1540.png",
+   "px": [
+    76,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.18,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": []
+  },
+  {
+   "id": "garden_plot_g1860",
+   "image": "props/garden_plot_g1860.png",
+   "px": [
+    76,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.18,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": []
+  },
+  {
+   "id": "garden_plot_g460",
+   "image": "props/garden_plot_g460.png",
+   "px": [
+    76,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.18,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": []
+  },
+  {
+   "id": "garden_plot_tk",
+   "image": "props/garden_plot_tk.png",
+   "px": [
+    76,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.18,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "garden_plot_tk2",
+   "image": "props/garden_plot_tk2.png",
+   "px": [
+    76,
+    36
+   ],
+   "hRatio": 0.56,
+   "wRatio": 1.18,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "gazebo",
+   "image": "props/gazebo.png",
+   "px": [
+    163,
+    145
+   ],
+   "hRatio": 2.25,
+   "wRatio": 2.53,
+   "collider": [
+    150,
+    40
+   ],
+   "maps": []
+  },
+  {
+   "id": "gazebo_e",
+   "image": "props/gazebo_e.png",
+   "px": [
+    163,
+    145
+   ],
+   "hRatio": 2.25,
+   "wRatio": 2.53,
+   "collider": [
+    150,
+    40
+   ],
+   "maps": []
+  },
+  {
+   "id": "globe",
+   "image": "props/globe.png",
+   "px": [
+    27,
+    45
+   ],
+   "hRatio": 0.7,
+   "wRatio": 0.42,
+   "collider": [
+    22,
+    10
+   ],
+   "maps": []
+  },
+  {
+   "id": "hedge",
+   "image": "props/hedge.png",
+   "px": [
+    96,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.49,
+   "collider": [
+    90,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "hedge_tk",
+   "image": "props/hedge_tk.png",
+   "px": [
+    96,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.49,
+   "collider": [
+    90,
+    14
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "jar_shelf_j110",
+   "image": "props/jar_shelf_j110.png",
+   "px": [
+    92,
+    110
+   ],
+   "hRatio": 1.71,
+   "wRatio": 1.43,
+   "collider": [
+    88,
+    20
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "jar_shelf_j210",
+   "image": "props/jar_shelf_j210.png",
+   "px": [
+    92,
+    110
+   ],
+   "hRatio": 1.71,
+   "wRatio": 1.43,
+   "collider": [
+    88,
+    20
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "jar_shelf_j590",
+   "image": "props/jar_shelf_j590.png",
+   "px": [
+    92,
+    110
+   ],
+   "hRatio": 1.71,
+   "wRatio": 1.43,
+   "collider": [
+    88,
+    20
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "jar_shelf_j690",
+   "image": "props/jar_shelf_j690.png",
+   "px": [
+    92,
+    110
+   ],
+   "hRatio": 1.71,
+   "wRatio": 1.43,
+   "collider": [
+    88,
+    20
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "kitchen_counter",
+   "image": "props/kitchen_counter.png",
+   "px": [
+    134,
+    62
+   ],
+   "hRatio": 0.96,
+   "wRatio": 2.08,
+   "collider": [
+    130,
+    22
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "kitchen_counter_b",
+   "image": "props/kitchen_counter_b.png",
+   "px": [
+    134,
+    62
+   ],
+   "hRatio": 0.96,
+   "wRatio": 2.08,
+   "collider": [
+    130,
+    22
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "kitchen_table",
+   "image": "props/kitchen_table.png",
+   "px": [
+    96,
+    57
+   ],
+   "hRatio": 0.88,
+   "wRatio": 1.49,
+   "collider": [
+    90,
+    24
+   ],
+   "maps": [],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "lamp",
+   "image": "props/lamp.png",
+   "px": [
+    19,
+    82
+   ],
+   "hRatio": 1.27,
+   "wRatio": 0.29,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "dermaga"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "lantern_off",
+   "image": "props/lantern_off.png",
+   "px": [
+    14,
+    64
+   ],
+   "hRatio": 0.99,
+   "wRatio": 0.22,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "lantern_field",
+    "taman_kota"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "lantern_post",
+   "image": "props/lantern_post.png",
+   "px": [
+    24,
+    70
+   ],
+   "hRatio": 1.09,
+   "wRatio": 0.37,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "eternal_garden",
+    "lantern_field",
+    "memory_garden",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "library_counter",
+   "image": "props/library_counter.png",
+   "px": [
+    156,
+    60
+   ],
+   "hRatio": 0.93,
+   "wRatio": 2.42,
+   "collider": [
+    150,
+    22
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "log_bench",
+   "image": "props/log_bench.png",
+   "px": [
+    60,
+    15
+   ],
+   "hRatio": 0.23,
+   "wRatio": 0.93,
+   "collider": [
+    56,
+    10
+   ],
+   "maps": [
+    "hutan_bisik"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "too_small"
+  },
+  {
+   "id": "log_bench_b",
+   "image": "props/log_bench_b.png",
+   "px": [
+    60,
+    15
+   ],
+   "hRatio": 0.23,
+   "wRatio": 0.93,
+   "collider": [
+    56,
+    10
+   ],
+   "maps": [
+    "hutan_bisik"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "too_small"
+  },
+  {
+   "id": "mailbox",
+   "image": "props/mailbox.png",
+   "px": [
+    18,
+    38
+   ],
+   "hRatio": 0.59,
+   "wRatio": 0.28,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "maps_v4_arcade_central_cabinets",
+   "image": "props/maps_v4_arcade_central_cabinets.png",
+   "px": [
+    145,
+    227
+   ],
+   "hRatio": 3.52,
+   "wRatio": 2.25,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "arcade"
+   ],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "maps_v4_arland_room_computer",
+   "image": "props/maps_v4_arland_room_computer.png",
+   "px": [
+    237,
+    173
+   ],
+   "hRatio": 2.68,
+   "wRatio": 3.67,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "arland_room"
+   ]
+  },
+  {
+   "id": "maps_v4_dapur_island",
+   "image": "props/maps_v4_dapur_island.png",
+   "px": [
+    352,
+    152
+   ],
+   "hRatio": 2.36,
+   "wRatio": 5.46,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dapur"
+   ]
+  },
+  {
+   "id": "maps_v4_jalan_kota_lamp",
+   "image": "props/maps_v4_jalan_kota_lamp.png",
+   "px": [
+    67,
+    128
+   ],
+   "hRatio": 1.98,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "jalan_kota"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "maps_v4_perpustakaan_bookshelf",
+   "image": "props/maps_v4_perpustakaan_bookshelf.png",
+   "px": [
+    324,
+    204
+   ],
+   "hRatio": 3.16,
+   "wRatio": 5.02,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "perpustakaan"
+   ],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "maps_v4_perumahan_bench",
+   "image": "props/maps_v4_perumahan_bench.png",
+   "px": [
+    75,
+    55
+   ],
+   "hRatio": 0.85,
+   "wRatio": 1.16,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "perumahan"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "maps_v4_ruang_arsip_investigation_desk",
+   "image": "props/maps_v4_ruang_arsip_investigation_desk.png",
+   "px": [
+    214,
+    135
+   ],
+   "hRatio": 2.09,
+   "wRatio": 3.32,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "ruang_arsip"
+   ],
+   "category": "desk",
+   "band": [
+    0.45,
+    1.1
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "maps_v4_sofia_room_vanity",
+   "image": "props/maps_v4_sofia_room_vanity.png",
+   "px": [
+    198,
+    150
+   ],
+   "hRatio": 2.33,
+   "wRatio": 3.07,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "sofia_room"
+   ]
+  },
+  {
+   "id": "maps_v4_toko_bunga_flower_table",
+   "image": "props/maps_v4_toko_bunga_flower_table.png",
+   "px": [
+    329,
+    149
+   ],
+   "hRatio": 2.31,
+   "wRatio": 5.1,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "toko_bunga"
+   ],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "mural",
+   "image": "props/mural.png",
+   "px": [
+    120,
+    92
+   ],
+   "hRatio": 1.43,
+   "wRatio": 1.86,
+   "collider": [
+    112,
+    12
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "mural_new",
+   "image": "props/mural_new.png",
+   "px": [
+    120,
+    92
+   ],
+   "hRatio": 1.43,
+   "wRatio": 1.86,
+   "collider": [
+    112,
+    12
+   ],
+   "maps": []
+  },
+  {
+   "id": "mushroom_ring",
+   "image": "props/mushroom_ring.png",
+   "px": [
+    103,
+    63
+   ],
+   "hRatio": 0.98,
+   "wRatio": 1.6,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "mushrooms",
+   "image": "props/mushrooms.png",
+   "px": [
+    20,
+    12
+   ],
+   "hRatio": 0.19,
+   "wRatio": 0.31,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "eternal_garden",
+    "hutan_bisik",
+    "memory_garden",
+    "plaza",
+    "starfall_village",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "notice_board",
+   "image": "props/notice_board.png",
+   "px": [
+    58,
+    56
+   ],
+   "hRatio": 0.87,
+   "wRatio": 0.9,
+   "collider": [
+    50,
+    8
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "observatory",
+   "image": "props/observatory.png",
+   "px": [
+    188,
+    208
+   ],
+   "hRatio": 3.22,
+   "wRatio": 2.91,
+   "collider": [
+    200,
+    40
+   ],
+   "maps": [],
+   "colliderWiderThanArt": true
+  },
+  {
+   "id": "old_mailbox",
+   "image": "props/old_mailbox.png",
+   "px": [
+    26,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.4,
+   "collider": [
+    12,
+    6
+   ],
+   "maps": []
+  },
+  {
+   "id": "pedestal_book",
+   "image": "props/pedestal_book.png",
+   "px": [
+    30,
+    54
+   ],
+   "hRatio": 0.84,
+   "wRatio": 0.47,
+   "collider": [
+    30,
+    12
+   ],
+   "maps": []
+  },
+  {
+   "id": "pedestal_book_map",
+   "image": "props/pedestal_book_map.png",
+   "px": [
+    30,
+    54
+   ],
+   "hRatio": 0.84,
+   "wRatio": 0.47,
+   "collider": [
+    30,
+    12
+   ],
+   "maps": [
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "photobooth",
+   "image": "props/photobooth.png",
+   "px": [
+    74,
+    112
+   ],
+   "hRatio": 1.74,
+   "wRatio": 1.15,
+   "collider": [
+    70,
+    20
+   ],
+   "maps": []
+  },
+  {
+   "id": "picnic_blanket",
+   "image": "props/picnic_blanket.png",
+   "px": [
+    110,
+    64
+   ],
+   "hRatio": 0.99,
+   "wRatio": 1.71,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "pier_post",
+   "image": "props/pier_post.png",
+   "px": [
+    10,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 0.16,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": []
+  },
+  {
+   "id": "plant",
+   "image": "props/plant.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_ar",
+   "image": "props/plant_ar.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_big",
+   "image": "props/plant_big.png",
+   "px": [
+    35,
+    59
+   ],
+   "hRatio": 0.91,
+   "wRatio": 0.54,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_big_b",
+   "image": "props/plant_big_b.png",
+   "px": [
+    35,
+    59
+   ],
+   "hRatio": 0.91,
+   "wRatio": 0.54,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_big_c",
+   "image": "props/plant_big_c.png",
+   "px": [
+    35,
+    59
+   ],
+   "hRatio": 0.91,
+   "wRatio": 0.54,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_big_lib",
+   "image": "props/plant_big_lib.png",
+   "px": [
+    35,
+    59
+   ],
+   "hRatio": 0.91,
+   "wRatio": 0.54,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_c",
+   "image": "props/plant_c.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_f",
+   "image": "props/plant_f.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_f2",
+   "image": "props/plant_f2.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_k",
+   "image": "props/plant_k.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "plant_lib",
+   "image": "props/plant_lib.png",
+   "px": [
+    30,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.47,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "poster",
+   "image": "props/poster.png",
+   "px": [
+    36,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "poster_a60",
+   "image": "props/poster_a60.png",
+   "px": [
+    36,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "poster_a900",
+   "image": "props/poster_a900.png",
+   "px": [
+    36,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "poster_c",
+   "image": "props/poster_c.png",
+   "px": [
+    36,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ]
+  },
+  {
+   "id": "poster_lib",
+   "image": "props/poster_lib.png",
+   "px": [
+    36,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "poster_s",
+   "image": "props/poster_s.png",
+   "px": [
+    36,
+    48
+   ],
+   "hRatio": 0.74,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "prize_shelf",
+   "image": "props/prize_shelf.png",
+   "px": [
+    94,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 1.46,
+   "collider": [
+    90,
+    20
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "reading_table",
+   "image": "props/reading_table.png",
+   "px": [
+    88,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 1.36,
+   "collider": [
+    84,
+    16
+   ],
+   "maps": [],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "reading_table_b",
+   "image": "props/reading_table_b.png",
+   "px": [
+    86,
+    50
+   ],
+   "hRatio": 0.78,
+   "wRatio": 1.33,
+   "collider": [
+    84,
+    16
+   ],
+   "maps": [],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "reading_table_c",
+   "image": "props/reading_table_c.png",
+   "px": [
+    88,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 1.36,
+   "collider": [
+    84,
+    16
+   ],
+   "maps": [],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "rock",
+   "image": "props/rock.png",
+   "px": [
+    28,
+    17
+   ],
+   "hRatio": 0.26,
+   "wRatio": 0.43,
+   "collider": [
+    22,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "hutan_bisik",
+    "lantern_field",
+    "memory_garden",
+    "plaza",
+    "riverside",
+    "star_path",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "rowboat",
+   "image": "props/rowboat.png",
+   "px": [
+    81,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 1.26,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rowboat_b",
+   "image": "props/rowboat_b.png",
+   "px": [
+    81,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 1.26,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rowboat_rv",
+   "image": "props/rowboat_rv.png",
+   "px": [
+    81,
+    29
+   ],
+   "hRatio": 0.45,
+   "wRatio": 1.26,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rug_pink",
+   "image": "props/rug_pink.png",
+   "px": [
+    170,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 2.64,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rug_rect",
+   "image": "props/rug_rect.png",
+   "px": [
+    180,
+    90
+   ],
+   "hRatio": 1.4,
+   "wRatio": 2.79,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rug_rect_k",
+   "image": "props/rug_rect_k.png",
+   "px": [
+    180,
+    90
+   ],
+   "hRatio": 1.4,
+   "wRatio": 2.79,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rug_round",
+   "image": "props/rug_round.png",
+   "px": [
+    170,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 2.64,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ]
+  },
+  {
+   "id": "rug_round_arc",
+   "image": "props/rug_round_arc.png",
+   "px": [
+    170,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 2.64,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rug_round_g",
+   "image": "props/rug_round_g.png",
+   "px": [
+    170,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 2.64,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "rug_round_lib",
+   "image": "props/rug_round_lib.png",
+   "px": [
+    170,
+    80
+   ],
+   "hRatio": 1.24,
+   "wRatio": 2.64,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "secret_shelf",
+   "image": "props/secret_shelf.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "secret_shelf_open",
+   "image": "props/secret_shelf_open.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "shop_counter",
+   "image": "props/shop_counter.png",
+   "px": [
+    124,
+    58
+   ],
+   "hRatio": 0.9,
+   "wRatio": 1.92,
+   "collider": [
+    120,
+    30
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "shop_counter_a",
+   "image": "props/shop_counter_a.png",
+   "px": [
+    124,
+    58
+   ],
+   "hRatio": 0.9,
+   "wRatio": 1.92,
+   "collider": [
+    120,
+    30
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "signpost_e",
+   "image": "props/signpost_e.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "signpost_e2",
+   "image": "props/signpost_e2.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "signpost_hx",
+   "image": "props/signpost_hx.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "signpost_n",
+   "image": "props/signpost_n.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "signpost_s",
+   "image": "props/signpost_s.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "signpost_s2",
+   "image": "props/signpost_s2.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "signpost_w",
+   "image": "props/signpost_w.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "signpost_w2",
+   "image": "props/signpost_w2.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": []
+  },
+  {
+   "id": "signpost_w3",
+   "image": "props/signpost_w3.png",
+   "px": [
+    61,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.95,
+   "collider": [
+    6,
+    4
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "sofa",
+   "image": "props/sofa.png",
+   "px": [
+    100,
+    49
+   ],
+   "hRatio": 0.76,
+   "wRatio": 1.55,
+   "collider": [
+    96,
+    22
+   ],
+   "maps": [],
+   "category": "sofa|couch",
+   "band": [
+    0.4,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "sofa_a",
+   "image": "props/sofa_a.png",
+   "px": [
+    100,
+    49
+   ],
+   "hRatio": 0.76,
+   "wRatio": 1.55,
+   "collider": [
+    96,
+    22
+   ],
+   "maps": [],
+   "category": "sofa|couch",
+   "band": [
+    0.4,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "sofa_ar",
+   "image": "props/sofa_ar.png",
+   "px": [
+    100,
+    49
+   ],
+   "hRatio": 0.76,
+   "wRatio": 1.55,
+   "collider": [
+    96,
+    22
+   ],
+   "maps": [],
+   "category": "sofa|couch",
+   "band": [
+    0.4,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "sofa_c",
+   "image": "props/sofa_c.png",
+   "px": [
+    100,
+    49
+   ],
+   "hRatio": 0.76,
+   "wRatio": 1.55,
+   "collider": [
+    96,
+    22
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "sofa|couch",
+   "band": [
+    0.4,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "sofa_lib",
+   "image": "props/sofa_lib.png",
+   "px": [
+    100,
+    49
+   ],
+   "hRatio": 0.76,
+   "wRatio": 1.55,
+   "collider": [
+    96,
+    22
+   ],
+   "maps": [],
+   "category": "sofa|couch",
+   "band": [
+    0.4,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "spice_shelf",
+   "image": "props/spice_shelf.png",
+   "px": [
+    80,
+    20
+   ],
+   "hRatio": 0.31,
+   "wRatio": 1.24,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_small"
+  },
+  {
+   "id": "spice_shelf_books",
+   "image": "props/spice_shelf_books.png",
+   "px": [
+    80,
+    20
+   ],
+   "hRatio": 0.31,
+   "wRatio": 1.24,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_small"
+  },
+  {
+   "id": "stalagmite_s0",
+   "image": "props/stalagmite_s0.png",
+   "px": [
+    28,
+    49
+   ],
+   "hRatio": 0.76,
+   "wRatio": 0.43,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "stalagmite_s1",
+   "image": "props/stalagmite_s1.png",
+   "px": [
+    28,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.43,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "stalagmite_s2",
+   "image": "props/stalagmite_s2.png",
+   "px": [
+    28,
+    38
+   ],
+   "hRatio": 0.59,
+   "wRatio": 0.43,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "stalagmite_s3",
+   "image": "props/stalagmite_s3.png",
+   "px": [
+    28,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.43,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "stalagmite_s4",
+   "image": "props/stalagmite_s4.png",
+   "px": [
+    28,
+    41
+   ],
+   "hRatio": 0.64,
+   "wRatio": 0.43,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "stalagmite_s5",
+   "image": "props/stalagmite_s5.png",
+   "px": [
+    28,
+    41
+   ],
+   "hRatio": 0.64,
+   "wRatio": 0.43,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "stall_flowers",
+   "image": "props/stall_flowers.png",
+   "px": [
+    93,
+    68
+   ],
+   "hRatio": 1.05,
+   "wRatio": 1.44,
+   "collider": [
+    84,
+    18
+   ],
+   "maps": []
+  },
+  {
+   "id": "stall_flowers_in",
+   "image": "props/stall_flowers_in.png",
+   "px": [
+    93,
+    68
+   ],
+   "hRatio": 1.05,
+   "wRatio": 1.44,
+   "collider": [
+    84,
+    18
+   ],
+   "maps": []
+  },
+  {
+   "id": "star_stone",
+   "image": "props/star_stone.png",
+   "px": [
+    27,
+    56
+   ],
+   "hRatio": 0.87,
+   "wRatio": 0.42,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [
+    "star_path",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "stone_bench",
+   "image": "props/stone_bench.png",
+   "px": [
+    64,
+    22
+   ],
+   "hRatio": 0.34,
+   "wRatio": 0.99,
+   "collider": [
+    60,
+    12
+   ],
+   "maps": [
+    "starfall_village"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "stone_lantern",
+   "image": "props/stone_lantern.png",
+   "px": [
+    26,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "stone_lantern_bb",
+   "image": "props/stone_lantern_bb.png",
+   "px": [
+    26,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "stone_lantern_bb2",
+   "image": "props/stone_lantern_bb2.png",
+   "px": [
+    26,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "bukit_bintang"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "stone_lantern_e",
+   "image": "props/stone_lantern_e.png",
+   "px": [
+    26,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "stove",
+   "image": "props/stove.png",
+   "px": [
+    60,
+    62
+   ],
+   "hRatio": 0.96,
+   "wRatio": 0.93,
+   "collider": [
+    56,
+    22
+   ],
+   "maps": []
+  },
+  {
+   "id": "symbol_table",
+   "image": "props/symbol_table.png",
+   "px": [
+    76,
+    56
+   ],
+   "hRatio": 0.87,
+   "wRatio": 1.18,
+   "collider": [
+    72,
+    20
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "tall_bookshelf_b1080",
+   "image": "props/tall_bookshelf_b1080.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_b860",
+   "image": "props/tall_bookshelf_b860.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_l560",
+   "image": "props/tall_bookshelf_l560.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_l740",
+   "image": "props/tall_bookshelf_l740.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_m1080",
+   "image": "props/tall_bookshelf_m1080.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_m860",
+   "image": "props/tall_bookshelf_m860.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_w1040",
+   "image": "props/tall_bookshelf_w1040.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_w110",
+   "image": "props/tall_bookshelf_w110.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_w820",
+   "image": "props/tall_bookshelf_w820.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "tall_bookshelf_w930",
+   "image": "props/tall_bookshelf_w930.png",
+   "px": [
+    96,
+    132
+   ],
+   "hRatio": 2.05,
+   "wRatio": 1.49,
+   "collider": [
+    92,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "telescope",
+   "image": "props/telescope.png",
+   "px": [
+    34,
+    50
+   ],
+   "hRatio": 0.78,
+   "wRatio": 0.53,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": [
+    "riverside"
+   ]
+  },
+  {
+   "id": "tent",
+   "image": "props/tent.png",
+   "px": [
+    81,
+    62
+   ],
+   "hRatio": 0.96,
+   "wRatio": 1.26,
+   "collider": [
+    76,
+    16
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "tree_autumn",
+   "image": "props/tree_autumn.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "hutan_bisik",
+    "riverside",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "tree_cherry",
+   "image": "props/tree_cherry.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "eternal_garden",
+    "plaza",
+    "riverside",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "tree_dark",
+   "image": "props/tree_dark.png",
+   "px": [
+    92,
+    109
+   ],
+   "hRatio": 1.69,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "tree_dream",
+   "image": "props/tree_dream.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "lantern_field",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "tree_green",
+   "image": "props/tree_green.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "eternal_garden",
+    "hutan_bisik",
+    "plaza",
+    "riverside",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "tree_lantern",
+   "image": "props/tree_lantern.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "lantern_field",
+    "starfall_village"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "tree_oak",
+   "image": "props/tree_oak.png",
+   "px": [
+    136,
+    161
+   ],
+   "hRatio": 2.5,
+   "wRatio": 2.11,
+   "collider": [
+    22,
+    10
+   ],
+   "maps": [
+    "bukit_bintang",
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "tree_pine",
+   "image": "props/tree_pine.png",
+   "px": [
+    83,
+    128
+   ],
+   "hRatio": 1.98,
+   "wRatio": 1.29,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "dermaga",
+    "hutan_bisik",
+    "plaza",
+    "riverside",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "tv",
+   "image": "props/tv.png",
+   "px": [
+    74,
+    62
+   ],
+   "hRatio": 0.96,
+   "wRatio": 1.15,
+   "collider": [
+    70,
+    18
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_arch_flowers_arch",
+   "image": "props/v41_arch_flowers_arch.png",
+   "px": [
+    120,
+    125
+   ],
+   "hRatio": 1.94,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_arch_flowers_e2_arch",
+   "image": "props/v41_arch_flowers_e2_arch.png",
+   "px": [
+    120,
+    125
+   ],
+   "hRatio": 1.94,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_arch_flowers_e_arch",
+   "image": "props/v41_arch_flowers_e_arch.png",
+   "px": [
+    120,
+    125
+   ],
+   "hRatio": 1.94,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_bld_arland_house_house_blue",
+   "image": "props/v41_bld_arland_house_house_blue.png",
+   "px": [
+    270,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 4.19,
+   "collider": [
+    250,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_bld_sofia_house_house_brick",
+   "image": "props/v41_bld_sofia_house_house_brick.png",
+   "px": [
+    280,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 4.34,
+   "collider": [
+    260,
+    82
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_bld_star_house0_house_blue",
+   "image": "props/v41_bld_star_house0_house_blue.png",
+   "px": [
+    240,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 3.72,
+   "collider": [
+    220,
+    82
+   ],
+   "maps": [
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v41_bld_star_house1_house_brick",
+   "image": "props/v41_bld_star_house1_house_brick.png",
+   "px": [
+    240,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 3.72,
+   "collider": [
+    220,
+    82
+   ],
+   "maps": [
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v41_bld_star_house2_house_blue",
+   "image": "props/v41_bld_star_house2_house_blue.png",
+   "px": [
+    240,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 3.72,
+   "collider": [
+    220,
+    82
+   ],
+   "maps": [
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v41_cafe_table_cafe_table",
+   "image": "props/v41_cafe_table_cafe_table.png",
+   "px": [
+    64,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.99,
+   "collider": [
+    56,
+    14
+   ],
+   "maps": [],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v41_cave_entrance_cave",
+   "image": "props/v41_cave_entrance_cave.png",
+   "px": [
+    110,
+    90
+   ],
+   "hRatio": 1.4,
+   "wRatio": 1.71,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "v41_counter_cafe_counter",
+   "image": "props/v41_counter_cafe_counter.png",
+   "px": [
+    204,
+    71
+   ],
+   "hRatio": 1.1,
+   "wRatio": 3.16,
+   "collider": [
+    200,
+    40
+   ],
+   "maps": [],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v41_crystal_big_crystal_cluster",
+   "image": "props/v41_crystal_big_crystal_cluster.png",
+   "px": [
+    49,
+    76
+   ],
+   "hRatio": 1.18,
+   "wRatio": 0.76,
+   "collider": [
+    34,
+    12
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "v41_crystal_crystal_cluster",
+   "image": "props/v41_crystal_crystal_cluster.png",
+   "px": [
+    29,
+    44
+   ],
+   "hRatio": 0.68,
+   "wRatio": 0.45,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "gua_kristal",
+    "star_path"
+   ]
+  },
+  {
+   "id": "v41_display_case_cafe_display",
+   "image": "props/v41_display_case_cafe_display.png",
+   "px": [
+    74,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 1.15,
+   "collider": [
+    70,
+    22
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_flowerbed_flower",
+   "image": "props/v41_flowerbed_flower.png",
+   "px": [
+    66,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 1.02,
+   "collider": [
+    60,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_fountain_fountain",
+   "image": "props/v41_fountain_fountain.png",
+   "px": [
+    230,
+    170
+   ],
+   "hRatio": 2.64,
+   "wRatio": 3.57,
+   "collider": [
+    190,
+    70
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_gazebo_e_gazebo",
+   "image": "props/v41_gazebo_e_gazebo.png",
+   "px": [
+    170,
+    150
+   ],
+   "hRatio": 2.33,
+   "wRatio": 2.64,
+   "collider": [
+    150,
+    40
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_gazebo_gazebo",
+   "image": "props/v41_gazebo_gazebo.png",
+   "px": [
+    170,
+    150
+   ],
+   "hRatio": 2.33,
+   "wRatio": 2.64,
+   "collider": [
+    150,
+    40
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_lantern_off_lantern",
+   "image": "props/v41_lantern_off_lantern.png",
+   "px": [
+    25,
+    70
+   ],
+   "hRatio": 1.09,
+   "wRatio": 0.39,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "lantern_field"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v41_observatory_observatory",
+   "image": "props/v41_observatory_observatory.png",
+   "px": [
+    220,
+    210
+   ],
+   "hRatio": 3.26,
+   "wRatio": 3.41,
+   "collider": [
+    200,
+    40
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_pedestal_book_crystal_shrine",
+   "image": "props/v41_pedestal_book_crystal_shrine.png",
+   "px": [
+    36,
+    54
+   ],
+   "hRatio": 0.84,
+   "wRatio": 0.56,
+   "collider": [
+    30,
+    12
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_rowboat_b_rowboat",
+   "image": "props/v41_rowboat_b_rowboat.png",
+   "px": [
+    84,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.3,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_rowboat_rowboat",
+   "image": "props/v41_rowboat_rowboat.png",
+   "px": [
+    84,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.3,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_rowboat_rv_rowboat",
+   "image": "props/v41_rowboat_rv_rowboat.png",
+   "px": [
+    84,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.3,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_star_stone_starrocks",
+   "image": "props/v41_star_stone_starrocks.png",
+   "px": [
+    34,
+    60
+   ],
+   "hRatio": 0.93,
+   "wRatio": 0.53,
+   "collider": [
+    20,
+    10
+   ],
+   "maps": [
+    "star_path"
+   ]
+  },
+  {
+   "id": "v41_telescope_telescope",
+   "image": "props/v41_telescope_telescope.png",
+   "px": [
+    40,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.62,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": []
+  },
+  {
+   "id": "v41_tree_cherry_cherry",
+   "image": "props/v41_tree_cherry_cherry.png",
+   "px": [
+    92,
+    127
+   ],
+   "hRatio": 1.97,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "plaza",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v41_tree_dark_willow",
+   "image": "props/v41_tree_dark_willow.png",
+   "px": [
+    92,
+    114
+   ],
+   "hRatio": 1.77,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "v41_tree_dream_memory_tree",
+   "image": "props/v41_tree_dream_memory_tree.png",
+   "px": [
+    92,
+    130
+   ],
+   "hRatio": 2.02,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v41_tree_green_willow",
+   "image": "props/v41_tree_green_willow.png",
+   "px": [
+    92,
+    129
+   ],
+   "hRatio": 2.0,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v41_tree_lantern_cherry",
+   "image": "props/v41_tree_lantern_cherry.png",
+   "px": [
+    92,
+    127
+   ],
+   "hRatio": 1.97,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "lantern_field"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v41_waterfall_hb_waterfall",
+   "image": "props/v41_waterfall_hb_waterfall.png",
+   "px": [
+    76,
+    118
+   ],
+   "hRatio": 1.83,
+   "wRatio": 1.18,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "v41_wishing_tree_memory_tree",
+   "image": "props/v41_wishing_tree_memory_tree.png",
+   "px": [
+    200,
+    220
+   ],
+   "hRatio": 3.41,
+   "wRatio": 3.1,
+   "collider": [
+    30,
+    14
+   ],
+   "maps": []
+  },
+  {
+   "id": "v43_bench",
+   "image": "props/v43_bench.png",
+   "px": [
+    72,
+    38
+   ],
+   "hRatio": 0.59,
+   "wRatio": 1.12,
+   "collider": [
+    66,
+    12
+   ],
+   "maps": [
+    "plaza",
+    "riverside",
+    "taman_kota"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v43_bld_cafe",
+   "image": "props/v43_bld_cafe.png",
+   "px": [
+    300,
+    194
+   ],
+   "hRatio": 3.01,
+   "wRatio": 4.65,
+   "collider": [
+    280,
+    82
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v43_bookshelf_c",
+   "image": "props/v43_bookshelf_c.png",
+   "px": [
+    62,
+    96
+   ],
+   "hRatio": 1.49,
+   "wRatio": 0.96,
+   "collider": [
+    58,
+    24
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v43_bridge_park",
+   "image": "props/v43_bridge_park.png",
+   "px": [
+    150,
+    64
+   ],
+   "hRatio": 0.99,
+   "wRatio": 2.33,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v43_bridge_pier",
+   "image": "props/v43_bridge_pier.png",
+   "px": [
+    80,
+    184
+   ],
+   "hRatio": 2.85,
+   "wRatio": 1.24,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "riverside"
+   ]
+  },
+  {
+   "id": "v43_frame_photo",
+   "image": "props/v43_frame_photo.png",
+   "px": [
+    40,
+    32
+   ],
+   "hRatio": 0.5,
+   "wRatio": 0.62,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ]
+  },
+  {
+   "id": "v43_lamp",
+   "image": "props/v43_lamp.png",
+   "px": [
+    19,
+    82
+   ],
+   "hRatio": 1.27,
+   "wRatio": 0.29,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "plaza",
+    "riverside",
+    "taman_kota"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v43_pier_post",
+   "image": "props/v43_pier_post.png",
+   "px": [
+    10,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 0.16,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "riverside"
+   ]
+  },
+  {
+   "id": "v43_v41_bld_arland_house_house_blue",
+   "image": "props/v43_v41_bld_arland_house_house_blue.png",
+   "px": [
+    270,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 4.19,
+   "collider": [
+    250,
+    82
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v43_v41_bld_sofia_house_house_brick",
+   "image": "props/v43_v41_bld_sofia_house_house_brick.png",
+   "px": [
+    280,
+    196
+   ],
+   "hRatio": 3.04,
+   "wRatio": 4.34,
+   "collider": [
+    260,
+    82
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v43_v41_cafe_table_cafe_table",
+   "image": "props/v43_v41_cafe_table_cafe_table.png",
+   "px": [
+    64,
+    46
+   ],
+   "hRatio": 0.71,
+   "wRatio": 0.99,
+   "collider": [
+    56,
+    14
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "table|meja",
+   "band": [
+    0.35,
+    1.0
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v43_v41_counter_cafe_counter",
+   "image": "props/v43_v41_counter_cafe_counter.png",
+   "px": [
+    204,
+    71
+   ],
+   "hRatio": 1.1,
+   "wRatio": 3.16,
+   "collider": [
+    200,
+    40
+   ],
+   "maps": [
+    "cafe"
+   ],
+   "category": "counter",
+   "band": [
+    0.55,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v43_v41_display_case_cafe_display",
+   "image": "props/v43_v41_display_case_cafe_display.png",
+   "px": [
+    74,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 1.15,
+   "collider": [
+    70,
+    22
+   ],
+   "maps": [
+    "cafe"
+   ]
+  },
+  {
+   "id": "v43_v41_flowerbed_flower",
+   "image": "props/v43_v41_flowerbed_flower.png",
+   "px": [
+    66,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 1.02,
+   "collider": [
+    60,
+    14
+   ],
+   "maps": [
+    "plaza",
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v43_v41_fountain_fountain",
+   "image": "props/v43_v41_fountain_fountain.png",
+   "px": [
+    230,
+    170
+   ],
+   "hRatio": 2.64,
+   "wRatio": 3.57,
+   "collider": [
+    190,
+    70
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v43_v41_gazebo_gazebo",
+   "image": "props/v43_v41_gazebo_gazebo.png",
+   "px": [
+    170,
+    150
+   ],
+   "hRatio": 2.33,
+   "wRatio": 2.64,
+   "collider": [
+    150,
+    40
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v43_v41_rowboat_rv_rowboat",
+   "image": "props/v43_v41_rowboat_rv_rowboat.png",
+   "px": [
+    84,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.3,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "riverside"
+   ]
+  },
+  {
+   "id": "v43_v41_tree_cherry_cherry",
+   "image": "props/v43_v41_tree_cherry_cherry.png",
+   "px": [
+    92,
+    127
+   ],
+   "hRatio": 1.97,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v43_v41_tree_green_willow",
+   "image": "props/v43_v41_tree_green_willow.png",
+   "px": [
+    92,
+    129
+   ],
+   "hRatio": 2.0,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "riverside"
+   ]
+  },
+  {
+   "id": "v43_wall_clock",
+   "image": "props/v43_wall_clock.png",
+   "px": [
+    28,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.43,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ]
+  },
+  {
+   "id": "v44_bridge_dpier",
+   "image": "props/v44_bridge_dpier.png",
+   "px": [
+    72,
+    420
+   ],
+   "hRatio": 6.51,
+   "wRatio": 1.12,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_bridge_dplat",
+   "image": "props/v44_bridge_dplat.png",
+   "px": [
+    340,
+    110
+   ],
+   "hRatio": 1.71,
+   "wRatio": 5.27,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_chest_bb",
+   "image": "props/v44_chest_bb.png",
+   "px": [
+    30,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.47,
+   "collider": [
+    26,
+    10
+   ],
+   "maps": [
+    "bukit_bintang"
+   ]
+  },
+  {
+   "id": "v44_crystal",
+   "image": "props/v44_crystal.png",
+   "px": [
+    26,
+    44
+   ],
+   "hRatio": 0.68,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "v44_fence_bb",
+   "image": "props/v44_fence_bb.png",
+   "px": [
+    20,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.31,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang"
+   ]
+  },
+  {
+   "id": "v44_fishing_hut",
+   "image": "props/v44_fishing_hut.png",
+   "px": [
+    123,
+    103
+   ],
+   "hRatio": 1.6,
+   "wRatio": 1.91,
+   "collider": [
+    120,
+    22
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_flowerbed",
+   "image": "props/v44_flowerbed.png",
+   "px": [
+    66,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 1.02,
+   "collider": [
+    60,
+    14
+   ],
+   "maps": [
+    "eternal_garden"
+   ]
+  },
+  {
+   "id": "v44_lantern_post",
+   "image": "props/v44_lantern_post.png",
+   "px": [
+    24,
+    70
+   ],
+   "hRatio": 1.09,
+   "wRatio": 0.37,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_picnic_blanket",
+   "image": "props/v44_picnic_blanket.png",
+   "px": [
+    110,
+    64
+   ],
+   "hRatio": 0.99,
+   "wRatio": 1.71,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang"
+   ]
+  },
+  {
+   "id": "v44_pier_post",
+   "image": "props/v44_pier_post.png",
+   "px": [
+    10,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 0.16,
+   "collider": [
+    8,
+    6
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_stone_bench",
+   "image": "props/v44_stone_bench.png",
+   "px": [
+    64,
+    22
+   ],
+   "hRatio": 0.34,
+   "wRatio": 0.99,
+   "collider": [
+    60,
+    12
+   ],
+   "maps": [
+    "eternal_garden"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v44_stone_lantern_bb",
+   "image": "props/v44_stone_lantern_bb.png",
+   "px": [
+    26,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.4,
+   "collider": [
+    18,
+    8
+   ],
+   "maps": [
+    "bukit_bintang"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v44_tree_dream",
+   "image": "props/v44_tree_dream.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "v44_tree_lantern",
+   "image": "props/v44_tree_lantern.png",
+   "px": [
+    91,
+    119
+   ],
+   "hRatio": 1.84,
+   "wRatio": 1.41,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "memory_garden"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v44_v41_arch_flowers_arch",
+   "image": "props/v44_v41_arch_flowers_arch.png",
+   "px": [
+    120,
+    125
+   ],
+   "hRatio": 1.94,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "v44_v41_arch_flowers_e2_arch",
+   "image": "props/v44_v41_arch_flowers_e2_arch.png",
+   "px": [
+    120,
+    125
+   ],
+   "hRatio": 1.94,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "eternal_garden"
+   ]
+  },
+  {
+   "id": "v44_v41_arch_flowers_e_arch",
+   "image": "props/v44_v41_arch_flowers_e_arch.png",
+   "px": [
+    120,
+    125
+   ],
+   "hRatio": 1.94,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "eternal_garden"
+   ]
+  },
+  {
+   "id": "v44_v41_gazebo_e_gazebo",
+   "image": "props/v44_v41_gazebo_e_gazebo.png",
+   "px": [
+    170,
+    150
+   ],
+   "hRatio": 2.33,
+   "wRatio": 2.64,
+   "collider": [
+    150,
+    40
+   ],
+   "maps": [
+    "eternal_garden"
+   ]
+  },
+  {
+   "id": "v44_v41_observatory_observatory",
+   "image": "props/v44_v41_observatory_observatory.png",
+   "px": [
+    220,
+    210
+   ],
+   "hRatio": 3.26,
+   "wRatio": 3.41,
+   "collider": [
+    200,
+    40
+   ],
+   "maps": [
+    "bukit_bintang"
+   ]
+  },
+  {
+   "id": "v44_v41_pedestal_book_crystal_shrine",
+   "image": "props/v44_v41_pedestal_book_crystal_shrine.png",
+   "px": [
+    36,
+    54
+   ],
+   "hRatio": 0.84,
+   "wRatio": 0.56,
+   "collider": [
+    30,
+    12
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "v44_v41_rowboat_b_rowboat",
+   "image": "props/v44_v41_rowboat_b_rowboat.png",
+   "px": [
+    84,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.3,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_v41_rowboat_rowboat",
+   "image": "props/v44_v41_rowboat_rowboat.png",
+   "px": [
+    84,
+    34
+   ],
+   "hRatio": 0.53,
+   "wRatio": 1.3,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v44_v41_telescope_telescope",
+   "image": "props/v44_v41_telescope_telescope.png",
+   "px": [
+    40,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.62,
+   "collider": [
+    24,
+    10
+   ],
+   "maps": [
+    "bukit_bintang"
+   ]
+  },
+  {
+   "id": "v44_v41_tree_dream_memory_tree",
+   "image": "props/v44_v41_tree_dream_memory_tree.png",
+   "px": [
+    92,
+    130
+   ],
+   "hRatio": 2.02,
+   "wRatio": 1.43,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "v44_v41_wishing_tree_memory_tree",
+   "image": "props/v44_v41_wishing_tree_memory_tree.png",
+   "px": [
+    200,
+    220
+   ],
+   "hRatio": 3.41,
+   "wRatio": 3.1,
+   "collider": [
+    30,
+    14
+   ],
+   "maps": [
+    "eternal_garden"
+   ]
+  },
+  {
+   "id": "v51_approach_arcade",
+   "image": "maps/environment_v51/arcade_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "arcade"
+   ]
+  },
+  {
+   "id": "v51_approach_bukit_bintang",
+   "image": "maps/environment_v51/bukit_bintang_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang"
+   ]
+  },
+  {
+   "id": "v51_approach_cafe",
+   "image": "maps/environment_v51/cafe_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "cafe"
+   ]
+  },
+  {
+   "id": "v51_approach_dermaga",
+   "image": "maps/environment_v51/dermaga_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga"
+   ]
+  },
+  {
+   "id": "v51_approach_eternal_garden",
+   "image": "maps/environment_v51/eternal_garden_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "eternal_garden"
+   ]
+  },
+  {
+   "id": "v51_approach_galeri_komunitas",
+   "image": "maps/environment_v51/galeri_komunitas_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "galeri_komunitas"
+   ]
+  },
+  {
+   "id": "v51_approach_gua_kristal",
+   "image": "maps/environment_v51/gua_kristal_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "gua_kristal"
+   ]
+  },
+  {
+   "id": "v51_approach_hall_of_tomorrow",
+   "image": "maps/environment_v51/hall_of_tomorrow_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hall_of_tomorrow"
+   ]
+  },
+  {
+   "id": "v51_approach_hutan_bisik",
+   "image": "maps/environment_v51/hutan_bisik_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "v51_approach_jalan_kota",
+   "image": "maps/environment_v51/jalan_kota_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "jalan_kota"
+   ]
+  },
+  {
+   "id": "v51_approach_lantern_field",
+   "image": "maps/environment_v51/lantern_field_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "lantern_field"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "too_big"
+  },
+  {
+   "id": "v51_approach_memory_garden",
+   "image": "maps/environment_v51/memory_garden_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "memory_garden"
+   ]
+  },
+  {
+   "id": "v51_approach_perpustakaan",
+   "image": "maps/environment_v51/perpustakaan_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "perpustakaan"
+   ]
+  },
+  {
+   "id": "v51_approach_perumahan",
+   "image": "maps/environment_v51/perumahan_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "perumahan"
+   ]
+  },
+  {
+   "id": "v51_approach_plaza",
+   "image": "maps/environment_v51/plaza_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v51_approach_rain_garden",
+   "image": "maps/environment_v51/rain_garden_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "rain_garden"
+   ]
+  },
+  {
+   "id": "v51_approach_riverside",
+   "image": "maps/environment_v51/riverside_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_approach_star_path",
+   "image": "maps/environment_v51/star_path_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "star_path"
+   ]
+  },
+  {
+   "id": "v51_approach_starfall_village",
+   "image": "maps/environment_v51/starfall_village_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v51_approach_taman_kota",
+   "image": "maps/environment_v51/taman_kota_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v51_approach_toko_bunga",
+   "image": "maps/environment_v51/toko_bunga_approach.png",
+   "px": [
+    67,
+    168
+   ],
+   "hRatio": 2.6,
+   "wRatio": 1.04,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "toko_bunga"
+   ]
+  },
+  {
+   "id": "v51_arch_memory",
+   "image": "props/environment_v51/arch_memory.png",
+   "px": [
+    112,
+    121
+   ],
+   "hRatio": 1.88,
+   "wRatio": 1.74,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "clockwork_station",
+    "gua_kristal",
+    "hall_of_tomorrow",
+    "memory_garden",
+    "rain_garden"
+   ]
+  },
+  {
+   "id": "v51_banner_cafe",
+   "image": "props/environment_v51/banner_cafe.png",
+   "px": [
+    48,
+    97
+   ],
+   "hRatio": 1.5,
+   "wRatio": 0.74,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "arcade",
+    "galeri_komunitas"
+   ]
+  },
+  {
+   "id": "v51_bench_stone",
+   "image": "props/environment_v51/bench_stone.png",
+   "px": [
+    80,
+    31
+   ],
+   "hRatio": 0.48,
+   "wRatio": 1.24,
+   "collider": [
+    54,
+    11
+   ],
+   "maps": [
+    "eternal_garden",
+    "hall_of_tomorrow",
+    "jalan_kota",
+    "memory_bridge",
+    "memory_garden",
+    "perumahan",
+    "rain_garden",
+    "ruang_arsip"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_bench_wood",
+   "image": "props/environment_v51/bench_wood.png",
+   "px": [
+    90,
+    30
+   ],
+   "hRatio": 0.47,
+   "wRatio": 1.4,
+   "collider": [
+    52,
+    9
+   ],
+   "maps": [
+    "bukit_bintang",
+    "cafe",
+    "dermaga",
+    "hutan_bisik",
+    "lantern_field",
+    "perpustakaan",
+    "riverside",
+    "taman_kota"
+   ],
+   "category": "bench",
+   "band": [
+    0.3,
+    0.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_birdbath",
+   "image": "props/environment_v51/birdbath.png",
+   "px": [
+    56,
+    39
+   ],
+   "hRatio": 0.6,
+   "wRatio": 0.87,
+   "collider": [
+    22,
+    12
+   ],
+   "maps": [
+    "bukit_bintang",
+    "taman_kota",
+    "toko_bunga"
+   ]
+  },
+  {
+   "id": "v51_bridge_wood",
+   "image": "props/environment_v51/bridge_wood.png",
+   "px": [
+    128,
+    69
+   ],
+   "hRatio": 1.07,
+   "wRatio": 1.98,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_bush_lush",
+   "image": "props/environment_v51/bush_lush.png",
+   "px": [
+    78,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 1.21,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang",
+    "hutan_bisik",
+    "taman_kota",
+    "toko_bunga"
+   ]
+  },
+  {
+   "id": "v51_cliff_moss",
+   "image": "props/environment_v51/cliff_moss.png",
+   "px": [
+    110,
+    31
+   ],
+   "hRatio": 0.48,
+   "wRatio": 1.71,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "v51_column_stone",
+   "image": "props/environment_v51/column_stone.png",
+   "px": [
+    32,
+    89
+   ],
+   "hRatio": 1.38,
+   "wRatio": 0.5,
+   "collider": [
+    14,
+    10
+   ],
+   "maps": [
+    "hall_of_tomorrow",
+    "jalan_kota",
+    "perpustakaan",
+    "perumahan",
+    "plaza"
+   ]
+  },
+  {
+   "id": "v51_dock_pile",
+   "image": "props/environment_v51/dock_pile.png",
+   "px": [
+    34,
+    62
+   ],
+   "hRatio": 0.96,
+   "wRatio": 0.53,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_fountain_tiered",
+   "image": "props/environment_v51/fountain_tiered.png",
+   "px": [
+    90,
+    74
+   ],
+   "hRatio": 1.15,
+   "wRatio": 1.4,
+   "collider": [
+    48,
+    18
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v51_garden_lamp",
+   "image": "props/environment_v51/garden_lamp.png",
+   "px": [
+    38,
+    60
+   ],
+   "hRatio": 0.93,
+   "wRatio": 0.59,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang",
+    "taman_kota"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_information_board",
+   "image": "props/environment_v51/information_board.png",
+   "px": [
+    66,
+    63
+   ],
+   "hRatio": 0.98,
+   "wRatio": 1.02,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "galeri_komunitas",
+    "jalan_kota",
+    "perpustakaan",
+    "perumahan"
+   ]
+  },
+  {
+   "id": "v51_lantern_gold",
+   "image": "props/environment_v51/lantern_gold.png",
+   "px": [
+    36,
+    58
+   ],
+   "hRatio": 0.9,
+   "wRatio": 0.56,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "arcade",
+    "gua_kristal",
+    "lantern_field",
+    "star_path",
+    "starfall_village"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_mushroom_glow",
+   "image": "props/environment_v51/mushroom_glow.png",
+   "px": [
+    76,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 1.18,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hutan_bisik",
+    "lantern_field",
+    "memory_bridge",
+    "memory_garden",
+    "rain_garden",
+    "ruang_arsip"
+   ]
+  },
+  {
+   "id": "v51_pillar_crystal",
+   "image": "props/environment_v51/pillar_crystal.png",
+   "px": [
+    38,
+    71
+   ],
+   "hRatio": 1.1,
+   "wRatio": 0.59,
+   "collider": [
+    12,
+    12
+   ],
+   "maps": [
+    "gua_kristal",
+    "memory_bridge",
+    "memory_garden",
+    "moonlight_lake",
+    "rain_garden",
+    "ruang_arsip",
+    "ruang_dua_surat",
+    "star_path",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v51_planter_lavender",
+   "image": "props/environment_v51/planter_lavender.png",
+   "px": [
+    44,
+    52
+   ],
+   "hRatio": 0.81,
+   "wRatio": 0.68,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "clockwork_station",
+    "eternal_garden",
+    "hall_of_tomorrow",
+    "memory_garden",
+    "rain_garden"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_planter_terracotta",
+   "image": "props/environment_v51/planter_terracotta.png",
+   "px": [
+    40,
+    50
+   ],
+   "hRatio": 0.78,
+   "wRatio": 0.62,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "cafe",
+    "galeri_komunitas",
+    "perumahan"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_planter_woodland",
+   "image": "props/environment_v51/planter_woodland.png",
+   "px": [
+    40,
+    50
+   ],
+   "hRatio": 0.78,
+   "wRatio": 0.62,
+   "collider": [
+    14,
+    8
+   ],
+   "maps": [
+    "bukit_bintang",
+    "taman_kota",
+    "toko_bunga"
+   ],
+   "category": "plant|pot|vase",
+   "band": [
+    0.2,
+    1.3
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_rail_metal",
+   "image": "props/environment_v51/rail_metal.png",
+   "px": [
+    102,
+    21
+   ],
+   "hRatio": 0.33,
+   "wRatio": 1.58,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "hall_of_tomorrow",
+    "lantern_field",
+    "moonlight_lake",
+    "star_path",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v51_rail_stone",
+   "image": "props/environment_v51/rail_stone.png",
+   "px": [
+    98,
+    25
+   ],
+   "hRatio": 0.39,
+   "wRatio": 1.52,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang",
+    "eternal_garden",
+    "gua_kristal",
+    "memory_bridge",
+    "memory_garden",
+    "rain_garden",
+    "ruang_arsip"
+   ]
+  },
+  {
+   "id": "v51_rail_wood",
+   "image": "props/environment_v51/rail_wood.png",
+   "px": [
+    98,
+    26
+   ],
+   "hRatio": 0.4,
+   "wRatio": 1.52,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "perpustakaan",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_ramp_wood",
+   "image": "props/environment_v51/ramp_wood.png",
+   "px": [
+    116,
+    68
+   ],
+   "hRatio": 1.05,
+   "wRatio": 1.8,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_reeds",
+   "image": "props/environment_v51/reeds.png",
+   "px": [
+    78,
+    50
+   ],
+   "hRatio": 0.78,
+   "wRatio": 1.21,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_rock_crystal",
+   "image": "props/environment_v51/rock_crystal.png",
+   "px": [
+    77,
+    58
+   ],
+   "hRatio": 0.9,
+   "wRatio": 1.19,
+   "collider": [
+    22,
+    12
+   ],
+   "maps": [
+    "eternal_garden",
+    "gua_kristal",
+    "lantern_field",
+    "memory_garden",
+    "rain_garden",
+    "star_path",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v51_rock_moss",
+   "image": "props/environment_v51/rock_moss.png",
+   "px": [
+    77,
+    50
+   ],
+   "hRatio": 0.78,
+   "wRatio": 1.19,
+   "collider": [
+    24,
+    13
+   ],
+   "maps": [
+    "hutan_bisik"
+   ]
+  },
+  {
+   "id": "v51_signpost",
+   "image": "props/environment_v51/signpost.png",
+   "px": [
+    62,
+    60
+   ],
+   "hRatio": 0.93,
+   "wRatio": 0.96,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "dermaga",
+    "hutan_bisik",
+    "jalan_kota",
+    "perumahan",
+    "riverside"
+   ]
+  },
+  {
+   "id": "v51_step_stone",
+   "image": "props/environment_v51/step_stone.png",
+   "px": [
+    88,
+    14
+   ],
+   "hRatio": 0.22,
+   "wRatio": 1.36,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v51_street_lamp",
+   "image": "props/environment_v51/street_lamp.png",
+   "px": [
+    38,
+    94
+   ],
+   "hRatio": 1.46,
+   "wRatio": 0.59,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "jalan_kota",
+    "perpustakaan",
+    "perumahan"
+   ],
+   "category": "lamp|lantern",
+   "band": [
+    0.25,
+    2.2
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "v51_trim_terrain",
+   "image": "props/environment_v51/trim_terrain.png",
+   "px": [
+    120,
+    15
+   ],
+   "hRatio": 0.23,
+   "wRatio": 1.86,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "taman_kota"
+   ]
+  },
+  {
+   "id": "v51_viewpoint",
+   "image": "props/environment_v51/viewpoint.png",
+   "px": [
+    107,
+    72
+   ],
+   "hRatio": 1.12,
+   "wRatio": 1.66,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "clockwork_station",
+    "gua_kristal",
+    "hall_of_tomorrow",
+    "lantern_field",
+    "star_path",
+    "starfall_village"
+   ]
+  },
+  {
+   "id": "v51_wall_stone",
+   "image": "props/environment_v51/wall_stone.png",
+   "px": [
+    102,
+    32
+   ],
+   "hRatio": 0.5,
+   "wRatio": 1.58,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "plaza"
+   ]
+  },
+  {
+   "id": "v51_wildflowers",
+   "image": "props/environment_v51/wildflowers.png",
+   "px": [
+    92,
+    38
+   ],
+   "hRatio": 0.59,
+   "wRatio": 1.43,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": [
+    "bukit_bintang",
+    "hutan_bisik",
+    "taman_kota",
+    "toko_bunga"
+   ]
+  },
+  {
+   "id": "vanity",
+   "image": "props/vanity.png",
+   "px": [
+    76,
+    79
+   ],
+   "hRatio": 1.22,
+   "wRatio": 1.18,
+   "collider": [
+    72,
+    26
+   ],
+   "maps": []
+  },
+  {
+   "id": "vending",
+   "image": "props/vending.png",
+   "px": [
+    28,
+    57
+   ],
+   "hRatio": 0.88,
+   "wRatio": 0.43,
+   "collider": [
+    26,
+    12
+   ],
+   "maps": []
+  },
+  {
+   "id": "vending_ar",
+   "image": "props/vending_ar.png",
+   "px": [
+    28,
+    57
+   ],
+   "hRatio": 0.88,
+   "wRatio": 0.43,
+   "collider": [
+    26,
+    12
+   ],
+   "maps": []
+  },
+  {
+   "id": "wall_clock",
+   "image": "props/wall_clock.png",
+   "px": [
+    28,
+    28
+   ],
+   "hRatio": 0.43,
+   "wRatio": 0.43,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "wardrobe",
+   "image": "props/wardrobe.png",
+   "px": [
+    64,
+    104
+   ],
+   "hRatio": 1.61,
+   "wRatio": 0.99,
+   "collider": [
+    60,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "wardrobe_s",
+   "image": "props/wardrobe_s.png",
+   "px": [
+    64,
+    104
+   ],
+   "hRatio": 1.61,
+   "wRatio": 0.99,
+   "collider": [
+    60,
+    24
+   ],
+   "maps": [],
+   "category": "bookshelf|shelf|wardrobe|cabinet",
+   "band": [
+    0.9,
+    1.9
+   ],
+   "flag": "ok"
+  },
+  {
+   "id": "waterfall_hb",
+   "image": "props/waterfall_hb.png",
+   "px": [
+    76,
+    120
+   ],
+   "hRatio": 1.86,
+   "wRatio": 1.18,
+   "collider": [
+    0,
+    0
+   ],
+   "maps": []
+  },
+  {
+   "id": "wishing_tree",
+   "image": "props/wishing_tree.png",
+   "px": [
+    167,
+    217
+   ],
+   "hRatio": 3.36,
+   "wRatio": 2.59,
+   "collider": [
+    30,
+    14
+   ],
+   "maps": []
+  }
+ ]
+}
