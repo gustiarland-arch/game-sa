@@ -6,6 +6,6 @@ plugins {
 
 ext {
     gdxVersion = '1.14.2'
-    appVersionName = '5.3.0'
-    appVersionCode = 130
+    appVersionName = '5.4.0'
+    appVersionCode = 131
 }

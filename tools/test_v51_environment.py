@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Deterministic static checks for v5.1. No Android SDK required."""
+import re
 from pathlib import Path
 from PIL import Image
 import json, hashlib, collections
@@ -17,7 +18,7 @@ need(len(s['scenes'])==874,'874 story scenes unchanged')
 need(len(q['steps'])==157,'157 story steps unchanged')
 need(len(sites)==21,'21 curated sites')
 need('SCHEMA = 8' in (R/'core/src/main/java/com/arlandsofia/olu/logic/Progress.java').read_text(),'save schema unchanged')
-need(any(v in (R/'build.gradle').read_text() for v in ("appVersionName = '5.1.0'","appVersionName = '5.2.0'")),'version')
+need(re.search(r"appVersionName = '5\.([1-9]|[1-9][0-9])\.\d+'",(R/'build.gradle').read_text()) is not None,'version')
 need('android.permission.INTERNET" tools:node="remove"' in (R/'android/AndroidManifest.xml').read_text(),'offline')
 usage=collections.Counter()
 for name,a in m['areas'].items():

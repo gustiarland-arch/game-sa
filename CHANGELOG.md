@@ -1,3 +1,31 @@
+## 5.4.0 — World Reborn, Fase 1–2 (24 November 2026)
+
+- **Tangga & elevasi (P0):** `ElevationV50.canStep` kini menerima seluruh lebar tangga yang
+  dianggap walkable oleh `stairs()`. Sebelumnya hanya pita tengah (lebar−12 px) yang boleh
+  melewati bibir platform, sehingga pemain/pasangan/NPC di dekat pegangan tangga tersangkut
+  saat naik atau tidak bisa turun. Ditambah pengaman lompatan frame (maks satu panjang tangga).
+- **arcade:** platform digeser 17 px ke atas; kaki tangga sebelumnya berakhir di mesin arcade.
+- **dermaga:** pohon di sudut tangga digeser 14 px; collider batangnya menghalangi mulut tangga.
+- **Skala karakter:** `Actor.SCALE` 0.85 → 1.0 dan ukuran sprite dibulatkan ke piksel utuh.
+  Arland/Sofia ±18% lebih besar terhadap furniture, dan sprite tidak lagi di-resample pada
+  grid non-integer (piksel tidak rata/berkilau saat berjalan). Hitbox kaki tidak berubah.
+- Uji baru `tools/test_v54_stairs.sh`: 7.948 pemeriksaan pada 21 tangga (naik, turun, berhenti
+  di tengah, berbalik, pegangan, tepi tebing, input diagonal, 4 variasi frame delta, A* naik/turun,
+  kontinuitas lift).
+- Audit skala `tools/scale_audit_v54.py` (372 prop) dan pratinjau statis before/after
+  `tools/scale_preview_v54.py` di `docs/v54/`.
+- CI: perbaikan langkah Android SDK yang gagal (`setup-android` memasang paket `tools` yang
+  sudah dihapus), action dinaikkan ke v5, uji v5.4 dijalankan di CI, nama artefak APK v5.4.
+- Tiga uji lama yang mengunci string versi 5.x tertentu dibuat menerima versi 5.x berikutnya.
+- **Pixel-perfect (Fase 4):** kamera eksplorasi memilih zoom terdekat dengan jumlah piksel layar
+  utuh per texel dan mengunci posisi ke grid piksel layar (`PixelPerfectV54`). Texel tidak lagi
+  tampil 2/3 px bergantian dan tidak "berkilau" saat kamera bergerak. Cutscene tidak berubah.
+  Setelan `pixelPerfect` (default aktif) disimpan di settings tanpa mengubah schema.
+- **Tangga (Fase 5):** pemain, pasangan, dan NPC berjalan dengan 82% kecepatan normal di anak tangga
+  (`ElevationV50.speedFactor`), sehingga naik-turun terasa berbobot dan suara langkah tangga
+  tidak terlalu rapat.
+- Save schema 8, dua route, canon ending, quest, dan 29 map tidak diubah.
+
 ## 5.3.0 — Character Motion & NPC Identity
 
 - 25 karakter mendapat atlas walk 24-frame dan idle 12-frame 4 arah; 8 arah untuk Arland/Sofia.

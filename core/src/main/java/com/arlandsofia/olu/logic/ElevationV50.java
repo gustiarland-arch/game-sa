@@ -9,6 +9,14 @@ import java.util.List;
 public final class ElevationV50 {
     private ElevationV50() {}
 
+    /** v5.4: walking pace on a flight of stairs relative to flat ground (player, partner, NPC). */
+    public static final float STAIR_SPEED_FACTOR = 0.82f;
+
+    /** Speed multiplier for a foot position: slower while on any stair flight. */
+    public static float speedFactor(List<MapDb.Terrace> terraces,float x,float y){
+        return onStairs(terraces,x,y)?STAIR_SPEED_FACTOR:1f;
+    }
+
     /** Visual lift 0..rise. Foot position and save coordinates remain y-down. */
     public static float heightAt(List<MapDb.Terrace> terraces,float x,float y) {
         if(terraces==null) return 0f;
@@ -31,11 +39,14 @@ public final class ElevationV50 {
         for(MapDb.Terrace t:terraces){
             boolean fromTop=t.top(fromX,fromY), toTop=t.top(toX,toY);
             if(fromTop!=toTop) {
-                // A true level boundary crossing occurs at the south edge on the stair centerline.
+                // A level boundary crossing is legal only through the stair mouth.
                 if(!t.stairs(fromX,fromY) && !t.stairs(toX,toY))return false;
-                float centerX=t.stairX()+t.stairWidth*.5f;
-                if(Math.abs(toX-centerX)>t.stairWidth*.5f-6f)return false;
-                if(Math.abs(toY-(t.y+t.h))>12f && Math.abs(fromY-(t.y+t.h))>12f)return false;
+                // v5.4: accept the whole stair band that stairs() treats as walkable.
+                // v5.0 only accepted the centre (width-12px), so feet near either railing
+                // were "on the stairs" but could neither reach the top nor step down.
+                if(toX<t.stairX() || toX>t.stairX()+t.stairWidth)return false;
+                // Guard against frame-spike teleports across the whole flight.
+                if(Math.abs(toY-fromY)>t.stairLength)return false;
             }
             boolean fromSt=t.stairs(fromX,fromY),toSt=t.stairs(toX,toY);
             if(fromSt!=toSt) {

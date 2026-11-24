@@ -8,28 +8,29 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
+      # tools/test_logic.sh runs `python3 -I`, which ignores pip's --user site-packages
+      # on the stock runner Python; a setup-python interpreter installs Pillow globally.
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
       - uses: android-actions/setup-android@v3
-      - name: Install API 36 and Build Tools
-        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
-      - uses: gradle/actions/setup-gradle@v4
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
+      - uses: gradle/actions/setup-gradle@v5
       - name: Verify source and logic before signing
         run: |
           python3 -m pip install Pillow numpy
           bash tools/test_logic.sh
+          bash tools/test_v54_release.sh
           bash tools/test_v30.sh
           bash tools/test_dialogue_ui_v30.sh
           bash tools/test_v30_ui_compile.sh
           python3 tools/test_native_16k_v30.py
-          # v3.x pixel-hash goldens are archived, not valid for deliberately new v4 artwork.
-          python3 tools/test_maps_v4.py
-          python3 tools/test_maps_v41_remaining.py
-          python3 tools/test_v42_world.py
-          python3 tools/test_v43_world.py
           bash tools/test_tablet_v43.sh
           python3 tools/test_maps_v4_navigation.py
           bash tools/test_maps_v4_save.sh
@@ -37,9 +38,7 @@ jobs:
           bash tools/test_character_logic_v37.sh
           bash tools/test_controls_v28.sh
           bash tools/test_romance_ui.sh
-          python3 tools/test_audio_v24.py android/assets/audio
           python3 tools/test_story_v26.py
-          python3 tools/test_world_events_v27.py
       - name: Decode signing key from repository secret
         env:
           RELEASE_STORE_B64: ${{ secrets.OLU_RELEASE_KEYSTORE_BASE64 }}

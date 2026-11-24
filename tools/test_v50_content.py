@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Static QA for source v5.0; no Android SDK/GPU required."""
+import re
 from pathlib import Path
 import json,struct,sys
 R=Path(__file__).resolve().parents[1]; A=R/'android/assets'
@@ -47,5 +48,5 @@ manifest=(R/'android/AndroidManifest.xml').read_text()
 assertq('android.permission.INTERNET" tools:node="remove"' in manifest,'offline manifest explicitly removes INTERNET permission')
 java=(R/'core/src/main/java/com/arlandsofia/olu/logic/Progress.java').read_text()
 assertq('SCHEMA = 8' in java,'save schema preserved')
-assertq(any(v in (R/'build.gradle').read_text() for v in ("appVersionName = '5.0.0'","appVersionName = '5.1.0'","appVersionName = '5.2.0'")),'v5.0+ version')
+assertq(re.search(r"appVersionName = '5\.\d+\.\d+'",(R/'build.gradle').read_text()) is not None,'v5.0+ version')
 print(f'V5.0 CONTENT QA PASSED: {checks} assertions, {areas} elevation areas, {len(s["scenes"])} scenes, {len(assets)} asset files')
