@@ -64,6 +64,9 @@ import java.util.Map;
  * dialog, puzzle, Memory Book, pause, autosave. Implementasi Presenter untuk ActionRunner.
  */
 public final class GameScreen extends BaseScreen implements ActionRunner.Presenter {
+    final TownDirector town = new TownDirector(this);
+    final CompanionController companion = new CompanionController(this);
+    final HudRenderer hud = new HudRenderer(this);
     final WorldRenderer worldRenderer = new WorldRenderer(this);
     static final float WALK_SPEED = 112f, SPRINT_SPEED = 176f;
 
@@ -96,20 +99,20 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     boolean cineShowPartner;
     // companion hidup
     float compIdle, compNext = 3f, pendingComment = -1f;
-    String bubbleText; private float bubbleTime;
+    String bubbleText; float bubbleTime;
     final Map<String, Actor> cineActors = new LinkedHashMap<>();
     final Map<String, Actor> townActors = new LinkedHashMap<>();
     /** otak NPC: {homeX, homeY, radius, targetX, targetY, timer, scheduleKey} */
     final Map<String, float[]> npcBrain = new LinkedHashMap<>();
     final Map<String, String> npcPlaceKey = new LinkedHashMap<>();
     final List<Animal> animals = new ArrayList<>();
-    Animal targetAnimal; private boolean targetBed;
+    Animal targetAnimal; boolean targetBed;
     float clockAcc;
     float soundscapeClock, footstepClock;
     QuestDb.TownNpc targetNpc;
     QuestDb.Interactable targetSide;
     QuestDb.Talk targetTalk;
-    float creditsTime = -1; private Runnable creditsDone;
+    float creditsTime = -1; Runnable creditsDone;
     final float[] rainX = new float[140], rainY = new float[140];
     final DialogBox dialog;
     final DialogueHistoryOverlay dialogueHistory;
@@ -132,18 +135,18 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     QuestDb.Interactable targetQuest;
     MapDb.Examine targetExamine;
 
-    String toastText; private float toastTime;
-    String bannerText; private float bannerTime;
+    String toastText; float toastTime;
+    String bannerText; float bannerTime;
     float objectiveFlash;
     float doorCooldown;
     QuestCompass.Hint cachedQuestRoute;
     float questRouteRefresh;
 
-    int fadePhase; private float fadeAlpha; private Runnable fadeMid, fadeEnd;
-    String cardTitle, cardSub; private float cardTime = -1; private Runnable cardDone;
+    int fadePhase; float fadeAlpha; Runnable fadeMid, fadeEnd;
+    String cardTitle, cardSub; float cardTime = -1; Runnable cardDone;
 
     final Color tint = new Color();
-    private static final class DrawItem { float y; Object value; }
+    static final class DrawItem { float y; Object value; }
     final List<DrawItem> drawList = new ArrayList<>();
     /** Reused list of quest markers: no new ArrayList in every rendered frame. */
     final List<QuestDb.Interactable> drawMarkers = new ArrayList<>();
@@ -281,7 +284,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             if (!found) { sx = start.spawnX; sy = start.spawnY; }
         }
         enterArea(start.id, sx, sy, Actor.dirOf(p.dir), false);
-        if (p.companion) { partnerMode = 2; placeBeside(); }
+        if (p.companion) { partnerMode = 2; companion.placeBeside(); }
     }
 
     static Map<String, Object> act(String... kv) {
@@ -332,183 +335,35 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         soundscapeClock = 0f; footstepClock = 0f;
         lastTerrainHeight = ElevationV50.heightAt(a.terraces, x, y);
         previousStair = ElevationV50.onStairs(a.terraces,x,y);
-        if (partnerMode == 2) placeBeside();
-        refreshNpcs();
-        spawnAnimals();
+        if (partnerMode == 2) companion.placeBeside();
+        town.refreshNpcs();
+        town.spawnAnimals();
         syncSoundscape();
         if (announce) { bannerText = a.name; bannerTime = 2.2f; }
-        if (partnerMode == 2) queueComment();
+        if (partnerMode == 2) companion.queueComment();
         doorCooldown = 0.5f;
     }
 
-    /** komentar pasangan sekali per area (disimpan sebagai flag CMT_<area>). */
-    void queueComment() {
-        Map<String, List<String>> m = game.quests.comments.get(area.id);
-        if (m == null || p.hasFlag("CMT_" + area.id)) return;
-        List<String> l = m.get(p.route);
-        if (l == null || l.isEmpty()) return;
-        pendingComment = 1.4f;
-    }
 
-    void showComment() {
-        List<String> l = game.quests.comments.get(area.id).get(p.route);
-        bubbleText = l.get(MathUtils.random(0, l.size() - 1)); bubbleTime = 3.6f;
-        p.flags.add("CMT_" + area.id);
-        partner.faceTo(player); partner.showEmote("note", 1.2f);
-    }
 
-    /** perilaku kecil companion saat diam: menoleh, melihat sekeliling, bereaksi pada hujan, memperhatikan target interaksi. */
-    void companionLife(float dt) {
-        if (partnerMode != 2 || cine.active() || partner.walking || p.holdingHands) { compIdle = 0; return; }
-        Object tgt = targetQuest != null ? targetQuest : targetNpc != null ? targetNpc : targetSide;
-        if (tgt != null) {
-            float tx = targetQuest != null ? targetQuest.x : targetNpc != null ? targetNpc.x : targetSide.x;
-            float ty = targetQuest != null ? targetQuest.y : targetNpc != null ? targetNpc.y : targetSide.y;
-            partner.face(tx - partner.x, ty - partner.y); compIdle = 0; return;
-        }
-        compIdle += dt;
-        if (compIdle < compNext) return;
-        compIdle = 0; compNext = MathUtils.random(2.5f, 6f);
-        boolean rain = "rain".equals(weather()) && !isIndoor();
-        int r = MathUtils.random(0, 9);
-        // Reactions remain cosmetic (do not change romance rewards or story flags).
-        if (!rain && p.affection >= 75 && r >= 8 && dist(partner.x,partner.y)<90f) {
-            partner.faceTo(player);
-            partner.setPose(r == 8 ? "shy" : "excited",1.15f);
-            partner.showEmote("heart",1.3f);
-        } else if (rain && r < 3) { partner.showEmote("sweat", 1.4f); partner.faceTo(player); }
-        else if (r < 4) { partner.faceTo(player); partner.setPose("ponder",1.0f); }
-        else if (r < 7) partner.dir = MathUtils.random(0, 3);
-        else if (r < 9) {
-            Actor near = null; float best = 220 * 220;
-            for (Actor t : townActors.values()) { float dx = t.x - partner.x, dy = t.y - partner.y; if (dx * dx + dy * dy < best) { best = dx * dx + dy * dy; near = t; } }
-            if (near != null) partner.faceTo(near); else partner.faceTo(player);
-        } else { partner.faceTo(player); partner.showEmote(MathUtils.random(0, 1) == 0 ? "note" : "heart", 1.4f); }
-    }
 
-    void placeBeside() {
-        float[][] offs = {{-30, 6}, {30, 6}, {0, 24}, {0, -24}, {-44, 0}, {44, 0}};
-        for (float[] o : offs) {
-            float nx = player.x + o[0], ny = player.y + o[1];
-            if (!area.blocked(nx, ny)) { partner.x = nx; partner.y = ny; partner.dir = player.dir; return; }
-        }
-        // If there is no adjacent safe tile, keep the companion behind until a legal spot appears.
-        float[] safe = WorldNavigationV52.nearestOpen(footCollision,player.x-34,player.y,player.x,player.y);
-        partner.x = safe[0]; partner.y = safe[1];
-    }
 
-    /** NPC sesuai jadwal & jam. Aktor yang masih di area ini dipertahankan dan berjalan ke titik barunya. */
-    void refreshTown() {
-        java.util.Set<String> keep = new java.util.HashSet<>();
-        for (QuestDb.TownNpc n : engine.townNpcsNow(area.id)) {
-            Object[] pl = engine.npcPlace(n);
-            float x = ((Number) pl[1]).floatValue(), y = ((Number) pl[2]).floatValue(), rad = ((Number) pl[4]).floatValue();
-            float[] npcSafe = WorldNavigationV52.nearestOpen(footCollision,x,y,area.spawnX,area.spawnY);
-            x=npcSafe[0]; y=npcSafe[1];
-            String key = pl[0] + "@" + Math.round(x) + "," + Math.round(y);
-            keep.add(n.id);
-            Actor ac = townActors.get(n.id);
-            if (ac == null) {
-                ac = new Actor(n.sprite); ac.x = x; ac.y = y; ac.dir = Actor.dirOf((String) pl[3]);
-                townActors.put(n.id, ac); npcBrain.put(n.id, new float[]{x, y, rad, x, y, MathUtils.random(1f, 4f), 0f});
-            } else if (!key.equals(npcPlaceKey.get(n.id))) {
-                float[] b = npcBrain.get(n.id); b[0] = x; b[1] = y; b[2] = rad; b[3] = x; b[4] = y; b[5] = 0f; b[6] = 0f;
-            }
-            npcPlaceKey.put(n.id, key);
-        }
-        townActors.keySet().retainAll(keep); npcBrain.keySet().retainAll(keep); npcPlaceKey.keySet().retainAll(keep);
-    }
 
-    /** NPC berjalan pelan di sekitar titik jadwalnya, berhenti saat diajak bicara atau ada cutscene. */
-    void updateNpcs(float dt) {
-        if (cine.active()) return;
-        for (Map.Entry<String, Actor> e : townActors.entrySet()) {
-            Actor ac = e.getValue(); float[] b = npcBrain.get(e.getKey());
-            if (b == null) continue;
-            if (dialog.active() && targetNpc != null && targetNpc.id.equals(e.getKey())) { ac.walking = false; continue; }
-            float dx = b[3] - ac.x, dy = b[4] - ac.y, d = (float) Math.sqrt(dx * dx + dy * dy);
-            if (d > 2f) {
-                float speed = LivingWorldV46.walkingSpeed(WorldClock.hour(p.minute), weather(), isIndoor())
-                        * ac.motion.walkSpeed * ElevationV50.speedFactor(area.terraces, ac.x, ac.y);
-                float sp = Math.min(d, speed * Math.max(0f, Math.min(.05f, dt)));
-                float nx = ac.x + dx / d * sp, ny = ac.y + dy / d * sp;
-                boolean nearPlayer = Math.abs(nx - player.x) < 22 && Math.abs(ny - player.y) < 16;
-                boolean nearPartner = partnerMode == 2
-                        && Math.abs(nx - partner.x) < 20 && Math.abs(ny - partner.y) < 16;
-                boolean nearNpc = false;
-                for (Map.Entry<String, Actor> other : townActors.entrySet()) {
-                    if (other.getKey().equals(e.getKey())) continue;
-                    Actor o = other.getValue();
-                    if (Math.abs(nx - o.x) < 14 && Math.abs(ny - o.y) < 12) { nearNpc = true; break; }
-                }
-                if (WorldNavigationV52.clearSegment(footCollision,ac.x,ac.y,nx,ny)
-                        && ElevationV50.canStep(area.terraces,ac.x,ac.y,nx,ny)
-                        && !nearPlayer && !nearPartner && !nearNpc) {
-                    ac.x = nx; ac.y = ny; ac.face(dx, dy); ac.walking = true;
-                } else {
-                    // No teleport-to-target: pause and seek a legal alternate waypoint.
-                    b[3] = ac.x; b[4] = ac.y; b[5] = .55f; ac.walking = false;
-                }
-            } else {
-                ac.walking = false;
-                b[5] -= dt;
-                if (b[5] <= 0f) {
-                    b[5] = MotionPersonalityV53.pauseSeconds(e.getKey(), p.day, p.minute);
-                    if (b[2] > 0) {
-                        // Stable per-actor sequence creates different legal waypoints
-                        // even before the next 15-minute window; no teleportation.
-                        b[6] = (b[6] + 1f) % 4096f;
-                        LivingWorldV46.Target next = LivingWorldV46.wanderTarget(
-                                e.getKey(), p.day, p.minute, b[0], b[1], b[2], ac.x, ac.y,
-                                isIndoor(), weather(), new LivingWorldV46.Collision() {
-                                    public boolean blocked(float x,float y) { return area.blocked(x,y); }
-                                }, (int)b[6]);
-                        b[3] = next.x; b[4] = next.y;
-                    } else if (MathUtils.random() < .3f) ac.dir = MathUtils.random(0, 3);
-                    String act = npcIdleActivity(e.getKey());
-                    if (act != null && ac.pose == null) ac.setPose(act,
-                            1.1f + ac.motion.breathing * .9f);
-                }
-            }
-        }
-    }
+
+
+
+
+
+
 
     /** Aktivitas idle dari kebijakan dunia v4.6, memakai animasi atlas asli. */
     String npcIdleActivity(String id) {
         return MotionPersonalityV53.idlePose(id, WorldClock.hour(p.minute), weather(), isIndoor(), p.day);
     }
 
-    void spawnAnimals() {
-        animals.clear();
-        boolean day = !WorldClock.isNight(p.minute), rain = WorldClock.HUJAN.equals(engine.weatherNow());
-        for (Map<String, Object> spec : area.animals) {
-            String type = com.arlandsofia.olu.logic.Json.str(spec, "type", "cat");
-            boolean dayOnly = com.arlandsofia.olu.logic.Json.bool(spec, "day", !type.startsWith("cat"));
-            if (dayOnly && (!day || (rain && !type.equals("duck")))) continue; // bebek tetap berenang saat hujan
-            float[] reg = com.arlandsofia.olu.logic.Json.floats(spec.get(spec.containsKey("water") ? "water" : "region"));
-            int n = (int) com.arlandsofia.olu.logic.Json.num(spec, "n", 1);
-            for (int i = 0; i < n; i++) {
-                for (int k = 0; k < 12; k++) {
-                    float x, y;
-                    if (spec.containsKey("water")) { float a = MathUtils.random(0f, 6.28f), r = MathUtils.random(0f, 0.7f); x = reg[0] + MathUtils.cos(a) * reg[2] * r; y = reg[1] + MathUtils.sin(a) * reg[3] * r; }
-                    else { x = reg[0] + MathUtils.random(0f, reg[2]); y = reg[1] + MathUtils.random(0f, reg[3]); }
-                    if (!spec.containsKey("water") && area.blocked(x, y)) continue;
-                    animals.add(new Animal(type, x, y, reg)); break;
-                }
-            }
-        }
-    }
 
-    void refreshNpcs() {
-        refreshTown();
-        if (partnerMode == 2) return;
-        partnerMode = 0;
-        for (QuestEngine.NpcView n : engine.npcs(area.id)) {
-            if (n.who.equals(partner.character)) {
-                partnerMode = 1; partner.x = n.x; partner.y = n.y; partner.dir = Actor.dirOf(n.dir); partner.walking = false;
-            }
-        }
-    }
+
+
 
     // ================================================================== loop
     boolean free() {
@@ -554,8 +409,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             if (!realm()) clockAcc += dt; // jam berhenti di dunia kenangan
             while (clockAcc >= 1f) {
                 clockAcc -= 1f; p.minute++;
-                if (p.minute % 10 == 0) { refreshTown(); if (!cine.active()) syncSoundscape(); }
-                if (p.minute == 19 * 60 + 30) spawnAnimals(); // hewan siang pulang, kucing malam keluar
+                if (p.minute % 10 == 0) { town.refreshTown(); if (!cine.active()) syncSoundscape(); }
+                if (p.minute == 19 * 60 + 30) town.spawnAnimals(); // hewan siang pulang, kucing malam keluar
                 if (p.minute >= WorldClock.DAY_END) { passOut(); break; }
             }
             move(dt);
@@ -578,14 +433,14 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             controls.consumeAction();
             targetQuest = null; targetExamine = null; targetNpc = null; targetSide = null;
         }
-        followCompanion(dt);
-        companionLife(dt);
+        companion.followCompanion(dt);
+        companion.companionLife(dt);
         if (bubbleTime > 0) bubbleTime -= dt;
-        if (pendingComment > 0 && free() && partnerMode == 2) { pendingComment -= dt; if (pendingComment <= 0) showComment(); }
+        if (pendingComment > 0 && free() && partnerMode == 2) { pendingComment -= dt; if (pendingComment <= 0) companion.showComment(); }
         player.update(dt);
         partner.update(dt);
         for (Actor ac : townActors.values()) ac.update(dt);
-        updateNpcs(dt);
+        town.updateNpcs(dt);
         for (int i = animals.size() - 1; i >= 0; i--) { Animal an = animals.get(i); an.update(dt, area, player.x, player.y); if (an.gone()) animals.remove(i); }
         worldFx.update(dt, player.x, area.h - player.y, player.walking, player.sprinting,
                 "rain".equals(weather()), isIndoor(), partner.x, area.h - partner.y,
@@ -607,12 +462,12 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (st.tint == null || replay) return;
         Color c = Color.valueOf(st.tint);
         int target = c.b > c.r ? 20 * 60 : 17 * 60 + 30;
-        if (p.minute < target) { p.minute = target; refreshTown(); spawnAnimals(); }
+        if (p.minute < target) { p.minute = target; town.refreshTown(); town.spawnAnimals(); }
     }
     void newDay(String msg) {
         p.day++; p.minute = 7 * 60; clockAcc = 0;
         npcPlaceKey.clear(); townActors.clear(); npcBrain.clear();
-        refreshTown(); spawnAnimals();
+        town.refreshTown(); town.spawnAnimals();
         syncSoundscape();
         String w = WorldClock.weather(p.day);
         toast(msg + " " + WorldClock.dayName(p.day) + ", hari ke-" + p.day + " • " + Character.toUpperCase(w.charAt(0)) + w.substring(1));
@@ -698,56 +553,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         }
     }
 
-    void followCompanion(float dt) {
-        if (cine.active()) return; // cutscene menguasai pose dan posisi kedua aktor
-        if (partnerMode == 2 && p.holdingHands) {
-            float sign = (player.dir == Assets.DIR_LEFT) ? -1f : 1f;
-            float tx = player.x + 25f * sign, ty = player.y + 3f;
-            if (area.blocked(tx, ty) || !ElevationV50.canStep(area.terraces,partner.x,partner.y,tx,ty)) tx = player.x - 25f * sign;
-            if (!area.blocked(tx, ty) && ElevationV50.canStep(area.terraces,partner.x,partner.y,tx,ty)) {
-                float k = Math.min(1f, dt * 14f);
-                float stepX=partner.x+(tx-partner.x)*k, stepY=partner.y+(ty-partner.y)*k;
-                if (!WorldNavigationV52.clearSegment(footCollision,partner.x,partner.y,stepX,stepY)) { partner.walking=false; return; }
-                partner.x=stepX; partner.y=stepY;
-                partner.dir = player.dir;
-                partner.walking = player.walking;
-                partner.sprinting = false;
-                String pp = tx > player.x ? "hold_r" : "hold_l";
-                String po = tx > player.x ? "hold_l" : "hold_r";
-                if (!pp.equals(player.pose)) player.setPose(pp, 0f);
-                if (!po.equals(partner.pose)) partner.setPose(po, 0f);
-                trail.clear();
-                return;
-            }
-            // Koridor sempit: kembali ke follow normal sampai jalur cukup lebar.
-        }
-        if ("hold_l".equals(player.pose) || "hold_r".equals(player.pose)) player.clearPose();
-        if ("hold_l".equals(partner.pose) || "hold_r".equals(partner.pose)) partner.clearPose();
-        if (cine.active()) return; // cutscene mengatur posisi companion
-        if (partnerMode != 2) { partner.walking = false; return; }
-        float dxp = player.x - partner.x, dyp = player.y - partner.y;
-        float distP = (float) Math.sqrt(dxp * dxp + dyp * dyp);
-        if (distP > 260) { placeBeside(); trail.clear(); return; }
-        if (distP < 34 || trail.isEmpty()) {
-            partner.walking = false;
-            if (distP < 34 && trail.size() > 4) trail.pollFirst();
-            return;
-        }
-        float[] t = trail.peekFirst();
-        float ex = t[0] - partner.x, ey = t[1] - partner.y;
-        float d = (float) Math.sqrt(ex * ex + ey * ey);
-        if (d < 3f) { trail.pollFirst(); return; }
-        float speed = (player.sprinting ? SPRINT_SPEED : WALK_SPEED) * 1.05f * dt
-                * ElevationV50.speedFactor(area.terraces, partner.x, partner.y);
-        float k = Math.min(d, speed);
-        float destX=partner.x+ex/d*k, destY=partner.y+ey/d*k;
-        if(!area.blocked(destX,destY)&&ElevationV50.canStep(area.terraces,partner.x,partner.y,destX,destY)) {
-            partner.x=destX;partner.y=destY;
-        } else { partner.walking=false; return; }
-        partner.face(ex, ey);
-        partner.walking = true;
-        partner.sprinting = player.sprinting;
-    }
+
 
     void findTarget() {
         targetQuest = null; targetExamine = null; targetNpc = null; targetSide = null; targetTalk = null; targetRomance = false; targetAnimal = null; targetBed = false;
@@ -948,7 +754,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             for (Actor t : townActors.values()) t.clearPose();
             p.x = player.x; p.y = player.y; p.dir = Actor.dirName(player.dir);
             trail.clear();
-            if (partnerMode == 2 && Math.abs(partner.x - player.x) + Math.abs(partner.y - player.y) > 200) placeBeside();
+            if (partnerMode == 2 && Math.abs(partner.x - player.x) + Math.abs(partner.y - player.y) > 200) companion.placeBeside();
             done.run();
         } });
     }
@@ -1005,19 +811,19 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     public void companionChanged(boolean on) {
         if (on) pendingComment = -1f;
         if (on) {
-            if (partnerMode != 1) placeBeside();
+            if (partnerMode != 1) companion.placeBeside();
             partnerMode = 2;
             trail.clear();
         } else {
             partnerMode = 0;
             p.holdingHands = false;
-            refreshNpcs();
+            town.refreshNpcs();
         }
     }
 
     @Override
     public void stepChanged() {
-        refreshNpcs();
+        town.refreshNpcs();
         if (!cine.active()) syncSoundscape();
         game.audio.sfx("quest_complete", .22f);
         objectiveFlash = 1.6f;
@@ -1115,154 +921,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         for (int i = 0; i < pauseButtons.size(); i++) pauseButtons.get(i).set((uiW() - bw) / 2, y0 - i * (bh + gap), bw, bh);
     }
 
-    @Override
-    protected void drawWorld() {
-        float zoom = cine.camActive() ? Math.max(0.5f, cine.zoom()) : 1f;
-        // Wider world view only during free exploration; scripted cinematics retain their zoom.
-        float framing = cine.camActive() ? 1f : CameraFramingV52.gameplayScale(game.settings.cameraDistance, area.indoor);
-        // v5.4: exploration snaps to a whole number of screen pixels per texel.
-        int pixelGrid = 0;
-        if (!cine.camActive() && game.settings.pixelPerfect && worldView.getScreenHeight() > 0) {
-            pixelGrid = PixelPerfectV54.pixelsPerUnit(framing, worldView.getWorldHeight(), worldView.getScreenHeight());
-            framing = PixelPerfectV54.zoom(framing, worldView.getWorldHeight(), worldView.getScreenHeight());
-        }
-        worldCam.zoom = framing / zoom;
-        float ww = worldView.getWorldWidth() * framing / zoom;
-        float wh = worldView.getWorldHeight() * framing / zoom;
-        boolean inCutsceneCamera = cine.camActive();
-        float focusX = inCutsceneCamera ? cine.camX() : player.x;
-        float focusY = inCutsceneCamera ? area.h - cine.camY() : area.h - player.y + 24 + lastTerrainHeight*.55f;
-        // Look-ahead kecil hanya saat eksplorasi, tidak merusak komposisi cutscene.
-        if (!inCutsceneCamera && player.walking && game.settings.smoothCamera) {
-            if (player.dir == Assets.DIR_LEFT) focusX -= 12f;
-            if (player.dir == Assets.DIR_RIGHT) focusX += 12f;
-            if (player.dir == Assets.DIR_UP) focusY += 8f;
-            if (player.dir == Assets.DIR_DOWN) focusY -= 8f;
-        }
-        float cx = area.w <= ww ? area.w / 2 : MathUtils.clamp(focusX, ww / 2, area.w - ww / 2);
-        float cy = area.h <= wh ? area.h / 2 : MathUtils.clamp(focusY, wh / 2, area.h - wh / 2);
-        cameraRig.follow(cx, cy, frameDt, !inCutsceneCamera && game.settings.smoothCamera);
-        float smoothX = area.w <= ww ? area.w / 2 : MathUtils.clamp(cameraRig.x(), ww / 2, area.w - ww / 2);
-        float smoothY = area.h <= wh ? area.h / 2 : MathUtils.clamp(cameraRig.y(), wh / 2, area.h - wh / 2);
-        if (pixelGrid > 0) worldCam.position.set(PixelPerfectV54.snap(smoothX, pixelGrid), PixelPerfectV54.snap(smoothY, pixelGrid), 0);
-        else worldCam.position.set(zoom == 1f ? Math.round(smoothX) : smoothX, zoom == 1f ? Math.round(smoothY) : smoothY, 0);
-        visibleL = worldCam.position.x - ww / 2 - 110;
-        visibleR = worldCam.position.x + ww / 2 + 110;
-        visibleB = worldCam.position.y - wh / 2 - 110;
-        visibleT = worldCam.position.y + wh / 2 + 110;
-        worldView.apply();
-        worldCam.update();
-        game.batch.setProjectionMatrix(worldCam.combined);
-        game.batch.begin();
-        game.batch.setColor(1, 1, 1, 1);
-        game.batch.draw(mapTex, 0, 0, area.w, area.h);
-        worldFx.drawSceneAtmosphere(game.batch, game.assets.pixel, glow, sparkle,
-                area.id, area.indoor, area.h, worldCam.position.x, worldCam.position.y,
-                ww, wh, time, game.settings.visualQuality, WorldClock.isNight(p.minute));
-        worldFx.drawWorldBackdropV462(game.batch,area.id,area.indoor,
-                "rain".equals(weather()),p.minute,worldCam.position.x,worldCam.position.y,
-                ww,wh,time,game.settings.visualQuality);
-        for (MapDb.Prop pr : area.props) if ("floor".equals(pr.def.layer) && propVisible(pr)) worldRenderer.drawProp(pr);
-        // v5.0: original 2.5D decks and real stairs overlay map art without
-        // mutating the baked backgrounds or old story/door coordinates.
-        for(MapDb.Terrace terrace:area.terraces)worldRenderer.drawTerraceBase(terrace);
-        // v3.7: riak dan kilau air berada pada lapisan lantai; sebelum karakter/prop.
-        worldRenderer.drawWater();
-        worldFx.drawPuddlesV54(game.batch, puddles, area.h, wetness, "rain".equals(weather()) && !isIndoor(),
-                time, game.settings.visualQuality, storm.flashAlpha(game.settings.visualQuality),
-                visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
 
-        drawList.clear(); drawCursor = 0;
-        for (MapDb.Prop pr : area.props) if (!"floor".equals(pr.def.layer) && propVisible(pr)) addDraw(pr.y, pr);
-        drawMarkers.clear();
-        drawMarkers.addAll(engine.interactables(area.id));
-        List<QuestDb.Interactable> its = drawMarkers;
-        List<QuestDb.Interactable> sides = engine.sideInteractables(area.id);
-        for (QuestDb.Interactable it : its) if (it.sprite != null && visibleActor(it.sprite.x, it.sprite.y)) addDraw(it.sprite.y, it.sprite);
-        for (QuestDb.Interactable it : sides) if (it.sprite != null && visibleActor(it.sprite.x, it.sprite.y)) addDraw(it.sprite.y, it.sprite);
-        for(MapDb.Terrace t:area.terraces) addDraw(t.y+t.h-1f,t); // front lip occludes upper feet
-        player.terrainLift=ElevationV50.heightAt(area.terraces,player.x,player.y);
-        addDraw(player.y, player);
-        if (partnerMode != 0 || cineShowPartner) {
-            partner.terrainLift=ElevationV50.heightAt(area.terraces,partner.x,partner.y);
-            addDraw(partner.y, partner);
-        }
-        for (Actor ac : townActors.values()) if (visibleActor(ac.x,ac.y)) {
-            ac.terrainLift=ElevationV50.heightAt(area.terraces,ac.x,ac.y);
-            addDraw(ac.y, ac);
-        }
-        for (Actor ac : cineActors.values()) if (visibleActor(ac.x,ac.y)) {
-            ac.terrainLift=ElevationV50.heightAt(area.terraces,ac.x,ac.y);
-            addDraw(ac.y, ac);
-        }
-        for (Animal an : animals) if (visibleActor(an.x,an.y)) addDraw(an.y, an);
-        for (QuestDb.Interactable it : sides) if (it.marker) its.add(it);
-        Collections.sort(drawList, bySortY);
-        for (DrawItem o : drawList) {
-            Object r = o.value;
-            if (r instanceof MapDb.Terrace) worldRenderer.drawTerraceFront((MapDb.Terrace)r);
-            else if (r instanceof MapDb.Prop) worldRenderer.drawProp((MapDb.Prop) r);
-            else if (r instanceof QuestDb.Sprite) {
-                QuestDb.Sprite s = (QuestDb.Sprite) r;
-                Texture t = game.assets.tex(s.image);
-                float bob = s.bob ? MathUtils.sin(time * 3f + s.x) * 3f : 0f;
-                game.batch.draw(t, Math.round(s.x - t.getWidth() / 2f), Math.round(area.h - s.y + bob), t.getWidth(), t.getHeight());
-            } else if (r instanceof Animal) ((Animal) r).draw(game.batch, game.assets, area.h, shadow);
-            else ((Actor) r).draw(game.batch, game.assets, area.h, shadow);
-        }
-
-        worldFx.draw(game.batch, game.settings.visualQuality);
-        if (realm()) { // partikel cahaya Memory Realm
-            for (int i = 0; i < 26; i++) {
-                float sx = (i * 211.3f + time * 9f * (1 + i % 3)) % area.w;
-                float sy = (i * 137.9f + time * 14f) % area.h;
-                float al = 0.35f + 0.35f * MathUtils.sin(time * 2f + i);
-                game.batch.setColor(1f, 0.93f, 0.75f, al);
-                game.batch.draw(sparkle, sx, sy, 9, 9);
-            }
-            game.batch.setColor(1, 1, 1, 1);
-        }
-
-        if (game.settings.showHints) {
-            for (QuestDb.Interactable it : its) {
-                float my;
-                if (it.sprite != null) my = it.sprite.y - game.assets.tex(it.sprite.image).getHeight() - 8;
-                else if (partnerMode == 1 && Math.abs(partner.x - it.x) < 20 && Math.abs(partner.y - it.y) < 20) my = partner.y - partner.drawHeight() - 8;
-                else my = it.y - 40;
-                float bob = MathUtils.sin(time * 4f + it.x) * 3f;
-                boolean gold = it.id.startsWith("shard") || it.id.startsWith("WE27_") || it.id.startsWith("V50_");
-                if (gold) game.batch.setColor(1f, 0.85f, 0.45f, 1f); else game.batch.setColor(0.97f, 0.7f, 0.83f, 1f);
-                game.batch.draw(marker, it.x - 7, area.h - my + bob, 14, 14);
-            }
-            game.batch.setColor(1, 1, 1, 1);
-        }
-        worldRenderer.drawEmote(player);
-        if (partnerMode != 0 || cineShowPartner) worldRenderer.drawEmote(partner);
-        for (Actor ac : townActors.values()) worldRenderer.drawEmote(ac);
-        for (Actor ac : cineActors.values()) worldRenderer.drawEmote(ac);
-        if (partnerMode == 2 && partner.emote == null && engine.partnerTalk(area.id) != null && game.settings.showHints) {
-            Texture ht = game.assets.tex("ui/emote_heart.png");
-            float bob = MathUtils.sin(time * 3f) * 2f;
-            game.batch.setColor(1, 1, 1, 0.75f);
-            game.batch.draw(ht, partner.x - 8, area.h - partner.y + partner.drawHeight() + 2 + bob, 16, 16);
-            game.batch.setColor(1, 1, 1, 1);
-        }
-        worldRenderer.drawTerraceAtmosphere();
-        worldRenderer.drawAmbient();
-        {
-            float vw = worldView.getWorldWidth() * worldCam.zoom, vh = worldView.getWorldHeight() * worldCam.zoom;
-            float left = worldCam.position.x - vw / 2, bottom = worldCam.position.y - vh / 2;
-            worldFx.drawForeground(game.batch, left, bottom, vw, vh, area.ambient, time, game.settings.visualQuality);
-            worldFx.drawWorldForegroundV462(game.batch,area.id,area.indoor,
-                    "rain".equals(weather()),WorldClock.BERANGIN.equals(weather()),p.minute,
-                    worldCam.position.x,worldCam.position.y,vw,vh,time,game.settings.visualQuality);
-            worldFx.drawLightningV54(game.batch, game.assets.pixel, left, bottom, vw, vh,
-                    storm.flashAlpha(game.settings.visualQuality));
-            worldFx.drawVignette(game.batch, left, bottom, vw, vh, game.settings.visualQuality);
-            cine.drawWorld(game.batch, area.h, left, bottom, vw, vh);
-        }
-        game.batch.end();
-    }
 
     String weather() {
         String w = engine.weatherNow();
@@ -1319,184 +978,13 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         return tmpV.set((mx - left) * uiW() / ww, ((area.h - my) - bottom) * uiH() / wh);
     }
 
-    @Override
-    protected void drawUi() {
-        Assets a = game.assets;
-        float W = uiW(), H = uiH(), inL = insetL(), inR = insetR(), inT = insetT(), inB = insetB();
-        boolean overlay = dialog.active() || puzzle.active() || minigame.active() || creditsTime >= 0 || book.active() || shop.active() || romance.active() || pauseOpen || settingsOpen || cardTime >= 0 || cine.active();
-        if (cine.active() || cine.letterboxed()) { drawCineUi(W, H, inL, inR, inB); return; }
 
-        // label pintu terdekat
-        if (!overlay) {
-            for (MapDb.Door d : area.doors) {
-                float dx = d.cx() - player.x, dy = d.cy() - player.y;
-                if (dx * dx + dy * dy < 120 * 120 && d.label.length() > 0) {
-                    Vector2 v = mapToUi(d.cx(), d.y - 6);
-                    ui.text(a.label, d.label, v.x - 200, v.y + 34, Ui.WHITE, 0.9f, Align.center, 400);
-                }
-            }
-        }
 
-        // HUD kiri atas
-        float hx = inL + 16, hy = H - inT - 16;
-        float aw = Math.max(360, ui.measure(a.body, area.name, 1.05f) + 140);
-        ui.panel(a.panelDark, hx, hy - 126, aw, 126, 0.95f);
-        ui.rect(hx + 14, hy - 36, aw - 28, 3, Ui.PINK, 0.45f);
-        ui.text(a.body, area.name, hx + 22, hy - 16, Ui.CREAM, 1.05f, Align.left, 0);
-        String wz = weather(); String wl = "rain".equals(wz) ? "Hujan" : WorldClock.BERAWAN.equals(wz) ? "Berawan" : WorldClock.BERANGIN.equals(wz) ? "Berangin" : "Cerah";
-        ui.text(a.body, WorldClock.dayName(p.day) + " • Hari " + p.day + " • " + WorldClock.hhmm(p.minute) + " • " + wl, hx + 22, hy - 92, Ui.GOLD, 0.72f, Align.left, 0);
-        ui.image(coinIcon, hx + aw - 136, hy - 34, 24, 24, 1f);
-        ui.text(a.body, String.valueOf(p.coins), hx + aw - 106, hy - 18, Ui.GOLD, 0.84f, Align.left, 0);
-        ui.text(a.body, "♥ " + p.affection + "/100", hx + aw - 136, hy - 54, Ui.PINK, 0.80f, Align.left, 0);
-        if (p.holdingHands && partnerMode == 2) ui.text(a.body, "♡ Gandengan", hx + aw - 139, hy - 108, Ui.PINK, 0.67f, Align.left, 0);
-        QuestDb.Step st = engine.step();
-        String chName = st == null ? "" : (st.chapter.equals("PRO") ? "PROLOG" : "CHAPTER " + st.chapter.substring(1).replaceFirst("^0", ""));
-        ui.text(a.body, Routes.upper(p.route) + " ROUTE • " + chName, hx + 22, hy - 56, Ui.LAVENDER, 0.72f, Align.left, 0);
 
-        // misi aktif (tengah atas)
-        String obj = engine.objectiveText();
-        float ow = Math.min(W - aw - 420 - inL - inR, Math.max(360, ui.measure(a.body, obj, 0.9f) + 60));
-        float ox = Math.max(hx + aw + 14, (W - ow) / 2);
-        float flash = objectiveFlash > 0 ? 0.5f + 0.5f * MathUtils.sin(objectiveFlash * 12f) : 0f;
-        ui.panel(a.panelDark, ox, hy - 88, ow, 88, 0.95f);
-        if (flash > 0) ui.rect(ox + 10, hy - 84, ow - 20, 4, Ui.GOLD, flash);
-        ui.text(a.body, "✦ MISI AKTIF", ox, hy - 14, Ui.PINK, 0.66f, Align.center, ow);
-        float objScale = Math.min(0.9f, 0.9f * (ow - 40) / Math.max(1f, ui.measure(a.body, obj, 0.9f)));
-        ui.text(a.body, obj, ox + 20, hy - 46, Ui.CREAM, objScale, Align.center, ow - 40);
-        // Petunjuk arah untuk interaksi *utama yang saat ini aktif*, bukan jalur semu lintas peta.
-        if (!overlay && game.settings.showHints) {
-            if (questRouteRefresh<=0f) {
-                cachedQuestRoute=QuestPathV52.hint(area,player.x,player.y,engine.interactables(area.id),p.route);
-                questRouteRefresh=.65f;
-            }
-            QuestCompass.Hint hint=cachedQuestRoute;
-            if (hint != null) {
-                float ww = Math.max(300, Math.min(ow + 40, 510));
-                ui.panel(a.panelDark, ox + (ow - ww) / 2, hy - 133, ww, 40, .89f);
-                String direction = hint.text();
-                if (direction.length() > 62) direction = direction.substring(0, 59) + "...";
-                ui.text(a.body, direction, ox + (ow - ww) / 2 + 12, hy - 106,
-                        Ui.GOLD, .63f, Align.center, ww - 24);
-            }
-        }
-        // Notifikasi kecil: event hanya tampil bila area/jam/cuaca/route dan batas harian cocok.
-        if (!overlay && game.settings.showHints) {
-            for (QuestDb.WorldEvent ev : game.quests.worldEvents) {
-                if (ev.area.equals(area.id) && engine.worldEventBlock(ev.id, area.id) == null) {
-                    ui.text(a.body, "✦ EVENT HARI INI: " + ev.title, ox + 20, hy - 72,
-                            Ui.GOLD, 0.56f, Align.center, ow - 40);
-                    break;
-                }
-            }
-        }
 
-        if (!overlay && engine.deliveryOpen()) {
-            ui.panel(a.panelDark, W / 2 - 255, hy - 151, 510, 45, 0.94f);
-            ui.text(a.body, "Antar surat: " + engine.deliveredToday() + "/3  •  Plaza / Jalan Kota / Tepi Danau",
-                    W / 2 - 240, hy - 118, Ui.GOLD, 0.73f, Align.center, 480);
-        }
-        ui.button(hudBook);
-        ui.button(hudPause);
-        if (replay) {
-            ui.panel(a.panelDark, W / 2 - 250, hy - 140, 500, 44, 0.9f);
-            ui.text(a.body, "MODE REPLAY • progres tidak disimpan", W / 2 - 250, hy - 108, Ui.GOLD, 0.72f, Align.center, 500);
-        }
 
-        if (!overlay && fadePhase == 0) {
-            // Pilihan kontrol berlaku segera setelah pemain menutup Pengaturan.
-            controls.layout(W, H, inL, inR, inB, AdaptiveLayoutV43.controlScale(screenLayout(), game.settings.controlScale),
-                    game.settings.leftHanded, game.settings.floatingJoystick, game.settings.joystickSensitivity);
-            String prompt = targetQuest != null ? "✦ " + targetQuest.label(p.route)
-                    : targetSide != null ? (targetSide.id.startsWith("WE27_") ? "✦ Event: " : "♪ ") + targetSide.label(p.route)
-                    : targetNpc != null ? "Bicara: " + targetNpc.name
-                    : targetAnimal != null ? "Elus " + animalName(targetAnimal.type)
-                    : targetBed ? "Tidur" 
-                    : targetTalk != null ? "♥ Ngobrol" 
-                    : targetRomance ? "♥ Waktu Berdua"
-                    : (targetExamine != null ? targetExamine.label : null);
-            controls.draw(ui, game.settings.controlOpacity, prompt);
-        }
 
-        if (bannerTime > 0 && !overlay) {
-            float al = Math.min(1f, bannerTime * 2f);
-            ui.textCenter(a.title, bannerText, W / 2, H * 0.62f, tint.set(1, 1, 1, al), 0.62f);
-        }
-        if (toastTime > 0) {
-            float al = Math.min(1f, toastTime * 3f);
-            float tw = Math.min(W - 80, ui.measure(a.body, toastText, 0.9f) + 60);
-            float ty = dialog.active() ? H * 0.62f : H * 0.66f;
-            ui.panel(a.panelDark, (W - tw) / 2, ty - 30, tw, 58, al);
-            ui.text(a.body, toastText, (W - tw) / 2, ty + 12, tint.set(Ui.CREAM.r, Ui.CREAM.g, Ui.CREAM.b, al), 0.9f, Align.center, tw);
-        }
 
-        if (bubbleTime > 0 && bubbleText != null && partnerMode == 2 && !overlay) {
-            float al = Math.min(1f, Math.min(bubbleTime * 2f, (3.6f - bubbleTime) * 4f));
-            Vector2 v = mapToUi(partner.x, partner.y - partner.drawHeight() - 4);
-            float bw = Math.min(560, ui.measure(a.body, bubbleText, 0.78f) + 44), bx = MathUtils.clamp(v.x - bw / 2, inL + 10, W - inR - bw - 10);
-            ui.panel(a.panel, bx, v.y + 8, bw, 62, al);
-            ui.text(a.body, bubbleText, bx, v.y + 52, tint.set(Ui.INK.r, Ui.INK.g, Ui.INK.b, al), 0.78f, Align.center, bw);
-        }
-        dialog.draw(ui, W, H, inL, inR, inB);
-        puzzle.draw(ui, W, H);
-        minigame.draw(ui, W, H);
-        if (creditsTime >= 0) drawCredits(W, H);
-        if (pauseOpen) drawPause();
-        book.draw(ui, W, H);
-        shop.draw(ui, W, H);
-        romance.draw(ui, W, H);
-        if (settingsOpen) settingsPanel.draw(ui, W, H);
-        dialogueHistory.draw(ui, W, H);
-
-        if (cardTime >= 0) {
-            float al = Math.min(1f, cardTime * 3f);
-            ui.rect(0, 0, W, H, Ui.BG, 0.92f * al);
-            ui.textCenter(a.title, cardTitle, W / 2, H / 2 + 60, tint.set(1, 1, 1, al), 0.7f);
-            ui.wrap(a.body, cardSub, W * 0.15f, H / 2 - 20, W * 0.7f, tint.set(Ui.LAVENDER.r, Ui.LAVENDER.g, Ui.LAVENDER.b, al), 1f, Align.center);
-            if (cardTime > 0.6f) ui.textCenter(a.body, "Ketuk untuk lanjut", W / 2, 70, tint.set(1, 1, 1, 0.6f * al), 0.75f);
-        }
-        if (fadeAlpha > 0) ui.rect(0, 0, W, H, Ui.BG, fadeAlpha);
-    }
-
-    /** Saat cutscene: HUD disembunyikan, hanya letterbox, dialog, toast, dan fade. */
-    void drawCineUi(float W, float H, float inL, float inR, float inB) {
-        cine.drawUi(ui, W, H);
-        if (toastTime > 0) {
-            float al = Math.min(1f, toastTime * 3f);
-            float tw = Math.min(W - 80, ui.measure(game.assets.body, toastText, 0.9f) + 60);
-            ui.panel(game.assets.panelDark, (W - tw) / 2, H * 0.7f - 30, tw, 58, al);
-            ui.text(game.assets.body, toastText, (W - tw) / 2, H * 0.7f + 12, tint.set(Ui.CREAM.r, Ui.CREAM.g, Ui.CREAM.b, al), 0.9f, Align.center, tw);
-        }
-        dialog.draw(ui, W, H, inL, inR, inB);
-        if (pauseOpen) drawPause();
-        if (settingsOpen) settingsPanel.draw(ui, W, H);
-        dialogueHistory.draw(ui, W, H);
-        if (fadeAlpha > 0) ui.rect(0, 0, W, H, Ui.BG, fadeAlpha);
-    }
-
-    void drawCredits(float W, float H) {
-        ui.rect(0, 0, W, H, Ui.BG, Math.min(1f, creditsTime));
-        float y0 = -60 + creditsTime * 70f;
-        List<String> lines = game.quests.credits;
-        for (int i = 0; i < lines.size(); i++) {
-            float y = y0 - i * 64;
-            if (y < -40 || y > H + 60) continue;
-            ui.text(i == 0 ? game.assets.title : game.assets.body, lines.get(i), 0, y, i == 0 ? Ui.GOLD : Ui.CREAM, i == 0 ? 0.6f : 1f, Align.center, W);
-        }
-        ui.text(game.assets.body, "Ketuk untuk mempercepat", 0, 50, Ui.LAVENDER, 0.7f, Align.center, W);
-    }
-
-    void drawPause() {
-        float W = uiW(), H = uiH();
-        ui.rect(0, 0, W, H, Ui.BG, 0.6f);
-        float pw = Math.min(520, W - insetL() - insetR() - 28);
-        float ph = Math.min(670, H - insetT() - insetB() - 20);
-        float px = (W - pw) / 2, py = (H - ph) / 2;
-        ui.panel(game.assets.panel, px, py, pw, ph, 1f);
-        ui.text(game.assets.title, "Jeda", px, py + ph - 26, Ui.INK, 0.6f, Align.center, pw);
-        int mins = (int) (p.playSeconds / 60);
-        ui.text(game.assets.body, Routes.display(p.route) + " Route • Slot " + p.slot + " • " + mins + " menit", px, py + 46, Ui.INK_SOFT, 0.72f, Align.center, pw);
-        for (UiButton b : pauseButtons) ui.button(b);
-    }
 
     // ================================================================== input
     @Override
@@ -1623,4 +1111,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
 
     @Override
     public void hide() { controls.reset(); }
+    @Override
+    protected void drawWorld() { worldRenderer.drawWorld(); }
+    @Override
+    protected void drawUi() { hud.drawUi(); }
 }

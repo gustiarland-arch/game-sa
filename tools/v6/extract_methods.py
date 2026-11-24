@@ -60,13 +60,20 @@ def method_span(text, name):
 # Members of GameScreen (fields + methods) and BaseScreen (protected ones).
 members = set()
 body = s[s.index('public final class GameScreen'):]
-for m in re.finditer(r'\n    (?:(?:private|protected|public|static|final|transient|volatile)\s+)*[\w<>\[\],.? ]+?\s+(\w+)\s*(?:=|;|,)', body):
+for m in re.finditer(r'\n    (?=\S)(?:(?:private|protected|public|static|final|transient|volatile)\s+)*[\w<>\[\],.? ]+?\s+(\w+)\s*(?:=|;|,)', body):
     members.add(m.group(1))
-for m in re.finditer(r'\n    (?:private|protected|public)[^\n;=]*?\s(\w+)\s*\([^)]*\)\s*(?:throws [\w, ]+)?\{', body):
+for m in re.finditer(r'\n    (?=\S)(?:@\w+\s+)?(?:\w[\w<>\[\],.? ]*?\s)?(\w+)\s*\([^)]*\)\s*(?:throws [\w, ]+)?\{', body):
     members.add(m.group(1))
 # multi-declarations like "private float a, b, c;" and "private String x; private float y;"
-for m in re.finditer(r'\n    (?:private|protected|public)[^\n(]*;', body):
+for m in re.finditer(r'\n    (?=\S)(?:private|protected|public|final|static)[^\n(]*;', body):
     for part in m.group(0).split(';'):
+        for decl in part.split(','):
+            mm = re.search(r'(\w+)\s*(?:=.*)?$', decl.strip())
+            if mm:
+                members.add(mm.group(1))
+# field lines without an initializer call: "float a, b, c;" / "String x; float y;"
+for m in re.finditer(r'\n    (?=[A-Za-z])([^\n(){}]*;)', body):
+    for part in m.group(1).split(';'):
         for decl in part.split(','):
             mm = re.search(r'(\w+)\s*(?:=.*)?$', decl.strip())
             if mm:
@@ -101,15 +108,18 @@ def locals_of(code):
     sig = code[:code.index('{')]
     for p in re.findall(r'(\w+)\s*(?:,|\))', sig[sig.index('('):]):
         loc.add(p)
-    for m in re.finditer(r'(?:^|[;{(]|\n)\s*(?:final\s+)?([A-Za-z_][\w.<>\[\]]*)\s+(\w+)\s*(=|:|;|,)', code):
+    for m in re.finditer(r'(?:^|[;{(]|\n)\s*(?:final\s+)?([A-Za-z_][\w.\[\]]*(?:<[^;{}()]*?>)?(?:\[\])*)\s+(\w+)\s*(=|:|;|,)', code):
         if m.group(1) in ('return', 'new', 'else', 'throw', 'case'):
             continue
         loc.add(m.group(2))
         if m.group(3) in '=,':
             # further declarators of the same statement: "float a = 1, b = 2;"
-            stmt = code[m.end():code.find(';', m.end())]
-            for part in re.findall(r'(?:^|,)\s*(\w+)\s*=', _toplevel(stmt)):
+            stmt = (',' if m.group(3) == ',' else '') + code[m.end():code.find(';', m.end())]
+            for part in re.findall(r',\s*(\w+)\s*(?==|,|$)', _toplevel(stmt)):
                 loc.add(part)
+    # parameters of anonymous-class / lambda-style methods inside the body
+    for m in re.finditer(r'[(,]\s*(?:final\s+)?[A-Za-z_][\w.\[\]]*(?:<[^;{}()]*?>)?\s+(\w+)\s*(?=[,)])', code):
+        loc.add(m.group(1))
     return loc - JAVA_KW
 
 
@@ -131,25 +141,52 @@ def qualify(code, full):
     return ''.join(out)
 
 
+NESTED = ['DrawItem']
 new_methods = []
 for code in moved:
     head, rest = code[:code.index('{')], code[code.index('{'):]
     head = re.sub(r'\b(private|protected|public)\s+', '', head)
     head = head.replace('@Override', '')
-    new_methods.append(head + qualify(rest, code))
+    body2 = qualify(rest, code)
+    for t in NESTED:
+        body2 = re.sub(r'(?<![.\w])' + t + r'\b', 'GameScreen.' + t, body2)
+    new_methods.append(head + body2)
 
 # GameScreen: route calls to the moved methods through the new field; open members up.
 for name in names:
     s = re.sub(r'(?<![.\w])' + re.escape(name) + r'\s*\(', field + '.' + name + '(', s)
-for mname in members:
-    s = re.sub(r'\n(    (?:@\w+\s+)?)private\s+((?:static\s+)?(?:final\s+)?[\w<>\[\],.? ]+?\b' + re.escape(mname) + r'\b)', r'\n\1\2', s)
+# open every class-level member of GameScreen to the package (collaborators share its state)
+_lines = s.split('\n')
+for _i, _l in enumerate(_lines):
+    if re.match(r'    (?=\S)', _l) and not _l.lstrip().startswith(('*', '/')):
+        _lines[_i] = re.sub(r'\bprivate\s+(?!static final class)', '', _l)
+s = '\n'.join(_lines)
 decl = '    final %s %s = new %s(this);\n' % (cls, field, cls)
-anchor = s.index('public final class GameScreen')
-anchor = s.index('\n', s.index('{', anchor)) + 1
-s = s[:anchor] + decl + s[anchor:]
+if decl not in s:
+    anchor = s.index('public final class GameScreen')
+    anchor = s.index('\n', s.index('{', anchor)) + 1
+    s = s[:anchor] + decl + s[anchor:]
 GS.write_text(s, encoding='utf-8')
 
+# Overrides of BaseScreen hooks keep a delegating shim so the framework still calls them.
+OVERRIDES = {'drawWorld': 'protected void drawWorld()', 'drawUi': 'protected void drawUi()', 'update': 'protected void update(float dt)'}
+for name in names:
+    if name in OVERRIDES:
+        arg = 'dt' if name == 'update' else ''
+        shim = '    @Override\n    %s { %s.%s(%s); }\n' % (OVERRIDES[name], field, name, arg)
+        end = s.rindex('}')
+        s = s[:end] + shim + s[end:]
+for t in NESTED:
+    s = s.replace('private static final class ' + t, 'static final class ' + t)
+GS.write_text(s, encoding='utf-8')
 imports = ''.join(l + '\n' for l in s.split('\n') if l.startswith('import '))
+target = SRC / (cls + '.java')
+if target.exists():
+    cur = target.read_text(encoding='utf-8')
+    cut = cur.rstrip().rindex('}')
+    target.write_text(cur[:cut].rstrip() + '\n\n' + '\n\n'.join(new_methods) + '\n}\n', encoding='utf-8')
+    print('appended', len(names), 'methods to', cls)
+    raise SystemExit(0)
 out = 'package com.arlandsofia.olu.screens;\n\n' + imports + '\n/** Extracted from GameScreen in v6 (mechanical move; state stays on GameScreen). */\nfinal class %s {\n    private final GameScreen g;\n    %s(GameScreen g) { this.g = g; }\n\n' % (cls, cls)
 out += '\n\n'.join(new_methods) + '\n}\n'
 (SRC / (cls + '.java')).write_text(out, encoding='utf-8')

@@ -295,4 +295,153 @@ final class WorldRenderer {
         float pop = Math.min(1f, (1.8f - a.emoteTime) * 6f);
         g.game.batch.draw(t, a.x - 11, g.area.h - a.y + a.terrainLift + a.drawHeight() + 2, 22 * pop, 22 * pop);
     }
+
+    
+    void drawWorld() {
+        float zoom = g.cine.camActive() ? Math.max(0.5f, g.cine.zoom()) : 1f;
+        // Wider world view only during free exploration; scripted cinematics retain their zoom.
+        float framing = g.cine.camActive() ? 1f : CameraFramingV52.gameplayScale(g.game.settings.cameraDistance, g.area.indoor);
+        // v5.4: exploration snaps to a whole number of screen pixels per texel.
+        int pixelGrid = 0;
+        if (!g.cine.camActive() && g.game.settings.pixelPerfect && g.worldView.getScreenHeight() > 0) {
+            pixelGrid = PixelPerfectV54.pixelsPerUnit(framing, g.worldView.getWorldHeight(), g.worldView.getScreenHeight());
+            framing = PixelPerfectV54.zoom(framing, g.worldView.getWorldHeight(), g.worldView.getScreenHeight());
+        }
+        g.worldCam.zoom = framing / zoom;
+        float ww = g.worldView.getWorldWidth() * framing / zoom;
+        float wh = g.worldView.getWorldHeight() * framing / zoom;
+        boolean inCutsceneCamera = g.cine.camActive();
+        float focusX = inCutsceneCamera ? g.cine.camX() : g.player.x;
+        float focusY = inCutsceneCamera ? g.area.h - g.cine.camY() : g.area.h - g.player.y + 24 + g.lastTerrainHeight*.55f;
+        // Look-ahead kecil hanya saat eksplorasi, tidak merusak komposisi cutscene.
+        if (!inCutsceneCamera && g.player.walking && g.game.settings.smoothCamera) {
+            if (g.player.dir == Assets.DIR_LEFT) focusX -= 12f;
+            if (g.player.dir == Assets.DIR_RIGHT) focusX += 12f;
+            if (g.player.dir == Assets.DIR_UP) focusY += 8f;
+            if (g.player.dir == Assets.DIR_DOWN) focusY -= 8f;
+        }
+        float cx = g.area.w <= ww ? g.area.w / 2 : MathUtils.clamp(focusX, ww / 2, g.area.w - ww / 2);
+        float cy = g.area.h <= wh ? g.area.h / 2 : MathUtils.clamp(focusY, wh / 2, g.area.h - wh / 2);
+        g.cameraRig.follow(cx, cy, g.frameDt, !inCutsceneCamera && g.game.settings.smoothCamera);
+        float smoothX = g.area.w <= ww ? g.area.w / 2 : MathUtils.clamp(g.cameraRig.x(), ww / 2, g.area.w - ww / 2);
+        float smoothY = g.area.h <= wh ? g.area.h / 2 : MathUtils.clamp(g.cameraRig.y(), wh / 2, g.area.h - wh / 2);
+        if (pixelGrid > 0) g.worldCam.position.set(PixelPerfectV54.snap(smoothX, pixelGrid), PixelPerfectV54.snap(smoothY, pixelGrid), 0);
+        else g.worldCam.position.set(zoom == 1f ? Math.round(smoothX) : smoothX, zoom == 1f ? Math.round(smoothY) : smoothY, 0);
+        g.visibleL = g.worldCam.position.x - ww / 2 - 110;
+        g.visibleR = g.worldCam.position.x + ww / 2 + 110;
+        g.visibleB = g.worldCam.position.y - wh / 2 - 110;
+        g.visibleT = g.worldCam.position.y + wh / 2 + 110;
+        g.worldView.apply();
+        g.worldCam.update();
+        g.game.batch.setProjectionMatrix(g.worldCam.combined);
+        g.game.batch.begin();
+        g.game.batch.setColor(1, 1, 1, 1);
+        g.game.batch.draw(g.mapTex, 0, 0, g.area.w, g.area.h);
+        g.worldFx.drawSceneAtmosphere(g.game.batch, g.game.assets.pixel, g.glow, g.sparkle,
+                g.area.id, g.area.indoor, g.area.h, g.worldCam.position.x, g.worldCam.position.y,
+                ww, wh, g.time, g.game.settings.visualQuality, WorldClock.isNight(g.p.minute));
+        g.worldFx.drawWorldBackdropV462(g.game.batch,g.area.id,g.area.indoor,
+                "rain".equals(g.weather()),g.p.minute,g.worldCam.position.x,g.worldCam.position.y,
+                ww,wh,g.time,g.game.settings.visualQuality);
+        for (MapDb.Prop pr : g.area.props) if ("floor".equals(pr.def.layer) && g.propVisible(pr)) g.worldRenderer.drawProp(pr);
+        // v5.0: original 2.5D decks and real stairs overlay map art without
+        // mutating the baked backgrounds or old story/door coordinates.
+        for(MapDb.Terrace terrace:g.area.terraces)g.worldRenderer.drawTerraceBase(terrace);
+        // v3.7: riak dan kilau air berada pada lapisan lantai; sebelum karakter/prop.
+        g.worldRenderer.drawWater();
+        g.worldFx.drawPuddlesV54(g.game.batch, g.puddles, g.area.h, g.wetness, "rain".equals(g.weather()) && !g.isIndoor(),
+                g.time, g.game.settings.visualQuality, g.storm.flashAlpha(g.game.settings.visualQuality),
+                g.visibleL, g.visibleB, g.visibleR - g.visibleL, g.visibleT - g.visibleB);
+
+        g.drawList.clear(); g.drawCursor = 0;
+        for (MapDb.Prop pr : g.area.props) if (!"floor".equals(pr.def.layer) && g.propVisible(pr)) g.addDraw(pr.y, pr);
+        g.drawMarkers.clear();
+        g.drawMarkers.addAll(g.engine.interactables(g.area.id));
+        List<QuestDb.Interactable> its = g.drawMarkers;
+        List<QuestDb.Interactable> sides = g.engine.sideInteractables(g.area.id);
+        for (QuestDb.Interactable it : its) if (it.sprite != null && g.visibleActor(it.sprite.x, it.sprite.y)) g.addDraw(it.sprite.y, it.sprite);
+        for (QuestDb.Interactable it : sides) if (it.sprite != null && g.visibleActor(it.sprite.x, it.sprite.y)) g.addDraw(it.sprite.y, it.sprite);
+        for(MapDb.Terrace t:g.area.terraces) g.addDraw(t.y+t.h-1f,t); // front lip occludes upper feet
+        g.player.terrainLift=ElevationV50.heightAt(g.area.terraces,g.player.x,g.player.y);
+        g.addDraw(g.player.y, g.player);
+        if (g.partnerMode != 0 || g.cineShowPartner) {
+            g.partner.terrainLift=ElevationV50.heightAt(g.area.terraces,g.partner.x,g.partner.y);
+            g.addDraw(g.partner.y, g.partner);
+        }
+        for (Actor ac : g.townActors.values()) if (g.visibleActor(ac.x,ac.y)) {
+            ac.terrainLift=ElevationV50.heightAt(g.area.terraces,ac.x,ac.y);
+            g.addDraw(ac.y, ac);
+        }
+        for (Actor ac : g.cineActors.values()) if (g.visibleActor(ac.x,ac.y)) {
+            ac.terrainLift=ElevationV50.heightAt(g.area.terraces,ac.x,ac.y);
+            g.addDraw(ac.y, ac);
+        }
+        for (Animal an : g.animals) if (g.visibleActor(an.x,an.y)) g.addDraw(an.y, an);
+        for (QuestDb.Interactable it : sides) if (it.marker) its.add(it);
+        Collections.sort(g.drawList, g.bySortY);
+        for (GameScreen.DrawItem o : g.drawList) {
+            Object r = o.value;
+            if (r instanceof MapDb.Terrace) g.worldRenderer.drawTerraceFront((MapDb.Terrace)r);
+            else if (r instanceof MapDb.Prop) g.worldRenderer.drawProp((MapDb.Prop) r);
+            else if (r instanceof QuestDb.Sprite) {
+                QuestDb.Sprite s = (QuestDb.Sprite) r;
+                Texture t = g.game.assets.tex(s.image);
+                float bob = s.bob ? MathUtils.sin(g.time * 3f + s.x) * 3f : 0f;
+                g.game.batch.draw(t, Math.round(s.x - t.getWidth() / 2f), Math.round(g.area.h - s.y + bob), t.getWidth(), t.getHeight());
+            } else if (r instanceof Animal) ((Animal) r).draw(g.game.batch, g.game.assets, g.area.h, g.shadow);
+            else ((Actor) r).draw(g.game.batch, g.game.assets, g.area.h, g.shadow);
+        }
+
+        g.worldFx.draw(g.game.batch, g.game.settings.visualQuality);
+        if (g.realm()) { // partikel cahaya Memory Realm
+            for (int i = 0; i < 26; i++) {
+                float sx = (i * 211.3f + g.time * 9f * (1 + i % 3)) % g.area.w;
+                float sy = (i * 137.9f + g.time * 14f) % g.area.h;
+                float al = 0.35f + 0.35f * MathUtils.sin(g.time * 2f + i);
+                g.game.batch.setColor(1f, 0.93f, 0.75f, al);
+                g.game.batch.draw(g.sparkle, sx, sy, 9, 9);
+            }
+            g.game.batch.setColor(1, 1, 1, 1);
+        }
+
+        if (g.game.settings.showHints) {
+            for (QuestDb.Interactable it : its) {
+                float my;
+                if (it.sprite != null) my = it.sprite.y - g.game.assets.tex(it.sprite.image).getHeight() - 8;
+                else if (g.partnerMode == 1 && Math.abs(g.partner.x - it.x) < 20 && Math.abs(g.partner.y - it.y) < 20) my = g.partner.y - g.partner.drawHeight() - 8;
+                else my = it.y - 40;
+                float bob = MathUtils.sin(g.time * 4f + it.x) * 3f;
+                boolean gold = it.id.startsWith("shard") || it.id.startsWith("WE27_") || it.id.startsWith("V50_");
+                if (gold) g.game.batch.setColor(1f, 0.85f, 0.45f, 1f); else g.game.batch.setColor(0.97f, 0.7f, 0.83f, 1f);
+                g.game.batch.draw(g.marker, it.x - 7, g.area.h - my + bob, 14, 14);
+            }
+            g.game.batch.setColor(1, 1, 1, 1);
+        }
+        g.worldRenderer.drawEmote(g.player);
+        if (g.partnerMode != 0 || g.cineShowPartner) g.worldRenderer.drawEmote(g.partner);
+        for (Actor ac : g.townActors.values()) g.worldRenderer.drawEmote(ac);
+        for (Actor ac : g.cineActors.values()) g.worldRenderer.drawEmote(ac);
+        if (g.partnerMode == 2 && g.partner.emote == null && g.engine.partnerTalk(g.area.id) != null && g.game.settings.showHints) {
+            Texture ht = g.game.assets.tex("ui/emote_heart.png");
+            float bob = MathUtils.sin(g.time * 3f) * 2f;
+            g.game.batch.setColor(1, 1, 1, 0.75f);
+            g.game.batch.draw(ht, g.partner.x - 8, g.area.h - g.partner.y + g.partner.drawHeight() + 2 + bob, 16, 16);
+            g.game.batch.setColor(1, 1, 1, 1);
+        }
+        g.worldRenderer.drawTerraceAtmosphere();
+        g.worldRenderer.drawAmbient();
+        {
+            float vw = g.worldView.getWorldWidth() * g.worldCam.zoom, vh = g.worldView.getWorldHeight() * g.worldCam.zoom;
+            float left = g.worldCam.position.x - vw / 2, bottom = g.worldCam.position.y - vh / 2;
+            g.worldFx.drawForeground(g.game.batch, left, bottom, vw, vh, g.area.ambient, g.time, g.game.settings.visualQuality);
+            g.worldFx.drawWorldForegroundV462(g.game.batch,g.area.id,g.area.indoor,
+                    "rain".equals(g.weather()),WorldClock.BERANGIN.equals(g.weather()),g.p.minute,
+                    g.worldCam.position.x,g.worldCam.position.y,vw,vh,g.time,g.game.settings.visualQuality);
+            g.worldFx.drawLightningV54(g.game.batch, g.game.assets.pixel, left, bottom, vw, vh,
+                    g.storm.flashAlpha(g.game.settings.visualQuality));
+            g.worldFx.drawVignette(g.game.batch, left, bottom, vw, vh, g.game.settings.visualQuality);
+            g.cine.drawWorld(g.game.batch, g.area.h, left, bottom, vw, vh);
+        }
+        g.game.batch.end();
+    }
 }
