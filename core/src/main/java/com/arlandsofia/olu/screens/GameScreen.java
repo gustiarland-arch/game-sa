@@ -15,6 +15,7 @@ import com.arlandsofia.olu.logic.CameraFramingV52;
 import com.arlandsofia.olu.logic.WorldNavigationV52;
 import com.arlandsofia.olu.logic.ElevationV50;
 import com.arlandsofia.olu.logic.PixelPerfectV54;
+import com.arlandsofia.olu.logic.WeatherFxV54;
 import com.arlandsofia.olu.logic.AdaptiveLayoutV43;
 import com.arlandsofia.olu.logic.Achievements;
 import com.arlandsofia.olu.game.CutscenePlayer;
@@ -150,6 +151,10 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
     private final Map<MapDb.Prop, float[]> propMetrics = new java.util.IdentityHashMap<>();
     private int drawCursor;
     private float visibleL, visibleR, visibleB, visibleT;
+    // v5.4 weather: storm scheduler, rain puddles and ground wetness (cosmetic, never saved).
+    private final WeatherFxV54.Storm storm = new WeatherFxV54.Storm(System.nanoTime());
+    private java.util.List<float[]> puddles = new java.util.ArrayList<>();
+    private float wetness;
     private final Comparator<DrawItem> bySortY = new Comparator<DrawItem>() {
         public int compare(DrawItem a, DrawItem b) { return Float.compare(a.y, b.y); }
     };
@@ -318,6 +323,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         cachedQuestRoute=null; questRouteRefresh=0f;
         cameraRig.reset();
         worldFx.reset();
+        storm.reset();
+        puddles = WeatherFxV54.puddles(a);
+        wetness = "rain".equals(weather()) && !a.indoor ? 1f : 0f; // arriving mid-shower: ground is already wet
         soundscapeClock = 0f; footstepClock = 0f;
         lastTerrainHeight = ElevationV50.heightAt(a.terraces, x, y);
         previousStair = ElevationV50.onStairs(a.terraces,x,y);
@@ -550,8 +558,10 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             move(dt);
             if (player.walking && game.settings.footsteps && footstepClock <= 0f) {
                 boolean stairsNow=ElevationV50.onStairs(area.terraces,player.x,player.y);
-                game.audio.sfx(stairsNow ? "v50_stair_foot" : ElevationV50.stepSound(
-                        area.terraces,player.x,player.y,SoundscapePlan.footstepFor(area.id)), .19f);
+                boolean puddleStep = wetness > 0.35f && WeatherFxV54.inPuddle(puddles, player.x, player.y);
+                if (puddleStep) worldFx.splashAt(player.x, area.h - player.y, game.settings.visualQuality);
+                game.audio.sfx(puddleStep ? "v54_step_puddle" : stairsNow ? "v50_stair_foot" : ElevationV50.stepSound(
+                        area.terraces,player.x,player.y,SoundscapePlan.footstepFor(area.id)), puddleStep ? .34f : .19f);
                 footstepClock = player.sprinting ? .22f : .35f;
             }
             boolean onStairsNow=ElevationV50.onStairs(area.terraces,player.x,player.y);
@@ -577,6 +587,11 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         worldFx.update(dt, player.x, area.h - player.y, player.walking, player.sprinting,
                 "rain".equals(weather()), isIndoor(), partner.x, area.h - partner.y,
                 partnerMode == 2, p.affection, game.settings.visualQuality);
+        boolean raining = "rain".equals(weather());
+        wetness = WeatherFxV54.wetness(wetness, dt, raining && !isIndoor() && !realm());
+        storm.update(dt, WeatherFxV54.stormAllowed(area.id, raining, isIndoor(), realm()) && !cine.camActive());
+        float thunder = storm.consumeThunder();
+        if (thunder > 0f) game.audio.sfx("v54_thunder", 0.45f + 0.55f * thunder);
     }
 
     // ================================================================== hari & tidur
@@ -1142,6 +1157,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         for(MapDb.Terrace terrace:area.terraces)drawTerraceBase(terrace);
         // v3.7: riak dan kilau air berada pada lapisan lantai; sebelum karakter/prop.
         drawWater();
+        worldFx.drawPuddlesV54(game.batch, puddles, area.h, wetness, "rain".equals(weather()) && !isIndoor(),
+                time, game.settings.visualQuality, storm.flashAlpha(game.settings.visualQuality),
+                visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
 
         drawList.clear(); drawCursor = 0;
         for (MapDb.Prop pr : area.props) if (!"floor".equals(pr.def.layer) && propVisible(pr)) addDraw(pr.y, pr);
@@ -1227,6 +1245,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
             worldFx.drawWorldForegroundV462(game.batch,area.id,area.indoor,
                     "rain".equals(weather()),WorldClock.BERANGIN.equals(weather()),p.minute,
                     worldCam.position.x,worldCam.position.y,vw,vh,time,game.settings.visualQuality);
+            worldFx.drawLightningV54(game.batch, game.assets.pixel, left, bottom, vw, vh,
+                    storm.flashAlpha(game.settings.visualQuality));
             worldFx.drawVignette(game.batch, left, bottom, vw, vh, game.settings.visualQuality);
             cine.drawWorld(game.batch, area.h, left, bottom, vw, vh);
         }
@@ -1240,6 +1260,13 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
 
     /** Kilau bergerak di permukaan air (kolam, danau, air mancur). */
     private void drawWater() {
+        for (float[] f : area.waterFlow)
+            worldFx.drawFlowV54(game.batch, game.assets.pixel, f[0], area.h - f[1] - f[3], f[2], f[3], f[4], f[5],
+                    time, game.settings.visualQuality, "rain".equals(weather()),
+                    visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
+        for (float[] r : area.riverPaths)
+            worldFx.drawRiverV54(game.batch, game.assets.pixel, r, area.h, time, game.settings.visualQuality,
+                    "rain".equals(weather()), visibleL, visibleB, visibleR - visibleL, visibleT - visibleB);
         if (area.water.isEmpty()) return;
         for (float[] w : area.water) {
             int visual = game.settings.visualQuality;
@@ -1480,6 +1507,9 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         } else {
             game.batch.draw(t, Math.round(pr.x - t.getWidth() / 2f), Math.round(area.h - pr.y), t.getWidth(), t.getHeight());
         }
+        if (WorldFx.animatedWater(img)) // v5.4: fountains and waterfalls actually move
+            worldFx.drawPropWaterV54(game.batch, game.assets.pixel, img, Math.round(pr.x - t.getWidth() / 2f),
+                    Math.round(area.h - pr.y) + t.getHeight(), time, game.settings.visualQuality);
     }
 
     private void drawEmote(Actor a) {

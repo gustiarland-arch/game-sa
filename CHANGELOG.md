@@ -1,3 +1,25 @@
+## 5.4.0 — Cuaca & Air (25 November 2026)
+
+- **Air mengalir:** arus permukaan di Tepi Danau (14 px/s) dan Dermaga Danau (7 px/s), sungai
+  Hutan Bisik mengikuti alur yang dilukis di peta (`waterFlow` di `maps.json`, `WorldFx.drawFlowV54`/
+  `drawRiverV54`). Air mancur plaza dan air terjun hutan kini bergerak: tetesan jatuh dengan
+  gravitasi, kilau yang mengalir, percikan di kolam dan kabut di kaki air terjun.
+- **Petir:** saat hujan di luar ruangan, kilat lembut tiap 9–22 detik dan guntur menyusul 0,35–2,25
+  detik kemudian (makin dekat makin keras). Maksimal dua denyut per sambaran dan alpha 0,24, jadi
+  tidak pernah lebih dari tiga kilatan per detik (WCAG 2.3.1). Tidak ada petir di dalam ruangan,
+  Memory Realm, Taman Hujan, atau saat kamera cutscene aktif.
+- **Genangan:** 3–16 genangan per map luar ruangan, tidak pernah di collider, air, teras, atau tangga.
+  Muncul bertahap saat hujan (±45 detik) dan mengering pelan (±2 menit), ada riak hujan dan pantulan
+  kilat. Melangkah di genangan memunculkan percikan dan suara `v54_step_puddle`.
+- Aset baru dibuat offline oleh `tools/gen_weather_fx_v54.py`: 3 tekstur genangan, `v54_thunder.wav`,
+  `v54_step_puddle.wav`.
+- Uji baru `tools/test_v54_weather.sh` (36.571 pemeriksaan): keamanan kilat, waktu guntur, genangan
+  di semua 21 map luar ruangan, data arus air, dan aset. Smoke `test_visual_fx.sh` memanggil semua
+  method baru.
+- `AudioManager.tap` (null di game) untuk rekaman/QA otomatis. Harness rekaman desktop di
+  `tools/capture_v54/`.
+- Save schema 8, dua route, canon ending, quest, collision, dan 29 map tidak diubah.
+
 ## 5.4.0 — World Reborn, Fase 1–2 (24 November 2026)
 
 - **Tangga & elevasi (P0):** `ElevationV50.canStep` kini menerima seluruh lebar tangga yang

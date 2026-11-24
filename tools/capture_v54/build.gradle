@@ -1,0 +1,16 @@
+// Standalone desktop capture harness (NOT part of the game build).
+// Build from this folder: gradle -p tools/capture_v54 run --args="<outDir> <questStep> <day>"
+// Run with the working directory set to android/assets (or a folder that links to it).
+plugins { id 'application' }
+java { sourceCompatibility = JavaVersion.VERSION_11; targetCompatibility = JavaVersion.VERSION_11 }
+repositories { mavenCentral() }
+sourceSets.main.java.srcDirs = ['.', '../../core/src/main/java']
+sourceSets.main.java.includes = ['DeskVideo.java', 'com/**']
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+def gdx = '1.14.2'
+dependencies {
+  implementation "com.badlogicgames.gdx:gdx:$gdx"
+  implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdx"
+  implementation "com.badlogicgames.gdx:gdx-platform:$gdx:natives-desktop"
+}
+application { mainClass = 'shot.DeskVideo' }
