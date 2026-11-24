@@ -185,7 +185,7 @@ class Canvas:
     def water(self, mask, pal=('#24577f', '#2b6990', '#357ca2', '#4290b4', '#5aa6c6')):
         p = np.stack([rgb(c) for c in pal])
         d = dist_from(~mask, 24) / 24.0
-        v = 0.55 * (1 - d) + 0.45 * noise(self.h, self.w, 30, self.seed + 70)
+        v = 0.72 * (1 - d) + 0.28 * noise(self.h, self.w, 60, self.seed + 70)
         idx = np.clip((v * (len(p) - 1)).round().astype(int), 0, len(p) - 1)
         img = p[idx]
         rng = np.random.default_rng(self.seed + 71)

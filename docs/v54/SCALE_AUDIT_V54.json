@@ -245,7 +245,8 @@
     8
    ],
    "maps": [
-    "plaza"
+    "plaza",
+    "taman_kota"
    ]
   },
   {
@@ -909,7 +910,8 @@
    ],
    "maps": [
     "hutan_bisik",
-    "plaza"
+    "plaza",
+    "taman_kota"
    ]
   },
   {
@@ -944,8 +946,7 @@
    ],
    "maps": [
     "hutan_bisik",
-    "lantern_field",
-    "taman_kota"
+    "lantern_field"
    ]
   },
   {
@@ -1244,7 +1245,8 @@
     10
    ],
    "maps": [
-    "plaza"
+    "plaza",
+    "taman_kota"
    ]
   },
   {
@@ -1683,7 +1685,9 @@
     70,
     20
    ],
-   "maps": []
+   "maps": [
+    "taman_kota"
+   ]
   },
   {
    "id": "garden_plot_g1540",
@@ -1728,7 +1732,9 @@
     70,
     20
    ],
-   "maps": []
+   "maps": [
+    "taman_kota"
+   ]
   },
   {
    "id": "garden_plot_tk",
@@ -4197,7 +4203,8 @@
    "maps": [
     "bukit_bintang",
     "hutan_bisik",
-    "plaza"
+    "plaza",
+    "taman_kota"
    ]
   },
   {
@@ -5108,7 +5115,8 @@
     0
    ],
    "maps": [
-    "riverside"
+    "riverside",
+    "taman_kota"
    ]
   },
   {
@@ -5143,7 +5151,8 @@
    ],
    "maps": [
     "plaza",
-    "riverside"
+    "riverside",
+    "taman_kota"
    ]
   },
   {
@@ -5330,7 +5339,8 @@
     6
    ],
    "maps": [
-    "dermaga"
+    "dermaga",
+    "taman_kota"
    ]
   },
   {
@@ -6496,7 +6506,8 @@
    "maps": [
     "dermaga",
     "plaza",
-    "riverside"
+    "riverside",
+    "taman_kota"
    ]
   },
   {

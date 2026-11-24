@@ -4122,8 +4122,8 @@
         {
           "id": "f2_dito",
           "area": "taman_kota",
-          "x": 1100,
-          "y": 540,
+          "x": 1375,
+          "y": 675,
           "r": 64,
           "label": "Bicara dengan Dito",
           "actions": [
@@ -4153,8 +4153,8 @@
         {
           "id": "f2_hide1",
           "area": "taman_kota",
-          "x": 420,
-          "y": 430,
+          "x": 525,
+          "y": 538,
           "r": 56,
           "label": "Periksa semak",
           "actions": [
@@ -4179,8 +4179,8 @@
         {
           "id": "f2_hide2",
           "area": "taman_kota",
-          "x": 1660,
-          "y": 880,
+          "x": 2075,
+          "y": 1100,
           "r": 56,
           "label": "Periksa balik bangku",
           "actions": [
@@ -4205,8 +4205,8 @@
         {
           "id": "f2_hide3",
           "area": "taman_kota",
-          "x": 240,
-          "y": 880,
+          "x": 300,
+          "y": 1100,
           "r": 56,
           "label": "Periksa petak bunga",
           "actions": [
@@ -4631,8 +4631,8 @@
         {
           "id": "gazebo",
           "area": "taman_kota",
-          "x": 1500,
-          "y": 470,
+          "x": 1875,
+          "y": 588,
           "r": 64,
           "label": "Duduk di gazebo",
           "actions": [
@@ -5696,8 +5696,8 @@
         {
           "id": "mint",
           "area": "taman_kota",
-          "x": 240,
-          "y": 880,
+          "x": 300,
+          "y": 1100,
           "r": 64,
           "label": "Petik daun mint",
           "actions": [
@@ -6307,8 +6307,8 @@
         {
           "id": "picnic",
           "area": "taman_kota",
-          "x": 1520,
-          "y": 1060,
+          "x": 1900,
+          "y": 1325,
           "r": 64,
           "label": "Mulai piknik",
           "actions": [
@@ -6631,8 +6631,8 @@
         {
           "id": "meet4",
           "area": "taman_kota",
-          "x": 1500,
-          "y": 470,
+          "x": 1875,
+          "y": 588,
           "r": 64,
           "label": "Sapa Sofia",
           "actions": [
@@ -6740,8 +6740,8 @@
         {
           "who": "$PARTNER",
           "area": "taman_kota",
-          "x": 1500,
-          "y": 470,
+          "x": 1875,
+          "y": 588,
           "dir": "down"
         }
       ],
@@ -7029,8 +7029,8 @@
         {
           "id": "gazebo4",
           "area": "taman_kota",
-          "x": 1500,
-          "y": 470,
+          "x": 1875,
+          "y": 588,
           "r": 64,
           "label": "Berteduh di gazebo",
           "actions": [
@@ -7060,8 +7060,8 @@
         {
           "id": "meet4",
           "area": "taman_kota",
-          "x": 1000,
-          "y": 490,
+          "x": 1250,
+          "y": 612,
           "r": 64,
           "label": "Sapa Arland",
           "actions": [
@@ -7169,8 +7169,8 @@
         {
           "who": "$PARTNER",
           "area": "taman_kota",
-          "x": 1000,
-          "y": 490,
+          "x": 1250,
+          "y": 612,
           "dir": "right"
         }
       ],
@@ -7451,8 +7451,8 @@
             {
               "do": "warp",
               "area": "taman_kota",
-              "x": 1500,
-              "y": 470,
+              "x": 1875,
+              "y": 588,
               "dir": "down"
             },
             {
@@ -7480,8 +7480,8 @@
         {
           "id": "v26_c04_gazebo",
           "area": "taman_kota",
-          "x": 1500,
-          "y": 470,
+          "x": 1875,
+          "y": 588,
           "r": 65,
           "label": "Duduk dan bicara",
           "actions": [
@@ -7508,8 +7508,8 @@
         {
           "id": "v26_c04_pond",
           "area": "taman_kota",
-          "x": 640,
-          "y": 570,
+          "x": 800,
+          "y": 712,
           "r": 65,
           "label": "Lihat pantulan kolam",
           "actions": [
@@ -7559,8 +7559,8 @@
         {
           "id": "v26_c04_vow",
           "area": "taman_kota",
-          "x": 1000,
-          "y": 490,
+          "x": 1250,
+          "y": 612,
           "r": 70,
           "label": "Janji untuk besok",
           "actions": [
@@ -7577,8 +7577,8 @@
                   "c": "bars"
                 },
                 {
-                  "x": 1000,
-                  "y": 460,
+                  "x": 1250,
+                  "y": 575,
                   "zoom": 1.28,
                   "t": 1.3,
                   "c": "cam"
@@ -7723,8 +7723,8 @@
         {
           "id": "f5_lantern1",
           "area": "taman_kota",
-          "x": 1440,
-          "y": 560,
+          "x": 1800,
+          "y": 700,
           "r": 56,
           "label": "Gantung lentera",
           "actions": [
@@ -7775,8 +7775,8 @@
         {
           "id": "f5_lantern2",
           "area": "taman_kota",
-          "x": 712,
-          "y": 552,
+          "x": 890,
+          "y": 690,
           "r": 56,
           "label": "Gantung lentera",
           "actions": [
@@ -7827,8 +7827,8 @@
         {
           "id": "f5_lantern3",
           "area": "taman_kota",
-          "x": 1300,
-          "y": 1110,
+          "x": 1625,
+          "y": 1388,
           "r": 56,
           "label": "Gantung lentera",
           "actions": [
@@ -7879,8 +7879,8 @@
         {
           "id": "f5_lantern4",
           "area": "taman_kota",
-          "x": 1640,
-          "y": 780,
+          "x": 2050,
+          "y": 975,
           "r": 56,
           "label": "Gantung lentera",
           "actions": [
@@ -8413,8 +8413,8 @@
         {
           "id": "portal_pond",
           "area": "taman_kota",
-          "x": 640,
-          "y": 570,
+          "x": 800,
+          "y": 712,
           "r": 70,
           "label": "Sentuh permukaan kolam",
           "actions": [
@@ -10668,8 +10668,8 @@
         {
           "id": "q_sari_closure",
           "area": "taman_kota",
-          "x": 1000,
-          "y": 490,
+          "x": 1250,
+          "y": 612,
           "r": 80,
           "label": "Nenek Sari: halaman Wira",
           "actions": [
@@ -10722,8 +10722,8 @@
         {
           "who": "sari",
           "area": "taman_kota",
-          "x": 1000,
-          "y": 490,
+          "x": 1250,
+          "y": 612,
           "dir": "down"
         }
       ]
@@ -10740,8 +10740,8 @@
         {
           "id": "fest_raka",
           "area": "taman_kota",
-          "x": 1360,
-          "y": 560,
+          "x": 1700,
+          "y": 700,
           "r": 64,
           "label": "Teh rempah",
           "actions": [
@@ -10768,8 +10768,8 @@
         {
           "id": "fest_melati",
           "area": "taman_kota",
-          "x": 1180,
-          "y": 700,
+          "x": 1475,
+          "y": 875,
           "r": 64,
           "label": "Mahkota bunga",
           "actions": [
@@ -10800,8 +10800,8 @@
         {
           "id": "fest_juna",
           "area": "taman_kota",
-          "x": 880,
-          "y": 500,
+          "x": 1100,
+          "y": 625,
           "r": 64,
           "label": "Hujan Bintang",
           "actions": [
@@ -10832,8 +10832,8 @@
         {
           "id": "fest_udin",
           "area": "taman_kota",
-          "x": 360,
-          "y": 660,
+          "x": 450,
+          "y": 825,
           "r": 64,
           "label": "Dengar cerita Pak Udin",
           "actions": [
@@ -10858,29 +10858,29 @@
         {
           "who": "raka",
           "area": "taman_kota",
-          "x": 1360,
-          "y": 560,
+          "x": 1700,
+          "y": 700,
           "dir": "down"
         },
         {
           "who": "melati",
           "area": "taman_kota",
-          "x": 1180,
-          "y": 700,
+          "x": 1475,
+          "y": 875,
           "dir": "down"
         },
         {
           "who": "juna",
           "area": "taman_kota",
-          "x": 880,
-          "y": 500,
+          "x": 1100,
+          "y": 625,
           "dir": "down"
         },
         {
           "who": "udin",
           "area": "taman_kota",
-          "x": 360,
-          "y": 660,
+          "x": 450,
+          "y": 825,
           "dir": "down"
         }
       ],
@@ -10915,8 +10915,8 @@
         {
           "id": "fest_release",
           "area": "taman_kota",
-          "x": 640,
-          "y": 570,
+          "x": 800,
+          "y": 712,
           "r": 70,
           "label": "Lepaskan lentera",
           "actions": [
@@ -10933,16 +10933,16 @@
                   "c": "bars"
                 },
                 {
-                  "x": 640,
-                  "y": 510,
+                  "x": 800,
+                  "y": 638,
                   "zoom": 1.25,
                   "t": 1.8,
                   "c": "cam"
                 },
                 {
                   "kind": "lanterns",
-                  "x": 640,
-                  "y": 500,
+                  "x": 800,
+                  "y": 625,
                   "t": 7,
                   "n": 24,
                   "c": "fx"
@@ -11179,8 +11179,8 @@
         {
           "id": "v464_park",
           "area": "taman_kota",
-          "x": 1030,
-          "y": 670,
+          "x": 1288,
+          "y": 838,
           "r": 95,
           "label": "Jalan bersama di taman",
           "actions": [
@@ -12540,8 +12540,8 @@
         {
           "id": "v465_second_talk",
           "area": "taman_kota",
-          "x": 1000,
-          "y": 490,
+          "x": 1250,
+          "y": 612,
           "r": 100,
           "label": "Duduk dan bicarakan hari berikutnya",
           "actions": [
@@ -17445,8 +17445,8 @@
     {
       "id": "mochi3",
       "area": "taman_kota",
-      "x": 1700,
-      "y": 720,
+      "x": 2125,
+      "y": 900,
       "r": 64,
       "label": "Kucing oranye",
       "actions": [
@@ -17465,8 +17465,8 @@
       ],
       "sprite": {
         "image": "props/mochi.png",
-        "x": 1700,
-        "y": 720,
+        "x": 2125,
+        "y": 900,
         "bob": false
       },
       "when": {
@@ -17602,8 +17602,8 @@
     {
       "id": "stone4",
       "area": "taman_kota",
-      "x": 1215,
-      "y": 1060,
+      "x": 1519,
+      "y": 1325,
       "r": 50,
       "label": "Batu berkilau",
       "actions": [
@@ -17627,8 +17627,8 @@
       ],
       "sprite": {
         "image": "props/shiny_stone.png",
-        "x": 1215,
-        "y": 1058,
+        "x": 1519,
+        "y": 1322,
         "bob": true
       },
       "when": {
@@ -17642,8 +17642,8 @@
     {
       "id": "stone5",
       "area": "taman_kota",
-      "x": 380,
-      "y": 400,
+      "x": 475,
+      "y": 500,
       "r": 50,
       "label": "Batu berkilau",
       "actions": [
@@ -17667,8 +17667,8 @@
       ],
       "sprite": {
         "image": "props/shiny_stone.png",
-        "x": 380,
-        "y": 398,
+        "x": 475,
+        "y": 498,
         "bob": true
       },
       "when": {
@@ -17718,8 +17718,8 @@
     {
       "id": "photo2",
       "area": "taman_kota",
-      "x": 1500,
-      "y": 470,
+      "x": 1875,
+      "y": 588,
       "r": 56,
       "label": "Potret gazebo",
       "actions": [
@@ -17826,8 +17826,8 @@
     {
       "id": "photo5",
       "area": "taman_kota",
-      "x": 1700,
-      "y": 720,
+      "x": 2125,
+      "y": 900,
       "r": 56,
       "label": "Potret pohon tua",
       "actions": [
@@ -18124,8 +18124,8 @@
     {
       "id": "route_a_3",
       "area": "taman_kota",
-      "x": 640,
-      "y": 570,
+      "x": 800,
+      "y": 712,
       "r": 60,
       "label": "Penanda arah kolam",
       "actions": [
@@ -18256,8 +18256,8 @@
     {
       "id": "route_s_3",
       "area": "taman_kota",
-      "x": 1500,
-      "y": 470,
+      "x": 1875,
+      "y": 588,
       "r": 60,
       "label": "Potongan pesan gazebo",
       "actions": [
@@ -18400,8 +18400,8 @@
     {
       "id": "color_s_1",
       "area": "taman_kota",
-      "x": 1500,
-      "y": 470,
+      "x": 1875,
+      "y": 588,
       "r": 66,
       "label": "Warna gazebo",
       "actions": [
@@ -19413,8 +19413,8 @@
     {
       "id": "page8",
       "area": "taman_kota",
-      "x": 1500,
-      "y": 300,
+      "x": 1875,
+      "y": 375,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19449,8 +19449,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 1500,
-        "y": 298,
+        "x": 1875,
+        "y": 372,
         "bob": true
       },
       "when": {
@@ -19462,8 +19462,8 @@
     {
       "id": "page9",
       "area": "taman_kota",
-      "x": 200,
-      "y": 1100,
+      "x": 250,
+      "y": 1375,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19498,8 +19498,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 200,
-        "y": 1098,
+        "x": 250,
+        "y": 1372,
         "bob": true
       },
       "when": {
@@ -19511,8 +19511,8 @@
     {
       "id": "page10",
       "area": "taman_kota",
-      "x": 700,
-      "y": 1250,
+      "x": 875,
+      "y": 1562,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19547,8 +19547,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 700,
-        "y": 1248,
+        "x": 875,
+        "y": 1560,
         "bob": true
       },
       "when": {
@@ -19560,8 +19560,8 @@
     {
       "id": "page11",
       "area": "taman_kota",
-      "x": 1800,
-      "y": 1200,
+      "x": 2250,
+      "y": 1500,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19596,8 +19596,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 1800,
-        "y": 1198,
+        "x": 2250,
+        "y": 1498,
         "bob": true
       },
       "when": {
@@ -20396,8 +20396,8 @@
     {
       "id": "fish_taman_kota",
       "area": "taman_kota",
-      "x": 1064,
-      "y": 840,
+      "x": 1330,
+      "y": 1050,
       "r": 58,
       "label": "Memancing",
       "actions": [
@@ -22216,8 +22216,8 @@
     {
       "id": "star22",
       "area": "taman_kota",
-      "x": 1840,
-      "y": 1300,
+      "x": 2300,
+      "y": 1625,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22245,8 +22245,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 1840,
-        "y": 1296,
+        "x": 2300,
+        "y": 1620,
         "bob": true
       },
       "when": {
@@ -22258,8 +22258,8 @@
     {
       "id": "star23",
       "area": "taman_kota",
-      "x": 120,
-      "y": 200,
+      "x": 150,
+      "y": 250,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22287,8 +22287,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 120,
-        "y": 196,
+        "x": 150,
+        "y": 245,
         "bob": true
       },
       "when": {
@@ -22300,8 +22300,8 @@
     {
       "id": "star24",
       "area": "taman_kota",
-      "x": 980,
-      "y": 1340,
+      "x": 1225,
+      "y": 1675,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22329,8 +22329,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 980,
-        "y": 1336,
+        "x": 1225,
+        "y": 1670,
         "bob": true
       },
       "when": {
@@ -23085,8 +23085,8 @@
     {
       "id": "lostbook4",
       "area": "taman_kota",
-      "x": 1700,
-      "y": 900,
+      "x": 2125,
+      "y": 1125,
       "r": 50,
       "label": "Buku tertinggal",
       "actions": [
@@ -23110,8 +23110,8 @@
       ],
       "sprite": {
         "image": "props/lost_book.png",
-        "x": 1700,
-        "y": 896,
+        "x": 2125,
+        "y": 1120,
         "bob": true
       },
       "when": {
@@ -23618,8 +23618,8 @@
     {
       "id": "WE27_IKAN_PONDOK",
       "area": "taman_kota",
-      "x": 980,
-      "y": 964,
+      "x": 1225,
+      "y": 1205,
       "r": 69,
       "label": "Penjaga Kolam Koi",
       "actions": [
@@ -24628,8 +24628,8 @@
     {
       "id": "V49_DISC_TAMAN_KOTA",
       "area": "taman_kota",
-      "x": 640,
-      "y": 580,
+      "x": 800,
+      "y": 725,
       "r": 76,
       "label": "✧ Bangku yang Bercerita",
       "when": {
@@ -28319,8 +28319,8 @@
     {
       "id": "V50_VIEW_TAMAN_KOTA",
       "area": "taman_kota",
-      "x": 1169,
-      "y": 397,
+      "x": 1461,
+      "y": 496,
       "r": 49,
       "label": "✦ Panorama: Teras di Atas Kolam",
       "hideIfFlag": "V50_VIEW_TAMAN_KOTA_DONE",
@@ -31796,8 +31796,8 @@
         {
           "at": "06:00",
           "area": "taman_kota",
-          "x": 561,
-          "y": 459,
+          "x": 701,
+          "y": 574,
           "dir": "down",
           "wander": 40
         },
@@ -31847,8 +31847,8 @@
       "name": "Dito",
       "sprite": "dito",
       "area": "taman_kota",
-      "x": 1100,
-      "y": 540,
+      "x": 1375,
+      "y": 675,
       "dir": "down",
       "when": {
         "notFlags": [
@@ -32135,8 +32135,8 @@
         {
           "at": "12:30",
           "area": "taman_kota",
-          "x": 1101,
-          "y": 537,
+          "x": 1376,
+          "y": 671,
           "dir": "down",
           "wander": 110
         },
@@ -33752,8 +33752,8 @@
       "name": "Pak Harun",
       "sprite": "harun",
       "area": "taman_kota",
-      "x": 1299,
-      "y": 801,
+      "x": 1624,
+      "y": 1001,
       "dir": "left",
       "when": {
         "minChapter": "C01"
@@ -33763,8 +33763,8 @@
         {
           "at": "06:00",
           "area": "taman_kota",
-          "x": 1299,
-          "y": 801,
+          "x": 1624,
+          "y": 1001,
           "dir": "left",
           "wander": 90
         },
@@ -33779,8 +33779,8 @@
         {
           "at": "13:00",
           "area": "taman_kota",
-          "x": 699,
-          "y": 561,
+          "x": 874,
+          "y": 701,
           "dir": "down",
           "wander": 90
         },
@@ -33965,8 +33965,8 @@
       "name": "Tika",
       "sprite": "tika",
       "area": "taman_kota",
-      "x": 1161,
-      "y": 603,
+      "x": 1451,
+      "y": 754,
       "dir": "left",
       "when": {
         "minChapter": "C01"
@@ -33988,8 +33988,8 @@
         {
           "at": "12:30",
           "area": "taman_kota",
-          "x": 1161,
-          "y": 603,
+          "x": 1451,
+          "y": 754,
           "dir": "left",
           "wander": 120
         },
@@ -34121,8 +34121,8 @@
         {
           "at": "17:00",
           "area": "taman_kota",
-          "x": 999,
-          "y": 561,
+          "x": 1249,
+          "y": 701,
           "dir": "down",
           "wander": 200
         },
@@ -34244,8 +34244,8 @@
         {
           "at": "16:00",
           "area": "taman_kota",
-          "x": 1047,
-          "y": 519,
+          "x": 1309,
+          "y": 649,
           "dir": "down",
           "wander": 50
         },
@@ -34667,8 +34667,8 @@
         {
           "at": "17:00",
           "area": "taman_kota",
-          "x": 999,
-          "y": 519,
+          "x": 1249,
+          "y": 649,
           "dir": "down",
           "wander": 120
         },
@@ -34806,8 +34806,8 @@
         {
           "at": "17:00",
           "area": "taman_kota",
-          "x": 1041,
-          "y": 543,
+          "x": 1301,
+          "y": 679,
           "dir": "down",
           "wander": 120
         },
@@ -34893,8 +34893,8 @@
         {
           "at": "09:00",
           "area": "taman_kota",
-          "x": 1077,
-          "y": 501,
+          "x": 1346,
+          "y": 626,
           "dir": "down",
           "wander": 60
         },
@@ -37396,8 +37396,8 @@
       "id": "ikan_pondok",
       "title": "Penjaga Kolam Koi",
       "area": "taman_kota",
-      "x": 980,
-      "y": 964,
+      "x": 1225,
+      "y": 1205,
       "hours": [
         "13:00",
         "18:00"

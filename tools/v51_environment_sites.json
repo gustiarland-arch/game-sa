@@ -22,15 +22,15 @@
     "reason": "Beranda toko di sisi jalur pedestrian"
   },
   "taman_kota": {
-    "x": 1085,
-    "y": 355,
+    "x": 1356,
+    "y": 444,
     "w": 168,
     "h": 92,
     "stair": 78,
     "rise": 26,
     "stairWidth": 56,
     "style": "garden",
-    "reason": "Teras pemandang di luar lengkung jalan danau"
+    "reason": "Taman Kota v6: teras pemandang di utara danau, menghadap kolam koi dan jalan lingkar"
   },
   "riverside": {
     "x": 1060,
