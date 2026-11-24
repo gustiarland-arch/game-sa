@@ -21,7 +21,7 @@
   utuh per texel dan mengunci posisi ke grid piksel layar (`PixelPerfectV54`). Texel tidak lagi
   tampil 2/3 px bergantian dan tidak "berkilau" saat kamera bergerak. Cutscene tidak berubah.
   Setelan `pixelPerfect` (default aktif) disimpan di settings tanpa mengubah schema.
-- **Tangga (Fase 5):** pemain, pasangan, dan NPC berjalan 82% lebih lambat di anak tangga
+- **Tangga (Fase 5):** pemain, pasangan, dan NPC berjalan dengan 82% kecepatan normal di anak tangga
   (`ElevationV50.speedFactor`), sehingga naik-turun terasa berbobot dan suara langkah tangga
   tidak terlalu rapat.
 - Save schema 8, dua route, canon ending, quest, dan 29 map tidak diubah.
