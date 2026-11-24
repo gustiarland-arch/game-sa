@@ -244,7 +244,9 @@
     20,
     8
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "bed_blue",
@@ -906,7 +908,8 @@
     10
    ],
    "maps": [
-    "hutan_bisik"
+    "hutan_bisik",
+    "plaza"
    ]
   },
   {
@@ -942,7 +945,6 @@
    "maps": [
     "hutan_bisik",
     "lantern_field",
-    "plaza",
     "taman_kota"
    ]
   },
@@ -1462,7 +1464,9 @@
     70,
     14
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "flower_buckets_b",
@@ -1477,7 +1481,9 @@
     70,
     14
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "flower_buckets_c",
@@ -1492,7 +1498,9 @@
     70,
     14
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "flower_shelf",
@@ -1736,6 +1744,7 @@
     20
    ],
    "maps": [
+    "plaza",
     "taman_kota"
    ]
   },
@@ -1814,7 +1823,9 @@
     90,
     14
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "hedge_tk",
@@ -2438,7 +2449,9 @@
     12,
     6
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "pedestal_book",
@@ -3610,7 +3623,9 @@
     84,
     18
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "stall_flowers_in",
@@ -4057,6 +4072,7 @@
     "bukit_bintang",
     "dermaga",
     "hutan_bisik",
+    "plaza",
     "riverside",
     "taman_kota"
    ]
@@ -4180,7 +4196,8 @@
    ],
    "maps": [
     "bukit_bintang",
-    "hutan_bisik"
+    "hutan_bisik",
+    "plaza"
    ]
   },
   {
@@ -5125,6 +5142,7 @@
     8
    ],
    "maps": [
+    "plaza",
     "riverside"
    ]
   },
@@ -5987,7 +6005,8 @@
    ],
    "maps": [
     "arcade",
-    "galeri_komunitas"
+    "galeri_komunitas",
+    "plaza"
    ]
   },
   {
@@ -6040,6 +6059,7 @@
     "hutan_bisik",
     "lantern_field",
     "perpustakaan",
+    "plaza",
     "riverside",
     "taman_kota"
    ],
@@ -6065,6 +6085,7 @@
    ],
    "maps": [
     "bukit_bintang",
+    "plaza",
     "taman_kota",
     "toko_bunga"
    ]
@@ -6241,6 +6262,7 @@
     "arcade",
     "gua_kristal",
     "lantern_field",
+    "plaza",
     "star_path",
     "starfall_village"
    ],
@@ -6316,6 +6338,7 @@
     "eternal_garden",
     "hall_of_tomorrow",
     "memory_garden",
+    "plaza",
     "rain_garden"
    ],
    "category": "plant|pot|vase",
@@ -6341,7 +6364,8 @@
    "maps": [
     "cafe",
     "galeri_komunitas",
-    "perumahan"
+    "perumahan",
+    "plaza"
    ],
    "category": "plant|pot|vase",
    "band": [
@@ -6471,6 +6495,7 @@
    ],
    "maps": [
     "dermaga",
+    "plaza",
     "riverside"
    ]
   },
@@ -6568,7 +6593,8 @@
    "maps": [
     "jalan_kota",
     "perpustakaan",
-    "perumahan"
+    "perumahan",
+    "plaza"
    ],
    "category": "lamp|lantern",
    "band": [
@@ -6681,7 +6707,9 @@
     26,
     12
    ],
-   "maps": []
+   "maps": [
+    "plaza"
+   ]
   },
   {
    "id": "vending_ar",

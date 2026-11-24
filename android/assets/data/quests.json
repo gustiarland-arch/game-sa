@@ -636,14 +636,14 @@
               },
               {
                 "who": "partner",
-                "x": 1090,
-                "y": 600,
+                "x": 1362,
+                "y": 750,
                 "dir": "left",
                 "c": "place"
               },
               {
-                "x": 960,
-                "y": 640,
+                "x": 1200,
+                "y": 800,
                 "zoom": 0.75,
                 "t": 2.0,
                 "c": "cam"
@@ -655,16 +655,16 @@
                 "c": "caption"
               },
               {
-                "x": 1090,
-                "y": 570,
+                "x": 1362,
+                "y": 712,
                 "zoom": 1.35,
                 "t": 1.8,
                 "c": "cam"
               },
               {
                 "kind": "petals",
-                "x": 1090,
-                "y": 600,
+                "x": 1362,
+                "y": 750,
                 "t": 5.6,
                 "c": "fx"
               },
@@ -737,8 +737,8 @@
         {
           "id": "meet",
           "area": "plaza",
-          "x": 1090,
-          "y": 600,
+          "x": 1362,
+          "y": 750,
           "r": 62,
           "label": "Sapa",
           "actions": [
@@ -766,8 +766,8 @@
                   "c": "pose"
                 },
                 {
-                  "x": 1071,
-                  "y": 580,
+                  "x": 1339,
+                  "y": 725,
                   "zoom": 1.4,
                   "t": 1.2,
                   "async": true,
@@ -781,8 +781,8 @@
                 {
                   "who": "player",
                   "to": [
-                    1052,
-                    604
+                    1315,
+                    755
                   ],
                   "dir": "right",
                   "c": "move"
@@ -852,8 +852,8 @@
                 },
                 {
                   "kind": "hearts",
-                  "x": 1071,
-                  "y": 590,
+                  "x": 1339,
+                  "y": 738,
                   "t": 2.6,
                   "c": "fx"
                 },
@@ -880,8 +880,8 @@
                 },
                 {
                   "kind": "glow",
-                  "x": 1160,
-                  "y": 852,
+                  "x": 1450,
+                  "y": 1065,
                   "t": 4.0,
                   "c": "fx"
                 },
@@ -920,8 +920,8 @@
                   "c": "face"
                 },
                 {
-                  "x": 1160,
-                  "y": 820,
+                  "x": 1450,
+                  "y": 1025,
                   "zoom": 1.25,
                   "t": 1.8,
                   "c": "cam"
@@ -1142,8 +1142,8 @@
         {
           "who": "$PARTNER",
           "area": "plaza",
-          "x": 1090,
-          "y": 600,
+          "x": 1362,
+          "y": 750,
           "dir": "left"
         }
       ]
@@ -1160,8 +1160,8 @@
         {
           "id": "book",
           "area": "plaza",
-          "x": 1160,
-          "y": 890,
+          "x": 1450,
+          "y": 1112,
           "r": 64,
           "label": "Buku bercahaya",
           "actions": [
@@ -1180,8 +1180,8 @@
                 {
                   "who": "partner",
                   "to": [
-                    1194,
-                    900
+                    1492,
+                    1125
                   ],
                   "dir": "up",
                   "async": true,
@@ -1190,8 +1190,8 @@
                 {
                   "who": "player",
                   "to": [
-                    1128,
-                    900
+                    1410,
+                    1125
                   ],
                   "dir": "up",
                   "c": "move"
@@ -1207,8 +1207,8 @@
                   "c": "face"
                 },
                 {
-                  "x": 1160,
-                  "y": 850,
+                  "x": 1450,
+                  "y": 1062,
                   "zoom": 1.5,
                   "t": 1.4,
                   "c": "cam"
@@ -1227,8 +1227,8 @@
                 },
                 {
                   "kind": "book",
-                  "x": 1160,
-                  "y": 860,
+                  "x": 1450,
+                  "y": 1075,
                   "t": 6.5,
                   "c": "fx"
                 },
@@ -1255,22 +1255,22 @@
                 },
                 {
                   "kind": "portal",
-                  "x": 1160,
-                  "y": 850,
+                  "x": 1450,
+                  "y": 1062,
                   "t": 10.0,
                   "c": "fx"
                 },
                 {
                   "kind": "sparkles",
-                  "x": 1160,
-                  "y": 840,
+                  "x": 1450,
+                  "y": 1050,
                   "t": 3.0,
                   "n": 40,
                   "c": "fx"
                 },
                 {
-                  "x": 1160,
-                  "y": 840,
+                  "x": 1450,
+                  "y": 1050,
                   "zoom": 1.85,
                   "t": 2.4,
                   "c": "cam"
@@ -1285,12 +1285,12 @@
                   "who": "partner",
                   "path": [
                     [
-                      1194,
-                      936
+                      1492,
+                      1170
                     ],
                     [
-                      1176,
-                      936
+                      1470,
+                      1170
                     ]
                   ],
                   "dir": "down",
@@ -1301,20 +1301,20 @@
                   "who": "player",
                   "path": [
                     [
-                      1128,
-                      936
+                      1410,
+                      1170
                     ],
                     [
-                      1146,
-                      936
+                      1432,
+                      1170
                     ]
                   ],
                   "dir": "down",
                   "c": "move"
                 },
                 {
-                  "x": 1160,
-                  "y": 902,
+                  "x": 1450,
+                  "y": 1128,
                   "zoom": 1.6,
                   "t": 0.9,
                   "c": "cam"
@@ -1518,8 +1518,8 @@
           ],
           "sprite": {
             "image": "props/glowing_book.png",
-            "x": 1160,
-            "y": 852,
+            "x": 1450,
+            "y": 1065,
             "bob": false
           }
         }
@@ -1860,8 +1860,8 @@
             {
               "do": "warp",
               "area": "plaza",
-              "x": 1160,
-              "y": 890,
+              "x": 1450,
+              "y": 1112,
               "dir": "down"
             },
             {
@@ -2040,8 +2040,8 @@
         {
           "id": "mural",
           "area": "plaza",
-          "x": 420,
-          "y": 716,
+          "x": 525,
+          "y": 895,
           "r": 64,
           "label": "Amati mural",
           "actions": [
@@ -2067,8 +2067,8 @@
         {
           "id": "mural",
           "area": "plaza",
-          "x": 420,
-          "y": 716,
+          "x": 525,
+          "y": 895,
           "r": 64,
           "label": "Amati mural",
           "actions": [
@@ -3891,8 +3891,8 @@
         {
           "id": "f2_sari",
           "area": "plaza",
-          "x": 1420,
-          "y": 610,
+          "x": 1775,
+          "y": 762,
           "r": 70,
           "label": "Bicara dengan Nenek Sari",
           "actions": [
@@ -3922,8 +3922,8 @@
         {
           "id": "f2_bed1",
           "area": "plaza",
-          "x": 1060,
-          "y": 860,
+          "x": 1325,
+          "y": 1075,
           "r": 56,
           "label": "Siram bunga",
           "actions": [
@@ -3947,8 +3947,8 @@
           ],
           "sprite": {
             "image": "props/watering.png",
-            "x": 1060,
-            "y": 850,
+            "x": 1325,
+            "y": 1062,
             "bob": true
           },
           "when": {
@@ -3961,8 +3961,8 @@
         {
           "id": "f2_bed2",
           "area": "plaza",
-          "x": 480,
-          "y": 540,
+          "x": 600,
+          "y": 675,
           "r": 56,
           "label": "Siram bunga",
           "actions": [
@@ -3986,8 +3986,8 @@
           ],
           "sprite": {
             "image": "props/watering.png",
-            "x": 480,
-            "y": 530,
+            "x": 600,
+            "y": 662,
             "bob": true
           },
           "when": {
@@ -4000,8 +4000,8 @@
         {
           "id": "f2_bed3",
           "area": "plaza",
-          "x": 260,
-          "y": 660,
+          "x": 325,
+          "y": 825,
           "r": 56,
           "label": "Siram bunga",
           "actions": [
@@ -4025,8 +4025,8 @@
           ],
           "sprite": {
             "image": "props/watering.png",
-            "x": 260,
-            "y": 650,
+            "x": 325,
+            "y": 812,
             "bob": true
           },
           "when": {
@@ -4039,8 +4039,8 @@
         {
           "id": "f2_sari_done",
           "area": "plaza",
-          "x": 1420,
-          "y": 610,
+          "x": 1775,
+          "y": 762,
           "r": 70,
           "label": "Kembali ke Nenek Sari",
           "actions": [
@@ -5486,8 +5486,8 @@
         {
           "id": "f3_buah",
           "area": "plaza",
-          "x": 760,
-          "y": 660,
+          "x": 950,
+          "y": 825,
           "r": 64,
           "label": "Lapak buah",
           "actions": [
@@ -5518,8 +5518,8 @@
         {
           "id": "f3_buku",
           "area": "plaza",
-          "x": 820,
-          "y": 980,
+          "x": 1025,
+          "y": 1225,
           "r": 64,
           "label": "Lapak buku bekas",
           "actions": [
@@ -5550,8 +5550,8 @@
         {
           "id": "f3_gelang",
           "area": "plaza",
-          "x": 1250,
-          "y": 760,
+          "x": 1562,
+          "y": 950,
           "r": 64,
           "label": "Lempar gelang",
           "actions": [
@@ -5592,8 +5592,8 @@
         {
           "who": "juna",
           "area": "plaza",
-          "x": 1250,
-          "y": 760,
+          "x": 1562,
+          "y": 950,
           "dir": "down"
         }
       ],
@@ -5663,8 +5663,8 @@
         {
           "id": "honey",
           "area": "plaza",
-          "x": 1420,
-          "y": 610,
+          "x": 1775,
+          "y": 762,
           "r": 64,
           "label": "Minta madu",
           "actions": [
@@ -7966,8 +7966,8 @@
         {
           "id": "f5_card",
           "area": "plaza",
-          "x": 1220,
-          "y": 500,
+          "x": 1525,
+          "y": 625,
           "r": 60,
           "label": "Tulis kartu harapan",
           "actions": [
@@ -10584,8 +10584,8 @@
             {
               "do": "warp",
               "area": "plaza",
-              "x": 960,
-              "y": 830,
+              "x": 1200,
+              "y": 1038,
               "dir": "down"
             },
             {
@@ -11052,8 +11052,8 @@
         {
           "id": "v473_post_plaza",
           "area": "plaza",
-          "x": 980,
-          "y": 630,
+          "x": 1225,
+          "y": 788,
           "r": 105,
           "label": "Kenangan kecil setelah petualangan",
           "actions": [
@@ -16135,8 +16135,8 @@
         {
           "id": "v473_plaza_memory",
           "area": "plaza",
-          "x": 960,
-          "y": 640,
+          "x": 1200,
+          "y": 800,
           "r": 105,
           "label": "Bunga kertas dan kartu pos",
           "actions": [
@@ -16181,8 +16181,8 @@
           ],
           "sprite": {
             "image": "items/v473_page.png",
-            "x": 960,
-            "y": 625,
+            "x": 1200,
+            "y": 781,
             "bob": true
           }
         }
@@ -17374,8 +17374,8 @@
     {
       "id": "mochi1",
       "area": "plaza",
-      "x": 960,
-      "y": 200,
+      "x": 1200,
+      "y": 250,
       "r": 64,
       "label": "Kucing oranye",
       "actions": [
@@ -17395,8 +17395,8 @@
       ],
       "sprite": {
         "image": "props/mochi.png",
-        "x": 960,
-        "y": 200,
+        "x": 1200,
+        "y": 250,
         "bob": false
       },
       "when": {
@@ -17482,8 +17482,8 @@
     {
       "id": "stone1",
       "area": "plaza",
-      "x": 1220,
-      "y": 160,
+      "x": 1525,
+      "y": 200,
       "r": 50,
       "label": "Batu berkilau",
       "actions": [
@@ -17507,8 +17507,8 @@
       ],
       "sprite": {
         "image": "props/shiny_stone.png",
-        "x": 1220,
-        "y": 158,
+        "x": 1525,
+        "y": 198,
         "bob": true
       },
       "when": {
@@ -17682,8 +17682,8 @@
     {
       "id": "photo1",
       "area": "plaza",
-      "x": 960,
-      "y": 830,
+      "x": 1200,
+      "y": 1038,
       "r": 56,
       "label": "Potret air mancur",
       "actions": [
@@ -17862,8 +17862,8 @@
     {
       "id": "notice_start",
       "area": "plaza",
-      "x": 1300,
-      "y": 490,
+      "x": 1625,
+      "y": 612,
       "r": 60,
       "label": "Papan pengumuman",
       "actions": [
@@ -17908,8 +17908,8 @@
     {
       "id": "notice_done",
       "area": "plaza",
-      "x": 1300,
-      "y": 490,
+      "x": 1625,
+      "y": 612,
       "r": 60,
       "label": "Tempel foto",
       "actions": [
@@ -18525,8 +18525,8 @@
     {
       "id": "v26_sqa_1",
       "area": "plaza",
-      "x": 960,
-      "y": 830,
+      "x": 1200,
+      "y": 1038,
       "r": 66,
       "label": "Gambar simbol plaza",
       "actions": [
@@ -18670,8 +18670,8 @@
     {
       "id": "v26_sqs_1",
       "area": "plaza",
-      "x": 960,
-      "y": 830,
+      "x": 1200,
+      "y": 1038,
       "r": 66,
       "label": "Tulis kartu plaza",
       "actions": [
@@ -18790,8 +18790,8 @@
     {
       "id": "v26_sql_start",
       "area": "plaza",
-      "x": 560,
-      "y": 600,
+      "x": 700,
+      "y": 750,
       "r": 75,
       "label": "Nenek Sari: cerita hujan",
       "actions": [
@@ -18898,8 +18898,8 @@
     {
       "id": "v26_sql_done",
       "area": "plaza",
-      "x": 560,
-      "y": 600,
+      "x": 700,
+      "y": 750,
       "r": 75,
       "label": "Kembalikan cerita ke Nenek Sari",
       "actions": [
@@ -19070,8 +19070,8 @@
     {
       "id": "page1",
       "area": "plaza",
-      "x": 300,
-      "y": 236,
+      "x": 375,
+      "y": 295,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19106,8 +19106,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 300,
-        "y": 234,
+        "x": 375,
+        "y": 292,
         "bob": true
       },
       "when": {
@@ -19119,8 +19119,8 @@
     {
       "id": "page2",
       "area": "plaza",
-      "x": 1700,
-      "y": 1010,
+      "x": 2125,
+      "y": 1262,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19155,8 +19155,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 1700,
-        "y": 1008,
+        "x": 2125,
+        "y": 1260,
         "bob": true
       },
       "when": {
@@ -19168,8 +19168,8 @@
     {
       "id": "page3",
       "area": "plaza",
-      "x": 150,
-      "y": 900,
+      "x": 188,
+      "y": 1125,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19204,8 +19204,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 150,
-        "y": 898,
+        "x": 188,
+        "y": 1122,
         "bob": true
       },
       "when": {
@@ -19217,8 +19217,8 @@
     {
       "id": "page4",
       "area": "plaza",
-      "x": 1250,
-      "y": 1050,
+      "x": 1562,
+      "y": 1290,
       "r": 48,
       "label": "Halaman lama",
       "actions": [
@@ -19253,8 +19253,8 @@
       ],
       "sprite": {
         "image": "props/old_page.png",
-        "x": 1250,
-        "y": 1048,
+        "x": 1562,
+        "y": 1310,
         "bob": true
       },
       "when": {
@@ -22048,8 +22048,8 @@
     {
       "id": "star18",
       "area": "plaza",
-      "x": 560,
-      "y": 170,
+      "x": 700,
+      "y": 212,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22077,8 +22077,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 560,
-        "y": 166,
+        "x": 700,
+        "y": 208,
         "bob": true
       },
       "when": {
@@ -22090,8 +22090,8 @@
     {
       "id": "star19",
       "area": "plaza",
-      "x": 1820,
-      "y": 1100,
+      "x": 2275,
+      "y": 1480,
       "r": 46,
       "label": "Kepingan bintang",
       "actions": [
@@ -22119,8 +22119,8 @@
       ],
       "sprite": {
         "image": "props/star_piece.png",
-        "x": 1820,
-        "y": 1096,
+        "x": 2275,
+        "y": 1476,
         "bob": true
       },
       "when": {
@@ -22965,8 +22965,8 @@
     {
       "id": "lostbook1",
       "area": "plaza",
-      "x": 600,
-      "y": 640,
+      "x": 750,
+      "y": 800,
       "r": 50,
       "label": "Buku tertinggal",
       "actions": [
@@ -22990,8 +22990,8 @@
       ],
       "sprite": {
         "image": "props/lost_book.png",
-        "x": 600,
-        "y": 636,
+        "x": 750,
+        "y": 795,
         "bob": true
       },
       "when": {
@@ -23199,8 +23199,8 @@
     {
       "id": "paint1",
       "area": "plaza",
-      "x": 760,
-      "y": 220,
+      "x": 950,
+      "y": 275,
       "r": 50,
       "label": "Kaleng cat",
       "actions": [
@@ -23224,8 +23224,8 @@
       ],
       "sprite": {
         "image": "props/paint_pink.png",
-        "x": 760,
-        "y": 216,
+        "x": 950,
+        "y": 270,
         "bob": true
       },
       "when": {
@@ -23475,8 +23475,8 @@
     {
       "id": "job_kurir_plaza",
       "area": "plaza",
-      "x": 560,
-      "y": 600,
+      "x": 700,
+      "y": 750,
       "r": 82,
       "label": "Antar surat ke Plaza",
       "actions": [
@@ -23532,8 +23532,8 @@
     {
       "id": "WE27_PAGI_PLAZA",
       "area": "plaza",
-      "x": 560,
-      "y": 600,
+      "x": 700,
+      "y": 750,
       "r": 69,
       "label": "Bunga di Pagi Plaza",
       "actions": [
@@ -24406,8 +24406,8 @@
     {
       "id": "V49_DISC_PLAZA",
       "area": "plaza",
-      "x": 960,
-      "y": 836,
+      "x": 1200,
+      "y": 1045,
       "r": 76,
       "label": "✧ Jejak di Air Mancur",
       "when": {
@@ -28210,8 +28210,8 @@
     {
       "id": "V50_VIEW_PLAZA",
       "area": "plaza",
-      "x": 849,
-      "y": 492,
+      "x": 864,
+      "y": 380,
       "r": 49,
       "label": "✦ Panorama: Anak Tangga di Plaza",
       "hideIfFlag": "V50_VIEW_PLAZA_DONE",
@@ -30873,8 +30873,8 @@
         {
           "at": "14:30",
           "area": "plaza",
-          "x": 1329,
-          "y": 789,
+          "x": 1600,
+          "y": 930,
           "dir": "left",
           "wander": 40
         },
@@ -31161,8 +31161,8 @@
         {
           "at": "06:00",
           "area": "plaza",
-          "x": 519,
-          "y": 999,
+          "x": 649,
+          "y": 1249,
           "dir": "down",
           "wander": 60
         },
@@ -31438,8 +31438,8 @@
       "name": "Nenek Sari",
       "sprite": "sari",
       "area": "plaza",
-      "x": 1420,
-      "y": 610,
+      "x": 1775,
+      "y": 762,
       "dir": "left",
       "when": {
         "notSteps": [
@@ -31804,8 +31804,8 @@
         {
           "at": "06:00",
           "area": "plaza",
-          "x": 1419,
-          "y": 609,
+          "x": 1774,
+          "y": 761,
           "dir": "left",
           "wander": 30,
           "weather": [
@@ -31815,8 +31815,8 @@
         {
           "at": "09:00",
           "area": "plaza",
-          "x": 1419,
-          "y": 609,
+          "x": 1774,
+          "y": 761,
           "dir": "left",
           "wander": 50
         },
@@ -33293,8 +33293,8 @@
       "name": "Pak Pos",
       "sprite": "pos",
       "area": "plaza",
-      "x": 760,
-      "y": 520,
+      "x": 950,
+      "y": 650,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -33458,8 +33458,8 @@
         {
           "at": "08:00",
           "area": "plaza",
-          "x": 759,
-          "y": 525,
+          "x": 949,
+          "y": 656,
           "dir": "down",
           "wander": 20
         },
@@ -33482,8 +33482,8 @@
         {
           "at": "14:00",
           "area": "plaza",
-          "x": 759,
-          "y": 525,
+          "x": 949,
+          "y": 656,
           "dir": "down",
           "wander": 40
         },
@@ -33518,8 +33518,8 @@
         {
           "at": "14:00",
           "area": "plaza",
-          "x": 1359,
-          "y": 621,
+          "x": 1699,
+          "y": 776,
           "dir": "down",
           "wander": 30
         },
@@ -33771,8 +33771,8 @@
         {
           "at": "11:00",
           "area": "plaza",
-          "x": 519,
-          "y": 999,
+          "x": 649,
+          "y": 1249,
           "dir": "down",
           "wander": 60
         },
@@ -34501,8 +34501,8 @@
       "name": "Pak Darto",
       "sprite": "darto",
       "area": "plaza",
-      "x": 960,
-      "y": 960,
+      "x": 1200,
+      "y": 1200,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -34516,8 +34516,8 @@
         {
           "at": "19:00",
           "area": "plaza",
-          "x": 957,
-          "y": 957,
+          "x": 1196,
+          "y": 1196,
           "dir": "down",
           "wander": 360
         },
@@ -34540,8 +34540,8 @@
         {
           "at": "24:00",
           "area": "plaza",
-          "x": 963,
-          "y": 639,
+          "x": 1204,
+          "y": 799,
           "dir": "down",
           "wander": 360
         },
@@ -34617,8 +34617,8 @@
       "name": "Rara",
       "sprite": "rara",
       "area": "plaza",
-      "x": 900,
-      "y": 900,
+      "x": 1125,
+      "y": 1125,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -34648,8 +34648,8 @@
         {
           "at": "15:00",
           "area": "plaza",
-          "x": 903,
-          "y": 903,
+          "x": 1129,
+          "y": 1129,
           "dir": "down",
           "wander": 80
         },
@@ -34756,8 +34756,8 @@
       "name": "Bimo",
       "sprite": "bimo",
       "area": "plaza",
-      "x": 940,
-      "y": 910,
+      "x": 1175,
+      "y": 1138,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -34787,8 +34787,8 @@
         {
           "at": "15:00",
           "area": "plaza",
-          "x": 939,
-          "y": 909,
+          "x": 1174,
+          "y": 1136,
           "dir": "left",
           "wander": 80
         },
@@ -34878,8 +34878,8 @@
       "name": "Pak Ujang",
       "sprite": "ujang",
       "area": "plaza",
-      "x": 1150,
-      "y": 860,
+      "x": 1438,
+      "y": 1075,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -34901,8 +34901,8 @@
         {
           "at": "14:30",
           "area": "plaza",
-          "x": 1149,
-          "y": 843,
+          "x": 1436,
+          "y": 1054,
           "dir": "down",
           "wander": 50
         },
@@ -34964,8 +34964,8 @@
         {
           "at": "16:00",
           "area": "plaza",
-          "x": 561,
-          "y": 609,
+          "x": 701,
+          "y": 761,
           "dir": "down",
           "wander": 20
         },
@@ -35024,8 +35024,8 @@
       "name": "Bang Tigor",
       "sprite": "tigor",
       "area": "plaza",
-      "x": 1060,
-      "y": 1120,
+      "x": 1325,
+      "y": 1290,
       "dir": "down",
       "when": {
         "minChapter": "C01"
@@ -35039,8 +35039,8 @@
         {
           "at": "07:00",
           "area": "plaza",
-          "x": 1059,
-          "y": 1119,
+          "x": 1325,
+          "y": 1290,
           "dir": "up",
           "wander": 30
         },
@@ -35055,8 +35055,8 @@
         {
           "at": "13:00",
           "area": "plaza",
-          "x": 1059,
-          "y": 1119,
+          "x": 1325,
+          "y": 1290,
           "dir": "up",
           "wander": 30
         },
@@ -35067,8 +35067,8 @@
         {
           "at": "07:00",
           "area": "plaza",
-          "x": 1761,
-          "y": 597,
+          "x": 2201,
+          "y": 746,
           "dir": "down",
           "wander": 0,
           "weather": [
@@ -37349,8 +37349,8 @@
       "id": "pagi_plaza",
       "title": "Bunga di Pagi Plaza",
       "area": "plaza",
-      "x": 560,
-      "y": 600,
+      "x": 700,
+      "y": 750,
       "hours": [
         "07:00",
         "10:00"

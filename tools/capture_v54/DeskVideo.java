@@ -23,7 +23,7 @@ import java.util.*;
  */
 public final class DeskVideo extends OluGame {
     static final int FPS = 30;
-    static String OUT; static int DAY; static String STEP; static boolean STILLS;
+    static String OUT; static int DAY; static String STEP; static boolean STILLS, GOLDEN;
     // name, route, area, x, y, minute, seconds, waypoints "x:y;x:y"
     static String[][] SEGS;
     OutputStream ff; PrintWriter alog;
@@ -54,8 +54,9 @@ public final class DeskVideo extends OluGame {
         String[] s = SEGS[seg];
         alog.println(frame + "\tsegment\t" + s[0] + "\t0");
         Progress p = Progress.newGame(s[1], 1, STEP, maps.area(s[2]));
-        p.area = s[2]; p.x = Float.parseFloat(s[3]); p.y = Float.parseFloat(s[4]);
-        p.minute = Integer.parseInt(s[5]); p.day = DAY; p.dir = "right"; p.companion = true;
+        com.arlandsofia.olu.logic.MapDb.Area ar = maps.area(s[2]);
+        p.area = s[2]; p.x = s[3].equals("-") ? ar.spawnX : Float.parseFloat(s[3]); p.y = s[4].equals("-") ? ar.spawnY : Float.parseFloat(s[4]);
+        p.minute = Integer.parseInt(s[5]); p.day = s.length > 8 ? Integer.parseInt(s[8]) : DAY; p.dir = "right"; p.companion = true;
         String[] w = s[7].isEmpty() ? new String[0] : s[7].split(";");
         pts = new float[w.length][];
         for (int i = 0; i < w.length; i++) { String[] xy = w[i].split(":"); pts[i] = new float[]{Float.parseFloat(xy[0]), Float.parseFloat(xy[1])}; }
@@ -70,6 +71,7 @@ public final class DeskVideo extends OluGame {
                 System.out.println("PUDDLE " + s[0] + " " + best[0] + "," + best[1]);
             }
         }
+        com.badlogic.gdx.math.MathUtils.random.setSeed(4242L + seg);
         switchScreen(new GameScreen(this, p, false, false));
     }
 
@@ -112,7 +114,7 @@ public final class DeskVideo extends OluGame {
             try { ff.write(px); } catch (IOException e) { throw new RuntimeException(e); }
             frame++;
         }
-        if (STILLS && (segFrame == 90 || segFrame == 200)) {
+        if (STILLS && (GOLDEN ? (segFrame == 45 || segFrame == 150 || segFrame == 300) : (segFrame == 90 || segFrame == 200))) {
             Pixmap pm = Pixmap.createFromFrameBuffer(0, 0, w, h);
             Pixmap fl = new Pixmap(w, h, Pixmap.Format.RGBA8888);
             for (int y = 0; y < h; y++) for (int x = 0; x < w; x++) fl.drawPixel(x, h - 1 - y, pm.getPixel(x, y) | 0xff);
@@ -124,13 +126,33 @@ public final class DeskVideo extends OluGame {
     }
 
     public static void main(String[] a) {
-        OUT = a[0]; STEP = a[1]; DAY = Integer.parseInt(a[2]); STILLS = a.length > 3 && "stills".equals(a[3]);
+        OUT = a[0]; STEP = a[1]; DAY = Integer.parseInt(a[2]); STILLS = a.length > 3 && ("stills".equals(a[3]) || "golden".equals(a[3])); GOLDEN = a.length > 3 && "golden".equals(a[3]);
         SEGS = new String[][]{
             {"tepi_danau", "sofia", "riverside", "260", "640", "1050", "17", "600:700;1000:700;1400:690"},
             {"plaza", "sofia", "plaza", "700", "930", "990", "15", "830:900;1100:900;1180:780;1100:700"},
             {"hutan_air_terjun", "arland", "hutan_bisik", "1700", "330", "960", "13", "1830:250;1820:520;1840:800"},
             {"dermaga", "arland", "dermaga", "200", "440", "1080", "15", "700:470;979:380;979:300"},
         };
+        if (a.length > 4 && "tour".equals(a[3])) {
+            STILLS = true; GOLDEN = true;
+            try {
+                java.util.List<String[]> rows = new java.util.ArrayList<>();
+                for (String ln : java.nio.file.Files.readAllLines(java.nio.file.Paths.get(a[4]))) if (!ln.isBlank()) rows.add(ln.split("\\|", -1));
+                SEGS = rows.toArray(new String[0][]);
+            } catch (java.io.IOException e) { throw new RuntimeException(e); }
+        } else if (GOLDEN) {
+            String[][] extra = {
+                {"g_kamar_arland", "arland", "arland_room", "-", "-", "540", "11", "", "3"},
+                {"g_kamar_sofia", "sofia", "sofia_room", "-", "-", "1260", "11", "", "3"},
+                {"g_cafe", "sofia", "cafe", "-", "-", "600", "11", "", "3"},
+                {"g_gua", "arland", "gua_kristal", "-", "-", "800", "11", "", "3"},
+                {"g_bukit_malam", "sofia", "bukit_bintang", "-", "-", "1290", "11", "", "3"},
+                {"g_taman_cerah", "arland", "taman_kota", "-", "-", "600", "11", "", "3"},
+            };
+            String[][] all = new String[SEGS.length + extra.length][];
+            System.arraycopy(SEGS, 0, all, 0, SEGS.length); System.arraycopy(extra, 0, all, SEGS.length, extra.length);
+            SEGS = all;
+        }
         Lwjgl3ApplicationConfiguration c = new Lwjgl3ApplicationConfiguration();
         c.setTitle("olu-video"); c.setWindowedMode(1600, 720); c.useVsync(false); c.setForegroundFPS(0);
         c.disableAudio(true);

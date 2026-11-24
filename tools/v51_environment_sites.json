@@ -1,14 +1,14 @@
 {
   "plaza": {
-    "x": 765,
-    "y": 450,
+    "x": 780,
+    "y": 342,
     "w": 168,
     "h": 92,
     "stair": 78,
     "rise": 26,
     "stairWidth": 56,
     "style": "city",
-    "reason": "Plaza sisi utara — pelataran panggung menghadap lingkaran utama"
+    "reason": "Plaza v6: balkon taman belakang, tangga turun ke promenade di antara rumah Arland dan Sofia"
   },
   "jalan_kota": {
     "x": 545,
