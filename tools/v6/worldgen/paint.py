@@ -79,16 +79,21 @@ class Canvas:
         chk = ((self.xx + self.yy) % 2 == 0)
         up = (frac > 0.32) & chk & (idx < len(p) - 1)
         img[up] = p[np.clip(idx + 1, 0, len(p) - 1)][up]
+        # micro texture: 2px clumps of +-5% so the lawn reads as blades, not a smooth wash
+        micro = hash2(self.xx // 2, self.yy, s + 5)
+        img = img * (0.95 + 0.1 * micro)[..., None]
         rng = np.random.default_rng(s + 4)
-        n = H * W // 140
+        n = H * W // 85
         ys = rng.integers(4, H - 2, n); xs = rng.integers(2, W - 2, n)
         for y, x in zip(ys, xs):          # tufts: dark roots, light tips
             base = img[y + 1, x]
-            img[y, x - 1] = img[y, x] = img[y, x + 1] = base * 0.78
-            img[y - 1, x - 1] = base * 0.9
-            img[y - 1, x] = base
-            img[y - 2, x] = np.clip(base * 1.16 + 6, 0, 255)
-            img[y - 1, x + 1] = np.clip(base * 1.1, 0, 255)
+            img[y, x - 1] = img[y, x] = img[y, x + 1] = base * 0.72
+            img[y - 1, x - 1] = base * 0.88
+            img[y - 1, x] = base * 1.02
+            img[y - 2, x] = np.clip(base * 1.22 + 8, 0, 255)
+            img[y - 1, x + 1] = np.clip(base * 1.14, 0, 255)
+            if rng.random() < 0.35:
+                img[y - 2, x - 1] = np.clip(base * 1.12, 0, 255)
         flowers = [rgb(c) for c in ('#fbf6ec', '#f7c9d9', '#f4d870', '#c4b2f2')]
         for _ in range(H * W // 2600):
             y, x = rng.integers(2, H - 2), rng.integers(2, W - 2)
@@ -224,3 +229,90 @@ class Canvas:
 
     def result(self):
         return np.clip(self.img, 0, 255).astype(np.uint8)
+
+
+# ----------------------------------------------------------------------------- polish pass
+def bake_details(c, props, P, assets, seed=0):
+    """Ground details that depend on where props stand: contact shadows, petals and
+    leaves under trees, worn ground in front of benches and doors."""
+    from PIL import Image
+    rng = np.random.default_rng(seed + 501)
+    sizes = {}
+    for pr in props:
+        t = pr['type']
+        if t not in sizes:
+            with Image.open(assets / P[t]['image']) as im:
+                a = np.array(im.convert('RGBA'))[:, :, 3]
+            cols = np.nonzero(a[-max(6, a.shape[0] // 5):].max(axis=0) > 40)[0]   # footprint width
+            sizes[t] = (im.width, im.height, (cols.max() - cols.min() + 1) if len(cols) else im.width)
+    shade = np.ones((c.h, c.w), np.float32)
+    for pr in props:
+        t = pr['type']; layer = P[t].get('layer', 'sort')
+        if layer == 'floor':
+            continue
+        w, h, foot = sizes[t]
+        x, y = pr['x'], pr['y']
+        tree = t.startswith(('tree', 'v41_tree', 'v43_v41_tree', 'v44_tree'))
+        bld = 'bld_' in t
+        if bld:
+            x0, x1 = int(x - foot * 0.47), int(x + foot * 0.47)
+            for i, f in enumerate((0.6, 0.72, 0.84, 0.92)):
+                yy = y + i * 3
+                if 0 <= yy < c.h:
+                    shade[yy:yy + 3, max(0, x0 + i * 2):min(c.w, x1 + 10 - i * 2)] = np.minimum(
+                        shade[yy:yy + 3, max(0, x0 + i * 2):min(c.w, x1 + 10 - i * 2)], f)
+            continue
+        rx = max(6, (w * 0.40) if tree else foot * 0.55)
+        ry = max(3, rx * (0.32 if tree else 0.28))
+        cx, cy = x + (4 if tree else 2), y - (2 if tree else 0)
+        y0, y1 = int(max(0, cy - ry - 2)), int(min(c.h, cy + ry + 2))
+        x0, x1 = int(max(0, cx - rx - 2)), int(min(c.w, cx + rx + 2))
+        if y1 <= y0 or x1 <= x0:
+            continue
+        d = ((c.xx[y0:y1, x0:x1] - cx) / rx) ** 2 + ((c.yy[y0:y1, x0:x1] - cy) / ry) ** 2
+        f = np.where(d < 0.45, 0.66, np.where(d < 0.75, 0.76, np.where(d < 1.0, 0.87, 1.0)))
+        shade[y0:y1, x0:x1] = np.minimum(shade[y0:y1, x0:x1], f)
+        # petals / leaves around trees
+        if tree:
+            pal = {'cherry': ('#f6c2d4', '#eaa3bd', '#fbe1ea'), 'autumn': ('#e59a3e', '#cf7b2c', '#f2bf62')}
+            kind = 'cherry' if 'cherry' in t else 'autumn' if 'autumn' in t else None
+            if kind:
+                cols = [rgb(cc) for cc in pal[kind]]
+                for _ in range(46):
+                    ang = rng.uniform(0, 2 * np.pi); rr = abs(rng.normal(0, w * 0.45))
+                    px, py = int(x + np.cos(ang) * rr * 1.3), int(y - 6 + np.sin(ang) * rr * 0.6)
+                    if 1 <= px < c.w - 2 and 1 <= py < c.h - 1:
+                        col = cols[rng.integers(0, 3)]
+                        c.img[py, px] = col
+                        if rng.random() < 0.4:
+                            c.img[py, px + 1] = col * 0.9
+    c.img *= shade[..., None]
+    return c
+
+
+def wear(c, mask, strength=0.07, salt=0):
+    """Large-scale stains and sun-bleaching so wide paved areas are not flat."""
+    v = 0.6 * noise(c.h, c.w, 90, c.seed + 700 + salt) + 0.4 * noise(c.h, c.w, 24, c.seed + 701 + salt)
+    f = 1 + (v - 0.5) * 2 * strength
+    c.img[mask] *= f[mask][:, None]
+    rng = np.random.default_rng(c.seed + 702 + salt)
+    ys, xs = np.nonzero(mask)
+    if len(ys):
+        for i in rng.integers(0, len(ys), max(1, len(ys) // 9000)):   # small stains
+            y, x = ys[i], xs[i]
+            r = rng.integers(3, 9)
+            sl = c.ellipse(x, y, r * 1.6, r) & mask
+            c.img[sl] *= 0.93
+    return c
+
+
+def moss(c, hard, grass, p=0.5, salt=0):
+    """Moss creeping into the mortar of hard surfaces near grass."""
+    d = dist_from(grass, 10)
+    zone = hard & (d > 0) & (d < 10)
+    lum = c.img.mean(axis=2)
+    mortarish = lum < np.percentile(lum[hard], 25) if hard.any() else zone
+    nz = noise(c.h, c.w, 14, c.seed + 720 + salt)
+    sel = zone & mortarish & (nz * (1.2 - d / 10) > 1 - p)
+    c.img[sel] = c.img[sel] * 0.45 + rgb('#5f8f4e') * 0.55
+    return c

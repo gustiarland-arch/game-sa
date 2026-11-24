@@ -1,6 +1,6 @@
 """Plaza Kota v6: redesigned layout (2400x1600, was 1920x1280).
 
-Usage: python3 tools/v6/worldgen/plaza_v6.py [--ground-only OUT.png] [--apply]
+Usage: python3 tools/v6/worldgen/plaza_v6.py [--ground-only OUT.png] [--apply] [--repaint]
 
 Districts
   north   back gardens behind the three houses (dirt loop, groves, flower meadow)
@@ -18,7 +18,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from paint import Canvas, rgb, hash2           # noqa: E402
+from paint import Canvas, rgb, hash2, bake_details, wear, moss   # noqa: E402
 from ground import dist_from, noise            # noqa: E402
 
 W, H = 2400, 1600
@@ -33,7 +33,7 @@ CIRCLE = (1200, 960, 300, 0.78)        # cx, cy, rx, ry scale
 AVE_W = (0, 862, 840, 112)             # west avenue to park exit
 AVE_E = (1560, 862, 840, 112)          # east avenue to street exit
 MARKET = (250, 720, 520, 470, 28)
-DECK = (1650, 700, 520, 400)
+DECK = (1690, 716, 440, 360)
 CANAL = (20, 1338, 2360, 76)           # water body (between bank caps)
 BRIDGES = {'west': (430, 110, 'wood'), 'centre': (1130, 140, 'stone'), 'east': (1850, 110, 'wood')}
 SOUTH_PATH = (1140, 1290, 120, 310)
@@ -53,7 +53,7 @@ def smooth(pts, n=10):
     return out
 
 
-def paint_ground():
+def paint_ground(placed=None, Pdef=None):
     c = Canvas(W, H, SEED)
     G, P, S, T, D, WT, DIRT = 1, 2, 3, 4, 5, 6, 7
     c.put(np.ones((H, W), bool), c.grass(), G)
@@ -98,7 +98,7 @@ def paint_ground():
 
     # market square: terracotta + cream tiles with a border course
     mk = c.rrect(*MARKET)
-    c.put(mk, c.tiles('#c98d66', '#e4d2b2', 24, '#9a7458', salt=6), T)
+    c.put(mk, c.tiles('#c59474', '#dfcfb2', 24, '#9a7c62', salt=6), T)
     border = mk & ~c.rrect(MARKET[0] + 10, MARKET[1] + 10, MARKET[2] - 20, MARKET[3] - 20, MARKET[4] - 8)
     c.put(border, c.bricks(('#9b7c64', '#a88870', '#b3937a'), 10, 10, '#6f5643', salt=7), T)
 
@@ -154,6 +154,43 @@ def paint_ground():
     c.rim(hard, grass)
     c.rim(c.mat == DIRT, grass, dark='#7d6446', ao=(0.88, 0.95))
     c.overhang(hard | (c.mat == DIRT), grass, 0.33)
+
+    # ---- polish: wear, moss, meadow patches, canal life, deck rail, prop-aware details
+    wear(c, hard, 0.08)
+    wear(c, c.mat == DIRT, 0.06, salt=3)
+    moss(c, np.isin(c.mat, [P, S, T]), grass, 0.55)
+    rng = np.random.default_rng(SEED + 77)
+    flowers = [rgb(h) for h in ('#fbf6ec', '#f7c9d9', '#f4d870', '#c4b2f2', '#f29f9f')]
+    for _ in range(70):                                   # meadow patches: clustered blooms
+        cx, cy = rng.integers(40, W - 40), rng.integers(40, H - 40)
+        col = flowers[rng.integers(0, len(flowers))]
+        for _ in range(rng.integers(10, 26)):
+            x = int(cx + rng.normal(0, 16)); y = int(cy + rng.normal(0, 9))
+            if 1 <= x < W - 1 and 1 <= y < H - 1 and grass[y, x] and grass[y + 1, x]:
+                c.img[y, x] = col; c.img[y + 1, x] = rgb('#3f7a46')
+                if rng.random() < 0.3:
+                    c.img[y, x - 1] = c.img[y, x + 1] = col * 0.88
+    x0, y0, w0, h0 = CANAL
+    for _ in range(26):                                   # lily pads
+        x, y = rng.integers(x0 + 30, x0 + w0 - 30), rng.integers(y0 + 18, y0 + h0 - 10)
+        if any(bx - 10 < x < bx + bw + 10 for bx, bw, _ in BRIDGES.values()):
+            continue
+        r = rng.integers(4, 8)
+        pad = c.ellipse(x, y, r * 1.3, r * 0.8) & (c.mat == WT)
+        notch = pad & (c.yy == y) & (c.xx > x)
+        c.img[pad] = rgb('#4f8f4a'); c.img[pad & (c.yy < y - r * 0.4)] = rgb('#6aa85a'); c.img[notch] = rgb('#2b6990')
+        if rng.random() < 0.35:
+            c.img[y - 1:y + 1, x - 1:x + 1] = rgb('#f7c9d9')
+    ripple_y = y0 + h0 // 2
+    for i in range(0, w0, 140):                           # current lines
+        x = x0 + i + rng.integers(0, 60)
+        c.img[ripple_y + rng.integers(-14, 14), x:x + rng.integers(10, 26)] = rgb('#7cc0de')
+    dk = c.rect(*DECK)
+    rail = dk & ~c.rect(DECK[0] + 3, DECK[1] + 3, DECK[2] - 6, DECK[3] - 6)
+    c.img[rail] = rgb('#4e3020')
+    c.img[dk & c.rect(DECK[0] + 3, DECK[1] + 3, DECK[2] - 6, 4)] *= 0.8
+    if placed is not None:
+        bake_details(c, placed, Pdef, Path(__file__).resolve().parents[3] / 'android' / 'assets', SEED)
     return c
 
 
@@ -180,7 +217,7 @@ def props():
     add('v51_bench_wood', 1330, 245)
     add('garden_plot_tk', 1990, 400); add('garden_plot_tk2', 2080, 400) if False else None
     add('v51_birdbath', 360, 220)
-    add('v51_approach_plaza', 1000, 506)
+    add('v51_approach_plaza', 864, 338)
     # promenade
     add('bicycle', 290, 525); add('mailbox', 530, 520); add('mailbox', 1430, 520)
     add('old_mailbox', 1010, 628)
@@ -212,7 +249,7 @@ def props():
     add('stall_flowers', 1775, 735)
     for x, y in [(1760, 905), (1960, 830), (2080, 970), (1880, 1040), (2090, 790)]:
         add('cafe_umbrella_table', x, y)
-    add('flower_buckets', 1700, 1000); add('flower_buckets_b', 1960, 1085)
+    add('flower_buckets', 1745, 1000); add('flower_buckets_b', 1960, 1085)
     add('v51_lantern_gold', 1655, 860); add('v51_lantern_gold', 2165, 860)
     add('vending', 2150, 1060)
     for x, y in [(1662, 1096), (2160, 1096), (2160, 712)]:
@@ -445,8 +482,15 @@ def main():
 
 
 if __name__ == '__main__':
-    if '--ground-only' in sys.argv:
-        c = paint_ground()
-        Image.fromarray(c.result(), 'RGB').save(sys.argv[sys.argv.index('--ground-only') + 1], optimize=True)
+    if '--repaint' in sys.argv or '--ground-only' in sys.argv:
+        root = Path(__file__).resolve().parents[3]
+        M = json.loads((root / 'android/assets/data/maps.json').read_text(encoding='utf-8'))
+        Pd = json.loads((root / 'android/assets/data/props.json').read_text(encoding='utf-8'))['props']
+        placed = M['areas']['plaza']['props'] if M['areas']['plaza'].get('v6Layout') else props()
+        c = paint_ground(placed, Pd)
+        out = sys.argv[sys.argv.index('--ground-only') + 1] if '--ground-only' in sys.argv else root / 'android/assets/maps/plaza.png'
+        Image.fromarray(c.result(), 'RGB').save(out, optimize=True)
+    if '--ground-only' in sys.argv or '--repaint' in sys.argv:
+        pass
     else:
         main()
