@@ -1,0 +1,219 @@
+{
+  "areas": {
+    "plaza": {
+      "size": [
+        1920,
+        1280
+      ],
+      "legacyPropsReplaced": 10,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        960,
+        640
+      ],
+      "existingPortals": [
+        "plaza_to_park",
+        "plaza_to_street",
+        "plaza_to_lake",
+        "door_arland_house",
+        "door_sofia_house",
+        "door_cafe"
+      ]
+    },
+    "taman_kota": {
+      "size": [
+        1920,
+        1408
+      ],
+      "legacyPropsReplaced": 9,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        1840,
+        705
+      ],
+      "existingPortals": [
+        "park_to_forest",
+        "park_to_plaza"
+      ]
+    },
+    "riverside": {
+      "size": [
+        1920,
+        1088
+      ],
+      "legacyPropsReplaced": 6,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        960,
+        70
+      ],
+      "existingPortals": [
+        "lake_to_pier",
+        "lake_to_plaza"
+      ]
+    },
+    "cafe": {
+      "size": [
+        960,
+        640
+      ],
+      "legacyPropsReplaced": 6,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        400,
+        270
+      ],
+      "existingPortals": [
+        "cafe_out",
+        "cafe_to_kitchen"
+      ]
+    },
+    "memory_garden": {
+      "size": [
+        1600,
+        1200
+      ],
+      "legacyPropsReplaced": 5,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        800,
+        1040
+      ],
+      "existingPortals": []
+    },
+    "lantern_field": {
+      "size": [
+        1920,
+        1280
+      ],
+      "legacyPropsReplaced": 7,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        140,
+        1150
+      ],
+      "existingPortals": [
+        "lantern_to_village"
+      ]
+    },
+    "star_path": {
+      "size": [
+        2048,
+        1024
+      ],
+      "legacyPropsReplaced": 8,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        120,
+        520
+      ],
+      "existingPortals": [
+        "star_to_village"
+      ]
+    },
+    "starfall_village": {
+      "size": [
+        1920,
+        1280
+      ],
+      "legacyPropsReplaced": 5,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        80,
+        640
+      ],
+      "existingPortals": [
+        "village_to_lantern"
+      ]
+    },
+    "eternal_garden": {
+      "size": [
+        1920,
+        1408
+      ],
+      "legacyPropsReplaced": 4,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        960,
+        1340
+      ],
+      "existingPortals": []
+    },
+    "dermaga": {
+      "size": [
+        1920,
+        1088
+      ],
+      "legacyPropsReplaced": 4,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        70,
+        425
+      ],
+      "existingPortals": [
+        "pier_to_lake"
+      ]
+    },
+    "hutan_bisik": {
+      "size": [
+        2560,
+        1920
+      ],
+      "legacyPropsReplaced": 5,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        1280,
+        1850
+      ],
+      "existingPortals": [
+        "forest_to_cave",
+        "forest_to_park",
+        "forest_to_hill"
+      ]
+    },
+    "bukit_bintang": {
+      "size": [
+        1920,
+        1280
+      ],
+      "legacyPropsReplaced": 5,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        70,
+        620
+      ],
+      "existingPortals": [
+        "hill_to_forest"
+      ]
+    },
+    "gua_kristal": {
+      "size": [
+        1280,
+        960
+      ],
+      "legacyPropsReplaced": 7,
+      "originalCollisionPreserved": true,
+      "originalSpawn": [
+        640,
+        880
+      ],
+      "existingPortals": [
+        "cave_to_forest"
+      ]
+    }
+  },
+  "newPropReplacements": 81,
+  "atlasSource": "art_source/world_v41/pixel_landmarks_atlas.png",
+  "transparentLayers": 13,
+  "nine_v4_authored_maps_untouched": [
+    "arcade",
+    "arland_room",
+    "dapur",
+    "jalan_kota",
+    "perpustakaan",
+    "perumahan",
+    "ruang_arsip",
+    "sofia_room",
+    "toko_bunga"
+  ]
+}

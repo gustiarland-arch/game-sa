@@ -1,0 +1,79 @@
+{
+  "version": "2.5.0",
+  "source": "original_procedural_generation",
+  "offline": true,
+  "generator": "tools/gen_cinema_audio_v25.py",
+  "music": [
+    {
+      "id": "cinema_first_meet",
+      "title": "Pertemuan Pertama",
+      "usage": "pertemuan di Plaza",
+      "path": "audio/music/cinema_first_meet.ogg"
+    },
+    {
+      "id": "cinema_memory_portal",
+      "title": "Pintu Kenangan",
+      "usage": "portal menuju Memory Garden",
+      "path": "audio/music/cinema_memory_portal.ogg"
+    },
+    {
+      "id": "cinema_rain_conflict",
+      "title": "Di Bawah Hujan",
+      "usage": "konflik saat hujan",
+      "path": "audio/music/cinema_rain_conflict.ogg"
+    },
+    {
+      "id": "cinema_reconciliation",
+      "title": "Kembali Bersama",
+      "usage": "rekonsiliasi Chapter 4",
+      "path": "audio/music/cinema_reconciliation.ogg"
+    },
+    {
+      "id": "cinema_quiet",
+      "title": "The Quiet",
+      "usage": "pengungkapan misteri",
+      "path": "audio/music/cinema_quiet.ogg"
+    },
+    {
+      "id": "cinema_lantern_finale",
+      "title": "Cahaya Lentera",
+      "usage": "Festival Lentera",
+      "path": "audio/music/cinema_lantern_finale.ogg"
+    },
+    {
+      "id": "cinema_our_tomorrow",
+      "title": "Halaman Besok",
+      "usage": "kredit setelah ending",
+      "path": "audio/music/cinema_our_tomorrow.ogg"
+    }
+  ],
+  "sfx": [
+    {
+      "id": "flower_pick",
+      "usage": "Memilih bunga",
+      "path": "audio/sfx/flower_pick.wav"
+    },
+    {
+      "id": "paper_fold",
+      "usage": "Memindahkan halaman scrapbook",
+      "path": "audio/sfx/paper_fold.wav"
+    },
+    {
+      "id": "cinema_heartbeat",
+      "usage": "Debar romantis",
+      "path": "audio/sfx/cinema_heartbeat.wav"
+    },
+    {
+      "id": "cinema_whoosh",
+      "usage": "Transisi sinematik",
+      "path": "audio/sfx/cinema_whoosh.wav"
+    }
+  ],
+  "portrait_generator": "tools/gen_cinema_fx_v25.py",
+  "included_audio_counts": {
+    "music": 40,
+    "ambience": 14,
+    "sfx": 32,
+    "total": 86
+  }
+}

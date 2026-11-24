@@ -1,0 +1,380 @@
+{
+  "schema": 1,
+  "license": "Original procedural synthesis; no external samples or copyrighted melodies",
+  "music": [
+    {
+      "id": "menu_theme",
+      "path": "audio/music/menu_theme.ogg",
+      "seconds": 45.71,
+      "bpm": 84,
+      "instrument": 0
+    },
+    {
+      "id": "home_morning",
+      "path": "audio/music/home_morning.ogg",
+      "seconds": 37.65,
+      "bpm": 102,
+      "instrument": 3
+    },
+    {
+      "id": "home_evening",
+      "path": "audio/music/home_evening.ogg",
+      "seconds": 49.87,
+      "bpm": 77,
+      "instrument": 1
+    },
+    {
+      "id": "city_morning",
+      "path": "audio/music/city_morning.ogg",
+      "seconds": 34.29,
+      "bpm": 112,
+      "instrument": 3
+    },
+    {
+      "id": "city_evening",
+      "path": "audio/music/city_evening.ogg",
+      "seconds": 42.2,
+      "bpm": 91,
+      "instrument": 1
+    },
+    {
+      "id": "city_night",
+      "path": "audio/music/city_night.ogg",
+      "seconds": 48.61,
+      "bpm": 79,
+      "instrument": 4
+    },
+    {
+      "id": "park_blossom",
+      "path": "audio/music/park_blossom.ogg",
+      "seconds": 39.59,
+      "bpm": 97,
+      "instrument": 5
+    },
+    {
+      "id": "park_sunset",
+      "path": "audio/music/park_sunset.ogg",
+      "seconds": 50.53,
+      "bpm": 76,
+      "instrument": 1
+    },
+    {
+      "id": "lake_breeze",
+      "path": "audio/music/lake_breeze.ogg",
+      "seconds": 43.64,
+      "bpm": 88,
+      "instrument": 3
+    },
+    {
+      "id": "lake_moon",
+      "path": "audio/music/lake_moon.ogg",
+      "seconds": 54.86,
+      "bpm": 70,
+      "instrument": 4
+    },
+    {
+      "id": "flower_shop",
+      "path": "audio/music/flower_shop.ogg",
+      "seconds": 35.89,
+      "bpm": 107,
+      "instrument": 0
+    },
+    {
+      "id": "cafe_waltz",
+      "path": "audio/music/cafe_waltz.ogg",
+      "seconds": 41.74,
+      "bpm": 92,
+      "instrument": 1
+    },
+    {
+      "id": "library_whisper",
+      "path": "audio/music/library_whisper.ogg",
+      "seconds": 51.89,
+      "bpm": 74,
+      "instrument": 1
+    },
+    {
+      "id": "arcade_neon",
+      "path": "audio/music/arcade_neon.ogg",
+      "seconds": 28.24,
+      "bpm": 136,
+      "instrument": 2
+    },
+    {
+      "id": "neighborhood_day",
+      "path": "audio/music/neighborhood_day.ogg",
+      "seconds": 35.23,
+      "bpm": 109,
+      "instrument": 3
+    },
+    {
+      "id": "memory_bloom",
+      "path": "audio/music/memory_bloom.ogg",
+      "seconds": 49.23,
+      "bpm": 78,
+      "instrument": 0
+    },
+    {
+      "id": "lantern_glow",
+      "path": "audio/music/lantern_glow.ogg",
+      "seconds": 46.27,
+      "bpm": 83,
+      "instrument": 5
+    },
+    {
+      "id": "whisper_woods",
+      "path": "audio/music/whisper_woods.ogg",
+      "seconds": 55.65,
+      "bpm": 69,
+      "instrument": 4
+    },
+    {
+      "id": "archive_mystery",
+      "path": "audio/music/archive_mystery.ogg",
+      "seconds": 53.33,
+      "bpm": 72,
+      "instrument": 4
+    },
+    {
+      "id": "star_road",
+      "path": "audio/music/star_road.ogg",
+      "seconds": 40.0,
+      "bpm": 96,
+      "instrument": 5
+    },
+    {
+      "id": "star_village",
+      "path": "audio/music/star_village.ogg",
+      "seconds": 44.14,
+      "bpm": 87,
+      "instrument": 0
+    },
+    {
+      "id": "hill_stars",
+      "path": "audio/music/hill_stars.ogg",
+      "seconds": 52.6,
+      "bpm": 73,
+      "instrument": 4
+    },
+    {
+      "id": "crystal_echo",
+      "path": "audio/music/crystal_echo.ogg",
+      "seconds": 46.83,
+      "bpm": 82,
+      "instrument": 5
+    },
+    {
+      "id": "eternal_promise",
+      "path": "audio/music/eternal_promise.ogg",
+      "seconds": 57.31,
+      "bpm": 67,
+      "instrument": 1
+    },
+    {
+      "id": "rain_lullaby",
+      "path": "audio/music/rain_lullaby.ogg",
+      "seconds": 50.53,
+      "bpm": 76,
+      "instrument": 1
+    }
+  ],
+  "ambience": [
+    {
+      "id": "birds_morning",
+      "path": "audio/ambience/birds_morning.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "city_day",
+      "path": "audio/ambience/city_day.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "wind_leaves",
+      "path": "audio/ambience/wind_leaves.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "park_birds",
+      "path": "audio/ambience/park_birds.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "lake_water",
+      "path": "audio/ambience/lake_water.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "cafe_room",
+      "path": "audio/ambience/cafe_room.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "library_room",
+      "path": "audio/ambience/library_room.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "rain_outdoor",
+      "path": "audio/ambience/rain_outdoor.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "rain_window",
+      "path": "audio/ambience/rain_window.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "night_crickets",
+      "path": "audio/ambience/night_crickets.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "forest_wind",
+      "path": "audio/ambience/forest_wind.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "magic_chimes",
+      "path": "audio/ambience/magic_chimes.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "cave_drips",
+      "path": "audio/ambience/cave_drips.ogg",
+      "seconds": 12
+    },
+    {
+      "id": "arcade_hum",
+      "path": "audio/ambience/arcade_hum.ogg",
+      "seconds": 12
+    }
+  ],
+  "sfx": [
+    {
+      "id": "step_grass",
+      "path": "audio/sfx/step_grass.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "step_stone",
+      "path": "audio/sfx/step_stone.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "step_wood",
+      "path": "audio/sfx/step_wood.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "door_open",
+      "path": "audio/sfx/door_open.wav",
+      "seconds": 0.53
+    },
+    {
+      "id": "door_close",
+      "path": "audio/sfx/door_close.wav",
+      "seconds": 0.36
+    },
+    {
+      "id": "bell_shop",
+      "path": "audio/sfx/bell_shop.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "coin",
+      "path": "audio/sfx/coin.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "gift",
+      "path": "audio/sfx/gift.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "heart",
+      "path": "audio/sfx/heart.wav",
+      "seconds": 0.74
+    },
+    {
+      "id": "hug",
+      "path": "audio/sfx/hug.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "selfie",
+      "path": "audio/sfx/selfie.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "highfive",
+      "path": "audio/sfx/highfive.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "quest_complete",
+      "path": "audio/sfx/quest_complete.wav",
+      "seconds": 1.4
+    },
+    {
+      "id": "scene_transition",
+      "path": "audio/sfx/scene_transition.wav",
+      "seconds": 1.0
+    },
+    {
+      "id": "notification",
+      "path": "audio/sfx/notification.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "splash",
+      "path": "audio/sfx/splash.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "bird_chirp",
+      "path": "audio/sfx/bird_chirp.wav",
+      "seconds": 0.48
+    },
+    {
+      "id": "cat_meow",
+      "path": "audio/sfx/cat_meow.wav",
+      "seconds": 0.54
+    },
+    {
+      "id": "dog_bark",
+      "path": "audio/sfx/dog_bark.wav",
+      "seconds": 0.39
+    },
+    {
+      "id": "duck_quack",
+      "path": "audio/sfx/duck_quack.wav",
+      "seconds": 0.38
+    },
+    {
+      "id": "wind_gust",
+      "path": "audio/sfx/wind_gust.wav",
+      "seconds": 1.0
+    },
+    {
+      "id": "rain_drop",
+      "path": "audio/sfx/rain_drop.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "lantern",
+      "path": "audio/sfx/lantern.wav",
+      "seconds": 0.8
+    },
+    {
+      "id": "page_turn",
+      "path": "audio/sfx/page_turn.wav",
+      "seconds": 0.32
+    },
+    {
+      "id": "menu_confirm",
+      "path": "audio/sfx/menu_confirm.wav",
+      "seconds": 0.32
+    }
+  ]
+}

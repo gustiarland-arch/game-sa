@@ -1,0 +1,33 @@
+# v1.9.0: tambahan route-exclusive side story untuk memperpanjang Chapter 3
+# tanpa mengubah canon utama. Fokus: persiapan suasana Festival Lentera.
+
+=== SQ-ROUTE-A-1 | Rute Lentera Arland | arland | C03
+bayu(senyum): Pas sekali kamu datang, Arland. Aku sedang memeriksa rute kecil buat Festival Lentera.
+arland(penasaran): Rute kecil?
+bayu(neutral): Tiga penanda arah. Sederhana, tapi penting. Kalau panahnya miring, orang bisa lewat spot terbaik tanpa sadar.
+arland(serius): Halte, dermaga, dan kolam taman?
+bayu(senyum): Tepat. Aku suka caramu langsung memetakan. Coba cek tiga titik itu, lalu balik ke sini.
+arland(senang): Siap. Aku anggap ini latihan sebelum malam festival dimulai.
+
+=== SQ-ROUTE-A-2 | Peta yang Hangat | arland | C03
+bayu(senyum): Wajahmu kelihatan seperti orang yang baru selesai menarik tiga garis lurus.
+arland(tertawa): Panah-panahnya aman. Yang di dermaga paling keras dilawan angin.
+bayu(neutral): Karena itu aku titipkan salinan rutenya. Kadang yang membuat sebuah malam terasa hangat justru hal-hal kecil yang menuntun orang sampai.
+arland(malu): Aku suka kalimat itu.
+bayu(senyum): Simpan baik-baik. Siapa tahu nanti kamu dan Sofia butuh alasan baru untuk berjalan pelan.
+
+=== SQ-ROUTE-S-1 | Catatan Tamu Sofia | sofia | C03
+laras(senyum): Sofia, boleh minta bantuanmu sebentar?
+sofia(penasaran): Tentu. Ada apa, Bu?
+laras(neutral): Tiga potongan catatan tamu festival tercecer. Satu kutinggalkan di kafe, satu di toko bunga, satu lagi sepertinya terbawa sampai gazebo taman.
+sofia(senyum): Pesan-pesan kecil begitu sayang kalau hilang.
+laras(senang): Itu sebabnya aku kepikiran memintamu. Kamu selalu telaten membaca hal-hal yang sering dilewati orang.
+sofia(senang): Baik. Nanti kita rapikan lagi bersama di meja baca.
+
+=== SQ-ROUTE-S-2 | Pesan yang Disatukan | sofia | C03
+laras(senyum): Sudah lengkap?
+sofia(senang): Tiga-tiganya. Dan anehnya, kalau dibaca berurutan, pesannya terdengar seperti satu surat pendek.
+laras(neutral): Festival yang baik memang begitu. Banyak suara kecil, tapi rasanya menyatu.
+sofia(malu): Boleh aku simpan salinannya?
+laras(senyum): Tentu. Anggap saja titipan kota untuk orang yang pandai menjaga kenangan.
+sofia(senang): Terima kasih, Bu. Aku akan menyimpannya rapi.

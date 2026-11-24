@@ -1,0 +1,52 @@
+# v2.0: dua side story kontemplatif opsional; tidak mengubah naskah canon.
+# Mendukung suasana hujan dan senja, dengan latar tempat yang sudah ada.
+
+=== SQ-RAIN-A-1 | Hujan yang Tertinggal | arland | C04
+narrator(neutral): Di bawah atap halte, sisa tetes air masih jatuh dari ujung talang.
+arland(penasaran): Ada bekas garis kapur di papan arah ini. Padahal kemarin aku yakin sudah rapi.
+sofia(senyum): Hujan bisa menghapus jejak, tapi bukan berarti kita harus mengulangi semuanya sendiri.
+arland(serius): Aku ingin mencoba menggambar tiga tempat yang tetap terasa hangat meskipun cuaca berubah.
+sofia(penasaran): Mulai dari sini?
+arland(senyum): Halte, dermaga, lalu meja baca perpustakaan. Tiga tempat kita pernah berhenti dan saling mendengarkan.
+sofia(senang): Kalau begitu aku akan menemanimu melihatnya sekali lagi.
+
+=== SQ-RAIN-A-2 | Air dan Garis Pensil | arland | C04
+narrator(neutral): Di ujung dermaga, air bergerak pelan. Cahaya memantul dari sela papan kayu.
+arland(neutral): Garis pertama di sketsaku tadi terlalu lurus. Kenyataannya jalan kita selalu sedikit berbelok.
+sofia(senyum): Belokan tidak selalu salah. Dari sini saja kita bisa melihat kota dari arah berbeda.
+arland(malu): Aku suka caramu mengingatkan bahwa kita tidak sedang berlomba.
+sofia(tertawa): Kalau sedang lomba, kamu sudah memegang peta dan peluit.
+arland(senang): Baiklah, satu garis lengkung untuk dermaga.
+
+=== SQ-RAIN-A-3 | Sketsa Setelah Gerimis | arland | C04
+narrator(neutral): Di meja perpustakaan, Arland meletakkan kertas dengan tiga tempat yang saling terhubung.
+arland(serius): Sekarang aku mengerti. Tidak semua perjalanan harus punya jarak terpendek.
+sofia(malu): Tapi setiap perjalanan boleh punya tempat pulang.
+arland(senyum): Aku menulis nama kita di belakangnya. Bukan supaya peta ini sempurna.
+arland(senang): Supaya suatu hari kita bisa membaca lagi mengapa kita memilih berhenti di tempat-tempat ini.
+sofia(senang): Boleh kusimpan satu salinannya di Memory Book?
+arland(tertawa): Boleh. Tapi jangan tertawa melihat panah yang miring.
+
+=== SQ-COLOR-S-1 | Warna yang Tidak Hilang | sofia | C05
+narrator(neutral): Cahaya sore menggeser bayangan gazebo perlahan ke jalan setapak.
+sofia(penasaran): Kalau satu hari punya warna, hari ini pasti bukan cuma merah muda.
+arland(tertawa): Aku tahu kamu akan bilang ungu. Atau mungkin emas?
+sofia(senyum): Aku mau mencari tiga warna yang mengingatkanku pada perjalanan kita.
+arland(penasaran): Aku ikut. Di mana kita mulai?
+sofia(senang): Dari sini, lalu ke toko bunga, dan terakhir lihat langit dari Bukit Bintang.
+
+=== SQ-COLOR-S-2 | Bunga dan Cahaya | sofia | C05
+narrator(neutral): Di antara ember bunga, ada warna lembut yang hampir sama dengan langit menjelang malam.
+sofia(senyum): Warna pertama adalah hangatnya lampu kafe. Kedua, warna bunga yang tidak takut pada hujan.
+arland(neutral): Warna ketiga berarti langit yang akan muncul nanti?
+sofia(malu): Mungkin. Tapi aku ingin melihatnya dulu sebelum menamai.
+arland(tertawa): Baik. Aku akan berhenti menebak semua jawabannya.
+
+=== SQ-COLOR-S-3 | Palet Langit Kita | sofia | C05
+narrator(neutral): Angin dari bukit membuat ujung kertas Sofia bergetar. Di atas kota, bintang pertama mulai terlihat.
+sofia(senyum): Warna ketiganya tidak mudah ditaruh di kertas.
+arland(penasaran): Kenapa?
+sofia(neutral): Karena sebenarnya bukan satu warna. Langit berubah sementara kita melihatnya.
+arland(senang): Mungkin lebih baik menulis apa yang kita rasakan daripada memaksa warnanya tetap sama.
+sofia(malu): Itu yang mau kulakukan. Tiga warna, satu kalimat: "Senja tetap indah meski tidak bisa dihentikan."
+arland(senyum): Simpan di buku kita. Supaya besok kita punya alasan melihat langit lagi.

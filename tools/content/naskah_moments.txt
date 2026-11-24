@@ -1,0 +1,122 @@
+# v1.7.0: 8 momen situasional, 16 adegan route, 1 milestone tambahan.
+# Semua pilihan bersifat opsional dan tidak mengubah ending canon.
+
+=== RM-MOM-CAFE-A | Rencana Pagi Arland | arland | C02
+arland(senyum): Aku sempat menulis tiga rencana untuk hari ini.
+sofia(penasaran): Tiga? Seperti jadwal kereta?
+arland(malu): Salah satunya cuma memastikan kamu sempat sarapan.
+sofia(tertawa): Kalau begitu, aku mau menambahkan satu rencana.
+arland(penasaran): Apa?
+sofia(senang): Kita juga boleh tidak melakukan apa-apa. Duduk di sini sebentar saja.
+
+=== RM-MOM-CAFE-S | Rencana Pagi Sofia | sofia | C02
+sofia(senyum): Kamu sudah makan? Jangan cuma memikirkan perjalanan hari ini.
+arland(kaget): Belum. Aku malah sibuk mencari pensil untuk peta.
+sofia(tertawa): Pensil tidak bisa menggantikan sarapan, Arland.
+arland(malu): Kalau aku duduk, kamu mau temani?
+sofia(senang): Aku memang datang untuk itu.
+
+=== RM-MOM-HAND-A | Langkah Arland | arland | C02
+arland(malu): Jalannya ramai. Boleh aku pegang tanganmu?
+sofia(tersenyum): Boleh, asal kamu tidak langsung jalan secepat biasanya.
+arland(tertawa): Secepat itu, ya?
+sofia(senyum): Kita punya waktu. Tidak perlu lomba sampai tujuan.
+arland(senang): Baik. Aku akan mengikuti langkahmu hari ini.
+
+=== RM-MOM-HAND-S | Langkah Sofia | sofia | C02
+sofia(penasaran): Kenapa kamu berjalan dua langkah di depanku?
+arland(bingung): Aku kira ada sesuatu yang mau kamu lihat di plaza.
+sofia(malu): Yang mau kulihat sedang berjalan di depanku.
+arland(kaget): Oh! Maaf.
+sofia(tersenyum): Coba jalan di sampingku. Biar tangan kita tidak kejauhan.
+
+=== RM-MOM-CAT-A | Si Kecil yang Mengantuk Arland | arland | C02
+arland(penasaran): Kucing itu selalu tidur di bawah bangku yang sama.
+sofia(senyum): Mungkin dia punya tempat favorit, sama seperti kita.
+arland(tertawa): Pantas dia tidak terlihat khawatir meski taman ramai.
+sofia(malu): Kalau kamu lelah, kita bisa duduk sebentar juga.
+arland(senang): Setuju. Kita pinjam idenya si kucing.
+
+=== RM-MOM-CAT-S | Si Kecil yang Mengantuk Sofia | sofia | C02
+sofia(senyum): Lihat telinganya bergerak. Dia sepertinya mendengar kita.
+arland(penasaran): Menurutmu dia sedang bermimpi tentang apa?
+sofia(tertawa): Mungkin tentang manusia yang terus-menerus mengajaknya bicara.
+arland(malu): Berarti kita berdua yang sedang mengganggu?
+sofia(senang): Tidak. Kita cukup duduk pelan agar dia tetap nyaman.
+
+=== RM-MOM-RAIN-A | Atap Kafe Arland | arland | C02
+arland(serius): Aku tadi kesal karena rencana jalan-jalan batal.
+sofia(senyum): Aku juga sempat kecewa. Tapi hujan bukan sesuatu yang bisa kita atur.
+arland(malu): Seharusnya aku bilang begitu, bukan diam saja.
+sofia(senang): Sekarang kamu sudah bilang. Mau berbagi cerita sambil menunggu reda?
+arland(senyum): Mau. Kita mulai dari hal paling lucu yang terjadi hari ini.
+
+=== RM-MOM-RAIN-S | Atap Kafe Sofia | sofia | C02
+sofia(sedih): Aku kira hari ini akan cerah sampai malam.
+arland(serius): Aku juga. Kamu ingin pulang, atau berteduh di sini dulu?
+sofia(malu): Berteduh. Aku masih ingin menghabiskan waktu denganmu.
+arland(senyum): Berarti kita bisa duduk tanpa mengejar apa-apa.
+sofia(senang): Lucu ya, hujan malah membuat kita berhenti dan saling dengar.
+
+=== RM-MOM-BOOK-A | Satu Buku Arland | arland | C02
+arland(penasaran): Menurutku tokoh dalam halaman ini sedang mencari jalan pulang.
+sofia(senyum): Aku membacanya sebagai seseorang yang sedang belajar memilih.
+arland(bingung): Padahal bukunya sama.
+sofia(tersenyum): Itu yang aku suka. Kamu melihat arah, aku melihat alasan.
+arland(senang): Mungkin kita perlu membaca halaman berikutnya bergantian.
+
+=== RM-MOM-BOOK-S | Satu Buku Sofia | sofia | C02
+sofia(penasaran): Bagian mana yang paling membuatmu berhenti membaca?
+arland(serius): Saat dia harus memilih antara peta lama dan cerita temannya.
+sofia(senyum): Aku juga berhenti di sana, tapi aku memilih mendengar temannya.
+arland(tertawa): Kita akan berdebat soal ini sampai perpustakaan tutup.
+sofia(senang): Bukan berdebat. Kita sedang saling menunjukkan halaman yang berbeda.
+
+=== RM-MOM-LAKE-A | Di Sisi Air Arland | arland | C02
+arland(senyum): Aku ingin mengambil foto cahaya di permukaan danau.
+sofia(malu): Ambil saja. Tapi setelah itu, simpan dulu kameranya.
+arland(penasaran): Kenapa?
+sofia(tersenyum): Ada beberapa hal yang ingin kusimpan lewat mata sendiri.
+arland(senang): Baik. Hari ini kita mengingatnya bersama.
+
+=== RM-MOM-LAKE-S | Di Sisi Air Sofia | sofia | C02
+sofia(senyum): Danau terlihat berbeda ketika angin mulai pelan.
+arland(penasaran): Warnanya juga berubah. Aku hampir tidak menyadarinya.
+sofia(malu): Aku suka ketika kita bisa duduk tanpa harus terus bicara.
+arland(senang): Aku sedang melihat apakah kamu nyaman.
+sofia(tersenyum): Aku nyaman. Kamu boleh ikut menikmati pemandangannya.
+
+=== RM-MOM-HEART-A | Berani Berkata Arland | arland | C02
+arland(serius): Aku kadang terlalu ingin memastikan semuanya berjalan baik.
+sofia(senyum): Aku tahu. Tapi kamu tidak harus memikul semua rencana sendiri.
+arland(malu): Kalau aku salah, aku takut mengecewakanmu.
+sofia(serius): Bilang saja, dan dengarkan aku juga. Kita bisa memperbaiki bersama.
+arland(senang): Terima kasih sudah memberiku ruang untuk berkata jujur.
+
+=== RM-MOM-HEART-S | Berani Berkata Sofia | sofia | C02
+sofia(serius): Aku kadang mengatakan baik-baik saja padahal masih memikirkan sesuatu.
+arland(penasaran): Kamu mau cerita sekarang? Aku tidak akan buru-buru menjawab.
+sofia(malu): Iya. Aku ingin didengar sebelum kita mencari solusi.
+arland(senyum): Aku di sini. Ambil waktumu.
+sofia(senang): Terima kasih. Rasanya lebih mudah setelah aku mengatakannya.
+
+=== RM-MOM-NIGHT-A | Janji Arland di Bukit | arland | C02
+arland(senyum): Kita sudah kembali ke bukit ini berkali-kali.
+sofia(penasaran): Apa kamu masih menghafal rasi-rasi di atas sana?
+arland(malu): Sekarang aku lebih sering mengingat cerita yang kita bawa ke sini.
+sofia(tersenyum): Cerita mana yang paling kamu suka?
+arland(senang): Yang belum selesai. Karena besok kita masih bisa melanjutkannya.
+
+=== RM-MOM-NIGHT-S | Janji Sofia di Bukit | sofia | C02
+sofia(senyum): Malam ini lebih sunyi dari biasanya.
+arland(penasaran): Kamu takut?
+sofia(tertawa): Tidak. Aku hanya menyadari kita tidak perlu mengisi semuanya dengan kata.
+arland(malu): Jadi kalau aku tidak menemukan kalimat yang bagus, tidak apa-apa?
+sofia(tersenyum): Tidak apa. Berada di sini bersamaku sudah cukup.
+
+=== RM-BOND-80 | Ruang untuk Bertumbuh | shared | C02
+me(serius): Aku dulu mengira hubungan yang baik selalu tahu harus berkata apa.
+partner(senyum): Padahal kadang kita perlu bertanya dulu, atau diam sebentar.
+me(malu): Terima kasih sudah mau mendengar meskipun aku belum rapi menjelaskan.
+partner(tersenyum): Terima kasih juga karena kamu tetap mencoba.
+me(senang): Kita tidak harus sempurna untuk bisa saling menjaga.

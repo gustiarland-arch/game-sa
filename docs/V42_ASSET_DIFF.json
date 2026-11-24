@@ -1,0 +1,136 @@
+{
+  "version": "4.2.0",
+  "from": "4.1.0",
+  "changedRuntimeFiles": [
+    "maps/bukit_bintang.png",
+    "maps/cafe.png",
+    "maps/dermaga.png",
+    "maps/eternal_garden.png",
+    "maps/gua_kristal.png",
+    "maps/hutan_bisik.png",
+    "maps/lantern_field.png",
+    "maps/memory_garden.png",
+    "maps/plaza.png",
+    "maps/riverside.png",
+    "maps/star_path.png",
+    "maps/starfall_village.png",
+    "maps/taman_kota.png",
+    "props/v41_arch_flowers_arch.png",
+    "props/v41_arch_flowers_e2_arch.png",
+    "props/v41_arch_flowers_e_arch.png",
+    "props/v41_bld_arland_house_house_blue.png",
+    "props/v41_bld_sofia_house_house_brick.png",
+    "props/v41_bld_star_house0_house_blue.png",
+    "props/v41_bld_star_house1_house_brick.png",
+    "props/v41_bld_star_house2_house_blue.png",
+    "props/v41_cafe_table_cafe_table.png",
+    "props/v41_cave_entrance_cave.png",
+    "props/v41_counter_cafe_counter.png",
+    "props/v41_crystal_big_crystal_cluster.png",
+    "props/v41_crystal_crystal_cluster.png",
+    "props/v41_display_case_cafe_display.png",
+    "props/v41_flowerbed_flower.png",
+    "props/v41_fountain_fountain.png",
+    "props/v41_gazebo_e_gazebo.png",
+    "props/v41_gazebo_gazebo.png",
+    "props/v41_lantern_off_lantern.png",
+    "props/v41_observatory_observatory.png",
+    "props/v41_pedestal_book_crystal_shrine.png",
+    "props/v41_rowboat_b_rowboat.png",
+    "props/v41_rowboat_rowboat.png",
+    "props/v41_rowboat_rv_rowboat.png",
+    "props/v41_star_stone_starrocks.png",
+    "props/v41_telescope_telescope.png",
+    "props/v41_tree_cherry_cherry.png",
+    "props/v41_tree_dark_willow.png",
+    "props/v41_tree_dream_memory_tree.png",
+    "props/v41_tree_green_willow.png",
+    "props/v41_tree_lantern_cherry.png",
+    "props/v41_waterfall_hb_waterfall.png",
+    "props/v41_wishing_tree_memory_tree.png"
+  ],
+  "addedRuntimeFiles": [],
+  "removedRuntimeFiles": [],
+  "unmodifiedRuntimeFileCount": 703,
+  "mapVisualMetrics": {
+    "plaza": {
+      "changedPixelsPctAt240x160": 45.54,
+      "meanChannelDifference": 5.99,
+      "originalBytes": 1777211,
+      "newBytes": 1931016
+    },
+    "taman_kota": {
+      "changedPixelsPctAt240x160": 54.52,
+      "meanChannelDifference": 6.86,
+      "originalBytes": 2321098,
+      "newBytes": 2430203
+    },
+    "riverside": {
+      "changedPixelsPctAt240x160": 51.05,
+      "meanChannelDifference": 6.14,
+      "originalBytes": 1282675,
+      "newBytes": 1434009
+    },
+    "dermaga": {
+      "changedPixelsPctAt240x160": 54.3,
+      "meanChannelDifference": 6.16,
+      "originalBytes": 1115008,
+      "newBytes": 1288318
+    },
+    "cafe": {
+      "changedPixelsPctAt240x160": 72.03,
+      "meanChannelDifference": 8.83,
+      "originalBytes": 292856,
+      "newBytes": 363961
+    },
+    "bukit_bintang": {
+      "changedPixelsPctAt240x160": 52.52,
+      "meanChannelDifference": 6.41,
+      "originalBytes": 1809421,
+      "newBytes": 1961258
+    },
+    "memory_garden": {
+      "changedPixelsPctAt240x160": 45.65,
+      "meanChannelDifference": 5.49,
+      "originalBytes": 1640532,
+      "newBytes": 1631737
+    },
+    "eternal_garden": {
+      "changedPixelsPctAt240x160": 48.7,
+      "meanChannelDifference": 4.37,
+      "originalBytes": 2644527,
+      "newBytes": 2471558
+    },
+    "star_path": {
+      "changedPixelsPctAt240x160": 48.76,
+      "meanChannelDifference": 10.54,
+      "originalBytes": 520409,
+      "newBytes": 689639
+    },
+    "starfall_village": {
+      "changedPixelsPctAt240x160": 52.26,
+      "meanChannelDifference": 6.76,
+      "originalBytes": 1804090,
+      "newBytes": 1984890
+    },
+    "lantern_field": {
+      "changedPixelsPctAt240x160": 55.55,
+      "meanChannelDifference": 7.46,
+      "originalBytes": 2063396,
+      "newBytes": 2139835
+    },
+    "hutan_bisik": {
+      "changedPixelsPctAt240x160": 46.89,
+      "meanChannelDifference": 4.68,
+      "originalBytes": 4126301,
+      "newBytes": 4197846
+    },
+    "gua_kristal": {
+      "changedPixelsPctAt240x160": 55.16,
+      "meanChannelDifference": 10.59,
+      "originalBytes": 491465,
+      "newBytes": 633281
+    }
+  },
+  "cleanup": "No runtime files removed; edit-source baselines retained; temporary caches excluded from ZIP"
+}

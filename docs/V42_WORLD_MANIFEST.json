@@ -1,0 +1,202 @@
+{
+  "version": "4.2.0",
+  "areas": {
+    "plaza": {
+      "nativeResolution": [
+        1920,
+        1280
+      ],
+      "visualStyle": "Hearth of the City",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/plaza.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/plaza_material.png",
+        "art_source/world_v42/editable_layers/plaza_scenery.png",
+        "art_source/world_v42/editable_layers/plaza_illumination.png"
+      ]
+    },
+    "taman_kota": {
+      "nativeResolution": [
+        1920,
+        1408
+      ],
+      "visualStyle": "Blossom Pavilion",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/taman_kota.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/taman_kota_material.png",
+        "art_source/world_v42/editable_layers/taman_kota_scenery.png",
+        "art_source/world_v42/editable_layers/taman_kota_illumination.png"
+      ]
+    },
+    "riverside": {
+      "nativeResolution": [
+        1920,
+        1088
+      ],
+      "visualStyle": "Blue Riverbank",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/riverside.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/riverside_material.png",
+        "art_source/world_v42/editable_layers/riverside_scenery.png",
+        "art_source/world_v42/editable_layers/riverside_illumination.png"
+      ]
+    },
+    "dermaga": {
+      "nativeResolution": [
+        1920,
+        1088
+      ],
+      "visualStyle": "Lighthouse Pier",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/dermaga.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/dermaga_material.png",
+        "art_source/world_v42/editable_layers/dermaga_scenery.png",
+        "art_source/world_v42/editable_layers/dermaga_illumination.png"
+      ]
+    },
+    "cafe": {
+      "nativeResolution": [
+        960,
+        640
+      ],
+      "visualStyle": "Sunset Parlour",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/cafe.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/cafe_material.png",
+        "art_source/world_v42/editable_layers/cafe_scenery.png",
+        "art_source/world_v42/editable_layers/cafe_illumination.png"
+      ]
+    },
+    "bukit_bintang": {
+      "nativeResolution": [
+        1920,
+        1280
+      ],
+      "visualStyle": "Celestial Overlook",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/bukit_bintang.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/bukit_bintang_material.png",
+        "art_source/world_v42/editable_layers/bukit_bintang_scenery.png",
+        "art_source/world_v42/editable_layers/bukit_bintang_illumination.png"
+      ]
+    },
+    "memory_garden": {
+      "nativeResolution": [
+        1600,
+        1200
+      ],
+      "visualStyle": "Garden of Recollections",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/memory_garden.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/memory_garden_material.png",
+        "art_source/world_v42/editable_layers/memory_garden_scenery.png",
+        "art_source/world_v42/editable_layers/memory_garden_illumination.png"
+      ]
+    },
+    "eternal_garden": {
+      "nativeResolution": [
+        1920,
+        1408
+      ],
+      "visualStyle": "Garden of Promises",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/eternal_garden.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/eternal_garden_material.png",
+        "art_source/world_v42/editable_layers/eternal_garden_scenery.png",
+        "art_source/world_v42/editable_layers/eternal_garden_illumination.png"
+      ]
+    },
+    "star_path": {
+      "nativeResolution": [
+        2048,
+        1024
+      ],
+      "visualStyle": "Road Between Stars",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/star_path.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/star_path_material.png",
+        "art_source/world_v42/editable_layers/star_path_scenery.png",
+        "art_source/world_v42/editable_layers/star_path_illumination.png"
+      ]
+    },
+    "starfall_village": {
+      "nativeResolution": [
+        1920,
+        1280
+      ],
+      "visualStyle": "Lantern Village",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/starfall_village.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/starfall_village_material.png",
+        "art_source/world_v42/editable_layers/starfall_village_scenery.png",
+        "art_source/world_v42/editable_layers/starfall_village_illumination.png"
+      ]
+    },
+    "lantern_field": {
+      "nativeResolution": [
+        1920,
+        1280
+      ],
+      "visualStyle": "Festival of Wishes",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/lantern_field.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/lantern_field_material.png",
+        "art_source/world_v42/editable_layers/lantern_field_scenery.png",
+        "art_source/world_v42/editable_layers/lantern_field_illumination.png"
+      ]
+    },
+    "hutan_bisik": {
+      "nativeResolution": [
+        2560,
+        1920
+      ],
+      "visualStyle": "Whispering Canopy",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/hutan_bisik.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/hutan_bisik_material.png",
+        "art_source/world_v42/editable_layers/hutan_bisik_scenery.png",
+        "art_source/world_v42/editable_layers/hutan_bisik_illumination.png"
+      ]
+    },
+    "gua_kristal": {
+      "nativeResolution": [
+        1280,
+        960
+      ],
+      "visualStyle": "Crystal Reverie",
+      "collisionSpawnPortalsUnchanged": true,
+      "runtimeImage": "maps/gua_kristal.png",
+      "layers": [
+        "art_source/world_v42/editable_layers/gua_kristal_material.png",
+        "art_source/world_v42/editable_layers/gua_kristal_scenery.png",
+        "art_source/world_v42/editable_layers/gua_kristal_illumination.png"
+      ]
+    }
+  },
+  "sha256": {
+    "plaza": "e2618f3a6014b547a01423f981ad372cc15becddb1ab7538ed3efd6b1926b8d5",
+    "taman_kota": "9c77296c35674e958278384f7a400789563d52f9a37a07261176d09972c137b9",
+    "riverside": "26f27d546716e5c9d11184be19c2e8ebafaf8fe591fa66c311d3f349959934b7",
+    "dermaga": "75a2ad7b0c3cecdafc1e82ab61e6f8aff602d69f370d96cb8130dd14ea084fde",
+    "cafe": "14f90fd3a99da6835e91b6a60681c8b13d3eeb557e2065f9f93c7deceb148659",
+    "bukit_bintang": "473009485cd0c50443a4fa840b3a7aedf63092f77617914f11c0a71cab035500",
+    "memory_garden": "e1ce582d7095066c17727a92cc572e72146d0e8835fcc762f2be373b944a8488",
+    "eternal_garden": "9bf788c9e95bf0c63236778cc9b27df2f11ebb5aa0f35beb5490f0d8a02573b0",
+    "star_path": "f1044f18aa84dbe35e4edd970911d4beaf3418596bf754ac9786c39e255c0c34",
+    "starfall_village": "1dcd0947b7faa4aceb5283d9f31f97c7181925b3bee91dece83d3cdfdd886dd1",
+    "lantern_field": "f7cc2bf848b2b5c56b0a135c93ff73bcfdc6d0428164f479d0f63e1c1bb9bc04",
+    "hutan_bisik": "28432a2140d059bcfd6449660091d4b47b46473ec3fe7c7dff766d7858f8d144",
+    "gua_kristal": "060e859878c312f83e30c99c6d4eb77b3a1c2d286a25762a4a512a62d9c64750"
+  }
+}

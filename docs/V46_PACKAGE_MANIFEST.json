@@ -1,0 +1,23 @@
+{
+  "project": "Arland & Sofia: Our Little Universe",
+  "version": "4.6.0",
+  "source_files": 1909,
+  "baseline": "v4.4.0 RomanticWorld TabletPolish + integrated v4.5 Romance Simulation 3.0 + v4.6 Living World 3.0",
+  "build_status": "Android APK compilation and runtime not verified; Android Studio required",
+  "validation": {
+    "romance_assertions": 48,
+    "living_world_assertions": 9,
+    "world_asset_assertions": 2197,
+    "tablet_layout_assertions": 390,
+    "core_logic_assertions": 24686,
+    "navigation_assertions": 131
+  },
+  "top_level_files": [
+    "settings.gradle",
+    "build.gradle",
+    "gradlew",
+    "gradlew.bat",
+    "README.md"
+  ],
+  "root_folder": "ArlandSofia_v4.6.0"
+}

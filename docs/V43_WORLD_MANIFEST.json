@@ -1,0 +1,35 @@
+{
+  "version": "4.3.0",
+  "areas": {
+    "plaza": "ba3f28b35f6485e6760f15df4b333719cdf54a71943f824ef00dbdc6a679ce91",
+    "taman_kota": "b5dbb9bc486a9da394701e2c5c1f6dbba1eb1e7991d3b628aea364e260fcaf11",
+    "cafe": "917fac51c27a8df720ec646b292e73d522b3483fa80c89e1450e28a74c5d86b2",
+    "riverside": "4e27045d497e97082e3c517c9dea8b439a8cecbb75a55b484acf7dbdca2f4f50"
+  },
+  "new_prop_types": [
+    "v43_bench",
+    "v43_bld_cafe",
+    "v43_bookshelf_c",
+    "v43_bridge_park",
+    "v43_bridge_pier",
+    "v43_frame_photo",
+    "v43_lamp",
+    "v43_pier_post",
+    "v43_v41_bld_arland_house_house_blue",
+    "v43_v41_bld_sofia_house_house_brick",
+    "v43_v41_cafe_table_cafe_table",
+    "v43_v41_counter_cafe_counter",
+    "v43_v41_display_case_cafe_display",
+    "v43_v41_flowerbed_flower",
+    "v43_v41_fountain_fountain",
+    "v43_v41_gazebo_gazebo",
+    "v43_v41_rowboat_rv_rowboat",
+    "v43_v41_tree_cherry_cherry",
+    "v43_v41_tree_green_willow",
+    "v43_wall_clock"
+  ],
+  "active_data_sha": {
+    "data/maps.json": "916d375785ec961d96508aa7819142eff0687f6b1f6d7e00e885cba6809063e3",
+    "data/props.json": "bcdbe352c0440c915629f3deb7b00c40376ad84c60c5f9b887cfa52ae6e5061d"
+  }
+}

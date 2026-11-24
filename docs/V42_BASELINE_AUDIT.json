@@ -1,0 +1,1803 @@
+{
+  "base_version": "4.1.0",
+  "source": "ArlandSofia_Native_Android_v4.1.0_All22Maps_Visual_Update_Source.zip",
+  "original_audio_sha": {
+    "audio/ambience/arcade_hum.ogg": "a7904514642fa1d0cf080d2f9d9741df3f8ac4455b94144961e50de07539ccfd",
+    "audio/ambience/birds_morning.ogg": "dadfcd7d7d1fb7348686391672f9be8060f86e7ea688f908cb32dc1e8dbaa713",
+    "audio/ambience/cafe_room.ogg": "3cd177f21e24da3bec12c804403dae8a1bdd4f0b2b5bee8aaa2fddea86aeba10",
+    "audio/ambience/cave_drips.ogg": "ad27c7111276f44204f2fbb045c83fa19ab0b72c3f0cd8a117be27148a1ff271",
+    "audio/ambience/city_day.ogg": "6cda945d51f76f20cff9eadc298e961321eddf160736f5ce99c2cfd53d147acb",
+    "audio/ambience/forest_wind.ogg": "9067abe300def7fa047ad73dd550473af284162b24e97cc7b150b75f22e2101f",
+    "audio/ambience/lake_water.ogg": "c44fc9188a15bec85a9ec32a809622651cf957c725bcc715f50c6edf63b19828",
+    "audio/ambience/library_room.ogg": "7ed69295cd3527c5694bce01d8b2fec50434b97ab33e857d103ba0de5f8cf9c1",
+    "audio/ambience/magic_chimes.ogg": "0720ab49cd1647976a918ae3683244c14ee434424c6c9954ac5f797a0a260c47",
+    "audio/ambience/night_crickets.ogg": "e9f5d5620e073a8458c9a3a4e6651d822943db91c3adbe40b71e3aef7424e545",
+    "audio/ambience/park_birds.ogg": "6ed54ab8217f4a85b3ebd0bc1893b648ee4b8354458b96b42fa5960e45a251b8",
+    "audio/ambience/rain_outdoor.ogg": "16372a034f960fd6e291eac391f4ba6e1dbea8f1e675008db8eb624ebbdfb8ba",
+    "audio/ambience/rain_window.ogg": "af6b3a60d6149737c1dd99a5b7365fa42b00145214ff8b8b27027a57aeb05b3a",
+    "audio/ambience/wind_leaves.ogg": "ff4f988a853e4a1e2717a3c0e822a10d79fbe7411c5aa1df15fc099b81912ccd",
+    "audio/cinematic_v25.json": "a904d831bba1781c6f2e8fbde5388af4d19470d94d2079c74286b4573920799b",
+    "audio/music/arcade_neon.ogg": "fdac51882eefdec5fb12b6a8f5762303e8255580326c116726761c517f551cb1",
+    "audio/music/archive_mystery.ogg": "dd9f7ea676e3524d1e581d2723dfa0858cf4c7714d4c753ce0b7bdd4b4930053",
+    "audio/music/cafe_theme.ogg": "b9161033d044229e3e05f41afbf4316f31dc6edba535bf50cea76952ad647c36",
+    "audio/music/cafe_waltz.ogg": "b003081be677d20dbbc13ee889b4e0960980c1e7f19ac0a8e536c994e970022a",
+    "audio/music/cinema_first_meet.ogg": "16b700bba6d4555507002c38f4699525ac761a373ab2e1b282e89fe41c49a930",
+    "audio/music/cinema_lantern_finale.ogg": "29a6ca1ee0093e993c4b2b5af49d880a17e020b75d21ffcea5e1928e759eb741",
+    "audio/music/cinema_memory_portal.ogg": "b77ae45762c865539e82803d24dd96e70e053752b450912cf775bbb534301054",
+    "audio/music/cinema_our_tomorrow.ogg": "f06e0ab726bdb352ec76077339a6b4c272921115ac4c450e657d579b968c8a8c",
+    "audio/music/cinema_quiet.ogg": "bd917eec6651ee6ededd505f10db9c8453694582a63995a7d2b3ba752588589d",
+    "audio/music/cinema_rain_conflict.ogg": "30477a42e536485477cfd1f1c2399abd8b4e4c6103bab60edf88ece95f2b52de",
+    "audio/music/cinema_reconciliation.ogg": "38b1be01b571a044fae7c1a9192473696d76facd102cc531aec77dfcb5342638",
+    "audio/music/city_evening.ogg": "0036697bf7820a48892ad286c5cec86a4bbd4b7813bf2f0d1848311a66276b92",
+    "audio/music/city_morning.ogg": "13df80139c7fa63a7dcb8975be669d21185edc44be2299e6e778fd16183aabc3",
+    "audio/music/city_night.ogg": "dc81058ed84daec74a0a23c6576e3575e2a4a2deb5ec52c00a161aa9a2a705c0",
+    "audio/music/crystal_echo.ogg": "67b10a0a111d13658e505a9082c991264822121171cd0bf28c8e244cc1d7e28c",
+    "audio/music/eternal_promise.ogg": "9ab606a82445c1f332e48f06de8903897c31fb32943a220e1dc8e0e2a4709e85",
+    "audio/music/flower_shop.ogg": "66fa4dad5485175bc9f800433cc5fd8c270971b598a5a5cfcf4d83c7b0186eef",
+    "audio/music/game_theme.ogg": "b96f78d215e24a3acb80bb702b5565a5dcb8c9f4a5b98a36510bc05b8b887d13",
+    "audio/music/hill_stars.ogg": "757bdd6ce7efbb3c95e2e755610e20a9ea93e9cfb70873efdbf6ec2a169d1432",
+    "audio/music/home_evening.ogg": "0345f5f362d09bdef0beffd177fa12f4910ab3bfc0cd00d1f7958a1837000f68",
+    "audio/music/home_morning.ogg": "58e60c49347a571188b109d1741d93bab2f8f29768b42c25646ccc5fdce2290c",
+    "audio/music/lake_breeze.ogg": "862afc3b2d86fcbd85a60b33e2f48e74d3d5457c9d886f6ef747b601524e8fc4",
+    "audio/music/lake_moon.ogg": "badfefa71e074bdbcebb986a6c0d95ce5c402f133d2ea5407f9ba7ed04f61059",
+    "audio/music/lantern_glow.ogg": "bb8ce788435e273fd0a1cfe9445144db09e5ac5c29fc5788644ecd71836922ca",
+    "audio/music/library_whisper.ogg": "2ca160f8176f454ac48b074c4ddbd4dd48074373a2a6bc8844f5692240a75018",
+    "audio/music/memory_bloom.ogg": "eeaa187c799c60c97418819eb56277b17842bf0228c70e774138fb30dde5b98e",
+    "audio/music/memory_theme.ogg": "d55de7e80d51df58c1187e1546c4b79b78b11364621258fb6914a2b695784595",
+    "audio/music/menu_theme.ogg": "e9e935555d3842c59c2fed5c622fddb15b14e43f05007b789147f6f3ea40ed16",
+    "audio/music/neighborhood_day.ogg": "f40b8c75b125b41b9b75b614ffe1289d12495eadd249c10360aca31ef708bc1f",
+    "audio/music/night_theme.ogg": "8255302e377ac3b082abbf39f411c6215ea91c16b418bb1f544a6bd8cf59380e",
+    "audio/music/park_blossom.ogg": "bfed2a71f9e9347b42ac91fc1aaf88e281fc520b50ffe8c02a3782379a714c25",
+    "audio/music/park_sunset.ogg": "c3cadf0e0452227ad27fd6deea1c5174e73e11819d3932bf54ee9806e8362997",
+    "audio/music/rain_lullaby.ogg": "5055cb39a2729b17c5c05e2e181fa3fcdb06a96a489aa2fb16beaa03aa9a737c",
+    "audio/music/rain_theme.ogg": "195a3280e10043f34e248f4acbcf143829773e9585d69f7902fc62e1273bbd91",
+    "audio/music/star_road.ogg": "91d342264d603b53af2682ab5581a449189fba92aac5741bef9735a7c850e0ac",
+    "audio/music/star_theme.ogg": "89555213da49b841053c57ad9d15459996a1dc068313ff877881f4e65ac87b7f",
+    "audio/music/star_village.ogg": "ff585c65c0a856f9af6d9dfa62f36a60710db90c69cd0b464a674b2896b4c923",
+    "audio/music/tender_theme.ogg": "de71c4cf2aecbe6351d56461a5c1427c3c91df6c463d5d4d218289f486c46a81",
+    "audio/music/town_theme.ogg": "dc3614af8933563e79b6c0725e9ea9f2dd095ab3856899f062b513940ba3c221",
+    "audio/music/whisper_woods.ogg": "f1925347d91ac2e9e1a4d4ab2008536c8f310dd080622084c85d1f85b27f4aea",
+    "audio/sfx/bell_shop.wav": "9fb465e661d4301df7becbe3771173ca55efef22c028171698a008a41c29fafd",
+    "audio/sfx/bird_chirp.wav": "d43babd3285b16ae4d91ecbcc9845a660ded50aa658d862254c553f3098c118d",
+    "audio/sfx/cat_meow.wav": "8c6054051f1b3142885ccf699b948343be6337da3a73ed3ff08bec4ea2b241d4",
+    "audio/sfx/cinema_heartbeat.wav": "c271b49e32cd8a1175a996be3422d0dc24e479303eb668944cb441e3669c19c2",
+    "audio/sfx/cinema_whoosh.wav": "6e98656845e5983da653e673451f3294a50f30d612e685b5314bf124ecb701b3",
+    "audio/sfx/coin.wav": "6ee1525631176438d92c4315547bada80a7672da0b7667bdcb8c489b34e7666c",
+    "audio/sfx/dog_bark.wav": "e9beb41960738971eb30a4edaf033a820d578a7350496d9c3bb0ed3e08786b2e",
+    "audio/sfx/door_close.wav": "3bbdacf6a1508b5f1b9a5cea82b03cd9c8fbef04f4be824f3944738d60422d98",
+    "audio/sfx/door_open.wav": "75d3c14680fbb571079b4315947dd00587e661e5418809a2d8ab3bd194d57330",
+    "audio/sfx/duck_quack.wav": "f619ae029bb7a829842fa831b7521e16ef291724eb8a529d476312202351dc40",
+    "audio/sfx/flower_pick.wav": "f3bff50e0cfbee3725f39b26c244009aaed2c9f05397477d291fbc73c9bdf1d3",
+    "audio/sfx/gift.wav": "272716ecbd8ac5282f9154edfe4813f60c30ddf4adcfeb5fae403ec3858e98ea",
+    "audio/sfx/heart.wav": "81f930a5723773afd99efb47838242fac1db6df5901a0eb036fbe7a8c4449458",
+    "audio/sfx/highfive.wav": "cbdadd473d1fadc998828baf561ba961308b11970b6abd6741b5515b7da18a49",
+    "audio/sfx/hug.wav": "3dc722af2c49b50b15b4b5bff88cdf2f82586c70c73378d4b34cffc639b5c206",
+    "audio/sfx/lantern.wav": "b4bc1d36a5e5a3eaea273ab801ee53003f12b9756ee4ea026de9c282e8f7b58b",
+    "audio/sfx/menu_confirm.wav": "18e25b2acfc84d02fc9dd9784d7a4c36b848328431324c533dd469d1e6c4f55f",
+    "audio/sfx/notification.wav": "d75204d74081e62524f491014652bbdeba0d42f75aba17395087848b02daf31a",
+    "audio/sfx/page.wav": "ccc741596c95159ab62b131812c2b50bf160f92fb01fba2d731cc0d2d8312027",
+    "audio/sfx/page_turn.wav": "3d64f79aed82e65cc1308410db210357b4212bda2b7dada1817e0a1e5eca372d",
+    "audio/sfx/paper_fold.wav": "9edb1334067a878a1067d8c2878cc62ab1118129b536fff630902543b76a5f9a",
+    "audio/sfx/quest_complete.wav": "591942a3b83684cf54d250a324572df7414d2314d3f08086101c37fca25cd167",
+    "audio/sfx/rain_drop.wav": "70d3722c9c4f612eeb3ebde821c619a5470a7f48bd42b4e480af784cc7501790",
+    "audio/sfx/scene_transition.wav": "d19e160fad4f001569d254c0eb0a6fc723a3a7a2b86dabcbe46718c0328d0549",
+    "audio/sfx/selfie.wav": "c11d77aa6af27b65738af8db63fb36dd022299055540dd58ace4da840b03ff34",
+    "audio/sfx/soft_wrong.wav": "b2be2eb0766b4f2ebbb1ab0af57a18d4ee99bf3230c95550751281e1c5db10a0",
+    "audio/sfx/sparkle.wav": "6d6c98bcbef0403de8f0313ebbc0093acb729c5128818c7437442baf02a3e66b",
+    "audio/sfx/splash.wav": "bd7bb359daff6e90d6377466b7fce74bc673ff683f863038c4a52043b7e3f727",
+    "audio/sfx/step_grass.wav": "7ff0c12901653a984fc26cefb479b8c52a0356862fd10671367735a7cf666642",
+    "audio/sfx/step_stone.wav": "8d20dc2c0c187b3864168f2e4f7c2632570319a2a2a4867335ba6260188483d9",
+    "audio/sfx/step_wood.wav": "5de213b7671857afb6f918e1b274fbfc481f8fb0b5e7d191281459ebb2bb69d9",
+    "audio/sfx/wind_gust.wav": "0ed7c024973a17ede374cf59b183559888524cd2fe372830362b88b472693f01",
+    "audio/soundscape_v24.json": "ae52e93e5f477c853227317d361f12478a3d362e3bddb331e326c5c0711d0d3b"
+  },
+  "other_data_sha": {
+    "data/maps.json": "aaaf47d65738fe2367d222c5cf909fc955f1010c9bbdcbb5c56a608dec138cfb",
+    "data/memory_book.json": "8c3631dbbf8ad8bad8a5d57cfd667624584cf3993ab0c523082a65b4e493a392",
+    "data/props.json": "393bf5a759e7e4931aa001af3e74d51146b5e0330b9615e493a94b279557764f",
+    "data/quests.json": "28ad315084d499516b475ba764e785da9f486b3c04e8a60fba67d40f6ccdb909",
+    "data/story.json": "7bae3e904e696cf20dc837766434b51fd12bf1a9fa15d3a264cddbb9f626a7c7"
+  },
+  "protected_authored_maps": {
+    "arland_room": "bd873cfe10de244e9746bb38e3b5efcebddc4f6b54d4b673deacf2a796ffbacd",
+    "sofia_room": "c1403f0ab032398381c4bdb19cafe277b9053a82a92b124926ae83b691746620",
+    "jalan_kota": "c6d569e78aca6200c43860c0203270aa51f98ae0109e86e30bdb80d9fbdf54e1",
+    "dapur": "d9a6963a2fd31404a7c58011fc2e6ff1bb6a305701f627451bf2cd50146adca8",
+    "toko_bunga": "165058f7cab7fff4f3728bae08d21ba0dcff866b50bfcf5c5edc7e820e0fe14c",
+    "arcade": "33da68d71cf11fc784ebe71d83ec2c8955ba680b712fd593639423feafbb1414",
+    "perumahan": "798e5868c1ffebd3d6e5ff66e231d1534161674b589685ff98b3f25481cd10a8",
+    "perpustakaan": "6c13d30ff06a254d127531f54fb94c911d4856c21e3acec58d77b09d9bd8fdca",
+    "ruang_arsip": "0dc50159c37f76d034b42d57aa625067f9fb9f13cb11d1652436abc4af1942a6"
+  },
+  "original_prop_schema": {
+    "door": [
+      0,
+      0,
+      "sort",
+      "props/door.png"
+    ],
+    "bed_blue": [
+      76,
+      96,
+      "sort",
+      "props/bed_blue.png"
+    ],
+    "desk": [
+      88,
+      26,
+      "sort",
+      "props/desk.png"
+    ],
+    "bookshelf": [
+      58,
+      24,
+      "sort",
+      "props/bookshelf.png"
+    ],
+    "wardrobe": [
+      60,
+      24,
+      "sort",
+      "props/wardrobe.png"
+    ],
+    "plant": [
+      20,
+      10,
+      "sort",
+      "props/plant.png"
+    ],
+    "plant_big": [
+      24,
+      10,
+      "sort",
+      "props/plant_big.png"
+    ],
+    "rug_rect": [
+      0,
+      0,
+      "floor",
+      "props/rug_rect.png"
+    ],
+    "poster": [
+      0,
+      0,
+      "sort",
+      "props/poster.png"
+    ],
+    "wall_clock": [
+      0,
+      0,
+      "sort",
+      "props/wall_clock.png"
+    ],
+    "frame_photo": [
+      0,
+      0,
+      "sort",
+      "props/frame_photo.png"
+    ],
+    "floor_lamp": [
+      10,
+      6,
+      "sort",
+      "props/floor_lamp.png"
+    ],
+    "crate": [
+      26,
+      10,
+      "sort",
+      "props/crate.png"
+    ],
+    "sofa_a": [
+      96,
+      22,
+      "sort",
+      "props/sofa_a.png"
+    ],
+    "spice_shelf_books": [
+      0,
+      0,
+      "sort",
+      "props/spice_shelf_books.png"
+    ],
+    "frame_photo_a2": [
+      0,
+      0,
+      "sort",
+      "props/frame_photo_a2.png"
+    ],
+    "tv": [
+      70,
+      18,
+      "sort",
+      "props/tv.png"
+    ],
+    "barrel": [
+      20,
+      8,
+      "sort",
+      "props/barrel.png"
+    ],
+    "bed_pink": [
+      76,
+      96,
+      "sort",
+      "props/bed_pink.png"
+    ],
+    "vanity": [
+      72,
+      26,
+      "sort",
+      "props/vanity.png"
+    ],
+    "bookshelf_s": [
+      58,
+      24,
+      "sort",
+      "props/bookshelf_s.png"
+    ],
+    "desk_s": [
+      88,
+      26,
+      "sort",
+      "props/desk_s.png"
+    ],
+    "rug_pink": [
+      0,
+      0,
+      "floor",
+      "props/rug_pink.png"
+    ],
+    "sofa": [
+      96,
+      22,
+      "sort",
+      "props/sofa.png"
+    ],
+    "wardrobe_s": [
+      60,
+      24,
+      "sort",
+      "props/wardrobe_s.png"
+    ],
+    "poster_s": [
+      0,
+      0,
+      "sort",
+      "props/poster_s.png"
+    ],
+    "flowerbed_in": [
+      60,
+      14,
+      "sort",
+      "props/flowerbed_in.png"
+    ],
+    "book_pile_sr": [
+      0,
+      0,
+      "sort",
+      "props/book_pile_sr.png"
+    ],
+    "candle": [
+      8,
+      4,
+      "sort",
+      "props/candle.png"
+    ],
+    "fountain": [
+      190,
+      70,
+      "sort",
+      "props/fountain.png"
+    ],
+    "bld_arland_house": [
+      250,
+      82,
+      "sort",
+      "props/bld_arland_house.png"
+    ],
+    "bld_sofia_house": [
+      260,
+      82,
+      "sort",
+      "props/bld_sofia_house.png"
+    ],
+    "bld_cafe": [
+      280,
+      82,
+      "sort",
+      "props/bld_cafe.png"
+    ],
+    "tree_cherry": [
+      14,
+      8,
+      "sort",
+      "props/tree_cherry.png"
+    ],
+    "tree_green": [
+      14,
+      8,
+      "sort",
+      "props/tree_green.png"
+    ],
+    "tree_pine": [
+      14,
+      8,
+      "sort",
+      "props/tree_pine.png"
+    ],
+    "lamp": [
+      8,
+      6,
+      "sort",
+      "props/lamp.png"
+    ],
+    "bench": [
+      66,
+      12,
+      "sort",
+      "props/bench.png"
+    ],
+    "flowerbed": [
+      60,
+      14,
+      "sort",
+      "props/flowerbed.png"
+    ],
+    "bush": [
+      34,
+      10,
+      "sort",
+      "props/bush.png"
+    ],
+    "mailbox": [
+      6,
+      4,
+      "sort",
+      "props/mailbox.png"
+    ],
+    "bicycle": [
+      30,
+      6,
+      "sort",
+      "props/bicycle.png"
+    ],
+    "cafe_umbrella_table": [
+      40,
+      12,
+      "sort",
+      "props/cafe_umbrella_table.png"
+    ],
+    "notice_board": [
+      50,
+      8,
+      "sort",
+      "props/notice_board.png"
+    ],
+    "mural": [
+      112,
+      12,
+      "sort",
+      "props/mural.png"
+    ],
+    "signpost_w": [
+      6,
+      4,
+      "sort",
+      "props/signpost_w.png"
+    ],
+    "signpost_e": [
+      6,
+      4,
+      "sort",
+      "props/signpost_e.png"
+    ],
+    "signpost_s": [
+      6,
+      4,
+      "sort",
+      "props/signpost_s.png"
+    ],
+    "mushrooms": [
+      0,
+      0,
+      "sort",
+      "props/mushrooms.png"
+    ],
+    "bush_plain": [
+      34,
+      10,
+      "sort",
+      "props/bush_plain.png"
+    ],
+    "rock": [
+      22,
+      8,
+      "sort",
+      "props/rock.png"
+    ],
+    "bld_florist": [
+      270,
+      82,
+      "sort",
+      "props/bld_florist.png"
+    ],
+    "bld_arcade": [
+      300,
+      82,
+      "sort",
+      "props/bld_arcade.png"
+    ],
+    "bld_bakery": [
+      240,
+      82,
+      "sort",
+      "props/bld_bakery.png"
+    ],
+    "bus_shelter": [
+      120,
+      16,
+      "sort",
+      "props/bus_shelter.png"
+    ],
+    "vending": [
+      26,
+      12,
+      "sort",
+      "props/vending.png"
+    ],
+    "book_pile_jk": [
+      0,
+      0,
+      "sort",
+      "props/book_pile_jk.png"
+    ],
+    "old_mailbox": [
+      12,
+      6,
+      "sort",
+      "props/old_mailbox.png"
+    ],
+    "stall_flowers": [
+      84,
+      18,
+      "sort",
+      "props/stall_flowers.png"
+    ],
+    "bridge_park": [
+      0,
+      0,
+      "floor",
+      "props/bridge_park.png"
+    ],
+    "gazebo": [
+      150,
+      40,
+      "sort",
+      "props/gazebo.png"
+    ],
+    "picnic_blanket": [
+      0,
+      0,
+      "floor",
+      "props/picnic_blanket.png"
+    ],
+    "hedge_tk": [
+      90,
+      14,
+      "sort",
+      "props/hedge_tk.png"
+    ],
+    "garden_plot_tk": [
+      70,
+      20,
+      "sort",
+      "props/garden_plot_tk.png"
+    ],
+    "garden_plot_tk2": [
+      70,
+      20,
+      "sort",
+      "props/garden_plot_tk2.png"
+    ],
+    "tree_autumn": [
+      14,
+      8,
+      "sort",
+      "props/tree_autumn.png"
+    ],
+    "signpost_n": [
+      6,
+      4,
+      "sort",
+      "props/signpost_n.png"
+    ],
+    "bridge_pier": [
+      0,
+      0,
+      "floor",
+      "props/bridge_pier.png"
+    ],
+    "rowboat_rv": [
+      0,
+      0,
+      "floor",
+      "props/rowboat_rv.png"
+    ],
+    "pier_post": [
+      8,
+      6,
+      "sort",
+      "props/pier_post.png"
+    ],
+    "telescope": [
+      24,
+      10,
+      "sort",
+      "props/telescope.png"
+    ],
+    "door_k": [
+      0,
+      0,
+      "sort",
+      "props/door_k.png"
+    ],
+    "counter": [
+      200,
+      40,
+      "sort",
+      "props/counter.png"
+    ],
+    "display_case": [
+      70,
+      22,
+      "sort",
+      "props/display_case.png"
+    ],
+    "symbol_table": [
+      72,
+      20,
+      "sort",
+      "props/symbol_table.png"
+    ],
+    "rug_round": [
+      0,
+      0,
+      "floor",
+      "props/rug_round.png"
+    ],
+    "cafe_table": [
+      56,
+      14,
+      "sort",
+      "props/cafe_table.png"
+    ],
+    "bookshelf_c": [
+      58,
+      24,
+      "sort",
+      "props/bookshelf_c.png"
+    ],
+    "poster_c": [
+      0,
+      0,
+      "sort",
+      "props/poster_c.png"
+    ],
+    "plant_big_c": [
+      24,
+      10,
+      "sort",
+      "props/plant_big_c.png"
+    ],
+    "cafe_table_c2": [
+      56,
+      14,
+      "sort",
+      "props/cafe_table_c2.png"
+    ],
+    "plant_c": [
+      20,
+      10,
+      "sort",
+      "props/plant_c.png"
+    ],
+    "sofa_c": [
+      96,
+      22,
+      "sort",
+      "props/sofa_c.png"
+    ],
+    "stove": [
+      56,
+      22,
+      "sort",
+      "props/stove.png"
+    ],
+    "kitchen_counter": [
+      130,
+      22,
+      "sort",
+      "props/kitchen_counter.png"
+    ],
+    "fridge": [
+      40,
+      20,
+      "sort",
+      "props/fridge.png"
+    ],
+    "kitchen_table": [
+      90,
+      24,
+      "sort",
+      "props/kitchen_table.png"
+    ],
+    "spice_shelf": [
+      0,
+      0,
+      "sort",
+      "props/spice_shelf.png"
+    ],
+    "kitchen_counter_b": [
+      130,
+      22,
+      "sort",
+      "props/kitchen_counter_b.png"
+    ],
+    "crate_k": [
+      26,
+      10,
+      "sort",
+      "props/crate_k.png"
+    ],
+    "plant_k": [
+      20,
+      10,
+      "sort",
+      "props/plant_k.png"
+    ],
+    "rug_rect_k": [
+      0,
+      0,
+      "floor",
+      "props/rug_rect_k.png"
+    ],
+    "flower_shelf": [
+      110,
+      22,
+      "sort",
+      "props/flower_shelf.png"
+    ],
+    "flower_shelf_b": [
+      110,
+      22,
+      "sort",
+      "props/flower_shelf_b.png"
+    ],
+    "shop_counter": [
+      120,
+      30,
+      "sort",
+      "props/shop_counter.png"
+    ],
+    "flower_buckets": [
+      70,
+      14,
+      "sort",
+      "props/flower_buckets.png"
+    ],
+    "flower_buckets_b": [
+      70,
+      14,
+      "sort",
+      "props/flower_buckets_b.png"
+    ],
+    "plant_big_b": [
+      24,
+      10,
+      "sort",
+      "props/plant_big_b.png"
+    ],
+    "rug_round_g": [
+      0,
+      0,
+      "floor",
+      "props/rug_round_g.png"
+    ],
+    "flower_buckets_c": [
+      70,
+      14,
+      "sort",
+      "props/flower_buckets_c.png"
+    ],
+    "plant_f": [
+      20,
+      10,
+      "sort",
+      "props/plant_f.png"
+    ],
+    "plant_f2": [
+      20,
+      10,
+      "sort",
+      "props/plant_f2.png"
+    ],
+    "stall_flowers_in": [
+      84,
+      18,
+      "sort",
+      "props/stall_flowers_in.png"
+    ],
+    "flowerbed_f": [
+      60,
+      14,
+      "sort",
+      "props/flowerbed_f.png"
+    ],
+    "arcade_pink": [
+      34,
+      14,
+      "sort",
+      "props/arcade_pink.png"
+    ],
+    "arcade_blue": [
+      34,
+      14,
+      "sort",
+      "props/arcade_blue.png"
+    ],
+    "arcade_green": [
+      34,
+      14,
+      "sort",
+      "props/arcade_green.png"
+    ],
+    "arcade_pink_3": [
+      34,
+      14,
+      "sort",
+      "props/arcade_pink_3.png"
+    ],
+    "arcade_blue_4": [
+      34,
+      14,
+      "sort",
+      "props/arcade_blue_4.png"
+    ],
+    "claw_machine": [
+      44,
+      16,
+      "sort",
+      "props/claw_machine.png"
+    ],
+    "photobooth": [
+      70,
+      20,
+      "sort",
+      "props/photobooth.png"
+    ],
+    "prize_shelf": [
+      90,
+      20,
+      "sort",
+      "props/prize_shelf.png"
+    ],
+    "shop_counter_a": [
+      120,
+      30,
+      "sort",
+      "props/shop_counter_a.png"
+    ],
+    "arcade_green_b0": [
+      34,
+      14,
+      "sort",
+      "props/arcade_green_b0.png"
+    ],
+    "arcade_pink_b1": [
+      34,
+      14,
+      "sort",
+      "props/arcade_pink_b1.png"
+    ],
+    "arcade_blue_b2": [
+      34,
+      14,
+      "sort",
+      "props/arcade_blue_b2.png"
+    ],
+    "arcade_green_b3": [
+      34,
+      14,
+      "sort",
+      "props/arcade_green_b3.png"
+    ],
+    "sofa_ar": [
+      96,
+      22,
+      "sort",
+      "props/sofa_ar.png"
+    ],
+    "vending_ar": [
+      26,
+      12,
+      "sort",
+      "props/vending_ar.png"
+    ],
+    "plant_ar": [
+      20,
+      10,
+      "sort",
+      "props/plant_ar.png"
+    ],
+    "poster_a60": [
+      0,
+      0,
+      "sort",
+      "props/poster_a60.png"
+    ],
+    "poster_a900": [
+      0,
+      0,
+      "sort",
+      "props/poster_a900.png"
+    ],
+    "pedestal_book": [
+      30,
+      12,
+      "sort",
+      "props/pedestal_book.png"
+    ],
+    "arch_flowers": [
+      0,
+      0,
+      "sort",
+      "props/arch_flowers.png"
+    ],
+    "tree_dream": [
+      14,
+      8,
+      "sort",
+      "props/tree_dream.png"
+    ],
+    "lantern_post": [
+      8,
+      6,
+      "sort",
+      "props/lantern_post.png"
+    ],
+    "crystal": [
+      18,
+      8,
+      "sort",
+      "props/crystal.png"
+    ],
+    "bush_d": [
+      34,
+      10,
+      "sort",
+      "props/bush_d.png"
+    ],
+    "tree_lantern": [
+      14,
+      8,
+      "sort",
+      "props/tree_lantern.png"
+    ],
+    "lantern_off": [
+      8,
+      6,
+      "sort",
+      "props/lantern_off.png"
+    ],
+    "star_stone": [
+      20,
+      10,
+      "sort",
+      "props/star_stone.png"
+    ],
+    "bld_star_house0": [
+      220,
+      82,
+      "sort",
+      "props/bld_star_house0.png"
+    ],
+    "bld_star_house1": [
+      220,
+      82,
+      "sort",
+      "props/bld_star_house1.png"
+    ],
+    "bld_star_house2": [
+      220,
+      82,
+      "sort",
+      "props/bld_star_house2.png"
+    ],
+    "pedestal_book_map": [
+      30,
+      12,
+      "sort",
+      "props/pedestal_book_map.png"
+    ],
+    "stone_bench": [
+      60,
+      12,
+      "sort",
+      "props/stone_bench.png"
+    ],
+    "wishing_tree": [
+      30,
+      14,
+      "sort",
+      "props/wishing_tree.png"
+    ],
+    "arch_flowers_e": [
+      0,
+      0,
+      "sort",
+      "props/arch_flowers_e.png"
+    ],
+    "arch_flowers_e2": [
+      0,
+      0,
+      "sort",
+      "props/arch_flowers_e2.png"
+    ],
+    "gazebo_e": [
+      150,
+      40,
+      "sort",
+      "props/gazebo_e.png"
+    ],
+    "bld_library": [
+      400,
+      82,
+      "sort",
+      "props/bld_library.png"
+    ],
+    "bld_house_a": [
+      230,
+      82,
+      "sort",
+      "props/bld_house_a.png"
+    ],
+    "bld_house_b": [
+      250,
+      82,
+      "sort",
+      "props/bld_house_b.png"
+    ],
+    "bld_house_c": [
+      240,
+      82,
+      "sort",
+      "props/bld_house_c.png"
+    ],
+    "bld_house_d": [
+      240,
+      82,
+      "sort",
+      "props/bld_house_d.png"
+    ],
+    "garden_plot_g140": [
+      70,
+      20,
+      "sort",
+      "props/garden_plot_g140.png"
+    ],
+    "garden_plot_g460": [
+      70,
+      20,
+      "sort",
+      "props/garden_plot_g460.png"
+    ],
+    "garden_plot_g1540": [
+      70,
+      20,
+      "sort",
+      "props/garden_plot_g1540.png"
+    ],
+    "garden_plot_g1860": [
+      70,
+      20,
+      "sort",
+      "props/garden_plot_g1860.png"
+    ],
+    "hedge": [
+      90,
+      14,
+      "sort",
+      "props/hedge.png"
+    ],
+    "signpost_w2": [
+      6,
+      4,
+      "sort",
+      "props/signpost_w2.png"
+    ],
+    "library_counter": [
+      150,
+      22,
+      "sort",
+      "props/library_counter.png"
+    ],
+    "tall_bookshelf_w820": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_w820.png"
+    ],
+    "tall_bookshelf_w930": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_w930.png"
+    ],
+    "tall_bookshelf_w1040": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_w1040.png"
+    ],
+    "secret_shelf": [
+      92,
+      24,
+      "sort",
+      "props/secret_shelf.png"
+    ],
+    "tall_bookshelf_w110": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_w110.png"
+    ],
+    "tall_bookshelf_m860": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_m860.png"
+    ],
+    "tall_bookshelf_m1080": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_m1080.png"
+    ],
+    "tall_bookshelf_b860": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_b860.png"
+    ],
+    "tall_bookshelf_b1080": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_b1080.png"
+    ],
+    "reading_table": [
+      84,
+      16,
+      "sort",
+      "props/reading_table.png"
+    ],
+    "reading_table_b": [
+      84,
+      16,
+      "sort",
+      "props/reading_table_b.png"
+    ],
+    "tall_bookshelf_l560": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_l560.png"
+    ],
+    "tall_bookshelf_l740": [
+      92,
+      24,
+      "sort",
+      "props/tall_bookshelf_l740.png"
+    ],
+    "reading_table_c": [
+      84,
+      16,
+      "sort",
+      "props/reading_table_c.png"
+    ],
+    "rug_round_lib": [
+      0,
+      0,
+      "floor",
+      "props/rug_round_lib.png"
+    ],
+    "globe": [
+      22,
+      10,
+      "sort",
+      "props/globe.png"
+    ],
+    "sofa_lib": [
+      96,
+      22,
+      "sort",
+      "props/sofa_lib.png"
+    ],
+    "book_pile_p1": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_p1.png"
+    ],
+    "book_pile_p2": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_p2.png"
+    ],
+    "book_pile_p3": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_p3.png"
+    ],
+    "book_pile_p4": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_p4.png"
+    ],
+    "plant_big_lib": [
+      24,
+      10,
+      "sort",
+      "props/plant_big_lib.png"
+    ],
+    "plant_lib": [
+      20,
+      10,
+      "sort",
+      "props/plant_lib.png"
+    ],
+    "frame_photo_lib": [
+      0,
+      0,
+      "sort",
+      "props/frame_photo_lib.png"
+    ],
+    "poster_lib": [
+      0,
+      0,
+      "sort",
+      "props/poster_lib.png"
+    ],
+    "secret_shelf_open": [
+      92,
+      24,
+      "sort",
+      "props/secret_shelf_open.png"
+    ],
+    "jar_shelf_j110": [
+      88,
+      20,
+      "sort",
+      "props/jar_shelf_j110.png"
+    ],
+    "jar_shelf_j210": [
+      88,
+      20,
+      "sort",
+      "props/jar_shelf_j210.png"
+    ],
+    "jar_shelf_j590": [
+      88,
+      20,
+      "sort",
+      "props/jar_shelf_j590.png"
+    ],
+    "jar_shelf_j690": [
+      88,
+      20,
+      "sort",
+      "props/jar_shelf_j690.png"
+    ],
+    "archive_pedestal": [
+      40,
+      14,
+      "sort",
+      "props/archive_pedestal.png"
+    ],
+    "book_pile_a5": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_a5.png"
+    ],
+    "book_pile_a6": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_a6.png"
+    ],
+    "book_pile_a7": [
+      22,
+      8,
+      "sort",
+      "props/book_pile_a7.png"
+    ],
+    "rug_round_arc": [
+      0,
+      0,
+      "floor",
+      "props/rug_round_arc.png"
+    ],
+    "bridge_dpier": [
+      0,
+      0,
+      "floor",
+      "props/bridge_dpier.png"
+    ],
+    "bridge_dplat": [
+      0,
+      0,
+      "floor",
+      "props/bridge_dplat.png"
+    ],
+    "rowboat": [
+      0,
+      0,
+      "floor",
+      "props/rowboat.png"
+    ],
+    "rowboat_b": [
+      0,
+      0,
+      "floor",
+      "props/rowboat_b.png"
+    ],
+    "fishing_hut": [
+      120,
+      22,
+      "sort",
+      "props/fishing_hut.png"
+    ],
+    "bench_b": [
+      66,
+      12,
+      "sort",
+      "props/bench_b.png"
+    ],
+    "signpost_w3": [
+      6,
+      4,
+      "sort",
+      "props/signpost_w3.png"
+    ],
+    "waterfall_hb": [
+      0,
+      0,
+      "floor",
+      "props/waterfall_hb.png"
+    ],
+    "bridge_broken_hb": [
+      0,
+      0,
+      "floor",
+      "props/bridge_broken_hb.png"
+    ],
+    "bridge_fixed_hb": [
+      0,
+      0,
+      "floor",
+      "props/bridge_fixed_hb.png"
+    ],
+    "cave_entrance": [
+      0,
+      0,
+      "sort",
+      "props/cave_entrance.png"
+    ],
+    "stone_lantern": [
+      18,
+      8,
+      "sort",
+      "props/stone_lantern.png"
+    ],
+    "carving_moon": [
+      22,
+      8,
+      "sort",
+      "props/carving_moon.png"
+    ],
+    "tent": [
+      76,
+      16,
+      "sort",
+      "props/tent.png"
+    ],
+    "campfire": [
+      22,
+      8,
+      "sort",
+      "props/campfire.png"
+    ],
+    "log_bench": [
+      56,
+      10,
+      "sort",
+      "props/log_bench.png"
+    ],
+    "log_bench_b": [
+      56,
+      10,
+      "sort",
+      "props/log_bench_b.png"
+    ],
+    "carving_star": [
+      22,
+      8,
+      "sort",
+      "props/carving_star.png"
+    ],
+    "mushroom_ring": [
+      0,
+      0,
+      "floor",
+      "props/mushroom_ring.png"
+    ],
+    "chest": [
+      26,
+      10,
+      "sort",
+      "props/chest.png"
+    ],
+    "chest_hs": [
+      26,
+      10,
+      "sort",
+      "props/chest_hs.png"
+    ],
+    "chest_open": [
+      26,
+      10,
+      "sort",
+      "props/chest_open.png"
+    ],
+    "stone_lantern_e": [
+      18,
+      8,
+      "sort",
+      "props/stone_lantern_e.png"
+    ],
+    "signpost_e2": [
+      6,
+      4,
+      "sort",
+      "props/signpost_e2.png"
+    ],
+    "signpost_s2": [
+      6,
+      4,
+      "sort",
+      "props/signpost_s2.png"
+    ],
+    "signpost_hx": [
+      6,
+      4,
+      "sort",
+      "props/signpost_hx.png"
+    ],
+    "bush_berry": [
+      34,
+      10,
+      "sort",
+      "props/bush_berry.png"
+    ],
+    "tree_oak": [
+      22,
+      10,
+      "sort",
+      "props/tree_oak.png"
+    ],
+    "tree_dark": [
+      14,
+      8,
+      "sort",
+      "props/tree_dark.png"
+    ],
+    "observatory": [
+      200,
+      40,
+      "sort",
+      "props/observatory.png"
+    ],
+    "fence_bb": [
+      0,
+      0,
+      "sort",
+      "props/fence_bb.png"
+    ],
+    "chest_bb": [
+      26,
+      10,
+      "sort",
+      "props/chest_bb.png"
+    ],
+    "stone_lantern_bb": [
+      18,
+      8,
+      "sort",
+      "props/stone_lantern_bb.png"
+    ],
+    "stone_lantern_bb2": [
+      18,
+      8,
+      "sort",
+      "props/stone_lantern_bb2.png"
+    ],
+    "crystal_big": [
+      34,
+      12,
+      "sort",
+      "props/crystal_big.png"
+    ],
+    "stalagmite_s0": [
+      18,
+      8,
+      "sort",
+      "props/stalagmite_s0.png"
+    ],
+    "stalagmite_s1": [
+      18,
+      8,
+      "sort",
+      "props/stalagmite_s1.png"
+    ],
+    "stalagmite_s2": [
+      18,
+      8,
+      "sort",
+      "props/stalagmite_s2.png"
+    ],
+    "stalagmite_s3": [
+      18,
+      8,
+      "sort",
+      "props/stalagmite_s3.png"
+    ],
+    "stalagmite_s4": [
+      18,
+      8,
+      "sort",
+      "props/stalagmite_s4.png"
+    ],
+    "stalagmite_s5": [
+      18,
+      8,
+      "sort",
+      "props/stalagmite_s5.png"
+    ],
+    "carving_flower": [
+      22,
+      8,
+      "sort",
+      "props/carving_flower.png"
+    ],
+    "chest_gk": [
+      26,
+      10,
+      "sort",
+      "props/chest_gk.png"
+    ],
+    "mural_new": [
+      112,
+      12,
+      "sort",
+      "props/mural_new.png"
+    ],
+    "maps_v4_jalan_kota_lamp": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_jalan_kota_lamp.png"
+    ],
+    "maps_v4_perumahan_bench": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_perumahan_bench.png"
+    ],
+    "maps_v4_perpustakaan_bookshelf": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_perpustakaan_bookshelf.png"
+    ],
+    "maps_v4_arcade_central_cabinets": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_arcade_central_cabinets.png"
+    ],
+    "maps_v4_toko_bunga_flower_table": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_toko_bunga_flower_table.png"
+    ],
+    "maps_v4_arland_room_computer": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_arland_room_computer.png"
+    ],
+    "maps_v4_sofia_room_vanity": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_sofia_room_vanity.png"
+    ],
+    "maps_v4_dapur_island": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_dapur_island.png"
+    ],
+    "maps_v4_ruang_arsip_investigation_desk": [
+      0,
+      0,
+      "sort",
+      "props/maps_v4_ruang_arsip_investigation_desk.png"
+    ],
+    "v41_fountain_fountain": [
+      190,
+      70,
+      "sort",
+      "props/v41_fountain_fountain.png"
+    ],
+    "v41_tree_cherry_cherry": [
+      14,
+      8,
+      "sort",
+      "props/v41_tree_cherry_cherry.png"
+    ],
+    "v41_flowerbed_flower": [
+      60,
+      14,
+      "sort",
+      "props/v41_flowerbed_flower.png"
+    ],
+    "v41_gazebo_gazebo": [
+      150,
+      40,
+      "sort",
+      "props/v41_gazebo_gazebo.png"
+    ],
+    "v41_rowboat_rv_rowboat": [
+      0,
+      0,
+      "floor",
+      "props/v41_rowboat_rv_rowboat.png"
+    ],
+    "v41_tree_green_willow": [
+      14,
+      8,
+      "sort",
+      "props/v41_tree_green_willow.png"
+    ],
+    "v41_counter_cafe_counter": [
+      200,
+      40,
+      "sort",
+      "props/v41_counter_cafe_counter.png"
+    ],
+    "v41_cafe_table_cafe_table": [
+      56,
+      14,
+      "sort",
+      "props/v41_cafe_table_cafe_table.png"
+    ],
+    "v41_display_case_cafe_display": [
+      70,
+      22,
+      "sort",
+      "props/v41_display_case_cafe_display.png"
+    ],
+    "v41_arch_flowers_arch": [
+      0,
+      0,
+      "sort",
+      "props/v41_arch_flowers_arch.png"
+    ],
+    "v41_pedestal_book_crystal_shrine": [
+      30,
+      12,
+      "sort",
+      "props/v41_pedestal_book_crystal_shrine.png"
+    ],
+    "v41_tree_dream_memory_tree": [
+      14,
+      8,
+      "sort",
+      "props/v41_tree_dream_memory_tree.png"
+    ],
+    "v41_tree_lantern_cherry": [
+      14,
+      8,
+      "sort",
+      "props/v41_tree_lantern_cherry.png"
+    ],
+    "v41_lantern_off_lantern": [
+      8,
+      6,
+      "sort",
+      "props/v41_lantern_off_lantern.png"
+    ],
+    "v41_crystal_crystal_cluster": [
+      18,
+      8,
+      "sort",
+      "props/v41_crystal_crystal_cluster.png"
+    ],
+    "v41_star_stone_starrocks": [
+      20,
+      10,
+      "sort",
+      "props/v41_star_stone_starrocks.png"
+    ],
+    "v41_bld_star_house0_house_blue": [
+      220,
+      82,
+      "sort",
+      "props/v41_bld_star_house0_house_blue.png"
+    ],
+    "v41_bld_star_house1_house_brick": [
+      220,
+      82,
+      "sort",
+      "props/v41_bld_star_house1_house_brick.png"
+    ],
+    "v41_bld_star_house2_house_blue": [
+      220,
+      82,
+      "sort",
+      "props/v41_bld_star_house2_house_blue.png"
+    ],
+    "v41_wishing_tree_memory_tree": [
+      30,
+      14,
+      "sort",
+      "props/v41_wishing_tree_memory_tree.png"
+    ],
+    "v41_arch_flowers_e_arch": [
+      0,
+      0,
+      "sort",
+      "props/v41_arch_flowers_e_arch.png"
+    ],
+    "v41_arch_flowers_e2_arch": [
+      0,
+      0,
+      "sort",
+      "props/v41_arch_flowers_e2_arch.png"
+    ],
+    "v41_gazebo_e_gazebo": [
+      150,
+      40,
+      "sort",
+      "props/v41_gazebo_e_gazebo.png"
+    ],
+    "v41_rowboat_rowboat": [
+      0,
+      0,
+      "floor",
+      "props/v41_rowboat_rowboat.png"
+    ],
+    "v41_rowboat_b_rowboat": [
+      0,
+      0,
+      "floor",
+      "props/v41_rowboat_b_rowboat.png"
+    ],
+    "v41_waterfall_hb_waterfall": [
+      0,
+      0,
+      "floor",
+      "props/v41_waterfall_hb_waterfall.png"
+    ],
+    "v41_cave_entrance_cave": [
+      0,
+      0,
+      "sort",
+      "props/v41_cave_entrance_cave.png"
+    ],
+    "v41_tree_dark_willow": [
+      14,
+      8,
+      "sort",
+      "props/v41_tree_dark_willow.png"
+    ],
+    "v41_observatory_observatory": [
+      200,
+      40,
+      "sort",
+      "props/v41_observatory_observatory.png"
+    ],
+    "v41_telescope_telescope": [
+      24,
+      10,
+      "sort",
+      "props/v41_telescope_telescope.png"
+    ],
+    "v41_crystal_big_crystal_cluster": [
+      34,
+      12,
+      "sort",
+      "props/v41_crystal_big_crystal_cluster.png"
+    ],
+    "v41_bld_arland_house_house_blue": [
+      250,
+      82,
+      "sort",
+      "props/v41_bld_arland_house_house_blue.png"
+    ],
+    "v41_bld_sofia_house_house_brick": [
+      260,
+      82,
+      "sort",
+      "props/v41_bld_sofia_house_house_brick.png"
+    ]
+  },
+  "v41_landmark_sha": {
+    "props/v41_arch_flowers_arch.png": "d19c21e5e4d07ea1c6ac26cdd568ea5b62822c78970b3c45f04d9ecf579e52b5",
+    "props/v41_arch_flowers_e2_arch.png": "d19c21e5e4d07ea1c6ac26cdd568ea5b62822c78970b3c45f04d9ecf579e52b5",
+    "props/v41_arch_flowers_e_arch.png": "d19c21e5e4d07ea1c6ac26cdd568ea5b62822c78970b3c45f04d9ecf579e52b5",
+    "props/v41_bld_arland_house_house_blue.png": "f9697e1d62f3b1553053e55e14bd14f1bb89605942181f84057910e6f135d49c",
+    "props/v41_bld_sofia_house_house_brick.png": "375f9cf686124319996a0509bbc6d493e99cd4810a1c671a0ab99a2d77ab1b53",
+    "props/v41_bld_star_house0_house_blue.png": "5e269981f4951d6cdf7822ce28adc35111feeebb312d5da7e9ebd55b1ddb730b",
+    "props/v41_bld_star_house1_house_brick.png": "1043a426010f0df4970c96d2fa960ba121b64c2ccad6683699b22c7eb532819c",
+    "props/v41_bld_star_house2_house_blue.png": "5e269981f4951d6cdf7822ce28adc35111feeebb312d5da7e9ebd55b1ddb730b",
+    "props/v41_cafe_table_cafe_table.png": "e1102f993f293c3279e37619249ed77ae7ce832126654224d4cb83ff627cd536",
+    "props/v41_cave_entrance_cave.png": "089086784664614eabd3a0628d9bb543de823ff43fb8450d3aaf7852bcc3e6ff",
+    "props/v41_counter_cafe_counter.png": "4b9cc498c42f5e4d6ed343deddbf6a7ee311032351ebd3344c86c802161e48e4",
+    "props/v41_crystal_big_crystal_cluster.png": "f70b51218818d7abdf2b3d0d65be7527f493d4956422d4bcccf87d603f832585",
+    "props/v41_crystal_crystal_cluster.png": "3c4aacb98be0d4e0197152514fd05d2a8c0c03a6a5b2a22965091f3cd1125a26",
+    "props/v41_display_case_cafe_display.png": "2590c5324114e6b0f42c5480069e0539c3138942e50a5a2a233b04586da63f83",
+    "props/v41_flowerbed_flower.png": "09d442b6c0ed06567a7eac5d042689eb0d55c54658f0c8ea65c13ad2b53babe6",
+    "props/v41_fountain_fountain.png": "2c5b3fdec76d4bdfcf5ecd0fa616ef8a5103c0fa9a3cf00c8701f4d0821a06dd",
+    "props/v41_gazebo_e_gazebo.png": "3878056257bc3ecdea4ad58eca971332fe9f7895b40d66387454588a3a01f2af",
+    "props/v41_gazebo_gazebo.png": "3878056257bc3ecdea4ad58eca971332fe9f7895b40d66387454588a3a01f2af",
+    "props/v41_lantern_off_lantern.png": "4e7775469b02115479efb1a2b93aa6494ce09a8af237ef6e73d8d9900de2350f",
+    "props/v41_observatory_observatory.png": "9941ae3cd1bce9574f27a004c9e99ebeb94768fbf9780a5a986145fca2d1dd73",
+    "props/v41_pedestal_book_crystal_shrine.png": "e6fc68c245d5c22d2b6b07ee8f85c9c69595e7d5c0d6b86d25c9ddd38871947b",
+    "props/v41_rowboat_b_rowboat.png": "2a97a05475c23523cdf935de950bc1b825e11bf7342d5b074286dc7b470e095b",
+    "props/v41_rowboat_rowboat.png": "2a97a05475c23523cdf935de950bc1b825e11bf7342d5b074286dc7b470e095b",
+    "props/v41_rowboat_rv_rowboat.png": "2a97a05475c23523cdf935de950bc1b825e11bf7342d5b074286dc7b470e095b",
+    "props/v41_star_stone_starrocks.png": "c9f5c0a251e80ca61d8d222a0fd5acaef237ced38c947455ad8d34195ff107b6",
+    "props/v41_telescope_telescope.png": "a02441c7342fe78cb6f24304fa444a3b3614c7d755e9ef4de966b6bd27ab0ff5",
+    "props/v41_tree_cherry_cherry.png": "315e20cdff97e044883bb8fe86cff1a26d9e4204153adea8ca258d2a533b118f",
+    "props/v41_tree_dark_willow.png": "a7c2fc6261805f04ff94ba7251c7ff11c80a771e18e47bcdb45eccc7c694ac89",
+    "props/v41_tree_dream_memory_tree.png": "e226d06ba8efb385be395cc5cca6941705147a80204696dc06b8b09b32600d77",
+    "props/v41_tree_green_willow.png": "a0b1e4b6621df2bd1a250ff3c19bb742b0a0835bbe19a4b9bbd45abe2f92b8ea",
+    "props/v41_tree_lantern_cherry.png": "315e20cdff97e044883bb8fe86cff1a26d9e4204153adea8ca258d2a533b118f",
+    "props/v41_waterfall_hb_waterfall.png": "1725a5f8325e033ad13f81b12c47cb4d415f4271c71e5a2ac2835d0a62370fa8",
+    "props/v41_wishing_tree_memory_tree.png": "f0adc00285dda7020144a1614c30272f683d444690ddcc5690f46c0847f61bea"
+  },
+  "original_13_map_sha": {
+    "plaza": "68b644ee6b2b8fb342d971f22b33fd27123d0e8a8465ed5502c1c67efbeec3a6",
+    "taman_kota": "4ef30731d9b9234559312f40a91c1dce176d7e095ed1e84110ba5695d575252b",
+    "riverside": "279a406f324c7e7979efa527268392f63524af912318add1164d42f68e5155a5",
+    "cafe": "3caa461ead985d1ac1103805ba521a42d36bb3762ebb241040d0b509f3f92912",
+    "memory_garden": "a624903e0b67b6f25ced3bef9744002be93eadb49bed84e478a7a3a8aba864a9",
+    "lantern_field": "ced1de87892fc6d1fd4fa717f5e4891566bfca8cdf7079745a245e92d209e504",
+    "star_path": "4282d95d411271672f1fc6e5d37fcee2c44f7d360b75f70ff242c45bf53a622e",
+    "starfall_village": "0736ced9fc2af3f243b5f10feaf2ee3c98ae51851f052905f5187534fb7fc718",
+    "eternal_garden": "5db322750503a9aa217ead508a08d323c50472c61c14d9c8c2e6f7b5c693da93",
+    "dermaga": "a88b4b229ede66c2793ff6bd709e98b10ec4b53348443324e5bbb76330466ff6",
+    "hutan_bisik": "e0823d16d92faf85046f0edbdeedcb243a81bb6441dd5a85725b09c4c48eccb9",
+    "bukit_bintang": "b0e51b78c93772e1180d2127b383fcca3a457487bfc644a17adf2da2bdf8c7a8",
+    "gua_kristal": "b995d187d6694c7fa0fceff097c9775523bb1b7e874388fcbb756310c9714c1d"
+  },
+  "original_map_layout_sha": "aaaf47d65738fe2367d222c5cf909fc955f1010c9bbdcbb5c56a608dec138cfb"
+}

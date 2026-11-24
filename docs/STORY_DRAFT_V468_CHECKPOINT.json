@@ -1,0 +1,53 @@
+{
+  "draft": "v4.6.8",
+  "section": "Chapter 2 \u2014 A Little Date",
+  "distribution": "local draft only; no ZIP; no GitHub update",
+  "validation": "Headless narrative/runtime/asset checks; Android APK not built",
+  "files": [
+    {
+      "path": "android/assets/data/story.json",
+      "size": 556458,
+      "sha256": "86005b8d3fa9f6435f58d8d4cebdf5fa381d28beaadf35126756e3b50e921145"
+    },
+    {
+      "path": "android/assets/data/quests.json",
+      "size": 551776,
+      "sha256": "f3d9d2e8bfe1940f1c0dd1b5632853059175e2d227465c80b261f72cba979c20"
+    },
+    {
+      "path": "android/assets/data/memory_book.json",
+      "size": 65951,
+      "sha256": "e263a812e859126e9271c457db7a20c0cc20266974ed23f5d1017313c2451dec"
+    },
+    {
+      "path": "core/src/main/java/com/arlandsofia/olu/logic/QuestEngine.java",
+      "size": 34311,
+      "sha256": "668edb194b2bc6f0ae3bd464c069efe30a52f5ac83b13b2eed05abd440d77220"
+    },
+    {
+      "path": "core/src/main/java/com/arlandsofia/olu/logic/SoundscapePlan.java",
+      "size": 7009,
+      "sha256": "21f70df0a6eb90563204062bb050f337570547a4cbd3a7396b774ebc98ba6443"
+    },
+    {
+      "path": "tools/apply_story_chapter1_v467.py",
+      "size": 29158,
+      "sha256": "81eb8b6175540318fee0f753737cdcbdf9a161298987482081e8e2dfe992eaa2"
+    },
+    {
+      "path": "tools/apply_story_chapter2_v468.py",
+      "size": 34698,
+      "sha256": "9af7140469dffe1e8bf9c0695d5b869bc0a7e7053814dcf1ece42c005ea8a461"
+    },
+    {
+      "path": "android/assets/audio/music/cinema_date_choices_v468.ogg",
+      "size": 59707,
+      "sha256": "722dd97cd8ec6c902629f0f798695024b24ec47df3e47d5167c8cfafb61ca691"
+    },
+    {
+      "path": "android/assets/audio/sfx/photo_lantern_v468.wav",
+      "size": 48554,
+      "sha256": "d5d8409a3e247b528e9b026c6909a293ac9642fd6cab91c8ae4e08a02db299e0"
+    }
+  ]
+}

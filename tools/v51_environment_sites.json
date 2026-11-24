@@ -1,0 +1,233 @@
+{
+  "plaza": {
+    "x": 765,
+    "y": 450,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "city",
+    "reason": "Plaza sisi utara — pelataran panggung menghadap lingkaran utama"
+  },
+  "jalan_kota": {
+    "x": 545,
+    "y": 305,
+    "w": 128,
+    "h": 75,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "city",
+    "reason": "Beranda toko di sisi jalur pedestrian"
+  },
+  "taman_kota": {
+    "x": 1085,
+    "y": 355,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "garden",
+    "reason": "Teras pemandang di luar lengkung jalan danau"
+  },
+  "riverside": {
+    "x": 1060,
+    "y": 490,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "wood",
+    "reason": "Dek menghadap danau, akses dari jalan tepi air"
+  },
+  "cafe": {
+    "x": 625,
+    "y": 345,
+    "w": 128,
+    "h": 75,
+    "stair": 57,
+    "rise": 16,
+    "stairWidth": 56,
+    "style": "cafe",
+    "reason": "Panggung pertunjukan di sisi belakang ruang kafe"
+  },
+  "toko_bunga": {
+    "x": 745,
+    "y": 280,
+    "w": 128,
+    "h": 75,
+    "stair": 57,
+    "rise": 16,
+    "stairWidth": 56,
+    "style": "garden",
+    "reason": "Podium buket di dekat counter bunga"
+  },
+  "arcade": {
+    "x": 550,
+    "y": 225,
+    "w": 128,
+    "h": 75,
+    "stair": 57,
+    "rise": 16,
+    "stairWidth": 56,
+    "style": "night",
+    "reason": "Panggung hadiah di depan deretan mesin"
+  },
+  "memory_garden": {
+    "x": 1005,
+    "y": 555,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "memory",
+    "reason": "Teras Memory Garden — ujung tangga menyentuh cabang jalur timur"
+  },
+  "lantern_field": {
+    "x": 845,
+    "y": 340,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "night",
+    "reason": "Dek lentera menuju lingkaran cahaya"
+  },
+  "star_path": {
+    "x": 1155,
+    "y": 390,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "star",
+    "reason": "Observatorium Star Path — pangkal tangga tepat pada jalur zig-zag bercahaya"
+  },
+  "starfall_village": {
+    "x": 985,
+    "y": 470,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "star",
+    "reason": "Teras terhubung jalan utama desa"
+  },
+  "eternal_garden": {
+    "x": 915,
+    "y": 545,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "memory",
+    "reason": "Pijakan sisi selatan lingkar taman akhir"
+  },
+  "perumahan": {
+    "x": 935,
+    "y": 315,
+    "w": 128,
+    "h": 75,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "city",
+    "reason": "Beranda rumah menyambung trotoar"
+  },
+  "perpustakaan": {
+    "x": 640,
+    "y": 370,
+    "w": 128,
+    "h": 75,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "cafe",
+    "reason": "Mezanin kecil di sisi rak buku"
+  },
+  "dermaga": {
+    "x": 895,
+    "y": 225,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "wood",
+    "reason": "Teras kayu dari jalan menuju tepi danau"
+  },
+  "hutan_bisik": {
+    "x": 1095,
+    "y": 765,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "forest",
+    "reason": "Panggung akar dekat persimpangan jalur hutan"
+  },
+  "bukit_bintang": {
+    "x": 995,
+    "y": 560,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "garden",
+    "reason": "Pelataran pandang di sisi jalur observatorium"
+  },
+  "gua_kristal": {
+    "x": 765,
+    "y": 270,
+    "w": 128,
+    "h": 75,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "crystal",
+    "reason": "Pelataran batu di tepi jalur kristal"
+  },
+  "galeri_komunitas": {
+    "x": 350,
+    "y": 185,
+    "w": 128,
+    "h": 75,
+    "stair": 57,
+    "rise": 16,
+    "stairWidth": 56,
+    "style": "cafe",
+    "reason": "Podium karya seni di jalur galeri"
+  },
+  "rain_garden": {
+    "x": 1205,
+    "y": 455,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "memory",
+    "reason": "Jembatan batu di jalur cahaya Rain Garden"
+  },
+  "hall_of_tomorrow": {
+    "x": 910,
+    "y": 530,
+    "w": 168,
+    "h": 92,
+    "stair": 78,
+    "rise": 26,
+    "stairWidth": 56,
+    "style": "future",
+    "reason": "Balkon ruang masa depan yang terhubung lorong"
+  }
+}

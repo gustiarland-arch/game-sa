@@ -1,0 +1,212 @@
+{
+  "plaza": {
+    "x": 1385,
+    "y": 860,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "city",
+    "stairWidth": 58
+  },
+  "taman_kota": {
+    "x": 1285,
+    "y": 560,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "garden",
+    "stairWidth": 58
+  },
+  "riverside": {
+    "x": 1135,
+    "y": 260,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "wood",
+    "stairWidth": 58
+  },
+  "dermaga": {
+    "x": 1160,
+    "y": 235,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "wood",
+    "stairWidth": 58
+  },
+  "cafe": {
+    "x": 510,
+    "y": 335,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 18,
+    "style": "cafe",
+    "stairWidth": 58
+  },
+  "star_path": {
+    "x": 1210,
+    "y": 585,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "star",
+    "stairWidth": 58
+  },
+  "bukit_bintang": {
+    "x": 985,
+    "y": 310,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "garden",
+    "stairWidth": 58
+  },
+  "memory_garden": {
+    "x": 1110,
+    "y": 485,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "memory",
+    "stairWidth": 58
+  },
+  "lantern_field": {
+    "x": 660,
+    "y": 410,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "night",
+    "stairWidth": 58
+  },
+  "starfall_village": {
+    "x": 1160,
+    "y": 410,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "star",
+    "stairWidth": 58
+  },
+  "eternal_garden": {
+    "x": 1260,
+    "y": 760,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "garden",
+    "stairWidth": 58
+  },
+  "rain_garden": {
+    "x": 1185,
+    "y": 510,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "night",
+    "stairWidth": 58
+  },
+  "hutan_bisik": {
+    "x": 1535,
+    "y": 785,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "forest",
+    "stairWidth": 58
+  },
+  "gua_kristal": {
+    "x": 785,
+    "y": 310,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 26,
+    "style": "crystal",
+    "stairWidth": 58
+  },
+  "hall_of_tomorrow": {
+    "x": 1185,
+    "y": 710,
+    "w": 168,
+    "h": 92,
+    "stair": 90,
+    "rise": 26,
+    "style": "future",
+    "stairWidth": 58
+  },
+  "perumahan": {
+    "x": 810,
+    "y": 310,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 26,
+    "style": "city",
+    "stairWidth": 58
+  },
+  "jalan_kota": {
+    "x": 585,
+    "y": 285,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 26,
+    "style": "city",
+    "stairWidth": 58
+  },
+  "toko_bunga": {
+    "x": 660,
+    "y": 360,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 26,
+    "style": "garden",
+    "stairWidth": 58
+  },
+  "perpustakaan": {
+    "x": 635,
+    "y": 410,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 18,
+    "style": "wood",
+    "stairWidth": 58
+  },
+  "arcade": {
+    "x": 660,
+    "y": 410,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 18,
+    "style": "night",
+    "stairWidth": 58
+  },
+  "galeri_komunitas": {
+    "x": 610,
+    "y": 360,
+    "w": 128,
+    "h": 75,
+    "stair": 90,
+    "rise": 26,
+    "style": "cafe",
+    "stairWidth": 58
+  }
+}

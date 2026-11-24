@@ -1,0 +1,69 @@
+{
+  "version": "4.8.0",
+  "notes": "Only rendered backgrounds changed; metadata/collision/spawn coordinates are not touched.",
+  "maps": {
+    "galeri_komunitas": {
+      "size": [
+        960,
+        640
+      ],
+      "layer": "art_source/story_v480/editable_layers/galeri_komunitas_detail.png",
+      "before_sha256": "94b6269927d8531fff67a617c36c2e3128a0ffdf9b4dfae2008188628c751e29",
+      "after_sha256": "ec4dc0d500cf2759d7c90ebf3542e58e785114fb280ff2172804747860c5c229"
+    },
+    "rain_garden": {
+      "size": [
+        1920,
+        1280
+      ],
+      "layer": "art_source/story_v480/editable_layers/rain_garden_detail.png",
+      "before_sha256": "e743a619d4d2376ff7d9c15eb7abf3b035916ac4f28fe0f74df218c76d39d44f",
+      "after_sha256": "e41c1a7aa54cd0529bc677e23861d73ee5d6c08cfe489a17c900a0cea6b34116"
+    },
+    "clockwork_station": {
+      "size": [
+        1920,
+        1280
+      ],
+      "layer": "art_source/story_v480/editable_layers/clockwork_station_detail.png",
+      "before_sha256": "d3ee53d5ba7a0efb1c0c3a26fab487a10e58b5f8fbdf83fd8e665b80bf650380",
+      "after_sha256": "17bd07c8ef6f7f57823c6433ec32b4251c4e66ccab02c68d59f8760621732153"
+    },
+    "memory_bridge": {
+      "size": [
+        1920,
+        1280
+      ],
+      "layer": "art_source/story_v480/editable_layers/memory_bridge_detail.png",
+      "before_sha256": "bc10d5568bedc6e257401e4aa02219f462afed032b887bb3873f8db835053925",
+      "after_sha256": "5652f5391f6f9df47c52f66e9c95a3db8fcf78587747e5b3c54caccd188f2c91"
+    },
+    "moonlight_lake": {
+      "size": [
+        1920,
+        1280
+      ],
+      "layer": "art_source/story_v480/editable_layers/moonlight_lake_detail.png",
+      "before_sha256": "745a9c71d87f7ff8489e059cf661fadbd417f9055a2f72e95b949a5b2f80e76f",
+      "after_sha256": "ed33e74f2bf2e203515089c89b6b3c0a97e61408fff2fd790ba62e310acffca1"
+    },
+    "hall_of_tomorrow": {
+      "size": [
+        1920,
+        1280
+      ],
+      "layer": "art_source/story_v480/editable_layers/hall_of_tomorrow_detail.png",
+      "before_sha256": "fd432a8c665bbcc597446fe6e05dc34bbd396902b3346c3acd0b9fc33a7e3b5f",
+      "after_sha256": "346edafa723ff2a46057589c899b79118aa629db5841d7742e420c2c977abd95"
+    },
+    "ruang_dua_surat": {
+      "size": [
+        960,
+        640
+      ],
+      "layer": "art_source/story_v480/editable_layers/ruang_dua_surat_detail.png",
+      "before_sha256": "450e754829685286fa3874cbddad49bf0b36b6d14471c844e3830a987ba94804",
+      "after_sha256": "893f2396d01caae8ee63836c1b4419de9a839e7ca03e5b7ef47d943ed03b36ed"
+    }
+  }
+}

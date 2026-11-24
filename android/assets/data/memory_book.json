@@ -1,0 +1,3914 @@
+{
+  "_doc": "Dibuat oleh tools/build_content.py. Semua teks = draft fiksi.",
+  "items": {
+    "denah_dito": {
+      "name": "Denah untuk Dito",
+      "icon": "items/compass.png",
+      "desc": "Peta sederhana dari tiga tempat yang dikenali seorang anak."
+    },
+    "kartu_klub_baca": {
+      "name": "Kartu Klub Baca",
+      "icon": "items/postcard.png",
+      "desc": "Tiga kartu kecil tentang hal baik di tempat biasa."
+    },
+    "kumpulan_cerita_hujan": {
+      "name": "Cerita Setelah Hujan",
+      "icon": "items/memory_page.png",
+      "desc": "Salinan tiga cerita Nenek Sari yang mengajarkan cara mendengar."
+    },
+    "peta_lampu_kota": {
+      "name": "Peta Lampu Festival",
+      "icon": "items/lantern_paper.png",
+      "desc": "Rute tiga lentera yang diperiksa sebelum festival."
+    },
+    "halaman_suara": {
+      "name": "Halaman Suara",
+      "icon": "items/memory_page.png",
+      "desc": "Halaman terakhir Pak Wira yang memudar ketika tidak pernah diceritakan."
+    },
+    "pembatas_wira": {
+      "name": "Pembatas Kenangan Wira",
+      "icon": "items/lantern_bookmark.png",
+      "desc": "Titipan Nenek Sari: cerita baik patut disampaikan lagi."
+    },
+    "paper_flower": {
+      "name": "Bunga Kertas",
+      "icon": "items/paper_flower.png",
+      "desc": "Bunga kecil dari kertas, dilipat sendiri."
+    },
+    "postcard": {
+      "name": "Kartu Pos",
+      "icon": "items/postcard.png",
+      "desc": "Kartu pos dengan pesan singkat yang ditulis hati-hati."
+    },
+    "memory_book": {
+      "name": "Memory Book",
+      "icon": "items/memory_book.png",
+      "desc": "Buku kecil bercahaya yang menyimpan kenangan."
+    },
+    "small_note": {
+      "name": "Catatan Kecil",
+      "icon": "items/small_note.png",
+      "desc": "Catatan kecil milik Arland."
+    },
+    "bookmark": {
+      "name": "Pembatas Buku",
+      "icon": "items/bookmark.png",
+      "desc": "Pembatas buku Sofia dengan gambar bintang kecil."
+    },
+    "letter_two_sides": {
+      "name": "Surat Dua Sisi",
+      "icon": "items/letter_two_sides.png",
+      "desc": "\"Setiap kenangan punya dua sisi, tetapi satu tempat pulang.\""
+    },
+    "bunga_pita": {
+      "name": "Buket Berpita",
+      "icon": "items/bouquet.png",
+      "desc": "Buket kecil dari Toko Bunga Melati dengan pita pilihan sendiri."
+    },
+    "foto_kecil": {
+      "name": "Foto Langit Plaza",
+      "icon": "items/photo_small.png",
+      "desc": "Foto kecil langit sore di atas plaza."
+    },
+    "foto_berdua": {
+      "name": "Foto Photobooth",
+      "icon": "items/photo_strip.png",
+      "desc": "Tiga jepretan: kaget, tertawa, lalu tersenyum."
+    },
+    "stroberi": {
+      "name": "Stroberi",
+      "icon": "items/strawberry.png",
+      "desc": "Stroberi segar dari kulkas dapur kafe."
+    },
+    "madu": {
+      "name": "Madu",
+      "icon": "items/honey.png",
+      "desc": "Madu dari kebun lebah cucu Nenek Sari."
+    },
+    "daun_mint": {
+      "name": "Daun Mint",
+      "icon": "items/mint.png",
+      "desc": "Tiga lembar daun mint dari taman."
+    },
+    "roti_lapis": {
+      "name": "Roti Lapis Madu",
+      "icon": "items/sandwich.png",
+      "desc": "Roti lapis stroberi madu. Satu sedikit gosong."
+    },
+    "bunga_kering": {
+      "name": "Bunga Kering",
+      "icon": "items/dried_flowers.png",
+      "desc": "Baby's breath dan mawar kecil yang dikeringkan."
+    },
+    "lampu_tumbler": {
+      "name": "Lampu Tumbler",
+      "icon": "items/fairy_lights.png",
+      "desc": "Lampu kecil yang membuat sudut kenangan hangat."
+    },
+    "bingkai_bintang": {
+      "name": "Bingkai Bintang",
+      "icon": "items/star_frame.png",
+      "desc": "Bingkai foto berbentuk bintang dari arcade."
+    },
+    "kompas": {
+      "name": "Kompas Bintang",
+      "icon": "items/compass.png",
+      "desc": "Jarumnya menunjuk timur, utara, lalu barat."
+    },
+    "lentera_kecil": {
+      "name": "Lentera Kecil",
+      "icon": "items/lantern_small.png",
+      "desc": "Lentera yang berganti warna: ungu, emas, biru."
+    },
+    "surat_esok": {
+      "name": "Surat untuk Besok",
+      "icon": "items/letter_two_sides.png",
+      "desc": "Surat harapan yang akan digantung di Pohon Harapan."
+    },
+    "bros_bunga": {
+      "name": "Bros Bunga",
+      "icon": "items/brooch.png",
+      "desc": "Bunga yang tidak layu, untuk kenangan yang tidak layu."
+    },
+    "mochi_digendong": {
+      "name": "Mochi",
+      "icon": "items/cat_photo.png",
+      "desc": "Kucing oranye yang berat. Antar pulang ke Nenek Sari."
+    },
+    "foto_mochi": {
+      "name": "Foto Mochi Kecil",
+      "icon": "items/cat_photo.png",
+      "desc": "Dulu Mochi muat di dalam cangkir teh."
+    },
+    "batu_bintang": {
+      "name": "Batu Bintang",
+      "icon": "items/star_stone.png",
+      "desc": "Agak bercahaya kalau dilihat malam hari."
+    },
+    "boneka_kucing": {
+      "name": "Boneka Kucing",
+      "icon": "items/cat_plush.png",
+      "desc": "Hadiah juara mesin capit edisi terbatas."
+    },
+    "kartu_resep": {
+      "name": "Kartu Resep",
+      "icon": "items/recipe.png",
+      "desc": "Teh Rempah — Pak Harto. Untuk orang yang baru berbaikan."
+    },
+    "album_kota": {
+      "name": "Album Kota",
+      "icon": "items/album.png",
+      "desc": "Lima foto tempat favorit di kota."
+    },
+    "joran": {
+      "name": "Joran Pancing",
+      "icon": "items/fishing_rod.png",
+      "desc": "Joran cadangan Pak Udin. Pancing di dermaga atau kolam taman."
+    },
+    "topi_pancing": {
+      "name": "Topi Pancing",
+      "icon": "items/fish_hat.png",
+      "desc": "Topi Pak Udin waktu muda. Tanda pemancing sejati."
+    },
+    "halaman_lama": {
+      "name": "Halaman Lama",
+      "icon": "items/memory_page.png",
+      "desc": "Dua puluh halaman dari buku kenangan Nenek Sari dan kakek."
+    },
+    "gembor": {
+      "name": "Gembor",
+      "icon": "items/watering.png",
+      "desc": "Gembor pinjaman Nenek Sari untuk menyiram bunga plaza."
+    },
+    "permen_jahe": {
+      "name": "Permen Jahe",
+      "icon": "items/ginger_candy.png",
+      "desc": "Buatan Nenek Sari. \"Bagus sebelum bicara penting.\""
+    },
+    "stiker_bintang": {
+      "name": "Stiker Bintang",
+      "icon": "items/star_sticker.png",
+      "desc": "Hadiah papan skor Hujan Bintang."
+    },
+    "buah_pasar": {
+      "name": "Buah Pasar Minggu",
+      "icon": "items/fruit.png",
+      "desc": "Hadiah tebak berat semangka."
+    },
+    "buku_pasar": {
+      "name": "Buku Bekas",
+      "icon": "items/market_book.png",
+      "desc": "\"Semoga harimu menyenangkan,\" tulis pemilik sebelumnya."
+    },
+    "gantungan_bintang": {
+      "name": "Gantungan Bintang",
+      "icon": "items/keychain_star.png",
+      "desc": "Hadiah lempar gelang. Diskon perasaan tidak termasuk."
+    },
+    "teh_rempah": {
+      "name": "Teh Rempah Festival",
+      "icon": "items/tea_glass.png",
+      "desc": "Jahe, kayu manis, gula aren. Untuk tangan yang hangat."
+    },
+    "lentera_kertas": {
+      "name": "Lentera Kertas",
+      "icon": "items/lantern_paper.png",
+      "desc": "Empat lentera untuk digantung di Taman Kota."
+    },
+    "mahkota_bunga": {
+      "name": "Mahkota Bunga",
+      "icon": "items/flower_crown.png",
+      "desc": "Buatan Bu Melati di malam festival."
+    },
+    "lentera_harapan": {
+      "name": "Kenangan Lentera",
+      "icon": "items/lantern_paper.png",
+      "desc": "\"Semoga kita terus punya alasan untuk jalan-jalan sore.\""
+    },
+    "tas_surat": {
+      "name": "Tas Surat",
+      "icon": "items/postcard.png",
+      "desc": "Lima surat titipan Pak Pos."
+    },
+    "perangko": {
+      "name": "Perangko Festival",
+      "icon": "items/stamp.png",
+      "desc": "Perangko langka edisi festival, hadiah Pak Pos."
+    },
+    "celemek": {
+      "name": "Celemek Kafe Senja",
+      "icon": "items/apron.png",
+      "desc": "Tanda koki resmi Kafe Senja."
+    },
+    "pembatas_lentera": {
+      "name": "Pembatas Lentera",
+      "icon": "items/lantern_bookmark.png",
+      "desc": "Terselip di balik buku pinjaman terakhir."
+    },
+    "catatan_wira": {
+      "name": "Catatan Pak Wira",
+      "icon": "items/memory_page.png",
+      "desc": "\"Kenangan hanya menjadi sunyi ketika tidak ada lagi yang menceritakannya.\""
+    },
+    "surat_wira": {
+      "name": "Surat Pak Wira",
+      "icon": "items/letter_two_sides.png",
+      "desc": "\"Aku bawa payung. Dan telinga.\""
+    },
+    "surat_sari": {
+      "name": "Surat Nenek Sari",
+      "icon": "items/postcard.png",
+      "desc": "\"Aku diam bukan karena marah.\""
+    },
+    "kotak_musik": {
+      "name": "Kotak Musik Dua Bintang",
+      "icon": "items/music_box.png",
+      "desc": "Ditemukan di lembah rahasia Hutan Bisik. Melodinya terasa akrab."
+    },
+    "syal": {
+      "name": "Syal Rajut",
+      "icon": "items/scarf.png",
+      "desc": "\"Untuk siapa pun yang kedinginan di hutan ini.\""
+    },
+    "lukisan_mini": {
+      "name": "Lukisan Kota dari Bukit",
+      "icon": "items/mini_painting.png",
+      "desc": "Dilukis W., untuk S."
+    },
+    "kalung_kristal": {
+      "name": "Kalung Kristal",
+      "icon": "items/crystal_necklace.png",
+      "desc": "Bulan, bintang, lalu bunga."
+    },
+    "bros_bintang": {
+      "name": "Bros Bintang",
+      "icon": "items/brooch.png",
+      "desc": "Hadiah Kak Nara untuk 10 kepingan bintang."
+    },
+    "teropong_saku": {
+      "name": "Teropong Saku",
+      "icon": "items/mini_telescope.png",
+      "desc": "Arahkan ke timur laut di malam cerah."
+    },
+    "peta_langit": {
+      "name": "Peta Langit Kota",
+      "icon": "items/star_frame.png",
+      "desc": "Tiga puluh kepingan menjadi satu peta \"jalan bintang\"."
+    },
+    "peta_lentera": {
+      "name": "Peta Rute Lentera",
+      "icon": "items/compass.png",
+      "desc": "Catatan rute festival yang diberi tanda ulang bersama Kak Bayu."
+    },
+    "catatan_lentera": {
+      "name": "Catatan Tamu Lentera",
+      "icon": "items/wish_card.png",
+      "desc": "Tiga potongan pesan pengunjung yang dirapikan ulang bersama Bu Laras."
+    },
+    "sketsa_gerimis": {
+      "name": "Sketsa Setelah Gerimis",
+      "icon": "items/compass.png",
+      "desc": "Peta tiga tempat untuk berjalan pelan, dilipat dengan perhatian."
+    },
+    "palet_langit": {
+      "name": "Palet Langit Kita",
+      "icon": "items/photo_small.png",
+      "desc": "Tiga warna yang tidak bisa menangkap seluruh keindahan satu sore."
+    },
+    "kotak_kue": {
+      "name": "Kotak Kue Bu Rini",
+      "icon": "items/fruit.png",
+      "desc": "Masih hangat. Untuk Kakek Darmo di dermaga."
+    },
+    "kue_lapis": {
+      "name": "Kue Lapis Bu Rini",
+      "icon": "items/fruit.png",
+      "desc": "Sembilan lapis, resep turun-temurun dari istri Kakek Darmo."
+    },
+    "biji_bunga": {
+      "name": "Kantong Biji Bunga",
+      "icon": "items/paper_flower.png",
+      "desc": "Dari Pak Harun. \"Taburkan di mana saja kalian suka.\""
+    },
+    "kopi_senja": {
+      "name": "Kopi Senja",
+      "icon": "items/tea_glass.png",
+      "desc": "Kopi hangat dari Kafe Senja."
+    },
+    "kukis_madu": {
+      "name": "Kukis Madu",
+      "icon": "items/sandwich.png",
+      "desc": "Kukis renyah madu."
+    },
+    "roti_manis": {
+      "name": "Roti Kayu Manis",
+      "icon": "items/sandwich.png",
+      "desc": "Roti yang harum."
+    },
+    "tulip_kecil": {
+      "name": "Tulip Kecil",
+      "icon": "items/paper_flower.png",
+      "desc": "Tangkai tulip jingga."
+    },
+    "mawar_pita": {
+      "name": "Mawar Berpita",
+      "icon": "items/bouquet.png",
+      "desc": "Mawar dengan pita."
+    },
+    "buket_senja": {
+      "name": "Buket Senja",
+      "icon": "items/bouquet.png",
+      "desc": "Rangkaian bunga musim senja."
+    },
+    "permen_stroberi": {
+      "name": "Permen Stroberi",
+      "icon": "items/fruit.png",
+      "desc": "Permen untuk menemani berjalan."
+    },
+    "kue_lapis_kios": {
+      "name": "Kue Lapis",
+      "icon": "items/fruit.png",
+      "desc": "Kue lapis kios Bu Rini."
+    },
+    "kartu_lucu": {
+      "name": "Kartu Bergambar",
+      "icon": "items/postcard.png",
+      "desc": "Kartu kecil untuk pesan."
+    },
+    "v464_gallery_ticket": {
+      "name": "Undangan Galeri",
+      "icon": "items/v464_gallery_ticket.png",
+      "desc": "Sebuah undangan yang tidak harus ditepati dengan hadiah, melainkan dengan kehadiran."
+    },
+    "v464_empty_seat_art": {
+      "name": "Sketsa Kursi Kosong",
+      "icon": "items/v464_empty_seat.png",
+      "desc": "Dua gambar: yang pertama tidak dihapus, yang kedua dibuat setelah mereka belajar mendengar."
+    },
+    "v465_bench_memory": {
+      "name": "Sketsa Bangku Berdua",
+      "icon": "items/v465_bench_memory.png",
+      "desc": "Mereka memilih menyimpan kenangan yang sulit dan menuliskan hari yang lebih hangat di sebelahnya."
+    },
+    "v466_letter_arland": {
+      "name": "Surat di Balik Bunga",
+      "icon": "items/v466_letter_arland.png",
+      "desc": "Surat Arland tentang belajar hadir ketika dibutuhkan."
+    },
+    "v466_letter_sofia": {
+      "name": "Catatan di Samping Kursi",
+      "icon": "items/v466_letter_sofia.png",
+      "desc": "Catatan Sofia tentang keberanian mengutarakan perasaan."
+    },
+    "v466_gallery_revisit": {
+      "name": "Hari Baru di Galeri",
+      "icon": "items/v466_gallery_revisit.png",
+      "desc": "Kunjungan pasca-cerita yang tidak menghapus kenangan lama."
+    },
+    "v467_c01_listening": {
+      "name": "Benang Percakapan",
+      "icon": "items/v467_c01_listening.png",
+      "desc": "Dua perasaan dari satu kejadian yang didengarkan tanpa dipotong."
+    },
+    "v467_c01_double_page": {
+      "name": "Catatan Dua Sisi",
+      "icon": "items/v467_c01_double_page.png",
+      "desc": "Tulisan bunga dan gambar bintang berbagi satu halaman."
+    },
+    "v467_c01_fading_ink": {
+      "name": "Jejak Tinta",
+      "icon": "items/v467_c01_fading_ink.png",
+      "desc": "Bekas tulisan yang hilang menyisakan satu kata: pulang."
+    },
+    "v467_c01_barista_note": {
+      "name": "Catatan Pesanan Kak Raka",
+      "icon": "items/v467_c01_double_page.png",
+      "desc": "Buku pesanan yang tidak sengaja menghapus satu nama dari meja bersama."
+    },
+    "v467_c01_rara_bookmark": {
+      "name": "Pembatas Bintang Rara",
+      "icon": "items/v467_c01_fading_ink.png",
+      "desc": "Tanda terima kasih untuk surat penting yang hampir hilang di kafe."
+    },
+    "v468_lantern_photo": {
+      "name": "Foto dengan Jejak Lentera",
+      "icon": "items/v468_c02_lantern.png",
+      "desc": "Kilau di dua sisi cetakan, meski di ruangan tidak ada lentera."
+    },
+    "v468_date_note": {
+      "name": "Catatan untuk Esok",
+      "icon": "items/v468_c02_calendar.png",
+      "desc": "Waktu yang diminta dengan jujur, bukan penolakan terhadap orangnya."
+    },
+    "v468_independent_sketch": {
+      "name": "Sketsa Ruang Kosong",
+      "icon": "items/v468_c02_sketch.png",
+      "desc": "Sofia menyelesaikan gambar sendiri tanpa harus menjelaskan mengapa butuh waktu."
+    },
+    "v469_frame": {
+      "name": "Bingkai yang Tetap Berarti",
+      "icon": "items/v469_c03_frame.png",
+      "desc": "Bingkai foto dengan retak kecil yang tidak perlu disembunyikan."
+    },
+    "v469_scrapbook": {
+      "name": "Scrapbook Sofia",
+      "icon": "items/v469_c03_scrapbook.png",
+      "desc": "Halaman kenangan yang ditata sendiri oleh Sofia."
+    },
+    "v469_half_letter": {
+      "name": "Separuh Surat di Balik Resep",
+      "icon": "items/v469_c03_letter.png",
+      "desc": "Kalimat yang belum sempat diselesaikan dan bukan untuk ditebak."
+    },
+    "v469_neighbor_note": {
+      "name": "Catatan Tetangga",
+      "icon": "items/v469_c03_scrapbook.png",
+      "desc": "Benda pinjaman yang dikembalikan bersama sebuah pelajaran tentang janji."
+    },
+    "v469_gallery_invitation": {
+      "name": "Undangan Galeri",
+      "icon": "items/v469_c03_invitation.png",
+      "desc": "Jadwal pameran dan satu kursi yang disiapkan untuk Arland."
+    },
+    "v470_message": {
+      "name": "Pesan Sebelum Acara",
+      "desc": "Kabar yang dikirim sebelum sampai ke galeri.",
+      "icon": "items/v470_c04_letter.png"
+    },
+    "v470_ticket": {
+      "name": "Tiket Acara Galeri",
+      "desc": "Tiket kecil yang tertinggal di bawah kursi kosong.",
+      "icon": "items/v470_c04_seat.png"
+    },
+    "v470_empty_chair_sketch": {
+      "name": "Sketsa Kursi Kosong",
+      "desc": "Gambar Sofia: hari yang berharga, walaupun satu tempat tetap kosong.",
+      "icon": "items/v470_c04_seat.png"
+    },
+    "v470_new_promise": {
+      "name": "Catatan untuk Hari Berikutnya",
+      "desc": "Bukan janji sempurna; sebuah kebiasaan kecil yang dapat dibuktikan.",
+      "icon": "items/v470_c04_promise.png"
+    },
+    "v470_two_sides": {
+      "name": "Dua Sisi Satu Hari",
+      "desc": "Mereka memilih mengingat dua sisi, bukan menghapus sisi yang menyakitkan.",
+      "icon": "items/v470_c04_lantern.png"
+    },
+    "v471_clock_piece": {
+      "name": "Komponen Jam Kenangan",
+      "desc": "Roda yang bergerak lagi tanpa memutar kembali waktu yang terlewat.",
+      "icon": "items/v471_c05_clock.png"
+    },
+    "v471_reflection": {
+      "name": "Pantulan Dua Sisi",
+      "desc": "Satu permukaan danau menyimpan dua versi rasa.",
+      "icon": "items/v471_c05_mirror.png"
+    },
+    "v471_star_fragment": {
+      "name": "Pecahan Konstelasi",
+      "desc": "Lima cahaya yang tidak menghapus bagian yang terluka.",
+      "icon": "items/v471_c05_star.png"
+    },
+    "v471_two_views": {
+      "name": "Dua Sisi Hari Galeri",
+      "desc": "Niat baik dan perasaan terluka tetap sama-sama nyata.",
+      "icon": "items/v471_c05_book.png"
+    },
+    "v471_bridge_memory": {
+      "name": "Jembatan Dua Versi",
+      "desc": "Jembatan pulih, tetapi sambungannya tetap terlihat.",
+      "icon": "items/v471_c05_star.png"
+    },
+    "v472_c06_future_note": {
+      "name": "Catatan Masa Depan",
+      "desc": "Keinginan yang dipilih sendiri, bukan masa depan yang dipaksakan.",
+      "icon": "items/v472_c06_flower.png"
+    },
+    "v472_c06_two_sides": {
+      "name": "Dua Versi, Satu Halaman",
+      "desc": "Kursi kosong dan kehadiran besok tidak menghapus satu sama lain.",
+      "icon": "items/v472_c06_page.png"
+    },
+    "v473_legacy_page": {
+      "name": "Halaman Plaza",
+      "desc": "Kenangan yang indah karena dua orang sama-sama berani datang.",
+      "icon": "items/v473_page.png"
+    },
+    "v473_two_letters": {
+      "name": "Dua Surat yang Utuh",
+      "desc": "Versi Arland dan Sofia tersimpan bersama, tidak saling menimpa.",
+      "icon": "items/v473_letter.png"
+    },
+    "v474_pro_flower_sketch": {
+      "name": "Sketsa Bunga Pertama",
+      "icon": "items/v474_folded_flower.png",
+      "desc": "Catatan kecil tentang lipatan yang tidak sempurna."
+    },
+    "v474_pro_postcard_notes": {
+      "name": "Draf Kartu Pos",
+      "icon": "items/v474_postcard.png",
+      "desc": "Kata-kata pertama yang ditulis perlahan."
+    }
+  },
+  "entries": [
+    {
+      "id": "m_v26_cooking",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V26_C03_FINISHED",
+      "icon": "items/recipe.png",
+      "title": "Di Pinggir Resep",
+      "text": "Makanan biasa bisa mengingatkan kita bahwa belajar bersama lebih menyenangkan."
+    },
+    {
+      "id": "m_v26_afterrain",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V26_AFTER_RAIN",
+      "icon": "items/memory_page.png",
+      "title": "Setelah Hujan",
+      "text": "Bukan janji tidak pernah salah, melainkan keberanian untuk membicarakannya."
+    },
+    {
+      "id": "m_v26_night_a",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "clue",
+      "unlock": "V26_C05_A_SOLVED",
+      "icon": "items/compass.png",
+      "title": "Peta yang Bisa Mendengar",
+      "text": "Tiga titik di Starfall Village mengubah cara Arland melihat arah."
+    },
+    {
+      "id": "m_v26_night_s",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "letter",
+      "unlock": "V26_C05_S_SOLVED",
+      "icon": "items/postcard.png",
+      "title": "Kalimat di Balik Bintang",
+      "text": "Empat potongan kalimat tentang suara yang tetap menunggu."
+    },
+    {
+      "id": "m_v26_night",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V26_C05_TOGETHER",
+      "icon": "items/star_frame.png",
+      "title": "Dua Jalan di Satu Langit",
+      "text": "Arland mencari arah; Sofia mencari cerita. Mereka duduk di bangku yang sama."
+    },
+    {
+      "id": "m_v26_map_a",
+      "chapter": "SIDE",
+      "route": "arland",
+      "type": "souvenir",
+      "unlock": "SQ_V26_MAP_A_DONE",
+      "icon": "items/compass.png",
+      "title": "Peta untuk Dito",
+      "text": "Tiga simbol yang membuat jalan pulang tidak lagi terasa asing."
+    },
+    {
+      "id": "m_v26_cards_s",
+      "chapter": "SIDE",
+      "route": "sofia",
+      "type": "letter",
+      "unlock": "SQ_V26_CARDS_S_DONE",
+      "icon": "items/postcard.png",
+      "title": "Tiga Kartu Cerita",
+      "text": "Sofia menemukan tiga alasan kecil untuk kembali ke kota."
+    },
+    {
+      "id": "m_v26_listen",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "SQ_V26_LISTEN_DONE",
+      "icon": "items/memory_page.png",
+      "title": "Suara Setelah Hujan",
+      "text": "Tiga pesan yang tidak memberi jawaban instan, tetapi membuat orang merasa didengar."
+    },
+    {
+      "id": "m_v26_lamps",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "SQ_V26_LAMPS_DONE",
+      "icon": "items/lantern_paper.png",
+      "title": "Peta Lampu Kota",
+      "text": "Tiga lentera kecil memandu pengunjung melalui cerita orang lain."
+    },
+    {
+      "id": "q_map_a",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "clue",
+      "unlock": "Q_C01_A_MAP",
+      "icon": "items/compass.png",
+      "title": "Denah di Stoples",
+      "text": "Arland membaca kota lewat jalur, bukan lewat kalimat."
+    },
+    {
+      "id": "q_margin_s",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "clue",
+      "unlock": "Q_C01_S_MARGIN",
+      "icon": "items/bookmark.png",
+      "title": "Kata di Pinggir Halaman",
+      "text": "Sofia memperhatikan kalimat yang tidak pernah selesai."
+    },
+    {
+      "id": "q_rain_a",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "letter",
+      "unlock": "Q_C04_A_REPLY",
+      "icon": "items/letter_two_sides.png",
+      "title": "Jawaban di Halte",
+      "text": "Belajar mendengar sebelum buru-buru memperbaiki."
+    },
+    {
+      "id": "q_rain_s",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "letter",
+      "unlock": "Q_C04_S_REPLY",
+      "icon": "items/postcard.png",
+      "title": "Kata yang Tertahan",
+      "text": "Memberi ruang pada kalimat yang tertinggal."
+    },
+    {
+      "id": "q_echo",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "clue",
+      "unlock": "Q_C05_ECHO",
+      "icon": "items/star_frame.png",
+      "title": "Petunjuk di Bangku Bintang",
+      "text": "Dua cara mencari, satu tempat untuk bercerita."
+    },
+    {
+      "id": "q_answer_a",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "Q_C06_A_SOLVED",
+      "icon": "items/compass.png",
+      "title": "Kunci Simbol",
+      "text": "Bunga, buku, bintang. Susunan seorang pemeta."
+    },
+    {
+      "id": "q_answer_s",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "Q_C06_S_SOLVED",
+      "icon": "items/memory_page.png",
+      "title": "Empat Halaman",
+      "text": "Kata-kata yang akhirnya berani dibaca."
+    },
+    {
+      "id": "q_reveal",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "THE_QUIET_REVEALED",
+      "icon": "items/memory_book.png",
+      "title": "Arti The Quiet",
+      "text": "Bukan makhluk: kesunyian yang muncul saat kenangan tak lagi dibagikan."
+    },
+    {
+      "id": "q_sari_closure",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "letter",
+      "unlock": "Q_SARI_CLOSURE",
+      "icon": "items/lantern_bookmark.png",
+      "title": "Halaman untuk Sari",
+      "text": "Cerita Pak Wira kembali ke tangan yang mengenalnya."
+    },
+    {
+      "id": "m_phone_a",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "PRO_PHONE_READ",
+      "icon": "items/memory_page.png",
+      "title": "Pesan Pagi",
+      "text": "Pesan singkat dari Sofia: ketemu di plaza."
+    },
+    {
+      "id": "m_phone_s",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "PRO_PHONE_READ",
+      "icon": "items/memory_page.png",
+      "title": "Sisa Mimpi",
+      "text": "Mimpi tentang buku yang menyala, lalu pesan dari Arland."
+    },
+    {
+      "id": "m_gift_a",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "gift",
+      "unlock": "PRO_GIFT_ARLAND",
+      "icon": "items/paper_flower.png",
+      "title": "Bunga Kertas",
+      "text": "Sederhana, tapi dibuat sendiri."
+    },
+    {
+      "id": "m_gift_s",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "gift",
+      "unlock": "PRO_GIFT_SOFIA",
+      "icon": "items/postcard.png",
+      "title": "Kartu Pos",
+      "text": "Ditulis singkat. Yang penting saja."
+    },
+    {
+      "id": "m_meet",
+      "chapter": "PRO",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "CANON_PLAZA_MEET",
+      "icon": "items/memory_page.png",
+      "title": "Di Plaza",
+      "text": "Dua hadiah kecil berpindah tangan."
+    },
+    {
+      "id": "m_book",
+      "chapter": "PRO",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "CANON_BOOK_OPEN",
+      "icon": "items/memory_book.png",
+      "title": "Buku yang Bercahaya",
+      "text": "Halaman pertama membuka pintu cahaya."
+    },
+    {
+      "id": "m_garden",
+      "chapter": "PRO",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "CANON_MEMORY_GARDEN",
+      "icon": "items/light_shard.png",
+      "title": "Tiga Keping Cahaya",
+      "text": "Tiga keping menyatu menjadi satu halaman."
+    },
+    {
+      "id": "m_note_a",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "clue",
+      "unlock": "C01_ARLAND_NOTE",
+      "icon": "items/small_note.png",
+      "title": "Catatan Kecil",
+      "text": "Terselip di antara buku-buku."
+    },
+    {
+      "id": "m_note_s",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "clue",
+      "unlock": "C01_SOFIA_BOOKMARK",
+      "icon": "items/bookmark.png",
+      "title": "Pembatas Buku",
+      "text": "Bintang kecil yang mirip dengan mimpi itu."
+    },
+    {
+      "id": "m_mural_a",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "clue",
+      "unlock": "C01_HINT_ARLAND",
+      "icon": "items/symbol_flower.png",
+      "title": "Mural Bunga",
+      "text": "Bunga, buku, bintang."
+    },
+    {
+      "id": "m_mural_s",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "clue",
+      "unlock": "C01_HINT_SOFIA",
+      "icon": "items/symbol_star.png",
+      "title": "Mural Bintang",
+      "text": "Bintang, buku, bunga."
+    },
+    {
+      "id": "m_letter",
+      "chapter": "C01",
+      "route": "shared",
+      "type": "letter",
+      "unlock": "CANON_CAFE_LETTER",
+      "icon": "items/letter_two_sides.png",
+      "title": "Two Sides, One Home",
+      "text": "Setiap kenangan punya dua sisi, tetapi satu tempat pulang."
+    },
+    {
+      "id": "m_river",
+      "chapter": "C01",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "CANON_RIVERSIDE",
+      "icon": "items/memory_page.png",
+      "title": "Di Tepi Danau",
+      "text": "Kalau salah ingat, berarti ada dua versi untuk diceritakan."
+    },
+    {
+      "id": "m_bouquet",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "gift",
+      "unlock": "C02_ARLAND_GIFT_READY",
+      "icon": "items/bouquet.png",
+      "title": "Buket Berpita",
+      "text": "Telinga merah adalah tanda paling jujur, kata Bu Melati."
+    },
+    {
+      "id": "m_outfit",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "C02_SOFIA_READY",
+      "icon": "items/photo_small.png",
+      "title": "Persiapan Kecil",
+      "text": "Yang nyaman saja. Yang penting bisa jalan lama."
+    },
+    {
+      "id": "m_park",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C02_PARK_DONE",
+      "icon": "items/memory_page.png",
+      "title": "Gazebo dan Ikan Koi",
+      "text": "\"Mungkin mereka cuma suka ditemani.\""
+    },
+    {
+      "id": "m_photo",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "photo",
+      "unlock": "CANON_DATE_PHOTO",
+      "icon": "items/photo_strip.png",
+      "title": "Foto Photobooth",
+      "text": "Kaget, tertawa, lalu tersenyum."
+    },
+    {
+      "id": "m_sunset",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "gift",
+      "unlock": "C02_COMPLETED",
+      "icon": "items/photo_small.png",
+      "title": "Senja di Dermaga",
+      "text": "Bunga ditukar dengan foto langit yang sama."
+    },
+    {
+      "id": "m_cook_a",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "C03_ARLAND_PREP",
+      "icon": "items/sandwich.png",
+      "title": "Koki Pemula",
+      "text": "Tepung ikut ke mana-mana."
+    },
+    {
+      "id": "m_corner",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "souvenir",
+      "unlock": "C03_SOFIA_PREP",
+      "icon": "items/fairy_lights.png",
+      "title": "Sudut Kenangan",
+      "text": "Lampu tumbler, bunga kering, dan satu bingkai bintang."
+    },
+    {
+      "id": "m_route_a",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "SQ_ROUTE_A_DONE",
+      "icon": "items/compass.png",
+      "title": "Rute Lentera",
+      "text": "Arland membantu Bayu menata tiga penanda arah supaya malam festival tetap terasa ramah."
+    },
+    {
+      "id": "m_route_s",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "SQ_ROUTE_S_DONE",
+      "icon": "items/wish_card.png",
+      "title": "Catatan Tamu",
+      "text": "Sofia merapikan tiga pesan kecil yang membuat festival terasa lebih pribadi."
+    },
+    {
+      "id": "m_rain_sketch_a",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "SQ_RAIN_A_DONE",
+      "icon": "items/compass.png",
+      "title": "Sketsa Gerimis",
+      "text": "Tiga tempat, bukan tiga rute tercepat, yang membuat Arland belajar berhenti dan mendengarkan."
+    },
+    {
+      "id": "m_color_s",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "SQ_COLOR_S_DONE",
+      "icon": "items/photo_small.png",
+      "title": "Palet Langit",
+      "text": "Tiga warna yang Sofia pilih untuk satu sore yang tidak ingin dibekukan."
+    },
+    {
+      "id": "m_cook",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C03_COOKED",
+      "icon": "items/sandwich.png",
+      "title": "Masak Bersama",
+      "text": "Lumayan banget karena dibuat bareng."
+    },
+    {
+      "id": "m_picnic",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C03_COMPLETED",
+      "icon": "items/memory_page.png",
+      "title": "Piknik",
+      "text": "Yang gosong itu yang paling ada usahanya."
+    },
+    {
+      "id": "m_rain_a",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "C04_ARLAND_REFLECT",
+      "icon": "items/memory_page.png",
+      "title": "Pesan yang Belum Selesai",
+      "text": "Maaf saja tidak cukup tanpa mendengar."
+    },
+    {
+      "id": "m_rain_s",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "C04_SOFIA_REFLECT",
+      "icon": "items/memory_page.png",
+      "title": "Di Balik Hujan",
+      "text": "Jujur tanpa membuat semuanya rumit."
+    },
+    {
+      "id": "m_lantern",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "CANON_RAIN_TALK",
+      "icon": "items/lantern_small.png",
+      "title": "Lentera yang Menyala",
+      "text": "Makasih udah mau ngomong. Makasih udah dengerin."
+    },
+    {
+      "id": "m_compass",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "clue",
+      "unlock": "C05_COMPASS_CLUE",
+      "icon": "items/compass.png",
+      "title": "Jalur Kompas",
+      "text": "Timur, utara, lalu barat."
+    },
+    {
+      "id": "m_colors",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "clue",
+      "unlock": "C05_LANTERN_CLUE",
+      "icon": "items/lantern_small.png",
+      "title": "Jalur Lentera",
+      "text": "Ungu, emas, biru."
+    },
+    {
+      "id": "m_starmap",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C05_COMPLETED",
+      "icon": "items/star_stone.png",
+      "title": "Peta Bintang",
+      "text": "Dua petunjuk, satu rasi."
+    },
+    {
+      "id": "m_wish_a",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "letter",
+      "unlock": "C06_ARLAND_LETTER",
+      "icon": "items/letter_two_sides.png",
+      "title": "Surat untuk Besok",
+      "text": "Tetap punya waktu untuk cerita dan tertawa bareng."
+    },
+    {
+      "id": "m_wish_s",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "letter",
+      "unlock": "C06_SOFIA_LETTER",
+      "icon": "items/letter_two_sides.png",
+      "title": "Halaman yang Sama",
+      "text": "Saling mendukung, bahkan saat sulit."
+    },
+    {
+      "id": "m_end",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "CANON_ETERNAL_GARDEN",
+      "icon": "items/memory_book.png",
+      "title": "Halaman Kosong",
+      "text": "To Be Continued."
+    },
+    {
+      "id": "m_epi",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "EPI_UNLOCKED",
+      "icon": "items/memory_page.png",
+      "title": "Sampai Nanti",
+      "text": "Masih banyak halaman kosong."
+    },
+    {
+      "id": "m_sq_bunga",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_BUNGA_DONE",
+      "icon": "items/brooch.png",
+      "title": "Kurir Bunga",
+      "text": "Krisan untuk Nenek Sari, matahari untuk kafe, dan buket keren untuk Dito."
+    },
+    {
+      "id": "m_sq_mochi",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "photo",
+      "unlock": "SQ_MOCHI_DONE",
+      "icon": "items/cat_photo.png",
+      "title": "Mochi Pulang",
+      "text": "Kucing yang dulu muat di cangkir teh."
+    },
+    {
+      "id": "m_sq_capit",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_CAPIT_DONE",
+      "icon": "items/cat_plush.png",
+      "title": "Juara Capit",
+      "text": "Rekor baru Arcade Bintang."
+    },
+    {
+      "id": "m_sq_foto",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "photo",
+      "unlock": "SQ_FOTO_DONE",
+      "icon": "items/album.png",
+      "title": "Album Kota",
+      "text": "Lima tempat favorit, satu stiker bintang emas."
+    },
+    {
+      "id": "m_sq_batu",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_BATU_DONE",
+      "icon": "items/star_stone.png",
+      "title": "Batu Bintang",
+      "text": "Hadiah super rahasia dari Dito."
+    },
+    {
+      "id": "m_sq_resep",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_RESEP_DONE",
+      "icon": "items/recipe.png",
+      "title": "Teh Rempah",
+      "text": "Diminum orang yang baru berbaikan."
+    },
+    {
+      "id": "m_sq_ikan",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_IKAN_DONE",
+      "icon": "items/fish_hat.png",
+      "title": "Pemancing Sejati",
+      "text": "Memancing itu soal sabar."
+    },
+    {
+      "id": "m_library",
+      "chapter": "C01",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "LIB_SECRET_OPEN",
+      "icon": "items/symbol_book.png",
+      "title": "Rak yang Sunyi",
+      "text": "Tiga buku, satu klik, dan sebuah ruangan rahasia."
+    },
+    {
+      "id": "m_archive",
+      "chapter": "C01",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C01_ARCHIVE_DONE",
+      "icon": "items/memory_page.png",
+      "title": "Arsip No. 7",
+      "text": "Stoples-stoples cahaya dan satu kata yang terasa dingin: sunyi."
+    },
+    {
+      "id": "m_pier",
+      "chapter": "C01",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C01_PIER_SUNSET",
+      "icon": "items/photo_small.png",
+      "title": "Senja di Dermaga",
+      "text": "Langit dan danau seperti satu halaman."
+    },
+    {
+      "id": "m_letter_wira",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "gift",
+      "unlock": "C04_LETTER_WIRA",
+      "icon": "items/letter_two_sides.png",
+      "title": "Surat untuk Sari",
+      "text": "Sebuah permintaan maaf yang menunggu puluhan tahun di kotak surat."
+    },
+    {
+      "id": "m_letter_sari",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "gift",
+      "unlock": "C04_LETTER_SARI",
+      "icon": "items/postcard.png",
+      "title": "Surat untuk Wira",
+      "text": "Diam karena takut, bukan karena marah."
+    },
+    {
+      "id": "m_bridge",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "JEMBATAN_FIXED",
+      "icon": "items/plank.png",
+      "title": "Jembatan Hutan",
+      "text": "Tiga papan, dan jalan ke bukit terbuka."
+    },
+    {
+      "id": "m_glade",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "CHEST_GLADE",
+      "icon": "items/music_box.png",
+      "title": "Lembah Rahasia",
+      "text": "Celah di antara pohon, dan sebuah kotak musik."
+    },
+    {
+      "id": "m_cave",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "CHEST_CAVE",
+      "icon": "items/crystal_necklace.png",
+      "title": "Peti Kristal",
+      "text": "Bulan, bintang, bunga."
+    },
+    {
+      "id": "m_hill",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "CHEST_HILL",
+      "icon": "items/mini_painting.png",
+      "title": "Lukisan dari Bukit",
+      "text": "Kota kita, dari tempat yang paling tinggi."
+    },
+    {
+      "id": "m_stars10",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "NARA_R1",
+      "icon": "items/brooch.png",
+      "title": "Sepuluh Bintang",
+      "text": "Bros dari pecahan bintang."
+    },
+    {
+      "id": "m_stars30",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "SQ_BINTANG_DONE",
+      "icon": "items/star_frame.png",
+      "title": "Peta Langit",
+      "text": "Tiga puluh kepingan, satu jalan bintang."
+    },
+    {
+      "id": "m_free_c02",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C02_FREE_DONE",
+      "icon": "items/ginger_candy.png",
+      "title": "Pagi yang Panjang",
+      "text": "Bunga plaza, bintang arcade, dan petak umpet."
+    },
+    {
+      "id": "m_free_c03",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "C03_FREE_DONE",
+      "icon": "items/market_book.png",
+      "title": "Pasar Minggu",
+      "text": "Tenda warna-warni dan tawar-menawar pagi."
+    },
+    {
+      "id": "m_free_c05",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "C05_FREE_DONE",
+      "icon": "items/lantern_paper.png",
+      "title": "Sebelum Festival",
+      "text": "Teh, lentera, dan kartu harapan."
+    },
+    {
+      "id": "m_festival",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "EPI_FESTIVAL_DONE",
+      "icon": "items/lantern_paper.png",
+      "title": "Festival Lentera",
+      "text": "Satu lentera, ratusan cahaya, dan seekor ikan kecil yang berpendar."
+    },
+    {
+      "id": "m_sq_pos",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_POS_DONE",
+      "icon": "items/stamp.png",
+      "title": "Kurir Kota",
+      "text": "Lima surat, lima kabar baik."
+    },
+    {
+      "id": "m_sq_resep3",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_RESEP3_DONE",
+      "icon": "items/apron.png",
+      "title": "Koki Kafe Senja",
+      "text": "Kue jahe, puding kelapa, roti kayu manis."
+    },
+    {
+      "id": "m_sq_buku",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "SQ_BUKU_DONE",
+      "icon": "items/lantern_bookmark.png",
+      "title": "Rak Lengkap",
+      "text": "Buku yang tersesat akhirnya pulang."
+    },
+    {
+      "id": "m_sq_mural",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "photo",
+      "unlock": "SQ_MURAL_DONE",
+      "icon": "items/album.png",
+      "title": "Mural Baru",
+      "text": "Lentera, bintang, dan dua orang di tengah."
+    },
+    {
+      "id": "m_sq_halaman",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "real_memory",
+      "unlock": "SQ_HALAMAN_DONE",
+      "icon": "items/memory_page.png",
+      "title": "Buku Nenek Sari",
+      "text": "Kenangan lama dan baru tinggal bersama."
+    },
+    {
+      "id": "m_hewan",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "SQ_HEWAN_DONE",
+      "icon": "items/paper_flower.png",
+      "title": "Teman Berbulu",
+      "text": "Kucing, anjing, dan bebek kota yang mau dielus. Pak Harun bilang itu tanda percaya."
+    },
+    {
+      "id": "m_kue",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "SQ_KUE_DONE",
+      "icon": "items/fruit.png",
+      "title": "Kue Hangat",
+      "text": "Resep yang berpindah dari istri Kakek Darmo ke Bu Rini, lalu ke tangan kami."
+    },
+    {
+      "id": "economy_barista",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "JOB_BARISTA_ONCE",
+      "icon": "items/tea_glass.png",
+      "title": "Shift Pertama",
+      "text": "Secangkir teh yang disajikan dengan tangan sendiri."
+    },
+    {
+      "id": "economy_florist",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "JOB_PERANGKAI_ONCE",
+      "icon": "items/bouquet.png",
+      "title": "Buket Pertama",
+      "text": "Belajar merangkai kelopak satu demi satu."
+    },
+    {
+      "id": "economy_kurir",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "JOB_KURIR_ONCE",
+      "icon": "items/postcard.png",
+      "title": "Surat Terkirim",
+      "text": "Tiga surat sampai ke orang yang menunggunya."
+    },
+    {
+      "id": "romance_gift",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "souvenir",
+      "unlock": "ROM_GIFT_ONCE",
+      "icon": "items/bouquet.png",
+      "title": "Hadiah Pertama",
+      "text": "Bukan harganya yang diingat, melainkan perhatian di baliknya."
+    },
+    {
+      "id": "romance_taman",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_DATE_TAMAN_ONCE",
+      "icon": "items/album.png",
+      "title": "Piknik Berdua",
+      "text": "Taman yang sama, tetapi hari ini terasa berbeda."
+    },
+    {
+      "id": "romance_kafe",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_DATE_KAFE_ONCE",
+      "icon": "items/tea_glass.png",
+      "title": "Dua Cangkir",
+      "text": "Kopi hangat dan obrolan yang tidak perlu terburu-buru."
+    },
+    {
+      "id": "romance_bintang",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_DATE_BINTANG_ONCE",
+      "icon": "items/star_frame.png",
+      "title": "Langit Kita",
+      "text": "Bintang yang berbeda dapat dilihat dari tempat yang sama."
+    },
+    {
+      "id": "romance_bond20",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_BOND_20",
+      "icon": "items/letter_two_sides.png",
+      "title": "Semakin Dekat",
+      "text": "Hal-hal kecil yang dilakukan bersama mulai membentuk rumah."
+    },
+    {
+      "id": "romance_bond50",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_BOND_50",
+      "icon": "items/memory_page.png",
+      "title": "Selalu Memilih Kita",
+      "text": "Kedekatan tumbuh karena waktu dan perhatian, bukan hadiah mahal."
+    },
+    {
+      "id": "romance_bond80",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_BOND_80",
+      "icon": "items/letter_two_sides.png",
+      "title": "Ruang untuk Jujur",
+      "text": "Mendengarkan kadang lebih berani daripada berbicara."
+    },
+    {
+      "id": "romance_mom_cafe",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_PAGI_KAFE_ONCE",
+      "icon": "items/tea_glass.png",
+      "title": "Pagi yang Pelan",
+      "text": "Rencana hari ini bisa dimulai dari bertanya kabar."
+    },
+    {
+      "id": "romance_mom_hand",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_GENGGAM_TANGAN_ONCE",
+      "icon": "items/photo_small.png",
+      "title": "Langkah Seirama",
+      "text": "Tidak harus secepat orang lain untuk bisa berjalan bersama."
+    },
+    {
+      "id": "romance_mom_cat",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_KUCING_TAMAN_ONCE",
+      "icon": "items/cat_photo.png",
+      "title": "Teman Kecil",
+      "text": "Seekor kucing membuat dua orang berhenti sejenak."
+    },
+    {
+      "id": "romance_mom_rain",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_BERTEDUH_ONCE",
+      "icon": "items/lantern_small.png",
+      "title": "Atap yang Sama",
+      "text": "Suara hujan bukan berarti hari ini harus buruk."
+    },
+    {
+      "id": "romance_mom_book",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_HALAMAN_KECIL_ONCE",
+      "icon": "items/bookmark.png",
+      "title": "Dua Pembaca",
+      "text": "Cerita yang sama selalu punya tempat untuk dua tafsir."
+    },
+    {
+      "id": "romance_mom_lake",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_SENJA_DANAU_ONCE",
+      "icon": "items/photo_small.png",
+      "title": "Berbagi Sunyi",
+      "text": "Duduk berdua tanpa terburu-buru mengisi setiap jeda."
+    },
+    {
+      "id": "romance_mom_heart",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_HATI_KE_HATI_ONCE",
+      "icon": "items/letter_two_sides.png",
+      "title": "Didengarkan",
+      "text": "Cerita yang berat terasa sedikit lebih ringan ketika diterima."
+    },
+    {
+      "id": "romance_mom_night",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_MOM_MALAM_HENING_ONCE",
+      "icon": "items/star_frame.png",
+      "title": "Janji di Bukit",
+      "text": "Janji kecil adalah sesuatu yang bisa diusahakan setiap hari."
+    },
+    {
+      "id": "couple_hand",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_GANDENGAN_ONCE",
+      "icon": "items/photo_small.png",
+      "title": "Berjalan Sejajar",
+      "text": "Genggaman kecil yang tidak meminta siapa pun berjalan lebih cepat."
+    },
+    {
+      "id": "couple_hug",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_PELUKAN_ONCE",
+      "icon": "items/letter_two_sides.png",
+      "title": "Pelukan Pertama",
+      "text": "Tidak semua hari perlu diselesaikan dengan kata."
+    },
+    {
+      "id": "couple_lean",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_BERSANDAR_ONCE",
+      "icon": "items/album.png",
+      "title": "Bahu Tempat Pulang",
+      "text": "Kadang diam bersama lebih berharga daripada pertanyaan."
+    },
+    {
+      "id": "couple_photo",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "photo",
+      "unlock": "ROM_ACT_SELFIE_ONCE",
+      "icon": "items/photo_strip.png",
+      "title": "Satu Kamera Dua Senyum",
+      "text": "Foto yang sedikit miring karena mereka tertawa."
+    },
+    {
+      "id": "couple_high",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_TOS_ONCE",
+      "icon": "items/star_sticker.png",
+      "title": "Tos Pertama",
+      "text": "Satu tepukan tangan untuk keberanian hari ini."
+    },
+    {
+      "id": "couple_dance",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_MENARI_ONCE",
+      "icon": "items/flower_crown.png",
+      "title": "Dua Langkah Canggung",
+      "text": "Tidak menguasai tarian tidak menghalangi mereka bahagia."
+    },
+    {
+      "id": "couple_sunset",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_LIHAT_SENJA_ONCE",
+      "icon": "items/photo_small.png",
+      "title": "Warna Langit Kita",
+      "text": "Sore yang sama bisa memiliki dua warna favorit."
+    },
+    {
+      "id": "couple_stars",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_ACT_JANJI_BINTANG_ONCE",
+      "icon": "items/star_frame.png",
+      "title": "Janji di Langit",
+      "text": "Janji kecil dirawat melalui perbuatan, bukan sekadar bintang."
+    },
+    {
+      "id": "m_romgame_memancing",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_GAME_MEMANCING_ONCE",
+      "icon": "items/album.png",
+      "title": "Memancing Berdua",
+      "text": "Aktivitas kecil yang membuat satu hari menjadi kenangan berdua."
+    },
+    {
+      "id": "m_romgame_memasak",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_GAME_MEMASAK_ONCE",
+      "icon": "items/album.png",
+      "title": "Resep Berdua",
+      "text": "Aktivitas kecil yang membuat satu hari menjadi kenangan berdua."
+    },
+    {
+      "id": "m_romgame_buket",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_GAME_BUKET_ONCE",
+      "icon": "items/album.png",
+      "title": "Merangkai Buket",
+      "text": "Aktivitas kecil yang membuat satu hari menjadi kenangan berdua."
+    },
+    {
+      "id": "m_romgame_scrapbook",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_GAME_SCRAPBOOK_ONCE",
+      "icon": "items/album.png",
+      "title": "Album Cerita Kita",
+      "text": "Aktivitas kecil yang membuat satu hari menjadi kenangan berdua."
+    },
+    {
+      "id": "m_romgame_bintang",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_GAME_BINTANG_ONCE",
+      "icon": "items/album.png",
+      "title": "Tangkap Bintang",
+      "text": "Aktivitas kecil yang membuat satu hari menjadi kenangan berdua."
+    },
+    {
+      "id": "m_romgame_foto",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "ROM_GAME_FOTO_ONCE",
+      "icon": "items/album.png",
+      "title": "Photobooth Berdua",
+      "text": "Aktivitas kecil yang membuat satu hari menjadi kenangan berdua."
+    },
+    {
+      "id": "m_we27_pagi_plaza",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_PAGI_PLAZA_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Bunga di Pagi Plaza",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_kafe_catatan",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_KAFE_CATATAN_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Pesan di Alas Cangkir",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_ikan_pondok",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_IKAN_PONDOK_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Penjaga Kolam Koi",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_senja_danau",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_SENJA_DANAU_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Cahaya di Permukaan Danau",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_perpustakaan_senyap",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_PERPUSTAKAAN_SENYAP_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Buku yang Dipinjamkan",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_melati_merangkai",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_MELATI_MERANGKAI_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Belajar dari Bu Melati",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_arcade_tiket",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_ARCADE_TIKET_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Tiket yang Tertinggal",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_halte_hujan",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_HALTE_HUJAN_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Cerita di Bawah Atap Halte",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_dermaga_papan",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_DERMAGA_PAPAN_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Nama di Papan Dermaga",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_hutan_gema",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_HUTAN_GEMA_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Gema di Hutan Bisik",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_desa_bintang",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_DESA_BINTANG_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Lampu Jendela Starfall",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_bukit_teleskop",
+      "chapter": "SIDE",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_BUKIT_TELESKOP_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Satu Bintang yang Sama",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_arlan_peta",
+      "chapter": "SIDE",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_ARLAN_PETA_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Jalur Kecil untuk Dito",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "m_we27_sofia_halaman",
+      "chapter": "SIDE",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "WORLD_EVENT_SOFIA_HALAMAN_ONCE",
+      "icon": "items/memory_page.png",
+      "title": "Halaman untuk Bu Laras",
+      "text": "Kisah dunia yang hidup pada waktu dan suasana tertentu."
+    },
+    {
+      "id": "v464_invitation",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V464_GALLERY_PROMISED",
+      "icon": "items/v464_gallery_ticket.png",
+      "title": "Undangan yang Dijaga",
+      "text": "Sofia meminta Arland hadir di galeri. Ia tidak meminta hadiah; cukup seseorang yang duduk di kursi dekat jendela."
+    },
+    {
+      "id": "v464_empty_seat",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V464_SEAT_EMPTY",
+      "icon": "items/v464_empty_seat.png",
+      "title": "Kursi yang Kosong",
+      "text": "Arland tidak hadir saat Sofia menyampaikan cerita gambar pertamanya. Niat baik tidak menghapus rasa kecewa."
+    },
+    {
+      "id": "v464_projector",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V464_ARLAND_REALIZES",
+      "icon": "items/v464_projector.png",
+      "title": "Proyektor dan Sebuah Janji",
+      "text": "Arland belajar bahwa membuat kejutan tidak sama dengan hadir ketika dibutuhkan."
+    },
+    {
+      "id": "v464_sketch",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V464_SEAT_EMPTY",
+      "icon": "items/v464_sketch.png",
+      "title": "Sketsa yang Tidak Dihapus",
+      "text": "Sofia boleh kecewa. Ia juga boleh memilih kapan akan bercerita dan bagaimana menyimpan ingatannya."
+    },
+    {
+      "id": "v464_two_sides",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V464_QUIET_TWO_SIDES",
+      "icon": "items/v464_two_sides.png",
+      "title": "Dua Sisi, Satu Hari",
+      "text": "Satu pihak memperbaiki proyektor; pihak lain melihat kursi kosong. Keduanya nyata, tetapi hanya dipahami ketika didengarkan bersama."
+    },
+    {
+      "id": "v464_seat_healed",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V464_SEAT_RESTORED",
+      "icon": "items/v464_seat_healed.png",
+      "title": "Gambar yang Tidak Dihapus",
+      "text": "Mereka tidak menghapus hari yang menyakitkan. Mereka belajar menghadirkan hari baru di sebelahnya."
+    },
+    {
+      "id": "v465_second_chance",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V465_PROMISE_PROVEN",
+      "icon": "items/v465_bench_memory.png",
+      "title": "Dua Tempat Duduk, Dua Suara",
+      "text": "Mereka kembali belajar hadir, mendengarkan, dan saling membantu. Bangku baru tidak menghapus kursi yang pernah kosong."
+    },
+    {
+      "id": "v466_letter_arland",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V466_A_LETTER",
+      "icon": "items/v466_letter_arland.png",
+      "title": "Surat di Balik Bunga",
+      "text": "Arland menuliskan sesuatu untuk masa depan: hadir, mendengarkan, dan mengizinkan dirinya belajar."
+    },
+    {
+      "id": "v466_letter_sofia",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V466_S_LETTER",
+      "icon": "items/v466_letter_sofia.png",
+      "title": "Catatan di Samping Kursi",
+      "text": "Sofia menyimpan dua gambar tanpa menutupi yang pertama. Kini ia juga berani meminta untuk didengarkan."
+    },
+    {
+      "id": "v466_gallery_return",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_postgame",
+      "unlock": "V466_GALLERY_RETURN_DONE",
+      "icon": "items/v466_gallery_revisit.png",
+      "title": "Hari ketika Mereka Kembali",
+      "text": "Setelah kredit, Arland dan Sofia kembali ke galeri tanpa janji yang harus dibuktikan. Hanya ada waktu untuk melihat hari baru."
+    },
+    {
+      "id": "v467_c01_barista_a",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V467_C01_A03_DONE",
+      "icon": "items/v467_c01_double_page.png",
+      "title": "Satu Meja, Dua Nama",
+      "text": "Arland membantu Kak Raka menemukan buku pesanan yang tertukar dan tidak menghapus salah satu nama."
+    },
+    {
+      "id": "v467_c01_rara_s",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V467_C01_S03_DONE",
+      "icon": "items/v467_c01_fading_ink.png",
+      "title": "Surat yang Hampir Hilang",
+      "text": "Sofia membantu Rara menemukan surat bertanda bintang yang belum sempat dibaca."
+    },
+    {
+      "id": "v467_c01_arland_listen",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V467_C01_RESULT_LISTEN",
+      "icon": "items/v467_c01_listening.png",
+      "title": "Arland — Yang Tidak Kelihatan",
+      "text": "Arland berhenti mencoba menjelaskan semuanya dan benar-benar mendengarkan alasan Sofia melihat bintang."
+    },
+    {
+      "id": "v467_c01_arland_record",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V467_C01_RESULT_RECORD",
+      "icon": "items/v467_c01_double_page.png",
+      "title": "Arland — Dua Catatan, Satu Surat",
+      "text": "Arland menuliskan versinya tanpa menutupi gambar Sofia."
+    },
+    {
+      "id": "v467_c01_arland_trace",
+      "chapter": "C01",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V467_C01_RESULT_TRACE",
+      "icon": "items/v467_c01_fading_ink.png",
+      "title": "Arland — Tinta yang Memudar",
+      "text": "Arland menemukan bekas huruf yang hilang, tetapi memilih tidak mengarang jawabannya."
+    },
+    {
+      "id": "v467_c01_sofia_listen",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V467_C01_RESULT_LISTEN",
+      "icon": "items/v467_c01_listening.png",
+      "title": "Sofia — Yang Tidak Kelihatan",
+      "text": "Sofia berani menyampaikan mengapa bintang dari mimpinya membuatnya gugup."
+    },
+    {
+      "id": "v467_c01_sofia_record",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V467_C01_RESULT_RECORD",
+      "icon": "items/v467_c01_double_page.png",
+      "title": "Sofia — Dua Catatan, Satu Surat",
+      "text": "Sofia menggambar kedua sisi, menjaga agar tulisan Arland tetap terlihat."
+    },
+    {
+      "id": "v467_c01_sofia_trace",
+      "chapter": "C01",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V467_C01_RESULT_TRACE",
+      "icon": "items/v467_c01_fading_ink.png",
+      "title": "Sofia — Tinta yang Memudar",
+      "text": "Sofia melihat dua lapisan pada tinta dan memilih menyimpan petunjuk dengan hati-hati."
+    },
+    {
+      "id": "v468_c02_arland_pose_laugh",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_PHOTO_LAUGH",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Foto Ketawa",
+      "text": "Dua orang tertawa tanpa memedulikan hasil fotonya."
+    },
+    {
+      "id": "v468_c02_arland_pose_look",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_PHOTO_LOOK",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Foto Saling Menoleh",
+      "text": "Mata mereka saling menemukan, bukan melihat hitungan kamera."
+    },
+    {
+      "id": "v468_c02_arland_pose_blur",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_PHOTO_BLUR",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Foto Sedikit Buram",
+      "text": "Ada hal yang tetap jelas sekalipun gambarnya tidak tajam."
+    },
+    {
+      "id": "v468_c02_arland_lantern",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V468_C02_LANTERN_CLUE",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Lentera yang Tak Ada",
+      "text": "Di cetakan foto kedua muncul dua pantulan lentera dari arah berbeda."
+    },
+    {
+      "id": "v468_c02_arland_gazebo_laugh",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_GAZEBO_LAUGH",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Tawa di Gazebo",
+      "text": "Bercanda bisa menjadi cara berani bercerita."
+    },
+    {
+      "id": "v468_c02_arland_gazebo_quiet",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_GAZEBO_QUIET",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Sunyi yang Nyaman",
+      "text": "Kebersamaan tidak harus dipenuhi kata-kata."
+    },
+    {
+      "id": "v468_c02_arland_gazebo_listen",
+      "chapter": "C02",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_GAZEBO_LISTEN",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Didengar Sampai Selesai",
+      "text": "Mendengarkan adalah sebuah tindakan, bukan skor cinta."
+    },
+    {
+      "id": "v468_c02_sofia_pose_laugh",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_PHOTO_LAUGH",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Foto Ketawa",
+      "text": "Dua orang tertawa tanpa memedulikan hasil fotonya."
+    },
+    {
+      "id": "v468_c02_sofia_pose_look",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_PHOTO_LOOK",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Foto Saling Menoleh",
+      "text": "Mata mereka saling menemukan, bukan melihat hitungan kamera."
+    },
+    {
+      "id": "v468_c02_sofia_pose_blur",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_PHOTO_BLUR",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Foto Sedikit Buram",
+      "text": "Ada hal yang tetap jelas sekalipun gambarnya tidak tajam."
+    },
+    {
+      "id": "v468_c02_sofia_lantern",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V468_C02_LANTERN_CLUE",
+      "icon": "items/v468_c02_lantern.png",
+      "title": "Lentera yang Tak Ada",
+      "text": "Di cetakan foto kedua muncul dua pantulan lentera dari arah berbeda."
+    },
+    {
+      "id": "v468_c02_sofia_gazebo_laugh",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_GAZEBO_LAUGH",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Tawa di Gazebo",
+      "text": "Bercanda bisa menjadi cara berani bercerita."
+    },
+    {
+      "id": "v468_c02_sofia_gazebo_quiet",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_GAZEBO_QUIET",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Sunyi yang Nyaman",
+      "text": "Kebersamaan tidak harus dipenuhi kata-kata."
+    },
+    {
+      "id": "v468_c02_sofia_gazebo_listen",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_GAZEBO_LISTEN",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Didengar Sampai Selesai",
+      "text": "Mendengarkan adalah sebuah tindakan, bukan skor cinta."
+    },
+    {
+      "id": "v468_c02_sofia_postponed",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_LATER_NOTE_DONE",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Janji yang Dijadwalkan Ulang",
+      "text": "Sofia meminta waktu hingga besok dan Arland menghormatinya."
+    },
+    {
+      "id": "v468_c02_sofia_declined",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_C02_SOLO_SKETCH_DONE",
+      "icon": "items/v468_c02_sketch.png",
+      "title": "Sore Sofia Sendiri",
+      "text": "Menolak satu ajakan tidak mengurangi hangatnya hubungan."
+    },
+    {
+      "id": "v468_c02_sofia_reinvited",
+      "chapter": "C02",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V468_S_REINVITE_BY_CHOICE",
+      "icon": "items/v468_c02_calendar.png",
+      "title": "Ajakan Sofia yang Baru",
+      "text": "Sofia kembali mengajak karena ia benar-benar ingin."
+    },
+    {
+      "id": "v469_c03_v469_a_frame_done",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V469_A_FRAME_DONE",
+      "icon": "items/v469_c03_frame.png",
+      "title": "Bingkai yang Dirawat",
+      "text": "Yang rusak bisa diperbaiki tanpa menghapus cerita yang pernah terjadi."
+    },
+    {
+      "id": "v469_c03_v469_s_scrap_done",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V469_S_SCRAP_DONE",
+      "icon": "items/v469_c03_scrapbook.png",
+      "title": "Halaman yang Milik Sofia",
+      "text": "Tidak semua hal yang berharga perlu dijelaskan kepada orang lain."
+    },
+    {
+      "id": "v469_c03_v469_a_neighbor_done",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V469_A_NEIGHBOR_DONE",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Janji Mengembalikan",
+      "text": "Arland diingatkan bahwa menepati janji berarti juga memberi kabar."
+    },
+    {
+      "id": "v469_c03_v469_s_neighbor_done",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V469_S_NEIGHBOR_DONE",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Kata yang Berani Dikatakan",
+      "text": "Sofia mulai berani menyampaikan kebutuhan sebelum merasa kecewa."
+    },
+    {
+      "id": "v469_c03_half_letter_found",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "HALF_LETTER_FOUND",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Kalimat yang Terputus",
+      "text": "\"Aku nggak butuh sesuatu yang besar...\" — sisanya belum disampaikan."
+    },
+    {
+      "id": "v469_c03_v469_c03_gallery_prepared",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V469_C03_GALLERY_PREPARED",
+      "icon": "items/v469_c03_invitation.png",
+      "title": "Kursi yang Belum Terisi",
+      "text": "Sebuah nama, sebuah janji, dan tempat duduk yang belum menjadi kenangan."
+    },
+    {
+      "id": "v469_c03_v469_a_frame_scar",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V469_A_FRAME_SCAR",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Retak yang Disimpan",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_a_frame_repair",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V469_A_FRAME_REPAIR",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Sudut yang Dikuatkan",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_a_letter_ask",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V469_A_LETTER_ASK",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Pertanyaan yang Akan Didengar",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_a_letter_note",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V469_A_LETTER_NOTE",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Pertanyaan di Resep",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_a_gallery_timer",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V469_A_GALLERY_TIMER",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Jam yang Dicatat",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_a_gallery_permission",
+      "chapter": "C03",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V469_A_GALLERY_PERMISSION",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Izin yang Dipikirkan",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_s_scrap_words",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V469_S_SCRAP_WORDS",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Kata di Scrapbook",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_s_scrap_space",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V469_S_SCRAP_SPACE",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Ruang pada Halaman",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_s_letter_honest",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V469_S_LETTER_HONEST",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Aku Boleh Meminta",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_s_letter_wait",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V469_S_LETTER_WAIT",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Waktu untuk Bercerita",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_s_gallery_direct",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V469_S_GALLERY_DIRECT",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Aku Butuh Kamu Hadir",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_s_gallery_card",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V469_S_GALLERY_CARD",
+      "icon": "items/v469_c03_letter.png",
+      "title": "Pesan pada Undangan",
+      "text": "Pilihan pribadi ini mengubah bagaimana tokoh menyimpan kenangan dan berbicara pada chapter berikutnya."
+    },
+    {
+      "id": "v469_c03_v469_gallery_ask",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V469_GALLERY_ASK",
+      "icon": "items/v469_c03_invitation.png",
+      "title": "Bertanya Sebelum Menebak",
+      "text": "Mereka mencoba mempersiapkan sesuatu tanpa kehilangan kesempatan untuk saling mendengar."
+    },
+    {
+      "id": "v469_c03_v469_gallery_schedule",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V469_GALLERY_SCHEDULE",
+      "icon": "items/v469_c03_invitation.png",
+      "title": "Waktu yang Tercatat",
+      "text": "Mereka mencoba mempersiapkan sesuatu tanpa kehilangan kesempatan untuk saling mendengar."
+    },
+    {
+      "id": "v469_c03_c03_corner_photo",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "C03_CORNER_PHOTO",
+      "icon": "items/v469_c03_scrapbook.png",
+      "title": "Foto di Tengah",
+      "text": "Sofia menentukan apa yang paling ingin ia lihat setiap pagi."
+    },
+    {
+      "id": "v469_c03_c03_corner_flower",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "C03_CORNER_FLOWER",
+      "icon": "items/v469_c03_scrapbook.png",
+      "title": "Bunga di Tengah",
+      "text": "Sofia menentukan apa yang paling ingin ia lihat setiap pagi."
+    },
+    {
+      "id": "v469_c03_c03_corner_book",
+      "chapter": "C03",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "C03_CORNER_BOOK",
+      "icon": "items/v469_c03_scrapbook.png",
+      "title": "Buku di Tengah",
+      "text": "Sofia menentukan apa yang paling ingin ia lihat setiap pagi."
+    },
+    {
+      "id": "v470_c04_empty_seat",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V464_SEAT_EMPTY",
+      "icon": "items/v470_c04_seat.png",
+      "title": "Satu Kursi Kosong",
+      "text": "Sofia berhasil berdiri di depan karyanya. Satu kursi tetap tidak terisi."
+    },
+    {
+      "id": "v470_c04_half_letter",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "HALF_LETTER_FOUND",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Surat yang Belum Selesai",
+      "text": "Kata yang belum selesai ditulis kini menjadi undangan untuk mendengarkan."
+    },
+    {
+      "id": "v470_c04_five_lights",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V470_LIGHT_UPDATE",
+      "icon": "items/v470_c04_lantern.png",
+      "title": "Lima Cahaya Rain Garden",
+      "text": "Mendengar, jujur, hadir, ruang, dan memberi kabar adalah lima hal yang mereka pelajari."
+    },
+    {
+      "id": "v470_c04_growth",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V470_C04_REPAIR_EARNED",
+      "icon": "items/v470_c04_promise.png",
+      "title": "Janji yang Dijaga Lewat Tindakan",
+      "text": "Hari itu tidak dapat diulang; mereka belajar pelan-pelan mengembalikan kepercayaan."
+    },
+    {
+      "id": "v470_c04_a_witness",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V470_A_WITNESS",
+      "icon": "items/v470_c04_seat.png",
+      "title": "Cerita dari Kursi Belakang",
+      "text": "Arland mendengar perayaan Sofia dari orang yang benar-benar berada di sana."
+    },
+    {
+      "id": "v470_c04_s_presentation",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V470_S_REHEARSAL_DONE",
+      "icon": "items/v470_c04_promise.png",
+      "title": "Keberanian Sofia",
+      "text": "Bahkan saat kursi kosong, Sofia tetap menyelesaikan cerita di hadapan pengunjung."
+    },
+    {
+      "id": "v470_c04_a_warn",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V470_A_WARN_DONE",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Pesan yang Dikirim",
+      "text": "Satu pilihan mengubah cara mereka menjalani hari yang sulit."
+    },
+    {
+      "id": "v470_c04_a_silent",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V470_A_TEST_DONE",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Proyektor yang Terlambat",
+      "text": "Satu pilihan mengubah cara mereka menjalani hari yang sulit."
+    },
+    {
+      "id": "v470_c04_a_help",
+      "chapter": "C04",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V470_A_HELP_ARRIVED",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Berani Meminta Bantuan",
+      "text": "Satu pilihan mengubah cara mereka menjalani hari yang sulit."
+    },
+    {
+      "id": "v470_c04_s_flower",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V470_S_OPEN_FLOWER",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Pembuka dengan Bunga",
+      "text": "Satu pilihan mengubah cara mereka menjalani hari yang sulit."
+    },
+    {
+      "id": "v470_c04_s_work",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V470_S_OPEN_WORK",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Pembuka dengan Karya",
+      "text": "Satu pilihan mengubah cara mereka menjalani hari yang sulit."
+    },
+    {
+      "id": "v470_c04_s_guests",
+      "chapter": "C04",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V470_S_OPEN_GUESTS",
+      "icon": "items/v470_c04_letter.png",
+      "title": "Pembuka dengan Pengunjung",
+      "text": "Satu pilihan mengubah cara mereka menjalani hari yang sulit."
+    },
+    {
+      "id": "v471_c05_clock_a",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "fictional_memory",
+      "unlock": "V471_CLOCK_A_DONE",
+      "icon": "items/v471_c05_clock.png",
+      "title": "Waktu yang Diakui",
+      "text": "Arland belajar membedakan niat dan dampaknya."
+    },
+    {
+      "id": "v471_c05_clock_s",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "fictional_memory",
+      "unlock": "V471_CLOCK_S_DONE",
+      "icon": "items/v471_c05_clock.png",
+      "title": "Keberanian di Hari Galeri",
+      "text": "Sofia mengingat presentasi yang tetap berhasil."
+    },
+    {
+      "id": "v471_c05_moon_a",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V471_A_CHOOSE_TIME",
+      "icon": "items/v471_c05_mirror.png",
+      "title": "Arland Memilih Hadir",
+      "text": "Masa lalu tidak diulang, tetapi pilihan esok dapat berubah."
+    },
+    {
+      "id": "v471_c05_moon_s",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V471_S_CHOOSE_PRESENT",
+      "icon": "items/v471_c05_mirror.png",
+      "title": "Sofia Boleh Bicara",
+      "text": "Sofia berhak menyampaikan kebutuhan dan perasaannya."
+    },
+    {
+      "id": "v471_c05_bridge",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_BRIDGE_RESTORED",
+      "icon": "items/v471_c05_star.png",
+      "title": "Jembatan Dua Suara",
+      "text": "Kenangan tidak harus sama untuk tetap menjadi milik bersama."
+    },
+    {
+      "id": "v471_c05_truth",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_QUIET_REVEALED",
+      "icon": "items/v471_c05_book.png",
+      "title": "The Quiet",
+      "text": "The Quiet tidak menciptakan luka; ia memperlihatkan yang tidak terdengar."
+    },
+    {
+      "id": "v471_c05_fragment_presence",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_FRAGMENT_PRESENCE",
+      "icon": "items/v471_c05_star.png",
+      "title": "Konstelasi Kehadiran",
+      "text": "Salah satu dari lima aspek hubungan yang tidak boleh dihapus."
+    },
+    {
+      "id": "v471_c05_fragment_voice",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_FRAGMENT_VOICE",
+      "icon": "items/v471_c05_star.png",
+      "title": "Konstelasi Suara",
+      "text": "Salah satu dari lima aspek hubungan yang tidak boleh dihapus."
+    },
+    {
+      "id": "v471_c05_fragment_time",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_FRAGMENT_TIME",
+      "icon": "items/v471_c05_star.png",
+      "title": "Konstelasi Waktu",
+      "text": "Salah satu dari lima aspek hubungan yang tidak boleh dihapus."
+    },
+    {
+      "id": "v471_c05_fragment_space",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_FRAGMENT_SPACE",
+      "icon": "items/v471_c05_star.png",
+      "title": "Konstelasi Ruang",
+      "text": "Salah satu dari lima aspek hubungan yang tidak boleh dihapus."
+    },
+    {
+      "id": "v471_c05_fragment_tomorrow",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V471_FRAGMENT_TOMORROW",
+      "icon": "items/v471_c05_star.png",
+      "title": "Konstelasi Esok",
+      "text": "Salah satu dari lima aspek hubungan yang tidak boleh dihapus."
+    },
+    {
+      "id": "v471_c05_choice_a_time",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V471_A_CHOOSE_TIME",
+      "icon": "items/v471_c05_book.png",
+      "title": "Pilihan untuk Hari Esok",
+      "text": "Jalan yang dipilih mengubah cara menjalin kepercayaan."
+    },
+    {
+      "id": "v471_c05_choice_a_ask",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V471_A_CHOOSE_ASK",
+      "icon": "items/v471_c05_book.png",
+      "title": "Pilihan untuk Hari Esok",
+      "text": "Jalan yang dipilih mengubah cara menjalin kepercayaan."
+    },
+    {
+      "id": "v471_c05_choice_a_help",
+      "chapter": "C05",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V471_A_CHOOSE_HELP",
+      "icon": "items/v471_c05_book.png",
+      "title": "Pilihan untuk Hari Esok",
+      "text": "Jalan yang dipilih mengubah cara menjalin kepercayaan."
+    },
+    {
+      "id": "v471_c05_choice_s_present",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V471_S_CHOOSE_PRESENT",
+      "icon": "items/v471_c05_book.png",
+      "title": "Pilihan untuk Hari Esok",
+      "text": "Jalan yang dipilih mengubah cara menjalin kepercayaan."
+    },
+    {
+      "id": "v471_c05_choice_s_space",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V471_S_CHOOSE_SPACE",
+      "icon": "items/v471_c05_book.png",
+      "title": "Pilihan untuk Hari Esok",
+      "text": "Jalan yang dipilih mengubah cara menjalin kepercayaan."
+    },
+    {
+      "id": "v471_c05_choice_s_listen",
+      "chapter": "C05",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V471_S_CHOOSE_LISTEN",
+      "icon": "items/v471_c05_book.png",
+      "title": "Pilihan untuk Hari Esok",
+      "text": "Jalan yang dipilih mengubah cara menjalin kepercayaan."
+    },
+    {
+      "id": "v471_c05_quiet_listen",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V471_QUIET_LISTEN",
+      "icon": "items/v471_c05_book.png",
+      "title": "Memahami The Quiet",
+      "text": "Satu interpretasi tanpa menghapus versi lain."
+    },
+    {
+      "id": "v471_c05_quiet_remember",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V471_QUIET_REMEMBER",
+      "icon": "items/v471_c05_book.png",
+      "title": "Memahami The Quiet",
+      "text": "Satu interpretasi tanpa menghapus versi lain."
+    },
+    {
+      "id": "v471_c05_quiet_future",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V471_QUIET_FUTURE",
+      "icon": "items/v471_c05_book.png",
+      "title": "Memahami The Quiet",
+      "text": "Satu interpretasi tanpa menghapus versi lain."
+    },
+    {
+      "id": "v472_c06_future_hall",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_READY",
+      "icon": "items/v472_c06_hall.png",
+      "title": "Balai Hari Esok",
+      "text": "Tiga hari yang terlalu sempurna ternyata tidak memberi ruang untuk memilih."
+    },
+    {
+      "id": "v472_c06_cafe",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_ALIGNED_C01",
+      "icon": "items/v472_c06_page.png",
+      "title": "Dua Arah di Kafe Senja",
+      "text": "Dua urutan simbol tetap membuka satu surat yang sama."
+    },
+    {
+      "id": "v472_c06_date",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_ALIGNED_C02",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Kencan yang Dipilih",
+      "text": "Bahagia tidak berarti menghapus hak untuk menunda atau menolak."
+    },
+    {
+      "id": "v472_c06_little",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_ALIGNED_C03",
+      "icon": "items/v472_c06_flower.png",
+      "title": "Perhatian yang Tidak Dipaksa",
+      "text": "Masakan, bingkai dan surat yang tak selesai tetap berarti."
+    },
+    {
+      "id": "v472_c06_gallery",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_ALIGNED_C04",
+      "icon": "items/v472_c06_sketch.png",
+      "title": "Dua Gambar Tidak Dihapus",
+      "text": "Satu kenangan bisa memuat keberanian, niat baik dan kesedihan sekaligus."
+    },
+    {
+      "id": "v472_c06_aligned",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_ALIGNED",
+      "icon": "items/v472_c06_page.png",
+      "title": "Halaman yang Diterima",
+      "text": "Mereka tidak harus mengingat kejadian dengan cara sama."
+    },
+    {
+      "id": "v472_c06_future_a_listen",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_A_FUTURE_LISTEN",
+      "icon": "items/v472_c06_flower.png",
+      "title": "Janji Kecil untuk Esok",
+      "text": "Keputusan personal yang diingat saat penutupan cerita."
+    },
+    {
+      "id": "v472_c06_future_a_present",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_A_FUTURE_PRESENT",
+      "icon": "items/v472_c06_flower.png",
+      "title": "Janji Kecil untuk Esok",
+      "text": "Keputusan personal yang diingat saat penutupan cerita."
+    },
+    {
+      "id": "v472_c06_future_a_help",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_A_FUTURE_HELP",
+      "icon": "items/v472_c06_flower.png",
+      "title": "Janji Kecil untuk Esok",
+      "text": "Keputusan personal yang diingat saat penutupan cerita."
+    },
+    {
+      "id": "v472_c06_future_s_voice",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_S_FUTURE_VOICE",
+      "icon": "items/v472_c06_sketch.png",
+      "title": "Janji Kecil untuk Esok",
+      "text": "Keputusan personal yang diingat saat penutupan cerita."
+    },
+    {
+      "id": "v472_c06_future_s_space",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_S_FUTURE_SPACE",
+      "icon": "items/v472_c06_sketch.png",
+      "title": "Janji Kecil untuk Esok",
+      "text": "Keputusan personal yang diingat saat penutupan cerita."
+    },
+    {
+      "id": "v472_c06_future_s_courage",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_S_FUTURE_COURAGE",
+      "icon": "items/v472_c06_sketch.png",
+      "title": "Janji Kecil untuk Esok",
+      "text": "Keputusan personal yang diingat saat penutupan cerita."
+    },
+    {
+      "id": "v472_c06_illusion_date",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_SEEN_DATE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan yang Bukan Jaminan",
+      "text": "Satu gambaran indah yang kehilangan pilihan."
+    },
+    {
+      "id": "v472_c06_illusion_presence",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_SEEN_PRESENCE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan yang Bukan Jaminan",
+      "text": "Satu gambaran indah yang kehilangan pilihan."
+    },
+    {
+      "id": "v472_c06_illusion_agreement",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V472_C06_SEEN_AGREEMENT",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan yang Bukan Jaminan",
+      "text": "Satu gambaran indah yang kehilangan pilihan."
+    },
+    {
+      "id": "v472_c06_future_date_a_see",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_DATE_A_SEE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Date",
+      "text": "Cara arland menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_date_a_refuse",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_DATE_A_REFUSE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Date",
+      "text": "Cara arland menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_date_s_see",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_DATE_S_SEE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Date",
+      "text": "Cara sofia menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_date_s_refuse",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_DATE_S_REFUSE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Date",
+      "text": "Cara sofia menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_presence_a_see",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_PRESENCE_A_SEE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Presence",
+      "text": "Cara arland menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_presence_a_refuse",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_PRESENCE_A_REFUSE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Presence",
+      "text": "Cara arland menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_presence_s_see",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_PRESENCE_S_SEE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Presence",
+      "text": "Cara sofia menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_presence_s_refuse",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_PRESENCE_S_REFUSE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Presence",
+      "text": "Cara sofia menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_agreement_a_see",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_AGREEMENT_A_SEE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Agreement",
+      "text": "Cara arland menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_agreement_a_refuse",
+      "chapter": "C06",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V472_AGREEMENT_A_REFUSE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Agreement",
+      "text": "Cara arland menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_agreement_s_see",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_AGREEMENT_S_SEE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Agreement",
+      "text": "Cara sofia menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v472_c06_future_agreement_s_refuse",
+      "chapter": "C06",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V472_AGREEMENT_S_REFUSE",
+      "icon": "items/v472_c06_mirror.png",
+      "title": "Masa Depan Agreement",
+      "text": "Cara sofia menanggapi proyeksi masa depan."
+    },
+    {
+      "id": "v473_epi_plaza",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V473_EPI_PLAZA_DONE",
+      "icon": "items/v473_page.png",
+      "title": "Plaza yang Baru Dipahami",
+      "text": "Kenangan dari pertemuan pertama yang kini dapat dilihat dari dua sisi."
+    },
+    {
+      "id": "v473_epi_cafe",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V473_EPI_CAFE_DONE",
+      "icon": "items/v473_letter.png",
+      "title": "Surat Dua Sisi",
+      "text": "Arland dan Sofia akhirnya menyimpan dua urutan dan dua suara."
+    },
+    {
+      "id": "v473_epi_gallery",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V473_EPI_GALLERY_DONE",
+      "icon": "items/v473_chair.png",
+      "title": "Gambar yang Tidak Dihapus",
+      "text": "Kursi kosong dan keberanian Sofia tetap hadir bersama kenangan baru."
+    },
+    {
+      "id": "v473_epi_lake",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "fictional_memory",
+      "unlock": "V473_EPI_COMPLETE",
+      "icon": "items/v473_sunset.png",
+      "title": "Sore yang Belum Selesai",
+      "text": "Foto lama, surat danau, dan halaman masa depan yang masih kosong."
+    },
+    {
+      "id": "v473_epi_two_letters",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "postgame_memory",
+      "unlock": "V473_BONUS_DONE",
+      "icon": "items/v473_letter.png",
+      "title": "The Other Side of the Page",
+      "text": "Dua surat hanya tersedia setelah kedua route Chapter 6 tamat."
+    },
+    {
+      "id": "v473_v473_post_plaza",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "postgame_memory",
+      "unlock": "V473_POST_PLAZA",
+      "icon": "items/v473_page.png",
+      "title": "Bunga untuk Hari Biasa",
+      "text": "Satu hari kecil setelah kisah besar selesai."
+    },
+    {
+      "id": "v473_v473_post_cafe",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "postgame_memory",
+      "unlock": "V473_POST_CAFE",
+      "icon": "items/v473_page.png",
+      "title": "Dua Gelas di Kafe",
+      "text": "Satu hari kecil setelah kisah besar selesai."
+    },
+    {
+      "id": "v473_v473_post_lake",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "postgame_memory",
+      "unlock": "V473_POST_LAKE",
+      "icon": "items/v473_page.png",
+      "title": "Sore yang Tidak Hilang",
+      "text": "Satu hari kecil setelah kisah besar selesai."
+    },
+    {
+      "id": "v473_branch_v473_plaza_gift",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_PLAZA_GIFT",
+      "icon": "items/v473_letter.png",
+      "title": "Hadiah yang Tetap Miring",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_plaza_courage",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_PLAZA_COURAGE",
+      "icon": "items/v473_letter.png",
+      "title": "Keberanian Bertemu",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_cafe_listen",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_CAFE_LISTEN",
+      "icon": "items/v473_letter.png",
+      "title": "Mendengarkan Dua Sisi",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_cafe_two_sides",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_CAFE_TWO_SIDES",
+      "icon": "items/v473_letter.png",
+      "title": "Dua Versi Disimpan",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_gallery_keep",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_GALLERY_KEEP",
+      "icon": "items/v473_letter.png",
+      "title": "Kursi yang Tidak Dihapus",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_gallery_pair",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_GALLERY_PAIR",
+      "icon": "items/v473_letter.png",
+      "title": "Dua Gambar Berdampingan",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_bonus_keep",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_BONUS_KEEP",
+      "icon": "items/v473_letter.png",
+      "title": "Dua Surat Apa Adanya",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v473_branch_v473_bonus_new_page",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "V473_BONUS_NEW_PAGE",
+      "icon": "items/v473_letter.png",
+      "title": "Satu Halaman Baru",
+      "text": "Keputusanmu mengubah cara kenangan ini diceritakan."
+    },
+    {
+      "id": "v474_pro_a_written",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_GIFT_FINISHED",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Janji Kecil dari Pagi",
+      "text": "Pemain menyiapkan hadiah melalui beberapa langkah, bukan mengambilnya begitu saja."
+    },
+    {
+      "id": "v474_pro_a_note_everyday",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_NOTE_EVERYDAY",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Hari-Hari Biasa",
+      "text": "Kalimat yang dipilih sejak Prolog kembali bermakna setelah perjalanan sampai Epilog."
+    },
+    {
+      "id": "v474_pro_a_note_listen",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_NOTE_LISTEN",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Belajar Mendengar",
+      "text": "Kalimat yang dipilih sejak Prolog kembali bermakna setelah perjalanan sampai Epilog."
+    },
+    {
+      "id": "v474_pro_s_written",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_GIFT_FINISHED",
+      "icon": "items/v474_postcard.png",
+      "title": "Janji Kecil dari Pagi",
+      "text": "Pemain menyiapkan hadiah melalui beberapa langkah, bukan mengambilnya begitu saja."
+    },
+    {
+      "id": "v474_pro_s_note_comfort",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_NOTE_COMFORT",
+      "icon": "items/v474_postcard.png",
+      "title": "Menjadi Diri Sendiri",
+      "text": "Kalimat yang dipilih sejak Prolog kembali bermakna setelah perjalanan sampai Epilog."
+    },
+    {
+      "id": "v474_pro_s_note_stories",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_NOTE_STORIES",
+      "icon": "items/v474_postcard.png",
+      "title": "Cerita yang Belum Selesai",
+      "text": "Kalimat yang dipilih sejak Prolog kembali bermakna setelah perjalanan sampai Epilog."
+    },
+    {
+      "id": "v474_pro_shard_1",
+      "chapter": "PRO",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "SHARD_1",
+      "icon": "items/v474_shard.png",
+      "title": "Hadiah dari Dua Sisi",
+      "text": "Kenangan ini dibaca dengan dua cara berbeda tanpa menghapus salah satu suara."
+    },
+    {
+      "id": "v474_pro_shard_2",
+      "chapter": "PRO",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "SHARD_2",
+      "icon": "items/v474_shard.png",
+      "title": "Hari dengan Dua Langit",
+      "text": "Kenangan ini dibaca dengan dua cara berbeda tanpa menghapus salah satu suara."
+    },
+    {
+      "id": "v474_pro_shard_3",
+      "chapter": "PRO",
+      "route": "shared",
+      "type": "optional_story_branch",
+      "unlock": "SHARD_3",
+      "icon": "items/v474_shard.png",
+      "title": "Kalimat yang Belum Lengkap",
+      "text": "Kenangan ini dibaca dengan dua cara berbeda tanpa menghapus salah satu suara."
+    },
+    {
+      "id": "v474_pro_choice_a_text_honest",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_TEXT_HONEST",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Janji yang Dikatakan",
+      "text": "Aku memang bilang senang ketemu Sofia. Kali ini aku mau membuktikannya dengan hadir."
+    },
+    {
+      "id": "v474_pro_choice_a_text_playful",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_TEXT_PLAYFUL",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Kejutan yang Punya Tempat",
+      "text": "Aku senang bisa bercanda dengannya. Tapi aku juga harus tahu kapan ia butuh jawaban serius."
+    },
+    {
+      "id": "v474_pro_choice_s_text_open",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_TEXT_OPEN",
+      "icon": "items/v474_postcard.png",
+      "title": "Cerita yang Sejak Awal Ditunggu",
+      "text": "Aku pernah menulis kalau ingin banyak bercerita. Aku nggak mau kehilangan keberanian itu."
+    },
+    {
+      "id": "v474_pro_choice_s_text_gentle",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_TEXT_GENTLE",
+      "icon": "items/v474_postcard.png",
+      "title": "Jangan Terburu-buru",
+      "text": "Sejak awal aku mengingatkan Arland agar tidak terburu-buru. Sekarang aku juga belajar memintanya hadir."
+    },
+    {
+      "id": "v474_pro_choice_a_fold_real",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_FOLD_REAL",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Lipatan yang Dibiarkan Asli",
+      "text": "Salah lipat itu masih ada. Sofia tidak pernah meminta aku memperbaiki semua hal."
+    },
+    {
+      "id": "v474_pro_choice_a_fold_care",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_FOLD_CARE",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Merawat Bukan Mengulang",
+      "text": "Aku pernah merapikan bunga tanpa merobeknya. Mungkin itu juga cara merawat hubungan."
+    },
+    {
+      "id": "v474_pro_choice_s_draft_thank",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_DRAFT_THANK",
+      "icon": "items/v474_postcard.png",
+      "title": "Ucapan Terima Kasih",
+      "text": "Kalimat pertamaku bukan tentang hadiah. Aku cuma ingin dia tahu bahwa aku merasa didengar."
+    },
+    {
+      "id": "v474_pro_choice_s_draft_tomorrow",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_DRAFT_TOMORROW",
+      "icon": "items/v474_postcard.png",
+      "title": "Cerita Hari Esok",
+      "text": "Sejak kartu pertama, aku sudah ingin punya banyak cerita. Bukan kisah tanpa salah, melainkan kisah yang sungguh kami jalani."
+    },
+    {
+      "id": "v474_pro_choice_a_ribbon_cream",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_RIBBON_CREAM",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Pita Cahaya Pagi",
+      "text": "Aku memilih pita seperti pagi. Awalnya aku pikir semuanya harus cerah setiap hari."
+    },
+    {
+      "id": "v474_pro_choice_a_ribbon_violet",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_RIBBON_VIOLET",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Pita Langit Senja",
+      "text": "Aku memilih pita ungu karena Sofia menyukai langit sore. Waktu itu aku ingat detail kecilnya."
+    },
+    {
+      "id": "v474_pro_choice_s_stamp_star",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_STAMP_STAR",
+      "icon": "items/v474_postcard.png",
+      "title": "Bintang di Kartu Pos",
+      "text": "Aku memilih bintang tanpa tahu bahwa kelak kita akan mengikuti langit sampai Memory Bridge."
+    },
+    {
+      "id": "v474_pro_choice_s_stamp_flower",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_STAMP_FLOWER",
+      "icon": "items/v474_postcard.png",
+      "title": "Bunga di Ujung Kalimat",
+      "text": "Aku memilih gambar bunga. Sekarang aku tahu betapa lama Arland membuatnya dengan tangannya sendiri."
+    },
+    {
+      "id": "v474_pro_choice_a_note_everyday",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_NOTE_EVERYDAY",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Terima Kasih untuk Hari Biasa",
+      "text": "Aku menulis tentang hari-hari biasa. Setelah galeri, aku belajar bahwa hadir adalah cara menjaganya."
+    },
+    {
+      "id": "v474_pro_choice_a_note_listen",
+      "chapter": "PRO",
+      "route": "arland",
+      "type": "optional_story_branch",
+      "unlock": "V474_A_NOTE_LISTEN",
+      "icon": "items/v474_folded_flower.png",
+      "title": "Janji untuk Mendengar",
+      "text": "Aku menulis ingin mendengar saat Sofia sedih. Sekarang aku paham mendengar itu bukan sekadar menawarkan solusi."
+    },
+    {
+      "id": "v474_pro_choice_s_note_comfort",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_NOTE_COMFORT",
+      "icon": "items/v474_postcard.png",
+      "title": "Boleh Menjadi Diri Sendiri",
+      "text": "Aku menulis bahwa aku nyaman menjadi diriku. Sekarang aku juga berani bilang kalau sesuatu menyakitkan."
+    },
+    {
+      "id": "v474_pro_choice_s_note_stories",
+      "chapter": "PRO",
+      "route": "sofia",
+      "type": "optional_story_branch",
+      "unlock": "V474_S_NOTE_STORIES",
+      "icon": "items/v474_postcard.png",
+      "title": "Dua Cerita, Bukan Satu",
+      "text": "Aku menulis agar kami saling bercerita. Sekarang aku tidak takut kalau versi kami berbeda."
+    },
+    {
+      "id": "v49_discovery_arland_room",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_ARLAND_ROOM_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Kertas di Balik Meja",
+      "text": "Penemuan di arland room. Secarik kertas menyelip di balik meja, tidak pernah menjadi bagian dari misi utama."
+    },
+    {
+      "id": "v49_discovery_sofia_room",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_SOFIA_ROOM_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Sudut yang Belum Selesai",
+      "text": "Penemuan di sofia room. Cahaya di jendela jatuh di tempat yang sama, tetapi kenangannya berbeda."
+    },
+    {
+      "id": "v49_discovery_plaza",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_PLAZA_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Jejak di Air Mancur",
+      "text": "Penemuan di plaza. Di bawah gemercik air muncul empat simbol; ingat urutannya."
+    },
+    {
+      "id": "v49_discovery_jalan_kota",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_JALAN_KOTA_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Resep di Etalase",
+      "text": "Penemuan di jalan kota. Di kaca berembun tertinggal gambar yang ingin diingat, bukan dibeli."
+    },
+    {
+      "id": "v49_discovery_taman_kota",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_TAMAN_KOTA_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Bangku yang Bercerita",
+      "text": "Penemuan di taman kota. Sebuah tempat istirahat menyimpan petunjuk tanpa meminta kalian bergegas."
+    },
+    {
+      "id": "v49_discovery_riverside",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_RIVERSIDE_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Riak Kedua",
+      "text": "Penemuan di riverside. Membaca pantulan danau membutuhkan kesabaran, bukan kecepatan."
+    },
+    {
+      "id": "v49_discovery_cafe",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_CAFE_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Struk Tanpa Harga",
+      "text": "Penemuan di cafe. Satu struk kafe menyimpan pesan yang tak ikut dihitung kasir."
+    },
+    {
+      "id": "v49_discovery_dapur",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_DAPUR_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Tiga Aroma",
+      "text": "Penemuan di dapur. Tiga stoples memberi petunjuk baru untuk halaman 'Hal-Hal Kecil'."
+    },
+    {
+      "id": "v49_discovery_toko_bunga",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_TOKO_BUNGA_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Pita yang Tertinggal",
+      "text": "Penemuan di toko bunga. Warna bunga bukan jawaban; yang penting adalah alasan memilihnya."
+    },
+    {
+      "id": "v49_discovery_arcade",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_ARCADE_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Tiket Keempat",
+      "text": "Penemuan di arcade. Sebuah mesin lama menyala ketika kedua sisi layar disentuh."
+    },
+    {
+      "id": "v49_discovery_memory_garden",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_MEMORY_GARDEN_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Biji Cahaya",
+      "text": "Penemuan di memory garden. Taman mengingat langkah yang tak disebut dalam cerita utama."
+    },
+    {
+      "id": "v49_discovery_lantern_field",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_LANTERN_FIELD_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Lentera Keempat",
+      "text": "Penemuan di lantern field. Di antara lentera ada satu pola tambahan yang tak membuka gerbang canon."
+    },
+    {
+      "id": "v49_discovery_star_path",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_STAR_PATH_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Kompas yang Berhenti",
+      "text": "Penemuan di star path. Di jalan bintang, arah yang dipilih bukan selalu yang paling cepat."
+    },
+    {
+      "id": "v49_discovery_starfall_village",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_STARFALL_VILLAGE_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Jendela Bernyanyi",
+      "text": "Penemuan di starfall village. Rumah-rumah Starfall punya lagu kecil untuk menyambut malam."
+    },
+    {
+      "id": "v49_discovery_eternal_garden",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_ETERNAL_GARDEN_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Halaman yang Bernapas",
+      "text": "Penemuan di eternal garden. Taman terakhir tidak memberi ramalan masa depan; hanya ruang untuk memilih."
+    },
+    {
+      "id": "v49_discovery_perumahan",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_PERUMAHAN_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Pot di Pagar",
+      "text": "Penemuan di perumahan. Benda lama berubah fungsi tanpa kehilangan kisahnya."
+    },
+    {
+      "id": "v49_discovery_perpustakaan",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_PERPUSTAKAAN_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Halaman Keheningan",
+      "text": "Penemuan di perpustakaan. Satu halaman perpustakaan memberi cara baru memahami diam."
+    },
+    {
+      "id": "v49_discovery_ruang_arsip",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_RUANG_ARSIP_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Cap pada Surat",
+      "text": "Penemuan di ruang arsip. Catatan lama tidak memberi jawaban lengkap tanpa dua perspektif."
+    },
+    {
+      "id": "v49_discovery_dermaga",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_DERMAGA_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Tali Simpul",
+      "text": "Penemuan di dermaga. Simpul kecil di ujung dermaga menyimpan latihan kerja sama."
+    },
+    {
+      "id": "v49_discovery_hutan_bisik",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_HUTAN_BISIK_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Bisikan Daun",
+      "text": "Penemuan di hutan bisik. Empat gemerisik membentuk urutan yang dapat diingat berdua."
+    },
+    {
+      "id": "v49_discovery_bukit_bintang",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_BUKIT_BINTANG_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Rasi Sederhana",
+      "text": "Penemuan di bukit bintang. Rasi baru terbentuk dari bintang yang biasanya dilewati."
+    },
+    {
+      "id": "v49_discovery_gua_kristal",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_GUA_KRISTAL_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Kristal Tanpa Nama",
+      "text": "Penemuan di gua kristal. Cahaya gua memperlihatkan teka-teki tentang cara melihat."
+    },
+    {
+      "id": "v49_discovery_galeri_komunitas",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_GALERI_KOMUNITAS_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Kursi untuk Cerita",
+      "text": "Penemuan di galeri komunitas. Sebuah kursi mengundang percakapan, bukan penilaian."
+    },
+    {
+      "id": "v49_discovery_rain_garden",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_RAIN_GARDEN_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Hujan yang Berulang",
+      "text": "Penemuan di rain garden. Kenangan tidak berubah, tetapi cara memahaminya bisa tumbuh."
+    },
+    {
+      "id": "v49_discovery_clockwork_station",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_CLOCKWORK_STATION_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Detik yang Disisakan",
+      "text": "Penemuan di clockwork station. Sebuah stasiun mengingatkan bahwa waktu bukan perlombaan."
+    },
+    {
+      "id": "v49_discovery_moonlight_lake",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_MOONLIGHT_LAKE_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Dua Pantulan",
+      "text": "Penemuan di moonlight lake. Dua jalan pengamatan membawa kalian ke satu permukaan yang tenang."
+    },
+    {
+      "id": "v49_discovery_memory_bridge",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_MEMORY_BRIDGE_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Papan yang Saling Menopang",
+      "text": "Penemuan di memory bridge. Jejak cahaya muncul jika kedua sisi diberi perhatian."
+    },
+    {
+      "id": "v49_discovery_hall_of_tomorrow",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_HALL_OF_TOMORROW_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Kartu Hari Esok",
+      "text": "Penemuan di hall of tomorrow. Tiga kemungkinan tidak mengubah ending: hanya cara memandang masa depan."
+    },
+    {
+      "id": "v49_discovery_ruang_dua_surat",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "world_discovery",
+      "unlock": "V49_DISC_RUANG_DUA_SURAT_FOUND",
+      "icon": "items/symbol_star.png",
+      "title": "Lipatan di Tengah",
+      "text": "Penemuan di ruang dua surat. Lipatan kertas menjadi tanda dua sudut pandang bisa saling mengisi."
+    },
+    {
+      "id": "v49_event_v49_room_note",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_ROOM_NOTE_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Pesan di Ujung Meja",
+      "text": "Momen harian di arland room. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_window_story",
+      "chapter": "C02",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_WINDOW_STORY_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Cerita di Jendela",
+      "text": "Momen harian di sofia room. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_street_bells",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_STREET_BELLS_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Lonceng Jalan Kota",
+      "text": "Momen harian di jalan kota. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_kitchen_steam",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_KITCHEN_STEAM_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Uap di Dapur",
+      "text": "Momen harian di dapur. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_garden_breeze",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_GARDEN_BREEZE_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Embun di Memory Garden",
+      "text": "Momen harian di memory garden. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_lantern_glow49",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_LANTERN_GLOW49_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Nyala Setelah Senja",
+      "text": "Momen harian di lantern field. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_star_path_pause",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_STAR_PATH_PAUSE_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Berhenti di Jalur Bintang",
+      "text": "Momen harian di star path. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_eternal_bloom",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_ETERNAL_BLOOM_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Bunga Hari Esok",
+      "text": "Momen harian di eternal garden. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_fence_light",
+      "chapter": "C03",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_FENCE_LIGHT_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Lampu Teras",
+      "text": "Momen harian di perumahan. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_archive_dust",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_ARCHIVE_DUST_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Debu yang Berpendar",
+      "text": "Momen harian di ruang arsip. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_cave_echo",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_CAVE_ECHO_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Langkah di Gua Kristal",
+      "text": "Momen harian di gua kristal. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_gallery_corner",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_GALLERY_CORNER_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Sudut Pameran Kecil",
+      "text": "Momen harian di galeri komunitas. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_rain_shelter",
+      "chapter": "C04",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_RAIN_SHELTER_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Tempat Berteduh",
+      "text": "Momen harian di rain garden. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_clockwork_tea",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_CLOCKWORK_TEA_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Istirahat di Stasiun",
+      "text": "Momen harian di clockwork station. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_moonlight_ripple",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_MOONLIGHT_RIPPLE_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Permukaan Bulan",
+      "text": "Momen harian di moonlight lake. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_bridge_listen",
+      "chapter": "C05",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_BRIDGE_LISTEN_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Suara di Bawah Jembatan",
+      "text": "Momen harian di memory bridge. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_tomorrow_cards",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_TOMORROW_CARDS_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Tiga Kartu Kosong",
+      "text": "Momen harian di hall of tomorrow. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_event_v49_letter_light",
+      "chapter": "C06",
+      "route": "shared",
+      "type": "world_event",
+      "unlock": "WORLD_EVENT_V49_LETTER_LIGHT_ONCE",
+      "icon": "items/symbol_star.png",
+      "title": "Cahaya di Antara Surat",
+      "text": "Momen harian di ruang dua surat. Kenangan pertama tetap tersimpan."
+    },
+    {
+      "id": "v49_atlas_bonus",
+      "chapter": "EPI",
+      "route": "shared",
+      "type": "optional_bonus",
+      "unlock": "V49_WORLD_ATLAS_UNLOCK",
+      "icon": "items/symbol_star.png",
+      "title": "Atlas Kenangan Kecil",
+      "text": "Semua jejak dunia ditemukan. Dua sudut pandang mengungkapkan satu kisah, tanpa akhir baru."
+    }
+  ],
+  "bonus": {
+    "id": "m_two_sided",
+    "title": "Kenangan Dua Sisi (Bonus)",
+    "icon": "items/letter_two_sides.png",
+    "requires": "both_routes_C06",
+    "text": "Tamatkan Chapter 6 dari route Arland dan Sofia, lalu masuk ke Ruang Dua Surat melalui Galeri Komunitas untuk memainkan bab bonus dua perspektif."
+  }
+}

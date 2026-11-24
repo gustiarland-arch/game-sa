@@ -1,0 +1,6 @@
+2aa1d1bd725e2de28a7a01ba02740715d012583b070b13548a50b1427ac26bfe  core/src/main/java/com/arlandsofia/olu/logic/MotionPersonalityV53.java
+a97d34aaa34d1f8d80252ef714763f59cd134cbe30c33c893afb717fe8c95b07  core/src/main/java/com/arlandsofia/olu/game/Actor.java
+9aa0ae90811320b43cb339b492087737c68dc391f245aada647899e2058dfbf2  core/src/main/java/com/arlandsofia/olu/Assets.java
+887b90ede74c1d5433f89943f6bc111e9c156e891c06208d14ed560b7167fb7c  core/src/main/java/com/arlandsofia/olu/screens/GameScreen.java
+f193994bedc4170c6cf6d7ff51c4b9160a5644ea85b49f992fa0d29afb402390  tools/build_npc_motion_v53.py
+43b7c548e37874e9a393e1f9f19e584d0c095465aa20da10f60623538167c42a  build.gradle

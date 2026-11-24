@@ -1,0 +1,27 @@
+{
+  "checkpoint": "v4.7.2",
+  "status": "PRIVATE_DRAFT",
+  "chapter6": "source_and_headless_qa_complete",
+  "prologue": "dedicated_audit_pending",
+  "epilogue": "dedicated_audit_pending",
+  "distribution": "none",
+  "github": "unchanged",
+  "apk_tested": false,
+  "qa": {
+    "route_walkthroughs": 576,
+    "engine_assertions": 101154,
+    "navigation_assertions": 52,
+    "static_assertions": 203,
+    "endings": 1,
+    "world_areas": 28
+  },
+  "implemented": {
+    "scenes": 55,
+    "quest_steps": 6,
+    "new_maps": 1,
+    "new_oggs": 2,
+    "new_sfx": 1,
+    "new_icons": 5
+  },
+  "audit_file": "docs/STORY_CHAPTER6_OVERHAUL_V472_AUDIT.md"
+}

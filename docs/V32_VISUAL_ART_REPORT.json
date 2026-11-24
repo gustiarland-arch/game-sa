@@ -1,0 +1,185 @@
+{
+  "maps": [
+    {
+      "area": "arland_room",
+      "theme": "interior",
+      "decals": 89,
+      "medallions": 1,
+      "original_bytes": 45817,
+      "new_bytes": 85351
+    },
+    {
+      "area": "sofia_room",
+      "theme": "interior",
+      "decals": 89,
+      "medallions": 1,
+      "original_bytes": 45649,
+      "new_bytes": 87907
+    },
+    {
+      "area": "plaza",
+      "theme": "urban",
+      "decals": 356,
+      "medallions": 2,
+      "original_bytes": 1217060,
+      "new_bytes": 1463486
+    },
+    {
+      "area": "jalan_kota",
+      "theme": "urban",
+      "decals": 303,
+      "medallions": 2,
+      "original_bytes": 918399,
+      "new_bytes": 1149644
+    },
+    {
+      "area": "taman_kota",
+      "theme": "nature",
+      "decals": 370,
+      "medallions": 2,
+      "original_bytes": 1588389,
+      "new_bytes": 1913669
+    },
+    {
+      "area": "riverside",
+      "theme": "waterside",
+      "decals": 302,
+      "medallions": 2,
+      "original_bytes": 932017,
+      "new_bytes": 1168809
+    },
+    {
+      "area": "cafe",
+      "theme": "interior",
+      "decals": 89,
+      "medallions": 1,
+      "original_bytes": 46814,
+      "new_bytes": 86921
+    },
+    {
+      "area": "dapur",
+      "theme": "interior",
+      "decals": 89,
+      "medallions": 1,
+      "original_bytes": 12619,
+      "new_bytes": 48799
+    },
+    {
+      "area": "toko_bunga",
+      "theme": "interior",
+      "decals": 89,
+      "medallions": 1,
+      "original_bytes": 46088,
+      "new_bytes": 88605
+    },
+    {
+      "area": "arcade",
+      "theme": "interior",
+      "decals": 89,
+      "medallions": 1,
+      "original_bytes": 9885,
+      "new_bytes": 48246
+    },
+    {
+      "area": "memory_garden",
+      "theme": "magic",
+      "decals": 278,
+      "medallions": 2,
+      "original_bytes": 1110788,
+      "new_bytes": 1334619
+    },
+    {
+      "area": "lantern_field",
+      "theme": "magic",
+      "decals": 356,
+      "medallions": 2,
+      "original_bytes": 1241915,
+      "new_bytes": 1484659
+    },
+    {
+      "area": "star_path",
+      "theme": "magic",
+      "decals": 303,
+      "medallions": 2,
+      "original_bytes": 196198,
+      "new_bytes": 295767
+    },
+    {
+      "area": "starfall_village",
+      "theme": "magic",
+      "decals": 356,
+      "medallions": 2,
+      "original_bytes": 1109782,
+      "new_bytes": 1309159
+    },
+    {
+      "area": "eternal_garden",
+      "theme": "magic",
+      "decals": 370,
+      "medallions": 2,
+      "original_bytes": 1873893,
+      "new_bytes": 2198132
+    },
+    {
+      "area": "perumahan",
+      "theme": "urban",
+      "decals": 341,
+      "medallions": 2,
+      "original_bytes": 1101805,
+      "new_bytes": 1369320
+    },
+    {
+      "area": "perpustakaan",
+      "theme": "interior",
+      "decals": 142,
+      "medallions": 1,
+      "original_bytes": 73916,
+      "new_bytes": 132641
+    },
+    {
+      "area": "ruang_arsip",
+      "theme": "interior",
+      "decals": 65,
+      "medallions": 1,
+      "original_bytes": 11029,
+      "new_bytes": 41230
+    },
+    {
+      "area": "dermaga",
+      "theme": "waterside",
+      "decals": 302,
+      "medallions": 2,
+      "original_bytes": 757813,
+      "new_bytes": 976018
+    },
+    {
+      "area": "hutan_bisik",
+      "theme": "nature",
+      "decals": 370,
+      "medallions": 2,
+      "original_bytes": 2856815,
+      "new_bytes": 3265064
+    },
+    {
+      "area": "bukit_bintang",
+      "theme": "nature",
+      "decals": 356,
+      "medallions": 2,
+      "original_bytes": 1471805,
+      "new_bytes": 1738050
+    },
+    {
+      "area": "gua_kristal",
+      "theme": "cave",
+      "decals": 178,
+      "medallions": 2,
+      "original_bytes": 165914,
+      "new_bytes": 262419
+    }
+  ],
+  "props": 256,
+  "actors": 25,
+  "ui_assets": 11,
+  "portraits": 21,
+  "generated_assets": 360
+}

@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    // Uji logika cerita/quest/save memakai data asli di android/assets
+    systemProperty 'olu.assets', file('../android/assets').absolutePath
+    testLogging { events 'passed', 'failed'; exceptionFormat 'full'; showStandardStreams true }
+}

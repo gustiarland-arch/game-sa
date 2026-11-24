@@ -1,0 +1,269 @@
+{
+  "version": "3.3.0-stage-1",
+  "areas": [
+    {
+      "map": "plaza",
+      "dimensions": [
+        1920,
+        1280
+      ],
+      "layers": 4,
+      "changed_pixels": 2435572
+    },
+    {
+      "map": "taman_kota",
+      "dimensions": [
+        1920,
+        1408
+      ],
+      "layers": 4,
+      "changed_pixels": 2671796
+    },
+    {
+      "map": "cafe",
+      "dimensions": [
+        960,
+        640
+      ],
+      "layers": 4,
+      "changed_pixels": 614309
+    }
+  ],
+  "props_reworked": 29,
+  "props": [
+    {
+      "name": "fountain",
+      "size": [
+        230,
+        170
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "bld_arland_house",
+      "size": [
+        270,
+        196
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "bld_sofia_house",
+      "size": [
+        280,
+        196
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "bld_cafe",
+      "size": [
+        300,
+        196
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "tree_cherry",
+      "size": [
+        92,
+        130
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "tree_green",
+      "size": [
+        92,
+        130
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "tree_autumn",
+      "size": [
+        92,
+        130
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "tree_pine",
+      "size": [
+        92,
+        130
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "gazebo",
+      "size": [
+        170,
+        150
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "bridge_park",
+      "size": [
+        150,
+        64
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "bench",
+      "size": [
+        72,
+        40
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "lamp",
+      "size": [
+        22,
+        84
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "flowerbed",
+      "size": [
+        66,
+        30
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "hedge_tk",
+      "size": [
+        96,
+        40
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "garden_plot_tk",
+      "size": [
+        76,
+        40
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "garden_plot_tk2",
+      "size": [
+        76,
+        40
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "picnic_blanket",
+      "size": [
+        110,
+        64
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "cafe_table",
+      "size": [
+        64,
+        50
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "cafe_table_c2",
+      "size": [
+        64,
+        50
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "counter",
+      "size": [
+        204,
+        72
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "display_case",
+      "size": [
+        74,
+        56
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "bookshelf_c",
+      "size": [
+        62,
+        96
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "rug_round",
+      "size": [
+        170,
+        80
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "plant_big",
+      "size": [
+        40,
+        60
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "plant_big_c",
+      "size": [
+        40,
+        60
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "sofa_c",
+      "size": [
+        100,
+        52
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "cafe_umbrella_table",
+      "size": [
+        80,
+        90
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "door",
+      "size": [
+        56,
+        90
+      ],
+      "alpha_preserved": true
+    },
+    {
+      "name": "door_k",
+      "size": [
+        56,
+        90
+      ],
+      "alpha_preserved": true
+    }
+  ],
+  "source": "v3.2.0",
+  "note": "No changes to maps.json, props.json, story/save/audio or collisions."
+}

@@ -1,0 +1,14 @@
+{
+  "core/src/main/java/com/arlandsofia/olu/logic/Progress.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/logic/SaveStore.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/logic/Routes.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/logic/StoryDb.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/logic/QuestDb.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/logic/ActionRunner.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/screens/GameScreen.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/screens/TitleScreen.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/screens/SlotScreen.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/game/Actor.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/game/CutscenePlayer.java": "identical",
+  "core/src/main/java/com/arlandsofia/olu/screens/RouteSelectScreen.java": "identical"
+}

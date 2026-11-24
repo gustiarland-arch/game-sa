@@ -1,0 +1,354 @@
+{
+  "version": "v3.4.0-stage2",
+  "source": "v3.3.0",
+  "maps": [
+    {
+      "name": "riverside",
+      "size": [
+        1920,
+        1088
+      ],
+      "layers": [
+        "00_ground_palette",
+        "01_water_and_garden",
+        "02_landmark_details",
+        "03_atmosphere"
+      ],
+      "modified_pixels": 2064867,
+      "file_sha256": "817f8b2d32d5f29d23d165094fa8a41da5383962bb349e4ab74fa770074a68da"
+    },
+    {
+      "name": "dermaga",
+      "size": [
+        1920,
+        1088
+      ],
+      "layers": [
+        "00_ground_palette",
+        "01_water_and_garden",
+        "02_landmark_details",
+        "03_atmosphere"
+      ],
+      "modified_pixels": 2061859,
+      "file_sha256": "e4344c9abf900ff66565eba6a26c94f1296a2eb09901619a43b35f9f567d56c7"
+    },
+    {
+      "name": "bukit_bintang",
+      "size": [
+        1920,
+        1280
+      ],
+      "layers": [
+        "00_ground_palette",
+        "01_water_and_garden",
+        "02_landmark_details",
+        "03_atmosphere"
+      ],
+      "modified_pixels": 2410131,
+      "file_sha256": "11dd93b6eb334af722f15038260d599b1d576e4449036d82a9e1b0d61f54fe57"
+    },
+    {
+      "name": "memory_garden",
+      "size": [
+        1600,
+        1200
+      ],
+      "layers": [
+        "00_ground_palette",
+        "01_water_and_garden",
+        "02_landmark_details",
+        "03_atmosphere"
+      ],
+      "modified_pixels": 1867069,
+      "file_sha256": "219ab3301b5ab0c7d6823303dd76a55dda5afd623472e86e319da8fcc0e83d06"
+    },
+    {
+      "name": "eternal_garden",
+      "size": [
+        1920,
+        1408
+      ],
+      "layers": [
+        "00_ground_palette",
+        "01_water_and_garden",
+        "02_landmark_details",
+        "03_atmosphere"
+      ],
+      "modified_pixels": 2537404,
+      "file_sha256": "9b69d1402a0a054feefec91e961b9338d0d222c2aa3082f0b475cd1afe8f11ac"
+    }
+  ],
+  "props": [
+    {
+      "name": "bridge_pier",
+      "size": [
+        80,
+        184
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "ac328d1f88fcbacd88ac8a107b829ce79b9596756e71bb21e434d72a95f6cf63"
+    },
+    {
+      "name": "bridge_dpier",
+      "size": [
+        72,
+        420
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "2573ffeadd47ead8a7e23ed3b6703b6a8afe8d8a6e59feb58b794105e1eebc36"
+    },
+    {
+      "name": "bridge_dplat",
+      "size": [
+        340,
+        110
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "d9fb88d2eb721e1778e6cc9388d16c7894e149ac06fa866b98cbc618cae4c90d"
+    },
+    {
+      "name": "pier_post",
+      "size": [
+        12,
+        30
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "7d0cb37829d2bdb5604110143748ec3be01046d2c110df83a7ee2dab0c2bb7ff"
+    },
+    {
+      "name": "rowboat",
+      "size": [
+        84,
+        34
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "73ebc23b576b204fdb50e3c824f4225ef6174a3b204cf545d4de0c22a9183a63"
+    },
+    {
+      "name": "rowboat_b",
+      "size": [
+        84,
+        34
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "dfa728790d65d0d638e84a8addc705aa7f8f56fe95c11e8e129148bcd05de7d9"
+    },
+    {
+      "name": "rowboat_rv",
+      "size": [
+        84,
+        34
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "39100f020b21db2fae07f371eb7e1ba4edef20b63da15ceb928a7596a16156de"
+    },
+    {
+      "name": "fishing_hut",
+      "size": [
+        130,
+        110
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "be0a83156bd4dc076ceea9400197097ad86ec3c2bf61e34dc8f911fffb985831"
+    },
+    {
+      "name": "fence_bb",
+      "size": [
+        20,
+        30
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "5dc651337e73c41cbbfe0b958c042e687851e96e1ca1c3e3e0523c766daee73a"
+    },
+    {
+      "name": "observatory",
+      "size": [
+        220,
+        210
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "58d28ce8e41432e77a85131e25abf544f703a6031921ad8130d4c92a570b6fc1"
+    },
+    {
+      "name": "telescope",
+      "size": [
+        40,
+        52
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "d7badd355afc466a4accb4fdc59bb361004adf37315ef7e2a584ff964ecbe06f"
+    },
+    {
+      "name": "chest_bb",
+      "size": [
+        34,
+        32
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "1d67451a3f9ba56c65a7ed4c1c7165a41dc51bf7eec3a9b82b09f2fd56693be5"
+    },
+    {
+      "name": "stone_lantern_bb",
+      "size": [
+        28,
+        56
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "e5d9b60a893aeed2f0ae46962b7e3ae801dfa0f7e149e97d8c3703a08611224b"
+    },
+    {
+      "name": "stone_lantern_bb2",
+      "size": [
+        28,
+        56
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "82d40a0308814cdcef6f62171fc9312b659a7330ae4a44f564f3fc1dfa0d0a68"
+    },
+    {
+      "name": "tree_dream",
+      "size": [
+        92,
+        130
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "ac46a6b7c99d37e7a7c384004b460dae1dabf7ddc8300b2cae6a34eef514a357"
+    },
+    {
+      "name": "tree_lantern",
+      "size": [
+        92,
+        130
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "49e6ff044e980a2b30b3c0fc69bd461f32d47594dfc7aec2732e83b3fc58975f"
+    },
+    {
+      "name": "crystal",
+      "size": [
+        30,
+        44
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "dd39419d21fc6c4f654de7ac83b92f9dc3688d2048bf7fdb9ca91d81a247c065"
+    },
+    {
+      "name": "pedestal_book",
+      "size": [
+        36,
+        54
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "13e953422160688e7b452c28300fde0228f1c0624654aa4ba02562a48af960b3"
+    },
+    {
+      "name": "arch_flowers",
+      "size": [
+        120,
+        130
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "d5eeb9a4f8b74c0c5632c3dbf85085c6008b9c25f1b6635eb2228c5cab643826"
+    },
+    {
+      "name": "arch_flowers_e",
+      "size": [
+        120,
+        130
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "9ba6ad99825fcd3b547d85694f81293cf14fb5c77aa525fa3abb595f312e4064"
+    },
+    {
+      "name": "arch_flowers_e2",
+      "size": [
+        120,
+        130
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "a62c3099c9e8d103ff3e7f181a77ae7729764bed198e41e957e4f664c36d63a3"
+    },
+    {
+      "name": "wishing_tree",
+      "size": [
+        200,
+        220
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "2828c8341219e990ee4f775664cd97d67edd56507f1e9c731bde9974b6f609ae"
+    },
+    {
+      "name": "gazebo_e",
+      "size": [
+        170,
+        150
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "918ab0c9b77352651ac1a10743b2689d1cc278a1bde623adca9ca4b554df270e"
+    },
+    {
+      "name": "stone_bench",
+      "size": [
+        66,
+        28
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "58edd4e4db4f85378ec57bbe960d4c84d346012f14632e45df9669e13101a0c0"
+    },
+    {
+      "name": "lantern_post",
+      "size": [
+        26,
+        70
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "61fc6d7799434f80594df10bcd317db505987f9142c48a3a66bb1db3eef51073"
+    },
+    {
+      "name": "signpost_w3",
+      "size": [
+        64,
+        56
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "ab01bfbc283c8e5191fc4a7095f132a38858fa15829dfbe88f674d6da924e040"
+    },
+    {
+      "name": "tree_oak",
+      "size": [
+        136,
+        170
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "31c03a2b12588fa96194e4ece157a29b0770571e0a20b3d4560f26c860ad0cca"
+    },
+    {
+      "name": "rock",
+      "size": [
+        30,
+        20
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "fc9987251ec94a94a8cb319ec1d6356515744301ed8fc8bf0253b012f64f50be"
+    },
+    {
+      "name": "mushrooms",
+      "size": [
+        24,
+        16
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "d4848ed11f551326bd6fd2ad6b955f02f28ea550ac37e8b2630b81667adfa620"
+    },
+    {
+      "name": "bush_d",
+      "size": [
+        46,
+        30
+      ],
+      "alpha_preserved": true,
+      "file_sha256": "c71b5094b26aec160986c19c322b7968fd59b3c1ce31d248f3073c0b2637e0a0"
+    }
+  ],
+  "notes": "Art-only changes; maps.json/props.json/save/audio unchanged."
+}

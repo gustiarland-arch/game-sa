@@ -1,0 +1,74 @@
+# Cerita fiksi tambahan v1.6.0; semua momen kencan bisa diulang sekali/hari,
+# memori hanya dibuka pada pertama kali.
+=== RM-GIFT-FOOD | Sesuatu yang Manis | shared | C02
+me(senyum): Aku bawakan sesuatu. Tadi aku kepikiran kamu suka yang begini.
+partner(kaget): Untuk aku? Padahal aku cuma bilang sekali waktu itu.
+me(malu): Justru aku ingat.
+partner(senang): Kalau begitu, kita nikmati pelan-pelan, ya.
+
+=== RM-GIFT-FLOWER | Kelopak Kecil | shared | C02
+me(malu): Aku memilih bunga ini sambil membayangkan senyummu.
+partner(kaget): Cantik sekali. Kamu serius memilih sendiri?
+me(senyum): Aku sampai bolak-balik bertanya ke Bu Melati.
+partner(tertawa): Lain kali ajak aku ikut. Kita bisa pilih berdua.
+
+=== RM-GIFT-NOTE | Kartu Kecil | shared | C02
+me(malu): Ada tulisan pendek. Jangan dibaca keras-keras.
+partner(penasaran): Sekarang aku jadi makin ingin baca.
+me(tertawa): Simpan dulu. Baca nanti kalau sedang kangen.
+partner(senang): Berarti kartu ini akan sering kubuka.
+
+=== RM-DATE-PARK-A | Piknik Sederhana Arland | arland | C02
+arland(senyum): Aku sudah siapkan alas duduk. Tidak mewah, tapi tempatnya teduh.
+sofia(tertawa): Kamu sampai memeriksa arah matahari?
+arland(malu): Iya. Aku ingin kamu nyaman.
+sofia(senang): Aku nyaman kalau kamu tidak terlalu sibuk mengkhawatirkanku.
+arland(senyum): Baik. Sekarang kita duduk dan mendengar burung.
+
+=== RM-DATE-PARK-S | Piknik Sederhana Sofia | sofia | C02
+sofia(penasaran): Kamu membawa dua gelas, tapi tidak membawa teko?
+arland(kaget): Aku kira kamu yang bawa minum.
+sofia(tertawa): Kita benar-benar pasangan yang kompak, ya.
+arland(malu): Aku bisa beli sebentar.
+sofia(senyum): Tidak apa. Duduk dulu. Yang kubutuhkan sekarang cuma kamu.
+
+=== RM-DATE-CAFE-A | Dua Cangkir Arland | arland | C02
+arland(senyum): Kursi dekat jendela kosong. Mau di sana?
+sofia(senang): Aku suka cahaya sore yang masuk dari situ.
+arland(malu): Aku sengaja memilih tempat ini karena kamu pernah bilang begitu.
+sofia(tersenyum): Kamu menyimpan hal-hal kecil dengan rapi, ya.
+arland(senyum): Kalau tentang kamu, aku berusaha.
+
+=== RM-DATE-CAFE-S | Dua Cangkir Sofia | sofia | C02
+sofia(senyum): Aku pesan yang biasa kamu pilih. Semoga tidak salah.
+arland(kaget): Kamu hafal?
+sofia(tertawa): Ada yang suka mencatat arah bintang, ada yang mencatat pesanan kopi.
+arland(malu): Aku jadi merasa diperhatikan.
+sofia(senang): Bagus. Itu memang rencanaku.
+
+=== RM-DATE-STAR-A | Di Bawah Bintang Arland | arland | C02
+arland(penasaran): Yang paling terang di sebelah kiri itu bukan bintang, mungkin planet.
+sofia(tertawa): Berarti selama ini aku menyapa planet setiap malam?
+arland(senyum): Tidak masalah. Dia pasti senang disapa.
+sofia(malu): Kalau begitu, aku mau menyapa kamu juga. Terima kasih sudah menemaniku.
+arland(senang): Selalu.
+
+=== RM-DATE-STAR-S | Di Bawah Bintang Sofia | sofia | C02
+sofia(senyum): Lihat yang berkedip di dekat pucuk pohon. Indah sekali.
+arland(penasaran): Kamu menemukan pola apa?
+sofia(malu): Dua titik yang kelihatannya jauh, tapi dari sini seperti bersebelahan.
+arland(senyum): Seperti kita, mungkin?
+sofia(senang): Iya. Aku suka kalau kamu langsung mengerti.
+
+=== RM-BOND-20 | Hal Kecil yang Diingat | shared | C02
+partner(senyum): Kamu sadar tidak? Kita sudah banyak melakukan hal sederhana bersama.
+me(penasaran): Seperti berjalan tanpa tujuan atau memilih hadiah yang lucu?
+partner(tersenyum): Iya. Aku suka kalau tidak harus ada alasan besar untuk bertemu.
+me(senang): Aku juga. Besok kita cari cerita baru, ya.
+
+=== RM-BOND-50 | Tempat Pulang | shared | C02
+me(serius): Kadang aku takut hari-hari biasa akan terasa membosankan.
+partner(senyum): Kalau ada yang berat, bilang. Kita tidak harus selalu terlihat bahagia.
+me(malu): Berarti aku boleh datang bahkan saat tidak membawa apa-apa?
+partner(tersenyum): Tentu. Aku senang denganmu, bukan dengan isi tasmu.
+me(senang): Aku mau mengingat kalimat itu.

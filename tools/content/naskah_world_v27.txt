@@ -1,0 +1,209 @@
+# Event dunia v2.7. Setiap route punya POV dan teksnya sendiri.
+
+=== WE27-PAGI-PLAZA-A | Bunga di Pagi Plaza | arland | C02
+narrator: Pagi membuat genting-genting di Plaza tampak seperti dilapisi madu.
+arland(penasaran): Aku tadi cuma mau lewat. Tapi lihat, ada bunga kecil yang tumbuh di sela batu.
+sofia(senyum): Aku ingin menggambar satu petak sinar sebelum orang-orang membuat plaza ramai.
+narrator: Sofia mendekatkan telapak tangannya ke daun, berhati-hati tidak menyentuh pucuknya.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka membiarkan bunga itu tetap tumbuh dan membawa pulang cerita paginya.
+
+=== WE27-PAGI-PLAZA-S | Bunga di Pagi Plaza | sofia | C02
+narrator: Pagi membuat genting-genting di Plaza tampak seperti dilapisi madu.
+sofia(penasaran): Aku ingin menggambar satu petak sinar sebelum orang-orang membuat plaza ramai.
+arland(senyum): Aku tadi cuma mau lewat. Tapi lihat, ada bunga kecil yang tumbuh di sela batu.
+narrator: Arland memilih bangku yang paling terang, lalu menggeser tempat duduk untuk Sofia.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka membiarkan bunga itu tetap tumbuh dan membawa pulang cerita paginya.
+
+=== WE27-KAFE-CATATAN-A | Pesan di Alas Cangkir | arland | C03
+narrator: Di Kafe Senja, secarik pesan terselip di bawah alas cangkir.
+arland(penasaran): Kamu pernah menulis sesuatu lalu takut orang lain membacanya?
+sofia(senyum): Tulisanku hari ini sederhana: aku senang ketika kita tak perlu selalu banyak bicara.
+narrator: Sofia tersenyum kecil, lalu mengembalikan kertas itu tepat di antara kedua cangkir.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Kertas itu disimpan sebagai bukti bahwa diam juga bisa hangat.
+
+=== WE27-KAFE-CATATAN-S | Pesan di Alas Cangkir | sofia | C03
+narrator: Di Kafe Senja, secarik pesan terselip di bawah alas cangkir.
+sofia(penasaran): Tulisanku hari ini sederhana: aku senang ketika kita tak perlu selalu banyak bicara.
+arland(senyum): Kamu pernah menulis sesuatu lalu takut orang lain membacanya?
+narrator: Arland mengangguk dan menuliskan tanggal pada sudut kertas.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Kertas itu disimpan sebagai bukti bahwa diam juga bisa hangat.
+
+=== WE27-IKAN-PONDOK-A | Penjaga Kolam Koi | arland | C02
+narrator: Seekor ikan koi muncul tiga kali dari bawah jembatan kayu.
+arland(penasaran): Rasanya ikan itu menunggu seseorang membacakan cerita.
+sofia(senyum): Aku menghitung tiga lingkar air tadi. Ada pola yang mirip halaman buku.
+narrator: Sofia menamai ikan itu Si Penjaga Taman, lalu tertawa karena namanya terlalu resmi.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Ikan itu kembali menyelam ketika dua orang di atasnya sama-sama tersenyum.
+
+=== WE27-IKAN-PONDOK-S | Penjaga Kolam Koi | sofia | C02
+narrator: Seekor ikan koi muncul tiga kali dari bawah jembatan kayu.
+sofia(penasaran): Aku menghitung tiga lingkar air tadi. Ada pola yang mirip halaman buku.
+arland(senyum): Rasanya ikan itu menunggu seseorang membacakan cerita.
+narrator: Arland menggerakkan tangannya seperti ikan yang sedang berenang.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Ikan itu kembali menyelam ketika dua orang di atasnya sama-sama tersenyum.
+
+=== WE27-SENJA-DANAU-A | Cahaya di Permukaan Danau | arland | C02
+narrator: Senja pecah menjadi garis-garis keemasan di permukaan danau.
+arland(penasaran): Aku ingin mengingat cahaya yang jatuh tepat di tempat kamu berdiri.
+sofia(senyum): Aku ingat hari ini dari suara daun, bukan cuma warna langitnya.
+narrator: Sofia menunjuk bayangan dua orang yang memanjang sampai dekat air.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Tak ada foto yang diambil. Mereka sepakat kenangan ini cukup dirasakan.
+
+=== WE27-SENJA-DANAU-S | Cahaya di Permukaan Danau | sofia | C02
+narrator: Senja pecah menjadi garis-garis keemasan di permukaan danau.
+sofia(penasaran): Aku ingat hari ini dari suara daun, bukan cuma warna langitnya.
+arland(senyum): Aku ingin mengingat cahaya yang jatuh tepat di tempat kamu berdiri.
+narrator: Arland membuka telapak tangannya, seolah bisa menangkap satu garis cahaya.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Tak ada foto yang diambil. Mereka sepakat kenangan ini cukup dirasakan.
+
+=== WE27-PERPUSTAKAAN-SENYAP-A | Buku yang Dipinjamkan | arland | C02
+narrator: Bu Laras menaruh sebuah buku tanpa sampul di meja bacaan.
+arland(penasaran): Aku kira buku tanpa judul itu rusak. Ternyata halaman depannya sengaja dibiarkan kosong.
+sofia(senyum): Kalau buku ini punya judul, mungkin namanya Hal-Hal yang Belum Berani Diucapkan.
+narrator: Sofia membalik halaman pertama dengan ujung jari.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Sebelum pulang, keduanya menulis satu kata pada kertas terpisah: lanjut.
+
+=== WE27-PERPUSTAKAAN-SENYAP-S | Buku yang Dipinjamkan | sofia | C02
+narrator: Bu Laras menaruh sebuah buku tanpa sampul di meja bacaan.
+sofia(penasaran): Kalau buku ini punya judul, mungkin namanya Hal-Hal yang Belum Berani Diucapkan.
+arland(senyum): Aku kira buku tanpa judul itu rusak. Ternyata halaman depannya sengaja dibiarkan kosong.
+narrator: Arland mengambil pembatas kertas agar mereka tak kehilangan halaman.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Sebelum pulang, keduanya menulis satu kata pada kertas terpisah: lanjut.
+
+=== WE27-MELATI-MERANGKAI-A | Belajar dari Bu Melati | arland | C02
+narrator: Bu Melati sedang merapikan pot bunga yang kelopaknya mulai jatuh.
+arland(penasaran): Kalau kelopak ini layu, apa buketnya masih bisa terlihat indah?
+sofia(senyum): Bunga yang layu pun bisa jadi penanda bahwa kita pernah merawatnya.
+narrator: Sofia menyimpan satu kelopak yang terjatuh tanpa memetik bunga baru.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Bu Melati berterima kasih; mereka mendapat pita sisa sebagai tanda kecil.
+
+=== WE27-MELATI-MERANGKAI-S | Belajar dari Bu Melati | sofia | C02
+narrator: Bu Melati sedang merapikan pot bunga yang kelopaknya mulai jatuh.
+sofia(penasaran): Bunga yang layu pun bisa jadi penanda bahwa kita pernah merawatnya.
+arland(senyum): Kalau kelopak ini layu, apa buketnya masih bisa terlihat indah?
+narrator: Arland membantu memindahkan pot dari pinggir pintu.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Bu Melati berterima kasih; mereka mendapat pita sisa sebagai tanda kecil.
+
+=== WE27-ARCADE-TIKET-A | Tiket yang Tertinggal | arland | C03
+narrator: Suara mesin permainan menyisakan satu lembar tiket merah di lantai.
+arland(penasaran): Kita harus mengembalikan tiket ini. Bisa jadi pemiliknya sedang mencari.
+sofia(senyum): Tiket ini punya gambar bulan. Aku ingat siapa yang tadi memainkannya.
+narrator: Sofia menemukan pemain yang kehilangan tiket di dekat mesin hadiah.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Pemilik tiket berterima kasih dan menukar beberapa koin hadiah untuk mereka.
+
+=== WE27-ARCADE-TIKET-S | Tiket yang Tertinggal | sofia | C03
+narrator: Suara mesin permainan menyisakan satu lembar tiket merah di lantai.
+sofia(penasaran): Tiket ini punya gambar bulan. Aku ingat siapa yang tadi memainkannya.
+arland(senyum): Kita harus mengembalikan tiket ini. Bisa jadi pemiliknya sedang mencari.
+narrator: Arland menyerahkan tiket itu, lalu membuat pose kemenangan berlebihan.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Pemilik tiket berterima kasih dan menukar beberapa koin hadiah untuk mereka.
+
+=== WE27-HALTE-HUJAN-A | Cerita di Bawah Atap Halte | arland | C04
+narrator: Hujan menabuh atap halte sementara orang-orang bergeser memberi tempat.
+arland(penasaran): Dulu aku selalu ingin hujan cepat selesai. Sekarang aku bisa mendengarnya dulu.
+sofia(senyum): Ada kalimat yang tidak sempat keluar waktu kita bertengkar. Aku ingin menaruhnya di sini.
+narrator: Sofia menunggu sampai Arland selesai bicara tanpa memotong.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Setelah hujan mereda, mereka masih duduk sebentar untuk memastikan satu sama lain didengar.
+
+=== WE27-HALTE-HUJAN-S | Cerita di Bawah Atap Halte | sofia | C04
+narrator: Hujan menabuh atap halte sementara orang-orang bergeser memberi tempat.
+sofia(penasaran): Ada kalimat yang tidak sempat keluar waktu kita bertengkar. Aku ingin menaruhnya di sini.
+arland(senyum): Dulu aku selalu ingin hujan cepat selesai. Sekarang aku bisa mendengarnya dulu.
+narrator: Arland mengulurkan tisu kering dan memilih untuk tidak mencari alasan.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Setelah hujan mereda, mereka masih duduk sebentar untuk memastikan satu sama lain didengar.
+
+=== WE27-DERMAGA-PAPAN-A | Nama di Papan Dermaga | arland | C03
+narrator: Papan dermaga berderit pelan ketika angin datang dari seberang.
+arland(penasaran): Kalau suatu hari kita lupa arah, aku tahu ada bangku yang bisa kita cari lagi.
+sofia(senyum): Aku akan menandai bangku ini di peta kecil kenangan kita.
+narrator: Sofia mengamati dua bekas cat berbentuk setengah hati pada sandaran.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka meninggalkan dermaga sedikit lebih rapi daripada saat datang.
+
+=== WE27-DERMAGA-PAPAN-S | Nama di Papan Dermaga | sofia | C03
+narrator: Papan dermaga berderit pelan ketika angin datang dari seberang.
+sofia(penasaran): Aku akan menandai bangku ini di peta kecil kenangan kita.
+arland(senyum): Kalau suatu hari kita lupa arah, aku tahu ada bangku yang bisa kita cari lagi.
+narrator: Arland membetulkan salah satu baut yang terasa longgar.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka meninggalkan dermaga sedikit lebih rapi daripada saat datang.
+
+=== WE27-HUTAN-GEMA-A | Gema di Hutan Bisik | arland | C05
+narrator: Pepohonan menahan suara langkah hingga terdengar seperti ada dua gema.
+arland(penasaran): Kamu dengar? Kalau kita berhenti, gema itu juga berhenti.
+sofia(senyum): Mungkin gema hanya mengulang hal yang berani kita ucapkan.
+narrator: Sofia berdiri di dekat akar besar dan memanggil nama Arland pelan.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Di antara batang pohon, jawaban itu terasa cukup dekat.
+
+=== WE27-HUTAN-GEMA-S | Gema di Hutan Bisik | sofia | C05
+narrator: Pepohonan menahan suara langkah hingga terdengar seperti ada dua gema.
+sofia(penasaran): Mungkin gema hanya mengulang hal yang berani kita ucapkan.
+arland(senyum): Kamu dengar? Kalau kita berhenti, gema itu juga berhenti.
+narrator: Arland membalas tanpa berteriak, agar burung-burung tidak terkejut.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Di antara batang pohon, jawaban itu terasa cukup dekat.
+
+=== WE27-DESA-BINTANG-A | Lampu Jendela Starfall | arland | C05
+narrator: Satu per satu jendela Starfall Village menyala seperti titik-titik rasi.
+arland(penasaran): Aku suka rumah yang selalu menyisakan satu lampu untuk orang yang belum pulang.
+sofia(senyum): Setiap jendela punya cerita sendiri. Kita tidak perlu mengetahui semuanya.
+narrator: Sofia menghitung lampu yang menyala, lalu berhenti di angka tujuh.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka pulang saat lampu terakhir mulai redup, membawa hangat dari kejauhan.
+
+=== WE27-DESA-BINTANG-S | Lampu Jendela Starfall | sofia | C05
+narrator: Satu per satu jendela Starfall Village menyala seperti titik-titik rasi.
+sofia(penasaran): Setiap jendela punya cerita sendiri. Kita tidak perlu mengetahui semuanya.
+arland(senyum): Aku suka rumah yang selalu menyisakan satu lampu untuk orang yang belum pulang.
+narrator: Arland membetulkan posisi lampu kecil yang hampir jatuh tertiup angin.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka pulang saat lampu terakhir mulai redup, membawa hangat dari kejauhan.
+
+=== WE27-BUKIT-TELESKOP-A | Satu Bintang yang Sama | arland | C03
+narrator: Di Bukit Bintang, satu titik terang bertahan di sela awan.
+arland(penasaran): Aku tidak hafal nama semua bintang. Tapi aku tahu mana yang kamu tunjuk tadi.
+sofia(senyum): Kalau malam terasa panjang, aku ingin menyimpan koordinat satu titik ini.
+narrator: Sofia menghubungkan dua titik cahaya dengan ujung jarinya di udara.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka menunggu bintang itu hilang bersama-sama, tanpa tergesa.
+
+=== WE27-BUKIT-TELESKOP-S | Satu Bintang yang Sama | sofia | C03
+narrator: Di Bukit Bintang, satu titik terang bertahan di sela awan.
+sofia(penasaran): Kalau malam terasa panjang, aku ingin menyimpan koordinat satu titik ini.
+arland(senyum): Aku tidak hafal nama semua bintang. Tapi aku tahu mana yang kamu tunjuk tadi.
+narrator: Arland menggeser jaket agar mereka dapat duduk lebih dekat.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Mereka menunggu bintang itu hilang bersama-sama, tanpa tergesa.
+
+=== WE27-ARLAN-PETA-A | Jalur Kecil untuk Dito | arland | C03
+narrator: Dito menatap peta kertas yang ujungnya sudah kusut karena hujan kemarin.
+arland(penasaran): Aku bisa menggambar ulang tiga belokannya. Tapi kamu yang pilih tempat pentingnya.
+sofia(senyum): Kalau kamu ingin, kita boleh memberi nama baru untuk jalan yang belum punya papan.
+narrator: Sofia membantu menahan kertas agar garis Arland tidak bergeser.
+arland(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Dito membawa peta itu pulang sambil menyebut bangku taman sebagai titik pulang.
+
+=== WE27-SOFIA-HALAMAN-S | Halaman untuk Bu Laras | sofia | C03
+narrator: Bu Laras menunjukkan buku tamu dengan satu halaman kosong di tengahnya.
+sofia(penasaran): Kamu bisa menulisnya tanpa nama. Perasaan itu tetap punya tempat.
+arland(senyum): Aku ingin menulis cerita tentang orang yang bersedia menunggu sampai kita selesai bicara.
+narrator: Arland menempelkan satu pembatas kecil di halaman tersebut.
+sofia(senyum): Aku ingin mengingat momen ini tanpa harus membuatnya sempurna.
+narrator: Bu Laras menyimpan buku tamu itu di rak yang mudah ditemukan semua orang.

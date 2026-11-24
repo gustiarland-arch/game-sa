@@ -1,0 +1,133 @@
+# NASKAH v1.2 (DRAFT FIKSI): Perpustakaan Kota, Ruang Arsip, Dermaga, dua surat lama.
+# "me" = tokoh yang dimainkan, "partner" = pasangannya (builder membuat versi @arland dan @sofia).
+
+# ======================================================================== CHAPTER 1: jejak cap arsip
+=== C01-LIB-0 | Cap di Pojok Surat | shared | C01
+partner(penasaran): Tunggu. Di pojok surat ini ada cap kecil. Tintanya sudah pudar.
+me(serius): "Arsip No. 7, Perpustakaan Kota." Perpustakaan di Distrik Perumahan, kan?
+partner(neutral): Lewat Jalan Kota, terus ke timur. Aku belum pernah ke ruang arsipnya.
+me(senyum): Aku juga. Ayo, kita ikuti jejaknya.
+
+=== C01-LIB-1 | Bu Laras | shared | C01
+laras(senyum): Selamat datang. Pelan-pelan, ya, suaranya. Buku-buku di sini suka tidur siang.
+me(neutral): Bu, kami menemukan surat dengan cap "Arsip No. 7".
+laras(kaget): Arsip Tujuh? Perpustakaan ini cuma punya enam ruang arsip, Nak. Sudah begitu sejak Ibu kecil.
+laras(serius): Tapi... cap itu milik Pak Wira, pengarsip pertama di sini. Suami Nenek Sari.
+partner(kaget): Nenek Sari yang di plaza?
+laras(senyum): Iya. Pak Wira suka sekali teka-teki. Ia bilang, "Buku yang benar tidak disimpan di rak, tapi di antara dua orang."
+laras(neutral): Dulu ia sering menyembunyikan catatan di tiga buku: satu tentang bunga, satu tentang buku, satu tentang bintang. Mungkin masih ada di rak-rak itu.
+me(senyum): Bunga, buku, bintang. Sama seperti simbol di kafe.
+partner(senang): Kita cari, yuk.
+
+=== C01-LIB-B1 | Buku Bunga | shared | C01
+narrator: "Ensiklopedia Bunga Kota". Di antara halaman melati, terselip kertas tipis.
+narrator: Tulisan tangan Pak Wira: "Bunga tidak tumbuh karena dipaksa. Ia tumbuh karena ada yang menunggu dengan sabar."
+me(senyum): Satu.
+
+=== C01-LIB-B2 | Buku tentang Buku | shared | C01
+narrator: "Cara Merawat Buku Tua". Pembatasnya kertas dengan gambar dua cangkir teh.
+narrator: "Buku menua seperti orang. Halamannya menguning, tapi ceritanya tidak berkurang."
+partner(senyum): Dua.
+
+=== C01-LIB-B3 | Buku Bintang | shared | C01
+narrator: "Peta Langit Malam". Di halaman rasi bintang, ada dua titik kecil yang digambar dengan pensil.
+narrator: "Dua bintang yang jauh tetap terlihat berdekatan dari bumi. Mungkin itu cara langit bercerita tentang kita."
+me(malu): Pak Wira romantis juga, ya.
+partner(tertawa): Tiga. Taruh di meja baca, yuk.
+
+=== C01-LIB-OPEN | Rak yang Sunyi | shared | C01
+narrator: Tiga buku diletakkan berdampingan di meja baca. Untuk sesaat, perpustakaan menjadi sangat sunyi.
+narrator: Lalu terdengar bunyi "klik" dari rak paling ujung.
+partner(kaget): Raknya... bergeser?
+me(serius): Ada ruangan di belakangnya.
+
+=== C01-ARC-1 | Arsip Nomor Tujuh | shared | C01
+narrator: Ruangan kecil itu penuh stoples kaca. Di dalamnya, cahaya-cahaya kecil berdenyut pelan, seperti napas.
+partner(penasaran): Labelnya... "Sore di dermaga". "Hujan pertama". "Tawa di pasar".
+me(neutral): Ini bukan arsip buku. Ini arsip kenangan.
+narrator: Di atas tiang batu di tengah ruangan, ada selembar catatan dengan tulisan yang sama seperti surat di kafe.
+narrator: "Kenangan tidak pernah benar-benar hilang. Ia hanya menjadi sunyi ketika tidak ada lagi yang menceritakannya."
+narrator: "Kalau suatu hari kalian menemukan tempat ini, ceritakanlah. Jangan biarkan sunyi itu tumbuh."
+partner(sedih): "Sunyi"... kenapa rasanya dingin waktu membaca kata itu?
+narrator: Memory Book di tas tiba-tiba menghangat. Satu halaman kosong terisi sendiri: dua tangan menggenggam satu stoples cahaya.
+me(kaget): Bukunya bereaksi.
+narrator: Dari stoples-stoples tanpa label, terdengar bisikan sangat pelan. Terlalu pelan untuk dimengerti.
+
+=== C01-ARC-2 | Rahasia Bu Laras | shared | C01
+laras(kaget): Rak itu terbuka? Tiga puluh tahun Ibu bekerja di sini, rak itu tidak pernah bergeser sedikit pun.
+laras(senyum): Pak Wira pasti senang. Ibu titip satu hal: jangan ceritakan ke banyak orang dulu, ya. Ceritakan ke orang yang tepat saja.
+me(senyum): Nenek Sari, mungkin.
+laras(neutral): Nanti. Kalau waktunya pas. Sekarang, matahari sudah turun. Dermaga paling indah jam segini.
+
+# ======================================================================== CHAPTER 1: senja di dermaga
+=== C01-PIER | Senja di Dermaga | shared | C01
+narrator: Ujung dermaga. Matahari tenggelam pelan, dan danau berubah warna menjadi emas, lalu jingga, lalu ungu muda.
+partner(senyum): Kamu lihat itu? Langit sama danau seperti satu halaman.
+me(neutral): Hari ini aneh, ya. Surat misterius, ruangan rahasia, stoples cahaya.
+partner(tertawa): Aneh, tapi seru.
+me(senyum): Seru karena barengan.
+partner(malu): ...Kamu selalu bilang hal begitu tiba-tiba.
+
+# ======================================================================== CHAPTER 4: dua surat lama
+=== C04-A-HALTE | Halte di Ujung Jalan | arland | C04
+narrator: Hujan menggenang di cekungan aspal. Halte Distrik Perumahan sepi; hanya ada bunyi air di atap seng.
+arland(sedih): Kenapa tadi aku malah bicara terus, padahal Sofia cuma ingin didengar.
+narrator: Di samping halte, kotak surat tua berwarna hijau lumut. Tutupnya sedikit terbuka. Ada amplop kering di dalamnya.
+arland(kaget): Surat? Di kotak yang sudah tidak dipakai?
+
+=== C04-A-LETTER | Surat Pak Wira | arland | C04
+narrator: Amplop itu bertuliskan "Untuk Sari". Di pojoknya, cap yang sama: Arsip No. 7.
+narrator: "Sari, maaf. Kemarin aku lebih sibuk mendengar diriku sendiri daripada mendengarmu."
+narrator: "Aku pikir menjelaskan berarti memperbaiki. Ternyata yang kamu butuhkan cuma aku diam sebentar dan duduk di sebelahmu."
+narrator: "Kalau kamu masih mau, aku tunggu di gazebo taman. Aku bawa payung. Dan telinga."
+arland(sedih): ...Ini aku banget.
+arland(serius): Gazebo taman. Sofia pasti di sana.
+
+=== C04-S-LIBRARY | Perpustakaan di Hari Hujan | sofia | C04
+narrator: Perpustakaan sepi. Hujan mengetuk-ngetuk jendela tinggi.
+laras(senyum): Sofia? Basah begitu. Duduk dulu, Ibu ambilkan handuk.
+sofia(sedih): Makasih, Bu. Aku cuma butuh tempat yang tenang sebentar.
+laras(neutral): Kebetulan. Kemarin Ibu merapikan ruang arsip kecil itu, dan menemukan surat yang belum pernah dikirim.
+laras(serius): Untuk Wira. Dari Sari. Ibu rasa kamu orang yang tepat untuk membacanya duluan.
+
+=== C04-S-LETTER | Surat Nenek Sari | sofia | C04
+narrator: Amplop biru muda, tulisan tangan rapi: "Untuk Wira, kalau aku sudah berani."
+narrator: "Wira, aku diam bukan karena marah. Aku diam karena takut kalau aku bicara, suaraku akan bergetar."
+narrator: "Aku ingin kamu tahu yang kurasakan tanpa harus kujelaskan semuanya. Itu tidak adil, ya? Maaf."
+narrator: "Besok aku akan ke gazebo. Kalau kamu ada di sana, aku akan mencoba bicara, pelan-pelan."
+sofia(sedih): Diam karena takut suaranya bergetar...
+sofia(serius): Aku juga begitu tadi. Arland pasti bingung.
+laras(senyum): Dua surat, dua sisi. Yang satu sibuk menjelaskan, yang satu sibuk menahan. Mereka akhirnya bertemu di tengah.
+sofia(senyum): Gazebo taman. Aku ke sana, Bu.
+
+# ======================================================================== NPC
+=== NPC-LARAS-C02 | Bu Laras | shared | SIDE
+laras(senyum): Kalau sedang kencan, coba rak puisi di pojok. Banyak pasangan yang pinjam buku dari sana. Ibu tidak tanya kenapa.
+
+=== NPC-LARAS-C03 | Bu Laras | shared | SIDE
+laras(neutral): Ibu sedang menyalin katalog lama Pak Wira. Beliau menulis judul buku seperti menulis nama teman.
+
+=== NPC-LARAS-LATE | Bu Laras | shared | SIDE
+laras(senyum): Stoples-stoples di ruang arsip itu... kadang terlihat lebih terang. Mungkin karena kota ini makin banyak bercerita.
+
+=== NPC-BAYU-1 | Kak Bayu | shared | SIDE
+bayu(senyum): Halo! Saya Bayu, penjaga dermaga. Perahu sewa tutup sore ini, tapi kalau mau memancing di ujung dermaga, silakan.
+bayu(neutral): Ikan di sisi ini lebih jinak. Mereka sudah terbiasa mendengar orang mengobrol.
+
+=== NPC-BAYU-2 | Kak Bayu | shared | SIDE
+bayu(neutral): Perahu "Senja" itu buatan ayah saya. Beliau bilang, perahu bagus harus punya nama, supaya ada yang memanggilnya pulang.
+
+=== NPC-BAYU-RAIN | Kak Bayu | shared | SIDE
+bayu(serius): Hujan begini, danau jadi abu-abu. Tapi tunggu besok. Setelah hujan, airnya paling jernih.
+
+=== NPC-SARI-ARC | Nenek Sari | shared | SIDE
+sari(kaget): Kalian dari perpustakaan? Wajah kalian seperti habis menemukan sesuatu.
+sari(senyum): Wira dulu suka menyembunyikan catatan di tempat-tempat aneh. Di saku jaketku, di toples gula, di rak buku.
+sari(sedih): Sejak dia pergi, Nenek jarang membuka toples gula. Takut tidak ada catatan lagi di dalamnya.
+me(senyum): Mungkin masih ada, Nek. Di tempat yang belum dicari.
+
+=== NPC-SARI-LETTERS | Nenek Sari | shared | SIDE
+sari(kaget): Surat itu... kalian menemukannya?
+sari(tertawa): Kami bertengkar seminggu karena hal sepele. Dia lupa janji ke pasar, Nenek malah diam terus.
+sari(senyum): Di gazebo itu dia datang bawa payung, padahal sudah tidak hujan. Katanya, "Jaga-jaga, siapa tahu kamu menangis lagi."
+sari(neutral): Pertengkaran kecil itu tidak memisahkan kami, Nak. Justru itu yang mengajari kami cara mendengar.

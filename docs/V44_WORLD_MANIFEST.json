@@ -1,0 +1,46 @@
+{
+  "version": "4.4.0",
+  "maps": {
+    "dermaga": "e05ba4578cbf2afc9e53e359ec54492cace819c722a0f684132dfdccface841f",
+    "bukit_bintang": "4d89c4b720adf726d63e2b09e8d45ad7c7322a37febff8a77d09570a317db94c",
+    "memory_garden": "3ca3f5287a0ae3a490c191561f1a656dadba9c4c42fbe9ab1f73878bf9ba9b85",
+    "eternal_garden": "0b5aa7bf2e30cc542a6885bdc28e64d655eac05c08726eb28208f420eaa11c6f"
+  },
+  "prop_types": {
+    "v44_bridge_dpier": "d10601bf6eceb8b4eb09d4da4121fd98dd42da4f33da220e1bb3a113580e5b25",
+    "v44_bridge_dplat": "b097cd42a229fcbf1237373889c91954dda87b0c2cac4a9b140138189fa448d9",
+    "v44_pier_post": "8b54baa3e92c0555f015080de8a7c20625cef7d9adb00b100f5f4bb9f7956855",
+    "v44_lantern_post": "86e47af6d855f7dcd814fe553ce71f1d29c0a8ea4d78ca22c874eee30661c439",
+    "v44_v41_rowboat_rowboat": "7a4edac4fb037265c2aa2e8acd4c2bb4c3f0c7c07a0f485223a794cb539cbaf4",
+    "v44_v41_rowboat_b_rowboat": "7a4edac4fb037265c2aa2e8acd4c2bb4c3f0c7c07a0f485223a794cb539cbaf4",
+    "v44_fishing_hut": "54094728393b4c982aae012ebfc7a8e8c795a474ab41c49749afa55d165232db",
+    "v44_v41_observatory_observatory": "d3eb6dcfb9bdb96beb166104bed7f041b610f68720cf017df9008bfb0eee7dc9",
+    "v44_v41_telescope_telescope": "7b552c2d3cccc20e4d4ecf0e0427b4ced51a633cabba1fafc39f0a3da84ff86b",
+    "v44_picnic_blanket": "193ba7bed5aeb16c8fdf42250b35f86a6841dbe89db2cbeaeba63b185d667276",
+    "v44_fence_bb": "976cc68d0a975be027460816edc1c432014ff727cb933f5c4140d7aaeac53137",
+    "v44_chest_bb": "f04dadb2600b7259188cdc34bca88311c906a2454782bc0d69c046fcc2e9be79",
+    "v44_stone_lantern_bb": "89a979e476846b547cdbfe29040acb1303cb2725da438210a9d0567d8774726d",
+    "v44_v41_pedestal_book_crystal_shrine": "5510f7ed602bb29ac86882df38721757ed6440da6381ef1a58a2603177ddbe47",
+    "v44_v41_arch_flowers_arch": "748e08f2131fe3ca2ae7e0741b4095779c26b5bcc6145bd10f555c9a74a34131",
+    "v44_v41_tree_dream_memory_tree": "c282a68753263bcffa35aa79cbd17ce5c4ac4cd7a00d49a0c6699809153ba111",
+    "v44_tree_dream": "e7cac88fe47418bc33be0a773de02c0bc8aa17b83de94091a5c42c20316a1024",
+    "v44_crystal": "77f0a8a7a62e9b8a3f35c34027e4eeef83dc8a268e649650412a03ca4af2744c",
+    "v44_tree_lantern": "6e850bb5dca09e323f97cf30e3f6a1b3275d580dcc12f3157d8d6e38364df512",
+    "v44_v41_wishing_tree_memory_tree": "ecc7bc16c237696faa40059626e256076f4fd1b8fa74371c059aadd464accb90",
+    "v44_v41_arch_flowers_e_arch": "748e08f2131fe3ca2ae7e0741b4095779c26b5bcc6145bd10f555c9a74a34131",
+    "v44_v41_arch_flowers_e2_arch": "748e08f2131fe3ca2ae7e0741b4095779c26b5bcc6145bd10f555c9a74a34131",
+    "v44_stone_bench": "ccc5a71893670886166c8df6a2664a4ce650779f4774339b76ff27f4d4e69786",
+    "v44_flowerbed": "b043bc414eae3fc03600109af14066da643c29a78b1de431a0d4ecc65a48a5c4",
+    "v44_v41_gazebo_e_gazebo": "2398b17122bfbdd539cb34b37a4524a2f016455e867e3562a6a93e926e4250ac"
+  },
+  "areas": [
+    "dermaga",
+    "bukit_bintang",
+    "memory_garden",
+    "eternal_garden"
+  ],
+  "active_data_sha": {
+    "data/maps.json": "22a715d8dfc37a735a1daac2f795a23ff0207c768dda11b4b6cc408f33f3f6d1",
+    "data/props.json": "e880b3b2fdb265d603b1948c67a2b557c9baf08d413dd3b4c9ffcc51c14905fb"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": "4.6.6",
+  "baseline": "4.6.5",
+  "oldFilesPreserved": 1966,
+  "oldMediaFilesByteIdentical": 1612,
+  "newFilesBeforePackaging": 13,
+  "baselineFilesMissing": [],
+  "baselineMediaChanged": [],
+  "storyScenes": 457,
+  "questSteps": 103,
+  "mapAreas": 23,
+  "memoryEntries": 139,
+  "qaVerified": {
+    "full_headless_logic_assertions": 25420,
+    "v466_ending_and_save_assertions": 403,
+    "story_quest_asset_references": 6044,
+    "v466_media_narrative_checks": 29,
+    "v465_completion_assertions": 518,
+    "v464_branching_assertions": 467,
+    "tablet_layout_checks": 390,
+    "touch_input_assertions": 750,
+    "soundscape_assertions": 1383,
+    "cinematic_ui_checks": 859,
+    "audio_legacy_checks": 267,
+    "world_navigation_checks": 133
+  },
+  "notVerified": [
+    "Android debug/release APK compilation",
+    "device GPU and animation runtime",
+    "full manual playthrough of two routes",
+    "six-hour per route story pacing",
+    "performance FPS on hardware"
+  ],
+  "caution": "Passing headless tests does not prove Android runtime stability."
+}

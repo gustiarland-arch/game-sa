@@ -1,0 +1,161 @@
+# NASKAH Ngobrol bersama pasangan (opsional, DRAFT FIKSI). ID T-xx dirujuk dari build_content.py
+
+=== T-C01-CAFE | Rasa Teh | shared | TALK
+sofia(penasaran): Kamu biasanya pesan apa di sini?
+arland(neutral): Kopi susu gula aren. Kamu?
+sofia(senyum): Teh melati. Wanginya bikin tenang.
+arland(senyum): Nanti aku coba. Biar tahu rasanya tenang versi kamu.
+
+=== T-C01-LAKE | Dua Versi | shared | TALK
+arland(penasaran): Kamu ingat warna langit waktu kita di plaza tadi?
+sofia(neutral): Oranye kemerahan.
+arland(tertawa): Aku ingatnya ungu.
+sofia(senyum): Nah, kan. Sekarang kita punya dua versi.
+
+=== T-C02-PARK | Ikan yang Gendut | shared | TALK
+sofia(tertawa): Ikan yang paling gendut itu, aku kasih nama Kak Raka.
+arland(kaget): Kenapa Kak Raka?
+sofia(senyum): Karena dia selalu datang duluan setiap ada yang lewat. Ramah sekali.
+arland(tertawa): Jangan bilang ke orangnya, ya.
+
+=== T-C02-ARCADE | Rekor Lama | shared | TALK
+arland(serius): Lihat papan skor itu. Peringkat tiga: "ARL".
+sofia(kaget): Itu kamu?
+arland(malu): Dua tahun lalu. Sekarang aku sudah turun ke peringkat... tidak terlihat.
+sofia(tertawa): Nanti kita naikkan lagi bareng-bareng.
+
+=== T-C02-STREET | Toko Roti | shared | TALK
+sofia(senang): Toko roti itu enak sekali kalau buka. Roti kayu manisnya hangat.
+arland(neutral): Kapan biasanya buka?
+sofia(senyum): Setiap Sabtu pagi.
+arland(senyum): Oke. Sabtu pagi. Dicatat.
+
+=== T-C02-LAKE | Tenang | shared | TALK
+arland(neutral): Kadang aku ke sini sendirian kalau lagi banyak pikiran.
+sofia(penasaran): Sekarang lagi banyak pikiran?
+arland(senyum): Sekarang... lagi tenang. Mungkin karena ada kamu.
+sofia(malu): Kamu ini.
+
+=== T-C03-KITCHEN | Rahasia Dapur | shared | TALK
+sofia(senyum): Rahasia roti lapis yang enak: oles madunya tipis-tipis.
+arland(penasaran): Kenapa?
+sofia(neutral): Biar rasanya tidak menutupi stroberi. Semua bahan dapat giliran.
+arland(senyum): Kayak ngobrol, ya. Semua dapat giliran bicara.
+
+=== T-C03-PARK | Selimut Kotak-Kotak | shared | TALK
+arland(penasaran): Selimut ini dari mana?
+sofia(senyum): Dari nenekku. Dulu dipakai piknik keluarga setiap Lebaran.
+arland(neutral): Berarti selimut ini sudah lihat banyak piknik.
+sofia(senyum): Sekarang tambah satu lagi.
+
+=== T-C03-PLAZA | Langkah Pelan | shared | TALK
+sofia(penasaran): Kamu jalannya pelan sekali hari ini.
+arland(malu): Biar sampainya nggak cepat-cepat.
+sofia(tertawa): Ke mana?
+arland(senyum): Ke mana pun, asal bareng.
+
+=== T-C04-FIELD | Lentera Pertama | shared | TALK
+sofia(neutral): Arland, waktu kamu lari ke taman tadi... kamu nggak bawa payung.
+arland(malu): Aku lupa. Yang kupikirkan cuma cepat sampai.
+sofia(senyum): Lain kali bawa payung. Supaya kamu nggak sakit.
+arland(senyum): Siap. Dua payung. Satu cadangan.
+
+=== T-C04-FIELD2 | Kabut | shared | TALK
+arland(serius): Kalau kabutnya datang lagi suatu hari nanti...
+sofia(neutral): Kita sudah tahu caranya, kan?
+arland(senyum): Duduk, dengar, bicara.
+sofia(senyum): Dan jangan lupa isi daya ponsel.
+arland(tertawa): Itu juga.
+
+=== T-C05-VILLAGE | Bintang Jatuh | shared | TALK
+sofia(senang): Bintang jatuhnya banyak sekali. Boleh minta permintaan?
+arland(penasaran): Kamu minta apa?
+sofia(malu): Rahasia. Kalau diucapkan nanti tidak terkabul.
+arland(senyum): Kalau begitu aku minta yang sama dengan kamu.
+
+=== T-C05-VILLAGE2 | Rumah Kecil | shared | TALK
+arland(penasaran): Rumah-rumah di sini kosong, tapi lampunya menyala.
+sofia(neutral): Mungkin ini rumah untuk kenangan yang sedang beristirahat.
+arland(senyum): Kenangan juga butuh rumah.
+sofia(senyum): Seperti sudut kenangan di kamarku.
+
+=== T-C05-VILLAGE3 | Takut Gelap | shared | TALK
+sofia(malu): Sejujurnya, tadi di Lantern Field aku agak takut sendirian.
+arland(serius): Kenapa nggak bilang?
+sofia(neutral): Aku pikir aku harus berani sendiri.
+arland(senyum): Berani juga boleh minta ditemani.
+
+=== T-C06-GARDEN | Bunga Semua Musim | shared | TALK
+arland(penasaran): Kamu lihat bunga kertas itu? Persis yang kubuat di prolog.
+sofia(tertawa): Prolog?
+arland(malu): Maksudku... hari pertama kita.
+sofia(senyum): Lipatannya masih miring. Aku suka.
+
+=== T-C06-GARDEN2 | Takut Lupa | shared | TALK
+sofia(neutral): Kalau suatu hari kita lupa detail-detail kecil ini?
+arland(neutral): Kita buka bukunya lagi.
+sofia(senyum): Kalau bukunya hilang?
+arland(senyum): Kita bikin kenangan baru. Toh kita masih di sini.
+
+=== T-C06-GARDEN3 | Lumi | shared | TALK
+sofia(penasaran): Menurutmu Lumi akan ingat kita?
+arland(senyum): Dia lahir dari kenangan kita. Mana mungkin lupa.
+sofia(senyum): Kalau begitu, kita harus terus mengisi bukunya. Biar Lumi tidak bosan.
+
+=== T-EPI-PLAZA | Sabtu Pagi | shared | TALK
+arland(senyum): Besok Sabtu, kan?
+sofia(penasaran): Iya. Kenapa?
+arland(senang): Toko roti buka. Roti kayu manis hangat. Aku sudah catat sejak kencan pertama.
+sofia(kaget): Kamu ingat?
+arland(senyum): Hal kecil, kan? Itu yang paling penting.
+
+=== T-EPI-CAFE | Teh Melati | shared | TALK
+arland(senyum): Aku pesan teh melati hari ini.
+sofia(kaget): Bukan kopi susu?
+arland(neutral): Mau tahu rasanya tenang versi kamu. Ternyata... memang tenang.
+sofia(tertawa): Selamat datang di klub teh melati.
+
+=== T-EPI-PARK | Pohon Tua | shared | TALK
+sofia(penasaran): Ukiran dua bintang di pohon tua itu... siapa yang buat, ya?
+arland(neutral): Mungkin pasangan lain yang dulu punya buku seperti kita.
+sofia(senyum): Kalau begitu, kita bukan yang pertama.
+arland(senyum): Dan semoga bukan yang terakhir.
+
+=== T-EPI-LAKE | Rencana | shared | TALK
+sofia(senang): Ke mana kita pergi berikutnya?
+arland(penasaran): Gunung? Pantai? Kota lain?
+sofia(senyum): Ke mana saja. Aku bawa bukunya, kamu bawa kamera.
+arland(senyum): Dan dua payung.
+sofia(tertawa): Dan dua payung.
+
+=== T-EPI-STREET | Arcade Lagi | shared | TALK
+arland(serius): Aku mau tantang ulang rekor arcade.
+sofia(senang): Aku jadi tim sorak.
+arland(senyum): Kalau menang, fotonya kita tempel di sudut kenanganmu.
+sofia(tertawa): Kalau kalah?
+arland(malu): Tetap ditempel. Kenangan tetap kenangan.
+
+=== T-EPI-HOME | Halaman Baru | shared | TALK
+sofia(senyum): Tadi malam aku menulis sesuatu di halaman kosong.
+arland(kaget): Bukannya mau diisi pelan-pelan?
+sofia(tertawa): Cuma satu baris: "Hari ini kita jalan-jalan."
+arland(senyum): Itu baris yang bagus untuk memulai.
+
+# ---------------- Pak Udin (memancing)
+=== SQ-IKAN-1 | Pemancing Pemula | shared | SIDE
+udin(senyum): Mau coba memancing, Nak? Danau ini punya delapan jenis ikan. Satu di antaranya bercahaya.
+udin(neutral): Ini joran cadangan Bapak. Pancing di ujung dermaga atau di tepi kolam Taman Kota.
+udin(tertawa): Kalau dapat lima jenis berbeda, Bapak kasih hadiah. Kalau dapat Ikan Bintang... Bapak traktir kopi.
+
+=== SQ-IKAN-2 | Pemancing Sejati | shared | SIDE
+udin(kaget): Lima jenis! Kamu berbakat, Nak.
+udin(senyum): Ini topi pancing Bapak waktu muda. Masih bagus, kok.
+udin(neutral): Memancing itu soal sabar. Sama seperti menunggu orang yang kita sayangi bicara sampai selesai.
+
+=== SQ-HALAMAN | Rahasia Nenek Sari | shared | SIDE
+sari(kaget): Dua puluh halaman? Coba Nenek lihat...
+sari(senyum): Tulisan tangan ini... tulisan kakek.
+sari(sedih): Dulu, waktu kami masih muda, kami juga punya buku seperti itu. Buku yang menyala setiap kami berbaikan.
+sari(senyum): Halaman-halamannya tersebar setelah kakek pergi. Nenek kira hilang selamanya.
+sari(neutral): Ternyata buku itu menunggu orang yang tepat untuk mengumpulkannya lagi.
+sari(senyum): Simpan halaman-halaman itu di buku kalian, Nak. Biar kenangan lama dan baru tinggal bersama.

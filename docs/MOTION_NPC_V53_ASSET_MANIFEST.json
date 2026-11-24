@@ -1,0 +1,325 @@
+{
+  "version": "5.3.0",
+  "frame_size": [
+    48,
+    72
+  ],
+  "walk_frames": 24,
+  "idle_frames": 12,
+  "styles": {
+    "bayu": {
+      "role": "headphone",
+      "primary": [
+        101,
+        177,
+        205
+      ],
+      "accent": [
+        250,
+        187,
+        104
+      ]
+    },
+    "bimo": {
+      "role": "school",
+      "primary": [
+        112,
+        119,
+        219
+      ],
+      "accent": [
+        248,
+        199,
+        104
+      ]
+    },
+    "darmo": {
+      "role": "scholar",
+      "primary": [
+        153,
+        157,
+        164
+      ],
+      "accent": [
+        255,
+        232,
+        181
+      ]
+    },
+    "darto": {
+      "role": "guard",
+      "primary": [
+        76,
+        114,
+        158
+      ],
+      "accent": [
+        244,
+        209,
+        113
+      ]
+    },
+    "dito": {
+      "role": "child_cap",
+      "primary": [
+        228,
+        101,
+        84
+      ],
+      "accent": [
+        255,
+        223,
+        112
+      ]
+    },
+    "eko": {
+      "role": "toolbelt",
+      "primary": [
+        209,
+        118,
+        90
+      ],
+      "accent": [
+        235,
+        183,
+        114
+      ]
+    },
+    "harun": {
+      "role": "gardener",
+      "primary": [
+        122,
+        151,
+        81
+      ],
+      "accent": [
+        244,
+        203,
+        111
+      ]
+    },
+    "ina": {
+      "role": "chef",
+      "primary": [
+        164,
+        121,
+        172
+      ],
+      "accent": [
+        255,
+        224,
+        167
+      ]
+    },
+    "juna": {
+      "role": "backpack",
+      "primary": [
+        93,
+        154,
+        223
+      ],
+      "accent": [
+        251,
+        159,
+        101
+      ]
+    },
+    "laras": {
+      "role": "glasses",
+      "primary": [
+        131,
+        190,
+        198
+      ],
+      "accent": [
+        244,
+        205,
+        116
+      ]
+    },
+    "melati": {
+      "role": "flower",
+      "primary": [
+        234,
+        119,
+        145
+      ],
+      "accent": [
+        250,
+        211,
+        116
+      ]
+    },
+    "nara": {
+      "role": "star",
+      "primary": [
+        119,
+        134,
+        210
+      ],
+      "accent": [
+        231,
+        215,
+        126
+      ]
+    },
+    "pos": {
+      "role": "mail",
+      "primary": [
+        219,
+        132,
+        71
+      ],
+      "accent": [
+        251,
+        220,
+        154
+      ]
+    },
+    "raka": {
+      "role": "apron",
+      "primary": [
+        190,
+        99,
+        67
+      ],
+      "accent": [
+        253,
+        218,
+        148
+      ]
+    },
+    "rara": {
+      "role": "ribbon",
+      "primary": [
+        131,
+        167,
+        237
+      ],
+      "accent": [
+        255,
+        193,
+        151
+      ]
+    },
+    "rini": {
+      "role": "satchel",
+      "primary": [
+        158,
+        112,
+        219
+      ],
+      "accent": [
+        245,
+        203,
+        111
+      ]
+    },
+    "sari": {
+      "role": "cane",
+      "primary": [
+        190,
+        160,
+        110
+      ],
+      "accent": [
+        235,
+        210,
+        150
+      ]
+    },
+    "tigor": {
+      "role": "cap",
+      "primary": [
+        84,
+        149,
+        128
+      ],
+      "accent": [
+        255,
+        203,
+        92
+      ]
+    },
+    "tika": {
+      "role": "bow",
+      "primary": [
+        229,
+        130,
+        178
+      ],
+      "accent": [
+        252,
+        204,
+        221
+      ]
+    },
+    "udin": {
+      "role": "leaf",
+      "primary": [
+        124,
+        175,
+        102
+      ],
+      "accent": [
+        245,
+        210,
+        128
+      ]
+    },
+    "ujang": {
+      "role": "courier",
+      "primary": [
+        235,
+        173,
+        70
+      ],
+      "accent": [
+        255,
+        229,
+        155
+      ]
+    },
+    "wulan": {
+      "role": "scarf",
+      "primary": [
+        221,
+        165,
+        104
+      ],
+      "accent": [
+        249,
+        223,
+        183
+      ]
+    }
+  },
+  "sprites": [
+    "arland",
+    "bayu",
+    "bimo",
+    "darmo",
+    "darto",
+    "dito",
+    "eko",
+    "harun",
+    "ina",
+    "juna",
+    "laras",
+    "lumi",
+    "melati",
+    "nara",
+    "pos",
+    "raka",
+    "rara",
+    "rini",
+    "sari",
+    "sofia",
+    "tigor",
+    "tika",
+    "udin",
+    "ujang",
+    "wulan"
+  ],
+  "source": "Legacy v5.2 sprite atlases remain unchanged"
+}

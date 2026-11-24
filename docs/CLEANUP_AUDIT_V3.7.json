@@ -1,0 +1,7 @@
+{
+  "policy": "remove only transient cache files outside android/core/art_source/gradle/docs",
+  "applied": true,
+  "removed_count": 0,
+  "removed_bytes": 0,
+  "candidates": []
+}

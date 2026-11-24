@@ -1,0 +1,113 @@
+# v2.2 — 8 aksi pasangan, dialog 2 route; satu ending canon.
+
+=== CO-HAND-A | Sebelah Kanan | arland | C02
+arland(malu): Kalau kamu mau, kita coba jalan berdampingan. Aku pelankan langkahku.
+sofia(senyum): Aku mau. Tapi kamu tidak perlu menghitung jarak setiap langkah, ya.
+arland(tertawa): Susah. Kebiasaan membuat rute.
+sofia(senang): Cukup lihat aku sesekali. Itu lebih penting daripada petanya.
+narrator(neutral): Mereka merapatkan langkah dan saling menggenggam tangan.
+
+=== CO-HAND-S | Sebelah Kiri | sofia | C02
+sofia(malu): Arland, tanganku kosong, nih.
+arland(bingung): Mau kubawakan bukunya?
+sofia(tertawa): Bukan. Maksudku, boleh kita jalan sambil bergandengan?
+arland(senang): Boleh. Aku ikuti langkahmu.
+narrator(neutral): Sofia mengulurkan tangan, dan perjalanan terasa lebih pelan.
+
+=== CO-HUG-A | Pelukan Tanpa Peta | arland | C02
+arland(serius): Kadang aku terlalu sibuk mencari jawaban yang tepat.
+sofia(senyum): Kamu tidak harus punya jawaban sekarang.
+arland(malu): Boleh aku peluk sebentar?
+sofia(senang): Boleh. Setelah itu kita lihat hari ini mau dibawa ke mana.
+narrator(neutral): Pelukan singkat itu tidak menyelesaikan segalanya, tetapi membuat hari terasa lebih ringan.
+
+=== CO-HUG-S | Pelukan Sebelum Bicara | sofia | C02
+sofia(sedih): Aku punya banyak hal ingin diceritakan, tapi belum tahu harus mulai dari mana.
+arland(serius): Kita bisa diam dulu kalau kamu mau.
+sofia(malu): Kalau begitu, aku ingin peluk dulu.
+arland(senyum): Aku di sini. Ceritanya boleh menunggu.
+narrator(neutral): Sofia memejam sebentar, lalu tersenyum saat mereka menjauh.
+
+=== CO-LEAN-A | Bahu untuk Istirahat | arland | C02
+arland(senyum): Bangku ini cukup nyaman, ya.
+sofia(malu): Apalagi kalau bisa bersandar sedikit.
+arland(kaget): Oh. Tentu. Aku duduk lebih dekat.
+sofia(tertawa): Kamu tidak perlu duduk setegak tiang lampu juga.
+narrator(neutral): Tawa kecil mereka bercampur angin sore.
+
+=== CO-LEAN-S | Diam yang Nyaman | sofia | C02
+sofia(senyum): Boleh aku bersandar di bahumu?
+arland(malu): Boleh. Aku akan diam supaya kamu tidak terganggu.
+sofia(tertawa): Kamu boleh bernapas, Arland.
+arland(senang): Syukurlah. Itu tugas yang sulit dihentikan.
+narrator(neutral): Mereka memandang jalan setapak tanpa perlu mengisi setiap jeda.
+
+=== CO-PHOTO-A | Kamera Sedikit Miring | arland | C02
+arland(penasaran): Kita foto satu kali? Aku sudah menemukan sudut yang bagus.
+sofia(tertawa): Satu kali? Kamu biasanya mengambil sepuluh.
+arland(malu): Satu yang kusimpan. Sembilan untuk belajar.
+sofia(senang): Baik. Tapi kali ini lihat ke kamera, bukan ke garis horizon.
+narrator(neutral): Foto itu sedikit miring. Mereka menyukainya justru karena tidak sempurna.
+
+=== CO-PHOTO-S | Senyum Ketiga | sofia | C02
+sofia(senyum): Arland, mendekat. Aku mau foto kita berdua.
+arland(penasaran): Siap. Senyum biasa atau yang konyol?
+sofia(tertawa): Yang kedua. Tapi hitung sampai tiga dulu.
+arland(senang): Satu, dua... eh, kamu sudah tertawa!
+narrator(neutral): Kamera menangkap tawa sebelum hitungan ketiga.
+
+=== CO-HIGH-A | Satu Tos | arland | C02
+arland(serius): Hari ini kita berhasil melewati banyak hal kecil.
+sofia(senyum): Dan kamu berhasil tidak mengecek peta setiap lima menit.
+arland(tertawa): Itu prestasi besar. Tos?
+sofia(senang): Tos! Besok kita coba lagi.
+narrator(neutral): Kedua telapak bertemu dengan bunyi kecil yang menyenangkan.
+
+=== CO-HIGH-S | Semangat Dulu | sofia | C02
+sofia(serius): Sebelum lanjut, aku butuh satu suntikan semangat.
+arland(penasaran): Teh? Permen? Peta motivasi?
+sofia(tertawa): Tos saja cukup, kok.
+arland(senang): Siap. Satu, dua, tiga!
+narrator(neutral): Sofia tertawa dan melanjutkan perjalanan dengan langkah lebih ringan.
+
+=== CO-DANCE-A | Dua Langkah | arland | C02
+arland(malu): Aku tidak tahu gerakan yang tepat.
+sofia(senyum): Tidak apa. Kita tidak ikut lomba.
+arland(penasaran): Kalau aku salah langkah?
+sofia(tertawa): Kita tertawa, lalu coba lagi.
+narrator(neutral): Dua langkah berlawanan berubah menjadi tarian kecil yang hanya mereka pahami.
+
+=== CO-DANCE-S | Irama Kita | sofia | C02
+sofia(senang): Dengar musik dari sana? Yuk, menari sedikit.
+arland(kaget): Di sini? Sekarang?
+sofia(tertawa): Tidak harus bagus. Ikuti aku.
+arland(malu): Kalau begitu, maaf kalau sepatuku salah arah.
+narrator(neutral): Mereka bergerak pelan, lalu tertawa ketika iramanya berubah.
+
+=== CO-SUNSET-A | Dua Warna Sore | arland | C02
+arland(penasaran): Dari sini, langitnya berwarna jingga di sebelah barat.
+sofia(senyum): Di dekat pohon malah terlihat merah muda.
+arland(senang): Kita melihat sore yang sama dari dua tempat berbeda.
+sofia(malu): Dan sekarang duduk berdekatan. Bagus, kan?
+narrator(neutral): Arland menutup buku kecilnya. Kali ini ia memilih mengingat tanpa mencatat.
+
+=== CO-SUNSET-S | Sore yang Tidak Dibekukan | sofia | C02
+sofia(senyum): Aku ingin warna langit ini bertahan lebih lama.
+arland(serius): Kita bisa memotretnya.
+sofia(neutral): Boleh nanti. Sekarang aku ingin melihatnya langsung.
+arland(senang): Baik. Aku temani sampai warnanya berubah.
+narrator(neutral): Sofia bersandar sebentar. Senja berjalan tanpa harus ditahan.
+
+=== CO-STARS-A | Tidak Menjanjikan Kesempurnaan | arland | C02
+arland(serius): Aku ingin berjanji sesuatu, tapi bukan janji yang mustahil.
+sofia(penasaran): Apa itu?
+arland(senyum): Aku akan berusaha mendengarkan lebih dulu saat kita tidak sepakat.
+sofia(senang): Aku juga. Kita bisa saling mengingatkan dengan baik.
+narrator(neutral): Di atas bukit, satu bintang tampak lebih terang ketika awan lewat.
+
+=== CO-STARS-S | Janji yang Dikerjakan | sofia | C02
+sofia(senyum): Lihat bintang yang muncul di antara awan itu.
+arland(penasaran): Kamu ingin membuat permohonan?
+sofia(serius): Aku ingin janji kecil. Kita tetap saling bercerita, bahkan ketika harinya sulit.
+arland(senang): Janji. Dan kalau lupa, kita belajar lagi.
+narrator(neutral): Sofia menggenggam tangan Arland. Tidak ada kata-kata besar, hanya janji yang mau mereka usahakan.

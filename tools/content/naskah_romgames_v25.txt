@@ -1,0 +1,60 @@
+=== RG-FISH@arland | Kenangan Fish | arland | SIDE
+arland(lega): Satu kail, dua orang. Kalau ikannya besar, kita bagi dua?
+sofia(jatuh_cinta): Pelampungnya bergerak! Aku kira kamu bakal langsung menarik.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-FISH@sofia | Kenangan Fish | sofia | SIDE
+sofia(lega): Bagi dua. Tapi kalau cuma satu ikan kecil, kamu yang pilih tempat melepasnya.
+arland(jatuh_cinta): Aku tunggu tanda darimu. Sekarang kita sudah kompak, kan?
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-COOK@arland | Kenangan Cook | arland | SIDE
+arland(lega): Kita berhasil bikin sesuatu tanpa mengacaukan dapur.
+sofia(jatuh_cinta): Aromanya enak banget. Ada sedikit tepung di bajumu.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-COOK@sofia | Kenangan Cook | sofia | SIDE
+sofia(lega): Yang paling susah justru menahan diri buat nggak mencicipi duluan.
+arland(jatuh_cinta): Di bajumu juga. Berarti kita sama-sama masak, bukan cuma nonton.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-BOUQUET@arland | Kenangan Bouquet | arland | SIDE
+arland(lega): Kalau bunganya warna-warni begini, kamu pilih yang mana?
+sofia(jatuh_cinta): Aku baru sadar tiap bunga punya ceritanya sendiri.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-BOUQUET@sofia | Kenangan Bouquet | sofia | SIDE
+sofia(lega): Yang paling cocok sama hari ini. Bukan yang paling mahal.
+arland(jatuh_cinta): Iya. Kalau disusun berdua, ceritanya jadi beda lagi.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-SCRAPBOOK@arland | Kenangan Scrapbook | arland | SIDE
+arland(lega): Kenangan pertama kita ternyata bukan foto yang rapi.
+sofia(jatuh_cinta): Kamu ingat urutan halaman-halamannya?
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-SCRAPBOOK@sofia | Kenangan Scrapbook | sofia | SIDE
+sofia(lega): Iya. Justru yang sedikit berantakan itu yang paling sering kita ingat.
+arland(jatuh_cinta): Bukan semuanya. Untung ada kamu yang menyimpan sisanya.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-STARS@arland | Kenangan Stars | arland | SIDE
+arland(lega): Bintang itu hampir jatuh ke danau.
+sofia(jatuh_cinta): Kalau punya satu harapan, kamu mau apa?
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-STARS@sofia | Kenangan Stars | sofia | SIDE
+sofia(lega): Tapi kita berhasil menangkap cahayanya. Itu sudah cukup buat malam ini.
+arland(jatuh_cinta): Supaya besok kita masih bisa melihat langit dari tempat yang sama.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-PHOTO@arland | Kenangan Photo | arland | SIDE
+arland(lega): Satu foto lagi! Yang ini jangan memejamkan mata, ya.
+sofia(jatuh_cinta): Photobooth-nya sudah selesai, tapi aku masih ingin satu pose lagi.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+
+=== RG-PHOTO@sofia | Kenangan Photo | sofia | SIDE
+sofia(lega): Aku cuma tertawa. Kamu bikin ekspresi yang nggak bisa ditahan.
+arland(jatuh_cinta): Kita bisa kembali lagi. Momen ini nggak harus berhenti sekarang.
+narrator: Sebuah kenangan kecil masuk ke halaman perjalanan mereka.
+

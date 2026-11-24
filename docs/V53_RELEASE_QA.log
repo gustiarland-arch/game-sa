@@ -1,0 +1,74 @@
+Command: bash tools/test_v53_release.sh
+Exit code: 0
+
+STDOUT:
+V5.3 MotionPersonality: 629 checks OK.
+V5.3 Sprite atlas structure: 676 checks OK across 25 characters.
+V3.7 Actor+Lighting headless JAVA TYPECHECK/SMOKE OK
+V5.2 NAVIGATION/CAMERA SELF TEST PASSED: 20 checks
+V3 UI JAVA TYPE-CHECK: DialogueHistoryOverlay, MemoryBookOverlay, DialogBox against stubs OK
+PASS: 231 v4.6.2 animation and world-graphics assertions
+PASS: 22 original + gallery + Rain Garden + 3 Chapter5 map profiles, 4 eight-facing hero atlases and 7 editable atmosphere sprites
+INFO: build anchors absent; checking preserved shipped story and map JSON.
+verify plaza ba3f28b35f64
+verify taman_kota b5dbb9bc486a
+verify riverside 4e27045d497e
+verify dermaga e05ba4578cbf
+verify cafe 917fac51c27a
+verify bukit_bintang 4d89c4b720ad
+verify memory_garden 3ca3f5287a0a
+verify eternal_garden 0b5aa7bf2e30
+verify star_path f1044f18aa84
+verify starfall_village 1dcd0947b7fa
+verify lantern_field f7cc2bf848b2
+verify hutan_bisik 28432a2140d0
+verify gua_kristal 060e859878c3
+V4.2 MATTE VERIFIED 33 v41 prop sprites
+Layout OK, tanpa error.
+VISUAL v2.0: 3 preset kualitas, migrasi settings, kamera smoothing/reset, 6 aset FX, jurnal route OK
+V5.0: 21 physical staircases climb/descent, wall blocking, collision, music assets and 42 POV view scenes OK
+THE QUIET arland: C01/C04/C05, 3 petunjuk, puzzle khusus, pilihan, pengungkapan, dan penutup Sari diputar
+Route arland: 173 step, 264 adegan, 1219 baris dialog
+Route arland: 22 side quest selesai lewat 195 interaksi
+Route arland: 22/23 percakapan pasangan terputar
+Route arland: 3 kencan, 3 hadiah, 8 momen gratis dan 3 milestone kedekatan dimainkan
+COUPLE ACTION arland: 8 pose bersama, 8 scene route, 8 memori & 8 daily record dijalankan
+ROMANCE GAME arland: 6 permainan, 6 adegan POV, 6 kenangan benar-benar dijalankan
+Estimasi arland: cerita utama 158 mnt (baca 78719 krk, jalan 165167 px, 13 minigame) + side quest 145 mnt + eksplorasi/NPC opsional 8 mnt
+Memory Book arland: 184 entri terbuka
+THE QUIET sofia: C01/C04/C05, 3 petunjuk, puzzle khusus, pilihan, pengungkapan, dan penutup Sari diputar
+Route sofia: 175 step, 275 adegan, 1230 baris dialog
+Route sofia: 22 side quest selesai lewat 194 interaksi
+Route sofia: 22/23 percakapan pasangan terputar
+Route sofia: 3 kencan, 3 hadiah, 8 momen gratis dan 3 milestone kedekatan dimainkan
+COUPLE ACTION sofia: 8 pose bersama, 8 scene route, 8 memori & 8 daily record dijalankan
+ROMANCE GAME sofia: 6 permainan, 6 adegan POV, 6 kenangan benar-benar dijalankan
+Estimasi sofia: cerita utama 159 mnt (baca 79156 krk, jalan 165902 px, 12 minigame) + side quest 143 mnt + eksplorasi/NPC opsional 8 mnt
+Memory Book sofia: 185 entri terbuka
+ESTIMASI TOTAL kedua route: cerita utama 5.3 jam, lengkap (side quest + eksplorasi) 10.4 jam
+Save: atomic write, .bak, checksum, pemulihan, settings, global -> OK (/tmp/olu-save4721829942935419494)
+EKONOMI arland: 3 toko, 3 pekerjaan, pembelian, aksi UI, simpan/migrasi, reset hari OK
+EKONOMI sofia: 3 toko, 3 pekerjaan, pembelian, aksi UI, simpan/migrasi, reset hari OK
+ROMANSA arland: 9 hadiah, 3 kencan, 2 milestone, route scene, save/migrasi, limit & anti-minus OK
+ROMANSA sofia: 9 hadiah, 3 kencan, 2 milestone, route scene, save/migrasi, limit & anti-minus OK
+MOMEN arland: 8 katalog, kondisi jam/cuaca/tempat/hati, save v1.6 dan anti-spam OK
+MOMEN sofia: 8 katalog, kondisi jam/cuaca/tempat/hati, save v1.6 dan anti-spam OK
+COUPLE v2.2: 8 aksi, syarat waktu/lokasi/hati, toggle, daily lock, save migrasi 4→5, replay OK
+ROMANCE GAMES v2.5: 6 katalog, route, skor, cancel, save, anti-spam dan replay OK
+DUNIA: 22 warga berjadwal, 6799 posisi diuji, 60 hewan, hujan 23/140 hari
+LIVING WORLD v4.9: 14 original + 18 baru, kedua POV, anti-farming, Memory Book & migrasi save OK
+V4.9: 29 one-time location secrets, 14 per-route echo games, 58 scripts, save roundtrip OK
+SEMUA LULUS: 40445 pemeriksaan
+V5.3 release headless QA complete. Android build/device tests pending.
+
+STDERR (truncated):
+k (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+

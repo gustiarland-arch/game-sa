@@ -1,0 +1,227 @@
+# NASKAH Chapter 2–3 — Arland & Sofia: Our Little Universe (DRAFT FIKSI)
+# Format: === ID | Judul | route | chapter
+#   pembicara(emosi): teks        ? Pilihan | FLAG        A>/S>/B> respons route Arland/Sofia/keduanya
+#   @flags FLAG1 FLAG2  (flag otomatis setelah adegan)
+
+=== C02-A00 | Ide Kejutan | arland | C02
+narrator: Hari Minggu. Matahari masuk lewat jendela, dan ponsel di meja berbunyi pelan.
+sofia_msg: Sore ini kita jalan, yuk? Kafe Senja jam empat. Jangan telat, ya. Hehe.
+arland(senang): Jam empat. Masih ada waktu.
+arland(penasaran): Kemarin dia lihat bunga-bunga di mural lama sekali...
+arland(senyum): Oke. Toko Bunga Melati di Jalan Kota. Kejutan kecil, tapi niat.
+
+=== C02-A01 | Hadiah Rahasia | arland | C02
+melati(senyum): Selamat pagi, Nak. Cari bunga untuk seseorang yang spesial?
+arland(malu): Kelihatan banget, ya, Bu?
+melati(tertawa): Telinga kamu merah. Itu tanda paling jujur.
+arland(neutral): Hari ini mau bikin Sofia senyum.
+melati(neutral): Bunga yang kamu pilih bagus. Mau ditambah pita?
+arland(neutral): Iya, yang warnanya lembut. Nggak perlu berlebihan.
+? Pita lavender | C02_RIBBON_LAVENDER
+A> melati(senyum): Lavender artinya "aku memperhatikanmu dengan tenang." Pilihan yang manis.
+A> arland(senyum): Cocok. Dia memang suka hal-hal yang tenang.
+S> melati(senyum): Lavender. Pilihan yang manis.
+? Pita peach | C02_RIBBON_PEACH
+A> melati(senang): Peach artinya rasa syukur dan kehangatan. Seperti sore yang cerah.
+A> arland(senyum): Kayak dia. Hangat.
+S> melati(senyum): Peach. Hangat sekali.
+melati(neutral): Oh ya, kalau nanti ada waktu, Ibu butuh bantuan mengantar beberapa buket. Tidak buru-buru.
+arland(neutral): Siap, Bu. Nanti saya mampir lagi.
+@flags C02_ARLAND_GIFT_READY
+
+=== C02-S00 | Ajakan Sore | sofia | C02
+narrator: Hari Minggu. Sofia sudah bangun sejak subuh, membaca setengah bab, lalu tersenyum sendiri.
+sofia(senyum): Kemarin rasanya seperti mimpi yang bersambung.
+sofia(penasaran): Bagaimana kalau aku yang ajak duluan?
+narrator: Pesan terkirim: "Sore ini kita jalan, yuk? Kafe Senja jam empat."
+arland_msg: Siap! Aku nggak akan telat. Janji.
+sofia(tertawa): "Janji." Awas, ya.
+
+=== C02-S01 | Persiapan Kecil | sofia | C02
+sofia(neutral): Hari ini mau pakai outfit yang mana, ya?
+sofia(neutral): Yang nyaman aja. Yang penting bisa jalan lama.
+? Outfit santai | C02_OUTFIT_CASUAL
+S> sofia(senyum): Kardigan pink dan sepatu kets. Siap jalan seharian.
+A> sofia(senyum): Kardigan dan sepatu kets.
+? Outfit date | C02_OUTFIT_DATE
+S> sofia(malu): Dress krem ini... sedikit lebih rapi. Nggak apa-apa, kan, sesekali?
+A> sofia(malu): Dress krem. Sedikit lebih rapi.
+sofia(neutral): Oh iya, aku mau bawa foto kecil juga.
+sofia(penasaran): Bang Juna di arcade katanya bisa mencetak foto dari mesin lama. Aku mampir ke sana dulu.
+@flags C02_SOFIA_READY
+
+=== C02-S02 | Foto Kecil | sofia | C02
+juna(senang): Yo, Sofia! Pelanggan VIP Arcade Bintang!
+sofia(tertawa): Sejak kapan aku VIP?
+juna(senyum): Sejak kamu bawa kue ke sini minggu lalu. Itu sudah level legendaris.
+sofia(neutral): Bang, mesin foto lama itu masih bisa cetak?
+juna(neutral): Bisa. Tinggal masukkan foto dari ponsel. Hasilnya kecil, pas buat dompet.
+narrator: Mesin berdengung. Selembar foto kecil keluar: langit sore di atas plaza.
+sofia(senyum): Langit waktu kita pertama ketemu di plaza. Semoga dia ingat.
+juna(senyum): Kalau nanti mau foto berdua, photobooth di sini siap. Bonus bingkai hati.
+sofia(malu): Bang Juna!
+@flags C02_SOFIA_PHOTO
+
+=== C02-X00 | Kafe Senja Sore Hari | shared | C02
+raka(senyum): Selamat datang! Meja dekat jendela sudah saya siapkan. Feeling saya, kalian butuh yang itu.
+arland(malu): Kak Raka...
+raka(tertawa): Dua minuman spesial: teh melati hangat dan kopi susu gula aren. Benar?
+sofia(kaget): Kok tahu?
+raka(senyum): Barista yang baik ingat pesanan. Barista yang hebat ingat cerita di baliknya.
+
+=== C02-X01 | Kencan di Kafe | shared | C02
+arland(neutral): Mau mulai dari kafe atau taman?
+sofia(neutral): Kita punya waktu. Yang penting jangan buru-buru.
+arland(neutral): Kalau begitu, kamu pilih.
+sofia(neutral): Kalau salah belok, anggap saja petualangan.
+? Ke taman dulu | C02_PARK_FIRST
+B> sofia(senang): Taman dulu! Katanya ikan koi di kolam lagi gendut-gendut.
+B> arland(tertawa): Alasan yang sangat ilmiah.
+? Ke arcade dulu | C02_ARCADE_FIRST
+B> arland(senang): Arcade dulu. Aku mau tantang kamu di mesin capit.
+B> sofia(tertawa): Siap kalah?
+@flags C02_DATE_STARTED
+
+=== C02-X03 | Gazebo di Taman | shared | C02
+narrator: Angin sore menggoyangkan kelopak sakura. Kolam berkilau seperti kaca.
+sofia(senang): Lihat, koinya datang semua!
+arland(tertawa): Mereka pikir kamu bawa roti.
+sofia(senyum): Mungkin mereka cuma suka ditemani.
+arland(neutral): Kayak kita.
+sofia(kaget): Hm?
+arland(malu): M-maksudku... tempat ini enak buat duduk lama.
+sofia(tertawa): Iya, iya. Aku dengar kok yang pertama tadi.
+narrator: Mereka duduk di gazebo sampai bayangan pohon memanjang.
+@flags C02_PARK_DONE
+
+=== C02-X02 | Photobooth | shared | C02
+sofia(kaget): Tunggu, aku belum siap!
+arland(tertawa): Terlambat, sudah kepotret.
+sofia(neutral): Ya sudah, satu lagi. Kali ini yang bagus.
+juna(senang): Mantap! Tiga jepretan, dicetak dua. Satu untuk masing-masing!
+sofia(senyum): Fotonya lucu. Kamu kelihatan kaget di foto pertama.
+arland(malu): Kamu juga!
+narrator: Satu foto kecil masuk ke Memory Book.
+@flags C02_PHOTO_UNLOCKED CANON_DATE_PHOTO
+
+=== C02-X04 | Senja di Dermaga | shared | C02
+narrator: Matahari turun pelan di ujung danau. Air berubah jingga keemasan.
+arland(neutral): Aku... bawa sesuatu.
+arland(malu): Bunga dari Toko Bu Melati. Pitanya aku pilih sendiri.
+sofia(kaget): Untukku?
+sofia(senyum): Cantik sekali. Aku juga punya sesuatu.
+sofia(malu): Foto kecil. Langit di plaza waktu kita ketemu.
+arland(senyum): Aku ingat. Langitnya persis begini.
+sofia(senang): Kamu ingat?
+arland(neutral): Aku memang suka memotret langit. Tapi yang itu aku simpan di kepala.
+narrator: Memory Book di tas Sofia hangat. Satu halaman baru terisi warna senja.
+sofia(senyum): Hari ini... terima kasih, ya.
+arland(senyum): Terima kasih juga sudah ajak duluan.
+@flags C02_COMPLETED
+
+# ------------------------------------------------------------------------ CHAPTER 3
+=== C03-A00 | Rencana Piknik | arland | C03
+narrator: Beberapa hari kemudian. Foto photobooth tertempel di sudut meja Arland.
+arland(senyum): Sofia bilang dia suka masakan rumahan.
+arland(penasaran): Kak Raka menawarkan dapur kafe untuk dipakai...
+arland(neutral): Roti lapis stroberi madu dengan daun mint. Kedengarannya gampang.
+arland(bingung): Kedengarannya.
+arland(neutral): Butuh stroberi, madu, dan daun mint. Ayo cari.
+
+=== C03-A02 | Stroberi | arland | C03
+raka(senyum): Stroberi? Ambil saja di kulkas dapur. Bayarnya cerita nanti, bagaimana hasilnya.
+arland(senang): Makasih, Kak!
+raka(neutral): Satu tips: jangan tekan rotinya terlalu keras. Masak itu soal sabar.
+
+=== C03-A03 | Madu Nenek Sari | arland | C03
+sari(senyum): Madu? Ambil satu toples, Nak. Ini dari kebun lebah cucu Nenek.
+arland(malu): Nanti saya ganti, Nek.
+sari(tertawa): Ganti dengan cerita yang bagus. Nenek suka cerita anak muda.
+sari(neutral): Dulu Nenek dan almarhum kakek juga suka piknik di taman. Selalu bawa roti madu.
+
+=== C03-A04 | Daun Mint | arland | C03
+arland(senang): Ini dia, daun mint di petak bunga taman.
+dito(kaget): Kak! Itu taman milik semua orang. Ambil secukupnya, ya!
+arland(tertawa): Tiga lembar saja, Komandan.
+dito(senang): Boleh. Asal Kakak bagi cerita buat Dito.
+
+=== C03-A01 | Hal Sederhana | arland | C03
+arland(neutral): Aku bukan ahli masak, tapi kita bisa coba.
+arland(neutral): Resep ini kayaknya nggak terlalu susah... semoga.
+sofia(kaget): Arland? Kamu... masak?
+arland(malu): Kamu datang lebih cepat dari rencanaku.
+sofia(tertawa): Kak Raka yang bilang. Mau kubantu?
+arland(senyum): Dengan senang hati. Asisten koki diterima.
+@flags C03_ARLAND_PREP
+
+=== C03-S00 | Kotak Kenangan | sofia | C03
+narrator: Beberapa hari kemudian. Di meja Sofia ada kotak kecil berisi tiket, kelopak bunga kering, dan foto photobooth.
+sofia(senyum): Kalau terus di kotak, nanti lupa dilihat.
+
+=== C03-S01 | Sudut Kenangan | sofia | C03
+sofia(neutral): Benda-benda kecil ini punya banyak cerita.
+sofia(neutral): Aku pengin menatanya supaya gampang dilihat lagi.
+sofia(penasaran): Butuh bunga kering dari Bu Melati, lampu tumbler, dan bingkai foto.
+sofia(senyum): Kak Raka punya lampu tumbler bekas dekorasi kafe. Bingkai kecil mungkin di arcade.
+
+=== C03-S03 | Bunga Kering | sofia | C03
+melati(senyum): Bunga kering untuk sudut kenangan? Ide yang indah.
+melati(neutral): Ini baby's breath dan mawar kecil yang dikeringkan. Keduanya bisa bertahan lama.
+sofia(senyum): Seperti kenangan yang dirawat.
+melati(tertawa): Kamu pandai bicara, Nak. Pantas ada yang suka beli bunga ke sini akhir-akhir ini.
+sofia(malu): Bu Melati...
+
+=== C03-S04 | Lampu Tumbler | sofia | C03
+raka(senang): Lampu tumbler? Ada satu set di gudang. Bekas dekorasi Natal tahun lalu.
+sofia(senang): Boleh dipinjam?
+raka(senyum): Ambil saja. Lampu itu lebih bahagia menyala di kamar orang daripada di gudang.
+
+=== C03-S05 | Bingkai Kecil | sofia | C03
+juna(senang): Bingkai? Hadiah dari mesin capit, nih. Bentuk bintang. Nggak ada yang ambil.
+sofia(senyum): Boleh untukku?
+juna(tertawa): Boleh, asal foto photobooth kalian ditempel. Itu iklan gratis!
+
+=== C03-S02 | Menata Sudut | sofia | C03
+sofia(neutral): Lampu di atas, bunga di samping... dan di tengah?
+? Foto photobooth di tengah | C03_CORNER_PHOTO
+S> sofia(senyum): Foto kami berdua di tengah. Biar tiap pagi lihat muka kaget Arland.
+A> sofia(senyum): Foto di tengah.
+? Bunga kering di tengah | C03_CORNER_FLOWER
+S> sofia(senyum): Bunga di tengah, seperti bunga kertas pertamanya.
+A> sofia(senyum): Bunga di tengah.
+? Memory Book di tengah | C03_CORNER_BOOK
+S> sofia(senyum): Memory Book di tengah. Tempat semua halaman berkumpul.
+A> sofia(senyum): Memory Book di tengah.
+narrator: Lampu tumbler menyala. Sudut kecil itu terasa seperti rumah.
+arland_msg: Sofia, kamu sibuk? Aku lagi di dapur kafe. Kayaknya butuh bantuan... banyak.
+sofia(tertawa): Aku berangkat sekarang.
+@flags C03_SOFIA_PREP
+
+=== C03-S06 | Dapur Berantakan | sofia | C03
+narrator: Dapur kafe penuh tepung. Arland memegang pisau roti dengan ekspresi serius.
+sofia(kaget): Arland? Kenapa tepungnya di mana-mana?
+arland(malu): Aku mau bikin roti lapis. Entah kenapa tepung juga ikut.
+sofia(tertawa): Roti lapis nggak butuh tepung!
+arland(bingung): ...Benar juga.
+sofia(senyum): Sini. Kita bikin bareng.
+
+=== C03-X01 | Masak Bersama | shared | C03
+sofia(tertawa): Agak berantakan, ya?
+arland(neutral): Tapi hasilnya lumayan, kan?
+sofia(neutral): Lumayan banget karena kita bikin bareng.
+raka(senang): Wangi madu sampai ke depan! Sisakan satu untuk barista, ya.
+arland(tertawa): Sudah kami siapkan, Kak.
+
+=== C03-X02 | Piknik di Taman | shared | C03
+narrator: Selimut kotak-kotak dibentangkan di bawah pohon. Keranjang dibuka.
+sofia(senang): Roti lapis stroberi madu. Dan... ada daun mint di atasnya!
+arland(senyum): Biar kelihatan profesional.
+sofia(tertawa): Sangat profesional. Satu potong sedikit gosong.
+arland(malu): Itu bagianku.
+sofia(senyum): Nggak, itu bagianku. Yang gosong itu yang paling ada usahanya.
+narrator: Memory Book terbuka sendiri. Halaman baru mulai terisi: gambar keranjang kecil dan dua tangan bertepung.
+arland(penasaran): Bukunya mencatat hal kecil juga.
+sofia(senyum): Mungkin justru hal kecil yang paling penting.
+arland(neutral): Kalau begitu, aku mau banyak hal kecil sama kamu.
+sofia(malu): ...Aku juga.
+@flags C03_COMPLETED

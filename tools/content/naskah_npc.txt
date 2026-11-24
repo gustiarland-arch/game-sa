@@ -1,0 +1,84 @@
+# NASKAH Misi Sampingan & NPC (DRAFT FIKSI)
+
+# ---------------- Antar Bunga (Bu Melati)
+=== SQ-BUNGA-1 | Antar Bunga | shared | SIDE
+melati(senyum): Nak, Ibu butuh bantuan. Tiga buket ini harus diantar hari ini.
+melati(neutral): Satu untuk Nenek Sari di Plaza, satu untuk Kak Raka di kafe, dan satu untuk Dito di Taman Kota.
+melati(senyum): Masing-masing punya arti. Kamu akan tahu saat menyerahkannya.
+
+=== SQ-BUNGA-SARI | Buket untuk Nenek Sari | shared | SIDE
+sari(kaget): Bunga krisan kuning? Dari Melati?
+sari(senyum): Dulu kakek selalu membelikan krisan kuning setiap ulang tahun pernikahan kami. Melati ingat.
+sari(senyum): Terima kasih, Nak. Hari ini terasa lebih terang.
+
+=== SQ-BUNGA-RAKA | Buket untuk Kak Raka | shared | SIDE
+raka(kaget): Bunga matahari? Untuk saya?
+raka(tertawa): Bu Melati bilang kafe ini butuh "sesuatu yang menghadap cahaya". Beliau memang puitis.
+raka(senyum): Akan saya taruh di meja dekat jendela. Tempat duduk favorit kalian.
+
+=== SQ-BUNGA-DITO | Buket untuk Dito | shared | SIDE
+dito(kaget): Bunga? Buat Dito? Dito kan laki-laki!
+dito(malu): ...Tapi warnanya keren. Ada kartunya: "Selamat sudah berani tampil di pentas sekolah."
+dito(senang): Bu Melati nonton ternyata! Makasih, Kak!
+
+=== SQ-BUNGA-2 | Bros Bunga | shared | SIDE
+melati(senang): Semuanya sudah sampai? Kamu kurir bunga terbaik minggu ini.
+melati(senyum): Ini bros bunga kecil buatan Ibu. Simpan, ya. Bunga yang tidak layu, untuk kenangan yang tidak layu.
+
+# ---------------- Mochi Hilang (Nenek Sari)
+=== SQ-MOCHI-1 | Mochi Hilang | shared | SIDE
+sari(sedih): Nak, kamu lihat kucing oranye gemuk? Namanya Mochi. Sejak pagi dia tidak pulang.
+sari(neutral): Dia suka tempat sepi dan sejuk. Kadang di belakang rumah-rumah plaza.
+
+=== SQ-MOCHI-2 | Mochi di Belakang Rumah | shared | SIDE
+narrator: Seekor kucing oranye gemuk menguap di jalan setapak. Saat didekati, ia melompat dan berlari ke arah danau.
+narrator: Meong!
+
+=== SQ-MOCHI-3 | Mochi di Tepi Danau | shared | SIDE
+narrator: Mochi duduk di antara ilalang tepi danau, mengamati capung. Saat didekati, ia lari lagi ke arah taman.
+
+=== SQ-MOCHI-4 | Mochi di Pohon Tua | shared | SIDE
+narrator: Mochi bergelung di akar pohon tua Taman Kota. Kali ini ia hanya mengeong pelan dan membiarkan dirinya digendong.
+narrator: Mochi lebih berat dari yang terlihat.
+
+=== SQ-MOCHI-5 | Mochi Pulang | shared | SIDE
+sari(senang): Mochi! Dasar kucing nakal.
+sari(senyum): Terima kasih, Nak. Ini foto Mochi waktu kecil. Simpan untuk kenang-kenangan.
+sari(tertawa): Dulu dia muat di dalam cangkir teh.
+
+# ---------------- Batu Berkilau (Dito)
+=== SQ-BATU-1 | Batu Berkilau | shared | SIDE
+dito(senang): Kak! Mau bantu misi rahasia? Dito mengoleksi batu berkilau.
+dito(serius): Ada lima batu tersembunyi di kota: Plaza, Jalan Kota, Tepi Danau, dan dua di taman ini.
+dito(senyum): Kalau semuanya ketemu, Dito kasih hadiah super rahasia.
+
+=== SQ-BATU-2 | Koleksi Lengkap | shared | SIDE
+dito(kaget): Lima-limanya? Kakak hebat!
+dito(senang): Ini hadiahnya: Batu Bintang. Kalau dilihat malam hari, dia agak bercahaya. Sungguhan!
+
+# ---------------- Mesin Capit (Bang Juna)
+=== SQ-CAPIT-1 | Tantangan Mesin Capit | shared | SIDE
+juna(senang): Tantangan minggu ini: dapatkan tiga boneka dari mesin capit!
+juna(serius): Mesinnya agak licin. Butuh timing dan hati yang tenang.
+
+=== SQ-CAPIT-2 | Juara Capit | shared | SIDE
+juna(kaget): Tiga boneka?! Rekor baru!
+juna(senang): Ini boneka kucing edisi terbatas. Cuma untuk juara.
+
+# ---------------- Resep Rahasia (Kak Raka)
+=== SQ-RESEP-1 | Resep yang Hilang | shared | SIDE
+raka(bingung): Kartu resep teh rempah warisan pemilik lama kafe hilang. Mungkin terselip di rak buku.
+raka(neutral): Kalau ketemu, saya buatkan teh rempah pertama dalam lima tahun.
+
+=== SQ-RESEP-2 | Teh Rempah | shared | SIDE
+raka(senang): Ini dia! Tulisan tangan Pak Harto, pemilik pertama kafe ini.
+narrator: Wangi kayu manis, jahe, dan cengkih memenuhi kafe.
+raka(senyum): Teh ini katanya diminum orang yang baru berbaikan. Cocok, kan?
+
+# ---------------- Album Kota (papan pengumuman)
+=== SQ-FOTO-1 | Lomba Foto Kota | shared | SIDE
+narrator: Papan pengumuman: "Lomba Foto Kota! Potret lima tempat favoritmu: air mancur, gazebo, dermaga, halte, dan pohon tua."
+
+=== SQ-FOTO-2 | Album Kota | shared | SIDE
+narrator: Lima foto ditempel di papan pengumuman. Seseorang menempelkan stiker bintang emas di bawahnya.
+narrator: Album Kota masuk ke Memory Book.

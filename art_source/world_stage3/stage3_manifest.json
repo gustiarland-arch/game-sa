@@ -1,0 +1,413 @@
+{
+  "version": "3.5.0",
+  "source": "3.4.0",
+  "maps": [
+    {
+      "name": "starfall_village",
+      "dimensions": [
+        1920,
+        1280
+      ],
+      "layers": [
+        "00_art_direction",
+        "01_surface_materials",
+        "02_environment_landmarks",
+        "03_path_edges_and_reflections",
+        "04_local_light"
+      ],
+      "modified_pixels": 2446669,
+      "sha256": "1958f1213c861686d9fc11273352f32a3ad560efefb87d42a8cc141c33e86178"
+    },
+    {
+      "name": "star_path",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "layers": [
+        "00_art_direction",
+        "01_surface_materials",
+        "02_environment_landmarks",
+        "03_path_edges_and_reflections",
+        "04_local_light"
+      ],
+      "modified_pixels": 2097147,
+      "sha256": "de0a65abfdebd9a61a6f71c84f4bd1b363ad4403be8f5d6a2b61665590342ec9"
+    },
+    {
+      "name": "gua_kristal",
+      "dimensions": [
+        1280,
+        960
+      ],
+      "layers": [
+        "00_art_direction",
+        "01_surface_materials",
+        "02_environment_landmarks",
+        "03_path_edges_and_reflections",
+        "04_local_light"
+      ],
+      "modified_pixels": 742547,
+      "sha256": "1b8732f9ba414afef05efe47509dac410cecdef3d84165b265134cadbdc98565"
+    },
+    {
+      "name": "lantern_field",
+      "dimensions": [
+        1920,
+        1280
+      ],
+      "layers": [
+        "00_art_direction",
+        "01_surface_materials",
+        "02_environment_landmarks",
+        "03_path_edges_and_reflections",
+        "04_local_light"
+      ],
+      "modified_pixels": 2416325,
+      "sha256": "ed6143aa377d95109841d80c11dc5283ade926e2ff0c5abb1472fe5d6bc5ea35"
+    },
+    {
+      "name": "hutan_bisik",
+      "dimensions": [
+        2560,
+        1920
+      ],
+      "layers": [
+        "00_art_direction",
+        "01_surface_materials",
+        "02_environment_landmarks",
+        "03_path_edges_and_reflections",
+        "04_local_light"
+      ],
+      "modified_pixels": 4754206,
+      "sha256": "2a1f52e98e27d2115e05228bcd4deb1d3f52600e2601fbe5796b3f7eb94f45ab"
+    }
+  ],
+  "props": [
+    {
+      "name": "star_stone",
+      "dimensions": [
+        34,
+        60
+      ],
+      "modified_pixels": 138,
+      "sha256": "ac3b4832abbe577c4e85186c2abbfc0db94733dd712e894f0f624a75970f9f03"
+    },
+    {
+      "name": "bld_star_house0",
+      "dimensions": [
+        240,
+        196
+      ],
+      "modified_pixels": 7234,
+      "sha256": "a09517f72109b905d8e3bed04df305333403b6b3e1298c289ef144198729e041"
+    },
+    {
+      "name": "bld_star_house1",
+      "dimensions": [
+        240,
+        196
+      ],
+      "modified_pixels": 7234,
+      "sha256": "5117441e2e070a0e1db9c174250f90c876f676e6202e8d87c9395cf7cc676aef"
+    },
+    {
+      "name": "bld_star_house2",
+      "dimensions": [
+        240,
+        196
+      ],
+      "modified_pixels": 7234,
+      "sha256": "a8a19379ba478ddb562de8117b6cadde772355e827c54f07a8ba152a155869df"
+    },
+    {
+      "name": "pedestal_book_map",
+      "dimensions": [
+        36,
+        54
+      ],
+      "modified_pixels": 86,
+      "sha256": "e1635deda3abd9bad4f7414678441c951bbcd2cf44bdbedb158019e8fcd781fc"
+    },
+    {
+      "name": "crystal_big",
+      "dimensions": [
+        50,
+        76
+      ],
+      "modified_pixels": 456,
+      "sha256": "d88e22307b6d40891149a62034271ae8d74b3bed528485bee26d02b87a34033a"
+    },
+    {
+      "name": "stalagmite_s0",
+      "dimensions": [
+        30,
+        52
+      ],
+      "modified_pixels": 138,
+      "sha256": "35e246fbe703941496dd8d0378539a1b4d88f4ae76a322929ac9361080837270"
+    },
+    {
+      "name": "stalagmite_s1",
+      "dimensions": [
+        30,
+        52
+      ],
+      "modified_pixels": 125,
+      "sha256": "a93975a1c2034a14182dcc0b783f1a1167d911ea0d95ba1b7322fdfbd342497a"
+    },
+    {
+      "name": "stalagmite_s2",
+      "dimensions": [
+        30,
+        52
+      ],
+      "modified_pixels": 101,
+      "sha256": "b0fe5d5f64f0c600900e3f5e1b717124cd357e1a2ec4f70bb4843bbc9a1f0e15"
+    },
+    {
+      "name": "stalagmite_s3",
+      "dimensions": [
+        30,
+        52
+      ],
+      "modified_pixels": 126,
+      "sha256": "0472114ec64717233caa50d8b118550a168849066f73a37c14908c3831fb3948"
+    },
+    {
+      "name": "stalagmite_s4",
+      "dimensions": [
+        30,
+        52
+      ],
+      "modified_pixels": 112,
+      "sha256": "30e2d2a2b9aadcb2ced52292c7135bed4d0c71b33076f686b2faeb2766e39646"
+    },
+    {
+      "name": "stalagmite_s5",
+      "dimensions": [
+        30,
+        52
+      ],
+      "modified_pixels": 124,
+      "sha256": "c7cf059315d71f632110fbeaa8af15f92d2726acab44670e369603f78b845f17"
+    },
+    {
+      "name": "carving_flower",
+      "dimensions": [
+        34,
+        44
+      ],
+      "modified_pixels": 233,
+      "sha256": "f79951a35a32d0b670991cfe164332641d8959a31b7203bde39373156e14c39f"
+    },
+    {
+      "name": "chest_gk",
+      "dimensions": [
+        34,
+        32
+      ],
+      "modified_pixels": 164,
+      "sha256": "daf95835f6421a8ec4205dd7ac755e051a564263536994a45dd3314aedbcd779"
+    },
+    {
+      "name": "lantern_off",
+      "dimensions": [
+        26,
+        70
+      ],
+      "modified_pixels": 95,
+      "sha256": "a7d7106d4e72724dd7f6ca282e3cfa726798942322c60695b0424f16b0b3f882"
+    },
+    {
+      "name": "tree_dark",
+      "dimensions": [
+        92,
+        115
+      ],
+      "modified_pixels": 348,
+      "sha256": "d4f8bcb8ee90404edd558dd9d849a0fd29b008265310524ac604dd1f4e4a0e63"
+    },
+    {
+      "name": "bush",
+      "dimensions": [
+        46,
+        30
+      ],
+      "modified_pixels": 131,
+      "sha256": "5c6de088a23c9b7861e7bcec76e8b81b7882f07aa1a3d89f9e75f393479a3ba7"
+    },
+    {
+      "name": "bush_plain",
+      "dimensions": [
+        46,
+        30
+      ],
+      "modified_pixels": 158,
+      "sha256": "a700c5a5e51e70ff49126834980f8ee8997c932ef850ec5e4180892d7b683d07"
+    },
+    {
+      "name": "bush_berry",
+      "dimensions": [
+        46,
+        30
+      ],
+      "modified_pixels": 158,
+      "sha256": "f1956fdc65949ec65c671564e2bd517ae8e95d6a811e2177ec8712988fd6e232"
+    },
+    {
+      "name": "stone_lantern",
+      "dimensions": [
+        28,
+        56
+      ],
+      "modified_pixels": 164,
+      "sha256": "2a1ecef870aa79c3af675b4ff86e36a8dad44c1d64a6a6b951ed9a89d68877cb"
+    },
+    {
+      "name": "waterfall_hb",
+      "dimensions": [
+        76,
+        120
+      ],
+      "modified_pixels": 1862,
+      "sha256": "fe0ab6b9690a59f8ccb64105e9f2212724247772f28658288fed029f52d81c43"
+    },
+    {
+      "name": "bridge_broken_hb",
+      "dimensions": [
+        130,
+        60
+      ],
+      "modified_pixels": 660,
+      "sha256": "76bcf4bdbd8cd7ac283139f55cf3f42cf0e8eac1982671572aa7acd98a379a71"
+    },
+    {
+      "name": "cave_entrance",
+      "dimensions": [
+        110,
+        90
+      ],
+      "modified_pixels": 378,
+      "sha256": "900d4903e54501a0e6687df5bca98d261ff9172809685387ec6d5dfa2f1fd215"
+    },
+    {
+      "name": "carving_moon",
+      "dimensions": [
+        34,
+        44
+      ],
+      "modified_pixels": 233,
+      "sha256": "a660d9d781ae78da24b6e93f0dcf64416aa6cad26297e01512ea75e80f1972a4"
+    },
+    {
+      "name": "tent",
+      "dimensions": [
+        84,
+        62
+      ],
+      "modified_pixels": 74,
+      "sha256": "051844bd19e8e0c3d8b892ba0953b7ff8977266340b882c9547386a5976cb58b"
+    },
+    {
+      "name": "campfire",
+      "dimensions": [
+        36,
+        34
+      ],
+      "modified_pixels": 112,
+      "sha256": "4c77a91f117aaaee0fe4e841b1f1ac49b5402627d4edcba88b0c3ff2ab1710df"
+    },
+    {
+      "name": "log_bench",
+      "dimensions": [
+        62,
+        22
+      ],
+      "modified_pixels": 150,
+      "sha256": "60c9c77b932dd51414684c907cf911eadb46107b6c215e93c9f4b8677ea4dd90"
+    },
+    {
+      "name": "log_bench_b",
+      "dimensions": [
+        62,
+        22
+      ],
+      "modified_pixels": 150,
+      "sha256": "a4458ba4dff6ed35ca93ecd617b4cd3e41648707e8d50caabdfe5dcf81d58519"
+    },
+    {
+      "name": "carving_star",
+      "dimensions": [
+        34,
+        44
+      ],
+      "modified_pixels": 233,
+      "sha256": "c85ee18bc822c25f03257bc81c8a479bbfd40eae4784f57072114891114c9793"
+    },
+    {
+      "name": "mushroom_ring",
+      "dimensions": [
+        108,
+        75
+      ],
+      "modified_pixels": 50,
+      "sha256": "b732218e6055b1a0c4a07561976204b05c87dc1af0eed3b1e420ac709b911d14"
+    },
+    {
+      "name": "chest",
+      "dimensions": [
+        34,
+        32
+      ],
+      "modified_pixels": 164,
+      "sha256": "e35a71c6a6295cef7f998e4392bbd084ae53261751c0b78ea512685395458675"
+    },
+    {
+      "name": "chest_hs",
+      "dimensions": [
+        34,
+        32
+      ],
+      "modified_pixels": 164,
+      "sha256": "86bf2c2408d0da6a341a9cbdb97bd79bc4a26dd805753961312a2357b04d54b3"
+    },
+    {
+      "name": "stone_lantern_e",
+      "dimensions": [
+        28,
+        56
+      ],
+      "modified_pixels": 164,
+      "sha256": "6f5742e911c27c4e841d8222e22580bdac2abca658eed35fb1493b39bb2db1a4"
+    },
+    {
+      "name": "signpost_e2",
+      "dimensions": [
+        64,
+        56
+      ],
+      "modified_pixels": 243,
+      "sha256": "89077014fae063af6d3e89e36f1ce5db4a91beacbb605cb787a91e66443d4c70"
+    },
+    {
+      "name": "signpost_s2",
+      "dimensions": [
+        64,
+        56
+      ],
+      "modified_pixels": 243,
+      "sha256": "3d19ddd245b5cb64e5e2651680bc5e3541025b6949a88cb668b47b936243d4e0"
+    },
+    {
+      "name": "signpost_hx",
+      "dimensions": [
+        64,
+        56
+      ],
+      "modified_pixels": 243,
+      "sha256": "5342832e4c214fc18442af59ef872c9f54d044be8ee621fd871c7f7f1464d4c0"
+    }
+  ],
+  "purpose": "Fantasy forest stage3, visual changes only; all map/collision/story/save/audio untouched"
+}

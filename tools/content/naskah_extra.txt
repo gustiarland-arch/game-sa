@@ -1,0 +1,254 @@
+# NASKAH tambahan v1.0: hari bebas, Festival Lentera, side quest baru (DRAFT FIKSI)
+# Pembicara "me" = tokoh yang dimainkan, "partner" = pasangannya. Builder membuat versi @arland dan @sofia otomatis.
+
+# ======================================================================== HARI BEBAS C02 (pagi sebelum kencan)
+=== C02-FREE | Pagi yang Panjang | shared | C02
+me(senyum): Jam empat masih lama. Kota kelihatan ramai pagi ini.
+me(neutral): Mungkin aku jalan-jalan dulu. Siapa tahu ada yang butuh bantuan.
+narrator: Hari bebas: lakukan dua kegiatan di kota sebelum bersiap untuk sore.
+
+=== F2-SIRAM-1 | Bunga Plaza | shared | C02
+sari(senyum): Pagi, Nak. Tangan Nenek sudah tidak sekuat dulu. Mau bantu menyiram tiga petak bunga di plaza?
+me(senang): Tentu, Nek. Petak yang mana saja?
+sari(neutral): Yang di dekat air mancur, yang di depan rumah-rumah, dan yang di sisi barat. Ini gemboranya.
+
+=== F2-SIRAM-2 | Bunga yang Segar | shared | C02
+sari(senang): Lihat, bunganya langsung tegak lagi. Seperti habis minum teh pagi.
+me(tertawa): Bunganya minum teh juga, Nek?
+sari(senyum): Semua yang dirawat dengan sabar akan tumbuh, Nak. Bunga, kebun, juga perasaan.
+sari(neutral): Ambil ini. Permen jahe buatan Nenek. Bagus untuk menghangatkan tenggorokan sebelum bicara penting.
+me(malu): Bicara penting?
+sari(tertawa): Nenek sudah tua, tapi mata Nenek masih awas.
+
+=== F2-ARCADE-1 | Tantangan Pagi | shared | C02
+juna(senang): Pagi-pagi sudah ke arcade? Pas! Mesin baru: Hujan Bintang. Tangkap bintang sebanyak-banyaknya!
+me(penasaran): Ada hadiahnya?
+juna(serius): Hadiahnya kehormatan. Dan stiker bintang.
+
+=== F2-ARCADE-2 | Skor Baru | shared | C02
+juna(kaget): Wah, skor kamu masuk papan! Mau tulis nama apa?
+me(senyum): Tulis saja inisialku.
+juna(tertawa): Siap. Nanti kalau ada inisial lain di sebelahnya, Abang nggak akan tanya-tanya.
+me(malu): Bang Juna!
+
+=== F2-DITO-1 | Petak Umpet | shared | C02
+dito(senang): Kakak! Main petak umpet, yuk! Dito sembunyi, Kakak cari. Taman ini besar, lho!
+me(tertawa): Oke. Aku hitung sampai sepuluh.
+dito(senang): Jangan intip! Satu... eh, Kakak yang hitung!
+
+=== F2-DITO-2 | Ketemu | shared | C02
+dito(kaget): Yah, ketahuan lagi!
+me(senyum): Sepatumu kelihatan dari balik semak.
+dito(tertawa): Besok Dito pakai sepatu hijau biar nyamar.
+
+=== F2-DITO-3 | Juara Petak Umpet | shared | C02
+dito(senang): Kakak jago! Dito sembunyi di tiga tempat, ketemu semua.
+dito(serius): Kakak kayak detektif. Atau... kayak orang yang lagi nyari sesuatu yang penting.
+me(neutral): Mungkin karena aku terbiasa memperhatikan hal kecil.
+dito(senyum): Kalau gitu Kakak pasti tahu Dito sebenarnya sengaja kalah sekali. Hehe.
+
+# ======================================================================== HARI BEBAS C03 (Pasar Minggu)
+=== C03-FREE | Pasar Minggu | shared | C03
+narrator: Minggu pagi. Plaza berubah jadi pasar kecil: tenda warna-warni, wangi buah, dan suara tawar-menawar.
+me(senang): Pasar Minggu! Sudah lama nggak ke sini.
+me(neutral): Lihat-lihat dulu, ah. Rencana hari ini bisa menunggu sebentar.
+narrator: Hari bebas: kunjungi dua lapak di Pasar Minggu.
+
+=== F3-BUAH | Lapak Buah | shared | C03
+narrator: Pedagang buah menunjuk semangka besar di atas meja.
+narrator: "Tebak beratnya! Kalau tepat, semangka kecilnya gratis!"
+me(penasaran): Hmm... kelihatannya berat sekali.
+? Empat kilo
+B> narrator: "Wah, kurang sedikit! Lima kilo pas. Tapi tebakanmu paling dekat pagi ini. Ambil satu jeruk, ya!"
+? Lima kilo | F3_GUESS_RIGHT
+B> narrator: "Tepat lima kilo! Semangka kecil gratis untukmu!"
+B> me(senang): Asyik! Nanti kubawa untuk piknik.
+? Delapan kilo
+B> narrator: "Delapan? Ini semangka, bukan karung beras! Ha ha. Lima kilo. Ambil satu jeruk, deh."
+me(tertawa): Pasar memang tempat paling seru di kota.
+
+=== F3-BUKU | Lapak Buku Bekas | shared | C03
+narrator: Kardus-kardus penuh buku tua. Bau kertasnya hangat dan berdebu.
+me(penasaran): Ada novel petualangan, buku resep kuno, dan... buku foto langit.
+? Ambil buku resep kuno | F3_BOOK_RECIPE
+B> me(senyum): Resep kue zaman dulu. Siapa tahu bisa dicoba di dapur kafe.
+? Ambil buku foto langit | F3_BOOK_SKY
+B> me(senyum): Foto langit dari berbagai kota. Bikin pengin jalan-jalan.
+? Ambil novel petualangan | F3_BOOK_NOVEL
+B> me(senang): Novel petualangan. Halaman pertamanya sudah bikin penasaran.
+narrator: Di sampul dalam buku itu ada tulisan kecil: "Untuk siapa pun yang menemukan ini. Semoga harimu menyenangkan."
+
+=== F3-GELANG-1 | Lempar Gelang | shared | C03
+juna(senang): Ayo, ayo! Lempar gelang ke botol, dapat boneka! Hari ini Abang buka lapak di pasar!
+me(tertawa): Bang Juna di mana-mana.
+juna(serius): Arcade tutup tiap Minggu pagi. Bisnis harus jalan terus!
+
+=== F3-GELANG-2 | Hadiah Pasar | shared | C03
+juna(senang): Mantap! Lemparanmu stabil. Ini gantungan kunci bintang.
+me(senyum): Lucu. Pas untuk tas.
+juna(neutral): Satu lagi buat orang spesial, nggak? Abang kasih diskon perasaan.
+me(malu): Diskon perasaan itu apa, Bang?
+
+# ======================================================================== HARI BEBAS C05 (persiapan festival)
+=== C05-FREE | Sore Sebelum Festival | shared | C05
+narrator: Sore yang cerah. Warga sibuk menyiapkan Festival Lentera di Taman Kota yang akan digelar beberapa hari lagi.
+me(senang): Semua orang kelihatan bersemangat.
+me(neutral): Aku bantu sedikit sebelum malam. Rasanya malam ini akan panjang.
+narrator: Hari bebas: bantu dua persiapan festival.
+
+=== F5-TEH-1 | Teh untuk Festival | shared | C05
+raka(senang): Pas sekali! Saya butuh asisten menuang teh rempah untuk uji rasa festival.
+raka(serius): Tuang pelan-pelan. Kalau terlalu cepat, rempahnya belum keluar.
+me(neutral): Oke. Pelan dan sabar.
+
+=== F5-TEH-2 | Uji Rasa | shared | C05
+raka(senyum): Hm... jahe, kayu manis, sedikit gula aren. Sempurna untuk malam yang dingin.
+raka(neutral): Kamu tahu kenapa teh ini cocok untuk festival lentera?
+me(penasaran): Kenapa, Kak?
+raka(senyum): Karena orang lebih jujur kalau tangannya hangat.
+
+=== F5-LENTERA-1 | Menggantung Lentera | shared | C05
+melati(senyum): Nak, bisa bantu Ibu menggantung empat lentera di taman? Ibu sudah tandai cabang-cabangnya.
+me(senang): Tentu, Bu.
+melati(neutral): Satu dekat gazebo, satu dekat kolam, satu di jembatan, satu di pohon tua.
+
+=== F5-LENTERA-2 | Taman Bercahaya | shared | C05
+melati(senang): Lihat, taman sudah mulai bercahaya meski belum malam.
+melati(senyum): Dulu Ibu dan suami Ibu bertemu di festival ini. Dia menjatuhkan lentera ke kolam karena gugup.
+me(tertawa): Terus bagaimana, Bu?
+melati(tertawa): Kami memancingnya bersama sampai basah. Sejak itu Ibu selalu ikut menghias.
+
+=== F5-KARTU | Kartu Harapan | shared | C05
+narrator: Di papan pengumuman, warga menempelkan kartu harapan untuk festival.
+me(neutral): Aku juga mau menulis satu.
+? "Semoga kota ini selalu hangat" | F5_WISH_TOWN
+B> me(senyum): Untuk semua orang di kota ini.
+? "Semoga orang yang kusayangi bahagia" | F5_WISH_LOVE
+B> me(malu): Nggak perlu ditulis namanya. Dia pasti tahu.
+? "Semoga tahun depan bisa ke festival lagi" | F5_WISH_AGAIN
+B> me(senang): Biar jadi tradisi.
+narrator: Kartu itu menempel di antara puluhan harapan lain, berkibar pelan ditiup angin sore.
+
+# ======================================================================== EPILOG: FESTIVAL LENTERA
+=== EPI-FEST-0 | Undangan Festival | shared | EPI
+narrator: Beberapa hari kemudian, sore hari. Papan pengumuman penuh pita: "Malam ini: Festival Lentera di Taman Kota!"
+partner(senang): Festivalnya malam ini! Kita datang bareng, ya?
+me(senyum): Tentu. Kita kan ikut menyiapkannya.
+partner(penasaran): Aku penasaran lentera-lentera yang kita gantung waktu itu.
+
+=== EPI-FEST-1 | Malam Festival | shared | EPI
+narrator: Taman Kota bermandikan cahaya. Lentera tergantung di setiap cabang, dan kolam memantulkan ratusan titik emas.
+sari(senang): Kalian datang! Nenek sudah menyimpan tempat terbaik di dekat kolam.
+dito(senang): Kakak berdua! Dito jadi pembawa lentera paling depan tadi!
+raka(senyum): Teh rempah gratis untuk semua yang membantu persiapan. Itu termasuk kalian.
+melati(senyum): Tahun ini taman paling terang. Ibu tidak bohong, lho.
+juna(senang): Lapak Hujan Bintang buka! Tantang Abang kalau berani!
+udin(tertawa): Bapak cuma mau duduk lihat lentera. Ikan-ikan juga nonton dari kolam.
+partner(senyum): Semua orang ada di sini.
+me(senyum): Rasanya seperti seluruh kota jadi satu halaman Memory Book.
+narrator: Festival: nikmati tiga kegiatan, lalu lepaskan lentera bersama di kolam.
+
+=== EPI-FEST-TEH | Teh Rempah Festival | shared | EPI
+raka(senyum): Dua gelas teh rempah, resep Pak Harto. Hati-hati, panas.
+partner(senang): Hangat sekali.
+me(neutral): Kak Raka, terima kasih untuk semuanya. Kafe Senja jadi tempat banyak kenangan kami.
+raka(senyum): Kafe itu memang dibuat untuk orang yang ingin bicara pelan-pelan. Kalian pelanggan terbaiknya.
+
+=== EPI-FEST-MAHKOTA | Mahkota Bunga | shared | EPI
+melati(senyum): Ibu buatkan mahkota bunga. Pilih bunganya, Nak.
+? Melati putih | EPI_CROWN_JASMINE
+B> melati(senyum): Melati. Ketulusan yang sederhana.
+? Mawar merah muda | EPI_CROWN_ROSE
+B> melati(senyum): Mawar merah muda. Rasa sayang yang lembut.
+? Bunga matahari kecil | EPI_CROWN_SUN
+B> melati(senang): Bunga matahari. Selalu menghadap cahaya.
+partner(malu): Cocok, kan?
+me(senyum): Cocok sekali.
+
+=== EPI-FEST-BINTANG | Hujan Bintang Festival | shared | EPI
+juna(senang): Hujan Bintang edisi festival! Siapa yang tangkap paling banyak, menang!
+partner(tertawa): Aku duluan!
+me(serius): Aku jadi penyemangat. Lalu aku kalahkan skornya.
+
+=== EPI-FEST-UDIN | Cerita Pak Udin | shared | EPI
+udin(senyum): Kalian tahu? Dulu di festival seperti ini, Bapak melihat ikan bercahaya untuk pertama kali.
+udin(neutral): Orang bilang itu Ikan Bintang. Muncul kalau ada yang melepas lentera dengan harapan tulus.
+partner(penasaran): Pak Udin pernah melepas lentera?
+udin(tertawa): Pernah. Harapannya sederhana: semoga kota ini tidak pernah sepi. Lihat sekarang.
+
+=== EPI-FEST-LEPAS | Lentera untuk Esok | shared | EPI
+narrator: Di tepi kolam, mereka memegang satu lentera bersama. Kertasnya hangat oleh nyala lilin di dalamnya.
+partner(neutral): Kita tulis apa di lenteranya?
+me(neutral): Bukan harapan besar. Cukup yang kecil-kecil.
+partner(senyum): Seperti apa?
+me(senyum): "Semoga kita terus punya alasan untuk jalan-jalan sore."
+partner(tertawa): Itu harapan kecil yang besar.
+narrator: Lentera itu terangkat pelan, bergabung dengan ratusan lentera lain di atas kolam.
+narrator: Sesaat, di permukaan air, seekor ikan kecil berpendar. Dan di dalam tas, Memory Book terasa hangat.
+partner(kaget): Kamu lihat itu?
+me(senyum): Lihat. Kurasa Lumi juga ikut festival.
+narrator: Malam itu, satu halaman kosong di Memory Book terisi sendiri: gambar dua orang dan satu lentera.
+@flags EPI_FESTIVAL_DONE
+
+# ======================================================================== SIDE: SURAT PAK POS
+=== SQ-POS-1 | Pak Pos Kewalahan | shared | SIDE
+pos(sedih): Aduh, sepedaku kempes, dan masih ada lima surat yang harus diantar hari ini.
+me(neutral): Saya bantu, Pak. Untuk siapa saja?
+pos(senang): Kamu baik sekali! Untuk Bu Melati, Bang Juna, Pak Udin, Kak Raka, dan Nenek Sari.
+pos(neutral): Surat zaman sekarang jarang. Jadi yang lima ini pasti penting.
+
+=== SQ-POS-MELATI | Surat untuk Bu Melati | shared | SIDE
+melati(kaget): Surat? Dari... anak Ibu yang kuliah di luar kota.
+melati(senyum): Dia tulis tangan. Katanya, "Bu, aku rindu wangi toko bunga." Ah, anak itu.
+
+=== SQ-POS-JUNA | Surat untuk Bang Juna | shared | SIDE
+juna(kaget): Surat untuk Abang? Dari... perusahaan game! Mereka mau beli desain game buatan Abang!
+juna(senang): Kamu pembawa kabar baik! Nanti kamu masuk kredit gamenya. Serius!
+
+=== SQ-POS-UDIN | Surat untuk Pak Udin | shared | SIDE
+udin(senyum): Dari cucu Bapak. Ada gambar ikan pakai krayon. Warnanya ungu, padahal tidak ada ikan ungu.
+udin(tertawa): Ya sudah. Mulai sekarang di danau ini ada ikan ungu.
+
+=== SQ-POS-RAKA | Surat untuk Kak Raka | shared | SIDE
+raka(kaget): Ini... tulisan Pak Harto, pemilik pertama kafe. Dikirim lewat pengacaranya.
+raka(senyum): "Terima kasih sudah menjaga kafe ini tetap hangat." Wah. Saya butuh duduk sebentar.
+
+=== SQ-POS-SARI | Surat untuk Nenek Sari | shared | SIDE
+sari(senyum): Kartu dari teman lama Nenek di kota sebelah. Kami bersahabat sejak sekolah dasar.
+sari(tertawa): Dia masih saja menulis "Sari si cerewet." Sudah tujuh puluh tahun, masih saja.
+
+=== SQ-POS-2 | Kurir Kota | shared | SIDE
+pos(senang): Semua sampai? Kamu kurir terbaik yang pernah Bapak lihat. Bahkan lebih cepat dari Bapak.
+pos(senyum): Ini perangko langka edisi festival. Tempel di Memory Book-mu, ya.
+
+# ======================================================================== SIDE: KOLEKSI RESEP
+=== SQ-RESEP3-1 | Buku Resep Kafe | shared | SIDE
+raka(senyum): Dapur kafe boleh kamu pakai untuk latihan. Ini tiga resep andalan kafe yang belum pernah dicoba orang luar.
+raka(neutral): Kue jahe, puding kelapa, dan roti kayu manis. Bahannya ada di dapur. Tinggal tanganmu.
+me(senang): Tantangan diterima, Kak.
+
+=== SQ-RESEP3-2 | Koki Kafe Senja | shared | SIDE
+raka(kaget): Tiga-tiganya? Rasanya... hampir seperti buatan Pak Harto.
+raka(senyum): Ini celemek resmi Kafe Senja. Kamu boleh masak di sini kapan saja.
+
+# ======================================================================== SIDE: RAK BUKU KOTA
+=== SQ-BUKU-1 | Buku yang Tersesat | shared | SIDE
+narrator: Rak buku kafe berlabel "Pinjam & Kembalikan". Lima tempatnya kosong.
+narrator: Ada catatan kecil: "Lima buku belum kembali. Mungkin tertinggal di sekitar kota."
+me(penasaran): Aku cari, deh. Buku yang tersesat pasti ingin pulang.
+
+=== SQ-BUKU-2 | Rak Lengkap | shared | SIDE
+narrator: Lima buku kembali ke tempatnya. Di balik buku terakhir, terselip pembatas buku bergambar lentera.
+me(senyum): Hadiah kecil dari rak buku. Manis sekali.
+
+# ======================================================================== SIDE: MURAL BARU
+=== SQ-MURAL-1 | Mural yang Pudar | shared | SIDE
+dito(serius): Kak, mural di plaza mulai pudar. Dito dan Bang Juna mau mengecat ulang!
+juna(senang): Tapi kami butuh empat kaleng cat: merah muda, kuning, ungu, dan biru. Tersebar di gudang-gudang kota.
+me(senyum): Aku bantu cari.
+
+=== SQ-MURAL-2 | Mural Baru | shared | SIDE
+dito(senang): Selesai! Muralnya sekarang ada lentera, bintang, dan... dua orang di tengah!
+juna(tertawa): Abang nggak bilang itu siapa, ya. Seniman bebas berimajinasi.
+me(malu): Kalian ini.
+@flags SQ_MURAL_PAINTED

@@ -1,0 +1,415 @@
+{
+  "characters": 25,
+  "walk_phases": 16,
+  "idle_phases": 8,
+  "assets": [
+    {
+      "path": "android/assets/characters/arland/walk_v37.png",
+      "sha256": "1d687850e68a61c55a1281eef52fecd6579954a016783295a765734324390a08",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/arland/idle_v37.png",
+      "sha256": "da005921055ed87f85d0f7743912e4014cf6f0bbabdd340355e9a3bbd9a2e60e",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/bayu/walk_v37.png",
+      "sha256": "8137e9094bec150a2b5d94e28f7ba741c32a5074c9b24c58123f23ef18bd91e7",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/bayu/idle_v37.png",
+      "sha256": "36e1ef1a79d9ba23333ff6162a86f19e8cacca39cf451b8ed600a7da93914e1f",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/bimo/walk_v37.png",
+      "sha256": "13a26cac0846cda6f0931ffeea42576146bd4b363742e27aaf60ecaea1a4a8a7",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/bimo/idle_v37.png",
+      "sha256": "9a89cd9862708e9d021992044815513bb4ce772c4d5c248581e306d0e85ec7bd",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/darmo/walk_v37.png",
+      "sha256": "aa0f58aa83e2578df76a82f757c6fb22a75dcb99f3d3270d06ab6a4416bcf7ad",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/darmo/idle_v37.png",
+      "sha256": "23143f69acbdbe0461096553ed185fadb3425449c8ab5e1fa92c6760d4f6a4d3",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/darto/walk_v37.png",
+      "sha256": "07b5406d229101cd040c9611813ad03d15f8a883545879fb06cf9516a1c95644",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/darto/idle_v37.png",
+      "sha256": "aa539548f29e86d2751536ea77edc5b416ed300e58ba9f083d93fdf85e204ef5",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/dito/walk_v37.png",
+      "sha256": "19915dc8f376c38fed56b8f4f74d25c033d6d0d2318de6d7b7f7520966dfa4c3",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/dito/idle_v37.png",
+      "sha256": "c5bc4ef1150878042d5767290f946d147c6872855f88dff39d7c9e4f5aa7fc78",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/eko/walk_v37.png",
+      "sha256": "5fb2718fe58ecad9343eacff3000d1d3bda826733f183d1341770c192d7b7d6b",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/eko/idle_v37.png",
+      "sha256": "52a2407ce73268ad075191b63b5c9e0d72af10bb0d102367bce1a5c5f4f1b569",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/harun/walk_v37.png",
+      "sha256": "c2d5b0d0dc6da48e06f31091f7c02ff6294229fbf0ff6ea072c99ab1c2fe0a83",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/harun/idle_v37.png",
+      "sha256": "35a5afe9106e000020808c0947c0edc8d31c46ab1cc8d75dee3afed42436cfac",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/ina/walk_v37.png",
+      "sha256": "2978a8b087f9c3d9ce669446422df0b57f712663086c5f6fae20d88d550f5cfb",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/ina/idle_v37.png",
+      "sha256": "e14edab9ebd42f7e2b8c8cacb87460e83d3ce59544fc118140765a7da32961ad",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/juna/walk_v37.png",
+      "sha256": "2cc0fc76db293deeff5e6bd198e2695f5cfbfd871d4de177bac947e63a75553e",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/juna/idle_v37.png",
+      "sha256": "f14aa0de1f26fd927ac15f9ea4f157dbfdb48a309ef0128de922d1ab8cdf1b4a",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/laras/walk_v37.png",
+      "sha256": "6a0904a68b763b84cb3e327f8ae50a3d6a432cc5791627f0fca4dc84ad45c80b",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/laras/idle_v37.png",
+      "sha256": "042b16e10a8a7ffc0667700b99882f04e688216120f93e84f26879b4c2a51129",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/lumi/walk_v37.png",
+      "sha256": "b3fb06dc251e2957a43a263591f69cdd8bf38a4440015aa620209790ceb03563",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/lumi/idle_v37.png",
+      "sha256": "fdfd2c2c9ce575ff451caa6d93fcbf13a6b4e66a9965a365545caf802f63ee1a",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/melati/walk_v37.png",
+      "sha256": "7f83611eeca24b1ccfba0d389201cc452673929c6f01ccec3a2158a5c3dbf9d4",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/melati/idle_v37.png",
+      "sha256": "fdd5c4be8fa70168e9b8b2bf15b78b6549d8f562ac22f42aab530cec87491d33",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/nara/walk_v37.png",
+      "sha256": "387e525b3f5b6473e96ab19b6b4257c0cc0460ecc013b58eff7ee6013bd0f4cf",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/nara/idle_v37.png",
+      "sha256": "02fe5984121518f22446445a1b71842309da8b3da0a3bbac349269643e989312",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/pos/walk_v37.png",
+      "sha256": "7a9fb3059217af7eb3a4312b64182f96324ab4b4a589242e21d1968aab0012be",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/pos/idle_v37.png",
+      "sha256": "89133936f00a112742496f64c36ebe452fb8e9e5a565809de1e61d7b979a9685",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/raka/walk_v37.png",
+      "sha256": "8e09cfee3da3b6b70f255c0635686bee2c9be5f8af7960abc5d45215cd52477c",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/raka/idle_v37.png",
+      "sha256": "a9bdb8e3b914e11f1a9af171eeb936e50c82b56c2f98f461fbb8e1789a977975",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/rara/walk_v37.png",
+      "sha256": "b7b7869613bebe84a0b5ef4db89391a96e9b7d72aef38cc8eafdbac3912448d7",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/rara/idle_v37.png",
+      "sha256": "cd878e036ea8caab3c6717b06dd76182a93eea1e96eebbfcf0ce467ae000ff8f",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/rini/walk_v37.png",
+      "sha256": "0ae134489e4b1943cd26e64907c01c6c208bcb4123724d75355fdad26d65b4c4",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/rini/idle_v37.png",
+      "sha256": "207423e38c4186d4f5a3d7ae7babbfaf6c5f270e03694bb1dabdaf57193d3750",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/sari/walk_v37.png",
+      "sha256": "56b31563a39b51cd3063b1214cec80b4b647ba342a22f69a32920bd9872256e6",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/sari/idle_v37.png",
+      "sha256": "63af3bafa4f2b1c25eb75bf5c942cc3dd173bc9b391681cd842476f9cd6b7f5a",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/sofia/walk_v37.png",
+      "sha256": "56086c8bab18c15e659e8ea513210c292905b27d84bc736e0e7c91d686eb5586",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/sofia/idle_v37.png",
+      "sha256": "893fe5fabec9542054afe557ad5ed9d39d8cf98825de604f2463901df1828b7f",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/tigor/walk_v37.png",
+      "sha256": "debd673be873fce2da13563c405c3e812cdb716633a1a36363b280b57d9d505d",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/tigor/idle_v37.png",
+      "sha256": "c2dff789ec4931c53748449c2617d009794c9e3172cd4d8cd4f386a1d818a6ca",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/tika/walk_v37.png",
+      "sha256": "7765eb6e9011a82ae0a5cf28a9c49a9852dc2d1c6509d991c301f90692ffbd4c",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/tika/idle_v37.png",
+      "sha256": "bd582ba255338432387da9ea25453ecc4ad06e8fe45d74922f70e25c6ff9c989",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/udin/walk_v37.png",
+      "sha256": "7c0a79f89a795d2ae4ff843f44208b4f7121e78ef645a2c3a43ffdf5f44414b5",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/udin/idle_v37.png",
+      "sha256": "e25ba91de58963c07d6ed770154fec423693e87dd26a905ef2eefedb0cfa7806",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/ujang/walk_v37.png",
+      "sha256": "057703a931e25d5e7b66e7d1c07e09d256021139691d30271b15743d3100828e",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/ujang/idle_v37.png",
+      "sha256": "c2d47109b641c97dff5ac2ca4abaaa449e1c937b1bd2593ab2c263b9806f28be",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/wulan/walk_v37.png",
+      "sha256": "8e209e884d40c478af7fc6aa7f46e1e212086a547a058cc571b39863262fa225",
+      "size": [
+        768,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/characters/wulan/idle_v37.png",
+      "sha256": "b0967950ac2413f6e5af4a7430ed444cbc6279d34b55a40f282ac16eb4d47324",
+      "size": [
+        384,
+        288
+      ]
+    },
+    {
+      "path": "android/assets/fx/contact_shadow_v37.png",
+      "sha256": "4e80b8438f40a8894f322720b0906f82a9514a1b0606f87392c57d607d4ee108",
+      "size": [
+        96,
+        36
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "4.2.0",
+  "previous": "4.1.0",
+  "project_files_before": 1645,
+  "project_files_after_before_report": 1740,
+  "new_source_files": 95,
+  "old_files_missing": [],
+  "runtime_files_modified": 46,
+  "runtime_files_added": 0,
+  "runtime_files_removed": 0,
+  "generated_editable_rgba_layers": 39,
+  "original_sprite_backups": 33,
+  "map_backups": 13,
+  "buildAndroidVerified": false
+}

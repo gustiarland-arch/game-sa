@@ -1,0 +1,1017 @@
+{
+  "meta": {
+    "title": "Arland & Sofia: Our Little Universe",
+    "format": "narrative_reference",
+    "version": "1.0",
+    "status": "draft_fiction",
+    "note": "Do not treat fictional sample scenes as real relationship history."
+  },
+  "routes": [
+    "arland",
+    "sofia"
+  ],
+  "canon_event_ids": [
+    "CANON_PLAZA_MEET",
+    "CANON_BOOK_OPEN",
+    "CANON_MEMORY_GARDEN",
+    "CANON_CAFE_LETTER",
+    "CANON_RIVERSIDE",
+    "CANON_DATE_PHOTO",
+    "CANON_RAIN_TALK",
+    "CANON_ETERNAL_GARDEN"
+  ],
+  "chapters": [
+    {
+      "id": "PRO",
+      "title": "Prologue — The Book of Us",
+      "target_minutes": "15–20",
+      "route_arland": "Bangun pagi; membaca pesan; membuat bunga kertas; pergi ke plaza.",
+      "route_sofia": "Terbangun dari mimpi buku; membaca pesan; menyiapkan kartu pos; pergi ke plaza.",
+      "shared_canon": "Bertemu di plaza, saling memberikan hadiah, menemukan Memory Book, mencari tiga keping cahaya di Memory Garden, kembali ke kota."
+    },
+    {
+      "id": "C01",
+      "title": "Chapter 1 — The Beginning of Us",
+      "target_minutes": "25–35",
+      "route_arland": "Mengambil catatan kecil; membaca mural dengan simbol bunga; menemukan petunjuk urutan BUNGA–BUKU–BINTANG.",
+      "route_sofia": "Mengambil pembatas buku; membaca mural dengan simbol bintang; menemukan petunjuk urutan BINTANG–BUKU–BUNGA.",
+      "shared_canon": "Masuk Kafe Senja, menyelesaikan puzzle tiga simbol, membuka surat rahasia, membaca kenangan bersama di tepi danau."
+    },
+    {
+      "id": "C02",
+      "title": "Chapter 2 — A Little Date",
+      "target_minutes": "35–45",
+      "route_arland": "Menyiapkan kejutan kecil dan memilih hadiah yang bermakna.",
+      "route_sofia": "Memilih outfit dan menyiapkan pesan kecil untuk Arland.",
+      "shared_canon": "Pertemuan di Kafe Senja; date quest dengan satu aktivitas pilihan; photobooth; foto bersama."
+    },
+    {
+      "id": "C03",
+      "title": "Chapter 3 — The Little Things",
+      "target_minutes": "35–45",
+      "route_arland": "Menyiapkan camilan atau dekorasi kecil; menemukan benda yang mengingatkan Sofia.",
+      "route_sofia": "Menata sudut kenangan dan menulis catatan singkat; memilih dekorasi.",
+      "shared_canon": "Masak bersama atau mengatur piknik, lalu mengisi satu halaman kosong di Memory Book."
+    },
+    {
+      "id": "C04",
+      "title": "Chapter 4 — Even When It Rains",
+      "target_minutes": "40–50",
+      "route_arland": "Menafsirkan kesalahpahaman dari informasi yang ia ketahui; mencari momen untuk menjelaskan.",
+      "route_sofia": "Menyadari hal berbeda dari hari yang sama; menyusun pesan yang jujur.",
+      "shared_canon": "Di Memory Realm sebuah lampu meredup; keduanya mengumpulkan dua sumber cahaya, berbicara, dan pulang bersama."
+    },
+    {
+      "id": "C05",
+      "title": "Chapter 5 — Across the Stars",
+      "target_minutes": "40–50",
+      "route_arland": "Menyusuri jalur kompas dan menemukan peta konstelasi.",
+      "route_sofia": "Menyusuri jalur lentera dan mengurai kode bintang.",
+      "shared_canon": "Dua petunjuk melengkapi puzzle di Starfall Village dan membuka gerbang Eternal Garden."
+    },
+    {
+      "id": "C06",
+      "title": "Chapter 6 — Our Tomorrow",
+      "target_minutes": "40–50",
+      "route_arland": "Menulis harapan tentang hal-hal kecil yang ingin dijaga.",
+      "route_sofia": "Menulis harapan tentang perjalanan yang ingin dibuat bersama.",
+      "shared_canon": "Menyatukan surat, membuka halaman terakhir yang ternyata kosong, memilih satu janji sederhana."
+    },
+    {
+      "id": "EPI",
+      "title": "Epilogue — To Be Continued",
+      "target_minutes": "10–15",
+      "route_arland": "Monolog akhir berdasarkan apa yang dipahami Arland.",
+      "route_sofia": "Monolog akhir berdasarkan apa yang dipahami Sofia.",
+      "shared_canon": "Free roam ringan, replay chapter dan Memory Book; bonus chapter dibuka setelah kedua route selesai."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "P-A01",
+      "title": "Pesan Pagi",
+      "route": "arland",
+      "location": "Kamar Arland",
+      "trigger": "Mulai route",
+      "lines": [
+        {
+          "speaker": "Narator",
+          "text": "Pagi yang biasa kadang menyimpan halaman yang tidak biasa.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Ada pesan dari Sofia. Sebentar, aku baca dulu.",
+          "emotion": "penasaran"
+        },
+        {
+          "speaker": "Sofia (pesan)",
+          "text": "Nanti kita ketemu di plaza, ya?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Oke. Aku pengin bawa sesuatu yang kecil, tapi spesial.",
+          "emotion": "senyum"
+        }
+      ],
+      "choices": [],
+      "director_note": "Kamera ringan ke ponsel di meja.",
+      "set_flags": "PRO_PHONE_READ"
+    },
+    {
+      "id": "P-S01",
+      "title": "Sisa Mimpi",
+      "route": "sofia",
+      "location": "Kamar Sofia",
+      "trigger": "Mulai route",
+      "lines": [
+        {
+          "speaker": "Narator",
+          "text": "Sofia terbangun dengan ingatan samar: sebuah buku yang menyala.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Mimpi itu aneh... tapi rasanya hangat.",
+          "emotion": "bingung"
+        },
+        {
+          "speaker": "Arland (pesan)",
+          "text": "Nanti ketemu di plaza, ya?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Aku mau bawa kartu kecil. Biar ada yang bisa dia simpan.",
+          "emotion": "senyum"
+        }
+      ],
+      "choices": [],
+      "director_note": "Animasi cahaya singkat, bukan jumpscare.",
+      "set_flags": "PRO_PHONE_READ"
+    },
+    {
+      "id": "P-A02",
+      "title": "Bunga Kertas",
+      "route": "arland",
+      "location": "Kamar Arland",
+      "trigger": "Ambil hadiah",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Ini mungkin sederhana banget.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Tapi aku bikin sendiri. Semoga Sofia suka, ya.",
+          "emotion": "malu"
+        }
+      ],
+      "choices": [],
+      "director_note": "Tambahkan ikon bunga kertas ke inventory.",
+      "set_flags": "PRO_GIFT_ARLAND"
+    },
+    {
+      "id": "P-S02",
+      "title": "Kartu Pos",
+      "route": "sofia",
+      "location": "Kamar Sofia",
+      "trigger": "Ambil hadiah",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Kalau ditulis terlalu panjang, nanti aku malah malu.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Tulis yang penting saja. Semoga Arland ngerti.",
+          "emotion": "malu"
+        }
+      ],
+      "choices": [],
+      "director_note": "Tambahkan ikon kartu pos ke inventory.",
+      "set_flags": "PRO_GIFT_SOFIA"
+    },
+    {
+      "id": "P-X01",
+      "title": "Di Plaza",
+      "route": "shared",
+      "location": "Plaza Kota",
+      "trigger": "Kedua karakter bertemu",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Sofia! Aku di sini!",
+          "emotion": "senang"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Aku lihat. Dari tadi kamu kelihatan semangat banget.",
+          "emotion": "tersenyum"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Ada sesuatu buat kamu.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Kebetulan... aku juga bawa sesuatu.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Dua hadiah kecil berpindah tangan. Tidak ada yang tahu apa yang akan datang berikutnya.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [
+        "Boleh aku lihat sekarang?",
+        "Kita duduk dulu, yuk."
+      ],
+      "director_note": "Dua pilihan berujung pada event canon yang sama; hanya respons berubah.",
+      "set_flags": "PRO_MET_PARTNER"
+    },
+    {
+      "id": "P-X02",
+      "title": "Buku yang Bercahaya",
+      "route": "shared",
+      "location": "Plaza Kota",
+      "trigger": "Periksa buku",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Arland, buku kecil ini dari mana?",
+          "emotion": "kaget"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Tadi nggak ada di sini, kan?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Coba buka halaman pertamanya.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Cahaya lembut muncul dari sela halaman, lalu membentuk pintu di udara.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Zoom lambat, partikel hangat, fade ke Memory Garden.",
+      "set_flags": "PRO_BOOK_FOUND"
+    },
+    {
+      "id": "P-X03",
+      "title": "Taman Kenangan",
+      "route": "shared",
+      "location": "Memory Garden",
+      "trigger": "Masuk portal",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Kita... ada di mana?",
+          "emotion": "kaget"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Lihat! Ada tiga cahaya kecil di taman itu.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Kalau dikumpulkan, mungkin bisa membuka jalan pulang.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Bareng-bareng, ya.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Mulai collectible 0/3 dan tampilkan hint.",
+      "set_flags": "PRO_GARDEN_ENTERED"
+    },
+    {
+      "id": "P-X04",
+      "title": "Gerbang Pulang",
+      "route": "shared",
+      "location": "Memory Garden",
+      "trigger": "3 serpihan terkumpul",
+      "lines": [
+        {
+          "speaker": "Narator",
+          "text": "Tiga keping cahaya menyatu menjadi satu halaman.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Gerbangnya menyala. Kita bisa pulang.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Kayaknya ini baru permulaan.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Buku itu membuka satu judul baru: The Beginning of Us.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Pergi kembali ke Plaza.",
+      "set_flags": "PRO_COMPLETED"
+    },
+    {
+      "id": "C01-A01",
+      "title": "Catatan Kecil",
+      "route": "arland",
+      "location": "Kamar Arland",
+      "trigger": "Awal C01",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Pagi baru, cerita baru.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Catatan kecilku di mana, ya? Aku mau membawanya.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Sebuah catatan terselip di antara buku-buku.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Item: small_note.",
+      "set_flags": "C01_ARLAND_NOTE"
+    },
+    {
+      "id": "C01-S01",
+      "title": "Pembatas Buku",
+      "route": "sofia",
+      "location": "Kamar Sofia",
+      "trigger": "Awal C01",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Aku masih ingat gambar bintang dari mimpi itu.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Pembatas bukuku juga punya bintang kecil... kebetulan?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Sofia menyimpan pembatas buku ke dalam tas.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Item: bookmark.",
+      "set_flags": "C01_SOFIA_BOOKMARK"
+    },
+    {
+      "id": "C01-A02",
+      "title": "Mural Bunga",
+      "route": "arland",
+      "location": "Plaza Kota",
+      "trigger": "Amati mural",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Bunga, buku, bintang... sepertinya ini urutannya.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Aku harus mengingatnya sebelum masuk ke kafe.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Petunjuk puzzle ARLAND: BUNGA–BUKU–BINTANG.",
+      "set_flags": "C01_HINT_ARLAND"
+    },
+    {
+      "id": "C01-S02",
+      "title": "Mural Bintang",
+      "route": "sofia",
+      "location": "Plaza Kota",
+      "trigger": "Amati mural",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Bintang dulu, lalu buku, terakhir bunga.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Hmm, beda dengan yang Arland lihat tadi.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Petunjuk puzzle SOFIA: BINTANG–BUKU–BUNGA.",
+      "set_flags": "C01_HINT_SOFIA"
+    },
+    {
+      "id": "C01-X01",
+      "title": "Teka-teki di Kafe",
+      "route": "shared",
+      "location": "Kafe Senja",
+      "trigger": "Periksa meja simbol",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Ada tiga simbol di sini: bunga, buku, dan bintang.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Kita punya petunjuk masing-masing.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Coba susun sesuai yang kita lihat.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Perhatikan bahwa kedua route menggunakan urutan berbeda tetapi menghasilkan surat yang sama.",
+      "set_flags": "C01_PUZZLE_ACTIVE"
+    },
+    {
+      "id": "C01-X02",
+      "title": "Surat Dua Sisi",
+      "route": "shared",
+      "location": "Kafe Senja",
+      "trigger": "Puzzle benar",
+      "lines": [
+        {
+          "speaker": "Narator",
+          "text": "Sebuah surat kecil muncul di antara halaman.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Ini tulisan siapa?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Baca, yuk.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Setiap kenangan punya dua sisi, tetapi satu tempat pulang.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Aku ingin baca lagi di tepi danau.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Ayo. Rasanya bakal lebih tenang di sana.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Satu surat canon untuk kedua route.",
+      "set_flags": "C01_LETTER_FOUND"
+    },
+    {
+      "id": "C01-X03",
+      "title": "Di Tepi Danau",
+      "route": "shared",
+      "location": "Tepi Danau",
+      "trigger": "Interaksi bangku",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Kadang aku takut lupa hal-hal kecil.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Makanya ada buku ini. Kita simpan satu-satu.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Kalau aku salah ingat?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Berarti kita punya dua versi untuk diceritakan.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Chapter 1 selesai. Buku itu menyimpan dua sudut pandang di satu halaman.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Buka unlock Memory Book C01.",
+      "set_flags": "C01_COMPLETED"
+    },
+    {
+      "id": "C02-A01",
+      "title": "Hadiah Rahasia",
+      "route": "arland",
+      "location": "Toko Bunga",
+      "trigger": "Misi route Arland",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Hari ini mau bikin Sofia senyum.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Penjaga Toko",
+          "text": "Bunga yang kamu pilih bagus. Mau ditambah pita?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Iya, yang warnanya lembut. Nggak perlu berlebihan.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [
+        "Pita lavender",
+        "Pita peach"
+      ],
+      "director_note": "Pilihan hanya mengubah variasi hadiah, bukan story canon.",
+      "set_flags": "C02_ARLAND_GIFT_READY"
+    },
+    {
+      "id": "C02-S01",
+      "title": "Persiapan Kecil",
+      "route": "sofia",
+      "location": "Kamar Sofia",
+      "trigger": "Misi route Sofia",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Hari ini mau pakai outfit yang mana, ya?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Yang nyaman aja. Yang penting bisa jalan lama.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Oh iya, aku mau bawa foto kecil juga.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [
+        "Outfit santai",
+        "Outfit date"
+      ],
+      "director_note": "Skin kosmetik, bukan penilaian karakter.",
+      "set_flags": "C02_SOFIA_READY"
+    },
+    {
+      "id": "C02-X01",
+      "title": "Kencan di Kafe",
+      "route": "shared",
+      "location": "Kafe Senja",
+      "trigger": "Pasangan bertemu",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Mau mulai dari kafe atau taman?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Kita punya waktu. Yang penting jangan buru-buru.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Kalau begitu, kamu pilih.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Kalau salah belok, anggap saja petualangan.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [
+        "Ke taman dulu",
+        "Ke arcade dulu"
+      ],
+      "director_note": "Rute opsional berkumpul di photobooth.",
+      "set_flags": "C02_DATE_STARTED"
+    },
+    {
+      "id": "C02-X02",
+      "title": "Photobooth",
+      "route": "shared",
+      "location": "Arcade",
+      "trigger": "Mini-game photobooth selesai",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Tunggu, aku belum siap!",
+          "emotion": "kaget"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Terlambat, sudah kepotret.",
+          "emotion": "tertawa"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Ya sudah, satu lagi. Kali ini yang bagus.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Satu foto kecil masuk ke Memory Book.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Reward: pixel_polaroid_c02.",
+      "set_flags": "C02_PHOTO_UNLOCKED"
+    },
+    {
+      "id": "C03-A01",
+      "title": "Hal Sederhana",
+      "route": "arland",
+      "location": "Dapur",
+      "trigger": "Quest personal",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Aku bukan ahli masak, tapi kita bisa coba.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Resep ini kayaknya nggak terlalu susah... semoga.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Memicu tutorial memasak.",
+      "set_flags": "C03_ARLAND_PREP"
+    },
+    {
+      "id": "C03-S01",
+      "title": "Sudut Kenangan",
+      "route": "sofia",
+      "location": "Kamar Sofia",
+      "trigger": "Quest personal",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Benda-benda kecil ini punya banyak cerita.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Aku pengin menatanya supaya gampang dilihat lagi.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Memicu dekorasi berbasis slot.",
+      "set_flags": "C03_SOFIA_PREP"
+    },
+    {
+      "id": "C03-X01",
+      "title": "Masak Bersama",
+      "route": "shared",
+      "location": "Dapur",
+      "trigger": "Mini-game selesai",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Agak berantakan, ya?",
+          "emotion": "tertawa"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Tapi hasilnya lumayan, kan?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Lumayan banget karena kita bikin bareng.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Hadiah: recipe_card_c03.",
+      "set_flags": "C03_COMPLETED"
+    },
+    {
+      "id": "C04-A01",
+      "title": "Pesan yang Belum Selesai",
+      "route": "arland",
+      "location": "Halte",
+      "trigger": "Quest personal",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Kayaknya ada yang salah paham.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Aku mau jelasin, tapi harus dengerin Sofia dulu.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Jangan buat tuduhan sepihak.",
+      "set_flags": "C04_ARLAND_REFLECT"
+    },
+    {
+      "id": "C04-S01",
+      "title": "Di Balik Hujan",
+      "route": "sofia",
+      "location": "Taman Hujan",
+      "trigger": "Quest personal",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Mungkin aku cuma butuh dijelaskan pelan-pelan.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Aku juga harus bilang perasaanku tanpa bikin semuanya makin rumit.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Rute Sofia membuka informasi lain, tidak menjadikan satu pihak antagonis.",
+      "set_flags": "C04_SOFIA_REFLECT"
+    },
+    {
+      "id": "C04-X01",
+      "title": "Lampu yang Redup",
+      "route": "shared",
+      "location": "Memory Realm — Lantern Field",
+      "trigger": "Puzzle cahaya selesai",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Aku dengerin. Cerita dari awal, ya.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Aku cuma pengin kita sama-sama ngerti.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Makasih udah mau ngomong.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Makasih juga udah dengerin.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Lentera di atas mereka kembali menyala.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [
+        "Duduk bicara dulu",
+        "Jalan bersama dulu"
+      ],
+      "director_note": "Keduanya menuju rekonsiliasi yang sama dengan dialog penutup berbeda.",
+      "set_flags": "C04_COMPLETED"
+    },
+    {
+      "id": "C05-A01",
+      "title": "Jalur Kompas",
+      "route": "arland",
+      "location": "Star Path",
+      "trigger": "Cabang route Arland",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Bintangnya membentuk pola arah.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Aku catat: timur, utara, lalu barat.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Petunjuk bagian pertama.",
+      "set_flags": "C05_COMPASS_CLUE"
+    },
+    {
+      "id": "C05-S01",
+      "title": "Jalur Lentera",
+      "route": "sofia",
+      "location": "Lantern Field",
+      "trigger": "Cabang route Sofia",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Warna lentera muncul berurutan.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Ungu, emas, biru. Kayaknya ini kuncinya.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Petunjuk bagian kedua.",
+      "set_flags": "C05_LANTERN_CLUE"
+    },
+    {
+      "id": "C05-X01",
+      "title": "Peta Bintang",
+      "route": "shared",
+      "location": "Starfall Village",
+      "trigger": "Kedua petunjuk diketahui oleh karakter dalam cerita",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Aku punya arah perjalanan.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Aku punya urutan warna lentera.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Kalau digabung?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Pintunya kebuka. Kita berhasil!",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Pada tiap route, pasangan membagikan petunjuk miliknya dalam cutscene agar tidak ada softlock.",
+      "set_flags": "C05_COMPLETED"
+    },
+    {
+      "id": "C06-A01",
+      "title": "Surat untuk Besok",
+      "route": "arland",
+      "location": "Eternal Garden",
+      "trigger": "Pilih harapan",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Kalau aku bisa menulis satu hal untuk nanti...",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Aku ingin tetap punya waktu untuk cerita dan tertawa bareng.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Monolog route; bukan fakta kehidupan nyata.",
+      "set_flags": "C06_ARLAND_LETTER"
+    },
+    {
+      "id": "C06-S01",
+      "title": "Halaman yang Sama",
+      "route": "sofia",
+      "location": "Eternal Garden",
+      "trigger": "Pilih harapan",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Aku nggak tahu semua yang akan terjadi nanti.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Tapi aku ingin kita tetap saling mendukung, bahkan saat sulit.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Monolog route; bukan fakta kehidupan nyata.",
+      "set_flags": "C06_SOFIA_LETTER"
+    },
+    {
+      "id": "C06-X01",
+      "title": "Halaman Kosong",
+      "route": "shared",
+      "location": "Eternal Garden",
+      "trigger": "Puzzle final selesai",
+      "lines": [
+        {
+          "speaker": "Sofia",
+          "text": "Kenapa halaman terakhirnya kosong?",
+          "emotion": "kaget"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Mungkin karena ceritanya belum selesai.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Berarti kita bisa isi nanti, pelan-pelan.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Arland",
+          "text": "Iya. Nggak perlu semuanya tahu sekarang.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Dua nama tertulis berdampingan. Lalu halaman itu berjudul: To Be Continued.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Satu ending canon tanpa bad ending.",
+      "set_flags": "C06_CANON_END"
+    },
+    {
+      "id": "EPI-X01",
+      "title": "Sampai Nanti",
+      "route": "shared",
+      "location": "Plaza Kota",
+      "trigger": "Kredit selesai",
+      "lines": [
+        {
+          "speaker": "Arland",
+          "text": "Mau jalan ke mana sekarang?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Ke mana saja. Kita masih punya banyak halaman kosong.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "Narator",
+          "text": "Petualangan berikutnya menunggu di luar buku.",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [],
+      "director_note": "Buka free-roam, album, replay; bonus chapter setelah kedua route selesai.",
+      "set_flags": "EPI_UNLOCKED"
+    }
+  ],
+  "puzzle_orders": {
+    "arland": [
+      "BUNGA",
+      "BUKU",
+      "BINTANG"
+    ],
+    "sofia": [
+      "BINTANG",
+      "BUKU",
+      "BUNGA"
+    ]
+  }
+}

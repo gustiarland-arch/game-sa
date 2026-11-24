@@ -1,0 +1,60 @@
+# NASKAH v1.3 (DRAFT FIKSI): Hutan Bisik, Bukit Bintang, Gua Kristal.
+
+=== SQ-JEMBATAN-1 | Jembatan Patah | shared | SIDE
+narrator: Jembatan kayu di atas sungai patah di bagian tengah. Papan-papannya hanyut entah ke mana.
+me(serius): Di seberang ada jalan setapak naik ke bukit. Sayang sekali.
+me(neutral): Kalau aku bisa menemukan tiga papan yang cukup kuat, mungkin bisa kutambal.
+
+=== SQ-JEMBATAN-2 | Jembatan Baru | shared | SIDE
+narrator: Tiga papan dipasang, diikat dengan akar yang kuat. Jembatan berderit, lalu diam. Kokoh.
+me(senang): Berhasil! Sekarang jalan ke bukit terbuka.
+narrator: Dari seberang sungai, angin membawa wangi bunga yang belum pernah tercium di kota.
+
+=== NARA-1 | Kak Nara | shared | SIDE
+nara(senang): Pengunjung! Jarang sekali ada yang sampai ke bukit ini. Aku Nara, penjaga observatorium.
+nara(neutral): Kamu tahu kenapa namanya Bukit Bintang? Kata orang tua, dulu ada hujan bintang yang jatuh di sekitar kota.
+nara(serius): Pecahan-pecahannya masih bisa ditemukan sampai sekarang. Kecil, berkilau, suka bersembunyi di tempat yang jarang didatangi orang.
+nara(senyum): Ada tiga puluh, menurut catatan observatorium. Kalau kamu menemukannya, bawa ke sini, ya. Aku punya hadiah untuk setiap sepuluh.
+me(penasaran): Tiga puluh? Di mana saja?
+nara(tertawa): Di seluruh kota. Di balik semak, di sudut taman, di dalam gua. Bintang suka main petak umpet.
+
+=== NARA-R1 | Sepuluh Bintang | shared | SIDE
+nara(kaget): Sepuluh kepingan! Lihat cahayanya waktu dikumpulkan bersama.
+nara(senyum): Ini bros bintang dari pecahan yang dulu kutemukan sendiri. Sekarang punyamu.
+
+=== NARA-R2 | Dua Puluh Bintang | shared | SIDE
+nara(senang): Dua puluh! Kamu penjelajah sungguhan.
+nara(neutral): Bawa teropong saku ini. Kalau malam cerah, coba arahkan ke timur laut. Ada rasi kecil yang mirip dua orang bergandengan.
+
+=== NARA-R3 | Tiga Puluh Bintang | shared | SIDE
+narrator: Tiga puluh kepingan diletakkan di atas meja observatorium. Cahayanya menyatu, membentuk peta langit kecil yang berputar pelan.
+nara(kaget): ...Ini peta langit kota kita. Lengkap. Belum pernah ada yang melihatnya utuh.
+nara(senyum): Catatan observatorium bilang, peta ini menunjukkan "jalan bintang" menuju tempat kenangan disimpan. Kukira itu cuma dongeng.
+me(serius): Mungkin bukan dongeng.
+nara(neutral): Ambil petanya. Rasanya ia memang menunggu kamu.
+
+=== NARA-SCOPE | Teropong Observatorium | shared | SIDE
+nara(senyum): Mau coba teropongnya? Cari tiga bintang: selatan yang merah muda, timur laut yang biru, lalu barat laut yang emas.
+nara(neutral): Urutannya seperti orang pulang: mulai dari dekat, lalu pelan-pelan ke jauh.
+
+=== NARA-SCOPE-DONE | Bintang Jatuh | shared | SIDE
+narrator: Saat bintang ketiga ditemukan, seberkas cahaya jatuh di dekat dek pandang.
+nara(kaget): Bintang jatuh! Cepat, ambil kepingannya sebelum padam!
+
+=== CHEST-GLADE | Peti di Lembah Rahasia | shared | SIDE
+narrator: Peti kayu kecil, tersembunyi di balik celah pepohonan. Di dalamnya, kotak musik dengan ukiran dua bintang.
+narrator: Saat diputar, melodinya pelan dan akrab, seperti lagu yang pernah didengar di mimpi.
+
+=== CHEST-FERN | Peti di Antara Pakis | shared | SIDE
+narrator: Di balik semak beri, sebuah peti berisi syal rajutan merah muda. Ada kartu kecil: "Untuk siapa pun yang kedinginan di hutan ini."
+
+=== CHEST-HILL | Peti di Sudut Bukit | shared | SIDE
+narrator: Peti di bawah pohon sakura. Isinya lukisan kecil: pemandangan kota dari bukit ini, di sore hari.
+narrator: Di belakangnya tertulis: "Dilukis W., untuk S. Kota kita, dari tempat yang paling tinggi."
+
+=== CHEST-CAVE | Peti Kristal | shared | SIDE
+narrator: Kunci simbol berbunyi klik. Di dalam peti, kalung dengan liontin kristal biru yang berpendar pelan.
+narrator: Di tutup peti terukir: "Bulan, bintang, lalu bunga. Yang satu menerangi, yang satu menemani, yang satu tumbuh."
+
+=== CHEST-CAVE-LOCK | Peti Terkunci | shared | SIDE
+narrator: Peti tua dengan kunci tiga simbol. Mungkin petunjuknya ada di ukiran-ukiran batu di hutan dan di gua ini.

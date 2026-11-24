@@ -1,0 +1,49 @@
+{
+  "release": "4.6.2",
+  "baseline": "4.6.1",
+  "files_baseline": 1912,
+  "files_release": 1931,
+  "missing_old_files": 0,
+  "protected_original_assets_unchanged": 717,
+  "original_maps_unchanged": 22,
+  "original_audio_unchanged": 88,
+  "modified_source_files": [
+    "README.md",
+    "CHANGELOG.md",
+    "build.gradle",
+    "tools/build_all.sh",
+    "tools/test_visual_fx.sh",
+    "tools/test_character_logic_v37.sh",
+    "core/src/main/java/com/arlandsofia/olu/Assets.java",
+    "core/src/main/java/com/arlandsofia/olu/OluGame.java",
+    "core/src/main/java/com/arlandsofia/olu/game/Actor.java",
+    "core/src/main/java/com/arlandsofia/olu/game/WorldFx.java",
+    "core/src/main/java/com/arlandsofia/olu/screens/GameScreen.java"
+  ],
+  "added_files": [
+    "RELEASE_STATUS_V462.md",
+    "android/assets/characters/arland/idle_8dir_v462.png",
+    "android/assets/characters/arland/walk_8dir_v462.png",
+    "android/assets/characters/sofia/idle_8dir_v462.png",
+    "android/assets/characters/sofia/walk_8dir_v462.png",
+    "android/assets/fx/v462_blossom.png",
+    "android/assets/fx/v462_firefly.png",
+    "android/assets/fx/v462_leaf.png",
+    "android/assets/fx/v462_mist.png",
+    "android/assets/fx/v462_raindrop.png",
+    "android/assets/fx/v462_sunbeam.png",
+    "android/assets/fx/v462_water_glint.png",
+    "core/src/main/java/com/arlandsofia/olu/logic/AnimationMathV462.java",
+    "core/src/main/java/com/arlandsofia/olu/logic/WorldAtmosphereV462.java",
+    "docs/V462_CHARACTER_WORLD_GUIDE.md",
+    "tools/gen_visual_v462.py",
+    "tools/test_visual_v462.py",
+    "tools/test_visual_v462.sh",
+    "tools/tests/VisualV462Test.java"
+  ],
+  "limitations": [
+    "APK not built",
+    "GPU performance unverified",
+    "diagonal artwork procedurally derived"
+  ]
+}

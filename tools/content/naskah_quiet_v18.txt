@@ -1,0 +1,205 @@
+# v1.8 — The Quiet / kisah Pak Wira dan Nenek Sari.
+# Draft fiksi, tambahan pada canon yang sudah ada; tidak mengganti dialog Story Bible.
+# A/S = route khusus. Reveal shared dapat memilih respons tanpa mengubah ending canon.
+
+=== Q-C01-A | Denah yang Tak Lengkap | arland | C01
+narrator(neutral): Di balik stoples kiri, sebuah denah kota terlipat empat. Ada tanda pensil di plaza, taman, dan perpustakaan.
+arland(penasaran): Semua jalurnya berhenti di satu titik kosong. Seperti bagian peta yang sengaja dihapus.
+sofia(senyum): Ada tulisan kecil di sisinya. Kamu bisa membacanya?
+arland(serius): "The Quiet". Di bawahnya ada kalimat: "Bukan semua yang hilang harus dicari dengan kaki."
+sofia(penasaran): Pak Wira yang menulisnya?
+arland(neutral): Sepertinya. Kalau titik itu bukan tempat, kenapa digambar seperti jalan?
+sofia(senyum): Mungkin supaya orang yang suka mencari jalan, seperti kamu, mau berhenti dan membaca.
+arland(malu): Aku merasa baru saja ditegur oleh peta berumur puluhan tahun.
+sofia(tertawa): Peta yang cukup pintar untuk tahu siapa yang akan menemukannya.
+narrator(neutral): Arland menyalin arah dan tanda tiga simbol ke halaman kosong Memory Book.
+
+=== Q-C01-S | Kalimat yang Menghilang | sofia | C01
+narrator(neutral): Di stoples kanan tersimpan buku tipis. Ujung-ujung halamannya tampak kusam.
+sofia(penasaran): Di pinggir halaman ini ada tulisan yang berulang, tetapi separuh katanya pudar.
+arland(serius): Mau kucari kaca pembesar?
+sofia(senyum): Tunggu. Coba perhatikan kalimat yang masih utuh.
+sofia(neutral): "The Quiet datang bukan saat tak ada suara, melainkan ketika tak ada yang mau mendengarkan."
+arland(bingung): Itu nama orang? Atau sesuatu di dunia buku ini?
+sofia(sedih): Entahlah. Ada nama Sari di bawahnya, lalu sebuah titik yang tidak selesai.
+arland(senyum): Sepertinya ini catatan Pak Wira, bukan cerita menakutkan.
+sofia(serius): Aku ingin tahu kenapa beliau berhenti menulis di sini.
+narrator(neutral): Sofia menyimpan salinan kalimat itu di Memory Book; tidak ada halaman yang ia sobek.
+
+=== Q-C04-A | Jawaban yang Tak Tergesa | arland | C04
+narrator(neutral): Hujan mengetuk atap halte, hampir menutupi suara kendaraan yang lewat.
+arland(serius): Pak Wira membawa payung bahkan ketika hujan sudah selesai.
+arland(sedih): Aku tadi sibuk mencari Sofia. Tak sekali pun aku bertanya apa yang membuatnya diam.
+narrator(neutral): Arland membalik surat itu. Di tepi belakang ada sketsa bangku dan dua titik.
+arland(penasaran): Di denah arsip, titik-titiknya seperti ini.
+arland(senyum): Mungkin dua titik bukan dua tujuan. Mungkin dua orang yang sedang menunggu satu sama lain.
+arland(serius): Aku mau ke taman. Bukan untuk menjelaskan semuanya, tapi untuk mendengarkan lebih dulu.
+narrator(neutral): Ia melipat surat hati-hati, tanpa berlari meninggalkan halte.
+
+=== Q-C04-S | Surat untuk Kata yang Tertahan | sofia | C04
+narrator(neutral): Di meja perpustakaan, Sofia mengeluarkan kertas kecil dan pena pinjaman Bu Laras.
+sofia(sedih): Nenek Sari menulis bahwa diam tidak selalu berarti tidak peduli.
+sofia(serius): Tapi kalau semua orang menunggu, siapa yang akan tahu apa yang sebenarnya ingin dikatakan?
+narrator(neutral): Sofia menulis dua kalimat. Lalu ia mencoret kalimat pertama yang terlalu menyalahkan diri sendiri.
+sofia(neutral): "Aku belum siap menjelaskan semuanya. Tapi aku mau mulai dari yang bisa kuceritakan."
+sofia(senyum): Ini bukan surat untuk dikirim. Ini supaya aku tahu harus mulai dari mana.
+narrator(neutral): Di sudut kertas ia menggambar empat kotak kecil, seperti empat halaman yang belum diberi judul.
+sofia(serius): Arland menungguku di taman. Sekarang giliranku datang dan bicara.
+
+=== Q-C05-A | Titik di Ujung Peta | arland | C05
+arland(penasaran): Di bawah peta bintang ada garis pensil yang sama dengan denah Pak Wira.
+sofia(senyum): Kamu masih menyimpan salinannya?
+arland(tertawa): Tentu. Ini mungkin pertama kalinya peta membuatku bertanya soal perasaan.
+arland(serius): Ada tiga petunjuk: sesuatu yang tumbuh, sesuatu yang dicatat, lalu sesuatu yang menerangi.
+sofia(neutral): Bunga, buku, bintang.
+arland(kaget): Ya. Tapi itu bukan cuma urutan untuk membuka pintu.
+sofia(penasaran): Menurutmu itu untuk apa?
+arland(senyum): Untuk mengingatkan orang yang terlalu fokus pada tujuan bahwa ada cerita di setiap tempat.
+narrator(neutral): Di tepi bangku, tiga simbol berkedip lembut.
+
+=== Q-C05-S | Tempat Kata Berlabuh | sofia | C05
+sofia(penasaran): Bangku ini memiliki ukiran yang sama dengan pembatas buku lama.
+arland(neutral): Empat garis. Seperti empat halaman kosong.
+sofia(sedih): Aku teringat surat Nenek Sari. Ada hal yang mungkin sudah lama beliau simpan sendiri.
+arland(serius): Kita tidak harus memaksanya bercerita.
+sofia(senyum): Benar. Mungkin yang bisa kita bawa adalah ruang untuk mendengar ketika beliau ingin.
+arland(penasaran): Lalu empat garis itu?
+sofia(neutral): Mendengar, mengingat, bercerita, dan tidak merasa sendirian.
+arland(tersenyum): Kedengarannya bukan petunjuk menuju harta karun.
+sofia(senang): Bisa jadi harta karunnya justru orang yang mau duduk bersama.
+narrator(neutral): Empat garis pada bangku bersinar sejenak, lalu memudar seperti tinta di atas kertas.
+
+=== Q-C06-A1 | Titik Satu: Kolam | arland | C06
+narrator(neutral): Di permukaan kolam terbentuk pantulan plaza, tetapi tidak ada seorang pun di dalamnya.
+arland(penasaran): Peta menunjuk tempat ini lebih dulu. Di air, jalannya tampak berbalik arah.
+sofia(serius): Kamu mencari jejak atau sedang mencari siapa yang hilang?
+arland(neutral): Keduanya. Aku khawatir kita salah mengartikan pesan Pak Wira.
+sofia(senyum): Kalau salah, kita boleh mencoba lagi. Kita tidak sedang dikejar waktu.
+arland(senyum): Baik. Petunjuk pertama: jangan menganggap yang tak terlihat sudah tidak ada.
+narrator(neutral): Satu simbol bunga muncul di atas air, lalu masuk ke Memory Book.
+
+=== Q-C06-A2 | Titik Dua: Gazebo | arland | C06
+narrator(neutral): Di bawah atap gazebo ada bekas dua cangkir yang tak lagi diletakkan di sana.
+arland(sedih): Tempat ini membuatku teringat halte saat hujan. Aku dulu selalu terburu-buru.
+sofia(senyum): Kamu masih suka buru-buru, hanya sekarang kamu tahu kapan harus duduk.
+arland(tertawa): Itu kemajuan kecil.
+sofia(neutral): Dan kemajuan kecil pun layak diingat.
+arland(serius): Petunjuk kedua: kenangan perlu disimpan, tetapi lebih penting lagi dibagikan.
+narrator(neutral): Sebuah simbol buku berkilau di kayu gazebo.
+
+=== Q-C06-A3 | Titik Tiga: Bangku | arland | C06
+narrator(neutral): Pada bangku batu tertulis inisial W. dan S., tidak terlalu rapi, tetapi masih bisa terbaca.
+arland(penasaran): Ini pasti Pak Wira dan Nenek Sari. Mereka pernah sampai di sini.
+sofia(sedih): Mungkin mereka pun pernah takut kehilangan sesuatu.
+arland(serius): Aku tidak bisa mengembalikan hari yang lewat, tetapi aku bisa menyampaikan ceritanya.
+sofia(senyum): Itu sudah banyak.
+arland(senang): Petunjuk ketiga: cahaya paling berguna ketika diberikan kepada orang lain.
+narrator(neutral): Simbol bintang terakhir menyala. Tiga petunjuk tersusun.
+
+=== Q-C06-A4 | Kunci Bunga, Buku, Bintang | arland | C06
+arland(serius): Tiga simbol, tiga perjalanan. Denahnya tidak menunjukkan tempat yang hilang.
+sofia(penasaran): Lalu apa yang sedang kita buka?
+arland(neutral): Sebuah kunci untuk membaca pesan Pak Wira. Bunga dulu, kemudian buku, lalu bintang.
+sofia(senyum): Aku akan menemanimu. Kamu yang menyusun urutannya.
+arland(senang): Kali ini aku tidak ingin buru-buru sampai akhir.
+narrator(neutral): Di bawah pohon muncul kunci simbol yang dapat diputar satu per satu.
+
+=== Q-C06-A5 | Peta yang Berubah Arti | arland | C06
+arland(sedih): Aku berkali-kali menggambar jalan menuju titik kosong. Rupanya yang kosong bukan petanya.
+sofia(neutral): Tapi ruang di antara orang yang berhenti saling menceritakan sesuatu.
+arland(serius): Aku akan membawa halaman Pak Wira ke Nenek Sari. Bukan karena aku bisa menyelesaikan kesedihannya.
+sofia(senyum): Tapi karena ceritanya masih punya tempat untuk didengar.
+arland(malu): Aku akan meminta izin sebelum membacakannya.
+sofia(senang): Kurasa beliau akan menghargai itu.
+
+=== Q-C06-S1 | Kata Satu: Bangku | sofia | C06
+narrator(neutral): Ujung bangku batu terasa hangat. Sebuah kalimat setengah pudar muncul di tepinya.
+sofia(penasaran): "Aku menunggu..." Tidak ada kelanjutannya.
+arland(neutral): Mungkin penulisnya belum tahu cara meneruskan.
+sofia(sedih): Atau belum punya seseorang untuk mendengar.
+arland(senyum): Aku mendengarmu sekarang.
+sofia(senang): Kalau begitu, kata pertama yang kubawa adalah "mendengar".
+narrator(neutral): Satu halaman tipis terbuka dalam Memory Book.
+
+=== Q-C06-S2 | Kata Dua: Gazebo | sofia | C06
+narrator(neutral): Ada dua bekas cangkir di meja gazebo. Bayangannya perlahan membentuk sebuah kalimat.
+sofia(neutral): "Aku masih ingat hari ketika kita bertengkar, lalu pulang di bawah payung yang sama."
+arland(sedih): Kedengarannya seperti surat yang kamu temukan di perpustakaan.
+sofia(senyum): Mengingat bukan berarti menolak bergerak maju.
+arland(penasaran): Jadi kata kedua?
+sofia(serius): "Mengingat". Tapi tanpa memaksa orang mengulang setiap kesedihan.
+narrator(neutral): Halaman kedua muncul, lebih terang dari yang pertama.
+
+=== Q-C06-S3 | Kata Tiga: Kolam | sofia | C06
+narrator(neutral): Air kolam memantulkan bentuk dua orang duduk, meski sekelilingnya sepi.
+sofia(sedih): "Aku ingin bercerita... tetapi takut tidak ada yang mendengarkan."
+arland(serius): Kita tidak tahu siapa yang menulis itu. Tapi kita tahu rasanya menunggu jawaban.
+sofia(senyum): Aku ingin kalimat ini tetap ada. Tidak hilang hanya karena seseorang terdiam.
+arland(neutral): Apa yang akan kamu tulis di halaman berikutnya?
+sofia(senang): "Kita tidak sendirian." Itulah akhir yang ingin kuingat.
+narrator(neutral): Dua halaman tersisa muncul, menunggu disusun menjadi satu pesan.
+
+=== Q-C06-S4 | Empat Halaman yang Tak Terucap | sofia | C06
+sofia(serius): Ada empat halaman. Kata-katanya tidak hilang, hanya urutannya tercerai.
+arland(senyum): Kamu selalu tahu bagian mana yang patut didengarkan lebih lama.
+sofia(malu): Aku tidak selalu tahu. Kadang aku juga memilih diam.
+arland(neutral): Dan kamu boleh memilih kapan ingin bicara. Aku di sini.
+sofia(senang): Baik. Aku akan menyatukannya: mendengar, mengingat, bercerita, tidak sendirian.
+narrator(neutral): Empat halaman berputar pelan, menunggu pemain menyusunnya kembali.
+
+=== Q-C06-S5 | Kalimat Terakhir Sofia | sofia | C06
+sofia(sedih): Aku sempat mengira The Quiet adalah sesuatu yang harus kita kalahkan.
+arland(penasaran): Sekarang?
+sofia(neutral): Sekarang aku melihatnya sebagai ruang yang membesar ketika kenangan tidak diberi tempat untuk diceritakan.
+arland(serius): Kalau kita membawa halaman ini ke Nenek Sari, apakah beliau akan sedih?
+sofia(senyum): Bisa saja. Kita tidak bisa memutuskan perasaannya. Kita bisa datang dengan lembut dan bertanya.
+arland(senang): Aku akan ikut. Aku tidak akan mengisi semua keheningan dengan pertanyaan.
+
+=== Q-C06-REVEAL | Apa Itu The Quiet? | shared | C06
+narrator(neutral): Dari celah Pohon Harapan, selembar halaman hampir transparan terangkat oleh cahaya.
+partner(kaget): Tulisannya kembali muncul! Ada nama Pak Wira di bawahnya.
+me(penasaran): "The Quiet"... Ini bukan nama monster atau penjaga kebun.
+narrator(neutral): Di halaman itu terbaca: "Aku menamai sunyi yang membesar saat kenangan tidak lagi kita ceritakan: The Quiet."
+partner(sedih): Jadi bukan kenangannya yang hilang. Kita kehilangan keberanian atau kesempatan untuk membaginya.
+me(serius): Dan kita tidak bisa memaksa orang bercerita hanya agar halaman kembali terang.
+partner(senyum): Kita bisa hadir, mendengarkan, dan menjaga cerita yang mereka percayakan.
+me(senyum): Pak Wira meninggalkan petunjuk bukan untuk mencari siapa yang salah.
+partner(neutral): Tapi untuk mengingatkan bahwa hubungan perlu diberi ruang, bahkan ketika salah satu sedang diam.
+narrator(neutral): Halaman itu berhenti memudar. Dua nama muncul di bawah tinta lama: Wira dan Sari.
+? Aku ingin mendengarkan ceritanya nanti. | Q_CHOICE_LISTEN
+A> arland(serius): Kita tanya Nenek Sari dulu. Bila beliau ingin bercerita, aku akan mendengar sampai selesai.
+S> sofia(serius): Kita beri Nenek Sari waktu memilih. Aku ingin mendengar ceritanya tanpa mendesak.
+? Aku ingin menjaga halaman ini bersamanya. | Q_CHOICE_KEEP
+A> arland(senyum): Kita bisa menjaga halaman ini, lalu menyerahkannya dengan pelan.
+S> sofia(senyum): Kita simpan dulu sampai beliau siap menerimanya.
+
+=== Q-EPI-SARI | Halaman Itu Akhirnya Pulang | shared | EPI
+narrator(neutral): Di bawah lentera taman, Nenek Sari duduk dengan selimut tipis dan secangkir teh.
+sari(senyum): Kalian kelihatan membawa sesuatu. Boleh Nenek lihat?
+me(neutral): Kami menemukan halaman dari Pak Wira. Kami tidak ingin membacakannya tanpa izin Nenek.
+sari(kaget): Ini tulisan tangannya... Aku kenal betul cara dia membuat huruf R.
+partner(serius): Tidak apa kalau Nenek ingin menyimpannya dulu.
+sari(sedih): Nenek ingin mendengarnya. Tapi boleh dibaca pelan-pelan?
+me(senyum): Tentu.
+narrator(neutral): Pemain membacakan beberapa kalimat tentang The Quiet. Suara festival terdengar samar dari kejauhan.
+sari(senyum): Wira sering takut catatannya akan ditinggalkan. Padahal yang Nenek ingat bukan catatannya.
+sari(tertawa): Nenek ingat dia pernah lupa membawa payung. Kami basah bersama sampai rumah.
+partner(senyum): Cerita itu tidak ada di arsip.
+sari(neutral): Karena tidak semua cerita harus disimpan di arsip. Ada yang cukup diucapkan kepada orang yang mau mendengar.
+sari(sedih): Nenek masih rindu. Halaman ini tidak menghapusnya. Tapi rasanya hangat mengetahui ada yang mengingat.
+sari(senang): Simpan pembatas buku ini. Wira pernah memakainya, dan Nenek ingin kalian punya satu cerita darinya.
+narrator(neutral): Nenek Sari tersenyum, lalu mengajak mereka melihat lentera yang mulai dinyalakan.
+
+=== Q-EPI-A | Janji Arland | arland | EPI
+arland(serius): Nek, aku dulu mengira semua masalah punya rute paling cepat.
+sari(senyum): Lalu sekarang?
+arland(malu): Aku sedang belajar bahwa mendengar kadang tidak punya jalan pintas.
+sofia(tertawa): Hari ini dia bahkan tidak melihat peta ketika berjalan ke taman.
+sari(senang): Bagus. Biar suatu hari kalian punya peta sendiri, yang digambar dari cerita yang kalian jalani.
+
+=== Q-EPI-S | Janji Sofia | sofia | EPI
+sofia(sedih): Nek, aku sempat takut halaman ini akan membuka luka lama.
+sari(senyum): Rindu kadang memang terasa perih. Tapi Nenek tetap ingin mengingat yang baik-baik.
+sofia(serius): Kalau Nenek ingin bercerita lagi, aku akan datang. Tidak perlu selalu ada jawaban.
+arland(senyum): Aku juga. Aku bisa membawa teh dari kafe.
+sari(tertawa): Kalau begitu, jangan lupa kukisnya. Wira selalu mengambil dua.

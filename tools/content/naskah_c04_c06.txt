@@ -1,0 +1,297 @@
+# NASKAH Chapter 4–6 + Epilog (DRAFT FIKSI)
+
+# ------------------------------------------------------------------------ CHAPTER 4
+=== C04-A00 | Ponsel Mati | arland | C04
+narrator: Hujan turun sejak pagi. Arland baru pulang setelah seharian membantu memotret acara sekolah sepupunya.
+arland(kaget): Ponselku mati dari siang... Aku lupa bawa pengisi daya.
+narrator: Layar menyala. Lima pesan masuk sekaligus.
+sofia_msg: Aku sudah di Kafe Senja, ya. Kita jadi bahas rencana minggu depan, kan?
+sofia_msg: Arland?
+sofia_msg: Aku tunggu sebentar lagi.
+sofia_msg: Nggak apa-apa kalau kamu sibuk. Kabari saja, ya.
+arland(sedih): Aku janji kemarin. Dan aku malah... hilang begitu saja.
+arland(serius): Aku harus ke kafe. Mungkin dia masih di sana.
+
+=== C04-A02 | Kata Kak Raka | arland | C04
+raka(serius): Sofia nunggu hampir satu jam. Dia pesan teh, tapi tehnya sampai dingin.
+arland(sedih): Ponselku mati, Kak. Aku nggak sempat kasih kabar.
+raka(neutral): Saya percaya. Tapi yang dia tahu cuma kursi di depannya kosong.
+raka(senyum): Jelaskan pelan-pelan. Dan dengarkan juga, jangan cuma membela diri.
+arland(neutral): Dia ke mana, Kak?
+raka(neutral): Tadi dia bilang mau menenangkan diri. Coba tanya di Jalan Kota. Saya lihat dia lewat sana.
+
+=== C04-A01 | Pesan yang Belum Selesai | arland | C04
+narrator: Halte bus. Hujan memukul atap seng seperti ketukan jam.
+arland(neutral): Kayaknya ada yang salah paham.
+arland(neutral): Aku mau jelasin, tapi harus dengerin Sofia dulu.
+narrator: Arland mengetik pesan, menghapusnya, lalu mengetik lagi.
+arland(serius): "Maaf" saja nggak cukup kalau aku nggak tahu apa yang dia rasakan.
+arland(neutral): Aku harus menemuinya langsung.
+@flags C04_ARLAND_REFLECT
+
+=== C04-A03 | Petunjuk dari Jalan Kota | arland | C04
+juna(serius): Sofia? Tadi lewat sini bawa payung ungu, jalan ke arah Plaza.
+melati(neutral): Ibu lihat dia menuju taman. Biasanya kalau hujan, orang suka berteduh di gazebo.
+arland(neutral): Taman Kota. Terima kasih!
+
+=== C04-S00 | Kursi yang Kosong | sofia | C04
+narrator: Hujan turun sejak pagi. Sofia memandangi jendela, ponsel di tangan.
+sofia(sedih): Kemarin aku nunggu di kafe. Pesanku nggak dibalas sampai sekarang.
+sofia(bingung): Mungkin dia sibuk. Mungkin ada apa-apa.
+sofia(sedih): Tapi kenapa rasanya tetap sedikit sakit?
+sofia(neutral): Aku jalan keluar saja. Hujan biasanya bikin pikiran lebih jernih.
+
+=== C04-S02 | Teh yang Dingin | sofia | C04
+raka(senyum): Teh melati hangat. Kali ini jangan dibiarkan dingin, ya.
+sofia(malu): Kak Raka lihat, ya, kemarin?
+raka(neutral): Barista melihat banyak hal. Termasuk orang yang menunggu sambil pura-pura membaca.
+raka(serius): Kadang orang diam bukan karena lupa. Kadang karena keadaan. Tapi perasaanmu juga penting.
+sofia(neutral): Aku cuma pengin dia tahu, tanpa bikin dia merasa disalahkan.
+raka(senyum): Itu sudah setengah jalan. Sisanya: bicara langsung.
+
+=== C04-S01 | Di Balik Hujan | sofia | C04
+narrator: Gazebo Taman Kota. Hujan membuat kolam penuh lingkaran-lingkaran kecil.
+sofia(neutral): Mungkin aku cuma butuh dijelaskan pelan-pelan.
+sofia(neutral): Aku juga harus bilang perasaanku tanpa bikin semuanya makin rumit.
+narrator: Langkah kaki terdengar dari jalan setapak. Seseorang berlari tanpa payung.
+sofia(kaget): Arland?
+@flags C04_SOFIA_REFLECT
+
+=== C04-X00 | Basah Kuyup | shared | C04
+arland(sedih): Sofia... maaf. Aku...
+sofia(neutral): Kamu basah semua.
+arland(neutral): Ponselku mati seharian. Aku bantu sepupuku memotret, dan aku lupa memberi kabar. Itu salahku.
+sofia(sedih): Aku nunggu lama. Aku khawatir, terus... sedikit kesal juga.
+arland(serius): Kamu berhak kesal. Aku mau dengar semuanya.
+narrator: Tiba-tiba Memory Book di tas Sofia bergetar. Cahayanya redup, seperti lilin yang hampir padam.
+sofia(kaget): Bukunya...!
+narrator: Halaman-halaman berputar. Hujan, gazebo, dan taman menghilang dalam pusaran cahaya.
+
+=== C04-X02 | Lumi | shared | C04
+narrator: Padang luas dengan lentera-lentera padam. Udara dingin dan sunyi.
+lumi(sedih): Akhirnya kalian datang...
+sofia(kaget): Siapa itu? Lentera kecil... bisa bicara?
+lumi(senyum): Aku Lumi. Aku lahir dari halaman pertama buku kalian, di plaza, waktu dua hadiah kecil berpindah tangan.
+arland(penasaran): Kenapa lentera di sini padam semua?
+lumi(sedih): Ini Lantern Field. Lentera di sini menyala dari kata-kata yang saling didengar.
+lumi(serius): Kalau dua orang berhenti saling mendengar, Kabut Lupa datang dan memadamkannya satu per satu.
+sofia(sedih): Jadi karena kemarin...
+lumi(senyum): Jangan sedih. Kabut itu bukan hukuman. Ia cuma tanda bahwa ada yang perlu dibicarakan.
+lumi(neutral): Temukan dua cahaya yang tersisa: Cahaya Mendengar dan Cahaya Jujur. Lalu bawa ke altar lentera.
+
+=== C04-L01 | Cahaya Mendengar | shared | C04
+narrator: Sebuah cahaya kecil berkedip di rumput tinggi. Saat disentuh, terdengar bisikan.
+sofia(neutral): "Aku dengar kamu. Aku nggak akan memotong ceritamu."
+arland(neutral): Itu suaraku... dari hari pertama kita bicara lama di kafe.
+sofia(senyum): Kamu memang selalu dengar sampai selesai.
+@flags C04_LIGHT_LISTEN
+
+=== C04-L02 | Cahaya Jujur | shared | C04
+narrator: Cahaya kedua bergetar pelan, seperti ragu.
+arland(neutral): "Aku senang, tapi aku juga takut salah bicara."
+sofia(malu): Itu... aku. Aku pernah menulis itu di buku harianku.
+arland(senyum): Jujur itu nggak harus sempurna, kan?
+sofia(senyum): Iya. Cukup berani.
+@flags C04_LIGHT_HONEST
+
+=== C04-X01 | Lampu yang Redup | shared | C04
+arland(neutral): Aku dengerin. Cerita dari awal, ya.
+sofia(neutral): Aku cuma pengin kita sama-sama ngerti.
+sofia(neutral): Aku nggak marah karena kamu sibuk. Aku sedih karena nggak tahu kamu baik-baik saja atau nggak.
+arland(serius): Itu masuk akal. Lain kali, sesibuk apa pun, aku kabari. Walau cuma satu kalimat.
+sofia(senyum): Dan aku akan bilang kalau aku khawatir, bukan diam saja menunggu.
+arland(neutral): Makasih udah mau ngomong.
+sofia(neutral): Makasih juga udah dengerin.
+narrator: Lentera di atas mereka kembali menyala.
+? Duduk bicara dulu | C04_CHOICE_TALK
+B> sofia(senyum): Kita duduk dulu sebentar. Aku masih mau cerita banyak.
+B> arland(senyum): Aku punya waktu. Semua waktu yang kamu butuhkan.
+? Jalan bersama dulu | C04_CHOICE_WALK
+B> arland(senyum): Jalan pelan-pelan, yuk. Biar lenteranya lihat kita baik-baik saja.
+B> sofia(tertawa): Lenteranya bisa lihat?
+@flags C04_COMPLETED CANON_RAIN_TALK
+
+=== C04-X03 | Pelangi | shared | C04
+narrator: Mereka kembali ke gazebo. Hujan sudah berhenti. Di atas kolam, pelangi tipis melengkung.
+sofia(kaget): Pelangi!
+arland(senyum): Kayaknya langit juga lega.
+lumi(senyum): Satu halaman diperbaiki. Bukan dengan menghapus hujannya, tapi dengan berjalan melewatinya bersama.
+sofia(penasaran): Lumi! Kamu ikut ke sini?
+lumi(tertawa): Aku tinggal di buku. Ke mana bukunya pergi, aku ikut. Sampai jumpa di halaman berikutnya.
+
+# ------------------------------------------------------------------------ CHAPTER 5
+=== C05-A00 | Peta yang Robek | arland | C05
+narrator: Malam yang cerah. Bintang memenuhi langit di atas atap rumah.
+narrator: Ponsel Arland bergetar. Foto dari Sofia: halaman Memory Book berisi peta bintang yang robek di tengah.
+sofia_msg: Bukunya bersinar lagi. Ada peta bintang, tapi cuma setengah. Lumi bilang setengahnya ada padamu.
+arland(penasaran): Setengah peta?
+narrator: Sebuah suara kecil terdengar dari lembar foto di meja.
+lumi(senyum): Arland! Pergilah ke ujung dermaga di Tepi Danau. Jalur bintang menunggumu.
+arland(neutral): Oke. Aku berangkat.
+
+=== C05-A02 | Jalur Bintang | arland | C05
+narrator: Di ujung dermaga, pantulan bintang di air berubah menjadi jalan bercahaya.
+narrator: Arland melangkah, dan danau berganti langit malam yang bisa diinjak.
+arland(kaget): Aku... berjalan di atas bintang?
+lumi(senyum): Ini Star Path. Nyalakan batu-batu bintang di sepanjang jalan. Mereka akan menunjukkan arah.
+arland(neutral): Sendirian, ya?
+lumi(neutral): Sofia sedang menempuh jalurnya sendiri. Kalian akan bertemu di Starfall Village.
+
+=== C05-A03 | Batu Bintang | shared | C05
+narrator: Batu itu berdenting saat disentuh dan menyala keemasan.
+
+=== C05-A01 | Jalur Kompas | arland | C05
+narrator: Di antara batu-batu bintang, sebuah kompas kecil melayang. Jarumnya berputar lalu berhenti.
+arland(neutral): Bintangnya membentuk pola arah.
+arland(neutral): Aku catat: timur, utara, lalu barat.
+arland(senyum): Sofia pasti punya bagian lainnya.
+@flags C05_COMPASS_CLUE
+
+=== C05-S00 | Peta yang Robek | sofia | C05
+narrator: Malam yang cerah. Memory Book di sudut kenangan Sofia bersinar terang.
+sofia(kaget): Halaman baru... peta bintang. Tapi robek di tengah.
+lumi(senyum): Selamat malam, Sofia. Setengah peta ada padamu, setengah lagi pada Arland.
+sofia(penasaran): Bagaimana cara melengkapinya?
+lumi(neutral): Pergilah ke tepi utara kolam Taman Kota. Jalur lentera menunggumu.
+sofia(neutral): Aku kabari Arland dulu. Biar dia nggak khawatir.
+lumi(tertawa): Kalian belajar cepat.
+
+=== C05-S02 | Jalur Lentera | sofia | C05
+narrator: Permukaan kolam berpendar. Sofia menyentuhnya, dan Lantern Field terbentang lagi, kini terang benderang.
+sofia(senyum): Lenteranya masih menyala sejak hari hujan itu.
+lumi(senyum): Karena kalian menjaganya. Tangkap percik cahaya yang beterbangan. Mereka akan menunjukkan urutan warna.
+
+=== C05-S03 | Percik Cahaya | shared | C05
+narrator: Percik cahaya hinggap di telapak tangan, hangat seperti teh di pagi hari.
+
+=== C05-S01 | Jalur Lentera | sofia | C05
+narrator: Percik-percik cahaya terbang ke altar. Lentera menyala satu per satu dengan warna berbeda.
+sofia(neutral): Warna lentera muncul berurutan.
+sofia(neutral): Ungu, emas, biru. Kayaknya ini kuncinya.
+sofia(senyum): Arland pasti punya bagian lainnya.
+@flags C05_LANTERN_CLUE
+
+=== C05-X02 | Bertemu di Desa | shared | C05
+narrator: Starfall Village. Rumah-rumah kecil bercahaya, dan bintang jatuh pelan seperti salju.
+sofia(senang): Arland!
+arland(senang): Sofia! Kamu baik-baik saja?
+sofia(tertawa): Aku yang harusnya tanya. Kamu jalan di atas bintang sendirian.
+arland(malu): Aku sempat mengobrol dengan batu. Jangan tanya.
+sofia(senyum): Aku menangkap percik cahaya pakai tangan kosong.
+arland(senyum): Kita berdua aneh malam ini.
+sofia(tertawa): Aneh yang seru.
+
+=== C05-X03 | Kata Lumi | shared | C05
+lumi(senyum): Selamat datang di Starfall Village, desa tempat kenangan beristirahat.
+lumi(neutral): Peta bintang di altar ini terbelah dua sejak hari kalian berhenti saling mendengar.
+lumi(senyum): Sekarang kalian masing-masing membawa satu petunjuk. Gabungkan, maka gerbang Eternal Garden terbuka.
+arland(penasaran): Apa yang ada di Eternal Garden?
+lumi(tertawa): Halaman terakhir. Atau mungkin... halaman pertama dari sesuatu yang lain.
+
+=== C05-X01 | Peta Bintang | shared | C05
+arland(neutral): Aku punya arah perjalanan.
+sofia(neutral): Aku punya urutan warna lentera.
+arland(neutral): Kalau digabung?
+narrator: Timur dan ungu. Utara dan emas. Barat dan biru. Tiga bintang menyala membentuk satu rasi kecil.
+sofia(neutral): Pintunya kebuka. Kita berhasil!
+lumi(senang): Rasi itu namanya... kalian bebas memberinya nama.
+? Rasi Dua Sisi | C05_STAR_TWO_SIDES
+B> sofia(senyum): Rasi Dua Sisi. Seperti surat di kafe.
+B> arland(senyum): Nama yang sempurna.
+? Rasi Pulang | C05_STAR_HOME
+B> arland(senyum): Rasi Pulang. Karena di mana pun, kita tahu jalan kembali.
+B> sofia(senyum): Aku suka.
+@flags C05_COMPLETED
+
+=== C05-X04 | Gerbang Taman | shared | C05
+narrator: Di ujung desa, gerbang bunga terbuka perlahan. Cahaya pagi merembes dari baliknya, padahal di sini masih malam.
+lumi(neutral): Eternal Garden menunggu. Kalian siap?
+sofia(penasaran): Siap... tapi deg-degan.
+arland(senyum): Pegang tanganku. Biar deg-degannya dibagi dua.
+
+# ------------------------------------------------------------------------ CHAPTER 6
+=== C06-X00 | Taman Abadi | shared | C06
+narrator: Eternal Garden. Bunga dari semua musim mekar bersamaan. Di tengahnya, pohon besar bercahaya berdiri tenang.
+sofia(kaget): Ini... semua bunga yang pernah kita lihat.
+arland(penasaran): Ada sakura plaza, bunga kertas, bahkan mawar kecil dari sudut kenanganmu.
+lumi(senyum): Taman ini tumbuh dari hal-hal kecil yang kalian rawat.
+lumi(neutral): Sebelum halaman terakhir dibuka, kumpulkan tiga Kelopak Esok di taman ini. Setiap kelopak menyimpan satu kenangan.
+
+=== C06-P01 | Kelopak di Kolam | shared | C06
+narrator: Kelopak pertama mengapung di kolam. Di permukaannya terpantul plaza, dua hadiah kecil, dan senyum gugup.
+sofia(senyum): Hari pertama. Kamu memegang bunga kertas terlalu erat.
+arland(malu): Aku takut lipatannya rusak.
+
+=== C06-P02 | Kelopak di Gazebo | shared | C06
+narrator: Kelopak kedua terselip di gazebo. Terdengar suara hujan dan tawa kecil sesudahnya.
+arland(neutral): Hari hujan itu.
+sofia(senyum): Hari yang bikin kita belajar bicara.
+
+=== C06-P03 | Kelopak di Gerbang | shared | C06
+narrator: Kelopak ketiga tersangkut di gerbang bunga. Wangi madu dan roti hangat.
+sofia(tertawa): Roti lapis gosong!
+arland(tertawa): Bagian yang paling ada usahanya.
+
+=== C06-A01 | Surat untuk Besok | arland | C06
+lumi(senyum): Sekarang, tulislah satu harapan. Untuk besok, dan besoknya lagi.
+arland(neutral): Kalau aku bisa menulis satu hal untuk nanti...
+arland(neutral): Aku ingin tetap punya waktu untuk cerita dan tertawa bareng.
+? Menjaga hal-hal kecil | C06_WISH_SMALL
+A> arland(senyum): Aku ingin terus ingat hal kecil: teh melati, langit sore, dan cara dia tertawa.
+S> arland(senyum): Hal-hal kecil.
+? Tetap memberi kabar | C06_WISH_TALK
+A> arland(serius): Aku ingin selalu memberi kabar, bahkan di hari paling sibuk.
+S> arland(serius): Memberi kabar.
+? Memotret banyak langit | C06_WISH_SKY
+A> arland(senang): Aku ingin memotret banyak langit baru. Tapi yang paling penting, ada dia di sampingnya.
+S> arland(senang): Banyak langit baru.
+@flags C06_ARLAND_LETTER
+
+=== C06-S01 | Halaman yang Sama | sofia | C06
+lumi(senyum): Sekarang, tulislah satu harapan. Untuk besok, dan besoknya lagi.
+sofia(neutral): Aku nggak tahu semua yang akan terjadi nanti.
+sofia(neutral): Tapi aku ingin kita tetap saling mendukung, bahkan saat sulit.
+? Perjalanan bersama | C06_WISH_TRAVEL
+S> sofia(senyum): Aku ingin jalan-jalan ke banyak tempat. Mencatat semuanya di buku ini.
+A> sofia(senyum): Perjalanan bersama.
+? Saling mendengar | C06_WISH_LISTEN
+S> sofia(senyum): Aku ingin kita selalu mendengar sampai selesai, seperti di Lantern Field.
+A> sofia(senyum): Saling mendengar.
+? Dapur yang hangat | C06_WISH_KITCHEN
+S> sofia(tertawa): Aku ingin masak bareng lagi. Tanpa tepung di mana-mana.
+A> sofia(tertawa): Masak bareng lagi.
+@flags C06_SOFIA_LETTER
+
+=== C06-X02 | Pohon Harapan | shared | C06
+narrator: Dua surat digantung berdampingan di cabang pohon bercahaya. Daun-daunnya berdesir seperti membaca.
+sofia(penasaran): Kamu tulis apa?
+arland(senyum): Rahasia. Nanti kamu baca kalau sudah waktunya.
+sofia(tertawa): Curang. Ya sudah, punyaku juga rahasia.
+lumi(neutral): Halaman-halaman kenangan kalian berserakan di bawah pohon. Susun sesuai urutan perjalanan kalian.
+
+=== C06-X01 | Halaman Kosong | shared | C06
+narrator: Halaman-halaman menyatu kembali ke dalam buku. Buku itu membuka diri sampai ke halaman terakhir.
+sofia(kaget): Kenapa halaman terakhirnya kosong?
+arland(neutral): Mungkin karena ceritanya belum selesai.
+sofia(neutral): Berarti kita bisa isi nanti, pelan-pelan.
+arland(neutral): Iya. Nggak perlu semuanya tahu sekarang.
+narrator: Dua nama tertulis berdampingan. Lalu halaman itu berjudul: To Be Continued.
+@flags C06_CANON_END CANON_ETERNAL_GARDEN
+
+=== C06-X03 | Sampai Jumpa, Lumi | shared | C06
+lumi(senyum): Tugasku selesai untuk sekarang.
+sofia(sedih): Kamu mau pergi?
+lumi(tertawa): Aku tidak pergi. Aku cuma tidur di halaman kosong itu, menunggu kalian mengisinya.
+arland(senyum): Terima kasih, Lumi. Untuk semuanya.
+lumi(senyum): Terima kasih juga. Kalian yang membuatku menyala.
+narrator: Cahaya kecil itu masuk ke dalam buku. Taman perlahan memudar menjadi cahaya pagi.
+
+# ------------------------------------------------------------------------ EPILOG
+=== EPI-X01 | Sampai Nanti | shared | EPI
+narrator: Plaza Kota, pagi hari. Air mancur berkilau, dan sakura berguguran seperti biasa.
+sofia(senyum): Rasanya seperti bangun dari mimpi panjang.
+arland(senyum): Tapi bukunya masih di sini. Dan hangat.
+arland(neutral): Mau jalan ke mana sekarang?
+sofia(neutral): Ke mana saja. Kita masih punya banyak halaman kosong.
+narrator: Petualangan berikutnya menunggu di luar buku.
+@flags EPI_UNLOCKED

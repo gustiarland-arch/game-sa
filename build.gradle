@@ -1,0 +1,11 @@
+// Arland & Sofia: Our Little Universe — LibGDX native Android, 100% offline.
+// Rilis 2026: Gradle 8.11.1 + AGP 8.10.0 mendukung API 36, JDK17, libGDX 1.14.2.
+plugins {
+    id 'com.android.application' version '8.10.0' apply false
+}
+
+ext {
+    gdxVersion = '1.14.2'
+    appVersionName = '5.3.0'
+    appVersionCode = 130
+}

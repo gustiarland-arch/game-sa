@@ -1,0 +1,3701 @@
+{
+  "base": "v4.3.0",
+  "maps": {
+    "arcade.png": "33da68d71cf11fc784ebe71d83ec2c8955ba680b712fd593639423feafbb1414",
+    "arland_room.png": "bd873cfe10de244e9746bb38e3b5efcebddc4f6b54d4b673deacf2a796ffbacd",
+    "bukit_bintang.png": "473009485cd0c50443a4fa840b3a7aedf63092f77617914f11c0a71cab035500",
+    "cafe.png": "917fac51c27a8df720ec646b292e73d522b3483fa80c89e1450e28a74c5d86b2",
+    "dapur.png": "d9a6963a2fd31404a7c58011fc2e6ff1bb6a305701f627451bf2cd50146adca8",
+    "dermaga.png": "75a2ad7b0c3cecdafc1e82ab61e6f8aff602d69f370d96cb8130dd14ea084fde",
+    "eternal_garden.png": "9bf788c9e95bf0c63236778cc9b27df2f11ebb5aa0f35beb5490f0d8a02573b0",
+    "gua_kristal.png": "060e859878c312f83e30c99c6d4eb77b3a1c2d286a25762a4a512a62d9c64750",
+    "hutan_bisik.png": "28432a2140d059bcfd6449660091d4b47b46473ec3fe7c7dff766d7858f8d144",
+    "jalan_kota.png": "c6d569e78aca6200c43860c0203270aa51f98ae0109e86e30bdb80d9fbdf54e1",
+    "lantern_field.png": "f7cc2bf848b2b5c56b0a135c93ff73bcfdc6d0428164f479d0f63e1c1bb9bc04",
+    "memory_garden.png": "e1ce582d7095066c17727a92cc572e72146d0e8835fcc762f2be373b944a8488",
+    "perpustakaan.png": "6c13d30ff06a254d127531f54fb94c911d4856c21e3acec58d77b09d9bd8fdca",
+    "perumahan.png": "798e5868c1ffebd3d6e5ff66e231d1534161674b589685ff98b3f25481cd10a8",
+    "plaza.png": "ba3f28b35f6485e6760f15df4b333719cdf54a71943f824ef00dbdc6a679ce91",
+    "riverside.png": "4e27045d497e97082e3c517c9dea8b439a8cecbb75a55b484acf7dbdca2f4f50",
+    "ruang_arsip.png": "0dc50159c37f76d034b42d57aa625067f9fb9f13cb11d1652436abc4af1942a6",
+    "sofia_room.png": "c1403f0ab032398381c4bdb19cafe277b9053a82a92b124926ae83b691746620",
+    "star_path.png": "f1044f18aa84dbe35e4edd970911d4beaf3418596bf754ac9786c39e255c0c34",
+    "starfall_village.png": "1dcd0947b7faa4aceb5283d9f31f97c7181925b3bee91dece83d3cdfdd886dd1",
+    "taman_kota.png": "b5dbb9bc486a9da394701e2c5c1f6dbba1eb1e7991d3b628aea364e260fcaf11",
+    "toko_bunga.png": "165058f7cab7fff4f3728bae08d21ba0dcff866b50bfcf5c5edc7e820e0fe14c"
+  },
+  "audio": {
+    "audio/ambience/arcade_hum.ogg": "a7904514642fa1d0cf080d2f9d9741df3f8ac4455b94144961e50de07539ccfd",
+    "audio/ambience/birds_morning.ogg": "dadfcd7d7d1fb7348686391672f9be8060f86e7ea688f908cb32dc1e8dbaa713",
+    "audio/ambience/cafe_room.ogg": "3cd177f21e24da3bec12c804403dae8a1bdd4f0b2b5bee8aaa2fddea86aeba10",
+    "audio/ambience/cave_drips.ogg": "ad27c7111276f44204f2fbb045c83fa19ab0b72c3f0cd8a117be27148a1ff271",
+    "audio/ambience/city_day.ogg": "6cda945d51f76f20cff9eadc298e961321eddf160736f5ce99c2cfd53d147acb",
+    "audio/ambience/forest_wind.ogg": "9067abe300def7fa047ad73dd550473af284162b24e97cc7b150b75f22e2101f",
+    "audio/ambience/lake_water.ogg": "c44fc9188a15bec85a9ec32a809622651cf957c725bcc715f50c6edf63b19828",
+    "audio/ambience/library_room.ogg": "7ed69295cd3527c5694bce01d8b2fec50434b97ab33e857d103ba0de5f8cf9c1",
+    "audio/ambience/magic_chimes.ogg": "0720ab49cd1647976a918ae3683244c14ee434424c6c9954ac5f797a0a260c47",
+    "audio/ambience/night_crickets.ogg": "e9f5d5620e073a8458c9a3a4e6651d822943db91c3adbe40b71e3aef7424e545",
+    "audio/ambience/park_birds.ogg": "6ed54ab8217f4a85b3ebd0bc1893b648ee4b8354458b96b42fa5960e45a251b8",
+    "audio/ambience/rain_outdoor.ogg": "16372a034f960fd6e291eac391f4ba6e1dbea8f1e675008db8eb624ebbdfb8ba",
+    "audio/ambience/rain_window.ogg": "af6b3a60d6149737c1dd99a5b7365fa42b00145214ff8b8b27027a57aeb05b3a",
+    "audio/ambience/wind_leaves.ogg": "ff4f988a853e4a1e2717a3c0e822a10d79fbe7411c5aa1df15fc099b81912ccd",
+    "audio/cinematic_v25.json": "a904d831bba1781c6f2e8fbde5388af4d19470d94d2079c74286b4573920799b",
+    "audio/music/arcade_neon.ogg": "fdac51882eefdec5fb12b6a8f5762303e8255580326c116726761c517f551cb1",
+    "audio/music/archive_mystery.ogg": "dd9f7ea676e3524d1e581d2723dfa0858cf4c7714d4c753ce0b7bdd4b4930053",
+    "audio/music/cafe_theme.ogg": "b9161033d044229e3e05f41afbf4316f31dc6edba535bf50cea76952ad647c36",
+    "audio/music/cafe_waltz.ogg": "b003081be677d20dbbc13ee889b4e0960980c1e7f19ac0a8e536c994e970022a",
+    "audio/music/cinema_first_meet.ogg": "16b700bba6d4555507002c38f4699525ac761a373ab2e1b282e89fe41c49a930",
+    "audio/music/cinema_lantern_finale.ogg": "29a6ca1ee0093e993c4b2b5af49d880a17e020b75d21ffcea5e1928e759eb741",
+    "audio/music/cinema_memory_portal.ogg": "b77ae45762c865539e82803d24dd96e70e053752b450912cf775bbb534301054",
+    "audio/music/cinema_our_tomorrow.ogg": "f06e0ab726bdb352ec76077339a6b4c272921115ac4c450e657d579b968c8a8c",
+    "audio/music/cinema_quiet.ogg": "bd917eec6651ee6ededd505f10db9c8453694582a63995a7d2b3ba752588589d",
+    "audio/music/cinema_rain_conflict.ogg": "30477a42e536485477cfd1f1c2399abd8b4e4c6103bab60edf88ece95f2b52de",
+    "audio/music/cinema_reconciliation.ogg": "38b1be01b571a044fae7c1a9192473696d76facd102cc531aec77dfcb5342638",
+    "audio/music/city_evening.ogg": "0036697bf7820a48892ad286c5cec86a4bbd4b7813bf2f0d1848311a66276b92",
+    "audio/music/city_morning.ogg": "13df80139c7fa63a7dcb8975be669d21185edc44be2299e6e778fd16183aabc3",
+    "audio/music/city_night.ogg": "dc81058ed84daec74a0a23c6576e3575e2a4a2deb5ec52c00a161aa9a2a705c0",
+    "audio/music/crystal_echo.ogg": "67b10a0a111d13658e505a9082c991264822121171cd0bf28c8e244cc1d7e28c",
+    "audio/music/eternal_promise.ogg": "9ab606a82445c1f332e48f06de8903897c31fb32943a220e1dc8e0e2a4709e85",
+    "audio/music/flower_shop.ogg": "66fa4dad5485175bc9f800433cc5fd8c270971b598a5a5cfcf4d83c7b0186eef",
+    "audio/music/game_theme.ogg": "b96f78d215e24a3acb80bb702b5565a5dcb8c9f4a5b98a36510bc05b8b887d13",
+    "audio/music/hill_stars.ogg": "757bdd6ce7efbb3c95e2e755610e20a9ea93e9cfb70873efdbf6ec2a169d1432",
+    "audio/music/home_evening.ogg": "0345f5f362d09bdef0beffd177fa12f4910ab3bfc0cd00d1f7958a1837000f68",
+    "audio/music/home_morning.ogg": "58e60c49347a571188b109d1741d93bab2f8f29768b42c25646ccc5fdce2290c",
+    "audio/music/lake_breeze.ogg": "862afc3b2d86fcbd85a60b33e2f48e74d3d5457c9d886f6ef747b601524e8fc4",
+    "audio/music/lake_moon.ogg": "badfefa71e074bdbcebb986a6c0d95ce5c402f133d2ea5407f9ba7ed04f61059",
+    "audio/music/lantern_glow.ogg": "bb8ce788435e273fd0a1cfe9445144db09e5ac5c29fc5788644ecd71836922ca",
+    "audio/music/library_whisper.ogg": "2ca160f8176f454ac48b074c4ddbd4dd48074373a2a6bc8844f5692240a75018",
+    "audio/music/memory_bloom.ogg": "eeaa187c799c60c97418819eb56277b17842bf0228c70e774138fb30dde5b98e",
+    "audio/music/memory_theme.ogg": "d55de7e80d51df58c1187e1546c4b79b78b11364621258fb6914a2b695784595",
+    "audio/music/menu_theme.ogg": "e9e935555d3842c59c2fed5c622fddb15b14e43f05007b789147f6f3ea40ed16",
+    "audio/music/neighborhood_day.ogg": "f40b8c75b125b41b9b75b614ffe1289d12495eadd249c10360aca31ef708bc1f",
+    "audio/music/night_theme.ogg": "8255302e377ac3b082abbf39f411c6215ea91c16b418bb1f544a6bd8cf59380e",
+    "audio/music/park_blossom.ogg": "bfed2a71f9e9347b42ac91fc1aaf88e281fc520b50ffe8c02a3782379a714c25",
+    "audio/music/park_sunset.ogg": "c3cadf0e0452227ad27fd6deea1c5174e73e11819d3932bf54ee9806e8362997",
+    "audio/music/rain_lullaby.ogg": "5055cb39a2729b17c5c05e2e181fa3fcdb06a96a489aa2fb16beaa03aa9a737c",
+    "audio/music/rain_theme.ogg": "195a3280e10043f34e248f4acbcf143829773e9585d69f7902fc62e1273bbd91",
+    "audio/music/star_road.ogg": "91d342264d603b53af2682ab5581a449189fba92aac5741bef9735a7c850e0ac",
+    "audio/music/star_theme.ogg": "89555213da49b841053c57ad9d15459996a1dc068313ff877881f4e65ac87b7f",
+    "audio/music/star_village.ogg": "ff585c65c0a856f9af6d9dfa62f36a60710db90c69cd0b464a674b2896b4c923",
+    "audio/music/tender_theme.ogg": "de71c4cf2aecbe6351d56461a5c1427c3c91df6c463d5d4d218289f486c46a81",
+    "audio/music/town_theme.ogg": "dc3614af8933563e79b6c0725e9ea9f2dd095ab3856899f062b513940ba3c221",
+    "audio/music/whisper_woods.ogg": "f1925347d91ac2e9e1a4d4ab2008536c8f310dd080622084c85d1f85b27f4aea",
+    "audio/sfx/bell_shop.wav": "9fb465e661d4301df7becbe3771173ca55efef22c028171698a008a41c29fafd",
+    "audio/sfx/bird_chirp.wav": "d43babd3285b16ae4d91ecbcc9845a660ded50aa658d862254c553f3098c118d",
+    "audio/sfx/cat_meow.wav": "8c6054051f1b3142885ccf699b948343be6337da3a73ed3ff08bec4ea2b241d4",
+    "audio/sfx/cinema_heartbeat.wav": "c271b49e32cd8a1175a996be3422d0dc24e479303eb668944cb441e3669c19c2",
+    "audio/sfx/cinema_whoosh.wav": "6e98656845e5983da653e673451f3294a50f30d612e685b5314bf124ecb701b3",
+    "audio/sfx/coin.wav": "6ee1525631176438d92c4315547bada80a7672da0b7667bdcb8c489b34e7666c",
+    "audio/sfx/dog_bark.wav": "e9beb41960738971eb30a4edaf033a820d578a7350496d9c3bb0ed3e08786b2e",
+    "audio/sfx/door_close.wav": "3bbdacf6a1508b5f1b9a5cea82b03cd9c8fbef04f4be824f3944738d60422d98",
+    "audio/sfx/door_open.wav": "75d3c14680fbb571079b4315947dd00587e661e5418809a2d8ab3bd194d57330",
+    "audio/sfx/duck_quack.wav": "f619ae029bb7a829842fa831b7521e16ef291724eb8a529d476312202351dc40",
+    "audio/sfx/flower_pick.wav": "f3bff50e0cfbee3725f39b26c244009aaed2c9f05397477d291fbc73c9bdf1d3",
+    "audio/sfx/gift.wav": "272716ecbd8ac5282f9154edfe4813f60c30ddf4adcfeb5fae403ec3858e98ea",
+    "audio/sfx/heart.wav": "81f930a5723773afd99efb47838242fac1db6df5901a0eb036fbe7a8c4449458",
+    "audio/sfx/highfive.wav": "cbdadd473d1fadc998828baf561ba961308b11970b6abd6741b5515b7da18a49",
+    "audio/sfx/hug.wav": "3dc722af2c49b50b15b4b5bff88cdf2f82586c70c73378d4b34cffc639b5c206",
+    "audio/sfx/lantern.wav": "b4bc1d36a5e5a3eaea273ab801ee53003f12b9756ee4ea026de9c282e8f7b58b",
+    "audio/sfx/menu_confirm.wav": "18e25b2acfc84d02fc9dd9784d7a4c36b848328431324c533dd469d1e6c4f55f",
+    "audio/sfx/notification.wav": "d75204d74081e62524f491014652bbdeba0d42f75aba17395087848b02daf31a",
+    "audio/sfx/page.wav": "ccc741596c95159ab62b131812c2b50bf160f92fb01fba2d731cc0d2d8312027",
+    "audio/sfx/page_turn.wav": "3d64f79aed82e65cc1308410db210357b4212bda2b7dada1817e0a1e5eca372d",
+    "audio/sfx/paper_fold.wav": "9edb1334067a878a1067d8c2878cc62ab1118129b536fff630902543b76a5f9a",
+    "audio/sfx/quest_complete.wav": "591942a3b83684cf54d250a324572df7414d2314d3f08086101c37fca25cd167",
+    "audio/sfx/rain_drop.wav": "70d3722c9c4f612eeb3ebde821c619a5470a7f48bd42b4e480af784cc7501790",
+    "audio/sfx/scene_transition.wav": "d19e160fad4f001569d254c0eb0a6fc723a3a7a2b86dabcbe46718c0328d0549",
+    "audio/sfx/selfie.wav": "c11d77aa6af27b65738af8db63fb36dd022299055540dd58ace4da840b03ff34",
+    "audio/sfx/soft_wrong.wav": "b2be2eb0766b4f2ebbb1ab0af57a18d4ee99bf3230c95550751281e1c5db10a0",
+    "audio/sfx/sparkle.wav": "6d6c98bcbef0403de8f0313ebbc0093acb729c5128818c7437442baf02a3e66b",
+    "audio/sfx/splash.wav": "bd7bb359daff6e90d6377466b7fce74bc673ff683f863038c4a52043b7e3f727",
+    "audio/sfx/step_grass.wav": "7ff0c12901653a984fc26cefb479b8c52a0356862fd10671367735a7cf666642",
+    "audio/sfx/step_stone.wav": "8d20dc2c0c187b3864168f2e4f7c2632570319a2a2a4867335ba6260188483d9",
+    "audio/sfx/step_wood.wav": "5de213b7671857afb6f918e1b274fbfc481f8fb0b5e7d191281459ebb2bb69d9",
+    "audio/sfx/wind_gust.wav": "0ed7c024973a17ede374cf59b183559888524cd2fe372830362b88b472693f01",
+    "audio/soundscape_v24.json": "ae52e93e5f477c853227317d361f12478a3d362e3bddb331e326c5c0711d0d3b"
+  },
+  "geometry": {
+    "dermaga": {
+      "name": "Dermaga Danau",
+      "image": "maps/dermaga.png",
+      "w": 1920,
+      "h": 1088,
+      "music": "town",
+      "ambient": "fireflies",
+      "spawn": [
+        70,
+        425
+      ],
+      "walls": [
+        [
+          560,
+          496,
+          368,
+          16
+        ],
+        [
+          992,
+          496,
+          368,
+          16
+        ],
+        [
+          256,
+          512,
+          672,
+          16
+        ],
+        [
+          992,
+          512,
+          672,
+          16
+        ],
+        [
+          128,
+          528,
+          800,
+          16
+        ],
+        [
+          992,
+          528,
+          816,
+          16
+        ],
+        [
+          64,
+          544,
+          864,
+          16
+        ],
+        [
+          992,
+          544,
+          864,
+          16
+        ],
+        [
+          0,
+          560,
+          928,
+          16
+        ],
+        [
+          992,
+          560,
+          928,
+          16
+        ],
+        [
+          0,
+          576,
+          928,
+          16
+        ],
+        [
+          992,
+          576,
+          928,
+          16
+        ],
+        [
+          0,
+          592,
+          928,
+          16
+        ],
+        [
+          992,
+          592,
+          928,
+          16
+        ],
+        [
+          0,
+          608,
+          928,
+          16
+        ],
+        [
+          992,
+          608,
+          928,
+          16
+        ],
+        [
+          0,
+          624,
+          928,
+          16
+        ],
+        [
+          992,
+          624,
+          928,
+          16
+        ],
+        [
+          0,
+          640,
+          928,
+          16
+        ],
+        [
+          992,
+          640,
+          928,
+          16
+        ],
+        [
+          0,
+          656,
+          928,
+          16
+        ],
+        [
+          992,
+          656,
+          928,
+          16
+        ],
+        [
+          0,
+          672,
+          928,
+          16
+        ],
+        [
+          992,
+          672,
+          928,
+          16
+        ],
+        [
+          0,
+          688,
+          928,
+          16
+        ],
+        [
+          992,
+          688,
+          928,
+          16
+        ],
+        [
+          0,
+          704,
+          928,
+          16
+        ],
+        [
+          992,
+          704,
+          928,
+          16
+        ],
+        [
+          0,
+          720,
+          928,
+          16
+        ],
+        [
+          992,
+          720,
+          928,
+          16
+        ],
+        [
+          0,
+          736,
+          928,
+          16
+        ],
+        [
+          992,
+          736,
+          928,
+          16
+        ],
+        [
+          0,
+          752,
+          928,
+          16
+        ],
+        [
+          992,
+          752,
+          928,
+          16
+        ],
+        [
+          0,
+          768,
+          928,
+          16
+        ],
+        [
+          992,
+          768,
+          928,
+          16
+        ],
+        [
+          0,
+          784,
+          928,
+          16
+        ],
+        [
+          992,
+          784,
+          928,
+          16
+        ],
+        [
+          0,
+          800,
+          928,
+          16
+        ],
+        [
+          992,
+          800,
+          928,
+          16
+        ],
+        [
+          0,
+          816,
+          928,
+          16
+        ],
+        [
+          992,
+          816,
+          928,
+          16
+        ],
+        [
+          0,
+          832,
+          928,
+          16
+        ],
+        [
+          992,
+          832,
+          928,
+          16
+        ],
+        [
+          0,
+          848,
+          800,
+          16
+        ],
+        [
+          1120,
+          848,
+          800,
+          16
+        ],
+        [
+          0,
+          864,
+          784,
+          16
+        ],
+        [
+          1136,
+          864,
+          784,
+          16
+        ],
+        [
+          0,
+          880,
+          784,
+          16
+        ],
+        [
+          1136,
+          880,
+          784,
+          16
+        ],
+        [
+          0,
+          896,
+          784,
+          16
+        ],
+        [
+          1136,
+          896,
+          784,
+          16
+        ],
+        [
+          0,
+          912,
+          784,
+          16
+        ],
+        [
+          1136,
+          912,
+          784,
+          16
+        ],
+        [
+          0,
+          928,
+          784,
+          16
+        ],
+        [
+          1136,
+          928,
+          784,
+          16
+        ],
+        [
+          0,
+          944,
+          800,
+          16
+        ],
+        [
+          1120,
+          944,
+          800,
+          16
+        ],
+        [
+          0,
+          960,
+          1920,
+          16
+        ],
+        [
+          0,
+          976,
+          1920,
+          16
+        ],
+        [
+          0,
+          992,
+          1920,
+          16
+        ],
+        [
+          0,
+          1008,
+          1920,
+          16
+        ],
+        [
+          0,
+          1024,
+          1920,
+          16
+        ],
+        [
+          0,
+          1040,
+          1920,
+          16
+        ],
+        [
+          0,
+          1056,
+          1920,
+          16
+        ],
+        [
+          0,
+          1072,
+          1920,
+          16
+        ],
+        [
+          0,
+          0,
+          20,
+          380
+        ],
+        [
+          0,
+          470,
+          20,
+          618
+        ],
+        [
+          1900,
+          0,
+          20,
+          1088
+        ],
+        [
+          0,
+          0,
+          1920,
+          20
+        ],
+        [
+          0,
+          1068,
+          1920,
+          20
+        ]
+      ],
+      "ellipses": [],
+      "props": [
+        {
+          "type": "bridge_dpier",
+          "x": 960,
+          "y": 880
+        },
+        {
+          "type": "bridge_dplat",
+          "x": 960,
+          "y": 960
+        },
+        {
+          "type": "pier_post",
+          "x": 918,
+          "y": 560
+        },
+        {
+          "type": "pier_post",
+          "x": 1002,
+          "y": 560
+        },
+        {
+          "type": "pier_post",
+          "x": 918,
+          "y": 700
+        },
+        {
+          "type": "pier_post",
+          "x": 1002,
+          "y": 700
+        },
+        {
+          "type": "pier_post",
+          "x": 790,
+          "y": 960
+        },
+        {
+          "type": "pier_post",
+          "x": 1130,
+          "y": 960
+        },
+        {
+          "type": "lantern_post",
+          "x": 806,
+          "y": 880
+        },
+        {
+          "type": "lantern_post",
+          "x": 1114,
+          "y": 880
+        },
+        {
+          "type": "v41_rowboat_rowboat",
+          "x": 860,
+          "y": 720
+        },
+        {
+          "type": "v41_rowboat_b_rowboat",
+          "x": 1070,
+          "y": 660
+        },
+        {
+          "type": "fishing_hut",
+          "x": 1460,
+          "y": 470
+        },
+        {
+          "type": "bench",
+          "x": 600,
+          "y": 470
+        },
+        {
+          "type": "bench_b",
+          "x": 1240,
+          "y": 470
+        },
+        {
+          "type": "lamp",
+          "x": 420,
+          "y": 452
+        },
+        {
+          "type": "lamp",
+          "x": 760,
+          "y": 452
+        },
+        {
+          "type": "lamp",
+          "x": 1160,
+          "y": 452
+        },
+        {
+          "type": "lamp",
+          "x": 1700,
+          "y": 452
+        },
+        {
+          "type": "v41_tree_green_willow",
+          "x": 120,
+          "y": 260
+        },
+        {
+          "type": "tree_cherry",
+          "x": 360,
+          "y": 200
+        },
+        {
+          "type": "tree_pine",
+          "x": 620,
+          "y": 140
+        },
+        {
+          "type": "tree_autumn",
+          "x": 900,
+          "y": 260
+        },
+        {
+          "type": "v41_tree_green_willow",
+          "x": 1180,
+          "y": 180
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1700,
+          "y": 280
+        },
+        {
+          "type": "tree_pine",
+          "x": 1860,
+          "y": 140
+        },
+        {
+          "type": "tree_autumn",
+          "x": 1560,
+          "y": 200
+        },
+        {
+          "type": "flowerbed",
+          "x": 240,
+          "y": 470
+        },
+        {
+          "type": "flowerbed",
+          "x": 1820,
+          "y": 480
+        },
+        {
+          "type": "flowerbed",
+          "x": 520,
+          "y": 330
+        },
+        {
+          "type": "flowerbed",
+          "x": 1320,
+          "y": 330
+        },
+        {
+          "type": "rock",
+          "x": 100,
+          "y": 520
+        },
+        {
+          "type": "rock",
+          "x": 1880,
+          "y": 520
+        },
+        {
+          "type": "rock",
+          "x": 700,
+          "y": 520
+        },
+        {
+          "type": "signpost_w3",
+          "x": 140,
+          "y": 400
+        },
+        {
+          "type": "tree_green",
+          "x": 44,
+          "y": 71
+        },
+        {
+          "type": "tree_cherry",
+          "x": 110,
+          "y": 79
+        },
+        {
+          "type": "tree_pine",
+          "x": 186,
+          "y": 72
+        },
+        {
+          "type": "tree_pine",
+          "x": 241,
+          "y": 76
+        },
+        {
+          "type": "tree_autumn",
+          "x": 318,
+          "y": 76
+        },
+        {
+          "type": "tree_green",
+          "x": 402,
+          "y": 78
+        },
+        {
+          "type": "tree_pine",
+          "x": 448,
+          "y": 74
+        },
+        {
+          "type": "tree_green",
+          "x": 524,
+          "y": 71
+        },
+        {
+          "type": "tree_autumn",
+          "x": 600,
+          "y": 70
+        },
+        {
+          "type": "tree_green",
+          "x": 671,
+          "y": 68
+        },
+        {
+          "type": "tree_green",
+          "x": 746,
+          "y": 81
+        },
+        {
+          "type": "tree_autumn",
+          "x": 812,
+          "y": 77
+        },
+        {
+          "type": "tree_cherry",
+          "x": 888,
+          "y": 81
+        },
+        {
+          "type": "tree_cherry",
+          "x": 962,
+          "y": 71
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1020,
+          "y": 74
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1082,
+          "y": 83
+        },
+        {
+          "type": "tree_green",
+          "x": 1165,
+          "y": 82
+        },
+        {
+          "type": "tree_green",
+          "x": 1232,
+          "y": 83
+        },
+        {
+          "type": "tree_green",
+          "x": 1304,
+          "y": 83
+        },
+        {
+          "type": "tree_autumn",
+          "x": 1369,
+          "y": 81
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1428,
+          "y": 75
+        },
+        {
+          "type": "tree_green",
+          "x": 1498,
+          "y": 82
+        },
+        {
+          "type": "tree_autumn",
+          "x": 1582,
+          "y": 71
+        },
+        {
+          "type": "tree_pine",
+          "x": 1642,
+          "y": 83
+        },
+        {
+          "type": "tree_pine",
+          "x": 1722,
+          "y": 80
+        },
+        {
+          "type": "tree_pine",
+          "x": 1801,
+          "y": 73
+        },
+        {
+          "type": "tree_autumn",
+          "x": 1862,
+          "y": 77
+        },
+        {
+          "type": "tree_pine",
+          "x": 18,
+          "y": 131
+        },
+        {
+          "type": "tree_green",
+          "x": 11,
+          "y": 219
+        },
+        {
+          "type": "tree_autumn",
+          "x": 9,
+          "y": 624
+        },
+        {
+          "type": "tree_green",
+          "x": 15,
+          "y": 706
+        },
+        {
+          "type": "tree_autumn",
+          "x": 18,
+          "y": 770
+        },
+        {
+          "type": "tree_cherry",
+          "x": 14,
+          "y": 870
+        },
+        {
+          "type": "tree_pine",
+          "x": 9,
+          "y": 932
+        },
+        {
+          "type": "tree_cherry",
+          "x": 10,
+          "y": 1023
+        },
+        {
+          "type": "tree_pine",
+          "x": 1907,
+          "y": 133
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1909,
+          "y": 225
+        },
+        {
+          "type": "tree_green",
+          "x": 1906,
+          "y": 310
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1900,
+          "y": 382
+        },
+        {
+          "type": "tree_pine",
+          "x": 1910,
+          "y": 451
+        },
+        {
+          "type": "tree_pine",
+          "x": 1904,
+          "y": 536
+        },
+        {
+          "type": "tree_pine",
+          "x": 1908,
+          "y": 620
+        },
+        {
+          "type": "tree_green",
+          "x": 1900,
+          "y": 698
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1901,
+          "y": 776
+        },
+        {
+          "type": "tree_pine",
+          "x": 1908,
+          "y": 864
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1905,
+          "y": 946
+        },
+        {
+          "type": "tree_pine",
+          "x": 1908,
+          "y": 1019
+        },
+        {
+          "type": "tree_green",
+          "x": 297,
+          "y": 300
+        },
+        {
+          "type": "bush",
+          "x": 435,
+          "y": 211
+        },
+        {
+          "type": "bush",
+          "x": 1395,
+          "y": 166
+        },
+        {
+          "type": "tree_green",
+          "x": 80,
+          "y": 107
+        },
+        {
+          "type": "bush",
+          "x": 402,
+          "y": 275
+        },
+        {
+          "type": "tree_green",
+          "x": 1020,
+          "y": 318
+        },
+        {
+          "type": "flowerbed",
+          "x": 1728,
+          "y": 147
+        },
+        {
+          "type": "tree_green",
+          "x": 658,
+          "y": 261
+        },
+        {
+          "type": "rock",
+          "x": 1874,
+          "y": 324
+        },
+        {
+          "type": "mushrooms",
+          "x": 1697,
+          "y": 397
+        },
+        {
+          "type": "flowerbed",
+          "x": 1440,
+          "y": 340
+        },
+        {
+          "type": "bush",
+          "x": 232,
+          "y": 116
+        },
+        {
+          "type": "bush",
+          "x": 290,
+          "y": 184
+        },
+        {
+          "type": "rock",
+          "x": 1838,
+          "y": 220
+        },
+        {
+          "type": "mushrooms",
+          "x": 69,
+          "y": 315
+        },
+        {
+          "type": "rock",
+          "x": 746,
+          "y": 377
+        }
+      ],
+      "doors": [
+        {
+          "id": "pier_to_lake",
+          "rect": [
+            0,
+            380,
+            18,
+            90
+          ],
+          "label": "Ke Tepi Danau",
+          "to": "riverside",
+          "tx": 1860,
+          "ty": 610,
+          "dir": "left"
+        }
+      ],
+      "examine": [
+        {
+          "id": "pier_boat",
+          "x": 1000,
+          "y": 760,
+          "label": "Perahu kecil",
+          "r": 56,
+          "lines": {
+            "arland": [
+              {
+                "s": "narrator",
+                "e": "neutral",
+                "t": "Perahu kayu terikat di tiang dermaga. Namanya dicat di sisinya: \"Senja\"."
+              }
+            ],
+            "sofia": [
+              {
+                "s": "narrator",
+                "e": "neutral",
+                "t": "Perahu kayu terikat di tiang dermaga. Namanya dicat di sisinya: \"Senja\"."
+              }
+            ]
+          }
+        },
+        {
+          "id": "pier_hut",
+          "x": 1460,
+          "y": 494,
+          "label": "Pondok sewa perahu",
+          "r": 56,
+          "lines": {
+            "arland": [
+              {
+                "s": "arland",
+                "e": "neutral",
+                "t": "Sewa perahu: tutup sore ini. Lain kali, mungkin."
+              }
+            ],
+            "sofia": [
+              {
+                "s": "sofia",
+                "e": "senyum",
+                "t": "Kapan-kapan kita naik perahu, ya?"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pier_water",
+          "x": 960,
+          "y": 945,
+          "label": "Ujung dermaga",
+          "r": 56,
+          "lines": {
+            "arland": [
+              {
+                "s": "arland",
+                "e": "neutral",
+                "t": "Dari sini, langit dan danau seperti satu halaman."
+              }
+            ],
+            "sofia": [
+              {
+                "s": "sofia",
+                "e": "senyum",
+                "t": "Kalau sore, airnya jadi emas. Aku suka sekali."
+              }
+            ]
+          }
+        }
+      ],
+      "water": [
+        {
+          "cx": 960,
+          "cy": 860,
+          "rx": 920,
+          "ry": 220
+        }
+      ],
+      "gates": [],
+      "indoor": false,
+      "animals": [
+        {
+          "type": "duck",
+          "n": 3,
+          "water": [
+            960,
+            860,
+            920,
+            220
+          ]
+        },
+        {
+          "type": "cat_grey",
+          "n": 1,
+          "region": [
+            1300,
+            480,
+            500,
+            80
+          ],
+          "day": false
+        },
+        {
+          "type": "bird",
+          "n": 3,
+          "region": [
+            300,
+            440,
+            1400,
+            100
+          ]
+        }
+      ],
+      "v41PropReplacementIndex": {
+        "10": {
+          "was": "rowboat",
+          "art": "rowboat"
+        },
+        "11": {
+          "was": "rowboat_b",
+          "art": "rowboat"
+        },
+        "19": {
+          "was": "tree_green",
+          "art": "willow"
+        },
+        "23": {
+          "was": "tree_green",
+          "art": "willow"
+        }
+      },
+      "visualStyle": "v4.1_romantic_scenery",
+      "visualUpdate": "13_legacy_worlds_landmarks_atmosphere"
+    },
+    "bukit_bintang": {
+      "name": "Bukit Bintang",
+      "image": "maps/bukit_bintang.png",
+      "w": 1920,
+      "h": 1280,
+      "music": "star",
+      "ambient": "petals",
+      "spawn": [
+        70,
+        620
+      ],
+      "walls": [
+        [
+          0,
+          992,
+          1920,
+          16
+        ],
+        [
+          0,
+          1008,
+          1920,
+          16
+        ],
+        [
+          0,
+          1024,
+          1920,
+          16
+        ],
+        [
+          0,
+          1040,
+          1920,
+          16
+        ],
+        [
+          0,
+          1056,
+          1920,
+          16
+        ],
+        [
+          0,
+          1072,
+          1920,
+          16
+        ],
+        [
+          0,
+          1088,
+          1920,
+          16
+        ],
+        [
+          0,
+          1104,
+          1920,
+          16
+        ],
+        [
+          0,
+          1120,
+          1920,
+          16
+        ],
+        [
+          0,
+          1136,
+          1920,
+          16
+        ],
+        [
+          0,
+          1152,
+          1920,
+          16
+        ],
+        [
+          0,
+          1168,
+          1920,
+          16
+        ],
+        [
+          0,
+          1184,
+          1920,
+          16
+        ],
+        [
+          0,
+          1200,
+          1920,
+          16
+        ],
+        [
+          0,
+          1216,
+          1920,
+          16
+        ],
+        [
+          0,
+          1232,
+          1920,
+          16
+        ],
+        [
+          0,
+          1248,
+          1920,
+          16
+        ],
+        [
+          0,
+          1264,
+          1920,
+          16
+        ],
+        [
+          0,
+          0,
+          20,
+          580
+        ],
+        [
+          0,
+          660,
+          20,
+          620
+        ],
+        [
+          1900,
+          0,
+          20,
+          1280
+        ],
+        [
+          0,
+          0,
+          1920,
+          20
+        ],
+        [
+          0,
+          1260,
+          1920,
+          20
+        ]
+      ],
+      "ellipses": [],
+      "props": [
+        {
+          "type": "v41_observatory_observatory",
+          "x": 1100,
+          "y": 560
+        },
+        {
+          "type": "v41_telescope_telescope",
+          "x": 1560,
+          "y": 700
+        },
+        {
+          "type": "bench",
+          "x": 1440,
+          "y": 790
+        },
+        {
+          "type": "picnic_blanket",
+          "x": 700,
+          "y": 860
+        },
+        {
+          "type": "fence_bb",
+          "x": 80,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 144,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 208,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 272,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 336,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 400,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 464,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 528,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 592,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 656,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 720,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 784,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 848,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 912,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 976,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1040,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1104,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1168,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1232,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1296,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1360,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1424,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1488,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1552,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1616,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1680,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1744,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1808,
+          "y": 985
+        },
+        {
+          "type": "fence_bb",
+          "x": 1872,
+          "y": 985
+        },
+        {
+          "type": "chest_bb",
+          "x": 260,
+          "y": 300,
+          "alt": "chest_open",
+          "altFlag": "CHEST_HILL"
+        },
+        {
+          "type": "v41_tree_cherry_cherry",
+          "x": 300,
+          "y": 520
+        },
+        {
+          "type": "tree_green",
+          "x": 1700,
+          "y": 380
+        },
+        {
+          "type": "tree_oak",
+          "x": 1820,
+          "y": 760
+        },
+        {
+          "type": "v41_tree_cherry_cherry",
+          "x": 640,
+          "y": 380
+        },
+        {
+          "type": "tree_pine",
+          "x": 1500,
+          "y": 220
+        },
+        {
+          "type": "tree_autumn",
+          "x": 180,
+          "y": 820
+        },
+        {
+          "type": "flowerbed",
+          "x": 820,
+          "y": 900
+        },
+        {
+          "type": "flowerbed",
+          "x": 1000,
+          "y": 880
+        },
+        {
+          "type": "stone_lantern_bb",
+          "x": 980,
+          "y": 700
+        },
+        {
+          "type": "stone_lantern_bb2",
+          "x": 1220,
+          "y": 700
+        },
+        {
+          "type": "v41_tree_cherry_cherry",
+          "x": 48,
+          "y": 83
+        },
+        {
+          "type": "tree_cherry",
+          "x": 104,
+          "y": 74
+        },
+        {
+          "type": "tree_pine",
+          "x": 180,
+          "y": 69
+        },
+        {
+          "type": "tree_cherry",
+          "x": 252,
+          "y": 82
+        },
+        {
+          "type": "tree_green",
+          "x": 324,
+          "y": 78
+        },
+        {
+          "type": "tree_green",
+          "x": 385,
+          "y": 83
+        },
+        {
+          "type": "tree_pine",
+          "x": 467,
+          "y": 84
+        },
+        {
+          "type": "tree_green",
+          "x": 530,
+          "y": 78
+        },
+        {
+          "type": "tree_cherry",
+          "x": 592,
+          "y": 81
+        },
+        {
+          "type": "tree_cherry",
+          "x": 681,
+          "y": 69
+        },
+        {
+          "type": "tree_pine",
+          "x": 735,
+          "y": 76
+        },
+        {
+          "type": "tree_cherry",
+          "x": 813,
+          "y": 83
+        },
+        {
+          "type": "tree_cherry",
+          "x": 869,
+          "y": 73
+        },
+        {
+          "type": "tree_pine",
+          "x": 962,
+          "y": 71
+        },
+        {
+          "type": "tree_green",
+          "x": 1020,
+          "y": 76
+        },
+        {
+          "type": "tree_green",
+          "x": 1083,
+          "y": 74
+        },
+        {
+          "type": "tree_green",
+          "x": 1151,
+          "y": 79
+        },
+        {
+          "type": "tree_green",
+          "x": 1225,
+          "y": 74
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1295,
+          "y": 77
+        },
+        {
+          "type": "tree_pine",
+          "x": 1369,
+          "y": 74
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1437,
+          "y": 78
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1522,
+          "y": 75
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1592,
+          "y": 69
+        },
+        {
+          "type": "tree_pine",
+          "x": 1644,
+          "y": 80
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1724,
+          "y": 79
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1791,
+          "y": 73
+        },
+        {
+          "type": "tree_green",
+          "x": 1865,
+          "y": 79
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1901,
+          "y": 136
+        },
+        {
+          "type": "tree_pine",
+          "x": 1905,
+          "y": 210
+        },
+        {
+          "type": "tree_green",
+          "x": 1910,
+          "y": 306
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1909,
+          "y": 380
+        },
+        {
+          "type": "tree_green",
+          "x": 1904,
+          "y": 455
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1909,
+          "y": 545
+        },
+        {
+          "type": "tree_pine",
+          "x": 1904,
+          "y": 630
+        },
+        {
+          "type": "tree_pine",
+          "x": 1902,
+          "y": 707
+        },
+        {
+          "type": "tree_green",
+          "x": 1910,
+          "y": 787
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1902,
+          "y": 864
+        },
+        {
+          "type": "tree_green",
+          "x": 1900,
+          "y": 935
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1911,
+          "y": 1030
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1907,
+          "y": 1109
+        },
+        {
+          "type": "tree_green",
+          "x": 1900,
+          "y": 1185
+        },
+        {
+          "type": "tree_cherry",
+          "x": 882,
+          "y": 323
+        },
+        {
+          "type": "flowerbed",
+          "x": 125,
+          "y": 457
+        },
+        {
+          "type": "bush",
+          "x": 607,
+          "y": 506
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1497,
+          "y": 595
+        },
+        {
+          "type": "bush",
+          "x": 338,
+          "y": 229
+        },
+        {
+          "type": "rock",
+          "x": 489,
+          "y": 417
+        },
+        {
+          "type": "rock",
+          "x": 606,
+          "y": 118
+        },
+        {
+          "type": "bush",
+          "x": 419,
+          "y": 242
+        },
+        {
+          "type": "bush",
+          "x": 1326,
+          "y": 74
+        },
+        {
+          "type": "rock",
+          "x": 671,
+          "y": 255
+        },
+        {
+          "type": "flowerbed",
+          "x": 236,
+          "y": 939
+        },
+        {
+          "type": "flowerbed",
+          "x": 1613,
+          "y": 383
+        },
+        {
+          "type": "bush",
+          "x": 1513,
+          "y": 383
+        },
+        {
+          "type": "bush",
+          "x": 1332,
+          "y": 264
+        },
+        {
+          "type": "bush",
+          "x": 868,
+          "y": 492
+        },
+        {
+          "type": "bush",
+          "x": 485,
+          "y": 918
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1224,
+          "y": 852
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1805,
+          "y": 427
+        },
+        {
+          "type": "bush",
+          "x": 1236,
+          "y": 292
+        },
+        {
+          "type": "rock",
+          "x": 1666,
+          "y": 178
+        },
+        {
+          "type": "tree_pine",
+          "x": 468,
+          "y": 1139
+        },
+        {
+          "type": "bush",
+          "x": 219,
+          "y": 1085
+        },
+        {
+          "type": "bush",
+          "x": 1724,
+          "y": 1255
+        },
+        {
+          "type": "tree_pine",
+          "x": 707,
+          "y": 1097
+        },
+        {
+          "type": "bush",
+          "x": 1626,
+          "y": 1208
+        },
+        {
+          "type": "tree_pine",
+          "x": 1314,
+          "y": 1238
+        },
+        {
+          "type": "tree_pine",
+          "x": 1173,
+          "y": 1161
+        },
+        {
+          "type": "tree_pine",
+          "x": 1139,
+          "y": 1097
+        },
+        {
+          "type": "tree_green",
+          "x": 643,
+          "y": 1140
+        },
+        {
+          "type": "tree_pine",
+          "x": 1094,
+          "y": 1183
+        },
+        {
+          "type": "bush",
+          "x": 366,
+          "y": 1095
+        },
+        {
+          "type": "tree_green",
+          "x": 839,
+          "y": 1226
+        },
+        {
+          "type": "tree_pine",
+          "x": 1166,
+          "y": 1256
+        },
+        {
+          "type": "tree_pine",
+          "x": 347,
+          "y": 1250
+        },
+        {
+          "type": "tree_green",
+          "x": 1547,
+          "y": 1136
+        },
+        {
+          "type": "tree_green",
+          "x": 871,
+          "y": 1147
+        },
+        {
+          "type": "tree_pine",
+          "x": 878,
+          "y": 1084
+        },
+        {
+          "type": "tree_green",
+          "x": 226,
+          "y": 1174
+        },
+        {
+          "type": "tree_green",
+          "x": 1342,
+          "y": 1178
+        },
+        {
+          "type": "tree_green",
+          "x": 1828,
+          "y": 1267
+        },
+        {
+          "type": "bush",
+          "x": 1818,
+          "y": 1206
+        },
+        {
+          "type": "tree_green",
+          "x": 114,
+          "y": 1181
+        },
+        {
+          "type": "bush",
+          "x": 1450,
+          "y": 1237
+        },
+        {
+          "type": "tree_green",
+          "x": 1704,
+          "y": 1114
+        }
+      ],
+      "doors": [
+        {
+          "id": "hill_to_forest",
+          "rect": [
+            0,
+            580,
+            18,
+            80
+          ],
+          "label": "Ke Hutan Bisik",
+          "to": "hutan_bisik",
+          "tx": 2500,
+          "ty": 400,
+          "dir": "left"
+        }
+      ],
+      "examine": [
+        {
+          "id": "bb_edge",
+          "x": 900,
+          "y": 962,
+          "label": "Tepi bukit",
+          "r": 56,
+          "lines": {
+            "arland": [
+              {
+                "s": "arland",
+                "e": "neutral",
+                "t": "Dari sini seluruh kota kelihatan. Atap rumah Sofia yang merah muda itu, ya?"
+              }
+            ],
+            "sofia": [
+              {
+                "s": "sofia",
+                "e": "senyum",
+                "t": "Kota kita kecil sekali dari atas. Tapi semuanya ada di situ."
+              }
+            ]
+          }
+        },
+        {
+          "id": "bb_obs",
+          "x": 1100,
+          "y": 592,
+          "label": "Pintu observatorium",
+          "r": 56,
+          "lines": {
+            "arland": [
+              {
+                "s": "narrator",
+                "e": "neutral",
+                "t": "Pintu terkunci. Ada catatan: \"Sedang kalibrasi teleskop. Tanya Kak Nara di dek pandang.\""
+              }
+            ],
+            "sofia": [
+              {
+                "s": "narrator",
+                "e": "neutral",
+                "t": "Pintu terkunci. Ada catatan: \"Sedang kalibrasi teleskop. Tanya Kak Nara di dek pandang.\""
+              }
+            ]
+          }
+        }
+      ],
+      "water": [],
+      "gates": [],
+      "indoor": false,
+      "animals": [
+        {
+          "type": "rabbit",
+          "n": 2,
+          "region": [
+            300,
+            500,
+            1300,
+            600
+          ]
+        }
+      ],
+      "v41PropReplacementIndex": {
+        "0": {
+          "was": "observatory",
+          "art": "observatory"
+        },
+        "1": {
+          "was": "telescope",
+          "art": "telescope"
+        },
+        "34": {
+          "was": "tree_cherry",
+          "art": "cherry"
+        },
+        "37": {
+          "was": "tree_cherry",
+          "art": "cherry"
+        },
+        "44": {
+          "was": "tree_cherry",
+          "art": "cherry"
+        }
+      },
+      "visualStyle": "v4.1_romantic_scenery",
+      "visualUpdate": "13_legacy_worlds_landmarks_atmosphere"
+    },
+    "memory_garden": {
+      "name": "Memory Garden",
+      "image": "maps/memory_garden.png",
+      "w": 1600,
+      "h": 1200,
+      "music": "memory",
+      "ambient": "sparkles",
+      "spawn": [
+        800,
+        1040
+      ],
+      "walls": [
+        [
+          0,
+          0,
+          20,
+          1200
+        ],
+        [
+          1580,
+          0,
+          20,
+          1200
+        ],
+        [
+          0,
+          0,
+          1600,
+          20
+        ],
+        [
+          0,
+          1180,
+          1600,
+          20
+        ]
+      ],
+      "ellipses": [],
+      "props": [
+        {
+          "type": "v41_pedestal_book_crystal_shrine",
+          "x": 800,
+          "y": 360
+        },
+        {
+          "type": "v41_arch_flowers_arch",
+          "x": 800,
+          "y": 330
+        },
+        {
+          "type": "v41_tree_dream_memory_tree",
+          "x": 240,
+          "y": 300
+        },
+        {
+          "type": "v41_tree_dream_memory_tree",
+          "x": 1360,
+          "y": 300
+        },
+        {
+          "type": "v41_tree_dream_memory_tree",
+          "x": 140,
+          "y": 1060
+        },
+        {
+          "type": "tree_dream",
+          "x": 1460,
+          "y": 1060
+        },
+        {
+          "type": "tree_dream",
+          "x": 520,
+          "y": 220
+        },
+        {
+          "type": "tree_dream",
+          "x": 1080,
+          "y": 220
+        },
+        {
+          "type": "lantern_post",
+          "x": 700,
+          "y": 640
+        },
+        {
+          "type": "lantern_post",
+          "x": 900,
+          "y": 640
+        },
+        {
+          "type": "lantern_post",
+          "x": 700,
+          "y": 820
+        },
+        {
+          "type": "lantern_post",
+          "x": 900,
+          "y": 820
+        },
+        {
+          "type": "lantern_post",
+          "x": 420,
+          "y": 690
+        },
+        {
+          "type": "lantern_post",
+          "x": 1180,
+          "y": 690
+        },
+        {
+          "type": "lantern_post",
+          "x": 170,
+          "y": 760
+        },
+        {
+          "type": "lantern_post",
+          "x": 1430,
+          "y": 760
+        },
+        {
+          "type": "crystal",
+          "x": 330,
+          "y": 460
+        },
+        {
+          "type": "crystal",
+          "x": 1270,
+          "y": 460
+        },
+        {
+          "type": "crystal",
+          "x": 700,
+          "y": 1060
+        },
+        {
+          "type": "crystal",
+          "x": 900,
+          "y": 1060
+        },
+        {
+          "type": "crystal",
+          "x": 120,
+          "y": 700
+        },
+        {
+          "type": "crystal",
+          "x": 1480,
+          "y": 700
+        },
+        {
+          "type": "bush_d",
+          "x": 400,
+          "y": 1120
+        },
+        {
+          "type": "bush_d",
+          "x": 1200,
+          "y": 1120
+        },
+        {
+          "type": "bush_d",
+          "x": 640,
+          "y": 260
+        },
+        {
+          "type": "bush_d",
+          "x": 960,
+          "y": 260
+        },
+        {
+          "type": "tree_dream",
+          "x": 43,
+          "y": 83
+        },
+        {
+          "type": "tree_dream",
+          "x": 131,
+          "y": 75
+        },
+        {
+          "type": "tree_dream",
+          "x": 208,
+          "y": 81
+        },
+        {
+          "type": "tree_lantern",
+          "x": 320,
+          "y": 76
+        },
+        {
+          "type": "tree_dream",
+          "x": 408,
+          "y": 75
+        },
+        {
+          "type": "tree_dream",
+          "x": 487,
+          "y": 77
+        },
+        {
+          "type": "tree_dream",
+          "x": 589,
+          "y": 72
+        },
+        {
+          "type": "tree_lantern",
+          "x": 677,
+          "y": 77
+        },
+        {
+          "type": "tree_dream",
+          "x": 755,
+          "y": 76
+        },
+        {
+          "type": "tree_dream",
+          "x": 842,
+          "y": 68
+        },
+        {
+          "type": "tree_dream",
+          "x": 942,
+          "y": 77
+        },
+        {
+          "type": "tree_dream",
+          "x": 1027,
+          "y": 79
+        },
+        {
+          "type": "tree_dream",
+          "x": 1121,
+          "y": 70
+        },
+        {
+          "type": "tree_dream",
+          "x": 1213,
+          "y": 81
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1308,
+          "y": 73
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1387,
+          "y": 69
+        },
+        {
+          "type": "tree_dream",
+          "x": 1470,
+          "y": 68
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1569,
+          "y": 75
+        },
+        {
+          "type": "tree_dream",
+          "x": 32,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 127,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 222,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 300,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 410,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 501,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 582,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 658,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 770,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 852,
+          "y": 1194
+        },
+        {
+          "type": "tree_lantern",
+          "x": 930,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 1038,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 1112,
+          "y": 1194
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1205,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 1299,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 1395,
+          "y": 1194
+        },
+        {
+          "type": "tree_dream",
+          "x": 1489,
+          "y": 1194
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1570,
+          "y": 1194
+        },
+        {
+          "type": "tree_lantern",
+          "x": 13,
+          "y": 145
+        },
+        {
+          "type": "tree_lantern",
+          "x": 18,
+          "y": 250
+        },
+        {
+          "type": "tree_dream",
+          "x": 11,
+          "y": 340
+        },
+        {
+          "type": "tree_dream",
+          "x": 19,
+          "y": 432
+        },
+        {
+          "type": "tree_lantern",
+          "x": 9,
+          "y": 537
+        },
+        {
+          "type": "tree_dream",
+          "x": 14,
+          "y": 650
+        },
+        {
+          "type": "tree_dream",
+          "x": 9,
+          "y": 731
+        },
+        {
+          "type": "tree_dream",
+          "x": 10,
+          "y": 850
+        },
+        {
+          "type": "tree_lantern",
+          "x": 12,
+          "y": 937
+        },
+        {
+          "type": "tree_dream",
+          "x": 17,
+          "y": 1030
+        },
+        {
+          "type": "tree_dream",
+          "x": 16,
+          "y": 1137
+        },
+        {
+          "type": "tree_dream",
+          "x": 1581,
+          "y": 150
+        },
+        {
+          "type": "tree_dream",
+          "x": 1584,
+          "y": 242
+        },
+        {
+          "type": "tree_dream",
+          "x": 1580,
+          "y": 342
+        },
+        {
+          "type": "tree_dream",
+          "x": 1591,
+          "y": 444
+        },
+        {
+          "type": "tree_dream",
+          "x": 1584,
+          "y": 531
+        },
+        {
+          "type": "tree_dream",
+          "x": 1580,
+          "y": 636
+        },
+        {
+          "type": "tree_dream",
+          "x": 1590,
+          "y": 738
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1586,
+          "y": 833
+        },
+        {
+          "type": "tree_dream",
+          "x": 1581,
+          "y": 943
+        },
+        {
+          "type": "tree_lantern",
+          "x": 1581,
+          "y": 1039
+        },
+        {
+          "type": "tree_dream",
+          "x": 1587,
+          "y": 1143
+        },
+        {
+          "type": "rock",
+          "x": 392,
+          "y": 950
+        },
+        {
+          "type": "crystal",
+          "x": 1053,
+          "y": 264
+        },
+        {
+          "type": "rock",
+          "x": 1293,
+          "y": 371
+        },
+        {
+          "type": "crystal",
+          "x": 933,
+          "y": 215
+        },
+        {
+          "type": "crystal",
+          "x": 1018,
+          "y": 201
+        },
+        {
+          "type": "tree_dream",
+          "x": 1246,
+          "y": 968
+        },
+        {
+          "type": "rock",
+          "x": 1193,
+          "y": 476
+        },
+        {
+          "type": "crystal",
+          "x": 340,
+          "y": 327
+        },
+        {
+          "type": "bush",
+          "x": 586,
+          "y": 893
+        },
+        {
+          "type": "bush",
+          "x": 427,
+          "y": 123
+        },
+        {
+          "type": "rock",
+          "x": 1030,
+          "y": 498
+        },
+        {
+          "type": "tree_dream",
+          "x": 1394,
+          "y": 409
+        },
+        {
+          "type": "bush",
+          "x": 997,
+          "y": 889
+        },
+        {
+          "type": "bush",
+          "x": 1423,
+          "y": 1164
+        },
+        {
+          "type": "crystal",
+          "x": 434,
+          "y": 1065
+        },
+        {
+          "type": "mushrooms",
+          "x": 161,
+          "y": 218
+        },
+        {
+          "type": "crystal",
+          "x": 1320,
+          "y": 898
+        },
+        {
+          "type": "rock",
+          "x": 940,
+          "y": 66
+        },
+        {
+          "type": "mushrooms",
+          "x": 222,
+          "y": 1011
+        },
+        {
+          "type": "rock",
+          "x": 652,
+          "y": 68
+        },
+        {
+          "type": "crystal",
+          "x": 424,
+          "y": 505
+        },
+        {
+          "type": "crystal",
+          "x": 462,
+          "y": 966
+        }
+      ],
+      "doors": [],
+      "examine": [
+        {
+          "id": "mg_crystal",
+          "x": 330,
+          "y": 484,
+          "label": "Kristal",
+          "r": 56,
+          "lines": {
+            "arland": [
+              {
+                "s": "arland",
+                "e": "penasaran",
+                "t": "Kristalnya hangat disentuh. Seperti menyimpan suara tawa."
+              }
+            ],
+            "sofia": [
+              {
+                "s": "sofia",
+                "e": "penasaran",
+                "t": "Kalau dilihat dekat, ada bayangan kecil di dalamnya."
+              }
+            ]
+          }
+        }
+      ],
+      "water": [],
+      "gates": [],
+      "indoor": false,
+      "v41PropReplacementIndex": {
+        "1": {
+          "was": "arch_flowers",
+          "art": "arch"
+        },
+        "0": {
+          "was": "pedestal_book",
+          "art": "crystal_shrine"
+        },
+        "2": {
+          "was": "tree_dream",
+          "art": "memory_tree"
+        },
+        "3": {
+          "was": "tree_dream",
+          "art": "memory_tree"
+        },
+        "4": {
+          "was": "tree_dream",
+          "art": "memory_tree"
+        }
+      },
+      "visualStyle": "v4.1_romantic_scenery",
+      "visualUpdate": "13_legacy_worlds_landmarks_atmosphere"
+    },
+    "eternal_garden": {
+      "name": "Eternal Garden",
+      "image": "maps/eternal_garden.png",
+      "w": 1920,
+      "h": 1408,
+      "music": "tender",
+      "ambient": "petals",
+      "spawn": [
+        960,
+        1340
+      ],
+      "walls": [
+        [
+          336,
+          880,
+          176,
+          16
+        ],
+        [
+          288,
+          896,
+          272,
+          16
+        ],
+        [
+          256,
+          912,
+          336,
+          16
+        ],
+        [
+          240,
+          928,
+          368,
+          16
+        ],
+        [
+          224,
+          944,
+          400,
+          16
+        ],
+        [
+          208,
+          960,
+          432,
+          16
+        ],
+        [
+          208,
+          976,
+          432,
+          16
+        ],
+        [
+          192,
+          992,
+          448,
+          16
+        ],
+        [
+          208,
+          1008,
+          432,
+          16
+        ],
+        [
+          208,
+          1024,
+          432,
+          16
+        ],
+        [
+          224,
+          1040,
+          400,
+          16
+        ],
+        [
+          224,
+          1056,
+          384,
+          16
+        ],
+        [
+          256,
+          1072,
+          336,
+          16
+        ],
+        [
+          288,
+          1088,
+          272,
+          16
+        ],
+        [
+          336,
+          1104,
+          176,
+          16
+        ],
+        [
+          0,
+          0,
+          20,
+          1408
+        ],
+        [
+          1900,
+          0,
+          20,
+          1408
+        ],
+        [
+          0,
+          0,
+          1920,
+          20
+        ],
+        [
+          0,
+          1388,
+          1920,
+          20
+        ]
+      ],
+      "ellipses": [],
+      "props": [
+        {
+          "type": "v41_wishing_tree_memory_tree",
+          "x": 960,
+          "y": 420
+        },
+        {
+          "type": "v41_arch_flowers_e_arch",
+          "x": 960,
+          "y": 1180
+        },
+        {
+          "type": "v41_arch_flowers_e2_arch",
+          "x": 960,
+          "y": 820
+        },
+        {
+          "type": "stone_bench",
+          "x": 840,
+          "y": 640
+        },
+        {
+          "type": "stone_bench",
+          "x": 1080,
+          "y": 640
+        },
+        {
+          "type": "tree_cherry",
+          "x": 300,
+          "y": 300
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1620,
+          "y": 300
+        },
+        {
+          "type": "tree_cherry",
+          "x": 200,
+          "y": 700
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1720,
+          "y": 700
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1500,
+          "y": 1100
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1700,
+          "y": 1300
+        },
+        {
+          "type": "tree_cherry",
+          "x": 180,
+          "y": 1300
+        },
+        {
+          "type": "tree_cherry",
+          "x": 640,
+          "y": 200
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1280,
+          "y": 200
+        },
+        {
+          "type": "flowerbed",
+          "x": 600,
+          "y": 760
+        },
+        {
+          "type": "flowerbed",
+          "x": 1320,
+          "y": 760
+        },
+        {
+          "type": "flowerbed",
+          "x": 700,
+          "y": 1100
+        },
+        {
+          "type": "flowerbed",
+          "x": 1220,
+          "y": 1100
+        },
+        {
+          "type": "flowerbed",
+          "x": 1500,
+          "y": 520
+        },
+        {
+          "type": "flowerbed",
+          "x": 420,
+          "y": 520
+        },
+        {
+          "type": "lantern_post",
+          "x": 760,
+          "y": 300
+        },
+        {
+          "type": "lantern_post",
+          "x": 1160,
+          "y": 300
+        },
+        {
+          "type": "lantern_post",
+          "x": 1400,
+          "y": 900
+        },
+        {
+          "type": "lantern_post",
+          "x": 520,
+          "y": 860
+        },
+        {
+          "type": "v41_gazebo_e_gazebo",
+          "x": 1500,
+          "y": 1000
+        },
+        {
+          "type": "tree_cherry",
+          "x": 43,
+          "y": 76
+        },
+        {
+          "type": "tree_green",
+          "x": 114,
+          "y": 70
+        },
+        {
+          "type": "tree_cherry",
+          "x": 196,
+          "y": 78
+        },
+        {
+          "type": "tree_green",
+          "x": 279,
+          "y": 80
+        },
+        {
+          "type": "tree_cherry",
+          "x": 355,
+          "y": 75
+        },
+        {
+          "type": "tree_green",
+          "x": 430,
+          "y": 70
+        },
+        {
+          "type": "tree_cherry",
+          "x": 521,
+          "y": 81
+        },
+        {
+          "type": "tree_cherry",
+          "x": 589,
+          "y": 82
+        },
+        {
+          "type": "tree_green",
+          "x": 668,
+          "y": 83
+        },
+        {
+          "type": "tree_green",
+          "x": 752,
+          "y": 78
+        },
+        {
+          "type": "tree_cherry",
+          "x": 848,
+          "y": 75
+        },
+        {
+          "type": "tree_cherry",
+          "x": 924,
+          "y": 72
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1000,
+          "y": 77
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1069,
+          "y": 84
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1153,
+          "y": 82
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1232,
+          "y": 76
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1309,
+          "y": 73
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1388,
+          "y": 82
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1479,
+          "y": 81
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1557,
+          "y": 82
+        },
+        {
+          "type": "tree_green",
+          "x": 1639,
+          "y": 68
+        },
+        {
+          "type": "tree_green",
+          "x": 1713,
+          "y": 76
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1803,
+          "y": 79
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1869,
+          "y": 84
+        },
+        {
+          "type": "tree_cherry",
+          "x": 33,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 132,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 203,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 270,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 358,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 440,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 528,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 597,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 685,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 770,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 837,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 922,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 1004,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1086,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1157,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1252,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 1325,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1409,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1468,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1549,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 1634,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 1730,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1791,
+          "y": 1402
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1885,
+          "y": 1402
+        },
+        {
+          "type": "tree_green",
+          "x": 14,
+          "y": 144
+        },
+        {
+          "type": "tree_cherry",
+          "x": 8,
+          "y": 225
+        },
+        {
+          "type": "tree_green",
+          "x": 19,
+          "y": 310
+        },
+        {
+          "type": "tree_cherry",
+          "x": 11,
+          "y": 407
+        },
+        {
+          "type": "tree_green",
+          "x": 11,
+          "y": 500
+        },
+        {
+          "type": "tree_green",
+          "x": 9,
+          "y": 591
+        },
+        {
+          "type": "tree_cherry",
+          "x": 10,
+          "y": 672
+        },
+        {
+          "type": "tree_cherry",
+          "x": 12,
+          "y": 767
+        },
+        {
+          "type": "tree_cherry",
+          "x": 15,
+          "y": 869
+        },
+        {
+          "type": "tree_green",
+          "x": 9,
+          "y": 947
+        },
+        {
+          "type": "tree_cherry",
+          "x": 13,
+          "y": 1038
+        },
+        {
+          "type": "tree_cherry",
+          "x": 18,
+          "y": 1135
+        },
+        {
+          "type": "tree_cherry",
+          "x": 12,
+          "y": 1227
+        },
+        {
+          "type": "tree_green",
+          "x": 11,
+          "y": 1313
+        },
+        {
+          "type": "tree_green",
+          "x": 1910,
+          "y": 136
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1912,
+          "y": 224
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1911,
+          "y": 320
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1911,
+          "y": 401
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1901,
+          "y": 505
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1909,
+          "y": 599
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1901,
+          "y": 677
+        },
+        {
+          "type": "tree_green",
+          "x": 1905,
+          "y": 769
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1902,
+          "y": 853
+        },
+        {
+          "type": "tree_green",
+          "x": 1901,
+          "y": 951
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1902,
+          "y": 1047
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1911,
+          "y": 1120
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1907,
+          "y": 1211
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1909,
+          "y": 1316
+        },
+        {
+          "type": "bush",
+          "x": 1154,
+          "y": 1058
+        },
+        {
+          "type": "tree_cherry",
+          "x": 436,
+          "y": 156
+        },
+        {
+          "type": "bush",
+          "x": 1649,
+          "y": 1185
+        },
+        {
+          "type": "mushrooms",
+          "x": 84,
+          "y": 257
+        },
+        {
+          "type": "flowerbed",
+          "x": 442,
+          "y": 1230
+        },
+        {
+          "type": "tree_cherry",
+          "x": 839,
+          "y": 975
+        },
+        {
+          "type": "flowerbed",
+          "x": 1272,
+          "y": 61
+        },
+        {
+          "type": "bush",
+          "x": 660,
+          "y": 1212
+        },
+        {
+          "type": "bush",
+          "x": 807,
+          "y": 1235
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1448,
+          "y": 838
+        },
+        {
+          "type": "mushrooms",
+          "x": 1104,
+          "y": 951
+        },
+        {
+          "type": "bush",
+          "x": 290,
+          "y": 582
+        },
+        {
+          "type": "bush",
+          "x": 1818,
+          "y": 1254
+        },
+        {
+          "type": "bush",
+          "x": 1325,
+          "y": 1359
+        },
+        {
+          "type": "bush",
+          "x": 1869,
+          "y": 278
+        },
+        {
+          "type": "bush",
+          "x": 1477,
+          "y": 402
+        },
+        {
+          "type": "bush",
+          "x": 1572,
+          "y": 1370
+        },
+        {
+          "type": "bush",
+          "x": 1591,
+          "y": 119
+        },
+        {
+          "type": "mushrooms",
+          "x": 1872,
+          "y": 755
+        },
+        {
+          "type": "flowerbed",
+          "x": 624,
+          "y": 1302
+        },
+        {
+          "type": "flowerbed",
+          "x": 482,
+          "y": 1306
+        },
+        {
+          "type": "bush",
+          "x": 222,
+          "y": 146
+        },
+        {
+          "type": "tree_cherry",
+          "x": 652,
+          "y": 723
+        },
+        {
+          "type": "flowerbed",
+          "x": 347,
+          "y": 356
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1739,
+          "y": 378
+        },
+        {
+          "type": "bush",
+          "x": 66,
+          "y": 351
+        },
+        {
+          "type": "tree_cherry",
+          "x": 1416,
+          "y": 142
+        },
+        {
+          "type": "flowerbed",
+          "x": 1281,
+          "y": 1039
+        },
+        {
+          "type": "bush",
+          "x": 1682,
+          "y": 886
+        },
+        {
+          "type": "mushrooms",
+          "x": 1039,
+          "y": 1301
+        }
+      ],
+      "doors": [],
+      "examine": [],
+      "water": [
+        {
+          "cx": 420,
+          "cy": 1000,
+          "rx": 200,
+          "ry": 100
+        }
+      ],
+      "gates": [],
+      "indoor": false,
+      "v41PropReplacementIndex": {
+        "0": {
+          "was": "wishing_tree",
+          "art": "memory_tree"
+        },
+        "1": {
+          "was": "arch_flowers_e",
+          "art": "arch"
+        },
+        "2": {
+          "was": "arch_flowers_e2",
+          "art": "arch"
+        },
+        "24": {
+          "was": "gazebo_e",
+          "art": "gazebo"
+        }
+      },
+      "visualStyle": "v4.1_romantic_scenery",
+      "visualUpdate": "13_legacy_worlds_landmarks_atmosphere"
+    }
+  },
+  "props": {
+    "bridge_dpier": {
+      "image": "props/bridge_dpier.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "floor"
+    },
+    "bridge_dplat": {
+      "image": "props/bridge_dplat.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "floor"
+    },
+    "v41_rowboat_rowboat": {
+      "image": "props/v41_rowboat_rowboat.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "floor"
+    },
+    "v41_rowboat_b_rowboat": {
+      "image": "props/v41_rowboat_b_rowboat.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "floor"
+    },
+    "pier_post": {
+      "image": "props/pier_post.png",
+      "cw": 8,
+      "ch": 6,
+      "layer": "sort"
+    },
+    "fishing_hut": {
+      "image": "props/fishing_hut.png",
+      "cw": 120,
+      "ch": 22,
+      "layer": "sort"
+    },
+    "lantern_post": {
+      "image": "props/lantern_post.png",
+      "cw": 8,
+      "ch": 6,
+      "layer": "sort"
+    },
+    "v41_observatory_observatory": {
+      "image": "props/v41_observatory_observatory.png",
+      "cw": 200,
+      "ch": 40,
+      "layer": "sort"
+    },
+    "v41_telescope_telescope": {
+      "image": "props/v41_telescope_telescope.png",
+      "cw": 24,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "picnic_blanket": {
+      "image": "props/picnic_blanket.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "floor"
+    },
+    "stone_lantern_bb": {
+      "image": "props/stone_lantern_bb.png",
+      "cw": 18,
+      "ch": 8,
+      "layer": "sort"
+    },
+    "fence_bb": {
+      "image": "props/fence_bb.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "sort"
+    },
+    "chest_bb": {
+      "image": "props/chest_bb.png",
+      "cw": 26,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "v41_tree_dream_memory_tree": {
+      "image": "props/v41_tree_dream_memory_tree.png",
+      "cw": 14,
+      "ch": 8,
+      "layer": "sort"
+    },
+    "v41_pedestal_book_crystal_shrine": {
+      "image": "props/v41_pedestal_book_crystal_shrine.png",
+      "cw": 30,
+      "ch": 12,
+      "layer": "sort"
+    },
+    "v41_arch_flowers_arch": {
+      "image": "props/v41_arch_flowers_arch.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "sort"
+    },
+    "crystal": {
+      "image": "props/crystal.png",
+      "cw": 18,
+      "ch": 8,
+      "layer": "sort"
+    },
+    "tree_dream": {
+      "image": "props/tree_dream.png",
+      "cw": 14,
+      "ch": 8,
+      "layer": "sort"
+    },
+    "tree_lantern": {
+      "image": "props/tree_lantern.png",
+      "cw": 14,
+      "ch": 8,
+      "layer": "sort"
+    },
+    "v41_wishing_tree_memory_tree": {
+      "image": "props/v41_wishing_tree_memory_tree.png",
+      "cw": 30,
+      "ch": 14,
+      "layer": "sort"
+    },
+    "v41_arch_flowers_e_arch": {
+      "image": "props/v41_arch_flowers_e_arch.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "sort"
+    },
+    "v41_arch_flowers_e2_arch": {
+      "image": "props/v41_arch_flowers_e2_arch.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "sort"
+    },
+    "v41_gazebo_e_gazebo": {
+      "image": "props/v41_gazebo_e_gazebo.png",
+      "cw": 150,
+      "ch": 40,
+      "layer": "sort"
+    },
+    "stone_bench": {
+      "image": "props/stone_bench.png",
+      "cw": 60,
+      "ch": 12,
+      "layer": "sort"
+    },
+    "flowerbed": {
+      "image": "props/flowerbed.png",
+      "cw": 60,
+      "ch": 14,
+      "layer": "sort"
+    }
+  }
+}

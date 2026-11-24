@@ -1,0 +1,47 @@
+{
+  "baseline": "v4.6.2 full source",
+  "baseline_file_count": 1931,
+  "current_file_count": 1938,
+  "deleted_original_files": 0,
+  "protected_image_audio_files_unchanged": 1602,
+  "modified_file_count": 15,
+  "modified_files": [
+    "CHANGELOG.md",
+    "README.md",
+    "android/assets/data/quests.json",
+    "build.gradle",
+    "core/src/main/java/com/arlandsofia/olu/OluGame.java",
+    "core/src/main/java/com/arlandsofia/olu/game/CutscenePlayer.java",
+    "core/src/main/java/com/arlandsofia/olu/game/DialogBox.java",
+    "core/src/main/java/com/arlandsofia/olu/screens/BaseScreen.java",
+    "core/src/main/java/com/arlandsofia/olu/screens/GameScreen.java",
+    "core/src/main/java/com/arlandsofia/olu/screens/RouteSelectScreen.java",
+    "core/src/main/java/com/arlandsofia/olu/screens/SlotScreen.java",
+    "core/src/main/java/com/arlandsofia/olu/screens/TitleScreen.java",
+    "core/src/main/java/com/arlandsofia/olu/ui/Ui.java",
+    "core/src/main/java/com/arlandsofia/olu/ui/UiButton.java",
+    "tools/build_all.sh"
+  ],
+  "new_files": [
+    "RELEASE_STATUS_V463.md",
+    "core/src/main/java/com/arlandsofia/olu/logic/CinematicMotionV463.java",
+    "core/src/main/java/com/arlandsofia/olu/logic/PremiumLayoutV463.java",
+    "docs/V463_CINEMATIC_PREMIUM_UI.md",
+    "tools/apply_v463_cinematic.py",
+    "tools/test_v463_cinematic_ui.sh",
+    "tools/tests/V463CinematicUiLogicTest.java"
+  ],
+  "cinematic_story_events_changed": [
+    "C01_PIER",
+    "C04_V26_VOW",
+    "C05_V26_NIGHT_TALK",
+    "C06_Q_REVEAL",
+    "EPI_FEST_LEPAS"
+  ],
+  "quest_semantic_differences": 30,
+  "story_json_byte_identical": true,
+  "save_schema_byte_identical": true,
+  "world_maps_props_byte_identical": true,
+  "git_remote_updated": false,
+  "android_apk_tested": false
+}

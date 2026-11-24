@@ -1,0 +1,308 @@
+# v2.6 — Perluasan cerita: detail dapur, percakapan pascahujan, dan malam di Starfall Village.
+# Draft fiksi; dua perspektif berbeda, satu ending canon. Setiap naskah diputar melalui QuestEngine.
+
+=== V26-C03-A1 | Pinggir Resep Arland | arland | C03
+narrator: Wangi madu memenuhi dapur. Arland memperhatikan sehelai kertas kecil tertempel di bawah resep.
+arland(penasaran): Kak Raka menulis sesuatu di belakangnya. "Kalau gagal, tetap ajak orang yang kamu sayangi mencicipi."
+sofia(tertawa): Wah. Itu instruksi atau ramalan?
+arland(malu): Sepertinya dia tahu aku bakal membuat roti sedikit gosong.
+sofia(senyum): Aku suka bagian yang renyah. Kamu tidak harus menyembunyikannya.
+arland(serius): Aku biasanya ingin semuanya beres sebelum kamu datang.
+sofia(neutral): Kalau begitu, lain kali ajak aku dari awal. Kita boleh belajar sama-sama.
+arland(senyum): Aku tulis itu di pinggir resep, ya. Sebagai pengingat.
+
+=== V26-C03-S1 | Catatan Aroma Sofia | sofia | C03
+narrator: Satu tetes madu jatuh ke ujung kartu resep. Sofia menggesernya sebelum tintanya luntur.
+sofia(penasaran): Ada catatan Kak Raka di belakang kartu. "Resep terbaik selalu menyisakan ruang untuk improvisasi."
+arland(bingung): Apa itu artinya aku boleh menambah stroberi sebanyak yang kumau?
+sofia(tertawa): Tergantung siapa yang nanti membersihkan meja.
+arland(senyum): Aku. Dengan sukarela.
+sofia(neutral): Aku ingin menyimpan aroma dan rasanya di halaman kenangan.
+arland(malu): Berarti kamu tidak kecewa dengan hasil masakanku?
+sofia(senyum): Aku lebih suka momen ketika kita salah mengukur madu lalu tertawa bersama.
+
+=== V26-C03-A2 | Bekal yang Tidak Sempurna | arland | C03
+arland(neutral): Aku sudah bungkus semuanya, tapi bentuk rotinya tidak seragam.
+sofia(senyum): Bukankah tadi kita membaginya jadi dua dengan sengaja?
+arland(penasaran): Benar juga. Yang besar buat siapa?
+sofia(tertawa): Yang mau berbagi, bukan yang merasa paling pantas.
+arland(malu): Oke. Aku taruh keduanya di kotak yang sama.
+narrator: Sebuah pita kecil melingkari kotak bekal. Mereka meninggalkan dapur dengan tangan agak lengket dan hati ringan.
+
+=== V26-C03-S2 | Dua Potong untuk Dua Cerita | sofia | C03
+sofia(neutral): Satu roti lebih rapi, satu lagi agak berantakan.
+arland(malu): Aku siap mengaku yang berantakan buatanku.
+sofia(senyum): Kita tukar saja setengahnya. Dengan begitu, dua-duanya jadi hasil kita.
+arland(tertawa): Negosiasi yang sangat adil.
+sofia(penasaran): Kamu keberatan kalau aku menulis kalimat itu di album?
+arland(senyum): Tulis juga bahwa kokinya hampir menumpahkan seluruh madu.
+sofia(tertawa): Itu justru bagian paling penting.
+narrator: Dua potong roti dibungkus bersama. Bukan supaya terlihat sempurna, melainkan supaya mudah dibagi.
+
+=== V26-C04-ME | Setelah Hujan, Sebelum Pulang | shared | C04
+narrator: Taman Kota menjadi sunyi setelah lentera kembali menyala. Air masih menetes dari pinggiran atap gazebo.
+me(khawatir): Ada satu hal yang belum sempat kukatakan waktu tadi kita bicara.
+partner(neutral): Aku masih di sini. Tidak perlu cepat-cepat.
+me(serius): Aku takut kalau satu kesalahan kecil membuat semua momen baik sebelumnya jadi tidak berarti.
+partner(senyum): Justru momen baik itu yang mengingatkanku kita bisa memperbaiki cara bicara.
+narrator: Mereka mendengarkan bunyi tetes terakhir di atas daun, tanpa mencoba mengisi setiap jeda.
+
+=== V26-C04-POND | Pantulan yang Sama | shared | C04
+sofia(penasaran): Lihat air kolam itu. Bayangannya pecah setiap kali hujan turun.
+arland(neutral): Tapi setelah tenang, kita bisa melihat langit lagi.
+sofia(khawatir): Kadang aku merasa perlu menjelaskan semuanya sekaligus.
+arland(senyum): Kita boleh membicarakannya sedikit demi sedikit. Tidak ada ujian di sini.
+sofia(malu): Terima kasih sudah menunggu.
+arland(malu): Terima kasih sudah kembali.
+narrator: Memory Book menyimpan halaman baru: bukan gambar pelangi, melainkan dua orang yang memilih tetap berjalan bersama.
+
+=== V26-C04-VOW | Janji yang Bisa Dilakukan | shared | C04
+arland(neutral): Mulai besok, kalau aku sibuk, aku akan kirim kabar sesingkat apa pun.
+sofia(senyum): Dan aku akan bilang kalau khawatir, bukan menyimpannya sampai jadi jarak.
+arland(serius): Kalau suatu hari lupa, kita boleh saling mengingatkan tanpa saling menyalahkan.
+sofia(lega): Janji seperti itu terasa lebih nyata daripada menjanjikan tak akan pernah salah.
+? Kita coba satu hari demi satu hari | V26_VOW_DAILY
+B> arland(senyum): Satu hari dulu. Besok kita belajar lagi.
+B> sofia(senyum): Aku suka. Besok tetap punya halaman sendiri.
+? Kita tulis di Memory Book | V26_VOW_BOOK
+B> sofia(senang): Kita tulis, supaya saat lupa kita bisa membacanya sambil tersenyum.
+B> arland(malu): Dengan tanda tangan yang tidak terlalu miring, ya.
+narrator: Ada halaman kecil yang baru. Hujan tidak dihapus; mereka menuliskan cara melewatinya.
+@flags V26_AFTER_RAIN
+
+=== V26-C05-A1 | Garis Pertama di Desa Bintang | arland | C05
+narrator: Peta bintang terbuka. Arland melihat garis baru yang tidak menyambung ke satu pun rumah.
+arland(penasaran): Ini bukan rasi bintang biasa. Ada jarak antar titik yang berbeda dari peta semula.
+sofia(neutral): Mungkin itu peta jalan di desa ini?
+arland(serius): Aku ingin mengujinya dari tiga tempat. Bangku, rumah tengah, lalu lapangan.
+sofia(senyum): Aku akan membaca tulisan kecilnya. Kamu ukur arah, aku cari ceritanya.
+
+=== V26-C05-A2 | Bangku Para Penunggu | arland | C05
+narrator: Di bawah bangku ada ukiran panah yang hampir tak terlihat di bawah cahaya.
+arland(penasaran): Panahnya mengarah ke rumah tengah, tetapi panjangnya tidak sesuai jarak sebenarnya.
+sofia(senyum): Di sebelahnya tertulis "duduklah sebelum melangkah".
+arland(tertawa): Jadi titik pertama justru menyuruhku berhenti.
+sofia(neutral): Barangkali rute ini tidak dibuat untuk orang yang sedang terburu-buru.
+narrator: Arland mencatat panah pertama di pinggir peta.
+
+=== V26-C05-A3 | Jendela Rumah Tengah | arland | C05
+narrator: Kaca jendela memantulkan tiga bintang. Salah satunya tetap terlihat meski awan bergerak.
+arland(serius): Ada petunjuk kedua: bukan arah paling terang, tetapi arah yang tetap ada ketika gelap.
+sofia(penasaran): Kamu yakin itu petunjuk, bukan kebetulan?
+arland(senyum): Aku belum yakin. Karena itu aku tidak mau langsung menyimpulkan.
+sofia(senang): Kalau begitu kita punya alasan untuk memeriksa satu tempat lagi.
+narrator: Di peta muncul tanda buku kecil, tepat di antara dua garis.
+
+=== V26-C05-A4 | Lapangan Tanpa Kompas | arland | C05
+narrator: Dari tengah desa, lampu rumah dan bintang di langit terlihat seperti satu peta.
+arland(penasaran): Tiga tempat, tiga pesan. Arah utara tidak berubah, tetapi arti perjalanan bisa berubah.
+sofia(neutral): Apa yang kamu dapat dari ketiganya?
+arland(serius): Berhenti, melihat yang tetap, lalu memilih jalan yang bisa ditempuh bersama.
+sofia(senyum): Kamu baru saja membuat peta yang bisa kubaca tanpa kompas.
+arland(malu): Itu mungkin pujian terbaik yang pernah diterima petaku.
+@flags V26_C05_A_CLUES
+
+=== V26-C05-A5 | Kunci Jarak Arland | arland | C05
+arland(serius): Di denah Pak Wira, simbolnya juga tiga. Bunga, buku, bintang.
+sofia(penasaran): Kamu mau mencoba urutan yang sama di sini?
+arland(neutral): Tidak untuk membuka pintu. Aku ingin tahu apakah petanya menyimpan pesan lain.
+narrator: Sebuah roda simbol muncul. Arland menyusun tiga tanda dan garis peta pun menyala perlahan.
+sofia(senang): Lihat! Jalan baru menuju bangku di tepi desa.
+arland(senyum): Kali ini kita ke sana bersama. Tanpa berlari duluan.
+@flags V26_C05_A_SOLVED
+
+=== V26-C05-S1 | Empat Kalimat Tercecer | sofia | C05
+narrator: Sofia menyadari huruf kecil di tepi peta. Bukan koordinat, melainkan awal kalimat.
+sofia(penasaran): "Ketika langit..." Lalu terputus. Ada tiga sobekan lain di desa.
+arland(serius): Aku bisa membantu mencari titiknya.
+sofia(senyum): Aku ingin tahu apa yang mau disampaikan penulisnya, bukan hanya di mana ia menyimpan kertas.
+arland(neutral): Kalau begitu kita cari bersama, dan kamu yang menyusunnya.
+
+=== V26-C05-S2 | Potongan di Rumah Tengah | sofia | C05
+narrator: Di dekat jendela rumah, secarik kertas bergerak tertiup angin yang tak terasa.
+sofia(neutral): "...gelap, ingatlah..." Ini kelanjutannya.
+arland(penasaran): Tulisan tangan yang sama dengan yang di peta?
+sofia(senyum): Sama. Tapi tinta kata "ingatlah" lebih tebal. Seolah ingin dipastikan terbaca.
+narrator: Sofia menyelipkan potongan pertama ke Memory Book tanpa melipatnya.
+
+=== V26-C05-S3 | Potongan di Bangku | sofia | C05
+narrator: Sebaris kata terukir di bawah bangku kayu.
+sofia(penasaran): "...suara yang menunggumu..." Ada orang yang benar-benar memikirkan kata-kata ini.
+arland(neutral): Mungkin Pak Wira.
+sofia(khawatir): Aku belum tahu. Aku tidak mau memutuskan ceritanya sebelum membaca keseluruhan.
+arland(senyum): Baik. Kita biarkan kalimatnya punya kesempatan menyelesaikan diri.
+narrator: Potongan kedua berbentuk garis kecil di halaman Sofia.
+
+=== V26-C05-S4 | Potongan di Lapangan | sofia | C05
+narrator: Lampu di tengah desa menerangi kata terakhir pada sehelai kertas.
+sofia(senyum): "...bahkan ketika tak terlihat." Aku rasa ini kalimat penutup.
+arland(serius): Jadi bukan instruksi membuka rasi bintang?
+sofia(neutral): Ini pesan bagi orang yang takut kehilangan tempat pulang.
+arland(malu): Kalau begitu kita harus menyusunnya dengan hati-hati.
+@flags V26_C05_S_CLUES
+
+=== V26-C05-S5 | Empat Halaman Sofia | sofia | C05
+sofia(serius): Semua potongan sudah ada. Aku mau menyusunnya dari awal sampai akhir.
+arland(neutral): Aku pegang tepi kertasnya supaya tidak terbang.
+narrator: Sofia mengurutkan halaman. Kalimatnya terbaca: ketika langit gelap, ingatlah suara yang menunggumu, bahkan ketika tak terlihat.
+sofia(lega): Bukan petunjuk ke tempat rahasia. Ini pesan untuk seseorang yang merasa sendirian.
+arland(senyum): Tapi tetap membawa kita sampai di sini.
+sofia(senyum): Mungkin pesannya bukan menemukan jawaban cepat, melainkan tidak membiarkan seseorang menunggu tanpa kabar.
+@flags V26_C05_S_SOLVED
+
+=== V26-C05-TALK | Bangku di Ujung Desa | shared | C05
+narrator: Cahaya di Starfall Village meredup sebentar, lalu berubah hangat seperti lampu kamar.
+sofia(neutral): Lucu ya. Kita datang membawa dua petunjuk berbeda, tapi duduk di bangku yang sama.
+arland(senyum): Aku mencari arah. Kamu mencari kalimat.
+sofia(tertawa): Dan kita tetap harus bertanya kepada satu sama lain.
+arland(neutral): Aku suka bagian itu.
+sofia(malu): Aku juga.
+narrator: Dari jauh terdengar lonceng lembut. Starfall Village tidak meminta mereka menjadi orang yang sama.
+
+=== V26-C05-CHOICE | Yang Kita Bawa Pulang | shared | C05
+arland(penasaran): Kalau kita cuma boleh membawa satu hal dari perjalanan malam ini, kamu pilih apa?
+sofia(neutral): Aku ingin membawa kebiasaan mendengarkan dulu sebelum menebak.
+? Simpan petunjuk sebagai peta | V26_CHOICE_MAP
+B> arland(senyum): Aku akan menggambar dua jalur di satu halaman, supaya kita bisa melihat keduanya.
+B> sofia(senang): Dan aku akan menuliskan cerita di antara garisnya.
+? Simpan petunjuk sebagai surat | V26_CHOICE_LETTER
+B> sofia(senyum): Aku akan menulis kalimatnya, lengkap dengan bagian yang tadi nyaris hilang.
+B> arland(senang): Aku akan membuat sampul kecil supaya surat itu tidak terselip lagi.
+narrator: Di tepi Memory Book, sebuah halaman baru terbuka tanpa menghapus halaman sebelumnya.
+@flags V26_C05_TOGETHER
+
+=== V26-C05-STAR | Satu Langit, Dua Cerita | shared | C05
+narrator: Satu bintang jatuh melewati atap rumah. Mereka sama-sama mendongak.
+sofia(kaget): Kamu lihat?
+arland(senyum): Iya. Aku hampir mengajukan keinginan yang sama seperti kemarin.
+sofia(penasaran): Apa?
+arland(malu): Semoga kita selalu punya waktu untuk menceritakan hari kita, bahkan hari yang biasa saja.
+sofia(lega): Kalau begitu aku tidak perlu meminta yang berbeda.
+narrator: Di seberang bangku, tiga garis menyatu dan mengarah ke pesan terakhir sebelum Eternal Garden.
+
+# Rute sampingan A — keterampilan melihat kota dari arah berbeda.
+=== V26-SQA-START | Denah untuk Dito | arland | C02
+nara(senyum): Arland, Dito ingin menggambar kota, tapi ia selalu lupa jalan pulangnya.
+arland(tertawa): Aku juga dulu suka bingung dengan jalan kecil.
+nara(neutral): Bantu dia membuat peta dari tiga tempat yang paling ia kenal.
+arland(penasaran): Plaza, kafe, dan tepi danau?
+nara(senyum): Betul. Tapi gambar tidak harus sempurna; yang penting Dito bisa membacanya.
+
+=== V26-SQA-1 | Simbol Air Mancur | arland | C02
+narrator: Arland mengamati air mancur dan menggambar tanda tiga tetes.
+arland(neutral): Kalau Dito melihat ini, ia tahu sudah dekat rumah.
+sofia(senyum): Jangan lupa gambar bangku tempat kita pertama bicara.
+arland(malu): Aku sudah menggambarnya, mungkin terlalu besar.
+
+=== V26-SQA-2 | Simbol Kafe | arland | C02
+narrator: Di Kafe Senja, aroma kopi dan roti hangat menyambut mereka.
+arland(neutral): Aku gambar cangkir kecil untuk kafe.
+raka(tertawa): Tolong jangan digambar gosong seperti rotimu kemarin.
+arland(malu): Kak Raka tidak pernah lupa, ya.
+sofia(senang): Bagus. Dito pasti langsung mengenal cangkirnya.
+
+=== V26-SQA-3 | Simbol Danau | arland | C02
+narrator: Ombak kecil memukul tiang dermaga, meninggalkan kilau di kayu.
+arland(penasaran): Kalau pakai simbol ikan, dia mungkin berpikir harus memancing.
+sofia(tertawa): Itu juga bukan masalah besar.
+arland(senyum): Aku pilih garis air dan pohon supaya tidak tertukar dengan kolam taman.
+
+=== V26-SQA-END | Peta yang Bisa Dibaca | arland | C02
+nara(senyum): Peta yang bagus. Dito akhirnya punya alasan untuk berjalan tanpa takut tersesat.
+arland(neutral): Aku hanya menggambar tempat yang dia kenal, bukan jalur tercepat.
+sofia(senyum): Itu juga cara mendengar. Memikirkan bagaimana orang lain melihat kota.
+nara(senang): Simpan salinannya. Mungkin suatu hari kalian membutuhkannya lagi.
+
+# Rute sampingan S — cerita dari benda sederhana.
+=== V26-SQS-START | Pesan untuk Hari Esok | sofia | C02
+laras(neutral): Sofia, ada tiga kartu kosong dari anak-anak klub baca. Mereka ingin mengisi dengan cerita kota.
+sofia(penasaran): Cerita seperti apa, Bu?
+laras(senyum): Tempat yang membuat mereka ingin kembali. Bukan deskripsi brosur.
+sofia(senang): Aku bisa menulis tentang orang-orang yang kutemui di sana.
+arland(neutral): Aku ikut, tapi kamu penulis utamanya.
+
+=== V26-SQS-1 | Catatan dari Plaza | sofia | C02
+narrator: Sofia duduk sebentar di sisi air mancur dan melihat orang-orang berlalu lalang.
+sofia(neutral): "Plaza bukan hanya tempat bertemu, tapi tempat berani menyapa duluan."
+arland(malu): Aku ingat seseorang yang dulu gugup sekali.
+sofia(tertawa): Kita berdua, kan?
+
+=== V26-SQS-2 | Catatan dari Toko Bunga | sofia | C02
+melati(senyum): Kalau menulis tentang bunga, tulislah juga tentang orang yang merawatnya.
+sofia(serius): Benar. Orang sering melihat buket akhirnya, tidak waktu yang diperlukan untuk menyusunnya.
+arland(neutral): Itu terdengar seperti sesuatu yang layak dimasukkan ke kartu.
+sofia(senyum): "Perhatian sering tumbuh diam-diam, seperti akar." Bagaimana?
+melati(senang): Itu sudah lebih dari cukup.
+
+=== V26-SQS-3 | Catatan dari Halte | sofia | C02
+narrator: Di halte Jalan Kota, Sofia melihat seseorang berbagi tempat duduk dengan penumpang baru.
+sofia(neutral): "Kadang kebaikan hanya selebar satu bangku kosong."
+arland(senyum): Kalimat yang bagus.
+sofia(malu): Aku ingin anak-anak klub baca tahu bahwa cerita tidak harus punya kejadian besar.
+
+=== V26-SQS-END | Tiga Kartu untuk Klub Baca | sofia | C02
+laras(senang): Terima kasih, Sofia. Setiap kartu punya suara yang berbeda.
+sofia(neutral): Aku justru belajar memperhatikan hal yang biasanya kulewati.
+arland(tertawa): Dan aku belajar jangan memotong ketika kamu sedang memilih kata.
+laras(senyum): Bagus. Ini salinan untuk Memory Book kalian.
+
+# Sampingan shared: tiga cara merawat cerita setelah hujan.
+=== V26-SQL-START | Meja Cerita Setelah Hujan | shared | C04
+sari(neutral): Nenek punya tiga cerita pendek yang belum sempat ditulis. Masing-masing titipan orang berbeda.
+sofia(penasaran): Kami boleh membantu?
+sari(senyum): Cari satu kalimat di kafe, satu di perpustakaan, satu di halte. Jangan buru-buru menyimpulkan.
+arland(serius): Kami akan membacanya berdua, Nek.
+
+=== V26-SQL-1 | Cerita dari Kafe | shared | C04
+raka(neutral): Kartu ini ditinggalkan pelanggan yang belajar minta maaf setelah bertengkar.
+sofia(sedih): "Aku akan datang lagi, tapi kali ini aku ingin mendengar lebih banyak."
+arland(neutral): Aku suka karena dia tidak membuat janji yang mustahil.
+raka(senyum): Yang penting apa yang dilakukannya nanti, bukan seberapa indah kalimatnya.
+
+=== V26-SQL-2 | Cerita dari Perpustakaan | shared | C04
+laras(senyum): Catatan kedua: "Buku yang dibaca bersama bisa punya dua penanda halaman."
+sofia(neutral): Jadi bukan masalah kalau kita berhenti di halaman berbeda.
+arland(senyum): Kita hanya perlu memberi tahu bagian mana yang ingin dibahas.
+laras(tertawa): Dan jangan berebut pembatas bukunya.
+
+=== V26-SQL-3 | Cerita dari Halte | shared | C04
+narrator: Di bangku halte, selembar kertas kecil dilindungi plastik bening.
+arland(neutral): "Aku tidak meminta cuaca selalu cerah. Aku meminta ada yang mau berjalan saat hujan."
+sofia(khawatir): Kalimat itu terasa dekat sekali.
+arland(senyum): Kita bisa menyimpannya tanpa merasa harus selalu kuat.
+
+=== V26-SQL-END | Cerita yang Diteruskan | shared | C04
+sari(lega): Kalian membacanya pelan-pelan. Terima kasih.
+sofia(senyum): Cerita-cerita itu tidak memberikan jawaban instan, Nek.
+sari(neutral): Memang bukan tugas cerita menyelesaikan semuanya.
+arland(serius): Tapi cerita bisa membuat orang merasa tidak sendirian.
+sari(senang): Nah. Simpan selembar salinan ini, untuk malam ketika kalian butuh mengingatnya.
+
+# Sampingan shared: persiapan festival dan detail kota.
+=== V26-SQF-START | Peta Lampu Kota | shared | C05
+bayu(neutral): Festival Lentera tahun ini ingin mengajak pengunjung berjalan melalui tiga titik cahaya.
+arland(penasaran): Jadi bukan satu jalan lurus ke taman?
+bayu(senyum): Betul. Di tiap titik, ada pesan singkat. Bantu periksa apakah semua lampunya menyala.
+sofia(neutral): Kami juga akan memastikan pesannya bisa dibaca.
+
+=== V26-SQF-1 | Lampu di Jalan Kota | shared | C05
+narrator: Lentera pertama menyala di dekat halte. Ada tulisan kecil di bawahnya.
+sofia(neutral): "Berhenti sebentar juga bagian dari perjalanan."
+arland(senyum): Baik. Aku tidak akan menggeser penandanya terlalu jauh.
+
+=== V26-SQF-2 | Lampu di Dermaga | shared | C05
+narrator: Lentera kedua berkedip terkena angin danau.
+arland(serius): Dudukannya sedikit longgar. Aku kencangkan.
+sofia(senyum): Pesannya: "Sesuatu bisa bergerak tanpa harus kehilangan arah."
+arland(malu): Ada yang terasa menyinggung kebiasaan lamaku, ya.
+
+=== V26-SQF-3 | Lampu di Bukit | shared | C05
+narrator: Dari Bukit Bintang, lampu kota tampak seperti gugusan bintang kecil.
+sofia(senang): Pesan terakhir: "Dari jauh, setiap rumah adalah cahaya yang punya cerita."
+arland(neutral): Kita sudah memeriksa ketiganya. Semoga pengunjung bisa menemukan rutenya.
+
+=== V26-SQF-END | Kota yang Menyala Bersama | shared | C05
+bayu(senang): Tiga lampu sudah aman. Terima kasih sudah membantu.
+sofia(senyum): Aku suka rutenya. Tidak hanya menunjukkan tempat, tapi mengajak orang memperhatikan.
+arland(neutral): Aku juga belajar satu hal: peta festival bisa jadi cerita kecil.
+bayu(tertawa): Nah, ambil kartu peta ini sebagai kenang-kenangan.

@@ -1,0 +1,13 @@
+{
+  "baseline_zip": "ArlandSofia_Our_Little_Universe_v4.6.3_CINEMATIC_PREMIUM_UI_FULL_SOURCE.zip",
+  "baseline_media": 793,
+  "identical_media": 793,
+  "changed_media": [],
+  "missing_media": [],
+  "new_gallery_map": "android/assets/maps/galeri_komunitas.png",
+  "new_story_cues": [
+    "android/assets/audio/music/cinema_gallery_empty.ogg",
+    "android/assets/audio/music/cinema_gallery_repair.ogg"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,55 @@
+{
+  "version": "3.6.0",
+  "applied": true,
+  "removed_or_proposed": [
+    {
+      "file": "docs/preview/AUDIO_PREVIEW_README.txt",
+      "bytes": 379,
+      "sha256": "2097f320f8cf01881112f1a4b7f6818d2588f060809f2993463243f1452a0e85"
+    },
+    {
+      "file": "docs/preview/hutan_bisik_v13.png",
+      "bytes": 791885,
+      "sha256": "2420bec2db846bce5d0fe7846530555888d3c0e27ef280bd38510589592acc06"
+    },
+    {
+      "file": "docs/preview/mockup_dialog.png",
+      "bytes": 125910,
+      "sha256": "fc0a9d834176d2890ae6a1e76e272a2dd5679be59dfe9274e776d2a264bd4c2a"
+    },
+    {
+      "file": "docs/preview/mockup_explore.png",
+      "bytes": 87433,
+      "sha256": "bc37dc158c67719ee2da7e9d9aef0f57d8f405c45516434aabefd2d47eaba418"
+    },
+    {
+      "file": "docs/preview/peta_baru_v12.png",
+      "bytes": 932188,
+      "sha256": "64bf6ece37b53276dedeaf6fe4667945a7bb5c1b56edc6b8b80bda8861700323"
+    },
+    {
+      "file": "docs/preview/peta_overview.png",
+      "bytes": 2433288,
+      "sha256": "a2a7c7a3bfa424892b135d91daeb83041ec0a841e73886424c462d54933f35ef"
+    },
+    {
+      "file": "docs/preview/v21_sprite_atlas_preview.png",
+      "bytes": 65717,
+      "sha256": "e71e5f523901aae46773b3d84a9d16dc6830063050f8ed4d1501a81d4e161bf5"
+    },
+    {
+      "file": "docs/preview/v24_music_preview.mp3",
+      "bytes": 820496,
+      "sha256": "4d8b347d940dbe991c07d2f1a837c5b91ab52091281d48c053cc4dc17c6c5d15"
+    },
+    {
+      "file": "tools/__pycache__/world_redesign_stage4.cpython-313.pyc",
+      "bytes": 36091,
+      "sha256": "3b6e4326c9f77b41ec0dc3c309515cadb5b1227767720ce681e02fdeb25b3787"
+    }
+  ],
+  "blocked": [],
+  "files": 9,
+  "bytes": 5293387,
+  "protected": "runtime assets, Gradle, Java source, all 86 sound files, editable art source/baselines and build inputs"
+}

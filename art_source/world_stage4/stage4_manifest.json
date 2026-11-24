@@ -1,0 +1,723 @@
+{
+  "version": "3.6.0",
+  "source": "3.5.0",
+  "design": "Nine-area final world pass; four editable overlay layers, unchanged collision",
+  "maps": [
+    {
+      "name": "jalan_kota",
+      "size": [
+        2048,
+        1024
+      ],
+      "modified_pixels": 2077255,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "721258592c2ef7df3fd10f200a81bfd05549898e95d6ca68e1e7836c34df4cb1",
+      "current_sha256": "3e699e0b1762b536c5eebe04a398d2c360f8c295ab5466ec79d743ca66de4913"
+    },
+    {
+      "name": "perumahan",
+      "size": [
+        2048,
+        1152
+      ],
+      "modified_pixels": 2341392,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "34049d62004d080d7a3979393d7edb3fa44b96ff7a50f2f1abf93c43a4a8978e",
+      "current_sha256": "390d5b143b4365f3f80775c1f9af613cecf84bab44ab7eaa6c4d83a40e29f26c"
+    },
+    {
+      "name": "perpustakaan",
+      "size": [
+        1280,
+        768
+      ],
+      "modified_pixels": 983040,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "2c4a8dd14690fa8f7a7ba7944f5c2c61206f3248dd20fb676ff496278e6e1cd9",
+      "current_sha256": "06fe75b9f901f58e079b8726dac4f9b8c36edbbeee4d3ccc343cc7c4b263489f"
+    },
+    {
+      "name": "arcade",
+      "size": [
+        960,
+        640
+      ],
+      "modified_pixels": 614400,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "9f87df51ff2418fae8ce4936b1df947e53c85f6798e06c64f947430f66f0ea85",
+      "current_sha256": "be4de7ec9e4ed0234650fafb0cbfd7b0588df93f32af87e8cf747ccfe9c145ff"
+    },
+    {
+      "name": "toko_bunga",
+      "size": [
+        960,
+        640
+      ],
+      "modified_pixels": 614400,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "0dc9edab8d6c5a864008dd20b5e6b084fa153ae9119a7fc1dcd007f998e5f5e0",
+      "current_sha256": "1db9b3363609697caf6d778d05923de82de191e2b0620f2f7beb00a2c8ba5418"
+    },
+    {
+      "name": "arland_room",
+      "size": [
+        960,
+        640
+      ],
+      "modified_pixels": 614400,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "551f59baa779a76ebf4fdd3205f7b7d771c15ad0834c9a97af78e6ff46d5d878",
+      "current_sha256": "766788fb0b824755ca92ad8606f714248dcc210dd258bf1cf297918bf338d2f4"
+    },
+    {
+      "name": "sofia_room",
+      "size": [
+        960,
+        640
+      ],
+      "modified_pixels": 614400,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "6cd6df821ed846faab8eb108820f451038e54d6b2458004e1f56f23aedebbe39",
+      "current_sha256": "e23bf7071495f1697c4c206991c767abc3a72606f644551a2e9a2df1af451c13"
+    },
+    {
+      "name": "dapur",
+      "size": [
+        960,
+        640
+      ],
+      "modified_pixels": 614400,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "a84e8ab34abe3be3001f38fc1590fc4344b46fb27b29b9b36bc1914972cf1bfa",
+      "current_sha256": "a91fdaf25dd19b9373caa9129b5ac4afc649d140c884f5e1ad765cf1d67d2cf3"
+    },
+    {
+      "name": "ruang_arsip",
+      "size": [
+        800,
+        560
+      ],
+      "modified_pixels": 448000,
+      "layers": [
+        "00_color_art_direction",
+        "01_new_materials",
+        "02_signature_environment",
+        "03_soft_light"
+      ],
+      "previous_sha256": "bd02a0bddd93bcd9c42f67d74f8030a7937708bef795c92d87fff30e88940065",
+      "current_sha256": "93f049b5e6a33bf39e3e30e084eeaadcd31a452eca2e67116f8b413520b93dbf"
+    }
+  ],
+  "props": [
+    {
+      "name": "bus_shelter",
+      "size": [
+        132,
+        96
+      ],
+      "modified_pixels": 1233,
+      "previous_sha256": "1c6f8f50f6bc71fbe3785a2a7fc0f488311a867f61c849c1bbd4a23365701f86",
+      "current_sha256": "3755fd2a7ca2d8b70bc7dcb78164f232b3e59f532776a118a1fb45faec41cb90"
+    },
+    {
+      "name": "vending",
+      "size": [
+        30,
+        58
+      ],
+      "modified_pixels": 461,
+      "previous_sha256": "60dd12612dd0525d9eabee2a62d8f1ad956e45e4497a857c0142a6a25a5d3328",
+      "current_sha256": "3722cc08e96d463d228bbb836d67659c68e933dcb3fe25d12bf9458f9f07e1d7"
+    },
+    {
+      "name": "bld_bakery",
+      "size": [
+        260,
+        196
+      ],
+      "modified_pixels": 3599,
+      "previous_sha256": "ebaf1e6d8b0b3f91cd5e897f73e1e3d76ce2344585451f5e4b4c5fb60b4030f7",
+      "current_sha256": "2a216734b0a6bda9036bba7c6e131d33db1678825e8db33102277cb66cd4f7cf"
+    },
+    {
+      "name": "bld_florist",
+      "size": [
+        290,
+        196
+      ],
+      "modified_pixels": 3989,
+      "previous_sha256": "51b27763242ac21b599441b8544fc0d4f3a750615efedf627e34ee6b65c3863c",
+      "current_sha256": "c99d7d7ace58f81a8bed0b00290e9bd0fc03545e3bf1fd1fb5a8b5e22c344997"
+    },
+    {
+      "name": "bld_arcade",
+      "size": [
+        320,
+        196
+      ],
+      "modified_pixels": 4326,
+      "previous_sha256": "0fc70e7049cbffba204172edc0b7c9d30164cd8f4838a95529d219e61d35ce98",
+      "current_sha256": "2591f060daf17bb8ee500db34a1969cfe6e27b3a46badfbdb94fdebc6acd0091"
+    },
+    {
+      "name": "bld_house_a",
+      "size": [
+        250,
+        196
+      ],
+      "modified_pixels": 3452,
+      "previous_sha256": "34b76727b2ccbb932df6a33d01aef8fdfbb6658a2309f44efecfab396d6e6f0d",
+      "current_sha256": "7d6ce2579e95d21e69129b25ffc008cd29dcc3c935f0b52a7375d3d2bbcbf919"
+    },
+    {
+      "name": "bld_house_b",
+      "size": [
+        270,
+        196
+      ],
+      "modified_pixels": 3716,
+      "previous_sha256": "361433da0df7399a7b51f697ab67e512f3000b6018df10712c85e7c6f175ccb5",
+      "current_sha256": "03f67c1634358acaa757927f980616d90d76606d1321da0013f4fd71f4af6c3b"
+    },
+    {
+      "name": "bld_house_c",
+      "size": [
+        260,
+        196
+      ],
+      "modified_pixels": 3599,
+      "previous_sha256": "1e3a92a8923bc99dfc880c1f7f2c448b7ce5c7e319e5139732525e0193b02957",
+      "current_sha256": "7547e4b6ff7c724c6b2c7c41fb65398e73eb2a6a2388a73d5e9d4f57811be17f"
+    },
+    {
+      "name": "bld_house_d",
+      "size": [
+        260,
+        196
+      ],
+      "modified_pixels": 3599,
+      "previous_sha256": "4b481d02e0f677b813a41c1fc6a3e58df145b7678537f66bc7a4e3eb5a3f0702",
+      "current_sha256": "5ccfabb46f3e9d01a9fd8d40c93c92f1c9fde043f127afe7699c59fae032f6c0"
+    },
+    {
+      "name": "bld_library",
+      "size": [
+        420,
+        196
+      ],
+      "modified_pixels": 5598,
+      "previous_sha256": "c389a5cd0d1e6c90f865266a4897ce85d1fc3a28b1b40d63f56795c41639cc13",
+      "current_sha256": "3a5728a211b7b923199461c4d1c228743596e8dae416bd765cf8aad1a3eef3a5"
+    },
+    {
+      "name": "bicycle",
+      "size": [
+        46,
+        30
+      ],
+      "modified_pixels": 63,
+      "previous_sha256": "777377f004561bad72da399f9e8d2831f9d213f8f93e9915af090636285e46bb",
+      "current_sha256": "c3247e2f185c2f366ebe10b7dba15a76bf6aae0a7a1ec44f06751fcbb026287a"
+    },
+    {
+      "name": "mailbox",
+      "size": [
+        20,
+        40
+      ],
+      "modified_pixels": 91,
+      "previous_sha256": "4ab0486f38917118ca2fe1db7f79968859c96e78c986ab264f3ca525c0bc999d",
+      "current_sha256": "1540d58733708424b8f900377a54b3029f5c09b421784fb2c9f5511838d24d6c"
+    },
+    {
+      "name": "old_mailbox",
+      "size": [
+        28,
+        50
+      ],
+      "modified_pixels": 145,
+      "previous_sha256": "920b3d2107d4e45a7fbdb175f979e2c4bfddfbe3a64b1f53551c401c957db07b",
+      "current_sha256": "b0fe8380a879ec4c8a95a8b68cda4edac255bfa84880a03a85fa1e1f3ac9023b"
+    },
+    {
+      "name": "signpost_w2",
+      "size": [
+        64,
+        56
+      ],
+      "modified_pixels": 245,
+      "previous_sha256": "4fb034918ed69d2b94de2ae54a94afaff97f324aeff321ea9cd00461002ad7f5",
+      "current_sha256": "a3ef05940df382bb17dda3b6dd4fb089182f5e9d1e90f88aecb6fe1f6c8bbbcb"
+    },
+    {
+      "name": "reading_table",
+      "size": [
+        90,
+        52
+      ],
+      "modified_pixels": 61,
+      "previous_sha256": "232f57651a520e0627d9ab4bbe7db06e937c18cadcb2dc0d6541b7e40f259cc5",
+      "current_sha256": "6211745c3e89ec3144a3a94d09c64f5b00038e3ffc7b11b955c451d1cfbc4c52"
+    },
+    {
+      "name": "reading_table_b",
+      "size": [
+        90,
+        52
+      ],
+      "modified_pixels": 82,
+      "previous_sha256": "7ffba3af387e2775e4b94e11216d624804c49e480405f91055e089f06c38f0d8",
+      "current_sha256": "5d3629b42ae4d194269b8ff3172bed9b45ef346a34cfd21788e4a2c9625da5d2"
+    },
+    {
+      "name": "reading_table_c",
+      "size": [
+        90,
+        52
+      ],
+      "modified_pixels": 93,
+      "previous_sha256": "303f240ae8c0db122ad1e9d5fb5b39afec33240a5a92fb20a24348d39d41bb69",
+      "current_sha256": "37eb4f7ac8f7684380acbf13e80c50afb7bcc6e3b5e34a85d468a7c076de9338"
+    },
+    {
+      "name": "library_counter",
+      "size": [
+        156,
+        60
+      ],
+      "modified_pixels": 97,
+      "previous_sha256": "6a9aa4147b3ac550de07b24c918e248a03d536e1e1480d19f1ce4e51bbf0ab72",
+      "current_sha256": "1d8ccda305c923ec82b50deb928e945db2798b8ed610db881bf96fd10c945620"
+    },
+    {
+      "name": "secret_shelf",
+      "size": [
+        96,
+        132
+      ],
+      "modified_pixels": 2664,
+      "previous_sha256": "cb746e33e92bd73b99656f12fb7e6198677d258ad8a04f2663df8035dc71e63f",
+      "current_sha256": "15eb91484b4434b8db448db6b7cc358d3e5254ba375e753b2a10d39560ce7f2c"
+    },
+    {
+      "name": "globe",
+      "size": [
+        30,
+        50
+      ],
+      "modified_pixels": 391,
+      "previous_sha256": "406b2124e34a675fbfc788c7fd1068b935935eec8701486528ea08006963b197",
+      "current_sha256": "0010afb9982788c6a313a2f9d2a5d71bdb43baaeb91a8ea120fcb9b7f505b0aa"
+    },
+    {
+      "name": "book_pile_p1",
+      "size": [
+        28,
+        30
+      ],
+      "modified_pixels": 187,
+      "previous_sha256": "a90fa5132221213efcce9279cfc6491e5f339cdae4960075418e81a2d01552fe",
+      "current_sha256": "78b74e393f9fd6a493c025aab6e124e244f989efc66e5d5659126db14656a72c"
+    },
+    {
+      "name": "tall_bookshelf_l560",
+      "size": [
+        96,
+        132
+      ],
+      "modified_pixels": 2664,
+      "previous_sha256": "6066d858ebe94f806264ca43c2934183364ef3017ad68c8766a1aeb2fe300096",
+      "current_sha256": "51a1f19603e99bd52dc9a1eaa921bcc203e236d2485632d47d6316ff1bbd6a19"
+    },
+    {
+      "name": "tall_bookshelf_m1080",
+      "size": [
+        96,
+        132
+      ],
+      "modified_pixels": 2664,
+      "previous_sha256": "16f2b78a2b55c8d202cbd1591b0350d73e1524045b04685078f4b0142b20413c",
+      "current_sha256": "ad983b6728e490eb8cde2460f31eda17ca8ccdbdeb404c87cd5b7c31227a6011"
+    },
+    {
+      "name": "arcade_blue",
+      "size": [
+        38,
+        80
+      ],
+      "modified_pixels": 539,
+      "previous_sha256": "ab630d0ecbfb8b48172d9da67e2f4feec78d1e6755b1cba81929513f3d8291b6",
+      "current_sha256": "c102caaf697338dde1716a6e88c9ee97d9c7cc69df45abffa5e793c41852a537"
+    },
+    {
+      "name": "arcade_green",
+      "size": [
+        38,
+        80
+      ],
+      "modified_pixels": 579,
+      "previous_sha256": "9af29e7820b41727784963c7477de4477d829a68568458e92037be643a4ee481",
+      "current_sha256": "4720248df6f6281c5b6d3e6bfe4db6e9559d2238de4dcc7a19847919ffac5c89"
+    },
+    {
+      "name": "arcade_pink",
+      "size": [
+        38,
+        80
+      ],
+      "modified_pixels": 583,
+      "previous_sha256": "498aa784a92f5f004c3d502656025d733c1ea81fc89f2e0b6a05d2c453dc783b",
+      "current_sha256": "7583ac3cc3791687e2778b2bde23836ef219cfc9d6a1df968c65d1049493b921"
+    },
+    {
+      "name": "claw_machine",
+      "size": [
+        48,
+        92
+      ],
+      "modified_pixels": 643,
+      "previous_sha256": "d3088ccfb3b7b28c6065d1b07c5e1fa050e1e75721b8760d420f975a2e2c04e6",
+      "current_sha256": "bbd0491ae08c5e1800d783a9d641fc2cc04a141832606918f989d8e0c7705744"
+    },
+    {
+      "name": "photobooth",
+      "size": [
+        74,
+        112
+      ],
+      "modified_pixels": 859,
+      "previous_sha256": "e2c02caa2acb66e0c5377d7b08a9a905bb204d7748690875f9c4b4e2346d4052",
+      "current_sha256": "1e0b9ad1c2027e7a7dbd51fef46260cab9e14926e976d473e53358cd06487454"
+    },
+    {
+      "name": "prize_shelf",
+      "size": [
+        94,
+        80
+      ],
+      "modified_pixels": 2648,
+      "previous_sha256": "8d7c8079b4bddea2ee63d08295b41b72c9b4ae48bd81b27ae28737d633469c56",
+      "current_sha256": "4dfb2431ed401b1247edd0c1b2f632e95c399142d9528807b41dfd1cac58baf7"
+    },
+    {
+      "name": "flower_buckets",
+      "size": [
+        76,
+        46
+      ],
+      "modified_pixels": 107,
+      "previous_sha256": "681c47d5b7cf156792c7b58410873f53354654adc0bcfc889f436b932aa64cfc",
+      "current_sha256": "9083506ff7356874814e2b702795fcd3e5f72c52f13c2a2da95f70a6350d4d3c"
+    },
+    {
+      "name": "flower_shelf",
+      "size": [
+        114,
+        96
+      ],
+      "modified_pixels": 3368,
+      "previous_sha256": "bfbaeaac1e5519eaad992d7d8a4238f81281cb63e8d2d9a04482a657e91ec5e5",
+      "current_sha256": "30a0bad18f2837cd30585e1ff3c372b063d7ce289cf85928ab2278e5b48d662a"
+    },
+    {
+      "name": "flower_shelf_b",
+      "size": [
+        114,
+        96
+      ],
+      "modified_pixels": 3368,
+      "previous_sha256": "8afb2dc2b74038aa9dbf4ffaaf167bc197ebb330da64f90f9eb48ab5748399ae",
+      "current_sha256": "9a9c3c197f4eda1032087850fcc290d8516a1d2fc47e6ce36673e97beffe01e9"
+    },
+    {
+      "name": "plant_f",
+      "size": [
+        30,
+        46
+      ],
+      "modified_pixels": 204,
+      "previous_sha256": "635f4391cf7a9d8c71c565c41f547667e4d1b9b58dd2596171dd3764c0ebba4a",
+      "current_sha256": "541ac586ebdfa213bf8b97ee00d9c2294c1d15e863124a7ef092eee18e12da56"
+    },
+    {
+      "name": "plant_f2",
+      "size": [
+        30,
+        46
+      ],
+      "modified_pixels": 275,
+      "previous_sha256": "97897ded964569a342c0a19b267e7e46cfb59a0f98fe0e26a807dccf83c29c35",
+      "current_sha256": "1c547a294799a65e9ebac4a7808fe0b00ee1f248e5927e6896a1088c16a28466"
+    },
+    {
+      "name": "bed_blue",
+      "size": [
+        80,
+        112
+      ],
+      "modified_pixels": 1350,
+      "previous_sha256": "c2940a43e5975156d4566c53e844b41c4c920910087182d48ce0bc97109192fe",
+      "current_sha256": "b6c7bf1baa5861159f25d966758a9f3970d1235871e7dc762842e0f6ed7d992b"
+    },
+    {
+      "name": "bed_pink",
+      "size": [
+        80,
+        112
+      ],
+      "modified_pixels": 1350,
+      "previous_sha256": "8527b6a2192a99e89a6db52cf77b245df3720b0f90ac917a71811605c22f8d9a",
+      "current_sha256": "f0db64974545eef6f11c22a918024b5eaf5c5363b9a376f9261e7f60ecba148d"
+    },
+    {
+      "name": "desk",
+      "size": [
+        92,
+        66
+      ],
+      "modified_pixels": 93,
+      "previous_sha256": "9bc9ac9ba990b584eb40f03cbaa5f9dbc741ea5bbafb9e01dff929c7677babc5",
+      "current_sha256": "8287796a74d3960e03ea90cc7d26251cfa32212fc95d2d54cf03de942cdaa439"
+    },
+    {
+      "name": "desk_s",
+      "size": [
+        92,
+        66
+      ],
+      "modified_pixels": 95,
+      "previous_sha256": "330625c64843e846c14220facff915267d48088ce4ce2289fd5e0af7c8bdd07b",
+      "current_sha256": "dd00becbd6b7f925b9cee752cf05e6f9c67dca0cb8c8308d7d4d528b2d25db8f"
+    },
+    {
+      "name": "vanity",
+      "size": [
+        76,
+        80
+      ],
+      "modified_pixels": 88,
+      "previous_sha256": "1e69ccdff85f0f0a0041bd63c584ca5653989b58bf341a753c234f3b0ed38e9a",
+      "current_sha256": "fbb952b74771ffc5446c2f5a11dd43a19c3dd37584b62d6bb2c01adcfb87bf6c"
+    },
+    {
+      "name": "fridge",
+      "size": [
+        44,
+        100
+      ],
+      "modified_pixels": 642,
+      "previous_sha256": "37c23c2c5cd74b531ef03aad40f5a2f721d8aa9fe8fd6070a015c2055ab2238c",
+      "current_sha256": "967a6a929d0203af2741be4bf8f1caadb91d191818daf8e21b6c036083bb880a"
+    },
+    {
+      "name": "stove",
+      "size": [
+        60,
+        62
+      ],
+      "modified_pixels": 576,
+      "previous_sha256": "f304ceb7cb8daef42fe394753202ed2ef0ab4b56bcd342291f9d62e4fd7a76bc",
+      "current_sha256": "cbd0f4495516c2ec20405d8bf93ed9c9707761e0477387a67440f0fd3d5f9122"
+    },
+    {
+      "name": "kitchen_counter",
+      "size": [
+        134,
+        62
+      ],
+      "modified_pixels": 745,
+      "previous_sha256": "e223186ca963d154eb0880fa4b02d8ad204f28f2d4f71b96c4ea3f415137a731",
+      "current_sha256": "f6b532dd3befe6fc38e37fc41557a6665de49f711dbbafbacf347a287bce75ee"
+    },
+    {
+      "name": "archive_pedestal",
+      "size": [
+        48,
+        72
+      ],
+      "modified_pixels": 92,
+      "previous_sha256": "463054870f5413406faec7dc16159a4ae54ae3a200825ea49cdbbc5e1ba52094",
+      "current_sha256": "bf32f9da048d4ed6fca6e00bfed5a8e65b7e407645b33bacfa64a13c397d6eed"
+    },
+    {
+      "name": "jar_shelf_j110",
+      "size": [
+        92,
+        110
+      ],
+      "modified_pixels": 2632,
+      "previous_sha256": "e28407ca3d00c6d46f1cdd6e36025d354501a0c58818c1ead997b9f694803971",
+      "current_sha256": "7d0fc3a002592bac93cd896e94c06d0076de63aa2dd649d0842de53225181b36"
+    },
+    {
+      "name": "jar_shelf_j210",
+      "size": [
+        92,
+        110
+      ],
+      "modified_pixels": 2632,
+      "previous_sha256": "100d62f1120adef0543bfbc81e1816fe194d6337a75f8f04b6dc6abe24b3f7d1",
+      "current_sha256": "9fcbbe1c1f537c540124d747ee199a588a07439e27c9dd271974f2f6ed94539d"
+    },
+    {
+      "name": "wardrobe_s",
+      "size": [
+        64,
+        104
+      ],
+      "modified_pixels": 97,
+      "previous_sha256": "2cfb1a700f8bb948fcd69bebbde95a12c145ce4b922cf7bc2df04a66a1d56f44",
+      "current_sha256": "aac96408366039b6016ff456bc2710b92a250a9255c218e154764df197eb0ddc"
+    },
+    {
+      "name": "bookshelf_s",
+      "size": [
+        62,
+        96
+      ],
+      "modified_pixels": 1552,
+      "previous_sha256": "ce217b6b029e2f08d7185287e3c2064bcf06ff105cc6adea87d4ff512c62b4b0",
+      "current_sha256": "dec6fdc1341dc87f7d931719fa205c89e3660176a3119849850e3486b3ee6a0c"
+    },
+    {
+      "name": "rug_pink",
+      "size": [
+        170,
+        80
+      ],
+      "modified_pixels": 1887,
+      "previous_sha256": "7c8eb1287be87c1ea91b3c4f7fe234494113d9869ec7aa4a9ae12bc4fe7b329e",
+      "current_sha256": "809c365976d240b561019d7553e50895f6a1bd74d986409ef66a009f768c79d9"
+    },
+    {
+      "name": "rug_rect_k",
+      "size": [
+        180,
+        90
+      ],
+      "modified_pixels": 2034,
+      "previous_sha256": "7db3aaca1951b2abe3e859c780e0020430b19e07642ddd7daba39c1bfbde08dc",
+      "current_sha256": "94e94551ea7cc328d821bf4ed69f0d2ed63c0a2da55cc4da7204303b1dc4fff4"
+    },
+    {
+      "name": "sofa_a",
+      "size": [
+        100,
+        52
+      ],
+      "modified_pixels": 812,
+      "previous_sha256": "e7b6e2f1237f22d28490610fd38901610796229ad3125435b36416f68c9377c0",
+      "current_sha256": "5efd6de76d0b64d04407af218ed25c683b0fcdd6639dac07068cc0163b27554a"
+    },
+    {
+      "name": "sofa_ar",
+      "size": [
+        100,
+        52
+      ],
+      "modified_pixels": 812,
+      "previous_sha256": "176788c4eb3b56f6a81719726115606e7882176a8dccf375b2793a0cd625f5d2",
+      "current_sha256": "5e41de38be664ac1881a8609df31ef1affce6744e9a25f3b09e91ffb55a7cc97"
+    },
+    {
+      "name": "kitchen_table",
+      "size": [
+        96,
+        60
+      ],
+      "modified_pixels": 465,
+      "previous_sha256": "b1c00d3a247d15737a415c8e54832889792453a5e668a3619c0a7b2587fffa48",
+      "current_sha256": "63b2c817f89c0187c51fa67827e02de068196e79f4208771ec59dcd110c7732e"
+    },
+    {
+      "name": "spice_shelf",
+      "size": [
+        80,
+        34
+      ],
+      "modified_pixels": 370,
+      "previous_sha256": "79cd8106596905b2302f4d99d476d1d29b7b4e1b6e3ea4e38c555ca1567efaa7",
+      "current_sha256": "44732c6551f9d986ea522fa083d4df2de3341acc49551eb2dd760c4817a212c1"
+    },
+    {
+      "name": "plant_big_lib",
+      "size": [
+        40,
+        60
+      ],
+      "modified_pixels": 45,
+      "previous_sha256": "4ce7a76376c39f1fe52016f8b20c6c4e469a4058e78b797aa955dd767a94a92e",
+      "current_sha256": "3a37e47d21f5302d7d655b1640c72907340d3377396a6e2a39944a18a8a07b48"
+    },
+    {
+      "name": "poster_lib",
+      "size": [
+        36,
+        48
+      ],
+      "modified_pixels": 630,
+      "previous_sha256": "81ce6b363e2293adf2848815852af14b92e2c01c710e81e49428954a0ec0617a",
+      "current_sha256": "a90c3057efb60ded65eb3b5c717ed136cc5b3fd1d3710f37c3bc95717289a72d"
+    },
+    {
+      "name": "sofa_lib",
+      "size": [
+        100,
+        52
+      ],
+      "modified_pixels": 812,
+      "previous_sha256": "b5db31e23b37045c236b3c3e476cc022bc9f09483c4d8ff08b1833534ee84d71",
+      "current_sha256": "833bd1d4aec428d5634fba8c94660b076c6aeff813c3c8179117281d9b82eae5"
+    },
+    {
+      "name": "floor_lamp",
+      "size": [
+        30,
+        86
+      ],
+      "modified_pixels": 51,
+      "previous_sha256": "ad1c7452829d2311a41ba5ad8d79387bb71337db4fa4d00c24a41f488aa376e1",
+      "current_sha256": "61620747fa110de48570e1d57f7bb553666c5e58ebf0c9c681f1076a41b9180f"
+    }
+  ]
+}
