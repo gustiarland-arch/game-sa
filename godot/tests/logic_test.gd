@@ -137,5 +137,20 @@ func _ready() -> void:
 	se.p.coins = 15
 	ok(se.purchase("senja", "kopi_senja").begins_with("Membeli") and se.p.coins == 3 and se.p.has_item("kopi_senja"), "toko: beli kopi")
 	ok(se.purchase("senja", "kukis_madu").begins_with("Koin belum cukup") and se.purchase("senja", "kopi_senja").begins_with("Barang ini sudah"), "toko: koin kurang / sudah dimiliki")
+	# 12. achievements and memory book states
+	var ap := Progress.new_game("sofia", 3, Data.first_step, Data.area("sofia_room"))
+	ap.play_seconds = 130; ap.chapters["PRO"] = true; ap.affection = 80
+	var gd := {"completed": {"arland": ["C06"], "sofia": ["C06"]}, "achievements": ["start"]}
+	var ach_added := Achievements.unlock(ap, gd)
+	ok(ach_added == ["chapter", "heart", "both"] and gd.achievements.size() == 4, "prestasi: hanya yang baru, tidak dicabut")
+	var mbk := MemoryBook.new()
+	mbk.p = ap
+	mbk.g = {"routeFlags": {"arland": ["A_FLAG"]}}
+	ap.add_flag("S_FLAG")
+	ok(mbk.entry_state({"route": "shared", "unlock": "S_FLAG"}) == "UNLOCKED"
+		and mbk.entry_state({"route": "arland", "unlock": "A_FLAG"}) == "OTHER_SIDE"
+		and mbk.entry_state({"route": "arland", "unlock": "NOPE"}) == "LOCKED"
+		and mbk.entry_state({"route": "sofia", "unlock": "NOPE"}) == "LOCKED", "memory book: terbuka / sisi lain / terkunci")
+	mbk.free()
 	print("%s: %d pemeriksaan, %d gagal" % ["SEMUA LULUS" if fails == 0 else "ADA YANG GAGAL", checks, fails])
 	get_tree().quit(1 if fails > 0 else 0)

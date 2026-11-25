@@ -5,6 +5,7 @@ extends Control
 
 signal action_pressed
 signal pause_pressed
+signal book_pressed
 
 var vec := Vector2.ZERO
 var sprint := false
@@ -15,6 +16,7 @@ var _knob: TextureRect
 var _act: TextureButton
 var _run: TextureButton
 var _pause: Button
+var _book: Button
 var _origin := Vector2.ZERO
 var _finger := -2           # -2 none, -1 mouse, >=0 touch index
 const RADIUS := 78.0
@@ -41,6 +43,10 @@ func _ready() -> void:
 	_pause.custom_minimum_size = Vector2(56, 52)
 	_pause.pressed.connect(func(): pause_pressed.emit())
 	add_child(_pause)
+	_book = UiTheme.button("Buku", 18)
+	_book.custom_minimum_size = Vector2(72, 52)
+	_book.pressed.connect(func(): book_pressed.emit())
+	add_child(_book)
 	resized.connect(_layout)
 	_layout()
 
@@ -77,6 +83,7 @@ func _layout() -> void:
 	_act.position = Vector2(size.x - 150, size.y - 160)
 	_run.position = Vector2(size.x - 240, size.y - 104)
 	_pause.position = Vector2(size.x - 74, 16)
+	_book.position = Vector2(size.x - 156, 16)
 	if _finger == -2:
 		_place(_rest(), Vector2.ZERO)
 

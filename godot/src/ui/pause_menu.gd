@@ -6,6 +6,7 @@ extends Control
 signal resume
 signal save_requested
 signal quit_requested
+signal book_requested
 
 var _box: VBoxContainer
 var _history: PanelContainer
@@ -32,7 +33,7 @@ func _ready() -> void:
 	head.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_box.add_child(head)
 	for item in [["Lanjutkan", func(): resume.emit(), true], ["Simpan", func(): save_requested.emit(), false],
-			["Riwayat dialog", _show_history, false], ["Kembali ke judul", func(): quit_requested.emit(), false]]:
+			["Memory Book", func(): book_requested.emit(), false], ["Riwayat dialog", _show_history, false], ["Kembali ke judul", func(): quit_requested.emit(), false]]:
 		var b := UiTheme.button(item[0], 22, item[2])
 		b.custom_minimum_size = Vector2(320, 56)
 		b.pressed.connect(item[1])

@@ -74,7 +74,7 @@ func refresh(engine: QuestEngine, hidden: bool) -> void:
 	_coins.text = str(p.coins)
 	_hearts.text = str(p.affection)
 	_right.reset_size()
-	_right.position = Vector2(size.x - _right.size.x - 90, 16)
+	_right.position = Vector2(size.x - _right.size.x - 172, 16)
 
 
 func _process(delta: float) -> void:

@@ -63,10 +63,13 @@ func _title() -> void:
 		_start(p, is_new))
 
 
-func _start(p: Progress, new_game: bool) -> void:
-	game = Game.new().setup(p)
+func _start(p: Progress, new_game: bool, replay := false) -> void:
+	if game:
+		game.queue_free()
+	game = Game.new().setup(p, replay)
 	add_child(game)
 	game.quit_to_title.connect(_title)
+	game.replay_requested.connect(func(rp: Progress): _start.call_deferred(rp, false, true))
 	if new_game:
 		game.begin_new_game()
 	else:
@@ -85,6 +88,22 @@ func _process(_delta: float) -> void:
 		return
 	if _mode == "minigame":
 		var ov := game.minigame
+		if _args[0].begins_with("book:"):
+			match _frame:
+				20:
+					var p := game.p
+					p.add_flag("V26_C03_FINISHED"); p.items.append_array(["kopi_senja", "denah_dito", "kartu_klub_baca"])
+					p.chapters["PRO"] = true; p.chapters["C01"] = true; p.snapshot("PRO"); p.snapshot("C01")
+					p.add_flag("SQ_BUNGA_START"); p.play_seconds = 200
+					game.save_now(); game.open_book()
+				40: await _save(_args[2] + "_kenangan.png"); game.book.tab = 1; game.book._rebuild()
+				60: await _save(_args[2] + "_tas.png"); game.book.tab = 2; game.book._rebuild()
+				80: await _save(_args[2] + "_bab.png"); game.book.tab = 4; game.book._rebuild()
+				100: await _save(_args[2] + "_prestasi.png"); game.book.tab = 5; game.book._rebuild()
+				120: await _save(_args[2] + "_jelajah.png"); game.book._ask_replay("C01")
+				140: await _save(_args[2] + "_konfirmasi.png"); game.book._confirm_ch = "C01"; game.book.replay_requested.emit("C01")
+				200: print("REPLAY ", game.replay, " step=", game.p.step, " chapters=", game.p.chapters.keys()); await _save(_args[2] + "_replay.png"); get_tree().quit()
+			return
 		if _args[0].begins_with("puzzle:") or _args[0].begins_with("shop:"):
 			var id: String = _args[0].get_slice(":", 1)
 			match _frame:

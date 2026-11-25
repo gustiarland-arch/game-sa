@@ -202,8 +202,9 @@ static func load_global() -> Dictionary:
 			"achievements": [], "lastRoute": null, "lastSlot": 0}
 
 
-## Merge a slot's progress into the global record (chapters finished and flags per route).
-static func absorb_global(p: Progress) -> bool:
+## Merge a slot's progress into the global record (chapters finished and flags per route) and
+## unlock achievements. Returns the newly unlocked achievement ids, or null when the write failed.
+static func absorb_global(p: Progress):
 	var g := load_global()
 	for key in ["completed", "routeFlags"]:
 		if not (g.get(key) is Dictionary):
@@ -216,7 +217,8 @@ static func absorb_global(p: Progress) -> bool:
 		g[key][p.route] = have
 	g["lastRoute"] = p.route
 	g["lastSlot"] = p.slot
-	return _write_with_backup(DIR + "global.json", g, false)
+	var added := Achievements.unlock(p, g)
+	return added if _write_with_backup(DIR + "global.json", g, false) else null
 
 
 static func both_completed(chapter: String) -> bool:

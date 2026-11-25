@@ -6,6 +6,7 @@ extends Node
 
 signal idle
 signal quit_to_title
+signal replay_requested(progress: Progress)
 
 var p: Progress
 var engine: QuestEngine
@@ -25,6 +26,7 @@ var pause: PauseMenu
 var minigame: MinigameOverlay
 var puzzle: PuzzleOverlay
 var shop: ShopOverlay
+var book: MemoryBook
 var _clock_acc := 0.0
 var _prompt: PanelContainer
 var _prompt_label: Label
@@ -82,6 +84,7 @@ func _build_ui() -> void:
 		else:
 			interact())
 	controls.pause_pressed.connect(open_pause)
+	controls.book_pressed.connect(open_book)
 	# interaction prompt (bottom centre)
 	_prompt = PanelContainer.new()
 	var pp := UiTheme.panel(UiTheme.PINK_DEEP, Color("a8456a"), 20, 2, 8)
@@ -111,6 +114,15 @@ func _build_ui() -> void:
 	shop = ShopOverlay.new()
 	shop.engine = engine
 	root.add_child(shop)
+	book = MemoryBook.new()
+	root.add_child(book)
+	book.replay_requested.connect(func(ch: String):
+		var rp := p.replay_from(ch)
+		if rp == null:
+			toast("Replay belum tersedia")
+			return
+		save_now()
+		replay_requested.emit(rp))
 	# fade + chapter card on top
 	_fade = ColorRect.new(); _fade.color = Color(0.03, 0.02, 0.06, 0); _fade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -127,6 +139,10 @@ func _build_ui() -> void:
 			save_now()
 		quit_to_title.emit())
 	pause.process_mode = Node.PROCESS_MODE_ALWAYS
+	pause.book_requested.connect(func():
+		pause.visible = false
+		get_tree().paused = false
+		open_book())
 
 
 ## Called right after the game node enters the tree for a new game.
@@ -144,7 +160,7 @@ func resume_game() -> void:
 # ------------------------------------------------------------------ frame
 func _process(delta: float) -> void:
 	_time += delta
-	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
+	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or book.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
 	world.locked = busy
 	world.input_vec = controls.vec if not busy else Vector2.ZERO
 	world.sprint_held = controls.sprint
@@ -205,9 +221,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		open_pause()
 		get_viewport().set_input_as_handled()
 		return
+	if event is InputEventKey and event.pressed and event.keycode == KEY_M and not world.locked:
+		open_book()
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_E):
 		interact()
 		get_viewport().set_input_as_handled()
+
+
+func open_book() -> void:
+	if world.locked:
+		return
+	controls.reset()
+	book.open(p, replay)
 
 
 func open_pause() -> void:
@@ -225,7 +252,11 @@ func save_now() -> bool:
 	if not SaveStore.save_slot(p):
 		toast("Gagal menyimpan! Periksa ruang penyimpanan.")
 		return false
-	SaveStore.absorb_global(p)
+	var added = SaveStore.absorb_global(p)
+	if added is Array:
+		for id in added:
+			toast("Prestasi terbuka: " + Achievements.name_of(id))
+			Audio.sfx("sparkle", 0.6)
 	return true
 
 
