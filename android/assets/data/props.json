@@ -2352,6 +2352,132 @@
       "cw": 0,
       "ch": 0,
       "layer": "sort"
+    },
+    "hd_tree_dream_a": {
+      "image": "props/hd/hd_tree_dream_a@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_dream_b": {
+      "image": "props/hd/hd_tree_dream_b@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_dream_c": {
+      "image": "props/hd/hd_tree_dream_c@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_lantern": {
+      "image": "props/hd/hd_tree_lantern@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_lantern_b": {
+      "image": "props/hd/hd_tree_lantern_b@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_willow": {
+      "image": "props/hd/hd_tree_willow@2x.png",
+      "cw": 18,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_dark_a": {
+      "image": "props/hd/hd_tree_dark_a@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_tree_dark_b": {
+      "image": "props/hd/hd_tree_dark_b@2x.png",
+      "cw": 16,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_mushrooms": {
+      "image": "props/hd/hd_mushrooms@2x.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "sort"
+    },
+    "hd_mushrooms_glow": {
+      "image": "props/hd/hd_mushrooms_glow@2x.png",
+      "cw": 0,
+      "ch": 0,
+      "layer": "sort"
+    },
+    "hd_crystal": {
+      "image": "props/hd/hd_crystal@2x.png",
+      "cw": 30,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_crystal_cyan": {
+      "image": "props/hd/hd_crystal_cyan@2x.png",
+      "cw": 30,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_star_stone": {
+      "image": "props/hd/hd_star_stone@2x.png",
+      "cw": 26,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_lantern_post": {
+      "image": "props/hd/hd_lantern_post@2x.png",
+      "cw": 8,
+      "ch": 6,
+      "layer": "sort"
+    },
+    "hd_planter_pink": {
+      "image": "props/hd/hd_planter_pink@2x.png",
+      "cw": 30,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_planter_violet": {
+      "image": "props/hd/hd_planter_violet@2x.png",
+      "cw": 30,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_crate": {
+      "image": "props/hd/hd_crate@2x.png",
+      "cw": 26,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_barrel": {
+      "image": "props/hd/hd_barrel@2x.png",
+      "cw": 22,
+      "ch": 9,
+      "layer": "sort"
+    },
+    "hd_umbrella_table": {
+      "image": "props/hd/hd_umbrella_table@2x.png",
+      "cw": 60,
+      "ch": 14,
+      "layer": "sort"
+    },
+    "hd_flowerbed": {
+      "image": "props/hd/hd_flowerbed@2x.png",
+      "cw": 60,
+      "ch": 10,
+      "layer": "sort"
+    },
+    "hd_bush_berry": {
+      "image": "props/hd/hd_bush_berry@2x.png",
+      "cw": 36,
+      "ch": 10,
+      "layer": "sort"
     }
   }
 }
