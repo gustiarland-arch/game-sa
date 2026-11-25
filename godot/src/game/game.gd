@@ -5,6 +5,7 @@ extends Node
 ## ActionRunner presenter and the Cutscene host.
 
 signal idle
+signal quit_to_title
 
 var p: Progress
 var engine: QuestEngine
@@ -18,8 +19,10 @@ var _ui: CanvasLayer
 var _overlay: CutsceneOverlay
 var _toast: Label
 var _toast_time := 0.0
-var _objective: Label
-var _objective_panel: PanelContainer
+var hud: Hud
+var controls: TouchControls
+var pause: PauseMenu
+var _clock_acc := 0.0
 var _prompt: PanelContainer
 var _prompt_label: Label
 var _card: Control
@@ -39,6 +42,7 @@ func setup(progress: Progress, is_replay := false) -> Game:
 
 func _ready() -> void:
 	engine = QuestEngine.new(p, replay)
+	engine.both_routes_completed = SaveStore.both_completed("C06")
 	runner = ActionRunner.new(engine, self)
 	world = World.new()
 	add_child(world)
@@ -65,15 +69,16 @@ func _build_ui() -> void:
 	_overlay.cine = cine
 	cine.overlay = _overlay
 	root.add_child(_overlay)
-	# objective (top-left)
-	_objective_panel = PanelContainer.new()
-	var op := UiTheme.panel(Color(1, 0.97, 0.96, 0.92), Color("d9c6e0"), 14, 2, 8)
-	op.content_margin_left = 16; op.content_margin_right = 18; op.content_margin_top = 8; op.content_margin_bottom = 9
-	_objective_panel.add_theme_stylebox_override("panel", op)
-	_objective_panel.position = Vector2(18, 16)
-	_objective = UiTheme.label("", 19, UiTheme.INK, "bold")
-	_objective_panel.add_child(_objective)
-	root.add_child(_objective_panel)
+	hud = Hud.new()
+	root.add_child(hud)
+	controls = TouchControls.new()
+	root.add_child(controls)
+	controls.action_pressed.connect(func():
+		if dialog.active:
+			dialog.advance()
+		else:
+			interact())
+	controls.pause_pressed.connect(open_pause)
 	# interaction prompt (bottom centre)
 	_prompt = PanelContainer.new()
 	var pp := UiTheme.panel(UiTheme.PINK_DEEP, Color("a8456a"), 20, 2, 8)
@@ -102,6 +107,16 @@ func _build_ui() -> void:
 	root.add_child(_fade)
 	_card = Control.new(); _card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT); _card.visible = false
 	root.add_child(_card)
+	pause = PauseMenu.new()
+	root.add_child(pause)
+	pause.resume.connect(func(): pause.visible = false; get_tree().paused = false)
+	pause.save_requested.connect(func(): pause.set_status("Progress tersimpan" if save_now() else "Gagal menyimpan. Periksa ruang penyimpanan."))
+	pause.quit_requested.connect(func():
+		get_tree().paused = false
+		if not replay:
+			save_now()
+		quit_to_title.emit())
+	pause.process_mode = Node.PROCESS_MODE_ALWAYS
 
 
 ## Called right after the game node enters the tree for a new game.
@@ -121,6 +136,11 @@ func _process(delta: float) -> void:
 	_time += delta
 	var busy := dialog.active or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
 	world.locked = busy
+	world.input_vec = controls.vec if not busy else Vector2.ZERO
+	world.sprint_held = controls.sprint
+	controls.visible = not cine.letterboxed()
+	if not busy:
+		_tick_clock(delta)
 	world.talking_to = _target.get("npc_id", "") if dialog.active else ""
 	p.x = world.player.position.x; p.y = world.player.position.y
 	p.dir = world.player.dir_name()
@@ -137,9 +157,19 @@ func _process(delta: float) -> void:
 				c.position.y = c.get_meta("y0", 0.0) + bob
 
 
+## 1 real second = 1 game minute while exploring (WorldClock). The day ends at 02:00.
+func _tick_clock(delta: float) -> void:
+	_clock_acc += delta
+	while _clock_acc >= 1.0:
+		_clock_acc -= 1.0
+		if p.minute < WorldClock.DAY_END:
+			p.minute += 1
+			if p.minute % 15 == 0:
+				refresh_npcs()
+
+
 func _update_hud(delta: float, busy: bool) -> void:
-	_objective.text = "✦  " + engine.objective_text()
-	_objective_panel.visible = not cine.letterboxed()
+	hud.refresh(engine, cine.letterboxed())
 	_toast_time = maxf(0, _toast_time - delta)
 	_toast.modulate.a = clampf(_toast_time * 2.0, 0, 1)
 	_toast.position = Vector2(_ui.get_viewport().get_visible_rect().size.x / 2 - _toast.size.x / 2, 82)
@@ -161,9 +191,32 @@ func _unhandled_input(event: InputEvent) -> void:
 		_finish_card()
 		get_viewport().set_input_as_handled()
 		return
+	if event.is_action_pressed("ui_cancel") and not world.locked:
+		open_pause()
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_E):
 		interact()
 		get_viewport().set_input_as_handled()
+
+
+func open_pause() -> void:
+	if world.locked or pause.visible:
+		return
+	controls.reset()
+	pause.open(p.dialogue_history)
+	get_tree().paused = true
+
+
+## Save the slot and fold its progress into global.json. Replays never save.
+func save_now() -> bool:
+	if replay:
+		return false
+	if not SaveStore.save_slot(p):
+		toast("Gagal menyimpan! Periksa ruang penyimpanan.")
+		return false
+	SaveStore.absorb_global(p)
+	return true
 
 
 # ------------------------------------------------------------------ areas
@@ -478,11 +531,14 @@ func companion_changed(on: bool) -> void:
 func step_changed() -> void:
 	refresh_npcs()
 	_build_markers()
+	hud.flash_objective()
 	sfx("quest_complete", 0.22)
 
 
 func on_idle() -> void:
 	_build_markers()
+	if not replay and is_inside_tree():
+		save_now()        # autosave whenever the story queue settles
 	idle.emit()
 
 

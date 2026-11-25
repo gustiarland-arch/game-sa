@@ -29,6 +29,10 @@ func _ready() -> void:
 				var xy: PackedStringArray = pt.split(":")
 				_wps.append(Vector2(float(xy[0]), float(xy[1])))
 		_start(p, false)
+	elif args.has("--title"):
+		_mode = "title"
+		_args = args.slice(args.find("--title") + 1)
+		_title()
 	elif j >= 0:
 		_mode = "story"
 		_args = args.slice(j + 1)
@@ -36,31 +40,56 @@ func _ready() -> void:
 			_shots.append(int(f))
 		_start(Progress.new_game(_args[0], 1, Data.first_step, Data.area(Routes.room(_args[0]))), true)
 	else:
-		_start(Progress.new_game("sofia", 1, Data.first_step, Data.area("sofia_room")), true)
+		_title()
+
+
+var _title_node: TitleScreen
+
+
+func _title() -> void:
+	if game:
+		game.queue_free()
+		game = null
+	var layer := CanvasLayer.new()
+	add_child(layer)
+	_title_node = TitleScreen.new()
+	layer.add_child(_title_node)
+	_title_node.start_game.connect(func(p: Progress, is_new: bool):
+		layer.queue_free()
+		_start(p, is_new))
 
 
 func _start(p: Progress, new_game: bool) -> void:
 	game = Game.new().setup(p)
 	add_child(game)
+	game.quit_to_title.connect(_title)
 	if new_game:
 		game.begin_new_game()
+	else:
+		game.resume_game()
 
 
 func _process(_delta: float) -> void:
 	if _mode == "":
 		return
 	_frame += 1
+	if _mode == "title":
+		match _frame:
+			40: await _save_plain(_args[0] + "_judul.png"); _title_node.show_routes()
+			80: await _save_plain(_args[0] + "_route.png"); _title_node.show_slots("sofia")
+			120: await _save_plain(_args[0] + "_slot.png"); get_tree().quit()
+		return
 	if _mode == "shot":
 		var w := game.world
 		if _wp < _wps.size():
 			var d: Vector2 = _wps[_wp] - w.player.position
 			if d.length() < 8:
 				_wp += 1
-				w.input_vec = Vector2.ZERO
+				game.controls.vec = Vector2.ZERO
 			else:
-				w.input_vec = d.normalized()
+				game.controls.vec = d.normalized()
 		else:
-			w.input_vec = Vector2.ZERO
+			game.controls.vec = Vector2.ZERO
 		if _frame == int(_args[4]):
 			await _save(_args[5])
 			get_tree().quit()
@@ -85,7 +114,7 @@ func _process(_delta: float) -> void:
 ## another area) and use it.
 func _autoplay() -> void:
 	var w := game.world
-	w.input_vec = Vector2.ZERO
+	game.controls.vec = Vector2.ZERO
 	if w.locked:
 		return
 	var its := game.engine.interactables(game.p.area)
@@ -97,7 +126,7 @@ func _autoplay() -> void:
 			game._find_target()
 			game.interact()
 		else:
-			w.input_vec = d.normalized()
+			game.controls.vec = d.normalized()
 		return
 	var goal := _goal_area()
 	if goal == "" or goal == game.p.area:
@@ -107,7 +136,7 @@ func _autoplay() -> void:
 		return
 	var r: Array = door.rect
 	var c := Vector2(r[0] + r[2] / 2.0, r[1] + r[3] / 2.0)
-	w.input_vec = (c - w.player.position).normalized()
+	game.controls.vec = (c - w.player.position).normalized()
 
 
 func _goal_area() -> String:
@@ -137,6 +166,12 @@ func _next_door(from: String, goal: String) -> Dictionary:
 	while prev[cur] != null and prev[cur][0] != from:
 		cur = prev[cur][0]
 	return prev[cur][1] if prev[cur] != null else {}
+
+
+func _save_plain(path: String) -> void:
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png(path)
+	print("SHOT ", path)
 
 
 func _save(path: String) -> void:
