@@ -24,6 +24,12 @@ func _ready() -> void:
 		_args = args.slice(i + 1)
 		var p := Progress.new_game(_args[0], 1, Data.first_step, Data.area(_args[1]))
 		p.area = _args[1]; p.x = float(_args[2]); p.y = float(_args[3]); p.companion = true
+		if OS.get_environment("SHOT_MINUTE") != "":
+			p.minute = int(OS.get_environment("SHOT_MINUTE"))
+		if OS.get_environment("SHOT_DAY") != "":
+			p.day = int(OS.get_environment("SHOT_DAY"))
+		if OS.get_environment("SHOT_STEP") != "":
+			p.step = OS.get_environment("SHOT_STEP")
 		if _args.size() > 6:
 			for pt in _args[6].split(";", false):
 				var xy: PackedStringArray = pt.split(":")
@@ -261,4 +267,4 @@ func _save_plain(path: String) -> void:
 func _save(path: String) -> void:
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png(path)
-	print("SHOT ", path, " step=", game.p.step, " area=", game.p.area, " at ", game.world.player.position)
+	print("SHOT ", path, " step=", game.p.step, " area=", game.p.area, " at ", game.world.player.position, " day=", game.p.day, " minute=", game.p.minute, " music=", Audio.current_music(), " amb=", Audio.current_ambience())

@@ -70,7 +70,7 @@ func refresh(engine: QuestEngine, hidden: bool) -> void:
 	visible = not hidden
 	var p := engine.p
 	_objective.text = "✦  " + engine.objective_text()
-	_clock.text = "%s %d  ·  %s  %s" % [WorldClock.day_name(p.day), p.day, WorldClock.hhmm(p.minute), WEATHER_ICON.get(engine.weather_now(), "")]
+	_clock.text = "%s %d  ·  %s  %s" % [WorldClock.day_name(p.day), p.day, WorldClock.hhmm(p.minute), ("☾" if engine.weather_now() == "cerah" and WorldClock.is_night(p.minute) else WEATHER_ICON.get(engine.weather_now(), ""))]
 	_coins.text = str(p.coins)
 	_hearts.text = str(p.affection)
 	_right.reset_size()

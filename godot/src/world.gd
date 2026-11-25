@@ -27,6 +27,7 @@ var cine: Cutscene                # set by Game; overrides the camera while acti
 var npcs := {}                    # town NPC id -> Actor
 var npc_brain := {}               # id -> {home, radius, target, pause}
 var extras: Node2D                # quest item sprites and markers
+var light_spots: Array = []       # [{pos, kind: "lamp"|"crystal"}] for the atmosphere lights
 var _floor: Node2D
 var _sorted: Node2D
 var _ground: Node2D
@@ -103,6 +104,7 @@ func _build_ground() -> void:
 
 
 func _build_props() -> void:
+	light_spots.clear()
 	for p in area.get("props", []):
 		var d: Dictionary = Data.props.get(p.get("type", ""), {})
 		if d.is_empty():
@@ -120,6 +122,11 @@ func _build_props() -> void:
 		s.position = Vector2(-tex.get_width() * k / 2.0, -tex.get_height() * k)
 		s.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS if k < 1.0 else CanvasItem.TEXTURE_FILTER_NEAREST
 		holder.add_child(s)
+		var img: String = d.image
+		if img.contains("lamp") or img.contains("lantern_post") or img.contains("lantern_on") or img.contains("crystal"):
+			var kind := "crystal" if img.contains("crystal") else "lamp"
+			var hgt := tex.get_height() * k
+			light_spots.append({"pos": Vector2(p.x, p.y - hgt * (0.82 if kind == "lamp" else 0.5)), "foot": Vector2(p.x, p.y - 8), "kind": kind})
 		if d.get("layer", "sort") == "floor":
 			_floor.add_child(holder)
 		else:

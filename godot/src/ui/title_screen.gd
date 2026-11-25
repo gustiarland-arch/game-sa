@@ -19,7 +19,7 @@ func _ready() -> void:
 	_near = _layer("ui/v32_menu_near.png")
 	_page = Control.new(); _page.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(_page)
-	Audio.music("title")
+	Audio.music("menu_theme")
 	show_title()
 
 

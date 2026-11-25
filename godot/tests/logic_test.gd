@@ -167,5 +167,10 @@ func _ready() -> void:
 	ok(re.start_couple_action("gandengan", "plaza").begins_with("Aksi berdua!") and rp.holding_hands
 		and re.start_couple_action("gandengan", "plaza") == "Berhenti bergandengan." and re.start_couple_action("gandengan", "plaza") == "Bergandengan lagi.", "gandengan: aktif / lepas / lagi tanpa bonus ganda")
 	ok(re.couple_action_actions("pelukan").size() >= 2 and re.date_actions("taman").size() >= 3, "aksi romansa menghasilkan cutscene + scene")
+	# 14. soundscape choice (same rules as SoundscapePlan.java)
+	ok(Soundscape.music_for("plaza", "town", "rain", false, 13 * 60) == "rain_lullaby" and Soundscape.music_for("plaza", "town", "cerah", false, 21 * 60) == "city_night"
+		and Soundscape.music_for("plaza", "town", "cerah", false, 17 * 60) == "city_evening" and Soundscape.music_for("cafe", "cafe", "rain", true, 600, "cinema_quiet") == "cinema_quiet", "musik per tempat, cuaca, jam, dan override cerita")
+	ok(Soundscape.ambience_for("cafe", "rain", true, 600) == "rain_window" and Soundscape.ambience_for("taman_kota", "cerah", false, 21 * 60) == "night_crickets"
+		and Soundscape.ambience_for("sofia_room", "cerah", true, 600) == "" and Soundscape.footstep_for("cafe") == "step_wood", "ambience dan langkah kaki")
 	print("%s: %d pemeriksaan, %d gagal" % ["SEMUA LULUS" if fails == 0 else "ADA YANG GAGAL", checks, fails])
 	get_tree().quit(1 if fails > 0 else 0)

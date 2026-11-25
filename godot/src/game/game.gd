@@ -38,6 +38,12 @@ var _target := {}                 # {kind, data, x, y, label}
 var _spawned := {}                # cutscene extras
 var _markers := {}                # interactable id -> Node2D
 var _time := 0.0
+var atmosphere: Atmosphere
+var confirm: ConfirmBox
+var _clock_step := ""
+var _sound_clock := 0.0
+var _step_clock := 0.0
+var _autosave_acc := 0.0
 
 
 func setup(progress: Progress, is_replay := false) -> Game:
@@ -57,6 +63,9 @@ func _ready() -> void:
 	world.add_child(cine)
 	world.cine = cine
 	world.door_touched.connect(_on_door)
+	atmosphere = Atmosphere.new()
+	atmosphere.world = world
+	world.add_child(atmosphere)
 	_build_ui()
 	world.flags = p.flags
 	world.start(p.route, p.area, Vector2(p.x, p.y), p.dir)
@@ -112,6 +121,8 @@ func _build_ui() -> void:
 	root.add_child(minigame)
 	puzzle = PuzzleOverlay.new()
 	root.add_child(puzzle)
+	confirm = ConfirmBox.new()
+	root.add_child(confirm)
 	shop = ShopOverlay.new()
 	shop.engine = engine
 	root.add_child(shop)
@@ -164,13 +175,26 @@ func resume_game() -> void:
 # ------------------------------------------------------------------ frame
 func _process(delta: float) -> void:
 	_time += delta
-	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or book.visible or romance.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
+	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or book.visible or romance.visible or confirm.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
 	world.locked = busy
 	world.input_vec = controls.vec if not busy else Vector2.ZERO
 	world.sprint_held = controls.sprint
 	controls.visible = not cine.letterboxed()
+	Audio.duck(dialog.active or cine.active)
+	_update_atmosphere()
+	sync_clock_to_step()
+	_sound_clock -= delta
+	if _sound_clock <= 0 and not cine.active and not runner.busy():
+		_sound_clock = 1.2
+		sync_soundscape()
 	if not busy:
 		_tick_clock(delta)
+		_footsteps(delta)
+		if not replay:
+			_autosave_acc += delta
+			if _autosave_acc >= 90.0:
+				_autosave_acc = 0
+				save_now()
 	world.talking_to = _target.get("npc_id", "") if dialog.active else ""
 	p.x = world.player.position.x; p.y = world.player.position.y
 	p.dir = world.player.dir_name()
@@ -189,13 +213,27 @@ func _process(delta: float) -> void:
 
 ## 1 real second = 1 game minute while exploring (WorldClock). The day ends at 02:00.
 func _tick_clock(delta: float) -> void:
+	if realm():
+		return      # the clock stops in memory realms
 	_clock_acc += delta
 	while _clock_acc >= 1.0:
 		_clock_acc -= 1.0
-		if p.minute < WorldClock.DAY_END:
-			p.minute += 1
-			if p.minute % 15 == 0:
-				refresh_npcs()
+		p.minute += 1
+		if p.minute % 10 == 0:
+			refresh_npcs()
+			sync_soundscape()
+		if p.minute >= WorldClock.DAY_END:
+			pass_out()
+			break
+
+
+var _step_t := 0.0
+func _footsteps(delta: float) -> void:
+	_step_t -= delta
+	var pl := world.player
+	if pl.walking and _step_t <= 0:
+		Audio.sfx(Soundscape.footstep_for(p.area), 0.19)
+		_step_t = 0.22 if pl.sprinting else 0.35
 
 
 func _update_hud(delta: float, busy: bool) -> void:
@@ -308,6 +346,105 @@ func _after_enter(_announce: bool) -> void:
 	_spawned.clear()
 	refresh_npcs()
 	_build_markers()
+	var a := world.area
+	atmosphere.indoor = bool(a.get("indoor", false))
+	atmosphere.ambient = str(a.get("ambient", "")) if a.get("ambient") != null else ""
+	atmosphere.realm = realm()
+	atmosphere.rebuild_lights()
+	_update_atmosphere()
+	sync_soundscape()
+
+
+# ------------------------------------------------------------------ time, weather, light, sound
+## Memory realms (dreamlike areas) stop the clock and keep their own light.
+func realm() -> bool:
+	return ["memory", "star", "tender"].has(str(world.area.get("music", "")))
+
+
+func weather() -> String:
+	var w := engine.weather_now()
+	return "rain" if w == "hujan" else w
+
+
+## Effective light: the story step's tint when it has one, else the clock. a = strength.
+func light_now() -> Color:
+	var st := engine.step()
+	if st.get("tint") != null:
+		var c := Color(str(st.tint))
+		return Color(c.r, c.g, c.b, float(st.get("tintAlpha", 0.25)))
+	if realm():
+		return Color(1, 1, 1, 0)
+	var l := WorldClock.light(p.minute)
+	return Color(l[0], l[1], l[2], l[3])
+
+
+func _update_atmosphere() -> void:
+	atmosphere.light = light_now()
+	atmosphere.weather = weather()
+
+
+func sync_soundscape() -> void:
+	var a := world.area
+	var st := engine.step()
+	var areas: Array = st.get("musicAreas", [])
+	var quest_music = st.get("music") if st.get("music") != null and (areas.is_empty() or areas.has(p.area)) else null
+	Audio.music(Soundscape.music_for(p.area, a.get("music"), weather(), atmosphere.indoor, p.minute, quest_music))
+	Audio.ambience(Soundscape.ambience_for(p.area, weather(), atmosphere.indoor, p.minute))
+
+
+## Evening and night story steps move the clock forward (never back), so sky, HUD and NPCs agree.
+func sync_clock_to_step() -> void:
+	var st := engine.step()
+	if st.is_empty() or st.get("id", p.step) == _clock_step:
+		return
+	_clock_step = str(st.get("id", p.step))
+	if st.get("tint") == null or replay:
+		return
+	var c := Color(str(st.tint))
+	var target := 20 * 60 if c.b > c.r else 17 * 60 + 30
+	if p.minute < target:
+		p.minute = target
+		refresh_npcs()
+
+
+func new_day(msg: String) -> void:
+	p.day += 1
+	p.minute = 7 * 60
+	_clock_acc = 0
+	refresh_npcs()
+	sync_soundscape()
+	var w := WorldClock.weather(p.day)
+	toast("%s %s, hari ke-%d • %s" % [msg, WorldClock.day_name(p.day), p.day, w.capitalize()])
+	save_now()
+
+
+func bed_spot() -> Vector2:
+	var b = world.area.get("bed")
+	if b is Array and b.size() > 1:
+		return Vector2(float(b[0]), float(b[1]))
+	return Vector2(830 if p.route == "arland" else 130, 380)
+
+
+func ask_sleep() -> void:
+	var early := p.minute < 17 * 60
+	confirm.ask("Tidur?", ("Masih %s. Tidur sampai besok pagi?" % WorldClock.hhmm(p.minute)) if early else "Istirahat sampai besok pagi. Progress tersimpan otomatis.",
+		"Tidur", func(): _fade_through(func():
+			world.player.dir = Actor.dir_of("down")
+			new_day("Selamat pagi!"), Callable()), "Nanti")
+
+
+func pass_out() -> void:
+	var room := Routes.room(p.route)
+	_fade_through(func():
+		_enter(room, bed_spot_of(room) + Vector2(0, 50), "down", false)
+		new_day("Kamu ketiduran sampai pagi..."), Callable())
+
+
+func bed_spot_of(area_id: String) -> Vector2:
+	var b = Data.area(area_id).get("bed")
+	if b is Array and b.size() > 1:
+		return Vector2(float(b[0]), float(b[1]))
+	return Vector2(830 if p.route == "arland" else 130, 380)
 
 
 ## Town NPCs by schedule, and the partner when the active step places them in this area.
@@ -410,6 +547,9 @@ func _find_target() -> void:
 			_target = {"kind": "npc", "data": n, "npc_id": n.get("id"), "label": "Bicara dengan " + str(n.get("name", n.get("id")))}
 	if not _target.is_empty():
 		return
+	if p.area == Routes.room(p.route) and _d(bed_spot().x, bed_spot().y) < 60:
+		_target = {"kind": "bed", "label": "Tidur"}
+		return
 	if world.partner_mode == 2 and _d(world.partner.position.x, world.partner.position.y) <= 58:
 		var t := engine.partner_talk(p.area)
 		if not t.is_empty():
@@ -449,6 +589,8 @@ func interact() -> void:
 			runner.run(engine.talk_actions(_target.data))
 		"romance":
 			open_romance()
+		"bed":
+			ask_sleep()
 		"examine":
 			var e: Dictionary = _target.data
 			pl.face(float(e.get("x", 0)) - pl.position.x, float(e.get("y", 0)) - pl.position.y)
