@@ -107,6 +107,13 @@ public final class DeskVideo extends OluGame {
     @Override public void render() {
         if (seg >= SEGS.length) return;
         drive();
+        if (segFrame == 20 && SEGS[seg].length > 9 && !SEGS[seg][9].isEmpty() && getScreen() instanceof GameScreen) {
+            String[] sp = SEGS[seg][9].split("@"); // optional 10th column: SCENE_ID@lineIndex shows that dialogue line
+            try {
+                java.lang.reflect.Method m = GameScreen.class.getDeclaredMethod("playScenePart", String.class, int.class, int.class, Runnable.class);
+                m.setAccessible(true); m.invoke(getScreen(), sp[0], sp.length > 1 ? Integer.parseInt(sp[1]) : 0, 1, null);
+            } catch (Exception e) { throw new RuntimeException(e); }
+        }
         if (getScreen() != null) getScreen().render(1f / FPS);
         int w = Gdx.graphics.getBackBufferWidth(), h = Gdx.graphics.getBackBufferHeight();
         if (!STILLS && segFrame >= 6) { // skip the first frames of a fresh scene (loading)

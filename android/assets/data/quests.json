@@ -348,7 +348,7 @@
             },
             {
               "s": "sofia",
-              "e": "neutral",
+              "e": "penasaran",
               "t": "Hangat sekali rasanya... seperti habis memeluk sesuatu. Tapi apa, ya?",
               "c": "line",
               "route": "sofia"
@@ -32208,7 +32208,7 @@
               "lines": [
                 {
                   "s": "lumi",
-                  "e": "neutral",
+                  "e": "senyum",
                   "t": "Altarnya di tengah lingkaran lentera. Nyalakan semuanya bersama-sama."
                 }
               ]
@@ -33897,7 +33897,7 @@
               "lines": [
                 {
                   "s": "harun",
-                  "e": "neutral",
+                  "e": "senyum",
                   "t": "Kucing suka di plaza dan perumahan, anjing di taman, bebek di kolam dan danau. Dekati pelan-pelan."
                 }
               ]
