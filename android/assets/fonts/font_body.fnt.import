@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://hpulk200rhet"
+path="res://.godot/imported/font_body.fnt-6bfccd795257b400ba1cac2ef0b7b78d.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/font_body.fnt"
+dest_files=["res://.godot/imported/font_body.fnt-6bfccd795257b400ba1cac2ef0b7b78d.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

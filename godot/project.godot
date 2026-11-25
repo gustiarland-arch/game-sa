@@ -8,6 +8,7 @@ config/features=PackedStringArray("4.3", "Mobile")
 
 [autoload]
 Data="*res://src/data.gd"
+Audio="*res://src/audio.gd"
 
 [display]
 window/size/viewport_width=1280
@@ -17,6 +18,8 @@ window/stretch/aspect="expand"
 window/handheld/orientation=0
 
 [rendering]
+
+environment/defaults/default_clear_color=Color(0.105, 0.09, 0.15, 1)
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/canvas_textures/default_texture_filter=0

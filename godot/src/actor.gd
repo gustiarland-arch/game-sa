@@ -20,6 +20,15 @@ var anim := 0.0
 var life := 0.0
 var motion_blend := 0.0
 var turn_impulse := 0.0
+var pose = null            # pose name or null
+var pose_time := 0.0
+var pose_dur := 0.0
+var emote = null
+var emote_time := 0.0
+var alpha := 1.0
+const POSES := ["sit", "wave", "give", "reach", "bow", "hold_l", "hold_r", "cheer",
+		"hug", "lean", "photo", "highfive", "dance", "read", "water", "sweep"]
+var _emote_sprite: Sprite2D
 var style := {"cadence": 1.0, "bounce": 1.0, "sway": 1.0, "breathing": 1.0, "phase": 0.0, "scale": 1.0}
 
 var _sprite: Sprite2D
@@ -49,8 +58,30 @@ func setup(id: String) -> Actor:
 	add_child(_sprite)
 	if _shadow.texture:
 		_shadow.scale = Vector2(26.0 / _shadow.texture.get_width(), 10.0 / _shadow.texture.get_height())
+	_emote_sprite = Sprite2D.new()
+	_emote_sprite.visible = false
+	_emote_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	add_child(_emote_sprite)
 	_update_frame()
 	return self
+
+
+func set_pose(p: String, seconds: float) -> void:
+	pose = p; pose_time = 0.0; pose_dur = seconds
+
+
+func clear_pose() -> void:
+	pose = null; pose_time = 0.0; pose_dur = 0.0
+
+
+func show_emote(e: String, seconds: float) -> void:
+	emote = e; emote_time = seconds
+	_emote_sprite.texture = Data.tex("ui/emote_%s.png" % e)
+
+
+func face_to(other: Node2D) -> void:
+	if other != null:
+		face(other.position.x - position.x, other.position.y - position.y)
 
 
 func _sheet(name: String) -> Dictionary:
@@ -95,6 +126,16 @@ func _process(delta: float) -> void:
 	turn_impulse = maxf(0.0, turn_impulse - dt * 3.8)
 	if walking:
 		anim = fmod(anim + dt * (32.0 if sprinting else 24.0) * style.cadence, 24.0)
+	if emote_time > 0:
+		emote_time -= dt
+		if emote_time <= 0:
+			emote = null
+	if pose != null:
+		pose_time += dt
+		if walking and pose != "hold_l" and pose != "hold_r":
+			clear_pose()
+		elif pose_dur > 0 and pose_time >= pose_dur:
+			clear_pose()
 	_update_frame()
 
 
@@ -116,6 +157,15 @@ func _update_frame() -> void:
 	if sh.is_empty():
 		return
 	col = posmod(int(anim) if walking else int((life + style.phase) * 3.0), sh.cols)
+	var pi: int = POSES.find(pose) if pose != null else -1
+	if pi >= 0:
+		var ps := _sheet("poses_v53")
+		if ps.is_empty():
+			ps = _sheet("poses")
+		if not ps.is_empty() and pi < ps.rows:
+			var anim_pose: bool = pose in ["wave", "cheer", "hug", "lean", "photo", "highfive", "dance", "read", "water", "sweep"] or (pose in ["hold_l", "hold_r"] and walking)
+			var f := (int((anim if walking else pose_time) * 4.0) & 1) if anim_pose else 0
+			sh = ps; row = pi; col = clampi(dir, 0, 3) * 2 + f
 	var k: int = sh.k
 	_sprite.texture = sh.tex
 	_sprite.region_enabled = true
@@ -132,10 +182,29 @@ func _update_frame() -> void:
 		dx += (-1.6 if facing8 in [1, 3] else 1.6 if facing8 in [5, 7] else 0.0) * motion_blend
 	else:
 		lift += maxf(0.0, sin((life + style.phase) * 2.12 * style.breathing)) * .65 * style.bounce
-	dx += sin(life * 5.0 + style.phase) * turn_impulse * 1.5
+	if pose != null and pi < 0:     # procedural gestures
+		var t := pose_time
+		match pose:
+			"laugh": lift = absf(sin(t * 12.0)) * 2.5
+			"surprised": lift = sin(t / 0.35 * PI) * 7.0 if t < 0.35 else 0.0
+			"jump": lift = absf(sin(t * 6.0)) * 8.0
+			"nod": lift = -absf(sin(t * 9.0)) * 1.5
+			"shake": dx = sin(t * 30.0) * 1.5 * maxf(0.0, 1.0 - t)
+			"shy": dx = sin(t * 3.5) * 0.85; lift = -1.0
+			"excited": lift = absf(sin(t * 11.0)) * 4.8
+			"ponder": dx = sin(t * 1.9) * 0.7; lift = sin(t * 2.2) * 0.45
+	if pose == null:
+		dx += sin(life * 5.0 + style.phase) * turn_impulse * 1.5
 	_sprite.scale = Vector2(sc, sc)
 	_sprite.position = Vector2(-FW * style.scale / 2.0 + dx, -FH * style.scale - lift + 1)
 	if _shadow.texture:
 		var sk := 1.0 - minf(0.4, lift / 20.0)
 		_shadow.scale = Vector2(26.0 * sk / _shadow.texture.get_width(), 10.0 / _shadow.texture.get_height())
 		_shadow.position = Vector2(0, 0)
+	modulate.a = alpha
+	_emote_sprite.visible = emote != null and _emote_sprite.texture != null
+	if _emote_sprite.visible:
+		var pop := minf(1.0, (1.8 - emote_time) * 6.0)
+		var tw := _emote_sprite.texture.get_width()
+		_emote_sprite.scale = Vector2(22.0 / tw, 22.0 / tw) * pop
+		_emote_sprite.position = Vector2(0, -FH * style.scale - 12 - lift)

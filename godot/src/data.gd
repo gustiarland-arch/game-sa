@@ -11,6 +11,10 @@ var props: Dictionary = {}       # prop id -> definition
 var story: Dictionary = {}
 var quests: Dictionary = {}
 var memory_book: Dictionary = {}
+var steps: Dictionary = {}               # step id -> step
+var chapter_order: Array = []
+var chapter_start_steps: Dictionary = {} # first step of a chapter (incl. per-route firsts) -> chapter
+var first_step := ""
 
 
 func _ready() -> void:
@@ -21,6 +25,68 @@ func _ready() -> void:
 	memory_book = _json("res://assets/data/memory_book.json")
 	for id in maps:
 		_prepare_area(id, maps[id])
+	for st in quests.get("steps", []):
+		steps[st.get("id", "?")] = st
+	for c in quests.get("chapters", []):
+		chapter_order.append(c.get("id", "?"))
+		if c.get("firstStep", "") != "":
+			chapter_start_steps[c.firstStep] = c.id
+			if first_step == "":
+				first_step = c.firstStep
+	var rf: Dictionary = quests.get("chapterRouteFirst", {})
+	for ch in rf:
+		for stp in rf[ch]:
+			chapter_start_steps[stp] = ch
+
+
+func step(id: String) -> Dictionary:
+	return steps.get(id, {})
+
+
+func chapter_index(ch) -> int:
+	return chapter_order.find(ch)
+
+
+func scene(id: String) -> Dictionary:
+	return story.get("scenes", {}).get(id, {})
+
+
+func speaker(id: String) -> Dictionary:
+	var s: Dictionary = story.get("speakers", {}).get(id, {})
+	return s if not s.is_empty() else {"name": id}
+
+
+func emotion(id: String) -> Dictionary:
+	var e: Dictionary = story.get("emotions", {}).get(id, {})
+	return e if not e.is_empty() else story.get("emotions", {}).get("neutral", {})
+
+
+func chapter_title(id: String) -> String:
+	for c in story.get("chapters", []):
+		if c.get("id") == id:
+			return c.get("title", id)
+	return id
+
+
+## Portrait texture with the emotion fallback chain (e.g. pikir -> serius -> normal).
+var _portraits := {}
+func portrait(character: String, emo: String) -> Texture2D:
+	var key := character + "/" + emo
+	if _portraits.has(key):
+		return _portraits[key]
+	var t: Texture2D = null
+	for e in emotion(emo).get("portrait", ["normal"]) + ["normal"]:
+		var p := "res://assets/characters/%s/portraits/%s.png" % [character, e]
+		if ResourceLoader.exists(p):
+			t = load(p)
+			break
+	_portraits[key] = t
+	return t
+
+
+func tex(path: String) -> Texture2D:
+	var p := "res://assets/" + path
+	return load(p) if ResourceLoader.exists(p) else null
 
 
 func _json(path: String) -> Dictionary:
