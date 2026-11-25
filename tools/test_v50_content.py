@@ -37,7 +37,13 @@ for area,meta in m['areas'].items():
    scene=s['scenes'].get('V50-VIEW-'+area.upper()+'-'+who)
    assertq(scene is not None,'route scene '+area+who)
    assertq(len(scene['lines'])>=6,'dialogue content '+area+who)
-assertq(areas==21,'21 terraced areas')
+assertq(areas==0,'v6: stair platforms removed')
+# v6: each panorama is a ground viewpoint now; it must still exist with both route scenes
+for area in ('plaza','taman_kota','riverside','hutan_bisik','bukit_bintang'):
+  it=next((i for i in q['side'] if i['id']=='V50_VIEW_'+area.upper()),None)
+  assertq(it is not None and it['area']==area,'panorama playable '+area)
+  for who in ('ARLAND','SOFIA'):
+    assertq(len(s['scenes']['V50-VIEW-'+area.upper()+'-'+who]['lines'])>=6,'dialogue content '+area+who)
 for id in ('v50_plaza_ascent','v50_rain_reflections','v50_starlit_steps','v50_tomorrow_horizon','v50_cafe_highlight'):
  assertq((A/'audio/music'/f'{id}.ogg').stat().st_size>2000,'new score '+id)
 for id in ('v50_highland_breeze','v50_memory_air'):

@@ -7,6 +7,6 @@ bash tools/test_v54_weather.sh
 python3 tools/scale_audit_v54.py
 bash tools/test_v53_release.sh
 python3 tools/test_v52_world_access.py
-python3 tools/test_v51_environment.py
+# v6: tools/test_v51_environment.py checked the stair platforms that were removed at the player's request.
 python3 tools/test_v50_content.py
 printf 'V5.4 headless QA complete. Android build/device playtest reported separately.\n'

@@ -171,16 +171,17 @@ final class WorldRenderer {
                 Texture t = g.game.assets.tex(pr.def.image);
                 float s = 70 + MathUtils.sin(g.time * 1.6f + pr.x) * 6f;
                 g.game.batch.setColor(0.7f, 0.85f, 1f, 0.5f);
-                g.game.batch.draw(g.sparkle, pr.x - s / 2, g.area.h - pr.y + t.getHeight() / 2f - s / 2, s, s);
+                g.game.batch.draw(g.sparkle, pr.x - s / 2, g.area.h - pr.y + t.getHeight() * pr.def.scale / 2f - s / 2, s, s);
             }
             g.game.batch.setColor(1, 1, 1, 1);
         }
         if (night || rain || g.realm()) { // lampu jalan & lentera berpendar saat malam/hujan
             for (MapDb.Prop pr : g.area.props) {
-                String img = (pr.alt != null && pr.altFlag != null && g.p.hasFlag(pr.altFlag) ? pr.alt : pr.def).image;
+                MapDb.PropDef ld = pr.alt != null && pr.altFlag != null && g.p.hasFlag(pr.altFlag) ? pr.alt : pr.def;
+                String img = ld.image;
                 if (!(img.contains("lamp") || img.contains("lantern_post") || img.contains("lantern_on"))) continue;
                 Texture t = g.game.assets.tex(img);
-                float gx = pr.x, gy = g.area.h - pr.y + t.getHeight() - 6;
+                float gx = pr.x, gy = g.area.h - pr.y + t.getHeight() * ld.scale - 6;
                 if (gx < left - 60 || gx > left + ww + 60 || gy < bottom - 60 || gy > bottom + wh + 60) continue;
                 float s = 46 + MathUtils.sin(g.time * 2f + pr.x) * 3f;
                 g.game.batch.setColor(1f, 0.85f, 0.55f, 0.45f);
@@ -233,8 +234,9 @@ final class WorldRenderer {
     void drawProp(MapDb.Prop pr) {
         MapDb.PropDef def = pr.alt != null && pr.altFlag != null && g.p.hasFlag(pr.altFlag) ? pr.alt : pr.def;
         Texture t = g.game.assets.tex(def.image);
-        float propX = pr.x - t.getWidth() / 2f, propY = g.area.h - pr.y;
-        if (propX > g.visibleR || propX + t.getWidth() < g.visibleL || propY > g.visibleT || propY + t.getHeight() < g.visibleB) return;
+        final float tw = t.getWidth() * def.scale, th0 = t.getHeight() * def.scale; // v6: HD art is drawn at world size
+        float propX = pr.x - tw / 2f, propY = g.area.h - pr.y;
+        if (propX > g.visibleR || propX + tw < g.visibleL || propY > g.visibleT || propY + th0 < g.visibleB) return;
         // v3.7: local ground-contact shadow follows identical Y-sort as the prop;
         // stays underneath its sprite, and never modifies collision or quest geometry.
         if (g.game.settings.visualQuality > 0 && !"floor".equals(def.layer)
@@ -256,7 +258,7 @@ final class WorldRenderer {
                     || (warmWindow && (g.isIndoor() || WorldClock.isNight(g.p.minute))));
         if (glowAllowed) {
             float cx = pr.x;
-            float cy = g.area.h - pr.y + t.getHeight() * (lamp ? 0.78f : 0.55f);
+            float cy = g.area.h - pr.y + th0 * (lamp ? 0.78f : 0.55f);
             float s = (lamp ? 92f : crystal ? 84f : 70f) * (g.game.settings.visualQuality == 2 ? 1.15f : 0.85f);
             float strength = g.game.settings.visualQuality == 2 ? 1f : 0.6f;
             if (lamp) g.game.batch.setColor(1f, 0.84f, 0.56f, 0.34f * strength);
@@ -268,7 +270,7 @@ final class WorldRenderer {
         // High-quality animation: move only the upper third of a tree (the roots/trunk
         // remain fixed and collision unchanged). TextureRegions are cached once per texture.
         if (g.game.settings.visualQuality == 2 && (img.contains("/tree_") || img.contains("/wishing_tree"))
-                && t.getHeight() >= 60 && !"floor".equals(def.layer)) {
+                && th0 >= 60 && !"floor".equals(def.layer)) {
             TextureRegion[] split = g.animatedTreeRegions.get(t);
             if (split == null) {
                 int th = Math.max(12, t.getHeight() / 3);
@@ -277,16 +279,18 @@ final class WorldRenderer {
                 g.animatedTreeRegions.put(t, split);
             }
             float sway = MathUtils.sin(g.time * 1.05f + pr.x * 0.013f + pr.y * 0.009f) * 2.0f;
-            float x = Math.round(pr.x - t.getWidth() / 2f), y = Math.round(g.area.h - pr.y);
-            int bottomH = split[0].getRegionHeight();
-            g.game.batch.draw(split[0], x, y, t.getWidth(), bottomH);
-            g.game.batch.draw(split[1], x + sway, y + bottomH, t.getWidth(), split[1].getRegionHeight());
+            float x = def.scale < 1f ? pr.x - tw / 2f : Math.round(pr.x - tw / 2f), y = def.scale < 1f ? g.area.h - pr.y : Math.round(g.area.h - pr.y);
+            float bottomH = split[0].getRegionHeight() * def.scale;
+            g.game.batch.draw(split[0], x, y, tw, bottomH);
+            g.game.batch.draw(split[1], x + sway, y + bottomH, tw, split[1].getRegionHeight() * def.scale);
+        } else if (def.scale < 1f) {
+            g.game.batch.draw(t, pr.x - tw / 2f, g.area.h - pr.y, tw, th0);
         } else {
             g.game.batch.draw(t, Math.round(pr.x - t.getWidth() / 2f), Math.round(g.area.h - pr.y), t.getWidth(), t.getHeight());
         }
         if (WorldFx.animatedWater(img)) // v5.4: fountains and waterfalls actually move
-            g.worldFx.drawPropWaterV54(g.game.batch, g.game.assets.pixel, img, Math.round(pr.x - t.getWidth() / 2f),
-                    Math.round(g.area.h - pr.y) + t.getHeight(), g.time, g.game.settings.visualQuality);
+            g.worldFx.drawPropWaterV54(g.game.batch, g.game.assets.pixel, img, Math.round(pr.x - tw / 2f),
+                    Math.round(g.area.h - pr.y) + th0, g.time, g.game.settings.visualQuality);
     }
 
     void drawEmote(Actor a) {
@@ -336,7 +340,12 @@ final class WorldRenderer {
         g.game.batch.setProjectionMatrix(g.worldCam.combined);
         g.game.batch.begin();
         g.game.batch.setColor(1, 1, 1, 1);
-        g.game.batch.draw(g.mapTex, 0, 0, g.area.w, g.area.h);
+        if (g.area.tiles.isEmpty()) g.game.batch.draw(g.mapTex, 0, 0, g.area.w, g.area.h);
+        else for (MapDb.Tile tl : g.area.tiles) { // v6 HD ground: pieces in map coords (y down)
+            float ty = g.area.h - tl.y - tl.h;
+            if (tl.x > g.visibleR || tl.x + tl.w < g.visibleL || ty > g.visibleT || ty + tl.h < g.visibleB) continue;
+            g.game.batch.draw(g.game.assets.tex(tl.image), tl.x, ty, tl.w, tl.h);
+        }
         g.worldFx.drawSceneAtmosphere(g.game.batch, g.game.assets.pixel, g.glow, g.sparkle,
                 g.area.id, g.area.indoor, g.area.h, g.worldCam.position.x, g.worldCam.position.y,
                 ww, wh, g.time, g.game.settings.visualQuality, WorldClock.isNight(g.p.minute));

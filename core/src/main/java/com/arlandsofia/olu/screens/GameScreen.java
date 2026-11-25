@@ -184,7 +184,8 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         if (size == null) {
             Texture normal = game.assets.tex(pr.def.image);
             Texture alternate = pr.alt == null ? normal : game.assets.tex(pr.alt.image);
-            size = new float[]{normal.getWidth(), normal.getHeight(), alternate.getWidth(), alternate.getHeight()};
+            float sa = pr.alt == null ? pr.def.scale : pr.alt.scale;
+            size = new float[]{normal.getWidth() * pr.def.scale, normal.getHeight() * pr.def.scale, alternate.getWidth() * sa, alternate.getHeight() * sa};
             propMetrics.put(pr, size);
         }
         boolean alternate = pr.alt != null && pr.altFlag != null && p.hasFlag(pr.altFlag);
@@ -316,6 +317,7 @@ public final class GameScreen extends BaseScreen implements ActionRunner.Present
         MapDb.Area a = game.maps.area(id);
         if (a == null) a = game.maps.area(Routes.room(p.route));
         if (area != null && !area.image.equals(a.image)) game.assets.unloadMap(area.image);
+        if (area != null && area != a) for (MapDb.Tile tl : area.tiles) game.assets.unloadMap(tl.image); // v6 HD ground pieces
         if (area != a) propMetrics.clear();
         area = a;
         if (announce) game.audio.sfx("door_open", .45f);

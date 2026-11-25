@@ -29,10 +29,22 @@ public final class MapDb {
 
     public static final class PropDef {
         public final String id, image, layer; public final float cw, ch;
+        /** v6: world units per texture pixel (0.5 for HD art drawn at twice the density). */
+        public final float scale;
         PropDef(String id, Map<String, Object> m) {
             this.id = id; image = Json.str(m, "image", ""); layer = Json.str(m, "layer", "sort");
             cw = Json.num(m, "cw", 0); ch = Json.num(m, "ch", 0);
+            scale = Json.num(m, "scale", Assets_hd(image) ? 0.5f : 1f);
         }
+    }
+
+    /** v6 HD convention: images named *@2x.png hold two texels per world unit. */
+    public static boolean Assets_hd(String path) { return path != null && path.contains("@2x"); }
+
+    /** v6: a piece of an HD ground image (large maps are split to stay under 4096 px). */
+    public static final class Tile {
+        public final String image; public final float x, y, w, h;
+        Tile(Map<String, Object> m) { image = Json.str(m, "image", ""); x = Json.num(m, "x", 0); y = Json.num(m, "y", 0); w = Json.num(m, "w", 0); h = Json.num(m, "h", 0); }
     }
 
     public static final class Prop {
@@ -145,6 +157,8 @@ public final class MapDb {
         public final List<Map<String, Object>> animals = new ArrayList<>();
         public final List<Examine> examine = new ArrayList<>();
         public final List<Terrace> terraces = new ArrayList<>();
+        /** v6: HD ground tiles in map coordinates (y down); empty = draw {@link #image} over the whole area. */
+        public final List<Tile> tiles = new ArrayList<>();
         Area(String id, Map<String, Object> m, Map<String, PropDef> defs) {
             this.id = id; name = Json.str(m, "name", id); image = Json.str(m, "image", ""); music = Json.str(m, "music", "town");
             ambient = Json.str(m, "ambient", null);
@@ -180,6 +194,7 @@ public final class MapDb {
             animals.addAll(Json.objList(m, "animals"));
             for (Map<String, Object> e : Json.objList(m, "examine")) examine.add(new Examine(e));
             for (Map<String, Object> v : Json.objList(m, "elevationPlatforms")) terraces.add(new Terrace(v));
+            for (Map<String, Object> v : Json.objList(m, "tiles")) tiles.add(new Tile(v));
             for (Prop p : props) if (p.def.cw > 0 && p.def.ch > 0) walls.add(new float[]{p.x - p.def.cw / 2, p.y - p.def.ch, p.def.cw, p.def.ch});
         }
 

@@ -43,7 +43,7 @@ public final class LogicSelfTest {
     static final List<String> log = new ArrayList<>();
 
 
-    /** v5.0: traverse all 21 physical staircases in the real map collision data. */
+    /** v5.0 elevation checks; v6 removed every stair platform, so this now asserts there are none. */
     static void testV50Elevations(File assets, StoryDb story, QuestDb quests, MapDb maps) {
         int count=0;
         String[] tracks={"v50_plaza_ascent","v50_rain_reflections","v50_starlit_steps","v50_tomorrow_horizon","v50_cafe_highlight"};
@@ -93,7 +93,7 @@ public final class LogicSelfTest {
                 check(story.scene("V50-VIEW-"+area.id.toUpperCase(java.util.Locale.ROOT)+"-"+route.toUpperCase(java.util.Locale.ROOT))!=null,
                       "POV-specific panorama dialogue "+route+" "+area.id);
         }
-        check(count==21,"21 terraced maps, not only stair drawings");
+        check(count==0,"v6: the pasted-on stair platforms were removed at the player's request");
         log.add("V5.0: "+count+" physical staircases climb/descent, wall blocking, collision, music assets and 42 POV view scenes OK");
     }
 
