@@ -23,6 +23,8 @@ var hud: Hud
 var controls: TouchControls
 var pause: PauseMenu
 var minigame: MinigameOverlay
+var puzzle: PuzzleOverlay
+var shop: ShopOverlay
 var _clock_acc := 0.0
 var _prompt: PanelContainer
 var _prompt_label: Label
@@ -104,6 +106,11 @@ func _build_ui() -> void:
 	dialog.choice_made.connect(_on_choice)
 	minigame = MinigameOverlay.new()
 	root.add_child(minigame)
+	puzzle = PuzzleOverlay.new()
+	root.add_child(puzzle)
+	shop = ShopOverlay.new()
+	shop.engine = engine
+	root.add_child(shop)
 	# fade + chapter card on top
 	_fade = ColorRect.new(); _fade.color = Color(0.03, 0.02, 0.06, 0); _fade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -137,7 +144,7 @@ func resume_game() -> void:
 # ------------------------------------------------------------------ frame
 func _process(delta: float) -> void:
 	_time += delta
-	var busy := dialog.active or minigame.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
+	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
 	world.locked = busy
 	world.input_vec = controls.vec if not busy else Vector2.ZERO
 	world.sprint_held = controls.sprint
@@ -452,9 +459,13 @@ func play_lines(lines: Array, _name, done: Callable) -> void:
 	dialog.start(lines, null, p.route, done)
 
 
-func open_puzzle(_id: String, done: Callable) -> void:
-	toast("Puzzle hadir di fase berikutnya port Godot")   # TODO(phase 3): PuzzleOverlay
-	done.call(true)
+func open_puzzle(id: String, done: Callable) -> void:
+	var pz: Dictionary = Data.quests.get("puzzles", {}).get(id, {})
+	if pz.is_empty():
+		done.call(true)
+		return
+	controls.reset()
+	puzzle.open(pz, p.route, p.has_flag(str(pz.get("hintFlag", {}).get(p.route, ""))), done)
 
 
 func open_minigame(id: String, done: Callable) -> void:
@@ -463,9 +474,9 @@ func open_minigame(id: String, done: Callable) -> void:
 	minigame.open(id, mg, p.route, done)
 
 
-func open_shop(_id: String, done: Callable) -> void:
-	toast("Toko hadir di fase berikutnya port Godot")     # TODO(phase 3)
-	done.call()
+func open_shop(id: String, done: Callable) -> void:
+	controls.reset()
+	shop.open(id, done, func(): save_now())
 
 
 func warp(area_id: String, x: float, y: float, facing: String, done: Callable) -> void:

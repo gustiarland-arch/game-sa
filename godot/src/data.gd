@@ -84,9 +84,16 @@ func portrait(character: String, emo: String) -> Texture2D:
 	return t
 
 
+## Textures stay cached for the whole run. Load them before they are first drawn: a texture first
+## loaded inside _draw renders as a white box on the GL compatibility renderer.
+var _tex := {}
 func tex(path: String) -> Texture2D:
+	if _tex.has(path):
+		return _tex[path]
 	var p := "res://assets/" + path
-	return load(p) if ResourceLoader.exists(p) else null
+	var t: Texture2D = load(p) if ResourceLoader.exists(p) else null
+	_tex[path] = t
+	return t
 
 
 func _json(path: String) -> Dictionary:

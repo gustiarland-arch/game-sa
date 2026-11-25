@@ -85,6 +85,26 @@ func _process(_delta: float) -> void:
 		return
 	if _mode == "minigame":
 		var ov := game.minigame
+		if _args[0].begins_with("puzzle:") or _args[0].begins_with("shop:"):
+			var id: String = _args[0].get_slice(":", 1)
+			match _frame:
+				20:
+					if _args[0].begins_with("shop:"):
+						game.p.coins = 30
+						game.open_shop(id, func(): print("SHOP CLOSED"))
+					else:
+						game.p.add_flag("C01_HINT_" + _args[1].to_upper())
+						game.open_puzzle(id, func(ok): print("PUZZLE ", ok))
+				60: await _save(_args[2] + "_a.png")
+				61:
+					if game.shop.visible:
+						game.shop._buy[0].pressed.emit()
+					else:
+						var sy: Array = game.puzzle._pz.symbols
+						var o: Array = game.puzzle._order
+						game.puzzle._press(o[1]); game.puzzle._press(o[2]); game.puzzle._press(o[0])
+				100: await _save(_args[2] + "_b.png"); get_tree().quit()
+			return
 		match _frame:
 			20: game.open_minigame(_args[0], func(sc): print("MINIGAME SCORE ", sc))
 			70: await _save(_args[2] + "_main.png")

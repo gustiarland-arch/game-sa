@@ -69,3 +69,27 @@ static func button(text: String, size := 22, accent := false) -> Button:
 	b.add_theme_stylebox_override("pressed", pr)
 	b.add_theme_stylebox_override("focus", f)
 	return b
+
+
+## Draws text whose top edge is at y (y-down), wrapping when width > 0.
+static func draw_text(ci: CanvasItem, s: String, x: float, y: float, size: int, c: Color, align := "left", width := 0.0, kind := "body") -> void:
+	var f := font(kind)
+	var ha := HORIZONTAL_ALIGNMENT_LEFT
+	if align == "center":
+		ha = HORIZONTAL_ALIGNMENT_CENTER
+	elif align == "right":
+		ha = HORIZONTAL_ALIGNMENT_RIGHT
+	var base := y + f.get_ascent(size) * 0.82 + size * 0.1
+	if width > 0:
+		ci.draw_multiline_string(f, Vector2(x, base), s, ha, width, size, -1, c)
+	else:
+		ci.draw_string(f, Vector2(x, base), s, ha, -1.0, size, c)
+
+
+## Loads a texture outside _draw (a texture first loaded during _draw renders white on GL compatibility).
+static func icon_button(text: String, tex: Texture2D, size := 22) -> Button:
+	var b := button(text, size)
+	b.icon = tex
+	b.expand_icon = true
+	b.add_theme_constant_override("icon_max_width", 48)
+	return b

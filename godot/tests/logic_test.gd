@@ -125,5 +125,17 @@ func _ready() -> void:
 	var bq := Games.create("bouquet"); bq.init({}, "sofia")
 	bq.chosen = bq.pattern.duplicate(); bq.submit()
 	ok(bq.finished and bq.score == 4, "buket cocok")
+	# 10. puzzle: wrong resets, hint after 2 fails, right order solves
+	var po := PuzzleOverlay.new()
+	add_child(po)
+	var solved := []
+	po.open(Data.quests.puzzles.C01_SYMBOLS, "sofia", true, func(ok): solved.append(ok))
+	ok(po.input("BUNGA") == "WRONG" and po.input("BUKU") == "WRONG" and po.hint_visible(), "puzzle: salah 2x memunculkan petunjuk")
+	ok(po.input("BINTANG") == "CORRECT" and po.input("BUKU") == "CORRECT" and po.input("BUNGA") == "SOLVED", "puzzle: urutan route Sofia benar")
+	# 11. shop purchase through the engine
+	var se := QuestEngine.new(Progress.new_game("arland", 3, Data.first_step, Data.area("arland_room")), true)
+	se.p.coins = 15
+	ok(se.purchase("senja", "kopi_senja").begins_with("Membeli") and se.p.coins == 3 and se.p.has_item("kopi_senja"), "toko: beli kopi")
+	ok(se.purchase("senja", "kukis_madu").begins_with("Koin belum cukup") and se.purchase("senja", "kopi_senja").begins_with("Barang ini sudah"), "toko: koin kurang / sudah dimiliki")
 	print("%s: %d pemeriksaan, %d gagal" % ["SEMUA LULUS" if fails == 0 else "ADA YANG GAGAL", checks, fails])
 	get_tree().quit(1 if fails > 0 else 0)
