@@ -140,8 +140,8 @@ public final class DeskVideo extends OluGame {
             {"hutan_air_terjun", "arland", "hutan_bisik", "1700", "330", "960", "13", "1830:250;1820:520;1840:800"},
             {"dermaga", "arland", "dermaga", "200", "440", "1080", "15", "700:470;979:380;979:300"},
         };
-        if (a.length > 4 && "tour".equals(a[3])) {
-            STILLS = true; GOLDEN = true;
+        if (a.length > 4 && ("tour".equals(a[3]) || "video".equals(a[3]))) {
+            STILLS = !"video".equals(a[3]); GOLDEN = STILLS; // "video": same segment file, encoded to video.mp4
             try {
                 java.util.List<String[]> rows = new java.util.ArrayList<>();
                 for (String ln : java.nio.file.Files.readAllLines(java.nio.file.Paths.get(a[4]))) if (!ln.isBlank()) rows.add(ln.split("\\|", -1));
