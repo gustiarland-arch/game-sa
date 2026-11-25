@@ -255,7 +255,7 @@ func deliver(address: String) -> String:
 	return "Surat terkirim, tetapi upah belum bisa diproses."
 
 
-# ------------------------------------------------------------ romance (rules only; menus come in phase 3)
+# ------------------------------------------------------------ romance (gifts, dates, moments, couple actions, games)
 func romance_ready() -> bool:
 	return not replay and p.companion and Data.chapter_index(chapter()) >= Data.chapter_index("C02") and Data.chapter_index(chapter()) >= 0
 
@@ -305,6 +305,203 @@ func complete_romance_game(id: String, at_area: String, score: int) -> String:
 	p.add_flag("ROM_GAME_" + id.to_upper() + "_ONCE")
 	_add_affection(int(g.get("affection", 0)))
 	return "Kenangan baru! +%d kedekatan." % int(g.get("affection", 0))
+
+
+func _rom(kind: String, id: String, key := "id") -> Dictionary:
+	for e in Data.quests.get("romance", {}).get(kind, []):
+		if str(e.get(key, "")) == id:
+			return e
+	return {}
+
+
+func _rom_hours(e: Dictionary) -> Vector2i:
+	var h: Array = e.get("hours", [])
+	return Vector2i(WorldClock.parse(h[0], 0) if h.size() > 0 else 0, WorldClock.parse(h[1], 26 * 60) if h.size() > 1 else 26 * 60)
+
+
+func _scene_for(e: Dictionary):
+	var sc = e.get("scene", {})
+	return sc.get(p.route) if sc is Dictionary else null
+
+
+## Gifts: the item is only consumed after every check passed.
+func give_gift(item_id: String) -> String:
+	var g := _rom("gifts", item_id, "item")
+	if not romance_ready():
+		return "Ajak pasangan menemanimu setelah Chapter 2."
+	if g.is_empty() or int(g.get("affection", 0)) <= 0:
+		return "Barang ini tidak bisa dijadikan hadiah."
+	if p.last_gift_day == p.day:
+		return "Kamu sudah memberi hadiah hari ini. Coba besok."
+	if not p.has_item(item_id):
+		return "Belum punya barang tersebut. Beli di toko dulu."
+	p.items.erase(item_id)
+	p.last_gift_day = p.day
+	_add_affection(int(g.affection))
+	p.add_flag("ROM_GIFT_ONCE")
+	return "Hadiah diberikan! +%d kedekatan." % int(g.affection)
+
+
+func date_block(id: String, at_area: String) -> String:
+	var d := _rom("dates", id)
+	if d.is_empty():
+		return "Kencan tidak tersedia."
+	if not romance_ready():
+		return "Ajak pasangan menemanimu setelah Chapter 2."
+	if str(d.get("area", "")) != at_area:
+		return "Datang dahulu ke %s." % str(d.get("area", "")).replace("_", " ")
+	var hr := _rom_hours(d)
+	if p.minute < hr.x or p.minute >= hr.y:
+		return "Belum masuk jam kencan."
+	if p.last_date_day == p.day:
+		return "Hari ini sudah berkencan. Kembali besok."
+	if int(d.get("cost", 0)) < 0 or int(d.get("affection", 0)) <= 0:
+		return "Data kencan tidak valid."
+	if p.coins < int(d.get("cost", 0)):
+		return "Koin tidak cukup. Butuh %d koin." % int(d.cost)
+	return ""
+
+
+func start_date(id: String, at_area: String) -> String:
+	var blocked := date_block(id, at_area)
+	if blocked != "":
+		return blocked
+	var d := _rom("dates", id)
+	p.coins -= int(d.cost)
+	p.last_date_day = p.day
+	p.date_counts[id] = mini(100000, int(p.date_counts.get(id, 0)) + 1)
+	_add_affection(int(d.affection))
+	p.add_flag("ROM_DATE_%s_ONCE" % id.to_upper())
+	return "Kencan dimulai! -%d koin, +%d kedekatan." % [int(d.cost), int(d.affection)]
+
+
+func moment_block(id: String, at_area: String) -> String:
+	var m := _rom("moments", id)
+	if m.is_empty():
+		return "Momen tidak ditemukan."
+	if not romance_ready():
+		return "Ajak pasangan menemanimu setelah Chapter 2."
+	if str(m.get("area", "")) != at_area:
+		return "Temui pasangan di %s." % str(m.get("area", "")).replace("_", " ")
+	if p.last_moment_day == p.day:
+		return "Sudah punya momen berdua hari ini. Coba besok."
+	if p.affection < int(m.get("minAffection", 0)):
+		return "Butuh kedekatan %d hati." % int(m.minAffection)
+	var hr := _rom_hours(m)
+	if p.minute < hr.x or p.minute >= hr.y:
+		return "Momen ini hanya tersedia pada jam tertentu."
+	var w: Array = m.get("weather", [])
+	if not w.is_empty() and not w.has(weather_now()):
+		return "Tunggu cuaca yang cocok."
+	var aff := int(m.get("affection", 0))
+	if aff <= 0 or aff > 20 or _scene_for(m) == null:
+		return "Data momen tidak valid."
+	return ""
+
+
+func start_moment(id: String, at_area: String) -> String:
+	var blocked := moment_block(id, at_area)
+	if blocked != "":
+		return blocked
+	var m := _rom("moments", id)
+	p.last_moment_day = p.day
+	p.moment_counts[id] = mini(100000, int(p.moment_counts.get(id, 0)) + 1)
+	p.add_flag("ROM_MOM_%s_ONCE" % id.to_upper())
+	_add_affection(int(m.affection))
+	return "Momen berdua! +%d kedekatan." % int(m.affection)
+
+
+func couple_action_block(id: String, at_area: String) -> String:
+	var a := _rom("coupleActions", id)
+	if a.is_empty():
+		return "Aksi berdua tidak dikenal."
+	if not romance_ready():
+		return "Ajak pasangan menemanimu setelah Chapter 2."
+	if id == "gandengan" and p.holding_hands:
+		return ""
+	var areas: Array = a.get("areas", [])
+	if not areas.is_empty() and not areas.has(at_area):
+		return "Kunjungi lokasi yang cocok untuk aksi ini."
+	if p.affection < int(a.get("minAffection", 0)):
+		return "Butuh kedekatan %d hati." % int(a.minAffection)
+	var hr := _rom_hours(a)
+	if p.minute < hr.x or p.minute >= hr.y:
+		return "Belum masuk jam aktivitas."
+	var w: Array = a.get("weather", [])
+	if not w.is_empty() and not w.has(weather_now()):
+		return "Tunggu cuaca yang cocok."
+	if id != "gandengan" and int(p.couple_action_days.get(id, -1)) == p.day:
+		return "Bonus aksi ini sudah diambil hari ini. Coba besok."
+	var aff := int(a.get("affection", 0))
+	if aff < 0 or aff > 10 or _scene_for(a) == null:
+		return "Data aksi tidak valid."
+	return ""
+
+
+func start_couple_action(id: String, at_area: String) -> String:
+	var blocked := couple_action_block(id, at_area)
+	if blocked != "":
+		return blocked
+	if id == "gandengan" and p.holding_hands:
+		p.holding_hands = false
+		return "Berhenti bergandengan."
+	var a := _rom("coupleActions", id)
+	if id == "gandengan" and int(p.couple_action_days.get(id, -1)) == p.day:
+		p.holding_hands = true
+		return "Bergandengan lagi."
+	p.couple_action_days[id] = p.day
+	p.couple_action_counts[id] = mini(100000, int(p.couple_action_counts.get(id, 0)) + 1)
+	p.add_flag("ROM_ACT_%s_ONCE" % id.to_upper())
+	if id == "gandengan":
+		p.holding_hands = true
+	_add_affection(int(a.affection))
+	return "Aksi berdua! +%d kedekatan." % int(a.affection)
+
+
+func _bond_scenes(acts: Array) -> void:
+	for level in [20, 50, 80]:
+		var key := "ROM_BOND_%d" % level
+		if not p.has_flag(key) or p.has_flag(key + "_SCENE"):
+			continue
+		acts.append({"do": "scene", "id": "RM-BOND-%d@%s" % [level, p.route]})
+		acts.append({"do": "flag", "id": key + "_SCENE"})
+
+
+func couple_action_actions(id: String) -> Array:
+	var a := _rom("coupleActions", id)
+	if a.is_empty() or _scene_for(a) == null:
+		return []
+	var cmds := [{"c": "bars", "on": true, "t": 0.35}, {"c": "cam", "on": "player", "zoom": 1.35, "t": 0.6},
+		{"c": "pair", "kind": str(a.get("gesture", "highfive")), "t": 2.1, "block": true},
+		{"c": "fx", "kind": "hearts", "on": "player", "t": 1.5}, {"c": "bars", "on": false, "t": 0.45}]
+	var acts := [{"do": "cine", "cmds": cmds}, {"do": "scene", "id": _scene_for(a)}]
+	_bond_scenes(acts)
+	return acts
+
+
+func _romance_scene_actions(scene: String, with_cine: bool) -> Array:
+	var acts := []
+	if with_cine:
+		acts.append({"do": "cine", "cmds": [{"c": "face", "who": "player", "at": "partner"}, {"c": "fx", "kind": "hearts", "t": 1.2, "block": true}]})
+	acts.append({"do": "emote", "who": "partner", "e": "heart"})
+	acts.append({"do": "scene", "id": scene})
+	_bond_scenes(acts)
+	return acts
+
+
+func gift_actions(item: String) -> Array:
+	var g := _rom("gifts", item, "item")
+	return [] if g.is_empty() else _romance_scene_actions(Routes.resolve(str(g.get("scene", "")) + "@$ROUTE", p.route), false)
+
+
+func date_actions(id: String) -> Array:
+	var d := _rom("dates", id)
+	return [] if d.is_empty() or _scene_for(d) == null else _romance_scene_actions(_scene_for(d), true)
+
+
+func moment_actions(id: String) -> Array:
+	var m := _rom("moments", id)
+	return [] if m.is_empty() or _scene_for(m) == null else _romance_scene_actions(_scene_for(m), true)
 
 
 # ------------------------------------------------------------ step view

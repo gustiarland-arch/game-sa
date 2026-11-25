@@ -152,5 +152,20 @@ func _ready() -> void:
 		and mbk.entry_state({"route": "arland", "unlock": "NOPE"}) == "LOCKED"
 		and mbk.entry_state({"route": "sofia", "unlock": "NOPE"}) == "LOCKED", "memory book: terbuka / sisi lain / terkunci")
 	mbk.free()
+	# 13. romance rules
+	var rp := Progress.new_game("sofia", 3, Data.first_step, Data.area("sofia_room"))
+	for st in Data.steps:
+		if str(Data.step(st).get("chapter", "")) == "C02":
+			rp.step = st
+			break
+	rp.companion = true; rp.coins = 40; rp.minute = 9 * 60; rp.items.append("kopi_senja")
+	var re := QuestEngine.new(rp, false)
+	ok(re.romance_ready(), "romansa siap di Chapter 2 bersama pasangan")
+	ok(re.give_gift("kopi_senja").begins_with("Hadiah diberikan!") and not rp.has_item("kopi_senja") and rp.affection == 4, "hadiah: item dipakai, +4 kedekatan")
+	ok(re.give_gift("kopi_senja").begins_with("Kamu sudah memberi"), "hadiah: satu per hari")
+	ok(re.date_block("taman", "plaza").begins_with("Datang dahulu") and re.start_date("taman", "taman_kota").begins_with("Kencan dimulai!") and rp.coins == 32, "kencan: lokasi dicek, koin dipotong")
+	ok(re.start_couple_action("gandengan", "plaza").begins_with("Aksi berdua!") and rp.holding_hands
+		and re.start_couple_action("gandengan", "plaza") == "Berhenti bergandengan." and re.start_couple_action("gandengan", "plaza") == "Bergandengan lagi.", "gandengan: aktif / lepas / lagi tanpa bonus ganda")
+	ok(re.couple_action_actions("pelukan").size() >= 2 and re.date_actions("taman").size() >= 3, "aksi romansa menghasilkan cutscene + scene")
 	print("%s: %d pemeriksaan, %d gagal" % ["SEMUA LULUS" if fails == 0 else "ADA YANG GAGAL", checks, fails])
 	get_tree().quit(1 if fails > 0 else 0)

@@ -88,6 +88,35 @@ func _process(_delta: float) -> void:
 		return
 	if _mode == "minigame":
 		var ov := game.minigame
+		if _args[0].begins_with("romance:"):
+			var tabs := ["gift", "date", "moment", "couple", "game"]
+			match _frame:
+				20:
+					var p := game.p
+					p.step = "C02_START" if Data.steps.has("C02_START") else p.step
+					for st in Data.steps:
+						if Data.step(st).get("chapter") == "C02":
+							p.step = st
+							break
+					p.companion = true; p.coins = 40; p.affection = 22; p.minute = 9 * 60
+					p.items.append_array(["kopi_senja", "tulip_kecil"])
+					game.romance.open("taman_kota", func(acts, msg): print("ROMANCE ", msg, " acts=", acts.size()); game.world.partner_mode = 2; game.world.place_partner_beside(); game.runner.run(acts))
+			if _frame >= 40 and _frame % 20 == 0 and _frame <= 120:
+				var i := (_frame - 40) / 20
+				await _save("%s_%s.png" % [_args[2], tabs[i]])
+				if i < 4:
+					game.romance.tab = tabs[i + 1]; game.romance._rebuild()
+			if _frame == 140:
+				await _save("%s_game.png" % _args[2])
+				game.romance.tab = "date"; game.romance._rebuild()
+			if _frame == 150:
+				game.romance._choices[0].pressed.emit()
+			if _frame == 200 or _frame == 320:
+				await _save("%s_kencan_%d.png" % [_args[2], _frame])
+				print("DIALOG ", game.dialog.active, " CINE ", game.cine.active, " RUNNER ", game.runner.busy())
+			if _frame == 320:
+				get_tree().quit()
+			return
 		if _args[0].begins_with("book:"):
 			match _frame:
 				20:

@@ -27,6 +27,7 @@ var minigame: MinigameOverlay
 var puzzle: PuzzleOverlay
 var shop: ShopOverlay
 var book: MemoryBook
+var romance: RomanceOverlay
 var _clock_acc := 0.0
 var _prompt: PanelContainer
 var _prompt_label: Label
@@ -114,6 +115,9 @@ func _build_ui() -> void:
 	shop = ShopOverlay.new()
 	shop.engine = engine
 	root.add_child(shop)
+	romance = RomanceOverlay.new()
+	romance.engine = engine
+	root.add_child(romance)
 	book = MemoryBook.new()
 	root.add_child(book)
 	book.replay_requested.connect(func(ch: String):
@@ -160,7 +164,7 @@ func resume_game() -> void:
 # ------------------------------------------------------------------ frame
 func _process(delta: float) -> void:
 	_time += delta
-	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or book.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
+	var busy := dialog.active or minigame.visible or puzzle.visible or shop.visible or book.visible or romance.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
 	world.locked = busy
 	world.input_vec = controls.vec if not busy else Vector2.ZERO
 	world.sprint_held = controls.sprint
@@ -228,6 +232,19 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_E):
 		interact()
 		get_viewport().set_input_as_handled()
+
+
+func open_romance() -> void:
+	var pl := world.player
+	pl.face_to(world.partner); world.partner.face_to(pl)
+	controls.reset()
+	romance.open(p.area, func(acts: Array, msg: String):
+		save_now()
+		toast(msg)
+		if msg.begins_with("Hadiah"): sfx("gift", 0.7)
+		elif msg.begins_with("Kencan"): sfx("heart", 0.7)
+		elif msg.begins_with("Aksi berdua"): sfx("hug", 0.6)
+		runner.run(acts))
 
 
 func open_book() -> void:
@@ -398,6 +415,9 @@ func _find_target() -> void:
 		if not t.is_empty():
 			_target = {"kind": "talk", "data": t, "label": "Ngobrol dengan " + Routes.display(world.partner.character)}
 			return
+		if engine.romance_ready():
+			_target = {"kind": "romance", "label": "Waktu berdua dengan " + Routes.display(world.partner.character)}
+			return
 	best = INF
 	for e in engine.examine(world.area):
 		var d := _d(float(e.get("x", 0)), float(e.get("y", 0)))
@@ -427,6 +447,8 @@ func interact() -> void:
 		"talk":
 			pl.face_to(world.partner); world.partner.face_to(pl)
 			runner.run(engine.talk_actions(_target.data))
+		"romance":
+			open_romance()
 		"examine":
 			var e: Dictionary = _target.data
 			pl.face(float(e.get("x", 0)) - pl.position.x, float(e.get("y", 0)) - pl.position.y)
