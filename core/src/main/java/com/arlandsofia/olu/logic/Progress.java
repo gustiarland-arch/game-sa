@@ -86,7 +86,7 @@ public final class Progress {
     public Map<String, Object> toMap(boolean withSnapshots) {
         Map<String, Object> m = new LinkedHashMap<>();
         m.put("schema", SCHEMA);
-        m.put("mapLayoutVersion", MapLayoutV4.VERSION);
+        m.put("mapLayoutVersion", MapLayoutV54.VERSION);
         m.put("route", route);
         m.put("slot", slot);
         m.put("step", step);
@@ -143,6 +143,11 @@ public final class Progress {
         // the user's inventory or quest state; only move the player position.
         if (Json.num(m, "mapLayoutVersion", 0) < MapLayoutV4.VERSION) {
             float[] mapped = MapLayoutV4.fromLegacy(p.area, p.x, p.y);
+            p.x = mapped[0]; p.y = mapped[1];
+        }
+        // v5.4: four interiors were rescaled by 0.5; move only the saved position.
+        if (Json.num(m, "mapLayoutVersion", 0) < MapLayoutV54.VERSION) {
+            float[] mapped = MapLayoutV54.fromV4(p.area, p.x, p.y);
             p.x = mapped[0]; p.y = mapped[1];
         }
         p.dir = Json.str(m, "dir", "down");

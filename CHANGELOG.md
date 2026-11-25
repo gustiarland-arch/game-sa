@@ -1,3 +1,41 @@
+## 5.4.0 — Cuaca & Air (25 November 2026)
+
+- **Air mengalir:** arus permukaan di Tepi Danau (14 px/s) dan Dermaga Danau (7 px/s), sungai
+  Hutan Bisik mengikuti alur yang dilukis di peta (`waterFlow` di `maps.json`, `WorldFx.drawFlowV54`/
+  `drawRiverV54`). Air mancur plaza dan air terjun hutan kini bergerak: tetesan jatuh dengan
+  gravitasi, kilau yang mengalir, percikan di kolam dan kabut di kaki air terjun.
+- **Petir:** saat hujan di luar ruangan, kilat lembut tiap 9–22 detik dan guntur menyusul 0,35–2,25
+  detik kemudian (makin dekat makin keras). Maksimal dua denyut per sambaran dan alpha 0,24, jadi
+  tidak pernah lebih dari tiga kilatan per detik (WCAG 2.3.1). Tidak ada petir di dalam ruangan,
+  Memory Realm, Taman Hujan, atau saat kamera cutscene aktif.
+- **Genangan:** 3–16 genangan per map luar ruangan, tidak pernah di collider, air, teras, atau tangga.
+  Muncul bertahap saat hujan (±45 detik) dan mengering pelan (±2 menit), ada riak hujan dan pantulan
+  kilat. Melangkah di genangan memunculkan percikan dan suara `v54_step_puddle`.
+- Aset baru dibuat offline oleh `tools/gen_weather_fx_v54.py`: 3 tekstur genangan, `v54_thunder.wav`,
+  `v54_step_puddle.wav`.
+- Uji baru `tools/test_v54_weather.sh` (36.571 pemeriksaan): keamanan kilat, waktu guntur, genangan
+  di semua 21 map luar ruangan, data arus air, dan aset. Smoke `test_visual_fx.sh` memanggil semua
+  method baru.
+- `AudioManager.tap` (null di game) untuk rekaman/QA otomatis. Harness rekaman desktop di
+  `tools/capture_v54/`.
+- Save schema 8, dua route, canon ending, quest, collision, dan 29 map tidak diubah.
+
+## 5.4.0 — Interior scale rebalance (24 November 2026)
+
+- Empat interior handcrafted v4 (kamar Arland, kamar Sofia, dapur, ruang arsip) dilukis
+  ±2x lebih besar dari skala karakter: kursi bar setinggi orang, lemari 3x tinggi badan.
+  Seluruh ruang dunia keempat area diperkecil 0.5x secara seragam (`tools/room_scale_v54.py`):
+  gambar map, sprite furnitur khusus ruangan, tembok, pintu, prop, titik examine, interaksi quest,
+  posisi NPC, warp, kamera/gerak cutscene, dan pintu yang menuju ruangan tersebut.
+- Karakter, hitbox kaki, dan semua map lain tidak berubah. Radius interaksi diskalakan dengan
+  batas bawah 40 px. Delapan titik berdiri yang bergeser ke dalam furnitur karena hitbox kaki
+  tidak ikut mengecil digeser beberapa piksel ke titik legal terdekat.
+- Posisi kasur kini dibaca dari data map (`bed`), bukan konstanta di `GameScreen`.
+- Save lama: `mapLayoutVersion` 5 + `MapLayoutV54` memindahkan posisi pemain di keempat ruangan;
+  save schema 8, item, quest, dan pilihan tidak berubah.
+- Gambar asli disimpan di `art_source/v54_room_scale/`. Pratinjau statis sebelum/sesudah:
+  `docs/v54/room_scale_before_after/`.
+
 ## 5.4.0 — World Reborn, Fase 1–2 (24 November 2026)
 
 - **Tangga & elevasi (P0):** `ElevationV50.canStep` kini menerima seluruh lebar tangga yang

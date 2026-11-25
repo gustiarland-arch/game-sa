@@ -31,7 +31,7 @@ public final class SoundscapePlan {
         "door_close", "bell_shop", "coin", "gift", "heart", "hug", "selfie", "highfive",
         "quest_complete", "scene_transition", "notification", "splash", "bird_chirp",
         "cat_meow", "dog_bark", "duck_quack", "wind_gust", "rain_drop", "lantern",
-        "page_turn", "menu_confirm", "flower_pick", "paper_fold", "cinema_heartbeat", "cinema_whoosh", "photo_lantern_v468", "v469_pencil", "v470_paper_note", "v471_memory_chime", "v472_memory_glint", "v473_letter_fold", "v50_stair_foot", "v50_stair_enter", "v50_view_wind", "v50_memory_shimmer", "v50_panoramic_reveal"
+        "page_turn", "menu_confirm", "flower_pick", "paper_fold", "cinema_heartbeat", "cinema_whoosh", "photo_lantern_v468", "v469_pencil", "v470_paper_note", "v471_memory_chime", "v472_memory_glint", "v473_letter_fold", "v50_stair_foot", "v50_stair_enter", "v50_view_wind", "v50_memory_shimmer", "v50_panoramic_reveal", "v54_thunder", "v54_step_puddle"
     };
     public static boolean contains(String[] array, String id) {
         if (id == null) return false;

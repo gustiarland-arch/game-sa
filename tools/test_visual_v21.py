@@ -4,16 +4,8 @@ from pathlib import Path
 import json, sys
 root=Path(sys.argv[1] if len(sys.argv)>1 else 'android/assets')
 checks=0
-for asset,wh in [('ui/v21_skyline.png',(1280,720)),('ui/v21_foreground.png',(1280,720)),
- ('ui/v21_dialog_ribbon.png',(512,128)),('ui/v21_bloom.png',(256,256))]:
- im=Image.open(root/asset).convert('RGBA'); assert im.size==wh,(asset,im.size)
- assert im.getbbox() is not None,asset
- checks+=1
-for asset in ['panel','panel_dark','button','button_down','button_accent','button_disabled']:
- im=Image.open(root/'ui'/f'{asset}_v21.png').convert('RGBA')
- assert im.size==(48,48),asset
- assert im.getpixel((0,0))[3]==0,asset
- checks+=1
+# v6: the v2.1 UI textures (v21_*, *_v21 buttons/panels) were never loaded by the game
+# (Assets uses ui/v32_*) and were removed in the v6 asset audit; see docs/v6/deleted_assets.txt.
 actors=[]
 for source in sorted((root/'characters').glob('*/walk.png')):
  im=Image.open(source).convert('RGBA')

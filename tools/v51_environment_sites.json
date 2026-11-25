@@ -1,14 +1,14 @@
 {
   "plaza": {
-    "x": 765,
-    "y": 450,
+    "x": 780,
+    "y": 342,
     "w": 168,
     "h": 92,
     "stair": 78,
     "rise": 26,
     "stairWidth": 56,
     "style": "city",
-    "reason": "Plaza sisi utara — pelataran panggung menghadap lingkaran utama"
+    "reason": "Plaza v6: balkon taman belakang, tangga turun ke promenade di antara rumah Arland dan Sofia"
   },
   "jalan_kota": {
     "x": 545,
@@ -22,19 +22,19 @@
     "reason": "Beranda toko di sisi jalur pedestrian"
   },
   "taman_kota": {
-    "x": 1085,
-    "y": 355,
+    "x": 1356,
+    "y": 444,
     "w": 168,
     "h": 92,
     "stair": 78,
     "rise": 26,
     "stairWidth": 56,
     "style": "garden",
-    "reason": "Teras pemandang di luar lengkung jalan danau"
+    "reason": "Taman Kota v6: teras pemandang di utara danau, menghadap kolam koi dan jalan lingkar"
   },
   "riverside": {
-    "x": 1060,
-    "y": 490,
+    "x": 1325,
+    "y": 612,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -77,8 +77,8 @@
     "reason": "Panggung hadiah di depan deretan mesin"
   },
   "memory_garden": {
-    "x": 1005,
-    "y": 555,
+    "x": 1256,
+    "y": 694,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -88,8 +88,8 @@
     "reason": "Teras Memory Garden — ujung tangga menyentuh cabang jalur timur"
   },
   "lantern_field": {
-    "x": 845,
-    "y": 340,
+    "x": 1056,
+    "y": 425,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -99,8 +99,8 @@
     "reason": "Dek lentera menuju lingkaran cahaya"
   },
   "star_path": {
-    "x": 1155,
-    "y": 390,
+    "x": 1444,
+    "y": 488,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -110,8 +110,8 @@
     "reason": "Observatorium Star Path — pangkal tangga tepat pada jalur zig-zag bercahaya"
   },
   "starfall_village": {
-    "x": 985,
-    "y": 470,
+    "x": 1231,
+    "y": 588,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -121,8 +121,8 @@
     "reason": "Teras terhubung jalan utama desa"
   },
   "eternal_garden": {
-    "x": 915,
-    "y": 545,
+    "x": 1144,
+    "y": 681,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -154,8 +154,8 @@
     "reason": "Mezanin kecil di sisi rak buku"
   },
   "dermaga": {
-    "x": 895,
-    "y": 225,
+    "x": 1119,
+    "y": 281,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -165,8 +165,8 @@
     "reason": "Teras kayu dari jalan menuju tepi danau"
   },
   "hutan_bisik": {
-    "x": 1095,
-    "y": 765,
+    "x": 1369,
+    "y": 956,
     "w": 168,
     "h": 92,
     "stair": 78,
@@ -176,8 +176,8 @@
     "reason": "Panggung akar dekat persimpangan jalur hutan"
   },
   "bukit_bintang": {
-    "x": 995,
-    "y": 560,
+    "x": 1244,
+    "y": 700,
     "w": 168,
     "h": 92,
     "stair": 78,

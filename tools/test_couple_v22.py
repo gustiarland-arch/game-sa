@@ -42,7 +42,8 @@ for p in sorted((assets/'characters').glob('*/walk.png')):
 assert len(actors)>=25 and {'arland','sofia'}.issubset(actors)
 # Sync behavior must be implemented in the actual screen/cutscene, not only in JSON and UI.
 cu = (root/'core/src/main/java/com/arlandsofia/olu/game/CutscenePlayer.java').read_text()
-sc = (root/'core/src/main/java/com/arlandsofia/olu/screens/GameScreen.java').read_text()
+# v6 split GameScreen into collaborators (CompanionController, PlayerController, ...): scan the package.
+sc = ''.join(f.read_text() for f in sorted((root/'core/src/main/java/com/arlandsofia/olu/screens').glob('*.java')))
 assert 'case "pair":' in cu and 'pl.setPose(pp, dur); other.setPose(op, dur);' in cu
 assert 'p.holdingHands' in sc and 'area.blocked(tx, ty)' in sc
 checks += 4

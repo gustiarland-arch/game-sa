@@ -65,6 +65,7 @@ public final class Assets {
     public void warmArea(MapDb.Area area) {
         if (area == null) return;
         for (MapDb.Terrace terrace : area.terraces) { tex(terrace.image); tex(terrace.front); }
+        for (MapDb.Tile tile : area.tiles) tex(tile.image);
         for (MapDb.Prop prop : area.props) {
             tex(prop.def.image);
             if (prop.alt != null) tex(prop.alt.image);
@@ -78,8 +79,11 @@ public final class Assets {
         try {
             FileHandle fh = Gdx.files.internal(path);
             if (!fh.exists()) throw new IllegalStateException("tidak ada");
-            t = new Texture(fh);
-            t.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
+            boolean hd = MapDb_hd(path);
+            t = new Texture(fh, hd);
+            // v6: HD art is drawn below 1 screen pixel per texel on some screens -> smooth mipmapped sampling
+            if (hd) t.setFilter(Texture.TextureFilter.MipMapLinearLinear, Texture.TextureFilter.Linear);
+            else t.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
             owned.add(t);
         } catch (Exception e) {
             if (!missing.contains(path)) missing.add(path);
@@ -89,6 +93,8 @@ public final class Assets {
         textures.put(path, t);
         return t;
     }
+
+    private static boolean MapDb_hd(String path) { return com.arlandsofia.olu.logic.MapDb.Assets_hd(path); }
 
     private Texture fallbackTex;
     private Texture fallback() {
@@ -145,13 +151,20 @@ public final class Assets {
         return t;
     }
 
+    /** v6: an HD sheet (same layout, frames 2x larger) is used when "<name>@2x.png" exists. */
+    private static String hd(String path) {
+        String h = path.replace(".png", "@2x.png");
+        return Gdx.files.internal(h).exists() ? h : path;
+    }
+    private static int k(String path) { return path.contains("@2x") ? 2 : 1; }
+
     private void sheet(String c) {
-        Texture t = tex("characters/" + c + "/walk.png");
+        String sp = hd("characters/" + c + "/walk.png"); Texture t = tex(sp); int k = k(sp);
         TextureRegion[][] r = new TextureRegion[4][FRAMES];
-        boolean ok = t.getWidth() >= FRAME_W * FRAMES && t.getHeight() >= FRAME_H * 4;
+        boolean ok = t.getWidth() >= FRAME_W*k * FRAMES && t.getHeight() >= FRAME_H*k * 4;
         for (int d = 0; d < 4; d++)
             for (int f = 0; f < FRAMES; f++)
-                r[d][f] = ok ? new TextureRegion(t, f * FRAME_W, d * FRAME_H, FRAME_W, FRAME_H) : new TextureRegion(t);
+                r[d][f] = ok ? new TextureRegion(t, f * FRAME_W*k, d * FRAME_H*k, FRAME_W*k, FRAME_H*k) : new TextureRegion(t);
         sheets.put(c, r);
     }
 
@@ -172,13 +185,13 @@ public final class Assets {
             if (!Gdx.files.internal(path).exists()) path = "characters/" + character + "/walk_v32.png";
             if (!Gdx.files.internal(path).exists()) path = "characters/" + character + "/walk_plus.png";
             if (!Gdx.files.internal(path).exists()) return frame(character, dir, phase % FRAMES);
-            Texture t = tex(path);
-            int phases = t.getWidth() / FRAME_W;
-            if (phases < 3 || t.getHeight() < FRAME_H * 4)
+            path = hd(path); Texture t = tex(path); int k = k(path);
+            int phases = t.getWidth() / FRAME_W*k;
+            if (phases < 3 || t.getHeight() < FRAME_H*k * 4)
                 return frame(character, dir, phase % FRAMES);
             all = new TextureRegion[4][phases];
             for (int d = 0; d < 4; d++) for (int f = 0; f < phases; f++)
-                all[d][f] = new TextureRegion(t, f * FRAME_W, d * FRAME_H, FRAME_W, FRAME_H);
+                all[d][f] = new TextureRegion(t, f * FRAME_W*k, d * FRAME_H*k, FRAME_W*k, FRAME_H*k);
             walkPlusSheets.put(character, all);
         }
         return all[Math.max(0, Math.min(3, dir))][Math.floorMod(phase, all[0].length)];
@@ -197,12 +210,12 @@ public final class Assets {
             path="characters/"+character+(idle ? "/idle_8dir_v462.png" : "/walk_8dir_v462.png");
         TextureRegion[][] atlas=null;
         if (Gdx.files.internal(path).exists()) {
-            Texture t=tex(path);
-            int frames=t.getWidth()/FRAME_W;
-            if (frames >= (idle?8:16) && t.getHeight()>=FRAME_H*8) {
+            path=hd(path); Texture t=tex(path); int k=k(path);
+            int frames=t.getWidth()/FRAME_W*k;
+            if (frames >= (idle?8:16) && t.getHeight()>=FRAME_H*k*8) {
                 atlas=new TextureRegion[8][frames];
                 for(int d=0;d<8;d++) for(int i=0;i<frames;i++)
-                    atlas[d][i]=new TextureRegion(t,i*FRAME_W,d*FRAME_H,FRAME_W,FRAME_H);
+                    atlas[d][i]=new TextureRegion(t,i*FRAME_W*k,d*FRAME_H*k,FRAME_W*k,FRAME_H*k);
             }
         }
         cache.put(character,atlas);
@@ -228,12 +241,12 @@ public final class Assets {
             if (!Gdx.files.internal(path).exists()) path = "characters/" + character + "/idle_v37.png";
             if (!Gdx.files.internal(path).exists()) path = "characters/" + character + "/idle_v32.png";
             if (!Gdx.files.internal(path).exists()) return frame(character, dir, 0);
-            Texture t = tex(path);
-            int phases = t.getWidth() / FRAME_W;
-            if (phases < 6 || t.getHeight() < FRAME_H * 4) return frame(character, dir, 0);
+            path = hd(path); Texture t = tex(path); int k = k(path);
+            int phases = t.getWidth() / FRAME_W*k;
+            if (phases < 6 || t.getHeight() < FRAME_H*k * 4) return frame(character, dir, 0);
             all = new TextureRegion[4][phases];
             for (int d = 0; d < 4; d++) for (int f = 0; f < phases; f++)
-                all[d][f] = new TextureRegion(t, f * FRAME_W, d * FRAME_H, FRAME_W, FRAME_H);
+                all[d][f] = new TextureRegion(t, f * FRAME_W*k, d * FRAME_H*k, FRAME_W*k, FRAME_H*k);
             idleV32Sheets.put(character, all);
         }
         return all[Math.max(0, Math.min(3, dir))][Math.floorMod(phase, all[0].length)];
@@ -256,10 +269,10 @@ public final class Assets {
             String path = "characters/" + character + "/poses_v53.png";
             if (!Gdx.files.internal(path).exists()) path = "characters/" + character + "/poses.png";
             if (Gdx.files.internal(path).exists()) {
-                Texture t = tex(path);
-                int rows = t.getHeight() / FRAME_H;
+                path = hd(path); Texture t = tex(path); int k = k(path);
+                int rows = t.getHeight() / FRAME_H*k;
                 r = new TextureRegion[rows][8];
-                for (int i = 0; i < rows; i++) for (int c = 0; c < 8; c++) r[i][c] = new TextureRegion(t, c * FRAME_W, i * FRAME_H, FRAME_W, FRAME_H);
+                for (int i = 0; i < rows; i++) for (int c = 0; c < 8; c++) r[i][c] = new TextureRegion(t, c * FRAME_W*k, i * FRAME_H*k, FRAME_W*k, FRAME_H*k);
             }
             poseSheets.put(character, r);
         }

@@ -29,10 +29,22 @@ public final class MapDb {
 
     public static final class PropDef {
         public final String id, image, layer; public final float cw, ch;
+        /** v6: world units per texture pixel (0.5 for HD art drawn at twice the density). */
+        public final float scale;
         PropDef(String id, Map<String, Object> m) {
             this.id = id; image = Json.str(m, "image", ""); layer = Json.str(m, "layer", "sort");
             cw = Json.num(m, "cw", 0); ch = Json.num(m, "ch", 0);
+            scale = Json.num(m, "scale", Assets_hd(image) ? 0.5f : 1f);
         }
+    }
+
+    /** v6 HD convention: images named *@2x.png hold two texels per world unit. */
+    public static boolean Assets_hd(String path) { return path != null && path.contains("@2x"); }
+
+    /** v6: a piece of an HD ground image (large maps are split to stay under 4096 px). */
+    public static final class Tile {
+        public final String image; public final float x, y, w, h;
+        Tile(Map<String, Object> m) { image = Json.str(m, "image", ""); x = Json.num(m, "x", 0); y = Json.num(m, "y", 0); w = Json.num(m, "w", 0); h = Json.num(m, "h", 0); }
     }
 
     public static final class Prop {
@@ -128,8 +140,14 @@ public final class MapDb {
     public static final class Area {
         public final String id, name, image, music, ambient;
         public final List<float[]> water = new ArrayList<>();
+        /** v5.4 flowing water bands {x, y, w, h, dirX, speed} (y-down, cosmetic only). */
+        public final List<float[]> waterFlow = new ArrayList<>();
+        /** v5.4 rivers following a centre line: {width, speed, x0, y0, x1, y1, ...} (y-down, cosmetic). */
+        public final List<float[]> riverPaths = new ArrayList<>();
         public final boolean indoor;
         public final float w, h, spawnX, spawnY;
+        /** Bed spot for sleeping in the route's own room; NaN where the map has none. */
+        public final float bedX, bedY;
         public final List<float[]> walls = new ArrayList<>();
         public final List<float[]> ellipses = new ArrayList<>();
         public final List<Prop> props = new ArrayList<>();
@@ -139,15 +157,31 @@ public final class MapDb {
         public final List<Map<String, Object>> animals = new ArrayList<>();
         public final List<Examine> examine = new ArrayList<>();
         public final List<Terrace> terraces = new ArrayList<>();
+        /** v6: HD ground tiles in map coordinates (y down); empty = draw {@link #image} over the whole area. */
+        public final List<Tile> tiles = new ArrayList<>();
         Area(String id, Map<String, Object> m, Map<String, PropDef> defs) {
             this.id = id; name = Json.str(m, "name", id); image = Json.str(m, "image", ""); music = Json.str(m, "music", "town");
             ambient = Json.str(m, "ambient", null);
             indoor = Json.bool(m, "indoor", false);
             for (Map<String, Object> w : Json.objList(m, "water"))
                 water.add(new float[]{Json.num(w, "cx", 0), Json.num(w, "cy", 0), Json.num(w, "rx", 10), Json.num(w, "ry", 10)});
+            for (Map<String, Object> f : Json.objList(m, "waterFlow")) {
+                if (f.containsKey("path")) {
+                    List<Object> pts = Json.list(f, "path");
+                    float[] r = new float[2 + pts.size() * 2];
+                    r[0] = Math.max(4f, Json.num(f, "width", 40)); r[1] = Math.max(0f, Math.min(120f, Json.num(f, "speed", 30)));
+                    for (int i = 0; i < pts.size(); i++) { float[] xy = Json.floats(pts.get(i)); r[2 + i * 2] = xy[0]; r[3 + i * 2] = xy[1]; }
+                    if (pts.size() >= 2) riverPaths.add(r);
+                    continue;
+                }
+                waterFlow.add(new float[]{Json.num(f, "x", 0), Json.num(f, "y", 0), Json.num(f, "w", 0), Json.num(f, "h", 0),
+                        Json.num(f, "dx", 1) < 0 ? -1f : 1f, Math.max(0f, Math.min(80f, Json.num(f, "speed", 20)))});
+            }
             w = Json.num(m, "w", 960); h = Json.num(m, "h", 640);
             float[] sp = Json.floats(m.get("spawn"));
             spawnX = sp.length > 1 ? sp[0] : w / 2; spawnY = sp.length > 1 ? sp[1] : h / 2;
+            float[] bed = Json.floats(m.get("bed"));
+            bedX = bed.length > 1 ? bed[0] : Float.NaN; bedY = bed.length > 1 ? bed[1] : Float.NaN;
             for (Object o : Json.list(m, "walls")) walls.add(Json.floats(o));
             for (Object o : Json.list(m, "ellipses")) ellipses.add(Json.floats(o));
             for (Map<String, Object> p : Json.objList(m, "props")) {
@@ -160,6 +194,7 @@ public final class MapDb {
             animals.addAll(Json.objList(m, "animals"));
             for (Map<String, Object> e : Json.objList(m, "examine")) examine.add(new Examine(e));
             for (Map<String, Object> v : Json.objList(m, "elevationPlatforms")) terraces.add(new Terrace(v));
+            for (Map<String, Object> v : Json.objList(m, "tiles")) tiles.add(new Tile(v));
             for (Prop p : props) if (p.def.cw > 0 && p.def.ch > 0) walls.add(new float[]{p.x - p.def.cw / 2, p.y - p.def.ch, p.def.cw, p.def.ch});
         }
 

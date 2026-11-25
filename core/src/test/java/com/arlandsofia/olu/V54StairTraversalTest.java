@@ -120,7 +120,7 @@ public final class V54StairTraversalTest {
                 yes(r2.found, id + ": A* cannot route down from platform");
             }
         }
-        yes(terraces == 21, "expected 21 elevation platforms, found " + terraces);
+        yes(terraces == 0, "v6 removed the stair platforms; found " + terraces);
         // Stair pace: slower on stairs, unchanged on flat ground.
         yes(ElevationV50.STAIR_SPEED_FACTOR > .6f && ElevationV50.STAIR_SPEED_FACTOR < 1f, "stair pace factor sane");
         // Pixel-perfect camera: whole pixels per world unit, nearest to requested framing.
