@@ -29,6 +29,10 @@ func _ready() -> void:
 				var xy: PackedStringArray = pt.split(":")
 				_wps.append(Vector2(float(xy[0]), float(xy[1])))
 		_start(p, false)
+	elif args.has("--minigame"):
+		_mode = "minigame"
+		_args = args.slice(args.find("--minigame") + 1)   # id route out_prefix
+		_start(Progress.new_game(_args[1], 1, Data.first_step, Data.area(Routes.room(_args[1]))), false)
 	elif args.has("--title"):
 		_mode = "title"
 		_args = args.slice(args.find("--title") + 1)
@@ -78,6 +82,18 @@ func _process(_delta: float) -> void:
 			40: await _save_plain(_args[0] + "_judul.png"); _title_node.show_routes()
 			80: await _save_plain(_args[0] + "_route.png"); _title_node.show_slots("sofia")
 			120: await _save_plain(_args[0] + "_slot.png"); get_tree().quit()
+		return
+	if _mode == "minigame":
+		var ov := game.minigame
+		match _frame:
+			20: game.open_minigame(_args[0], func(sc): print("MINIGAME SCORE ", sc))
+			70: await _save(_args[2] + "_main.png")
+			71:
+				for k in 6:
+					ov.game.key(k % 4); ov.game.tap(ov.game.x + ov.game.w * (0.2 + 0.15 * k), ov.game.y + ov.game.h * 0.45)
+			110: await _save(_args[2] + "_main2.png")
+			111: ov.game.finished = true; ov.game.result_text = ov.game.result_text if ov.game.result_text != "" else "(hasil uji otomatis)"
+			140: await _save(_args[2] + "_hasil.png"); get_tree().quit()
 		return
 	if _mode == "shot":
 		var w := game.world

@@ -97,5 +97,33 @@ func _ready() -> void:
 	ok(ld.status == "RECOVERED" and ld.value.has_flag("T1"), "pulih dari .bak saat file utama rusak")
 	SaveStore.delete_slot("sofia", 2)
 	ok(SaveStore.load_slot("sofia", 2).status == "MISSING", "hapus slot")
+	# 9. minigames: every config builds, and a correct play of the puzzle-like ones wins
+	var mgs: Dictionary = Data.quests.get("minigames", {})
+	var built := 0
+	for id in mgs:
+		for r in ["arland", "sofia"]:
+			var g := Games.create(str(mgs[id].get("type", id)))
+			g.init(mgs[id], r)
+			g.x = 0; g.y = 0; g.w = 900; g.h = 480
+			for k in 200:
+				g.update(0.05)
+				if k % 7 == 0:
+					g.tap(450, 200)
+			built += 1
+	ok(built == mgs.size() * 2, "semua %d konfigurasi minigame jalan tanpa error" % mgs.size())
+	var cl := Games.create("code"); cl.init(mgs.code_gua, "sofia")
+	for i in cl.answer.size():
+		cl.dial[i] = cl.answer[i]
+	cl.check(); for k in 30: cl.update(0.05)
+	ok(cl.finished and cl.score == 1, "peti kata sandi terbuka dengan jawaban benar")
+	var ec := Games.create("v49_echo"); ec.init(mgs.v49_echo_plaza, "arland")
+	for k in 100: ec.update(0.1)
+	for st in ec.patterns.duplicate():
+		for b in st: ec.choose(b)
+		for k in 100: ec.update(0.1)
+	ok(ec.finished and ec.score == 5, "gema kenangan selesai tanpa salah = skor 5")
+	var bq := Games.create("bouquet"); bq.init({}, "sofia")
+	bq.chosen = bq.pattern.duplicate(); bq.submit()
+	ok(bq.finished and bq.score == 4, "buket cocok")
 	print("%s: %d pemeriksaan, %d gagal" % ["SEMUA LULUS" if fails == 0 else "ADA YANG GAGAL", checks, fails])
 	get_tree().quit(1 if fails > 0 else 0)

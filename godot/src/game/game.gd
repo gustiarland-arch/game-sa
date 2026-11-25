@@ -22,6 +22,7 @@ var _toast_time := 0.0
 var hud: Hud
 var controls: TouchControls
 var pause: PauseMenu
+var minigame: MinigameOverlay
 var _clock_acc := 0.0
 var _prompt: PanelContainer
 var _prompt_label: Label
@@ -101,6 +102,8 @@ func _build_ui() -> void:
 	root.add_child(dialog)
 	dialog.line_shown.connect(_on_line)
 	dialog.choice_made.connect(_on_choice)
+	minigame = MinigameOverlay.new()
+	root.add_child(minigame)
 	# fade + chapter card on top
 	_fade = ColorRect.new(); _fade.color = Color(0.03, 0.02, 0.06, 0); _fade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -134,7 +137,7 @@ func resume_game() -> void:
 # ------------------------------------------------------------------ frame
 func _process(delta: float) -> void:
 	_time += delta
-	var busy := dialog.active or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
+	var busy := dialog.active or minigame.visible or cine.active or runner.busy() or _card.visible or _fade.color.a > 0.02
 	world.locked = busy
 	world.input_vec = controls.vec if not busy else Vector2.ZERO
 	world.sprint_held = controls.sprint
@@ -456,8 +459,8 @@ func open_puzzle(_id: String, done: Callable) -> void:
 
 func open_minigame(id: String, done: Callable) -> void:
 	var mg: Dictionary = Data.quests.get("minigames", {}).get(id, {})
-	toast("Minigame \"%s\" hadir di fase berikutnya port Godot" % mg.get("title", id))   # TODO(phase 3)
-	done.call(int(mg.get("target", mg.get("minScore", 1))))
+	controls.reset()
+	minigame.open(id, mg, p.route, done)
 
 
 func open_shop(_id: String, done: Callable) -> void:
